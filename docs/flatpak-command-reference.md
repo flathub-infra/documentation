@@ -1,4 +1,0 @@
-# Flatpak Command Reference
-
-```{=html}
-```

@@ -37,7 +37,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/razzeee/flatpak-docs-docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -54,13 +54,14 @@ const config = {
         logo: {
           alt: "Flatpak Logo",
           src: "img/logo.svg",
+          srcDark: "img/logo-dark.svg",
         },
         items: [
           {
             type: "doc",
-            docId: "getting-started",
+            docId: "introduction/index",
             position: "left",
-            label: "Tutorial",
+            label: "Docs",
           },
           {
             href: "https://github.com/flatpak/flatpak",
@@ -76,8 +77,8 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Tutorial",
-                to: "/docs/getting-started",
+                label: "Introduction",
+                to: "/docs/introduction",
               },
             ],
           },
@@ -90,7 +91,11 @@ const config = {
               },
               {
                 label: "Twitter",
-                href: "https://twitter.com/flatpak",
+                href: "https://twitter.com/FlatpakApps",
+              },
+              {
+                label: "Mastodon",
+                href: "https://fosstodon.org/@FlatpakApps",
               },
             ],
           },
