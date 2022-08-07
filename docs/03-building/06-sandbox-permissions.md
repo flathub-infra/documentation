@@ -26,7 +26,7 @@ manifest file (see [manifests](manifests)).
 ## Portals
 
 Portals have already been mentioned in
-[basic-concepts](basic-concepts). They are a framework for
+[basic-concepts](../getting-started/basic-concepts). They are a framework for
 providing access to resources outside of the sandbox, including:
 
 - Opening files with a native file chooser dialog

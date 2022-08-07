@@ -7,7 +7,7 @@ desktops and app centers. Developers might also encounter a small number
 of Linux technical conventions.
 
 Information on further desktop integration options can be found in
-[desktop-integration](desktop-integration).
+[desktop-integration](../desktop-integration).
 
 ## Expected Standards
 
@@ -18,7 +18,7 @@ do this.
 
 ### Application IDs
 
-As described in [using-flatpak](using-flatpak), Flatpak
+As described in [using-flatpak](../getting-started/using-flatpak), Flatpak
 requires each application to have a unique identifier, which has a form
 such as `org.gnome.Dictionary`.
 

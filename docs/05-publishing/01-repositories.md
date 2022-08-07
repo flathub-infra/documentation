@@ -6,7 +6,7 @@ applications, so that they can be installed by users.
 Some aspects of repositories are addressed by other sections of the
 documentation. Basic commands for adding, removing and inspecting
 repositories can be found in the [using-flatpak](using-flatpak) section. Additionally, the section on
-[flatpak-builder](flatpak-builder) covers the most common
+[flatpak-builder](../building/flatpak-builder) covers the most common
 method for adding applications to repositories.
 
 To use a repository to publish an application, it is possible to either

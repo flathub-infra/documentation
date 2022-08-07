@@ -7,7 +7,7 @@ of the modules that are to be built. This file is called the manifest.
 This page provides information and guidance on how to use manifests,
 including an explanation of the most common parameters that can be
 specified. It is recommended to have followed the
-[first-build](first-build) tutorial before reading this
+[first-build](../getting-started/first-build) tutorial before reading this
 section, and to be familiar with [flatpak-builder](flatpak-builder).
 
 Manifest files should be named using the application ID. For example,
@@ -224,7 +224,7 @@ rm .gitmodules
 
 [Flatpak Builder Tools (or
 flatpak-builder-tools)](https://github.com/flatpak/flatpak-builder-tools)
-is a collection of scripts to aid using *flatpak-builder]*.
+is a collection of scripts to aid using _flatpak-builder]_.
 In this repository, each directory contains instructions to generate a
 manifest for the respective platform.
 

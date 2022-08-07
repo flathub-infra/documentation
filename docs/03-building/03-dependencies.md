@@ -10,7 +10,7 @@ to use each one.
 
 ## Runtimes
 
-As was described in [basic-concepts](basic-concepts),
+As was described in [basic-concepts](../getting-started/basic-concepts),
 runtimes provide basic dependencies that can be used by applications.
 They also provide the environment that applications run in. Flatpak
 requires each application to specify a runtime. Therefore, one of the
@@ -18,7 +18,7 @@ first decisions you need to make when building an application with
 Flatpak, is which runtime it will use.
 
 An overview of the runtimes that are available can be found in the
-[available-runtimes](available-runtimes) page. There are
+[available-runtimes](../reference-docs/available-runtimes) page. There are
 deliberately only a small number of runtimes to choose from. Typically,
 runtimes are picked on the basis of which dependencies an application
 requires. If a runtime exists that provides libraries that you plan on

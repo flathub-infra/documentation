@@ -75,7 +75,7 @@ than system-wide.
 This section covers basic commands needed to install, run and manage
 Flatpak applications. For the full list of Flatpak commands, run
 `flatpak --help` or see the
-[flatpak-command-reference](flatpak-command-reference).
+[flatpak-command-reference](../reference-docs/flatpak-command-reference).
 
 ### List remotes
 

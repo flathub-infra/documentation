@@ -7,4 +7,4 @@ information on how to use `flatpak-builder`, and how to write manifest
 files.
 
 If you haven't already, it is recommended to run through
-[first build](first-build) before reading this section.
+[first build](../getting-started/first-build) before reading this section.

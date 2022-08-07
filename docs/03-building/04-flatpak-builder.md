@@ -1,7 +1,7 @@
 # Flatpak Builder
 
 `flatpak-builder` has already been introduced in
-[first-build](first-build) and
+[first-build](../getting-started/first-build) and
 [building-introduction](building-introduction). This page
 provides additional detail on how to use `flatpak-builder`, including
 the various command options that are available.

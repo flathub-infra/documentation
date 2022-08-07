@@ -59,7 +59,7 @@ toolkits can implement transparent support for portals, so access to
 resources outside of the sandbox will work securely and out of the box.
 
 More information about portals can be found in
-[sandbox-permissions](sandbox-permissions).
+[sandbox-permissions](../building/sandbox-permissions).
 
 ## Repositories
 

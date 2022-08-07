@@ -63,7 +63,7 @@ base: org.electronjs.Electron2.BaseApp
 base-version: "21.08"
 ```
 
-Base apps are described in [dependencies](dependencies).
+Base apps are described in [dependencies](../dependencies).
 Using the Electron base app is much faster and more convenient than
 manually building Electron dependencies. It also has the advantage of
 reducing the amount of duplication on users\' machines, since it means
@@ -236,7 +236,7 @@ build-commands:
 Note that if the application you are trying to package contains a
 `build` block in `package.json` with instructions for Linux, this can
 cause `electron-builder` to try to fetch additional binaries at
-build-time (Even if *\--dir* option is used). The following
+build-time (Even if _\--dir_ option is used). The following
 example shows a configuration that will try to download AppImage
 binaries:
 

@@ -1,6 +1,6 @@
 # Building Introduction
 
-[first-build](first-build) has already provided a quick
+[first-build](../getting-started/first-build) has already provided a quick
 demonstration of how applications get built with Flatpak. This page
 provides an additional general overview of what's involved.
 
