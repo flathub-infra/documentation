@@ -94,7 +94,7 @@ finish-args:
 Guidance on which permissions to use can be found in the
 [sandbox-permissions](sandbox-permissions), and a full list of
 `finish-args` options can be found in
-[sandbox-permissions-reference](sandbox-permissions-reference).
+[sandbox-permissions-reference](../reference-docs/sandbox-permissions-reference).
 
 If you\'re wondering about the last finish arg, see [this blog
 post](https://blogs.gnome.org/mclasen/2019/07/12/settings-in-a-sandbox-world/).
@@ -168,7 +168,7 @@ available types include:
 >   can include archive or package files
 
 Different properties are available for each source type, which are
-listed in the [flatpak-builder-command-reference](flatpak-builder-command-reference).
+listed in the [flatpak-builder-command-reference](../reference-docs/flatpak-builder-command-reference).
 
 ### Supported build systems
 

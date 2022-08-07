@@ -34,7 +34,7 @@ have restrictions in this respect).
 
 The only technical requirements made by Flatpak are that applications
 follow a small number of Freedesktop standards, in order to enable
-desktop integration (see [conventions](conventions)).
+desktop integration (see [conventions](../building/conventions)).
 
 ## Issues of current model of packaging
 
@@ -131,4 +131,4 @@ Other benefits for developers include:
   take a lot of the work out of application development.
 
 Information about Flatpak's internals can be found in
-[Under the hood](under-the-hood.md).
+[Under the hood](../reference-docs/under-the-hood.md).

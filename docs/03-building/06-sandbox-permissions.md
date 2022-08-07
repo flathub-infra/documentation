@@ -123,7 +123,7 @@ possible. This includes:
   directory access only.
 
 The full list of available filesystem options can be found in the
-[sandbox-permissions-reference](sandbox-permissions-reference). Other
+[sandbox-permissions-reference](../reference-docs/sandbox-permissions-reference). Other
 filesystem access guidelines include:
 
 - The `--persist=path` option can be used to map paths from the

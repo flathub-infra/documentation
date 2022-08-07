@@ -1,7 +1,7 @@
 # Sandbox Permissions Reference
 
 Sandbox permissions can be configured from an application manifest file
-(see [manifests](manifests)). They can also be set
+(see [manifests](../building/manifests)). They can also be set
 with the `build-finish`, `run` and `override` commands.
 
 The following list includes many of the most useful permission options.
@@ -74,4 +74,4 @@ also be added:
 
 [^3]:
     Except for the blacklisted paths mentioned in
-    [sandbox-permissions](sandbox-permissions).
+    [sandbox-permissions](../building/sandbox-permissions).

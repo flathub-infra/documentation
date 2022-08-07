@@ -104,7 +104,7 @@ The section above describes how to run 32-bit programs that are already
 built. This section will describe the process of building 32-bit
 components yourself to ship them with the application. It assumes that
 you are already familiar with building (single-arch) flatpaks. If not,
-please refer to [flatpak-builder](flatpak-builder) guide
+please refer to [flatpak-builder](../flatpak-builder) guide
 first.
 
 First of all, you\'ll need to enable some SDK extensions at build time:

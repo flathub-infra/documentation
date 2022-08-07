@@ -5,7 +5,7 @@ applications, so that they can be installed by users.
 
 Some aspects of repositories are addressed by other sections of the
 documentation. Basic commands for adding, removing and inspecting
-repositories can be found in the [using-flatpak](using-flatpak) section. Additionally, the section on
+repositories can be found in the [using-flatpak](../getting-started/using-flatpak) section. Additionally, the section on
 [flatpak-builder](../building/flatpak-builder) covers the most common
 method for adding applications to repositories.
 

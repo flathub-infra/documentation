@@ -1,6 +1,6 @@
 # Desktop Integration
 
-[conventions](conventions) covers the essential aspects
+[conventions](../building/conventions) covers the essential aspects
 of Linux desktop integration. This page provides further information on
 optional desktop integration features. It also provides guidance on how
 applications can ensure that their user interfaces fit into the whole
