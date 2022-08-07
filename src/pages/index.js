@@ -5,10 +5,7 @@ import Layout from "@theme/Layout";
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout
-      title={`${siteConfig.title} Docs`}
-      description="Flatpak documentation"
-    >
+    <Layout title={`Welcome`} description="Flatpak documentation">
       <main
         style={{ display: "flex", flexDirection: "column", padding: "24px" }}
       >
