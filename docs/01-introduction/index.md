@@ -131,4 +131,4 @@ Other benefits for developers include:
   take a lot of the work out of application development.
 
 Information about Flatpak's internals can be found in
-[Under the hood](../reference-docs/under-the-hood.md).
+[Under the hood](../reference-docs/under-the-hood).

@@ -17,7 +17,7 @@ its examples.
 
 A complete list of all the properties that can be specified in manifest
 files can be found in the
-[flatpak-builder-command-reference](flatpak-builder-command-reference), as
+[flatpak-builder-command-reference](../reference-docs/flatpak-builder-command-reference), as
 well as the `flatpak-manifest` man page.
 
 ## Basic properties
