@@ -5,7 +5,13 @@ export default function Home() {
   return (
     <Layout title={`Welcome`} description="Flatpak documentation">
       <main
-        style={{ display: "flex", flexDirection: "column", padding: "24px" }}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          padding: "24px",
+          maxWidth: "1400px",
+          margin: "0 auto",
+        }}
       >
         <h1>Welcome to Flatpak's documentation!</h1>
         <p>
