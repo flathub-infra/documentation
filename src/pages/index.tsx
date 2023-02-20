@@ -1,9 +1,9 @@
 import React from "react";
 import Layout from "@theme/Layout";
 
-export default function Home() {
+export default function Home(): JSX.Element {
   return (
-    <Layout title={`Welcome`} description="Flatpak documentation">
+    <Layout title={`Welcome`} description="Flathub documentation">
       <main
         style={{
           display: "flex",
@@ -13,7 +13,7 @@ export default function Home() {
           margin: "0 auto",
         }}
       >
-        <h1>Welcome to Flatpak's documentation!</h1>
+        <h1>Welcome to Flathubs documentation!</h1>
         <p>
           These docs cover everything you need to know to build and distribute
           applications using Flatpak. They begin with a basic introduction to

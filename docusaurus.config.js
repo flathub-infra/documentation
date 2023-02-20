@@ -6,18 +6,18 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Flatpak Documentation",
-  tagline: "The future of apps on Linux",
-  url: "https://docs.flatpak.org",
-  baseUrl: "/",
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  title: "Flathub Documentation",
+  tagline: "Your Linux desktop apps in one place",
   favicon: "img/favicon.ico",
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: "Flatpak Team", // Usually your GitHub org/user name.
-  projectName: "flatpak-docs", // Usually your repo name.
+  // Set the production url of your site here
+  url: "https://docs.flathub.org",
+  // Set the /<baseUrl>/ pathname under which your site is served
+  // For GitHub pages deployment, it is often '/<projectName>/'
+  baseUrl: "/",
+
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -34,6 +34,13 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          editUrl:
+            "https://github.com/razzeee/flatpak-docs-docusaurus/tree/main/",
+        },
+        blog: {
+          showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -61,13 +68,13 @@ const config = {
       metadata: [
         {
           name: "keywords",
-          content: "flatpak, packaging, tool, linux",
+          content: "flatpak, flathub, packaging, tool, linux",
         },
       ],
       navbar: {
-        title: "Flatpak",
+        title: "Flathub",
         logo: {
-          alt: "Flatpak Logo",
+          alt: "flathub Logo",
           src: "img/logo.svg",
           srcDark: "img/logo-dark.svg",
         },
@@ -78,8 +85,9 @@ const config = {
             position: "left",
             label: "Docs",
           },
+          { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/flatpak/flatpak",
+            href: "https://github.com/flathub",
             label: "GitHub",
             position: "right",
           },
@@ -102,15 +110,15 @@ const config = {
             items: [
               {
                 label: "Matrix",
-                href: "https://matrix.to/#/#flatpak:matrix.org",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/FlatpakApps",
+                href: "https://matrix.to/#/#flathub:matrix.org",
               },
               {
                 label: "Mastodon",
                 href: "https://fosstodon.org/@FlatpakApps",
+              },
+              {
+                label: "Twitter",
+                href: "https://twitter.com/FlatpakApps",
               },
             ],
           },
@@ -119,12 +127,12 @@ const config = {
             items: [
               {
                 label: "GitHub",
-                href: "https://github.com/flatpak/flatpak",
+                href: "https://github.com/flathub",
               },
             ],
           },
         ],
-        copyright: `Copyright © 2017-${new Date().getFullYear()} Flatpak Team. Licensed under Creative Commons Attribution 4.0 International License.`,
+        copyright: `Copyright © 2023-${new Date().getFullYear()} Flathub Team. Licensed under Creative Commons Attribution 4.0 International License.`,
       },
       prism: {
         theme: lightCodeTheme,

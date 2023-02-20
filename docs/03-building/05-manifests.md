@@ -143,7 +143,7 @@ modules:
       - -Dbuild_man=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gnome-dictionary/3.26/gnome-dictionary-3.26.1.tar.xz
+        url: https://download.gnome.org/sources/gnome-dictionary/43/gnome-dictionary-43.1.tar.xz
         sha256: 16b8bc248dcf68987826d5e39234b1bb7fd24a2607fcdbf4258fde88f012f300
       - type: patch
         path: appdata_oars.patch

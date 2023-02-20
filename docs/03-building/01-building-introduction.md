@@ -50,11 +50,11 @@ tools that are required to build an application, such as build and
 packaging tools, header files, compilers and debuggers.
 
 Each runtime has an accompanying SDK. For example, there is both a GNOME
-3.26 runtime and a GNOME 3.26 SDK. Applications that use the runtime are
+43 runtime and a GNOME 43 SDK. Applications that use the runtime are
 built with the matching SDK.
 
 Like runtimes, SDKs will sometimes be automatically installed for you,
 but if you do need to manually install them, they are installed in the
 same way as applications and runtimes, such as:
 
-    $ flatpak install flathub org.gnome.Sdk//3.26
+    $ flatpak install flathub org.gnome.Sdk//43

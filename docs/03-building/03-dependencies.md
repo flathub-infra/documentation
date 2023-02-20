@@ -36,9 +36,9 @@ application, and build tools can also automatically install them for you
 However, if you do need to manually install your chosen runtime, this
 can be done in the same way as installing an application, with the
 `flatpak install` command. For example, the command to install the GNOME
-3.26 runtime is:
+43 runtime is:
 
-    $ flatpak install flathub org.gnome.Platform//3.26
+    $ flatpak install flathub org.gnome.Platform//43
 
 ## Bundling
 
