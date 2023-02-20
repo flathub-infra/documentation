@@ -149,6 +149,9 @@ The reason many of the directories are blacklisted is because they
 already exist in the sandbox such as `/usr` or are not usable in the
 sandbox.
 
+The `home` permission also has exceptions as it does not grant access to
+the subdirectories for other applications in `~/.var/app/`.
+
 ### Device access
 
 While not ideal, `--device=all` can be used to access devices like
