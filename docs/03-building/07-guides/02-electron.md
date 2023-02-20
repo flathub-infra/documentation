@@ -25,8 +25,8 @@ To get setup for the build, download or clone the sample app from
 GitHub, and navigate to the `/flatpak` directory in the terminal. You
 must also install the Electron base app and the Node.js SDK extension:
 
-    $ flatpak install flathub org.electronjs.Electron2.BaseApp//21.08
-    $ flatpak install flathub org.freedesktop.Sdk.Extension.node14//21.08
+    $ flatpak install flathub org.electronjs.Electron2.BaseApp//22.08
+    $ flatpak install flathub org.freedesktop.Sdk.Extension.node14//22.08
 
 Then you can run the build:
 
@@ -44,7 +44,7 @@ application's ID. It also configures the runtime and SDK:
 ```yaml
 app-id: org.flathub.electron-sample-app
 runtime: org.freedesktop.Platform
-runtime-version: "21.08"
+runtime-version: "22.08"
 sdk: org.freedesktop.Sdk
 ```
 
@@ -60,7 +60,7 @@ application manifest:
 
 ```yaml
 base: org.electronjs.Electron2.BaseApp
-base-version: "21.08"
+base-version: "22.08"
 ```
 
 Base apps are described in [dependencies](../dependencies).

@@ -28,12 +28,12 @@ manifest:
 add-extensions:
   org.freedesktop.Platform.Compat.i386:
     directory: lib/i386-linux-gnu
-    version: "21.08"
+    version: "22.08"
 
   # This is not strictly required, but needed for debugging 32-bit programs
   org.freedesktop.Platform.Compat.i386.Debug:
     directory: lib/debug/lib/i386-linux-gnu
-    version: "21.08"
+    version: "22.08"
     no-autodownload: true
 ```
 
@@ -51,7 +51,7 @@ add-extensions:
   org.freedesktop.Platform.GL32:
     directory: lib/i386-linux-gnu/GL
     version: "1.4"
-    versions: 21.08;1.4
+    versions: 22.08;1.4
     subdirectories: true
     no-autodownload: true
     autodelete: false
