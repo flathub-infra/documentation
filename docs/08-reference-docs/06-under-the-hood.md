@@ -22,9 +22,10 @@ repositories to store data, and it tracks the differences between
 versions.
 
 With Flatpak, each application, runtime and extension is a branch in a
-repository. An identifier triple, such as `com.company.App/i386/stable`
-is a reference to that branch. The output of a Flatpak build process is
-a directory of files which is committed to one of these branches.
+repository. An identifier triple, such as
+`com.company.App/x86_64/stable` is a reference to that branch. The
+output of a Flatpak build process is a directory of files which is
+committed to one of these branches.
 
 When an application is installed with Flatpak, it is pulled from the
 remote into a new branch in a local repository. Links are then generated
@@ -49,10 +50,10 @@ only stored once.
 
 Flatpak utilises a number of pre-existing technologies. These include:
 
-- The [bubblewrap](https://github.com/projectatomic/bubblewrap)
-  utility from [Project Atomic](http://www.projectatomic.io/), which
-  lets unprivileged users set up and run containers, using kernel
-  features such as:
+- The [bubblewrap](https://github.com/containers/bubblewrap) utility
+  from [Project Atomic](https://projectatomic.io/), which lets
+  unprivileged users set up and run containers, using kernel features
+  such as:
   - Namespaces
   - Bind mounts
   - Seccomp rules
@@ -63,7 +64,7 @@ Flatpak utilises a number of pre-existing technologies. These include:
 - The [OSTree](https://ostree.readthedocs.io/en/latest/) system for
   versioning and distributing filesystem trees
 - The OCI format from the [Open Container
-  Initiative](https://www.opencontainers.org/), as an alternative to
+  Initiative](https://opencontainers.org/), as an alternative to
   OSTree used by the [Fedora
   infrastructure](https://blog.fishsoup.net/2018/12/04/flatpaks-in-fedora-now-live/)
 - Flatpak can use either OSTree or OCI for single-file bundles.

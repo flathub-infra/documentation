@@ -5,7 +5,7 @@ you will learn how to create a basic Flatpak application, which can be
 installed and run.
 
 In order to complete this tutorial, you should have followed the [setup
-guide on flatpak.org](http://flatpak.org/setup/). You also need to have
+guide on flatpak.org](https://flatpak.org/setup/). You also need to have
 installed `flatpak-builder`, which is usually available from the same
 repository as the `flatpak` package (e.g. use `apt` or `dnf`). You can
 also install it as a flatpak with
@@ -104,7 +104,7 @@ In order for your application to show up in application stores while
 testing with a local repository, you might have to run
 `flatpak build-update-repo repo`. For more information how to publish to
 application stores see [Appdata
-files](http://docs.flatpak.org/en/latest/freedesktop-quick-reference.html#appdata-files).
+files](https://docs.flatpak.org/en/latest/freedesktop-quick-reference.html#appdata-files).
 
 ## 7. Install the app
 

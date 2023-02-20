@@ -85,9 +85,9 @@ This warning can be ignored.
 :::
 
 You can find more general information about desktop files
-[here](https://wiki.archlinux.org/index.php/desktop_entries). If
-interested, you can read also the full spec
-[here](https://standards.freedesktop.org/desktop-entry-spec/latest/).
+[here](https://wiki.archlinux.org/title/desktop_entries). If interested,
+you can read also the full spec
+[here](https://specifications.freedesktop.org/desktop-entry-spec/latest/).
 
 ## Appdata files
 

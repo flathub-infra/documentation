@@ -58,7 +58,7 @@ command as you normally would online:
 
 For versions after 1.8.0, if your linux distribution has packaged [the
 relevant systemd
-units](https://github.com/flatpak/flatpak/tree/master/sideload-repos-systemd),
+units](https://github.com/flatpak/flatpak/tree/main/sideload-repos-systemd),
 using `flatpak install` with no extra arguments still works. Otherwise,
 you can use the `--sideload-repo` option in your command invocation:
 

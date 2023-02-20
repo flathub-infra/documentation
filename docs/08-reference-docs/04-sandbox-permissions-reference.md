@@ -10,6 +10,7 @@ A complete list can be viewed using `flatpak build-finish --help`.
 ---
 
 `--socket=x11` Show windows using X11
+`--socket=fallback-x11` Grant X11 access when Wayland is not available
 `--share=ipc` Share IPC namespace with the host[^1]
 `--allow=bluetooth` Allow access to Bluetooth
 `--device=dri` OpenGL rendering
@@ -18,6 +19,11 @@ A complete list can be viewed using `flatpak build-finish --help`.
 `--share=network` Access the network[^2]
 `--talk-name=org.freedesktop.secrets` Talk to a named service on the session bus
 `--system-talk-name=org.freedesktop.GeoClue2` Talk to a named service on the system bus
+`--socket=cups` Talk to the CUPS printing system
+`--socket=gpg-agent` Talk to the GPG agent
+`--socket=pcsc` Grant access to smart card
+`--socket=ssh-auth` SSH authentication
+`--socket=session-bus` Unlimited access to user\'s D-Bus session
 `--socket=system-bus` Unlimited access to all of D-Bus
 
 ---
@@ -30,6 +36,7 @@ should be added to `--filesystem=`:
 ---
 
 `host` Access all files[^3]
+`host-etc` Access all files in /etc
 `home` Access the home directory
 `/some/dir` Access an arbitrary path
 `~/some/dir` Access an arbitrary path relative to the home directory

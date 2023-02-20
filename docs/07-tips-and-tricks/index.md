@@ -59,7 +59,7 @@ regression. It works just like `git bisect`.
 
 In case your distribution doesn't install the `flatpak-bisect` utility,
 you can find it distributed alongside the Flatpak source code, in
-<https://github.com/flatpak/flatpak/blob/master/scripts/flatpak-bisect>
+<https://github.com/flatpak/flatpak/blob/main/scripts/flatpak-bisect>
 
 First you update the application and get its history:
 
@@ -115,7 +115,7 @@ And write something like this:
     StorageType=harddisk
 
 See
-[flatpak-installation(5)](http://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-installation)
+[flatpak-installation(5)](https://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-installation)
 for the full format specification. Replace the path with the actual path
 you want to use. You can use `df` to see mounted file systems and
 `mkdir` to create a `flatpak` directory so the path specified by `Path=`
@@ -131,7 +131,7 @@ And install to it with:
 
 :::note
 
-If your custom installation is the only one with the remote you\'re
+If your custom installation is the only one with the remote you're
 installing from, `--installation` can be omitted.
 :::
 
@@ -141,15 +141,16 @@ And run apps from it with:
 
 :::note
 
-If your custom installation is the only one with the app you\'re
+If your custom installation is the only one with the app you're
 running, `--installation` can be omitted.
 :::
 
 ## Configuring resource limits for apps
 
 When systemd is available, Flatpak tries to put app processes in a scope
-such as `app-com.brave.Browser-*.scope` (in the case of Brave), with `*`
-replaced by an arbitrary suffix. This means you can create a file like
+such as `app-flatpak-com.brave.Browser-*.scope` (in the case of Brave),
+with `*` replaced by an arbitrary suffix. This means you can create a
+file like
 `~/.config/systemd/user/app-flatpak-com.brave.Browser-.scope.d/memory.conf`
 with contents like:
 
