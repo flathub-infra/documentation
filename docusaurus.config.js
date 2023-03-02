@@ -81,9 +81,21 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "introduction/index",
+            docId: "for-users/index",
             position: "left",
-            label: "Docs",
+            label: "For users",
+          },
+          {
+            type: "doc",
+            docId: "for-app-authors/index",
+            position: "left",
+            label: "For app authors",
+          },
+          {
+            type: "doc",
+            docId: "for-team-members/index",
+            position: "left",
+            label: "For team members",
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
