@@ -112,8 +112,16 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Introduction",
-                to: "/docs/introduction",
+                label: "For users",
+                to: "docs/for-users",
+              },
+              {
+                label: "For app authors",
+                to: "docs/for-app-authors",
+              },
+              {
+                label: "For team members",
+                to: "docs/for-team-members",
               },
             ],
           },
