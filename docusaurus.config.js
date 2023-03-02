@@ -74,7 +74,7 @@ const config = {
       navbar: {
         title: "Flathub",
         logo: {
-          alt: "flathub Logo",
+          alt: "Flathub Logo",
           src: "img/logo.svg",
           srcDark: "img/logo-dark.svg",
         },
