@@ -8,6 +8,11 @@ applications in a sandboxed environment, separate from the rest of the
 system. This sandboxing gives you more control over the dependencies of
 your applications.
 
+## Flathub
+
+Flathub is a centralized repository of Flatpak apps. You can use it to
+install and update apps on your system.
+
 ## Installation
 
 Please refer to the Flatpak installation instructions for your distribution over at [flatpak.org](https://flatpak.org/setup/).

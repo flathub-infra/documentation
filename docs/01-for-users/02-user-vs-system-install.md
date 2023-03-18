@@ -24,7 +24,7 @@ Per-user installations are installed in the user's home
 directory, in `~/.local/share/flatpak`. This means that the applications
 and runtimes are not available to other users on the system.
 
-To install an application or runtime per-user, run:u
+To install an application or runtime per-user, run:
 
     $ flatpak install --user <remote> <name>
 
