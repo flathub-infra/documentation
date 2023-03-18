@@ -16,7 +16,7 @@ tld.domain.appid.metainfo.xml: OK
 
 ### Path and filename
 
-Place the AppData file into `/app/share/metainfo/`, name it `%{id}.metainfo.xml`, where `%{id}` is the [#ID](#id).
+Place the AppData file into `/app/share/metainfo/`, name it `%{id}.metainfo.xml`, where `%{id}` is the [ID](#id).
 
 The old path is `/app/share/appdata/`—you needn’t fix this, it’ll work, but bonus points if you do.
 
@@ -40,7 +40,7 @@ Note: the copyright notice is only necessary to pass `validate-strict`, but it�
 
 ### ID
 
-The ID should be the same as the [[App-Requirements#Application-ID]]:
+The ID should be the same as the [Application-ID](requirements#application-id):
 
 ```xml
 <!-- Good -->
@@ -54,7 +54,7 @@ The ID should be the same as the [[App-Requirements#Application-ID]]:
 <id>qtdemo</id>
 ```
 
-Note: when omitting the `.desktop` part, you have to add a `type="desktop-id"` [#Launchable](#Launchable) in order for data to be pulled from the desktop file.
+Note: when omitting the `.desktop` part, you have to add a `type="desktop-id"` [launchable](#launchable) in order for data to be pulled from the desktop file.
 
 ### Translations
 
@@ -98,7 +98,7 @@ Note that the old desktop file name is automatically added if we use `rename-des
 
 ### Icons and categories
 
-If there’s a `type="desktop-id"` [#Launchable](#Launchable), they get pulled from it.
+If there’s a `type="desktop-id"` [launchable](#launchable), they get pulled from it.
 
 Don’t set them in the AppData unless you want to override them (even though then it might be a better idea to patch the desktop file itself).
 

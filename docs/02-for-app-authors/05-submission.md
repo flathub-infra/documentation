@@ -2,7 +2,7 @@
 
 ## How to submit an app
 
-App submissions are extremely welcome and the process is straightforward. Before submitting an app for inclusion on Flathub, please follow the [[app requirements]] to ensure that it is technically and legally compatible with the Flathub service. Once this has been done, you can submit the app for inclusion.
+App submissions are extremely welcome and the process is straightforward. Before submitting an app for inclusion on Flathub, please follow the [requirements](requirements) to ensure that it is technically and legally compatible with the Flathub service. Once this has been done, you can submit the app for inclusion.
 
 Flathub is managed through a GitHub project, and app submissions take place as pull requests. To submit an app:
 

@@ -61,26 +61,6 @@ Bundled dependencies should meet the requirements on this page, including the li
 
 Take care to check the build directory for unnecessary files. These should be added to `cleanup`, in order to ensure smaller package sizes.
 
-#### Shared Modules
-
-A small number of dependencies that are frequently used by applications have been collected in the [shared-modules repository](https://github.com/flathub/shared-modules), for use by applications being distributed with flathub. These can be used as a git submodule, like
-so:
-
-```
-git submodule add https://github.com/flathub/shared-modules.git
-```
-
-These can be specified from manifest `.json` files, like:
-
-```json
-"modules": [
-  "shared-modules/SDL/SDL-1.2.15.json",
-  {
-    "name": "foo"
-  }
-]
-```
-
 ### Patches
 
 It is fine to patch dependencies, but please send these upstream wherever possible!
@@ -95,7 +75,7 @@ Do note that CLI applications do not require a `.desktop` file but TUI applicati
 
 Appstream is the standard used to provide metadata about applications. Applications must provide appstream data and pass `flatpak run org.freedesktop.appstream-glib validate`. If application metadata has not been provided by the upstream, it should be licensed with [Creative Commons Zero, version 1](https://creativecommons.org/choose/zero/), by stating `CC0-1.0` in `metadata_license`.
 
-In [[AppData-Guidelines]] you'll find tips/best practices to help you get your AppData up to spec. For information about appstream, see [its documentation](https://www.freedesktop.org/software/appstream/docs/index.html).
+In [AppData guidelines](appdata-guidelines) you'll find tips/best practices to help you get your AppData up to spec. For information about appstream, see [its documentation](https://www.freedesktop.org/software/appstream/docs/index.html).
 
 #### .desktop files
 

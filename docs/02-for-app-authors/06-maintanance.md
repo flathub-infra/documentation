@@ -1,6 +1,6 @@
 # Maintenance
 
-This is a guide in how to maintain your application once it is on Flathub. It assumes your application is already on Flathub, and that you have access rights to its repository. If this is not true, please read the [[app submission]] page first and check your email for GitHub repository access requests.
+This is a guide in how to maintain your application once it is on Flathub. It assumes your application is already on Flathub, and that you have access rights to its repository. If this is not true, please read the [submission](submission) page first and check your email for GitHub repository access requests.
 
 ## The repository
 

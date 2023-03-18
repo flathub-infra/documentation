@@ -1,7 +1,21 @@
-# Shared modules
+# Shared Modules
 
-Shared modules are a collection of modules that are frequently used by applications and where it makes sense to share the maintenance burden.
+A small number of dependencies that are frequently used by applications have been collected in the [shared-modules repository](https://github.com/flathub/shared-modules), for use by applications being distributed with flathub. These can be used as a git submodule, like
+so:
 
-Shared modules live in the [shared-modules repository](https://github.com/flathub/shared-modules).
+```
+git submodule add https://github.com/flathub/shared-modules.git
+```
 
-Please refer to the readme in the repo for further assistance.
+These can be specified from manifest `.json` files, like:
+
+```json
+"modules": [
+  "shared-modules/SDL/SDL-1.2.15.json",
+  {
+    "name": "foo"
+  }
+]
+```
+
+You can find more examples in the repository.
