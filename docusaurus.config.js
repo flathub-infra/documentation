@@ -83,19 +83,7 @@ const config = {
             type: "doc",
             docId: "/category/for-users",
             position: "left",
-            label: "For users",
-          },
-          {
-            type: "doc",
-            docId: "/category/for-app-authors",
-            position: "left",
-            label: "For app authors",
-          },
-          {
-            type: "doc",
-            docId: "/category/for-team-members",
-            position: "left",
-            label: "For team members",
+            label: "Docs",
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
