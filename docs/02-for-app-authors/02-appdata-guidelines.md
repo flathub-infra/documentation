@@ -1,6 +1,6 @@
 # AppData guidelines
 
-These aren’t necessarily _requirements_, those are covered in [App-Requirements](/docs/for-app-authors/requirements#appstream). These are more tips/best practices to help you get your AppData up to spec.
+These aren’t necessarily _requirements_, those are covered in [requirements](/docs/for-app-authors/requirements#appstream). These are more tips/best practices to help you get your AppData up to spec.
 
 Note: these guidelines are curated for Flatpak use-cases, they don’t cover anything else. Don’t forget to consult the [official documentation](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html) for more in-depth info.
 
