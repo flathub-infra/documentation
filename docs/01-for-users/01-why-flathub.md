@@ -14,9 +14,3 @@ your applications.
 
 Flathub is a centralized repository of Flatpak apps. You can use it to
 install and update apps on your system.
-
-## Installation
-
-Please refer to the Flatpak installation instructions for your distribution over at [flatpak.org](https://flatpak.org/setup/).
-
-These instructions should also show you how to install the Flathub repository.
