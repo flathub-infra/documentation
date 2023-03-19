@@ -10,20 +10,28 @@ you can find it distributed alongside the Flatpak source code, in
 
 First you update the application and get its history:
 
-    $ flatpak-bisect org.gnome.gedit start
+```bash
+flatpak-bisect org.gnome.gedit start
+```
 
 Then, you should set the current commit as the first bad commit:
 
-    $ flatpak-bisect org.gnome.gedit bad
+```bash
+flatpak-bisect org.gnome.gedit bad
+```
 
 Now you need to find the hash of the first known good commit. For that,
 you can see the build history by running:
 
-    $ flatpak-bisect org.gnome.gedit log
+```bash
+flatpak-bisect org.gnome.gedit log
+```
 
 To start bisecting, checkout the first known good commit you find:
 
-    $ flatpak-bisect org.gnome.gedit checkout 5cd2b0648618c9038fbc6830733817309ade29541cdd8383830bbb76f6accf0d
+```bash
+flatpak-bisect org.gnome.gedit checkout 5cd2b0648618c9038fbc6830733817309ade29541cdd8383830bbb76f6accf0d
+```
 
 After setting the bad commit and the first known good commit, you can
 launch the application to verify if the current commit in the bisecting
@@ -31,10 +39,14 @@ session is a good or a bad one.
 
 To mark a commit as good or bad, run:
 
-    $ flatpak-bisect org.gnome.gedit good
+```bash
+flatpak-bisect org.gnome.gedit good
+```
 
 Or:
 
-    $ flatpak-bisect org.gnome.gedit bad
+```bash
+flatpak-bisect org.gnome.gedit bad
+```
 
 `flatpak-bisect` will inform you when the first bad commit is found.

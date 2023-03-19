@@ -16,4 +16,6 @@ Some apps have a checkmark on the app page. This means the app is published on F
 
 You can use the `--subset=verified` option when adding the Flathub remote. This will only add the verified apps to your local repository.
 
-    $ flatpak remote-add --if-not-exists --subset=verified flathub-verified https://flathub.org/repo/flathub.flatpakrepo
+```bash
+flatpak remote-add --if-not-exists --subset=verified flathub-verified https://flathub.org/repo/flathub.flatpakrepo
+```

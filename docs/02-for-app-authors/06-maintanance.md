@@ -10,7 +10,7 @@ The build information for each application on Flathub is stored in a repository 
 
 Every repository must contain a manifest describing how to build the application. If the application, and hence repository, is called `com.example.MyCoolApp`, this file must be called `com.example.MyCoolApp.json` or `com.example.MyCoolApp.yaml`. This is the only required file!
 
-This manifest may import other manifest files in the same repository. It's quite common to add the [shared-modules](https://github.com/flathub/shared-modules/) repository as a submodule.
+This manifest may import other manifest files in the same repository. It's quite common to add the [shared-modules](shared-modules) repository as a submodule.
 
 ### Optional
 
@@ -56,7 +56,7 @@ Flathub has builders for `i386`, `x86_64`, and `aarch64`, and by default all app
 
 #### Don’t build on `aaarch64
 
-```json
+```json title="flathub.json"
 {
   "skip-arches": ["aarch64"]
 }
@@ -64,7 +64,7 @@ Flathub has builders for `i386`, `x86_64`, and `aarch64`, and by default all app
 
 #### Only build on `x86_64`
 
-```json
+```json title="flathub.json"
 {
   "only-arches": ["x86_64"]
 }
@@ -74,7 +74,7 @@ Flathub has builders for `i386`, `x86_64`, and `aarch64`, and by default all app
 
 There may come a point where an application is no longer maintained. In order to inform users at update or install time that it will no longer get updates, create `flathub.json` with these contents:
 
-```json
+```json title="flathub.json"
 {
   "end-of-life": "This application is no longer maintained because..."
 }
@@ -82,7 +82,7 @@ There may come a point where an application is no longer maintained. In order to
 
 If the application has been renamed, you can additionally include `end-of-life-rebase` with the new ID. Recent flatpak versions will prompt user if they'd like to switch to the renamed app.
 
-```json
+```json title="flathub.json"
 {
   "end-of-life": "The application has been renamed to the.new.appid.",
   "end-of-life-rebase": "the.new.appid"

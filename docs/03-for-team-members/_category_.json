@@ -1,0 +1,9 @@
+{
+    "label": "For team members",
+    "collapsible": true,
+    "collapsed": false,
+    "link": {
+        "type": "generated-index",
+        "title": "Section overview"
+    }
+}

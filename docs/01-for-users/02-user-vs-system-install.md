@@ -26,11 +26,15 @@ and runtimes are not available to other users on the system.
 
 To install an application or runtime per-user, run:
 
-    $ flatpak install --user <remote> <name>
+```bash
+flatpak install --user <remote> <name>
+```
 
 To update an application or runtime, run:
 
-    $ flatpak update --user <name>
+```bash
+flatpak update --user <name>
+```
 
 ### System-wide installations
 
@@ -40,8 +44,12 @@ are available to all users on the system.
 
 To install an application or runtime system-wide, run:
 
-    $ sudo flatpak install <remote> <name>
+```bash
+sudo flatpak install <remote> <name>
+```
 
 To update an application or runtime, run:
 
-    $ sudo flatpak update <name>
+```bash
+sudo flatpak update <name>
+```

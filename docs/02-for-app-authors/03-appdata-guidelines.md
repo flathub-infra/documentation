@@ -2,15 +2,17 @@
 
 These aren’t necessarily _requirements_, those are covered in [requirements](/docs/for-app-authors/requirements#appstream). These are more tips/best practices to help you get your AppData up to spec.
 
-Note: these guidelines are curated for Flatpak use-cases, they don’t cover anything else. Don’t forget to consult the [official documentation](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html) for more in-depth info.
+:::note
+These guidelines are curated for Flatpak use-cases, they don’t cover anything else. Don’t forget to consult the [official documentation](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html) for more in-depth info.
+:::
 
 ### Use Flathub's `appstream-util`
 
 Flathub uses modified `appstream-util` to validate AppData during build. To run the same check locally, you can install and run it with a simple:
 
-```
-$ flatpak install flathub org.freedesktop.appstream-glib
-$ flatpak run org.freedesktop.appstream-glib validate tld.domain.appid.metainfo.xml
+```bash
+flatpak install flathub org.freedesktop.appstream-glib
+flatpak run org.freedesktop.appstream-glib validate tld.domain.appid.metainfo.xml
 tld.domain.appid.metainfo.xml: OK
 ```
 
@@ -30,13 +32,15 @@ Although for backwards compatibility with RHEL 7 it uses `<component type="deskt
 
 All AppData files should start with:
 
-```xml
+```xml title="tld.domain.appid.metainfo.xml"
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright [year] [name] -->
 <component type="desktop-application">
 ```
 
-Note: the copyright notice is only necessary to pass `validate-strict`, but it’s still a good idea.
+:::note
+The copyright notice is only necessary to pass `validate-strict`, but it’s still a good idea.
+:::
 
 ### ID
 
@@ -54,7 +58,9 @@ The ID should be the same as the [Application-ID](requirements#application-id):
 <id>qtdemo</id>
 ```
 
-Note: when omitting the `.desktop` part, you have to add a `type="desktop-id"` [launchable](#launchable) in order for data to be pulled from the desktop file.
+:::note
+When omitting the `.desktop` part, you have to add a `type="desktop-id"` [launchable](#launchable) in order for data to be pulled from the desktop file.
+:::
 
 ### Translations
 
@@ -88,7 +94,11 @@ Basically describes how to launch this software. If a desktop file is linked, `a
 
 We can use this to link to other instances using a different ID, whether the app was renamed, but especially if there are distributions using the old naming scheme out there. It also prevents ODRS reviews to be “lost” on a rename.
 
-Note that the old desktop file name is automatically added if we use `rename-desktop-file` in the Flatpak manifest.
+:::note
+
+The old desktop file name is automatically added if we use `rename-desktop-file` in the Flatpak manifest.
+
+:::
 
 ```xml
 <provides>
@@ -110,9 +120,13 @@ Use the [OARS website](https://hughsie.github.io/oars/generate.html) to generate
 <content_rating type="oars-1.1" />
 ```
 
-Note: for some of these, e.g. the above-mentioned, adding them manually is the only way to get them. But beware:
+:::note
 
-> Although, please bear in mind any application that is found cheating, i.e. adding kudos artificially will have **all** the kudos manually removed with a blacklist rule in the AppStream builder.
+For some of these, e.g. the above-mentioned, adding them manually is the only way to get them. But beware:
+
+Although, please bear in mind any application that is found cheating, i.e. adding kudos artificially will have **all** the kudos manually removed with a blacklist rule in the AppStream builder.
+
+:::
 
 ### Content
 

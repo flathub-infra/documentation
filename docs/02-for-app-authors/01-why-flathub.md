@@ -1,4 +1,4 @@
-# For app authors
+# Why Flathub?
 
 ## What Flathub offers
 

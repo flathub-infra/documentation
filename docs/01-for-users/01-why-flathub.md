@@ -1,6 +1,8 @@
-# For users
+# Why Flathub?
 
-## Introduction
+Flatpak and Flathub allow you to easily install, run and update applications on Linux desktop systems.
+
+## What is Flatpak?
 
 Flatpak is a universal package format for Linux desktop applications. It is
 available on most Linux distributions. It allows you to install and run
@@ -8,7 +10,7 @@ applications in a sandboxed environment, separate from the rest of the
 system. This sandboxing gives you more control over the dependencies of
 your applications.
 
-## Flathub
+## What is Flathub?
 
 Flathub is a centralized repository of Flatpak apps. You can use it to
 install and update apps on your system.
