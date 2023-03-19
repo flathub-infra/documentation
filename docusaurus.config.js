@@ -109,19 +109,19 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "Docs",
+            title: "Categories",
             items: [
               {
                 label: "For users",
-                to: "docs/for-users",
+                to: "docs/category/for-users",
               },
               {
                 label: "For app authors",
-                to: "docs/for-app-authors",
+                to: "docs/category/for-app-authors",
               },
               {
                 label: "For team members",
-                to: "docs/for-team-members",
+                to: "docs/category/for-team-members",
               },
             ],
           },
@@ -131,6 +131,10 @@ const config = {
               {
                 label: "Matrix",
                 href: "https://matrix.to/#/#flathub:matrix.org",
+              },
+              {
+                label: "Discourse",
+                href: "https://discourse.flathub.org/",
               },
               {
                 label: "Mastodon",
@@ -143,7 +147,7 @@ const config = {
             ],
           },
           {
-            title: "More",
+            title: "Code",
             items: [
               {
                 label: "GitHub",
