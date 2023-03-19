@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/"/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g transform="matrix(.40706 0 0 .40706 -64.169 -35.251)" fill="currentColor">
+  <circle cx="167.47" cy="96.425" r="9.8266" stroke-width="2.4566"/>
+  <rect x="157.64" y="108.71" width="17.197" height="17.197" rx="4.5857" ry="4.5857" stroke-width="2.4566"/>
+  <path transform="matrix(.96114 .55492 .55492 -.96114 95.916 111.74)" d="m69.514 58.833h-1.7806-10.247a2.4441 2.4441 60 0 1-2.1167-3.6662l6.0139-10.416a2.4441 2.4441 2.522e-7 0 1 4.2333 0l6.0139 10.416a2.4441 2.4441 120 0 1-2.1167 3.6662z" stroke-width="2.2289"/>
+  <path d="m195.01 114.94c0 0.74202-0.59729 1.3393-1.3393 1.3393h-10.715c-0.74202 0-1.3393-0.5973-1.3393-1.3393s0.5973-1.3393 1.3393-1.3393h10.715c0.74202 0 1.3393 0.59729 1.3393 1.3393zm-6.6967-6.6967c0.74202 0 1.3393 0.5973 1.3393 1.3393v10.715c0 0.74202-0.5973 1.3393-1.3393 1.3393-0.74203 0-1.3393-0.5973-1.3393-1.3393v-10.715c0-0.74203 0.5973-1.3393 1.3393-1.3393z" stroke-width="24.566"/>
+ </g>
+ <style>
+ path, g { fill: #000000; }
+  @media (prefers-color-scheme: dark) { path, g { fill: #ffffff; }
+  }
+ </style>
+</svg>
