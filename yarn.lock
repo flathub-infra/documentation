@@ -3549,10 +3549,10 @@ dns-packet@^5.2.2:
   dependencies:
     "@leichtgewicht/ip-codec" "^2.0.1"
 
-docusaurus-plugin-search-local@^0.9.0:
-  version "0.9.0"
-  resolved "https://registry.npmjs.org/docusaurus-plugin-search-local/-/docusaurus-plugin-search-local-0.9.0.tgz"
-  integrity sha512-Mx4o7bSD791ZgSepQD+7Ll4PN+aUROyjmyNCnbri4LC+7fuypfrLFqBqV0o2KjCul/CK+gQQQWYGKsfZNUUEGA==
+docusaurus-plugin-search-local@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/docusaurus-plugin-search-local/-/docusaurus-plugin-search-local-0.10.0.tgz#8c1b3ece0884e4a30dde6aba81bf52a95ae472a9"
+  integrity sha512-FwifwWDhB3Erf5MLJGeXPANM3+XUR/CRD1oA9mkfzVymmyq1aGcfQSsr1z37hkimdOCkYCYWT5djff+CM8MGng==
   dependencies:
     "@braintree/sanitize-url" "^6.0.0"
     "@docusaurus/core" "2.1.0"
