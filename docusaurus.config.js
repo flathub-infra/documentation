@@ -59,7 +59,14 @@ const config = {
       {
         hashed: true,
       },
-      "docusaurus-plugin-matomo",
+    ],
+    [
+      require.resolve("@gabrielcsapo/docusaurus-plugin-matomo"),
+      {
+        matomoUrl: "https://webstats.gnome.org/",
+        siteId: "40",
+        siteUrl: "https://docs.flathub.org/",
+      },
     ],
   ],
 
@@ -150,12 +157,6 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-      },
-      matomo: {
-        matomoUrl: "https://webstats.gnome.org/",
-        siteId: "40",
-        phpLoader: "matomo.php",
-        jsLoader: "matomo.js",
       },
     }),
 };
