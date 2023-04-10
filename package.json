@@ -28,7 +28,7 @@
     "@docusaurus/module-type-aliases": "^2.4.0",
     "@gabrielcsapo/docusaurus-plugin-matomo": "^0.1.2",
     "@tsconfig/docusaurus": "^1.0.7",
-    "typescript": "^5.0.3"
+    "typescript": "^5.0.4"
   },
   "browserslist": {
     "production": [
