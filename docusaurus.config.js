@@ -148,7 +148,7 @@ const config = {
             items: [
               {
                 label: "GitHub",
-                href: "https://github.com/flathub",
+                href: "https://github.com/flathub/documentation",
               },
             ],
           },
