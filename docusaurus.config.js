@@ -93,7 +93,7 @@ const config = {
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/flathub",
+            href: "https://github.com/flathub/documentation",
             label: "GitHub",
             position: "right",
           },
