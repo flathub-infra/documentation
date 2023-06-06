@@ -52,9 +52,9 @@ You can create a file called `flathub.json` to control various parameters of the
 
 ### Limiting the set of architectures to build on.
 
-Flathub has builders for `i386`, `x86_64`, and `aarch64`, and by default all applications build on all these. However this is further limited by your chosen runtime. Many modern runtimes (based on Freedesktop.org SDK 20.08 or later) only support `x86_64` and `aarch64`. If your application does not work on some architectures, you can configure it to skip or build certain architectures.
+Flathub has builders for `x86_64`, and `aarch64` as current runtimes (based on Freedesktop.org SDK 20.08 or later) only support `x86_64` and `aarch64`. By default all applications build on all these. If your application does not work on some architectures, you can configure it to skip or build certain architectures.
 
-#### Don’t build on `aaarch64
+#### Don’t build on `aarch64`
 
 ```json title="flathub.json"
 {
