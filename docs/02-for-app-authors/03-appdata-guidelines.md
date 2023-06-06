@@ -62,6 +62,16 @@ The ID should be the same as the [Application-ID](requirements#application-id):
 When omitting the `.desktop` part, you have to add a `type="desktop-id"` [launchable](#launchable) in order for data to be pulled from the desktop file.
 :::
 
+### Launchable
+
+Basically describes how to launch this software. If a desktop file is linked, `appstream-builder` will pull data from it, namely categories and icons.
+
+```xml
+<launchable type="desktop-id">org.flatpak.qtdemo.desktop</launchable>
+```
+
+The value of `launchable` is the name of the desktop file for the application. If you use `rename-desktop-file` in the manifest, it will also take care of changing it in the appstream file.
+
 ### Translations
 
 Appstream provides translation information, so that software centers can inform users if the app is translated into their language. If the app uses Mozilla `.xpi` or Google `.pak` files for translation, the translation info is populated automatically. If the app uses gettext `.mo` or Qt `.qm` files, you’ll need to provide the prefix of these files with a `<translation/>` tag:
@@ -82,14 +92,6 @@ If it’s somewhere different (Qt apps often name the directory “locale” and
 
 To see if it was detected correctly, check the [generated output](#checking-the-generated-output).
 
-### Launchable
-
-Basically describes how to launch this software. If a desktop file is linked, `appstream-builder` will pull data from it, namely categories and icons.
-
-```xml
-<launchable type="desktop-id">qtdemo.desktop</launchable>
-```
-
 ### Provides
 
 We can use this to link to other instances using a different ID, whether the app was renamed, but especially if there are distributions using the old naming scheme out there. It also prevents ODRS reviews to be “lost” on a rename.
@@ -108,7 +110,7 @@ The old desktop file name is automatically added if we use `rename-desktop-file`
 
 ### Icons and categories
 
-If there’s a `type="desktop-id"` [launchable](#launchable), they get pulled from it.
+If there’s a `type="desktop-id"` [launchable](#launchable), they get pulled from it. Most of the icon not found errors with the flathub builder can be traced down to the `launchable` value not matching the desktop file name.
 
 Don’t set them in the AppData unless you want to override them (even though then it might be a better idea to patch the desktop file itself).
 
