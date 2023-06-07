@@ -83,6 +83,13 @@ Applications must include a desktop file and pass `desktop-file-validate`.
 
 See [the desktop file spec](https://standards.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html) for more details.
 
+
+:::note
+
+We recommend not to have `keywords` in the `.desktop` file. They should be part of your appstream file.
+
+:::
+
 #### Application icons
 
 Applications must provide application icons in at least 64×64px and 128×128px sizes. Application icons should either be included as scalable SVGs or high-resolution PNGs.
