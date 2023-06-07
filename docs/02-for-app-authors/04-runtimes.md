@@ -11,7 +11,6 @@ However, in order to give developers the choice of the most suitable environment
 - [org.freedesktop](https://gitlab.com/freedesktop-sdk/freedesktop-sdk)
 - [org.gnome](https://gitlab.gnome.org/GNOME/gnome-build-meta)
 - [org.kde](https://invent.kde.org/packaging/flatpak-kde-runtime)
-- [io.elementary](https://github.com/elementary/flatpak-platform)
 
 ## Requirements
 
