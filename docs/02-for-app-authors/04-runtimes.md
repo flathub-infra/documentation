@@ -8,9 +8,9 @@ However, in order to give developers the choice of the most suitable environment
 
 ## Currently hosted runtimes
 
-- [org.freedesktop](https://gitlab.com/freedesktop-sdk/freedesktop-sdk)
-- [org.gnome](https://gitlab.gnome.org/GNOME/gnome-build-meta)
-- [org.kde](https://invent.kde.org/packaging/flatpak-kde-runtime)
+- [org.freedesktop](https://gitlab.com/freedesktop-sdk/freedesktop-sdk): This is the base runtime for the others. It includes GTK 3.
+- [org.gnome](https://gitlab.gnome.org/GNOME/gnome-build-meta): This is the GNOME runtime. On top of the Freedesktop runtime, it includes the Python3 binding for GTK, GTK 4, and the GNOME platform.
+- [org.kde](https://invent.kde.org/packaging/flatpak-kde-runtime): This is the KDE runtime. The version is based on the version of Qt that is available in the runtime. Qt5 based runtime include the KDE platform that is still Qt5 based.
 
 ## Requirements
 
