@@ -4,7 +4,7 @@ This is a guide in how to maintain your application once it is on Flathub. It as
 
 ## The repository
 
-The build information for each application on Flathub is stored in a repository on GitHub in the Flathub organization. For example, the Blender one is here: https://github.com/flathub/org.blender.Blender. On the `master` branch of this repository the primary build version of the app is stored. The `beta` branch is built into the beta repository (if you want to use that). Branches named `branch/XXX` are special cases used for things that have specific flatpak branch names such as extensions. Other branch names are free to use however you see fit.
+The build information for each application on Flathub is stored in a repository on GitHub in the Flathub organization. For example, the Blender one is here: https://github.com/flathub/org.blender.Blender. On the `master` branch of this repository the primary build version of the app is stored. The `beta` branch is built into the beta repository (if you want to use that). Branches named `branch/XXX` are special cases used for things that have specific flatpak branch names such as extensions. All of these branches are automatically <em>protected</em> which mean that you can only merge pull requests and not push directly to them. Other branch names are free to use however you see fit.
 
 ### Required files
 
@@ -14,7 +14,7 @@ This manifest may import other manifest files in the same repository. It's quite
 
 ### Optional
 
-- `README.md` with whatever information you see fit
+- `README.md` with whatever information you see fit, but be advised that users are unlikely to ever read this. However packaging notes are valuable.
 - `flathub.json` (described below)
 
 ### Acceptable, but should be submitted upstream
@@ -36,7 +36,7 @@ For cross-platform applications which have a policy of not including platform-sp
 
 ## Buildbot
 
-There is a Buildbot instance running on https://flathub.org/builds, which monitors the GitHub repositories. Each time that `master` or `beta` branch changes it queues a build of the application, and if the build succeeds on all the architectures, then a test repository is generated where you can download and test the build. The build is published (i.e. signed and imported) into the Flathub Flatpak repo manually (via the web ui) or automatically after 3 hours (by default), and the build will be available to your users.
+There is a Buildbot instance running on https://flathub.org/builds, which monitors the GitHub repositories. Each time that `master`, `beta` or `branch/*` branch changes it queues a build of the application, and if the build succeeds on all the architectures, then a test repository is generated where you can download and test the build. The build is published (i.e. signed and imported) into the Flathub Flatpak repo manually (via the web ui) or automatically after 3 hours, and the build will be available to your users.
 
 You can track your build status, follow the build log for current and historic builds, start builds or publishe build on the Buildbot instance website.
 
@@ -70,6 +70,8 @@ Flathub has builders for `x86_64`, and `aarch64` as current runtimes (based on F
 }
 ```
 
+If you build for both `x86_64` and `aarch64` you do not need a `flathub.json` file. There will be no new architecture add or removed on current runtimes, which mean that if that situation ever occured, it would only happen when changing the runtime version in your package.
+
 ### End of life
 
 There may come a point where an application is no longer maintained. In order to inform users at update or install time that it will no longer get updates, create `flathub.json` with these contents:
@@ -89,7 +91,9 @@ If the application has been renamed, you can additionally include `end-of-life-r
 }
 ```
 
-Please also try to contact a flathub admin to archive the repo by either via pinging them in issues, IRC, or emailing flathub-admins@lists.freedesktop.org
+The `end-of-life-rebase` will tell flatpak to automatically migrate the user data from the old package to the new package, making the process transparent for the user.
+
+Please also try to contact a flathub admin to archive the repo by either via pinging them in issues, [Matrix](https://matrix.to/#/#flatpak:matrix.org), or emailing flathub-admins@lists.freedesktop.org
 
 ### Download statistics
 
@@ -97,4 +101,4 @@ Flathub publishes download statistics for every app or runtime. The raw JSON fil
 
 ## Getting Help
 
-If anything is not working or there is some behaviour you don’t understand, come to the `#flatpak` channel on Freenode or start a discussion on the [Flathub forum](https://discourse.flathub.org/).
+If anything is not working or there is some behaviour you don’t understand, come to the [Matrix channel](https://matrix.to/#/#flatpak:matrix.org) or start a discussion on the [Flathub forum](https://discourse.flathub.org/).
