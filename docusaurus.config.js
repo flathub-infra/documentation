@@ -77,7 +77,7 @@ const config = {
       metadata: [
         {
           name: "keywords",
-          content: "flatpak, flathub, packaging, tool, linux",
+          content: "flatpak, flathub, packaging, tool, linux, desktop, apps",
         },
       ],
       navbar: {
