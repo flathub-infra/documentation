@@ -71,13 +71,14 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      image: "img/logo.svg",
       colorMode: {
         respectPrefersColorScheme: true,
       },
       metadata: [
         {
           name: "keywords",
-          content: "flatpak, flathub, packaging, tool, linux",
+          content: "flatpak, flathub, packaging, tool, linux, desktop, apps",
         },
       ],
       navbar: {
