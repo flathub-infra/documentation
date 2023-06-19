@@ -71,7 +71,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: "img/card.webp",
+      image: "img/card.png",
       colorMode: {
         respectPrefersColorScheme: true,
       },
