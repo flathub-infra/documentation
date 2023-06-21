@@ -7,14 +7,22 @@ App submissions are extremely welcome and the process is straightforward. Before
 Flathub is managed through a GitHub project, and app submissions take place as pull requests. To submit an app:
 
 1. Fork the [Flathub repository on GitHub](https://github.com/flathub/flathub/fork) with _"Copy the master branch only"_ unchecked.
-2. Clone the fork:
-   `git clone --branch=new-pr git@github.com:your_github_username/flathub.git`
-3. Create a new branch with your app’s name:
-   `git checkout -b your_app_name`
+1. Clone the fork:
+   ```bash
+   git clone --branch=new-pr git@github.com:your_github_username/flathub.git
+   ```
+1. Switch into the cloned repository:
+   ```bash
+   cd flathub
+   ```
+1. Create a new branch with your app’s name:
+   ```bash
+   git checkout -b your_app_name
+   ```
    The name of the branch has no incidence on the submission and at no point in the submission will you need to change it. Doing so will make github close the Pull Request.
-4. Add your app’s manifest to the branch, commit it and push the commit
-5. Open a pull request against the `new-pr` branch on GitHub. Please make sure to title the Pull Request with the name of the application. Example "Add org.example.MyAwesomeApp".
-6. Your pull request will then be reviewed by the Flathub reviewers. Keep in mind that the reviewers are volunteers.
+1. Add your app’s manifest to the branch, commit it and push the commit
+1. Open a pull request against the `new-pr` branch on GitHub. Please make sure to title the Pull Request with the name of the application. Example "Add org.example.MyAwesomeApp".
+1. Your pull request will then be reviewed by the Flathub reviewers. Keep in mind that the reviewers are volunteers.
 
 Once your pull request has been approved, a new repository will be created for your application, containing your app’s Flatpak manifest. You will receive an invitation to have write access for the repository ; please make sure to accept it before it expires. Don't hesitate to [contact us](#getting-help) if it did. The Flathub service then uses the manifest from your repository to continuously build and distribute your application on every commit.
 
