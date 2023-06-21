@@ -1,13 +1,14 @@
 # Shared Modules
 
-A small number of dependencies that are frequently used by applications have been collected in the [shared-modules repository](https://github.com/flathub/shared-modules), for use by applications being distributed with flathub. These can be used as a git submodule, like
-so:
+A small number of dependencies that are frequently used by applications have been collected in the [shared-modules repository](https://github.com/flathub/shared-modules), for use by applications being distributed with flathub.
+
+These can be used as a git submodule, like so:
 
 ```bash
 git submodule add https://github.com/flathub/shared-modules.git
 ```
 
-These can be specified from manifest `.json` files, like:
+Then you can use them from your manifest. Here's an example of how to use it with a `.json` manifest:
 
 ```json
 "modules": [
