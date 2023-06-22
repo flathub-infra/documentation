@@ -51,7 +51,7 @@ This requirement also applies to SDK extensions that may be required in order to
 The easiest way to see which runtimes are currently available is to install the flathub remote and
 run:
 
-```
+```bash
 flatpak remote-ls --runtime --show-details flathub
 ```
 
