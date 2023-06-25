@@ -138,6 +138,16 @@ For the quick guidelines for the actual content (descriptions, screenshots), see
 
 All appdata must contain a valid SPDX licence. However there isn't an [SPDX licence](https://spdx.org/licenses/) for proprietary software. By convention you should use `LicenseRef-proprietary` in this case.
 
+### Manifest location
+
+If you are using the flathub infrastructure (you have a repo on flathubs github) you don't have to do anything. If you are using your own infrastructure and have the manifest in your repo you should add this to your appdata, poiting to whereever your manifest is located:
+
+```xml
+ <custom>
+    <value key="flathub::manifest">https://example.com/url_with_a_git_hash/com.example.my-app.json</value>
+  </custom>
+```
+
 ### Checking the generated output
 
 Once an app has been built, you can look for the `/app/share/app-info/xmls/<app-id>.xml.gz` archive, inside which is an XML file with all the info about the app combined into one file.
