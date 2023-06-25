@@ -26,7 +26,7 @@ Flathub only hosts stable application releases, and not development snapshots.
 Manifests should therefore refer to tarballs or git tags and not the tip of a
 branch.
 
-When building from a git tag, both the tag name and the commit id should be specified, like so:
+When building from a git tag, both the tag name and the commit id should be specified in your manifest, like so:
 
 ```json
    "tag": "1.0.4",
