@@ -122,14 +122,6 @@ Use the [OARS website](https://hughsie.github.io/oars/generate.html) to generate
 <content_rating type="oars-1.1" />
 ```
 
-:::note
-
-For some of these, e.g. the above-mentioned, adding them manually is the only way to get them. But beware:
-
-Although, please bear in mind any application that is found cheating, i.e. adding kudos artificially will have **all** the kudos manually removed with a blacklist rule in the AppStream builder.
-
-:::
-
 ### Content
 
 For the quick guidelines for the actual content (descriptions, screenshots), see the Appstream [docs](https://www.freedesktop.org/software/appstream/docs/chap-Quickstart.html).
