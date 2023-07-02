@@ -50,7 +50,7 @@ The icon should be in line with the contemporary icon style.
 
 ### Not too long
 
-The name should be shorter then 20 characters.
+The name should ideally be no longer than 15 characters, and must be shorter than 20 characters.
 
 ### Just the name
 
