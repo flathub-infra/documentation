@@ -6,34 +6,6 @@ This is a guide in how to maintain your application once it is on Flathub. It as
 
 The build information for each application on Flathub is stored in a repository on GitHub in the Flathub organization. For example, the Blender one is here: https://github.com/flathub/org.blender.Blender. On the `master` branch of this repository the primary build version of the app is stored. The `beta` branch is built into the beta repository (if you want to use that). Branches named `branch/XXX` are special cases used for things that have specific flatpak branch names such as extensions. All of these branches are automatically <em>protected</em> which mean that you can only merge pull requests and not push directly to them. Other branch names are free to use however you see fit.
 
-### Required files
-
-Every repository must contain a manifest describing how to build the application. If the application, and hence repository, is called `com.example.MyCoolApp`, this file must be called `com.example.MyCoolApp.json` or `com.example.MyCoolApp.yaml`. This is the only required file!
-
-This manifest may import other manifest files in the same repository. It's quite common to add the [shared-modules](shared-modules) repository as a submodule.
-
-### Optional
-
-- `README.md` with whatever information you see fit, but be advised that users are unlikely to ever read this. However packaging notes are valuable.
-- `flathub.json` (described below)
-
-### Acceptable, but should be submitted upstream
-
-- Any patches necessary to build and run the application in the Flatpak environment
-- Additional metadata files (`com.example.MyCoolApp.metainfo.xml` and `com.example.MyCoolApp.desktop`) which are mandatory for Flathub apps but not shipped by some (primarily cross-platform) applications
-
-### Strongly discouraged
-
-Patches which add (or remove) application functionality do not belong in the Flathub repository. The application on Flathub should reflect, as closely as possible, the application in its unadulterated form, direct from its authors.
-
-There is a grey area here for functionality which is only appropriate in a Flatpak environment. The policy on Flathub is that this should live in the upstream version of the application, for several reasons:
-
-- The Flatpak environment can be detected at runtime by looking for a file named `/.flatpak-info`.
-- Code maintained outside the main application tree is likely to break as the application evolves.
-- It is entirely possible to build and distribute Flatpak applications through channels other than Flathub. In particular, tools like [GNOME Builder](https://wiki.gnome.org/Apps/Builder) take advantage of Flatpak to automatically fetch, build and run the application with a single click on any (Linux) computer. To enable this, not only does all functionality need to live upstream, but so too does the Flatpak manifest!
-
-For cross-platform applications which have a policy of not including platform-specific code in their main tree, the recommended approach is for the application author to create a separate repository for the Flatpak (or perhaps desktop Linux in general) version of the app.
-
 ## Buildbot
 
 There is a Buildbot instance running on https://flathub.org/builds, which monitors the GitHub repositories. Each time that `master`, `beta` or `branch/*` branch changes it queues a build of the application, and if the build succeeds on all the architectures, then a test repository is generated where you can download and test the build. The build is published (i.e. signed and imported) into the Flathub Flatpak repo manually (via the web ui) or automatically after 3 hours, and the build will be available to your users.
