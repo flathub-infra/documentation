@@ -24,7 +24,7 @@ Flathub is managed through a GitHub project, and app submissions take place as p
 1. Open a pull request against the `new-pr` branch on GitHub. Please make sure to title the Pull Request with the name of the application. Example "Add org.example.MyAwesomeApp".
 1. Your pull request will then be reviewed by the Flathub reviewers. Keep in mind that the reviewers are volunteers.
 
-Once your pull request has been approved, a new repository will be created for your application, containing your app’s Flatpak manifest. You will receive an invitation to have write access for the repository ; please make sure to accept it before it expires. Don't hesitate to [contact us](#getting-help) if it did. The Flathub service then uses the manifest from your repository to continuously build and distribute your application on every commit.
+Once your pull request has been approved, a new repository will be created for your application, containing your app’s Flatpak manifest. You will receive an invitation to have write access for the repository, please make sure to accept it before it expires. Don't hesitate to [contact us](#getting-help) if it did. The Flathub service then uses the manifest from your repository to continuously build and distribute your application on every commit.
 
 ## Someone else has put my app on Flathub—what do I do?
 
