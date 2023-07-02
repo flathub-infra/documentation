@@ -8,7 +8,7 @@ The following guidelines are optional, but recommended. We will likely promote a
 
 ### No trademark violations
 
-Your app must not violate any trademarks. This includes the name, icon, and summary.
+Your app must not violate any trademarks. This includes the name, icon, and summary. For example, if your app is a Telegram client or web wrapper, it should not be called "Telegram for Linux" or use the official Telegram icon. Instead, it should have its own identity (e.g. "Paper Plane", with a custom icon). If it's made clear that it's a third party client it can be ok to mention the original service (e.g. "Tally for Plausible"), but in most cases it should be avoided.
 
 ### Managed by app author
 
@@ -18,7 +18,7 @@ We recommend to verify your app on Flathub, but it’s not required.
 
 ### Icon size
 
-The icon must be at least 256x256px and be in PNG or SVG format.
+The icon must be SVG, or a PNG with a size greater or equal to 256x256px.
 
 ### Icon ratio
 
@@ -26,7 +26,7 @@ The icon shouldn't fill less than 90% of the canvas or touch the edges.
 
 ### Good contrast
 
-The icon should have good contrast on dark and light backgrounds.
+The icon should have good contrast on dark and light backgrounds. In particular, avoid single-color glyphs and the like since they can be very hard to see if the background color is similar. Dark colors near the edges are also a problem, since shadows don't help much with contrast on dark backgrounds.
 
 ### Not too much detail
 
@@ -34,7 +34,7 @@ The icon should be recognizable at small sizes.
 
 ### No baked-in shadows
 
-The icon should not have any baked-in shadows or glows.
+The icon should not have any baked-in shadows or glows. Both the Flathub website and native stores apply a shadow to all icons, so baked-in shadows result in double shadows or other glitches.
 
 ### In line with style
 
