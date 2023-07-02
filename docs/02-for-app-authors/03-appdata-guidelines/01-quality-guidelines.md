@@ -45,7 +45,7 @@ The icon should not have any baked-in shadows or glows. Both the Flathub website
 
 ### In line with style
 
-The icon should be in line with the contemporary icon style.
+The icon should be somewhat in line with the contemporary icon styles (i.e. not look like it hasn't been updated in decades). The [GNOME](https://developer.gnome.org/hig/guidelines/app-icons.html) and [KDE ](https://develop.kde.org/hig/style/icons/colorful/application/) app icon guidelines are examples of the kind of style your icon should align with.
 
 ## App Name
 
