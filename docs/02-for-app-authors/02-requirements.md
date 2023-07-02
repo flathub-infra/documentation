@@ -3,7 +3,9 @@
 The goal of these requirements is to ensure that the applications hosted on Flathub are safe to use
 and integrate well in the desktop experience.
 
-If you have any further questions, please ask on [#flatpak:matrix.org](https://matrix.to/#/#flatpak:matrix.org).
+:::tip
+If you have any further questions, please ask on [Matrix](https://matrix.to/#/#flatpak:matrix.org).
+:::
 
 ## License
 
