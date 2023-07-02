@@ -8,7 +8,7 @@ The following guidelines are optional, but recommended. We will likely promote a
 
 ### No trademark violations
 
-Your app must not violate any trademarks. This includes the name, icon, and summary. For example, if your app is a Telegram client or web wrapper, it should not be called "Telegram for Linux" or use the official Telegram icon. Instead, it should have its own identity (e.g. "Paper Plane", with a custom icon). If it's made clear that it's a third party client it can be ok to mention the original service (e.g. "Tally for Plausible"), but in most cases it should be avoided.
+Your app should not violate any trademarks. This includes the name, icon, and summary. For example, if your app is a Telegram client or web wrapper, it should not be called "Telegram for Linux" or use the official Telegram icon. Instead, it should have its own identity (e.g. "Paper Plane", with a custom icon). If it's made clear that it's a third party client it can be ok to mention the original service (e.g. "Tally for Plausible"), but in most cases it should be avoided.
 
 ### Managed by app author
 
@@ -18,7 +18,7 @@ We recommend to verify your app on Flathub, but it’s not required.
 
 ### Icon size
 
-The icon must be SVG, or a PNG with a size greater or equal to 256x256px.
+The icon should be SVG, or a PNG with a size greater or equal to 256x256px.
 
 ### Icon ratio
 
