@@ -19,7 +19,7 @@ If you're not sure if your app violates any trademarks, feel free to ask us on [
 
 ### Managed by app author
 
-We recommend to verify your app on Flathub, but it’s not required.
+Use Flathub verification to indicate that you are the author of the app and that you are managing the app on Flathub.
 
 ## App Icon
 
