@@ -54,7 +54,7 @@ The name should ideally be no longer than 15 characters, and must be shorter tha
 
 ### Just the name
 
-The name should be just the name, without any additional info.
+The name should be just the name, without any additional info. For example, don't append what the app does to the name (e.g. "Apostrophe - Markdown Editor"), and use the summary to provide this extra information instead.
 
 ### No weird formatting
 
