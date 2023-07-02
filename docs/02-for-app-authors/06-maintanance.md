@@ -50,7 +50,7 @@ This is a great way to do updates, you do an update locally and tests that it wo
 
 You can create a file called `flathub.json` to control various parameters of the build infrastructure.
 
-### Limiting the set of architectures to build on.
+### Limiting the set of architectures to build on
 
 Flathub has builders for `x86_64`, and `aarch64` as current runtimes (based on Freedesktop.org SDK 20.08 or later) only support `x86_64` and `aarch64`. By default all applications build on all these. If your application does not work on some architectures, you can configure it to skip or build certain architectures.
 
@@ -95,7 +95,43 @@ The `end-of-life-rebase` will tell flatpak to automatically migrate the user dat
 
 Please also try to contact a flathub admin to archive the repo by either via pinging them in issues, [Matrix](https://matrix.to/#/#flatpak:matrix.org), or emailing flathub-admins@lists.freedesktop.org
 
-### Download statistics
+### Flathub external data checker config
+
+[Flatpak external data checker](/docs/for-app-authors/external-data-checker) is a tool that checks for updates of modules, which have been configured to be updated. If you are using the Flathub infrastructure (repo on the Flathub org), this tool will be run every hour for you and will create merge requests if there are newer version.
+
+#### Only create updates with important modules
+
+You can configure the external data checker to only create updates for modules that are marked as important. This is done by creating a `flathub.json` file with the following contents:
+
+```json title="flathub.json"
+{
+  "require-important-update": true
+}
+```
+
+This also needs your module config to have `is-important: true` set.
+
+#### Automatically merging PRs
+
+You can configure the external data checker to automatically merge PRs. This is done by creating a `flathub.json` file with the following contents:
+
+```json title="flathub.json"
+{
+  "automerge-flathubbot-prs": true
+}
+```
+
+#### Disable external data checker
+
+You can opt out of this by creating a `flathub.json` file with the following contents:
+
+```json title="flathub.json"
+{
+  "disable-external-data-checker": true
+}
+```
+
+## Download statistics
 
 Flathub publishes download statistics for every app or runtime. The raw JSON files are available at [flathub.org/stats](https://flathub.org/stats/). These break out app downloads and updates. This is also the basis for the data shown on flathub.org, additionally there are some community members that generously provide frontends to interpret the data and make it more useful for app developers at [https://ahayzen.com/direct/flathub.html](https://ahayzen.com/direct/flathub.html) and [https://klausenbusk.github.io/flathub-stats/](https://klausenbusk.github.io/flathub-stats/)
 
