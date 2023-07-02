@@ -43,8 +43,8 @@ If application is distributed under proprietary license and uses `extra-data` to
 
 ## Branches and runtimes
 
-Flathub always builds in the flatpak branchname `"stable"` and it always passes
-`--default-branch=stable`. This means that a branch key doesn't need to be specified. If one is specified, it should be `"stable"`.
+Flathub always builds in the flatpak branchname `stable` and it always passes
+`--default-branch=stable`. This means that a branch key doesn't need to be specified. If one is specified, it should be `stable`.
 
 Applications must be built against an SDK that is itself hosted on Flathub.
 This requirement also applies to SDK extensions that may be required in order to build an application.
