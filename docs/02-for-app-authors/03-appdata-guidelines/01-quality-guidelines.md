@@ -18,7 +18,7 @@ We recommend to verify your app on Flathub, but it’s not required.
 
 ### Icon size
 
-The icon should be SVG, or a PNG with a size greater or equal to 256x256px.
+The icon should be SVG, or a PNG with a size greater or equal to 256x256px. It has to be square.
 
 ### Icon ratio
 
