@@ -68,7 +68,7 @@ The summary should ideally be no longer than 35 characters, and must be shorter 
 
 ### Not technical
 
-The summary should be understandable by a non-technical person, and not contain any technical terms.
+The summary should be understandable by a non-technical person, and not contain any technical terms (e.g. "Chat app written in Rust and GTK4/Libadwaita"). Don't mention the toolkit, programming language, or other implementation details that would not be relevant to a non-developer and explain what the app does for people instead.
 
 ### No weird formatting
 
