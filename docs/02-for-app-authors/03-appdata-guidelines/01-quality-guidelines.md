@@ -37,7 +37,7 @@ The icon should have good contrast on dark and light backgrounds. In particular,
 
 ### Not too much detail
 
-The icon should be recognizable at small sizes.
+The icon should be recognizable at small sizes. Avoid too many tiny details, small text, and generally try and match other well-executed app icons in terms of complexity.
 
 ### No baked-in shadows
 
