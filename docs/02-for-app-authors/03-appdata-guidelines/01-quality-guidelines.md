@@ -3,6 +3,7 @@
 For the quick guidelines for the actual content (descriptions, screenshots), see the Appstream [docs](https://www.freedesktop.org/software/appstream/docs/chap-Quickstart.html).
 
 The following guidelines are optional, but recommended. We will likely promote apps that follow them in certain places.
+Therefor `must` is used in the following text, but it's not a requirement, it means that apps not following these guidelines will likely not be promoted.
 
 ## General
 
