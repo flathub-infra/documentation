@@ -59,7 +59,7 @@ The name should be just the name, without any additional info. For example, don'
 
 ### No weird formatting
 
-The name should not have any weird formatting or punctuation.
+The name should not have any weird formatting or punctuation. For example, it should not be all-lowercase, all-uppercase, camel case, or contain dashes or periods. Cases where the weird formatting is part of the brand are exempt from this (e.g. "VLC").
 
 ## Summary
 
