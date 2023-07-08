@@ -44,7 +44,7 @@ The copyright notice is only necessary to pass `validate-strict`, but it’s sti
 
 ## ID
 
-The ID should be the same as the [Application-ID](requirements#application-id):
+The ID should be the same as the [Application-ID](./../requirements#application-id):
 
 ```xml
 <!-- Good -->
