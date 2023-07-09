@@ -16,6 +16,8 @@ $ yarn start
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
+You can access it on [http://localhost:3000](http://localhost:3000) then.
+
 ### Build
 
 ```
