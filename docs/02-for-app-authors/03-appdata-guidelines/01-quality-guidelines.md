@@ -55,11 +55,11 @@ The name should ideally be no longer than 15 characters, and must be shorter tha
 
 ### Just the name
 
-The name should be just the name, without any additional info. For example, don't append what the app does to the name (e.g. `Apostrophe - Markdown Editor`), and use the summary to provide this extra information instead.
+The name should be just the name, without any additional info. For example, don't append what the app does to the name (e.g. "Apostrophe - Markdown Editor"), and use the summary to provide this extra information instead.
 
 ### No weird formatting
 
-The name should not have any weird formatting or punctuation. For example, it should not be all-lowercase, all-uppercase, camel case, or contain dashes or periods. Cases where the weird formatting is part of the brand are exempt from this (e.g. `VLC`).
+The name should not have any weird formatting or punctuation. For example, it should not be all-lowercase, all-uppercase, camel case, or contain dashes or periods. Cases where the weird formatting is part of the brand are exempt from this (e.g. "VLC").
 
 ## Summary
 
@@ -69,8 +69,62 @@ The summary should ideally be no longer than 35 characters, and must be shorter 
 
 ### Not technical
 
-The summary should be understandable by a non-technical person, and not contain any technical terms (e.g. `Chat app written in Rust and GTK4/Libadwaita`). Don't mention the toolkit, programming language, or other implementation details that would not be relevant to a non-developer and explain what the app does for people instead.
+The summary should be understandable by a non-technical person, and not contain any technical terms (e.g. "Chat app written in Rust and GTK4/Libadwaita"). Don't mention the toolkit, programming language, or other implementation details that would not be relevant to a non-developer and explain what the app does for people instead.
 
 ### No weird formatting
 
 The summary should not have any weird formatting or punctuation. It shouldn't end with a full stop.
+
+## Description
+
+### Don't repeat the summary
+
+The description should not just repeat or rephrase the summary. The summary is a kind of slogan or advertisement for the app, while the description should go into more detail about the purpose of the app, which features it has, and what makes it unique.
+
+### Not too short
+
+The description should be substantially longer than the summary. Something like 3-6 lines of text at default line widths (around 70 characters) is a good length for most apps, for very large apps up to about 10 lines.
+
+### No super long lists
+
+Avoid feature lists with more than 10 items, they are difficult to scan and make the app store listing unwieldy. Instead, try to group points or use paragraphs instead of bullet points.
+
+## Screenshots
+
+### Multiple screenshots
+
+Apps should have at least two screenshots. For medium complexity apps 3-6 is a good range, for very large apps with lots of screens 6-10 is appropriate. More than 10 is probably too many.
+
+### Just the app window
+
+Use the "window screenshot" feature in your native system screenshot tool to get just the app window and its shadow. Do not include the wallpaper behind the app, or even the entire desktop.
+
+### Take screenshots on Linux
+
+Do not use screenshots taken on other platforms, especially if it's immediately obvious from window controls and the like.
+
+### Not maximized
+
+Don't use screenshot of windows in maximized or fullscreen state, because in these states windows don't have shadows and rounded corners.
+
+### Include window shadow
+
+Screenshots must include the native toolkit shadow. App stores do not add a shadow after the fact and without one screenshots can look glitchy or have low contrast depending on the background.
+
+### Reasonable window size
+
+In order to ensure that text and interface elements are visible scaled-down in the app store UI the window size should be 1000x700 pixels or smaller (2000x1400 for HiDPI).
+
+## Release Notes
+
+### Release notes for every release
+
+Make sure all your releases have release notes, even minor ones.
+
+### Short but informative
+
+Release notes should not be too long, and focus on briefly explaining what changed from a user perspective. 2-3 sentences for medium-sized releases is a good length. For larger releases, avoid endless bullet point lists and rather go with a few paragraphs or a shorter summarized list instead.
+
+### No "bug fixes and performance improvements"
+
+Release notes should include some actual information about what changed rather than just generic boilerplate.
