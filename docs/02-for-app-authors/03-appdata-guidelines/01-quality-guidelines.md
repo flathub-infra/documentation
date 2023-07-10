@@ -55,11 +55,11 @@ The name should ideally be no longer than 15 characters, and must be shorter tha
 
 ### Just the name
 
-The name should be just the name, without any additional info. For example, don't append what the app does to the name (e.g. "Apostrophe - Markdown Editor"), and use the summary to provide this extra information instead.
+The name should be just the name, without any additional info. For example, don't append what the app does to the name (e.g. `Apostrophe - Markdown Editor`), and use the summary to provide this extra information instead.
 
 ### No weird formatting
 
-The name should not have any weird formatting or punctuation. For example, it should not be all-lowercase, all-uppercase, camel case, or contain dashes or periods. Cases where the weird formatting is part of the brand are exempt from this (e.g. "VLC").
+The name should not have any weird formatting or punctuation. For example, it should not be all-lowercase, all-uppercase, camel case, or contain dashes or periods. Cases where the weird formatting is part of the brand are exempt from this (e.g. `VLC`).
 
 ## Summary
 
@@ -69,7 +69,7 @@ The summary should ideally be no longer than 35 characters, and must be shorter 
 
 ### Not technical
 
-The summary should be understandable by a non-technical person, and not contain any technical terms (e.g. "Chat app written in Rust and GTK4/Libadwaita"). Don't mention the toolkit, programming language, or other implementation details that would not be relevant to a non-developer and explain what the app does for people instead.
+The summary should be understandable by a non-technical person, and not contain any technical terms (e.g. `Chat app written in Rust and GTK4/Libadwaita`). Don't mention the toolkit, programming language, or other implementation details that would not be relevant to a non-developer and explain what the app does for people instead.
 
 ### No weird formatting
 
