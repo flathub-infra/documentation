@@ -25,7 +25,7 @@ Use Flathub verification to indicate that you are the author of the app and that
 
 ### Icon size
 
-The icon should be SVG, or a PNG with a size greater or equal to 256x256px. It has to be square.
+The icon should be SVG, or a PNG with a size greater or equal to 256x256 pixels. It has to be square.
 
 ### Icon ratio
 
@@ -55,11 +55,11 @@ The name should ideally be no longer than 15 characters, and must be shorter tha
 
 ### Just the name
 
-The name should be just the name, without any additional info. For example, don't append what the app does to the name (e.g. "Apostrophe - Markdown Editor"), and use the summary to provide this extra information instead.
+The name should be just the name, without any additional info. For example, don't append what the app does to the name (e.g. `Apostrophe - Markdown Editor`), and use the summary to provide this extra information instead.
 
 ### No weird formatting
 
-The name should not have any weird formatting or punctuation. For example, it should not be all-lowercase, all-uppercase, camel case, or contain dashes or periods. Cases where the weird formatting is part of the brand are exempt from this (e.g. "VLC").
+The name should not have any weird formatting or punctuation. For example, it should not be all-lowercase, all-uppercase, camel case, or contain dashes or periods. Cases where the weird formatting is part of the brand are exempt from this (e.g. `VLC`).
 
 ## Summary
 
@@ -69,7 +69,7 @@ The summary should ideally be no longer than 35 characters, and must be shorter 
 
 ### Not technical
 
-The summary should be understandable by a non-technical person, and not contain any technical terms (e.g. "Chat app written in Rust and GTK4/Libadwaita"). Don't mention the toolkit, programming language, or other implementation details that would not be relevant to a non-developer and explain what the app does for people instead.
+The summary should be understandable by a non-technical person, and not contain any technical terms (e.g. `Chat app written in Rust and GTK4/Libadwaita`). Don't mention the toolkit, programming language, or other implementation details that would not be relevant to a non-developer and explain what the app does for people instead.
 
 ### No weird formatting
 
@@ -109,11 +109,15 @@ Don't use screenshot of windows in maximized or fullscreen state, because in the
 
 ### Include window shadow
 
-Screenshots must include the native toolkit shadow. App stores do not add a shadow after the fact and without one screenshots can look glitchy or have low contrast depending on the background.
+Screenshots must include the native toolkit shadow. App stores do not add a shadow after the fact and without one screenshots can look glitchy or have low contrast depending on the background. Apps that are always fullscreen (such as most games) are exempt from this.
 
 ### Reasonable window size
 
 In order to ensure that text and interface elements are visible scaled-down in the app store UI the window size should be 1000x700 pixels or smaller (2000x1400 for HiDPI).
+
+### Image captions
+
+Every screenshot should have a caption briefly describing it.
 
 ## Release Notes
 
