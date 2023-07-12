@@ -117,7 +117,7 @@ In order to ensure that text and interface elements are visible scaled-down in t
 
 ### Image captions
 
-Every screenshot should have a caption briefly describing it.
+Every screenshot should have a [caption](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-screenshots) briefly describing it. Captions should only be one sentence and not end with a full stop.
 
 ## Release Notes
 
