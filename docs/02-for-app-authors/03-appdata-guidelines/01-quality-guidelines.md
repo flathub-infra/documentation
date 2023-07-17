@@ -27,7 +27,7 @@ Use Flathub verification to indicate that you are the author of the app and that
 
 The icon should be SVG, or a PNG with a size greater or equal to 256x256 pixels. It has to be square.
 
-### Icon ratio
+### Reasonable footprint
 
 The icon shouldn't fill too much or too little of the canvas. Avoid filling the entire canvas and having the icon touch the edges of the canvas (except with small protruding elements). Similarly, avoid thin shapes that are hard to see.
 
