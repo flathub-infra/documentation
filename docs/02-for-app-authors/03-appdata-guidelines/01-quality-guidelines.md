@@ -103,9 +103,13 @@ Use the "window screenshot" feature in your native system screenshot tool to get
 
 Do not use screenshots taken on other platforms, especially if it's immediately obvious from window controls and the like.
 
+### Default settings
+
+Use the platform default configuration for all settings that affect screenshots, including window controls, interface font, large text, high contrast, dark style, and so on. Having some screenshots to show off that e.g. dark style is supported is fine, but these should not be the only screenshots.
+
 ### Not maximized
 
-Don't use screenshot of windows in maximized or fullscreen state, because in these states windows don't have shadows and rounded corners.
+Don't use screenshot of windows in maximized or fullscreen state, because in these states windows don't have shadows and rounded corners. Apps that are always fullscreen (such as most games) are exempt from this.
 
 ### Include window shadow
 
