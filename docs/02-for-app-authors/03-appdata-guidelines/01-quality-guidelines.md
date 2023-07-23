@@ -136,3 +136,9 @@ Release notes should not be too long, and focus on briefly explaining what chang
 ### No "bug fixes and performance improvements"
 
 Release notes should include some actual information about what changed rather than just generic boilerplate.
+
+## Age Ratings
+
+### Take easily accessible content into account
+
+Apps acting as "readers" or "stores" for external content should take into account what is accessible by just navigating around in the app. If content of a certain type can be arrived at without searching or typing in URLs, the app should be tagged as containing it. For example, an RSS reader that doesn't feature any content can be "All Ages", but the rating for a manga app with pre-configured servers should reflect the content of those default sources.
