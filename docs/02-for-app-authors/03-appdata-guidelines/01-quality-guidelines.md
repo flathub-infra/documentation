@@ -65,7 +65,7 @@ The name should not have any weird formatting or punctuation. For example, it sh
 
 ### Not too long
 
-The summary should ideally be no longer than 35 characters, and must be shorter than 50 characters.
+The summary should ideally be between 10 and 25 characters, and no longer than 35 characters.
 
 ### Not technical
 
