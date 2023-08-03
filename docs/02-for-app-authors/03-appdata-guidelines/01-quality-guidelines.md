@@ -75,6 +75,14 @@ The summary should be understandable by a non-technical person, and not contain 
 
 The summary should not have any weird formatting or punctuation. It shouldn't end with a full stop.
 
+### Don't repeat the name
+
+The summary is usually shown next to the app name, so repeating the name looks bad.
+
+### Don't start with an article
+
+Starting summaries with an article, e.g. `An image viewer`, or `The LibreOffice suite` is almost always unnecesary. Instead, either omit the article or ideally phrase it in the imperative with a verb, e.g. `View images and videos` or `Edit documents`.
+
 ## Description
 
 ### Don't repeat the summary
