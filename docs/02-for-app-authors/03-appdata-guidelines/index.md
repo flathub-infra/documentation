@@ -126,9 +126,9 @@ Use the [OARS website](https://hughsie.github.io/oars/generate.html) to generate
 
 For the quick guidelines for the actual content (descriptions, screenshots), see the Appstream [docs](https://www.freedesktop.org/software/appstream/docs/chap-Quickstart.html).
 
-## Licence
+## License
 
-All appdata must contain a valid SPDX licence. However there isn't an [SPDX licence](https://spdx.org/licenses/) for proprietary software. By convention you should use `LicenseRef-proprietary` in this case.
+All appdata must contain a valid SPDX license. However there isn't an [SPDX license](https://spdx.org/licenses/) for proprietary software. By convention you should use `LicenseRef-proprietary` in this case.
 
 ## Manifest location
 
