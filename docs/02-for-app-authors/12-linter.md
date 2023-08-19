@@ -10,11 +10,11 @@ It's run against all builds send to Flathub, and can be run locally to check you
 Here is a list of linter errors, and whether exceptions may be applied, by default.
 
 | Error                                       | Explanation                                                                  | Exceptions |
-|---------------------------------------------|------------------------------------------------------------------------------|------------|
-| `appid-code-hosting-too-few-components`     | The app id has too few components for code hosting service.                  | No[^a]     |
-| `appid-uses-code-hosting-domain`            | The app id doesn't follow the domain requirements for code hosting services. | No[^a]     |
+| ------------------------------------------- | ---------------------------------------------------------------------------- | ---------- |
+| `appid-code-hosting-too-few-components`     | The app id has too few components for code hosting service.                  | No[^1]     |
+| `appid-uses-code-hosting-domain`            | The app id doesn't follow the domain requirements for code hosting services. | No[^1]     |
 | `finish-args-arbitrary-autostart-access`    | Arbitrary `xdg-autostart` access. Please use the portals.                    | No         |
-| `finish-args-arbitrary-dbus-access`         | Generic D-Bus access is requested.                                           | No[^d]     |
+| `finish-args-arbitrary-dbus-access`         | Generic D-Bus access is requested.                                           | No[^4]     |
 | `finish-args-arbitrary-xdg-cache-access`    | Filesystem permission want `xdg-cache`.                                      | Yes        |
 | `finish-args-arbitrary-xdg-config-access`   | Filesystem permission want `xdg-config`.                                     | Yes        |
 | `finish-args-arbitrary-xdg-data-access`     | Filesystem permission want `xdg-data`.                                       | Yes        |
@@ -25,7 +25,7 @@ Here is a list of linter errors, and whether exceptions may be applied, by defau
 | `finish-args-unnecessary-xdg-cache-access`  | Filesystem permission want `xdg-cache`.                                      | Yes        |
 | `finish-args-unnecessary-xdg-config-access` | Filesystem permission want `xdg-config`.                                     | Yes        |
 | `finish-args-unnecessary-xdg-data-access`   | Filesystem permission want `xdg-data`.                                       | Yes        |
-| `flathub-json-modified-publish-delay`       | Reduced publishing delay in `flathub.json`.                                  | No[^c]     |
+| `flathub-json-modified-publish-delay`       | Reduced publishing delay in `flathub.json`.                                  | No[^3]     |
 | `flathub-json-skip-appstream-check`         | Skipping the appstream check in `flathub.json`                               | Yes        |
 | `module-*-source-git-branch`                | A git source has a branch.                                                   | No         |
 | `module-*-source-git-local-path`            | A git source has a file URL.                                                 | No         |
@@ -33,14 +33,13 @@ Here is a list of linter errors, and whether exceptions may be applied, by defau
 | `module-*-source-git-no-url`                | A git source has no URL specified.                                           | No         |
 | `module-*-source-git-url-not-http`          | A git source URL is not http nor https.                                      | No         |
 | `toplevel-cleanup-debug`                    | `/lib/debug` is in the top level `cleanup` rule.                             | No         |
-| `toplevel-no-command`                       | The `command` property is missing.                                           | No[^b]     |
+| `toplevel-no-command`                       | The `command` property is missing.                                           | No[^2]     |
 | `toplevel-no-modules`                       | There are no modules in the manifest.                                        | No         |
 
-
-[^a]: Unless the package existed before the linter.
-[^b]: Exception needed for BaseApps where a default command may not make sense.
-[^c]: Granted for `extra-data`.
-[^d]: Exception only for tools that reequires D-Bus access and for which the names are not predictable ; this includes D-Bus tools and IDEs. In general it isn't allowed.
+[^1]: Unless the package existed before the linter.
+[^2]: Exception needed for BaseApps where a default command may not make sense.
+[^3]: Granted for `extra-data`.
+[^4]: Exception only for tools that reequires D-Bus access and for which the names are not predictable ; this includes D-Bus tools and IDEs. In general it isn't allowed.
 
 ## Exceptions
 
