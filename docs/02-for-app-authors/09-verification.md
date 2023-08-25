@@ -10,4 +10,4 @@ First, [log in to Flathub](https://www.flathub.org/login). Go to the developer t
 
 ### I'd like to verify my app that someone else already published
 
-The first step is to gain ownership over  your app; see [Someone else has put my app on Flathub—what do I do?](https://docs.flathub.org/docs/for-app-authors/submission#someone-else-has-put-my-app-on-flathubwhat-do-i-do)
+The first step is to gain ownership over your app; see [Someone else has put my app on Flathub—what do I do?](https://docs.flathub.org/docs/for-app-authors/submission#someone-else-has-put-my-app-on-flathubwhat-do-i-do)
