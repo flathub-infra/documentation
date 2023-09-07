@@ -28,7 +28,7 @@ Once your pull request has been approved, a new repository will be created for y
 
 ## Someone else has put my app on Flathub—what do I do?
 
-Flathub is primarily intended as a service that is used by app developers to distribute their apps. Our goal is to give developers control of their apps and to allow them a closer relationship with their users without middlemen getting in the way. However, as part of setting up Flathub, some applications are being distributed on Flathub without the involvement of their developers. We would prefer that these applications are controlled by their authors.
+Flathub is primarily intended as a service that is used by app developers to distribute their apps. Our goal is to give developers control of their apps and to allow them a closer relationship with their users without intermediaries getting in the way. However, as part of setting up Flathub, some applications are being distributed on Flathub without the involvement of their developers. We would prefer that these applications are controlled by their authors.
 
 If an application that belongs to you is being distributed without your involvement, please get in touch with [the Flathub admins](mailto:flathub@lists.freedesktop.org), so that we can discuss transfering ownership.
 
