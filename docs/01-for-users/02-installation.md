@@ -8,10 +8,16 @@ These instructions will also show you how to install the Flathub repository.
 
 In the case, that you only want a specific subset of apps, you can use the `--subset` option when adding the Flathub remote. You will only be able to install apps from the subset you specified.
 
-Only allow `verified` apps:
+Only allow `verified` apps, if adding a new remote:
 
 ```bash
 flatpak remote-add --if-not-exists --subset=verified flathub-verified https://flathub.org/repo/flathub.flatpakrepo
+```
+
+Or, if you already have the remote added, you can change the subset:
+
+```bash
+flatpak remote-modify --subset=verified flathub
 ```
 
 The available subsets are:
