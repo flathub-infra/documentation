@@ -39,7 +39,7 @@ Here is a list of linter errors, and whether exceptions may be applied, by defau
 [^1]: Unless the package existed before the linter.
 [^2]: Exception needed for BaseApps where a default command may not make sense.
 [^3]: Granted for `extra-data`.
-[^4]: Exception only for tools that reequires D-Bus access and for which the names are not predictable ; this includes D-Bus tools and IDEs. In general it isn't allowed.
+[^4]: Exception only for tools that requires D-Bus access and for which the names are not predictable ; this includes D-Bus tools and IDEs. In general it isn't allowed.
 
 ## Exceptions
 
