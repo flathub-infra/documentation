@@ -111,13 +111,15 @@ In [AppData guidelines](appdata-guidelines) you'll find tips/best practices to h
 
 ### .desktop files
 
-Applications must include a desktop file and pass `desktop-file-validate`.
+Applications must include a desktop file and pass `desktop-file-validate`. You should make sure that the upstream project has one for future release if they don't.
 
 See [the desktop file spec](https://standards.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html) for more details.
 
+If you need to change the desktop file, use the command `desktop-file-edit` on a post installation rule.
+
 ### Application icons
 
-Applications must provide application icons in at least 64×64px and 128×128px sizes. Application icons should either be included as scalable SVGs or high-resolution PNGs.
+Applications must provide application icons in at least 128×128px size, or a scalable SVG. Application icons should either be included as scalable SVGs or high-resolution PNGs, and unless they are directly copied from upstream during the package building, they should be limited to the minimum number. In general you shouldn't need to add any icon to your submission, but if you do, you should make sure to contribute upstream, so it is no longer needed in the future.
 
 "stock icons" are not supported.
 
@@ -138,6 +140,10 @@ The following permissions can be freely used:
 - `--socket=pulseaudio`
 - `--device=dri`
 
+`--socket=x11` and `--socket=fallback-x11` are mutually exclusive and either also need `--share=ipc` to be requested.
+
+In general there should not be `--socket=x11` and `--socket=wayland`, beside a few exceptional cases.
+
 ### DBus access
 
 Applications should not grant `--socket=system-bus` or `--socket=session-bus`, unless they are
@@ -151,7 +157,7 @@ usually questionable but there are exceptions such as `org.mpris.MediaPlayer2.$m
 
 #### Talk
 
-Talk permissions are largely unrestricted but always try to use the minimum subset needed.
+Talk permissions are largely unrestricted, with the exception of `org.freedesktop.Flatpak` but always try to use the minimum subset needed.
 
 ### Filesystem access
 
@@ -173,6 +179,8 @@ Additional recommendations:
 
 - If an application uses `$TMPDIR` to contain lock files it may make sense to use `--env=TMPDIR=/var/tmp` or if
   it shares those files outside the sandbox you may need to create a wrapper script that sets it to `$XDG_CACHE_HOME`.
+
+- Locations `xdg-config`, `xdg-data` and `xdg-cache` are restricted and need a [linter](linter) exception.
 
 ### Device access
 
