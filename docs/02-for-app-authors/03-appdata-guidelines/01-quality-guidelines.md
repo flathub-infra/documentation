@@ -73,7 +73,7 @@ The summary should be understandable by a non-technical person, and not contain 
 
 ### No weird formatting
 
-The summary should not have any weird formatting or punctuation. It shouldn't end with a full stop.
+The summary should not have any weird formatting or punctuation. It should use sentence case, rather than title case. It shouldn't end with a full stop.
 
 ### Don't repeat the name
 
