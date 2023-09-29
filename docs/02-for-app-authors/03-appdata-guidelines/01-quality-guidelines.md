@@ -35,9 +35,9 @@ The icon shouldn't fill too much or too little of the canvas. Avoid filling the 
 
 The icon should have good contrast on dark and light backgrounds. In particular, avoid single-color glyphs and the like since they can be very hard to see if the background color is similar. Dark colors near the edges are also a problem, since shadows don't help much with contrast on dark backgrounds.
 
-### Not too much detail
+### Not too much or too little detail
 
-The icon should be recognizable at small sizes. Avoid too many tiny details, small text, and generally try and match other well-executed app icons in terms of complexity.
+The icon should be recognizable at small sizes. Avoid too many tiny details, small text, and generally try and match other well-executed app icons in terms of complexity. Icons should also be complex enough to be recognizable, e.g. a flat single-colored square is too simple.
 
 ### No baked-in shadows
 
