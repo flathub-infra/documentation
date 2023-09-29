@@ -105,7 +105,7 @@ Apps should have at least two screenshots. For medium complexity apps 3-6 is a g
 
 ### Just the app window
 
-Use the "window screenshot" feature in your native system screenshot tool to get just the app window and its shadow. Do not include the wallpaper behind the app, or even the entire desktop.
+Use the "window screenshot" feature in your native system screenshot tool to get just the app window and its shadow. Do not include the wallpaper behind the app, or even the entire desktop. Do not edit the screenshot, add text, or other promotional graphics.
 
 ### Take screenshots on Linux
 
