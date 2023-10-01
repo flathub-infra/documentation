@@ -101,7 +101,15 @@ Avoid feature lists with more than 10 items, they are difficult to scan and make
 
 ### Multiple screenshots
 
-Apps should have at least two screenshots. For medium complexity apps 3-6 is a good range, for very large apps with lots of screens 6-10 is appropriate. More than 10 is probably too many.
+Apps should have at least two screenshots in english. For medium complexity apps 3-6 is a good range, for very large apps with lots of screens 6-10 is appropriate. More than 10 is probably too many.
+
+### Tag screenshots with correct language
+
+Screenshots should be tagged with the language they are in. For example, if you have a screenshot of the app in german, tag it with `xml:lang="de"`.
+
+```xml
+ <screenshot xml:lang="de">https://www.example.com/de/app-name01.jpg</screenshot>
+```
 
 ### Just the app window
 
