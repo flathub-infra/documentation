@@ -26,6 +26,10 @@ If you're not sure if your app violates any trademarks, feel free to ask us on [
 
 Use Flathub verification to indicate that you are the author of the app and that you are managing the app on Flathub.
 
+### Brand color
+
+Apps should set a [brand color](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-branding) (in two variants, light and dark). This color is used by Flathub and native app store clients on banners, app pages, etc.
+
 ## App Icon
 
 ### Icon size
