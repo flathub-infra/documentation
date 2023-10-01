@@ -123,13 +123,13 @@ Do not use screenshots taken on other platforms, especially if it's immediately 
 
 Use the platform default configuration for all settings that affect screenshots, including window controls, interface font, large text, high contrast, dark style, and so on. Having some screenshots to show off that e.g. dark style is supported is fine, but these should not be the only screenshots.
 
-### Not maximized
+### Include window shadow and rounded corners
 
-Don't use screenshot of windows in maximized or fullscreen state, because in these states windows don't have shadows and rounded corners. Apps that are always fullscreen (such as most games) are exempt from this.
+Screenshots must include the native toolkit shadow and rounding. App stores do not add a shadow after the fact and without one screenshots can look glitchy or have low contrast depending on the background. Apps that are always fullscreen (such as most games) are exempt from this.
 
-### Include window shadow
-
-Screenshots must include the native toolkit shadow. App stores do not add a shadow after the fact and without one screenshots can look glitchy or have low contrast depending on the background. Apps that are always fullscreen (such as most games) are exempt from this.
+:::tip
+Don't maximize your app window when taking screenshots, since this will remove the shadow and rounding.
+:::
 
 ### Reasonable window size
 
