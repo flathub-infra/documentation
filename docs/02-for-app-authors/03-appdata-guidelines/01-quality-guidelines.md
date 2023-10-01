@@ -131,6 +131,14 @@ In order to ensure that text and interface elements are visible scaled-down in t
 
 Every screenshot should have a [caption](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-screenshots) briefly describing it. Captions should only be one sentence and not end with a full stop. Don't start them with a number.
 
+### Good content
+
+Screenshots for apps that contain content (e.g. media viewers or social media apps) should not show empty states or ugly content. Take some time to select the most beautiful content you can find, it makes all the difference for screenshots.
+
+### Up to date
+
+Screenshots should reflect the current state of the app's interface, not some previous version. If an app update makes visible changes to the interface, screenshots should be updated at the same time.
+
 ## Release Notes
 
 ### Release notes for every release
