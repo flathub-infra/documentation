@@ -113,7 +113,7 @@ Screenshots should be tagged with the language they are in. For example, if you 
 
 ### Just the app window
 
-Use the "window screenshot" feature in your native system screenshot tool to get just the app window and its shadow. Do not include the wallpaper behind the app, or even the entire desktop. Do not edit the screenshot, add text, or other promotional graphics.
+Use the "window screenshot" feature in your native system screenshot tool to get just the app window and its shadow. Do not include the wallpaper behind the app, or even the entire desktop. Do not edit the screenshot, crop it, add text, or include promotional graphics.
 
 ### Take screenshots on Linux
 
