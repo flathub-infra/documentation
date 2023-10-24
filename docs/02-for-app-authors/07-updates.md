@@ -1,6 +1,6 @@
 # Updates
 
-Flathub builds and publishes app updates as soon as possible after a change is made to an app's manifest. Depending on the build backlog, this can be anywhere from minutes to hours.
+Flathub builds and publishes app updates a few hours after a change is made to an app's manifest, though the exact time to publish can vary depending on the build backlog.
 
 Neither Flathub nor Flatpak dictate the update policy on end-user machines; instead, their OS and app store client (like GNOME Software or KDE Discover) determine the available options, and ultimately it's up to the user's preferences.
 
