@@ -8,9 +8,9 @@ The build information for each application on Flathub is stored in a repository 
 
 ## Buildbot
 
-There is a Buildbot instance running on https://flathub.org/builds, which monitors the GitHub repositories. Each time that `master`, `beta` or `branch/*` branch changes it queues a build of the application, and if the build succeeds on all the architectures, then a test repository is generated where you can download and test the build. The build is published (i.e. signed and imported) into the Flathub Flatpak repo manually (via the web ui) or automatically after 3 hours, and the build will be available to your users.
+There is a Buildbot instance running on https://flathub.org/builds, which monitors the GitHub repositories. Each time that `master`, `beta` or `branch/*` branch changes it queues a build of the application, and if the build succeeds on all the architectures, then a test repository is generated where you can download and test the build. The build is published (i.e. signed and imported) into the Flathub Flatpak repo manually (via the web ui) or automatically after three hours, and the build will be available to your users. Use the three hours to test the build and make sure it works. If it doesn't, you can take the build down and try again.
 
-You can track your build status, follow the build log for current and historic builds, start builds or publishe build on the Buildbot instance website.
+You can track your build status, follow the build log for current and historic builds, start builds or publish a build on the Buildbot instance website. You will need to be logged in with your GitHub account to do this.
 
 ## Test builds and pull requests
 
