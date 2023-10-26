@@ -1,3 +1,6 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
 # Requirements
 
 The goal of these requirements is to ensure that the applications hosted on Flathub are safe to use
@@ -29,6 +32,97 @@ The manifest must be at the top level and named after the application ID with th
 Every repository must contain a manifest describing how to build the application. If the application, and hence repository, is called `com.example.MyCoolApp`, this file must be called `com.example.MyCoolApp.json` or `com.example.MyCoolApp.yaml`. This is the only required file!
 
 This manifest may import other manifest files in the same repository. It's quite common to add the [shared-modules](shared-modules) repository as a submodule.
+
+#### Example manifest
+
+This assumes that upstream brings appdata, icons and desktop files and installs them via their post build install. In this case we're using `meson` as the buildsystem.
+
+<Tabs groupId="manifest-language" defaultValue="json" queryString>
+  <TabItem value="json" label="json" default>
+
+```json title="io.github.example.MyCoolApp.json"
+{
+  "id": "io.github.example.MyCoolApp",
+  // The runtime is the environment that the application will run in, so you can use dependencies it provides
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "23.08",
+  "sdk": "org.freedesktop.Sdk",
+  // This is the command that will be run when the application is launched
+  "command": "mycoolapp",
+  // These are the permissions that the application needs
+  // Read more about finishing here: https://docs.flatpak.org/en/latest/manifests.html#finishing
+  "finish-args": [
+    "--socket=fallback-x11",
+    "--socket=wayland",
+    "--socket=pulseaudio",
+    "--share=network",
+    "--share=ipc"
+  ],
+  "modules": [
+    {
+      "name": "mycoolapp",
+      // There are other types of buildsystems, like autotools, cmake, cmake-ninja, simple, qmake
+      "buildsystem": "meson",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/example/mycoolapp/releases/download/v1.0.0/mycoolapp-source-1.0.0.tar.xz",
+          "dest": "mycoolapp",
+          "sha256": "e198214acdbb57363561dee2d73f27199999af26c283723067525bd854703e12",
+          // Automatically check for updates and create merge requests
+          "x-checker-data": {
+            // There are different types of checkers, see the documentation for more information
+            "type": "anitya",
+            // This is the ID of the project on anitya
+            "project-id": 1,
+            "url-template": "https://github.com/example/mycoolapp/releases/download/v$version/mycoolapp-source-$version.tar.xz"
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+  </TabItem>
+  <TabItem value="yml" label="yml">
+
+```yml title="io.github.example.MyCoolApp.yml"
+id: io.github.example.MyCoolApp
+# The runtime is the environment that the application will run in, so you can use dependencies it provides
+runtime: org.freedesktop.Platform
+runtime-version: "23.08"
+sdk: org.freedesktop.Sdk
+# This is the command that will be run when the application is launched
+command: mycoolapp
+# These are the permissions that the application needs
+# Read more about finishing here: https://docs.flatpak.org/en/latest/manifests.html#finishing
+finish-args:
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --socket=pulseaudio
+  - --share=network
+  - --share=ipc
+modules:
+  - name: mycoolapp
+    # There are other types of buildsystems, like autotools, cmake, cmake-ninja, simple, qmake
+    buildsystem: meson
+    sources:
+      - type: archive
+        url: https://github.com/example/mycoolapp/releases/download/v1.0.0/mycoolapp-source-1.0.0.tar.xz
+        dest: mycoolapp
+        sha256: e198214acdbb57363561dee2d73f27199999af26c283723067525bd854703e12
+        # Automatically check for updates and create merge requests
+        x-checker-data:
+          # There are different types of checkers, see the documentation for more information
+          type: anitya
+          # This is the ID of the project on anitya
+          project-id: 1
+          url-template: https://github.com/example/mycoolapp/releases/download/v$version/mycoolapp-source-$version.tar.xz
+```
+
+  </TabItem>
+</Tabs>
 
 ### Optional
 
