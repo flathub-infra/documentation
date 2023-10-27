@@ -25,7 +25,7 @@ For GitLab, the authenticated account must be the owner of the repository. If th
 
 For GNOME and KDE apps, additional checks may be performed to ensure the account is authorized to perform verification for that app.
 
-[^1]: Apps already on Flathub with a `com.github.` or `com.gitlab.` app ID prefix may be verified, but **no new apps with these prefixes will be verified**; instead, apps should use `io.github.` or `io.gitlab.` to distinguish them from official apps from GitHub or GitLab. Official apps from GtHub and GitLab may request manual verification by contacting [the Flathub admins](mailto:flathub@lists.freedesktop.org).
+[^1]: Apps already on Flathub with a `com.github.` or `com.gitlab.` app ID prefix may be verified, but **no new apps with these prefixes will be verified**; instead, apps should use `io.github.` or `io.gitlab.` to distinguish them from official apps from GitHub or GitLab. Official apps from GitHub and GitLab may request manual verification by contacting [the Flathub admins](mailto:flathub@lists.freedesktop.org).
 
 ## I'm publishing an app on Flathub. How do I get it verified?
 
