@@ -6,7 +6,7 @@ Verification is a process by which Flathub can confirm that an app is published 
 
 ### Well-known URI
 
-Flathub may use the app ID in reverse domain name notation to determine where to look for a well-known URI. For example, an app ID `com.example.App` would require verifying the `example.com` domain with a response at `https://example.com/.well-known/org.flathub.VerifiedApps.txt` containing the unique code provided by the Flathub website during the verification process.
+Flathub uses the app ID in reverse domain name notation to determine where to look for a well-known URI. For example, an app ID `com.example.App` would require verifying the `example.com` domain with a response at `https://example.com/.well-known/org.flathub.VerifiedApps.txt` containing the unique code provided by the Flathub website during the verification process.
 
 For convenience and flexibility, verification of the well-known URI will follow redirects.
 
