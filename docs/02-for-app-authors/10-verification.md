@@ -33,4 +33,4 @@ Apps already on Flathub with a `com.github.` or `com.gitlab.` app ID prefix may 
 
 ### I'd like to verify my app that someone else already published
 
-The first step is to gain ownership over your app; see [Someone else has put my app on Flathub—what do I do?](submission#someone-else-has-put-my-app-on-flathubwhat-do-i-do)
+The first step is to gain ownership over your app; see [Someone else has put my app on Flathub—what do I do?](./submission#someone-else-has-put-my-app-on-flathubwhat-do-i-do)
