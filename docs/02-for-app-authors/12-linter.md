@@ -47,7 +47,7 @@ Linter errors can be ignored with exceptions. Exceptions are granted on a case-b
 
 To apply for an exception, you need to submit a [Pull Request](https://github.com/flathub/flatpak-builder-lint/pulls) for the JSON [exception file](https://github.com/flathub/flatpak-builder-lint/blob/master/flatpak_builder_lint/staticfiles/exceptions.json). The syntax is:
 
-```json
+```js
 "my.app.id": {
     "linter-error": "reason for the exception"
 }
