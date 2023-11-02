@@ -66,6 +66,17 @@ const config = {
         siteUrl: "https://docs.flathub.org/",
       },
     ],
+    [
+      require.resolve("@docusaurus/plugin-client-redirects"),
+      {
+        redirects: [
+          {
+            to: "/docs/for-app-authors/maintenance",
+            from: "/docs/for-app-authors/maintanance",
+          },
+        ]
+      },
+    ],
   ],
 
   themeConfig:
