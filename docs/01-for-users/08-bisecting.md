@@ -6,7 +6,7 @@ regression. It works just like `git bisect`.
 
 In case your distribution doesn't install the `flatpak-bisect` utility,
 you can find it distributed alongside the Flatpak source code, in
-<https://github.com/flatpak/flatpak/blob/main/scripts/flatpak-bisect>
+https://github.com/flatpak/flatpak/blob/main/scripts/flatpak-bisect
 
 First you update the application and get its history:
 
