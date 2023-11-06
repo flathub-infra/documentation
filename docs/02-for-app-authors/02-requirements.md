@@ -40,7 +40,7 @@ This assumes that upstream brings appdata, icons and desktop files and installs 
 <Tabs groupId="manifest-language" defaultValue="json" queryString>
   <TabItem value="json" label="json" default>
 
-```js title="io.github.example.MyCoolApp.json"
+```json title="io.github.example.MyCoolApp.json"
 {
   "id": "io.github.example.MyCoolApp",
   // The runtime is the environment that the application will run in, so you can use dependencies it provides
@@ -154,7 +154,7 @@ branch.
 
 When building from a git tag, both the tag name and the commit id should be specified in your manifest, like so:
 
-```js
+```json
    "tag": "1.0.4",
    "commit": "cdfb19b90587bc0c44404fae30c139f9ec1cca5c"
 ```
