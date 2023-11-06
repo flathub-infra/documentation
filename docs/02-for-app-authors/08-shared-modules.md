@@ -10,7 +10,7 @@ git submodule add https://github.com/flathub/shared-modules.git
 
 Then you can use them from your manifest. Here's an example of how to use it with a `.json` manifest:
 
-```js
+```json
 "modules": [
   "shared-modules/SDL/SDL-1.2.15.json",
   {

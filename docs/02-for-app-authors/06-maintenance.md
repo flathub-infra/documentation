@@ -28,7 +28,7 @@ Flathub has builders for `x86_64`, and `aarch64` as current runtimes (based on F
 
 #### Don’t build on `aarch64`
 
-```js title="flathub.json"
+```json title="flathub.json"
 {
   "skip-arches": ["aarch64"]
 }
@@ -36,7 +36,7 @@ Flathub has builders for `x86_64`, and `aarch64` as current runtimes (based on F
 
 #### Only build on `x86_64`
 
-```js title="flathub.json"
+```json title="flathub.json"
 {
   "only-arches": ["x86_64"]
 }
@@ -48,7 +48,7 @@ If you build for both `x86_64` and `aarch64` you do not need a `flathub.json` fi
 
 There may come a point where an application is no longer maintained. In order to inform users at update or install time that it will no longer get updates, create `flathub.json` with these contents:
 
-```js title="flathub.json"
+```json title="flathub.json"
 {
   "end-of-life": "This application is no longer maintained because..."
 }
@@ -56,7 +56,7 @@ There may come a point where an application is no longer maintained. In order to
 
 If the application has been renamed, you can additionally include `end-of-life-rebase` with the new ID. Recent flatpak versions will prompt user if they'd like to switch to the renamed app.
 
-```js title="flathub.json"
+```json title="flathub.json"
 {
   "end-of-life": "The application has been renamed to the.new.appid.",
   "end-of-life-rebase": "the.new.appid"
@@ -75,7 +75,7 @@ Please also try to contact a flathub admin to archive the repo by either via pin
 
 You can configure the external data checker to only create updates for modules that are marked as important. This is done by creating a `flathub.json` file with the following contents:
 
-```js title="flathub.json"
+```json title="flathub.json"
 {
   "require-important-update": true
 }
@@ -87,7 +87,7 @@ This also needs your module config to have `is-important: true` set.
 
 You can configure the external data checker to automatically merge PRs. This is done by creating a `flathub.json` file with the following contents:
 
-```js title="flathub.json"
+```json title="flathub.json"
 {
   "automerge-flathubbot-prs": true
 }
@@ -97,7 +97,7 @@ You can configure the external data checker to automatically merge PRs. This is 
 
 You can opt out of this by creating a `flathub.json` file with the following contents:
 
-```js title="flathub.json"
+```json title="flathub.json"
 {
   "disable-external-data-checker": true
 }
