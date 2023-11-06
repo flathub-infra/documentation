@@ -74,7 +74,7 @@ const config = {
             to: "/docs/for-app-authors/maintenance",
             from: "/docs/for-app-authors/maintanance",
           },
-        ]
+        ],
       },
     ],
   ],
@@ -170,6 +170,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        additionalLanguages: ["bash", "json"],
       },
     }),
 };
