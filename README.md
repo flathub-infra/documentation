@@ -18,6 +18,15 @@ This command starts a local development server and opens up a browser window. Mo
 
 You can access it on [http://localhost:3000](http://localhost:3000) then.
 
+If port 3000 is already in use and you see an error, use
+
+```
+$ yarn start --port PORT
+```
+
+to start it on a different port. See the [Docusaurus manual](https://docusaurus.io/docs/cli#docusaurus-cli-commands)
+for other arguments available.
+
 ### Build
 
 ```
