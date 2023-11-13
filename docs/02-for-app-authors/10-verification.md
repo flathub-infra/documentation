@@ -10,9 +10,9 @@ First, [log in to Flathub](https://www.flathub.org/login). Go to the developer t
 
 ### Website
 
-To verify an app is associated with a specific website, Flathub uses the app ID in reverse domain name notation to look for a well-known URI. For example, an app ID `com.example.App` would require verifying the `example.com` domain with a response at `https://example.com/.well-known/org.flathub.VerifiedApps.txt` containing the unique code provided by the Flathub website during the verification process.
+To verify an app is associated with a specific website, Flathub uses the app ID in reverse domain name notation to look for a well-known URI. For example, an app ID `com.example.App` would require verifying the `example.com` domain with a response at `https://example.com/.well-known/org.flathub.VerifiedApps.txt` containing the unique token provided by the Flathub website during the verification process.
 
-The verification code is unique and unchanging for each app; if multiple apps are verified under the same domain, include each on its own line. Lines beginning with `#` are ignored and can be used as comments. For example:
+The verification token is unique and unchanging for each app; if multiple apps are verified under the same domain, include each token on its own line. Lines beginning with `#` are ignored and can be used as comments. For example:
 
 ```ini
 # com.example.App
@@ -23,6 +23,7 @@ aaaaaaaa-0000-aaaa-0000-aaaaaaaaaaaa
 ```
 
 For convenience and flexibility, verification of the well-known URI will follow redirects.
+
 ### Source code hosting site
 
 Apps with IDs indicating supported source code hosting sites like GitHub, GitLab, GNOME GitLab, and KDE GitLab may be verified by authenticating with Flathub using an authorized account. The following app ID prefixes will be matched:
