@@ -215,9 +215,45 @@ If you need to change the desktop file, use the command `desktop-file-edit` on a
 
 ### Application icons
 
-Applications must provide application icons in at least 128×128px size, or a scalable SVG. Application icons should either be included as scalable SVGs or high-resolution PNGs, and unless they are directly copied from upstream during the package building, they should be limited to the minimum number. In general you shouldn't need to add any icon to your submission, but if you do, you should make sure to contribute upstream, so it is no longer needed in the future.
+Applications must provide application icons in at least 128×128px size but we recommend a scalable SVG. Unless they are directly copied from upstream during the package building, they should be limited to the minimum number. In general you shouldn't need to add any icon to your submission, but if you do, you should make sure to contribute upstream, so it is no longer needed in the future.
 
 "stock icons" are not supported.
+
+:::tip
+We recommend using an svg, they can handle various sizes
+
+If upstream is not providing icons, you can use a buildstep to copy the icon to the correct location:
+
+<Tabs groupId="icon-example" defaultValue="json" queryString>
+  <TabItem value="json" label="json" default>
+
+```json title="io.github.example.MyCoolApp.json"
+"modules":[
+  {
+    "name": "mycoolapp",
+    "buildsystem": "simple",
+    "build-commands": [
+      "install -Dm644 io.github.example.MyCoolApp.svg /app/share/icons/hicolor/scalable/apps/io.github.example.MyCoolApp.svg"
+    ]
+  }
+]
+```
+
+    </TabItem>
+    <TabItem value="yml" label="yml">
+
+```yml title="io.github.example.MyCoolApp.yml"
+modules:
+  - name: mycoolapp
+    buildsystem: simple
+    build-commands:
+      - install -Dm644 io.github.example.MyCoolApp.svg /app/share/icons/hicolor/scalable/apps/io.github.example.MyCoolApp.svg
+```
+
+    </TabItem>
+
+  </Tabs>
+:::
 
 ## Permissions
 
