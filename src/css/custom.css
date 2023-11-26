@@ -25,3 +25,17 @@
   --ifm-color-primary-lighter: #6ea6e1;
   --ifm-color-primary-lightest: #92bce8;
 }
+
+[data-theme='light'] .themedDocusaurus {
+  fill: black;
+  stroke: black;
+  width: 256px;
+  height: 256px
+}
+
+[data-theme='dark'] .themedDocusaurus {
+  fill: white;
+  stroke: white;
+  width: 256px;
+  height: 256px
+}

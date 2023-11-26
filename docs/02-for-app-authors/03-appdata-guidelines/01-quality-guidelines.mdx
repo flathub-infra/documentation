@@ -1,3 +1,5 @@
+import AppIconGrid from "./assets/app-icon-grid.svg";
+
 # Quality guidelines
 
 For the quick guidelines for the actual content (descriptions, screenshots), see the Appstream [docs](https://www.freedesktop.org/software/appstream/docs/chap-Quickstart.html).
@@ -30,6 +32,9 @@ The icon should be SVG, or a PNG with a size greater or equal to 256x256 pixels.
 ### Reasonable footprint
 
 The icon shouldn't fill too much or too little of the canvas. Avoid filling the entire canvas and having the icon touch the edges of the canvas (except with small protruding elements). Similarly, avoid thin shapes that are hard to see.
+You can use the following grid to check if your icon has a reasonable footprint:
+
+<AppIconGrid className="themedDocusaurus" />
 
 ### Good contrast
 
@@ -53,13 +58,34 @@ The icon should be somewhat in line with the contemporary icon styles (i.e. not 
 
 The name should ideally be no longer than 15 characters, and must be shorter than 20 characters.
 
+:::danger Bad examples
+
+- Apostrophe Markdown
+- Minimal Markdown Editor
+  :::
+
 ### Just the name
 
-The name should be just the name, without any additional info. For example, don't append what the app does to the name (e.g. `Apostrophe - Markdown Editor`), and use the summary to provide this extra information instead.
+The name should be just the name, without any additional info. For example, don't append what the app does to the name, and use the summary to provide this extra information instead.
+
+:::danger Bad examples
+
+- Apostrophe - Markdown Editor
+- Apostrophe (Markdown Editor)
+- Apostrophe (Special Edition)
+  :::
 
 ### No weird formatting
 
 The name should not have any weird formatting or punctuation. For example, it should not be all-lowercase, all-uppercase, camel case, or contain dashes or periods. Cases where the weird formatting is part of the brand are exempt from this (e.g. `VLC`).
+
+:::danger Bad examples
+
+- apostrophe
+- APOSTROPHE
+- ApostropheEditor
+- Apostrophe.org
+  :::
 
 ## Summary
 
@@ -67,21 +93,55 @@ The name should not have any weird formatting or punctuation. For example, it sh
 
 The summary should ideally be between 10 and 25 characters, and no longer than 35 characters.
 
+:::danger Bad example
+
+- A simple markdown editor for editing files on your system
+  :::
+
 ### Not technical
 
-The summary should be understandable by a non-technical person, and not contain any technical terms (e.g. `Chat app written in Rust and GTK4/Libadwaita`). Don't mention the toolkit, programming language, or other implementation details that would not be relevant to a non-developer and explain what the app does for people instead.
+The summary should be understandable by a non-technical person, and not contain any technical terms. Don't mention the toolkit, programming language, or other implementation details that would not be relevant to a non-developer and explain what the app does for people instead.
+
+:::danger Bad examples
+
+- A GTK4 chat app written in Rust
+- An Electron Wrapper for the Telegram Web App
+- A Qt5 app for managing your Steam library
+  :::
 
 ### No weird formatting
 
 The summary should not have any weird formatting or punctuation. It should use sentence case, rather than title case. It shouldn't end with a full stop.
 
+:::danger Bad example
+
+- A Simple Markdown Editor.
+  :::
+
 ### Don't repeat the name
 
 The summary is usually shown next to the app name, so repeating the name looks bad.
 
+:::danger Bad example
+
+- Apostrophe - A simple markdown editor
+  :::
+
 ### Don't start with an article
 
-Starting summaries with an article, e.g. `An image viewer`, or `The LibreOffice suite` is almost always unnecesary. Instead, either omit the article or ideally phrase it in the imperative with a verb, e.g. `View images and videos` or `Edit documents`.
+Starting summaries with an article is almost always unnecessary. Instead, either omit the article or ideally phrase it in the imperative with a verb.
+
+:::danger Bad examples
+
+- An image viewer
+- The LibreOffice suite
+  :::
+
+:::tip Good examples
+
+- View images and videos
+- Edit documents
+  :::
 
 ## Description
 
