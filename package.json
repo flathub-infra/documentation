@@ -30,7 +30,7 @@
     "@docusaurus/tsconfig": "3.0.0",
     "@gabrielcsapo/docusaurus-plugin-matomo": "^0.1.2",
     "@types/react": "^18.2.38",
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.2"
   },
   "browserslist": {
     "production": [
