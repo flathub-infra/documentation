@@ -11,9 +11,8 @@ These guidelines are curated for Flathub use-cases, they don’t cover anything 
 Flathub uses modified `appstream-util` to validate AppData during build. To run the same check locally, you can install and run it with a simple:
 
 ```bash
-flatpak install flathub org.freedesktop.appstream-glib
-flatpak run org.freedesktop.appstream-glib validate tld.domain.appid.metainfo.xml
-tld.domain.appid.metainfo.xml: OK
+flatpak install -y flathub org.flatpak.Builder
+flatpak run --command=appstream-util org.flatpak.Builder validate tld.domain.appid.metainfo.xml
 ```
 
 ## Path and filename
