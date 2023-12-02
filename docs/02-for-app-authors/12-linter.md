@@ -26,7 +26,7 @@ Here is a list of linter errors, and whether exceptions may be applied, by defau
 | `appstream-missing-screenshots`             | Appstream catalogue is missing screenshots.                                  | No[^2]     |
 | `appstream-metainfo-missing`                | Appdata file is missing.                                                     | No[^2]     |
 | `appstream-multiple-components`             | Appstream catalogue has more than one `components` tag                       | No         |
-| `appstream-screenshots-not-mirrored-in-ostree`[^a] | Appstream screenshots not mirrored in ostree repo.                    | No         |
+| `appstream-screenshots-not-mirrored-in-ostree`| Appstream screenshots not mirrored in ostree repo.                         | No         |
 | `finish-args-arbitrary-autostart-access`    | Arbitrary `xdg-autostart` access. Please use the portals.                    | No         |
 | `finish-args-arbitrary-dbus-access`         | Generic D-Bus access is requested.                                           | No[^4]     |
 | `finish-args-arbitrary-xdg-cache-access`    | Filesystem permission has `xdg-cache`.                                       | Yes        |
