@@ -1,8 +1,31 @@
 # Submission
 
-## How to submit an app
+App submissions are extremely welcome and the process is straightforward. Once you complete the steps below you can submit the app for inclusion.
 
-App submissions are extremely welcome and the process is straightforward. Before submitting an app for inclusion on Flathub, please follow the [requirements](/docs/for-app-authors/requirements) to ensure that it is technically and legally compatible with the Flathub service. Once this has been done, you can submit the app for inclusion.
+## Before submission
+
+Please follow the [requirements](/docs/for-app-authors/requirements) to ensure that the submission is technically and legally compatible with the Flathub service.
+
+It's best practice to make sure your submission correctly builds and runs locally with flatpak. This will help you to fix any potential issues and expedite the review process. Flathub recommends using the [flatpak package](https://github.com/flathub/org.flatpak.Builder) of flatpak-builder to build the application.
+```bash
+flatpak install -y flathub org.flatpak.Builder
+```
+1. To build and install the app:
+   ```bash
+   flatpak run org.flatpak.Builder --force-clean --sandbox --user --install --install-deps-from=flathub --ccache --mirror-screenshots-url=https://dl.flathub.org/repo/screenshots --repo=repo builddir <manifest>
+   ```
+2. To run:
+   ```bash
+   flatpak run <app id>
+   ```
+3. Please run the [linter](/docs/for-app-authors/linter) once to make sure there are no errors or warnings. Consult the documentation for explanation of the errors. For certain errors you might need an [exception](/docs/for-app-authors/linter#exceptions).
+   ```bash
+   flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest <manifest>
+   flatpak run --command=flatpak-builder-lint org.flatpak.Builder repo repo
+   ```
+   Following the above instructions, if you see `appstream-screenshots-files-not-found-in-ostree` in errors, you can ignore this.
+
+## How to submit an app
 
 Flathub is managed through a GitHub project, and app submissions take place as pull requests. To submit an app:
 
