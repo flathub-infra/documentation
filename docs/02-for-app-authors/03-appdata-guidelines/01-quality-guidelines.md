@@ -31,7 +31,9 @@ The icon should be SVG, or a PNG with a size greater or equal to 256x256 pixels.
 
 The icon shouldn't fill too much or too little of the canvas. Avoid filling the entire canvas and having the icon touch the edges of the canvas (except with small protruding elements). Similarly, avoid thin shapes that are hard to see.
 
-You can use our icon grid ([SVG template download](/img/app-icon-grid.svg)) with square and circular base shapes to check if your icon's footprint is too large or too small. The examples below show the grid overlaid on some app icons.
+You can use our icon grid (<a href="/img/app-icon-grid.svg" download>SVG template download</a>) with square and circular base shapes
+to check if your icon's footprint is too large or too small. The examples below show
+the grid overlaid on some app icons.
 
 ![Examples of icons with footprints that are too large, too small, and just right.](assets/app-icon-footprint.png)
 
@@ -181,7 +183,6 @@ Screenshots should be tagged with the language they are in. For example, if you 
 Use the "window screenshot" feature in your native system screenshot tool to get just the app window and its shadow. Do not include the wallpaper behind the app, or even the entire desktop. Do not edit the screenshot, crop it, add text, or include promotional graphics.
 
 ![Examples of a screenshot that includes the entire desktop with the window, one that has promotional graphics, and one that's a standalone window.](assets/screenshot-just-window.png)
-
 
 ### Take screenshots on Linux
 
