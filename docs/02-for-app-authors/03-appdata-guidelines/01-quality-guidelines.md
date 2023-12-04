@@ -100,20 +100,24 @@ The name should not have any weird formatting or punctuation. For example, it sh
 
 The summary should ideally be between 10 and 25 characters, and no longer than 35 characters.
 
+:::tip Good example
+
+- Write markdown in style
+  :::
 :::danger Bad example
 
-- A simple markdown editor for editing files on your system
+- Simple, easy to use, distraction-free markdown editor written in Python
   :::
 
 ### Not technical
 
-The summary should be understandable by a non-technical person, and not contain any technical terms. Don't mention the toolkit, programming language, or other implementation details that would not be relevant to a non-developer and explain what the app does for people instead.
+The summary should be understandable by a non-technical person, and not contain any technical terms. Don't mention the toolkit, programming language, or other implementation details that would not be relevant to a non-developer and explain what the app does for people instead. Don't duplicate metadata that's already available in a different form, such as the license, e.g. by mentioning that the app is "free and open source". Avoid generic nouns like "app", "tool", or "client".
 
 :::danger Bad examples
 
-- A GTK4 chat app written in Rust
+- GTK4 chat app written in Rust
 - An Electron Wrapper for the Telegram Web App
-- A Qt5 app for managing your Steam library
+- Free and open source Qt5 Matrix client
   :::
 
 ### No weird formatting
