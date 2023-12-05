@@ -33,7 +33,7 @@ jobs:
           node-version: 18
           cache: yarn
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v4
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Build website
