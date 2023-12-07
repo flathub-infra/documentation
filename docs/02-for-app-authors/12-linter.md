@@ -68,6 +68,34 @@ Here is a list of linter errors, and whether exceptions may be applied, by defau
 [^3]: Granted for `extra-data`.
 [^4]: Exception only for tools that requires D-Bus access and for which the names are not predictable; this includes D-Bus tools and IDEs. In general it isn't allowed.
 
+## Linter warnings
+
+Warnings from the linter are non-fatal but they should be resolved, if possible.
+
+| Warning                                           | Explanation                                                                                                |
+| --------------------------------------------------| -----------------------------------------------------------------------------------------------------------|
+| `appstream-missing-developer-name`                | Appdata file is missing `developer_name`.                                                                  |
+| `appstream-screenshots-files-not-found-in-ostree` | Screenshot files missing from ostree ref.                                                                  |
+| `finish-args-contains-both-x11-and-fallback`      | Finish-args have both `x11` and `fallback-x11`.                                                            |
+| `finish-args-contains-both-x11-and-wayland`       | Finish-args have both `x11` and `wayland`.                                                                 |
+| `finish-args-deprecated-shm`                      | Finish-args using deprecated `--device=shm`.                                                               |
+| `finish-args-redundant-device-all`                | Finish-arg has `--device=all` and `--device=value` again.                                                  |
+| `finish-args-x11-without-ipc`                     | Finish-arg has `--socket=x11` but not `--share=ipc`.                                                       |
+| `flathub-json-deprecated-arm-arch-excluded`       | `flathub.json` excludes deprecated arch arm.                                                               |
+| `flathub-json-deprecated-i386-arch-excluded`      | `flathub.json` excludes deprecated arch i386.                                                              |
+| `flathub-json-deprecated-arm-arch-included`       | `flathub.json` includes deprecated arch arm.                                                               |
+| `flathub-json-deprecated-i386-arch-included`      | `flathub.json` includes deprecated arch i386.                                                              |
+| `flathub-json-exclude-arches-empty`               | `flathub.json` has empty `exclude-arches`.                                                                 |
+| `flathub-json-redundant-only-arches`              | `flathub.json` has `x86_64` and `aarch64` in `only-arches`.                                                |
+| `module-*-autotools-redundant-prefix`             | A modules using `autotools` is passing `/usr` or `/app` as `prefix`.                                       |
+| `module-*-buildsystem-is-plain-cmake`             | A module is using `cmake` instead of `cmake-ninja` buildsystem.                                            |
+| `module-*-cmake-non-release-build`                | A module using `cmake`/`cmake-ninja` is using a buildtype not in `Release`, `RelWithDebInfo`, `MinSizeRel`.| 
+| `module-*-cmake-redundant-prefix`                 | A modules using `cmake`/`cmake-ninja` is passing `/usr` or `/app` as cmake prefix.                         |
+| `module-*-source-md5-deprecated`                  | A module is using deprecated `md5` checksum.                                                               |
+| `module-*-source-sha1-deprecated`                 | A module is using deprecated `sha1` checksum.                                                              |
+| `toplevel-command-is-path`                        | `command` in manifest is a path.                                                                           |
+| `toplevel-unnecessary-branch`                     | `branch` is set to `stable` or `master` in manifest.                                                       |
+
 ## Exceptions
 
 Linter errors can be ignored with exceptions. Exceptions are granted on a case-by-case basis, and it's not because you see a package with an exception that your exception will be granted. Some are grandfathered as their existence predates the linter. The exception pull request needs to be merged for a package submission to be buildable.
