@@ -27,6 +27,7 @@ Here is a list of linter errors, and whether exceptions may be applied, by defau
 | `appstream-metainfo-missing`                | Appdata file is missing.                                                     | No[^2]     |
 | `appstream-multiple-components`             | Appstream catalogue has more than one `components` tag                       | No         |
 | `appstream-screenshots-not-mirrored-in-ostree`| Appstream screenshots not mirrored in ostree repo.                         | No         |
+| `finish-args-absolute-home-path`            | Filesystem permission has a path starting with `/home` or `/var/home`.       | No         |
 | `finish-args-arbitrary-autostart-access`    | Arbitrary `xdg-autostart` access. Please use the portals.                    | No         |
 | `finish-args-arbitrary-dbus-access`         | Generic D-Bus access is requested.                                           | No[^4]     |
 | `finish-args-arbitrary-xdg-cache-access`    | Filesystem permission has `xdg-cache`.                                       | Yes        |
@@ -38,6 +39,7 @@ Here is a list of linter errors, and whether exceptions may be applied, by defau
 | `finish-args-incorrect-dbus-gvfs`           | D-Bus name `org.gtk.vfs` doesn't exist.                                      | No         |
 | `finish-args-not-defined`                   | No `finish-args`. For the case where this is needed put an empty array.      | No         |
 | `finish-args-redundant-home-and-host`       | Filesystem permission has both `home` and `host`.                            | No         |
+| `finish-args-reserved-*`                    | Filesystem permission has access to a path reserved by `flatpak`.            | No         |
 | `finish-args-unnecessary-appid-own-name`    | D-Bus permission for app id name is granted automatically.                   | No         |
 | `finish-args-unnecessary-xdg-cache-access`  | Filesystem permission has a subpath of `xdg-cache`.                          | Yes        |
 | `finish-args-unnecessary-xdg-config-access` | Filesystem permission has a subpath of `xdg-config`.                         | Yes        |
