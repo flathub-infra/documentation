@@ -257,7 +257,7 @@ Talk permissions are largely unrestricted, with the exception of `org.freedeskto
 
 ### Filesystem access
 
-Applications should ideally use [portals](https://github.com/flatpak/flatpak/wiki/Portals) for
+Applications should ideally use [portals](https://flatpak.github.io/xdg-desktop-portal/docs/) for
 file access. Further file access is often necessary and is acceptable, although it should be limited as much as possible.
 
 Additional recommendations:
