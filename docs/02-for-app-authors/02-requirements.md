@@ -20,8 +20,6 @@ using the `extra-data` source type.
 
 Each application should have a unique application ID, following the standard reverse-DNS schema. See [the Flatpak documentation](http://docs.flatpak.org/en/latest/conventions.html#application-ids) for more information on this. The Application ID should be a real URL of a domain that the app author has control over or where their app is hosted.
 
-The Application ID used in the manifest should match with the ID used by the application's upstream. This is necessary as flatpak provides a [filtered session-bus access](https://docs.flatpak.org/en/latest/flatpak-command-reference.html#session-bus-policy-metadata) by default. If they don't match a `--own-name=<bus name>` might be required in `finish-args` section of the manifest.
-
 Ignoring this will lead to problems down the line, such as not being able to verify the app and receiving payments. It also decides, which verification methods will be available. For e.g. using `io.github.flathub.TestApp` would only allow for `Github` or `Website` verification.
 
 ## Repository layout
@@ -248,8 +246,13 @@ in order to track down usage.
 
 #### Ownership
 
-By default you are granted access to `--own-name=$your_app_id` any ownership beyond that is
-usually questionable but there are exceptions such as `org.mpris.MediaPlayer2.$media_player_name`.
+By default you are granted access to `--own-name=$your_app_id`. So, the app-id used in the flatpak manifest and the bus name used
+has to match. If they don't match you might need to grant access with `--own-name`.
+
+Flatpak will also by default grant access to subnames of the MPRIS bus in the form of `org.mpris.MediaPlayer2.$your_app_id`. If that's
+not used by your application, you will need to add a `--talk-name` or `--own-name` as required. See the bus policy [documentation](https://docs.flatpak.org/en/latest/flatpak-command-reference.html#session-bus-policy-metadata) on this.
+
+Any ownership beyond that is usually questionable.
 
 #### Talk
 
