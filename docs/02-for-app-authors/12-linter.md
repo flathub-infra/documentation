@@ -47,7 +47,6 @@ Here is a list of linter errors, and whether exceptions may be applied, by defau
 | `flat-manager-branch-repo-mismatch`         | The ref branch does not match the target flathub repository.                 | No         |
 | `flat-manager-no-app-ref-uploaded`          | No application refs (`app/`) found.                                          | No         |
 | `flathub-json-modified-publish-delay`       | Reduced publishing delay in `flathub.json`.                                  | No[^3]     |
-| `flathub-json-eol-rebase-misses-new-id`     | Missing app-id in `end-of-life` in flathub.json.                             | No         |
 | `flathub-json-eol-rebase-without-message`   | `end-of-life-rebase` without `end-of-life` message in flathub.json.          | No         |
 | `flathub-json-only-arches-empty`            | Empty `only-arches` in flathub.json.                                         | No         |
 | `flathub-json-excluded-all-arches`          | `exclude-arches` in flathub.json excludes all buildable arches.              | No         |
