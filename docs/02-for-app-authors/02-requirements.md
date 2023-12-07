@@ -222,7 +222,7 @@ Applications must provide application icons in at least 128×128px size, or a sc
 ## Permissions
 
 The Flatpak sandbox is still a work in progress. However, permissions should still be limited
-as much as possible (see `man flatpak-metadata` for an overview of permissions).
+as much as possible (see [flatpak-metadata](https://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-metadata) for an overview of permissions).
 
 ### Unrestricted permissions
 
