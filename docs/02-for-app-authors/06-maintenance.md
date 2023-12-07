@@ -4,7 +4,9 @@ This is a guide in how to maintain your application once it is on Flathub. It as
 
 ## The repository
 
-The build information for each application on Flathub is stored in a repository on GitHub in the Flathub organization. For example, the Blender one is here: https://github.com/flathub/org.blender.Blender. On the `master` branch of this repository the primary build version of the app is stored. The `beta` branch is built into the beta repository (if you want to use that). Branches named `branch/XXX` are special cases used for things that have specific flatpak branch names such as extensions. All of these branches are automatically <em>protected</em> which mean that you can only merge pull requests and not push directly to them. Other branch names are free to use however you see fit.
+The build information for each application on Flathub is stored in a repository on GitHub in the Flathub organization. For example, the Blender one is here: https://github.com/flathub/org.blender.Blender. On the `master` branch of this repository the primary build version of the app is stored. The `beta` branch is built into the beta repository (if you want to use that). Branches named `branch/*` are reserved specifically for BaseApps and extensions. Applications must not use it for naming GitHub branches or pushing their builds.
+
+All of these branches along with `main`, `stable`, `beta/*` and `stable/*` are automatically <em>protected</em> which means that you can only merge pull requests and not push directly to them. Other branch names are free to use however you see fit.
 
 ## Buildbot
 
