@@ -59,6 +59,8 @@ The icon should be somewhat in line with the contemporary icon styles (i.e. not 
 
 ![Two icons that are not in line with contemproary styles, and two that are.](assets/app-icon-style.png)
 
+In some cases it can make sense for the icon to align with the visuals of the app, rather than contemporary icon styles (especially relevant for games). This can be accommodated by embedding the custom style icon in one of the grid shapes, e.g. a square or circle. This way the unique style is preserved, but the icon's size and shape are in line with other apps.
+
 ## App Name
 
 ### Not too long
