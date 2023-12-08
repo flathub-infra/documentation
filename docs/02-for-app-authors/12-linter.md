@@ -36,7 +36,7 @@ Here is a list of linter errors, and whether exceptions may be applied, by defau
 | `finish-args-fallback-x11-without-wayland`  | Permission has `fallback-x11` without `wayland`.                             | Yes        |
 | `finish-args-flatpak-spawn-access`          | The package requested access to `org.freedesktop.Flatpak`.                   | Yes        |
 | `finish-args-incorrect-dbus-gvfs`           | D-Bus name `org.gtk.vfs` doesn't exist.                                      | No         |
-| `finish-args-not-defined`                   | No `finish-args`. For the case where this is needed put an empty array.      | No         |
+| `finish-args-not-defined`                   | No `finish-args` defined.                                                    | Yes[^5]    |
 | `finish-args-redundant-home-and-host`       | Filesystem permission has both `home` and `host`.                            | No         |
 | `finish-args-unnecessary-appid-own-name`    | D-Bus permission for app id name is granted automatically.                   | No         |
 | `finish-args-unnecessary-xdg-cache-access`  | Filesystem permission has a subpath of `xdg-cache`.                          | Yes        |
@@ -67,6 +67,7 @@ Here is a list of linter errors, and whether exceptions may be applied, by defau
 [^2]: Unless BaseApps or extensions. (Might also be granted on a case-by-case basis)
 [^3]: Granted for `extra-data`.
 [^4]: Exception only for tools that requires D-Bus access and for which the names are not predictable; this includes D-Bus tools and IDEs. In general it isn't allowed.
+[^5]: Only for console applications, graphical applications must have finish-args.
 
 ## Exceptions
 
