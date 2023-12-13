@@ -179,7 +179,11 @@ Apps should have at least one screenshot in english. For medium complexity apps 
 Screenshots should be tagged with the language they are in. For example, if you have a screenshot of the app in german, tag it with `xml:lang="de"`.
 
 ```xml
- <screenshot xml:lang="de">https://www.example.com/de/app-name01.jpg</screenshot>
+  <screenshots>
+    <screenshot type="default">
+      <image xml:lang="de">https://www.example.com/de/app-name01.jpg</image>
+    </screenshot>
+  </screenshots>
 ```
 
 ### Just the app window
