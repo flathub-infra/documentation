@@ -14,6 +14,10 @@ flatpak install -y flathub org.flatpak.Builder
    ```bash
    flatpak run org.flatpak.Builder --force-clean --sandbox --user --install --install-deps-from=flathub --ccache --mirror-screenshots-url=https://dl.flathub.org/repo/screenshots --repo=repo builddir <manifest>
    ```
+   If you are using an `extra-data` source, please use `flatpak-builder` from your distribution:
+   ```bash
+   flatpak-builder --force-clean --sandbox --user --install --install-deps-from=flathub --ccache --mirror-screenshots-url=https://dl.flathub.org/repo/screenshots --repo=repo builddir <manifest>
+   ```
 2. To run:
    ```bash
    flatpak run <app id>
