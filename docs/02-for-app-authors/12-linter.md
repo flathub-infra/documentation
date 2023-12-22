@@ -33,7 +33,6 @@ Here is a list of linter errors, and whether exceptions may be applied, by defau
 | `finish-args-arbitrary-xdg-cache-access`    | Filesystem permission has `xdg-cache`.                                       | Yes        |
 | `finish-args-arbitrary-xdg-config-access`   | Filesystem permission has `xdg-config`.                                      | Yes        |
 | `finish-args-arbitrary-xdg-data-access`     | Filesystem permission has `xdg-data`.                                        | Yes        |
-| `finish-args-broken-kde-tray-permission`    | Permission has `org.kde.StatusNotifierItem` which does not work in Flatpak   | No         |
 | `finish-args-fallback-x11-without-wayland`  | Permission has `fallback-x11` without `wayland`.                             | Yes        |
 | `finish-args-flatpak-spawn-access`          | The package requested access to `org.freedesktop.Flatpak`.                   | Yes        |
 | `finish-args-incorrect-dbus-gvfs`           | D-Bus name `org.gtk.vfs` doesn't exist.                                      | No         |
