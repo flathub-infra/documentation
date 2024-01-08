@@ -1,6 +1,6 @@
 ---
 slug: quality-moderation
-title: Raising the Bar: Introducing the new App Metadata Guidelines
+title: "Raising the Bar: Introducing the new App Metadata Guidelines"
 authors: [razze, bertob]
 tags: [flathub, quality]
 ---
