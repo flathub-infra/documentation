@@ -46,11 +46,11 @@ Our hope is that with better documentation and developer outreach we can get to 
 
 ![Flathub home page mockup with app banners including screenshots](homepage-banners.png)
 
-Our current plan is to start off with some simple banners on the homepage and iterate from there. The moderation backend for this already exists, and we're planning on rolling out the fronted soon.
+Our current plan is to start off with some simple banners on the homepage and iterate from there. The moderation backend for this already exists, and we're planning on rolling out the frontend soon.
 
 At this stage our focus is on the Flathub website, but of course eventually we want to make this data available to native app store clients as well.
 
-This effort will also help to improve the flathub wide search and the discoverability and attractiveness of apps on flathub from the rest of the internet.
+This effort will also help to improve the Flathub-wide search and the discoverability and attractiveness of apps on Flathub from the rest of the internet.
 
 ![Mockup of GNOME Software with banners including screenshots](banner-native.png)
 
