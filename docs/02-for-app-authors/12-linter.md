@@ -23,7 +23,7 @@ Here is a list of linter errors, and whether exceptions may be applied, by defau
 | `appstream-missing-appinfo`                 | Ostree ref is missing `files/share/app-info`.                                | No[^2]     |
 | `appstream-missing-appinfo-file`            | Appstream catalogue is missing or wasn't generated.                          | No[^2]     |
 | `appstream-missing-icon-file`               | A 128px icon in appstream catalogue is missing or wasn't generated.          | No[^2]     |
-| `appstream-missing-screenshots`             | Appstream catalogue is missing screenshots.                                  | No[^2]     |
+| `appstream-missing-screenshots`             | Appstream catalogue is missing screenshots.                                  | No         |
 | `appstream-metainfo-missing`                | Appdata file is missing.                                                     | No[^2]     |
 | `appstream-multiple-components`             | Appstream catalogue has more than one `components` tag                       | No         |
 | `appstream-screenshots-not-mirrored-in-ostree`| Appstream screenshots not mirrored in ostree repo.                         | No         |
