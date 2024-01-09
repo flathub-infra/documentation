@@ -19,7 +19,7 @@ Here is a list of linter errors, and whether exceptions may be applied, by defau
 | `appid-filename-mismatch`                   | Manifest filename does not match app-id.                                     | No         |
 | `appid-uses-code-hosting-domain`            | The app id doesn't follow the domain requirements for code hosting services. | No[^1]     |
 | `appstream-external-screenshot-url`         | Screenshots in appinfo aren't mirrored to dl.flathub.org/repo/screenshots.   | No         |
-| `appstream-failed-validation`               | Appdata file failed validation.                                              | No         |
+| `appstream-failed-validation`               | Appdata file failed validation.                                              | No[^2]     |
 | `appstream-missing-appinfo`                 | Ostree ref is missing `files/share/app-info`.                                | No         |
 | `appstream-missing-appinfo-file`            | Appstream catalogue is missing or wasn't generated.                          | No         |
 | `appstream-missing-icon-file`               | A 128px icon in appstream catalogue is missing or wasn't generated.          | No         |
@@ -33,17 +33,17 @@ Here is a list of linter errors, and whether exceptions may be applied, by defau
 | `desktop-file-*-key-empty`                  | Desktop file has an empty key.                                               | No         |
 | `desktop-file-icon-key-wrong-value`         | `Icon` key value does not match app-id                                       | No         |
 | `desktop-file-exec-has-flatpak-run`         | Desktop file `Exec` has `flatpak run` in it                                  | No         |
-| `desktop-file-is-hidden`                    | Desktop file has `Hidden=true` or `NoDisplay=true`                           | No         |
+| `desktop-file-is-hidden`                    | Desktop file has `Hidden=true` or `NoDisplay=true`                           | No[^2]     |
 | `finish-args-absolute-home-path`            | Filesystem permission has a path starting with `/home` or `/var/home`.       | No         |
 | `finish-args-arbitrary-autostart-access`    | Arbitrary `xdg-autostart` access. Please use the portals.                    | No         |
-| `finish-args-arbitrary-dbus-access`         | Generic D-Bus access is requested.                                           | No[^4]     |
+| `finish-args-arbitrary-dbus-access`         | Generic D-Bus access is requested.                                           | No[^3]     |
 | `finish-args-arbitrary-xdg-cache-access`    | Filesystem permission has `xdg-cache`.                                       | Yes        |
 | `finish-args-arbitrary-xdg-config-access`   | Filesystem permission has `xdg-config`.                                      | Yes        |
 | `finish-args-arbitrary-xdg-data-access`     | Filesystem permission has `xdg-data`.                                        | Yes        |
 | `finish-args-fallback-x11-without-wayland`  | Permission has `fallback-x11` without `wayland`.                             | Yes        |
 | `finish-args-flatpak-spawn-access`          | The package requested access to `org.freedesktop.Flatpak`.                   | Yes        |
 | `finish-args-incorrect-dbus-gvfs`           | D-Bus name `org.gtk.vfs` doesn't exist.                                      | No         |
-| `finish-args-not-defined`                   | No `finish-args` defined.                                                    | Yes[^5]    |
+| `finish-args-not-defined`                   | No `finish-args` defined.                                                    | Yes[^4]    |
 | `finish-args-redundant-home-and-host`       | Filesystem permission has both `home` and `host`.                            | No         |
 | `finish-args-reserved-*`                    | Filesystem permission has access to a path reserved by `flatpak`.            | No         |
 | `finish-args-unnecessary-appid-own-name`    | D-Bus permission for app id name is granted automatically.                   | No         |
@@ -52,7 +52,7 @@ Here is a list of linter errors, and whether exceptions may be applied, by defau
 | `finish-args-unnecessary-xdg-data-access`   | Filesystem permission has a subpath of `xdg-data`.                           | Yes        |
 | `flat-manager-branch-repo-mismatch`         | The ref branch does not match the target flathub repository.                 | No         |
 | `flat-manager-no-app-ref-uploaded`          | No application refs (`app/`) found.                                          | No         |
-| `flathub-json-modified-publish-delay`       | Reduced publishing delay in `flathub.json`.                                  | No[^3]     |
+| `flathub-json-modified-publish-delay`       | Reduced publishing delay in `flathub.json`.                                  | No[^5]     |
 | `flathub-json-eol-rebase-without-message`   | `end-of-life-rebase` without `end-of-life` message in flathub.json.          | No         |
 | `flathub-json-only-arches-empty`            | Empty `only-arches` in flathub.json.                                         | No         |
 | `flathub-json-excluded-all-arches`          | `exclude-arches` in flathub.json excludes all buildable arches.              | No         |
@@ -71,9 +71,10 @@ Here is a list of linter errors, and whether exceptions may be applied, by defau
 | `toplevel-no-modules`                       | There are no modules in the manifest.                                        | No         |
 
 [^1]: Unless the package existed before the linter.
-[^3]: Granted for `extra-data`.
-[^4]: Exception only for tools that requires D-Bus access and for which the names are not predictable; this includes D-Bus tools and IDEs. In general it isn't allowed.
-[^5]: Only for console applications, graphical applications must have finish-args.
+[^2]: Might be granted on a case-by-case basis.
+[^3]: Exception only for tools that requires D-Bus access and for which the names are not predictable; this includes D-Bus tools and IDEs. In general it isn't allowed.
+[^4]: Only for console applications, graphical applications must have finish-args.
+[^5]: Granted for `extra-data`.
 
 ## Linter warnings
 
