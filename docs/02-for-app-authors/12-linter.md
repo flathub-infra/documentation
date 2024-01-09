@@ -88,6 +88,7 @@ Warnings from the linter are non-fatal but they should be resolved, if possible.
 | `appstream-summary-too-long`                      | `summary` in appdata file is greater than 35 characters.                                                   |
 | `appstream-screenshot-missing-caption`            | Appdata is either missing screenshot captions or has empty captions.                                       |
 | `appstream-screenshots-files-not-found-in-ostree` | Screenshot files missing from ostree ref.                                                                  |
+| `desktop-file-low-quality-category`               | Desktop file has only combinations of low quality categories `KDE, GTK, Qt, Application, GNOME`            |
 | `finish-args-contains-both-x11-and-fallback`      | Finish-args have both `x11` and `fallback-x11`.                                                            |
 | `finish-args-contains-both-x11-and-wayland`       | Finish-args have both `x11` and `wayland`.                                                                 |
 | `finish-args-deprecated-shm`                      | Finish-args using deprecated `--device=shm`.                                                               |
