@@ -19,12 +19,12 @@ Here is a list of linter errors, and whether exceptions may be applied, by defau
 | `appid-filename-mismatch`                   | Manifest filename does not match app-id.                                     | No         |
 | `appid-uses-code-hosting-domain`            | The app id doesn't follow the domain requirements for code hosting services. | No[^1]     |
 | `appstream-external-screenshot-url`         | Screenshots in appinfo aren't mirrored to dl.flathub.org/repo/screenshots.   | No         |
-| `appstream-failed-validation`               | Appdata file failed validation.                                              | No[^2]     |
+| `appstream-failed-validation`               | Appdata file failed validation.                                              | No         |
 | `appstream-missing-appinfo`                 | Ostree ref is missing `files/share/app-info`.                                | No[^2]     |
-| `appstream-missing-appinfo-file`            | Appstream catalogue is missing or wasn't generated.                          | No[^2]     |
-| `appstream-missing-icon-file`               | A 128px icon in appstream catalogue is missing or wasn't generated.          | No[^2]     |
+| `appstream-missing-appinfo-file`            | Appstream catalogue is missing or wasn't generated.                          | No         |
+| `appstream-missing-icon-file`               | A 128px icon in appstream catalogue is missing or wasn't generated.          | No         |
 | `appstream-missing-screenshots`             | Appstream catalogue is missing screenshots.                                  | No         |
-| `appstream-metainfo-missing`                | Appdata file is missing.                                                     | No[^2]     |
+| `appstream-metainfo-missing`                | Appdata file is missing.                                                     | No         |
 | `appstream-multiple-components`             | Appstream catalogue has more than one `components` tag                       | No         |
 | `appstream-screenshots-not-mirrored-in-ostree`| Appstream screenshots not mirrored in ostree repo.                         | No         |
 | `desktop-file-not-installed`                | Desktop file is not installed to `/app/share/applications/<app-id>.desktop`. | No         |
