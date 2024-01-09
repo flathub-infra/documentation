@@ -27,6 +27,13 @@ Here is a list of linter errors, and whether exceptions may be applied, by defau
 | `appstream-metainfo-missing`                | Appdata file is missing.                                                     | No[^2]     |
 | `appstream-multiple-components`             | Appstream catalogue has more than one `components` tag                       | No         |
 | `appstream-screenshots-not-mirrored-in-ostree`| Appstream screenshots not mirrored in ostree repo.                         | No         |
+| `desktop-file-not-installed`                | Desktop file is not installed to `/app/share/applications/<app-id>.desktop`. | No         |
+| `desktop-file-failed-validation`            | Desktop file failed validation with `desktop-file-validate`.                 | No         |
+| `desktop-file-*-key-absent`                 | Desktop file has doesn't have the corresponding key.                         | No         |
+| `desktop-file-*-key-empty`                  | Desktop file has an empty key.                                               | No         |
+| `desktop-file-icon-key-wrong-value`         | `Icon` key value does not match app-id                                       | No         |
+| `desktop-file-exec-has-flatpak-run`         | Desktop file `Exec` has `flatpak run` in it                                  | No         |
+| `desktop-file-is-hidden`                    | Desktop file has `Hidden=true` or `NoDisplay=true`                           | No         |
 | `finish-args-absolute-home-path`            | Filesystem permission has a path starting with `/home` or `/var/home`.       | No         |
 | `finish-args-arbitrary-autostart-access`    | Arbitrary `xdg-autostart` access. Please use the portals.                    | No         |
 | `finish-args-arbitrary-dbus-access`         | Generic D-Bus access is requested.                                           | No[^4]     |
