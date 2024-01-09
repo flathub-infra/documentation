@@ -67,7 +67,7 @@ Here is a list of linter errors, and whether exceptions may be applied, by defau
 | `module-*-source-git-url-not-http`          | A git source URL is not http nor https.                                      | No         |
 | `module-*-autotools-non-release-build`      | A module using autotools is built with `--enable-debug` enabled.             | No         |
 | `toplevel-cleanup-debug`                    | `/lib/debug` is in the top level `cleanup` rule.                             | No         |
-| `toplevel-no-command`                       | The `command` property is missing.                                           | No[^2]     |
+| `toplevel-no-command`                       | The `command` property is missing.                                           | No         |
 | `toplevel-no-modules`                       | There are no modules in the manifest.                                        | No         |
 
 [^1]: Unless the package existed before the linter.
