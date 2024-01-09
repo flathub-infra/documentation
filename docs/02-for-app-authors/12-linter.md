@@ -20,7 +20,7 @@ Here is a list of linter errors, and whether exceptions may be applied, by defau
 | `appid-uses-code-hosting-domain`            | The app id doesn't follow the domain requirements for code hosting services. | No[^1]     |
 | `appstream-external-screenshot-url`         | Screenshots in appinfo aren't mirrored to dl.flathub.org/repo/screenshots.   | No         |
 | `appstream-failed-validation`               | Appdata file failed validation.                                              | No         |
-| `appstream-missing-appinfo`                 | Ostree ref is missing `files/share/app-info`.                                | No[^2]     |
+| `appstream-missing-appinfo`                 | Ostree ref is missing `files/share/app-info`.                                | No         |
 | `appstream-missing-appinfo-file`            | Appstream catalogue is missing or wasn't generated.                          | No         |
 | `appstream-missing-icon-file`               | A 128px icon in appstream catalogue is missing or wasn't generated.          | No         |
 | `appstream-missing-screenshots`             | Appstream catalogue is missing screenshots.                                  | No         |
@@ -71,7 +71,6 @@ Here is a list of linter errors, and whether exceptions may be applied, by defau
 | `toplevel-no-modules`                       | There are no modules in the manifest.                                        | No         |
 
 [^1]: Unless the package existed before the linter.
-[^2]: Unless BaseApps or extensions. (Might also be granted on a case-by-case basis)
 [^3]: Granted for `extra-data`.
 [^4]: Exception only for tools that requires D-Bus access and for which the names are not predictable; this includes D-Bus tools and IDEs. In general it isn't allowed.
 [^5]: Only for console applications, graphical applications must have finish-args.
