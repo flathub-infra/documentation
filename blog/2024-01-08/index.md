@@ -14,7 +14,7 @@ Not only can you get pretty much any app on Flathub, they are often directly mai
 ## More Apps, More Problems
 However, having lots of apps comes with some new (in this case nice to have) problems. While there are a lot of beautiful modern apps, there are also a lot of apps with low quality metadata, ugly icons, or out of date screenshots. This means that looking at the new and updated lists on the Flathub home page you get the impression that most of the apps on Flathub are low quality.
 
-One of the biggest is probably that historically people were not discovering new apps from their repositories very often. Instead, they were mostly installing the same few classics with well-known brands (VLC, Blender, etc.), or relying on word of mouth for discovery. Now that new apps are being released on a weekly basis, app metadata becomes much more important for introducing people to these new apps.
+One of the biggest reasons for the prevalence of low quality app metadata is probably that historically people were not discovering new apps from their repositories very often. Instead, they were mostly installing the same few classics with well-known brands (VLC, Blender, etc.), or relying on word of mouth for discovery. Now that new apps are being released on a weekly basis, app metadata becomes much more important for introducing people to these new apps.
 
 The unfortunate result of the status quo in metadata quality is that many apps don't look inviting for new users, and it's difficult to find truly high quality apps among the rest.
 
