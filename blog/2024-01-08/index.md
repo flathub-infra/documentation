@@ -37,7 +37,7 @@ We're also introducing a new review system for app metadata, where editors rate 
 
 If editors flagged issues with your app you can address them in the next release. Once the new release is on Flathub you can request a re-review. The status of your app will be updated accordingly.
 
-If you are not an icon designer, getting your icon to meet the guidelines can be challenging. Luckily there are designers from the community you can ask for help! The [GNOME App Icon Design Matrix room](https://matrix.to/#/#appicondesign:gnome.org) is a good place to ask.
+If you are not an icon designer, getting your icon to meet the guidelines can be challenging. Luckily there are designers from the community you can ask for help! The [GNOME App Icon Design](https://matrix.to/#/#appicondesign:gnome.org) and [KDE Visual Design Group](https://matrix.to/#/#visualdesigngroup:kde.org) Matrix rooms are good examples of places to ask.
 
 This does not affect the app review process for apps being published on Flathub. We will continue to accept apps that don't fully meet the new quality guidelines. However, we do want to highlight apps that meet the guidelines, and try to show them in more prominent places on the website.
 
