@@ -83,6 +83,10 @@ Warnings from the linter are non-fatal but they should be resolved, if possible.
 | Warning                                           | Explanation                                                                                                |
 | --------------------------------------------------| -----------------------------------------------------------------------------------------------------------|
 | `appstream-missing-developer-name`                | Appdata file is missing `developer_name`.                                                                  |
+| `appstream-missing-project-license`               | Appdata file is missing `project_license`.                                                                 |
+| `appstream-name-too-long`                         | `name` in appdata file is greater than 20 characters.                                                      |
+| `appstream-summary-too-long`                      | `summary` in appdata file is greater than 35 characters.                                                   |
+| `appstream-screenshot-missing-caption`            | Appdata is either missing screenshot captions or has empty captions.                                       |
 | `appstream-screenshots-files-not-found-in-ostree` | Screenshot files missing from ostree ref.                                                                  |
 | `finish-args-contains-both-x11-and-fallback`      | Finish-args have both `x11` and `fallback-x11`.                                                            |
 | `finish-args-contains-both-x11-and-wayland`       | Finish-args have both `x11` and `wayland`.                                                                 |
