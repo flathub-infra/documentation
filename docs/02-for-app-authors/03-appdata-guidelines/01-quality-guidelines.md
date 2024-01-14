@@ -106,7 +106,7 @@ The summary should ideally be between 10 and 25 characters, and no longer than 3
 
 - Write markdown in style
   :::
-:::danger Bad example
+  :::danger Bad example
 
 - Simple, easy to use, distraction-free markdown editor written in Python
   :::
@@ -175,6 +175,12 @@ Avoid feature lists with more than 10 items, they are difficult to scan and make
 ### At least one screenshot
 
 Apps should have at least one screenshot in english. For medium complexity apps 3-6 is a good range, for very large apps with lots of screens 6-10 is appropriate. More than 10 is probably too many.
+
+:::tip
+Your best screenshot should be on the first position, because it will be the first thing a user sees when viewing your app on Flathub.
+
+We might also use this in other places, such as featured banners, so make sure it's a good one.
+:::
 
 ### Tag screenshots with correct language
 
