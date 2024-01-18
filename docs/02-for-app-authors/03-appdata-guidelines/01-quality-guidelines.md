@@ -11,7 +11,7 @@ Therefor `must` is used in the following text, but it's not a requirement, it me
 
 Your app should not violate any trademarks. This includes the name, icon, and summary.
 
-For example, if your app is a Telegram client or web wrapper, it should not be called `Telegram for Linux` or use the official Telegram icon. Instead, it should have its own identity (e.g. `Paper Plane`, with a custom icon). If it's made clear that it's a third party client it can be ok to mention the original service (e.g. `Tally for Plausible`), but in most cases it should be avoided.
+For example, if your app is a Telegram client or web wrapper, it should not be called `Telegram for Linux` or use the official Telegram icon. Instead, it should have its own identity (e.g. `Paper Plane`, with a custom icon). If it's made clear that it's a third-party client it can be ok to mention the original service (e.g. `Tally for Plausible`), but in most cases it should be avoided.
 
 :::tip
 If you're not sure if your app violates any trademarks, feel free to ask us on [Matrix](https://matrix.to/#/#flathub:matrix.org).
@@ -57,9 +57,9 @@ The icon should not have any baked-in shadows or glows. Both the Flathub website
 
 The icon should be somewhat in line with the contemporary icon styles (i.e. not look like it hasn't been updated in decades). The [GNOME](https://developer.gnome.org/hig/guidelines/app-icons.html) and [KDE ](https://develop.kde.org/hig/style/icons/colorful/application/) app icon guidelines are examples of the kind of style your icon should align with.
 
-![Two icons that are not in line with contemproary styles, and two that are.](assets/app-icon-style.png)
+![Two icons that are not in line with contemporary styles, and two that are.](assets/app-icon-style.png)
 
-In some cases it can make sense for the icon to align with the visuals of the app, rather than contemporary icon styles (especially relevant for games). This can be accommodated by embedding the custom style icon in one of the grid shapes, e.g. a square or circle. This way the unique style is preserved, but the icon's size and shape are in line with other apps.
+In some cases, it can make sense for the icon to align with the visuals of the app, rather than contemporary icon styles (especially relevant for games). This can be accommodated by embedding the custom style icon in one of the grid shapes, e.g. a square or circle. This way the unique style is preserved, but the icon's size and shape are in line with other apps.
 
 ## App Name
 
@@ -174,7 +174,7 @@ Avoid feature lists with more than 10 items, they are difficult to scan and make
 
 ### At least one screenshot
 
-Apps should have at least one screenshot in english. For medium complexity apps 3-6 is a good range, for very large apps with lots of screens 6-10 is appropriate. More than 10 is probably too many.
+Apps should have at least one screenshot in English. For medium complexity apps 3-6 is a good range, for very large apps with lots of screens 6-10 is appropriate. More than 10 is probably too many.
 
 :::tip
 Your best screenshot should be on the first position, because it will be the first thing a user sees when viewing your app on Flathub.
@@ -184,7 +184,7 @@ We might also use this in other places, such as featured banners, so make sure i
 
 ### Tag screenshots with correct language
 
-Screenshots should be tagged with the language they are in. For example, if you have a screenshot of the app in german, tag it with `xml:lang="de"`.
+Screenshots should be tagged with the language they are in. For example, if you have a screenshot of the app in German, tag it with `xml:lang="de"`.
 
 ```xml
   <screenshots>
@@ -212,7 +212,7 @@ Use the platform default configuration for all settings that affect screenshots,
 
 ### Include window shadow and rounded corners
 
-Screenshots must include the native toolkit shadow and rounding. App stores do not add a shadow after the fact and without one screenshots can look glitchy or have low contrast depending on the background. Apps that are always fullscreen (such as most games) are exempt from this, but in these cases all screenshots must be fullscreen. Do not use a mix of windowed and fullscreen screenshots.
+Screenshots must include the native toolkit shadow and rounding. App stores do not add a shadow after the fact, and without one, screenshots can look glitchy or have low contrast depending on the background. Apps that are always fullscreen (such as most games) are exempt from this, but in these cases all screenshots must be fullscreen. Do not use a mix of windowed and fullscreen screenshots.
 
 :::tip
 Don't maximize your app window when taking screenshots, since this will remove the shadow and rounding.
