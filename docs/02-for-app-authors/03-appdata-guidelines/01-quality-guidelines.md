@@ -80,7 +80,7 @@ The name should ideally be no longer than 15 characters, and must be shorter tha
 
 ### Just the name
 
-The name should be just the name, without any additional info. For example, don't append what the app does to the name, and use the summary to provide this extra information instead.
+The name should be just the name, without any additional info. For example, don't append what the app does to the name; use the summary to provide this information instead.
 
 :::danger Bad examples
 
@@ -89,9 +89,11 @@ The name should be just the name, without any additional info. For example, don'
 - Apostrophe (Special Edition)
   :::
 
+If the app is a distinct edition among different versions of your app on Flathub (e.g. `Plex` for desktop versus `Plex HTPC` for the home theater version), then using the full name including the edition may be acceptable.
+
 ### No weird formatting
 
-The name should not have any weird formatting or punctuation. For example, it should not be all-lowercase, all-uppercase, camel case, or contain dashes or periods. Cases where the weird formatting is part of the brand are exempt from this (e.g. `VLC`).
+The name should not have any weird formatting or punctuation. For example, it should not be all-lowercase, all-uppercase, camel case, pascal case, or contain dashes or periods. Cases where the formatting is part of an established brand may be exempt (e.g. `VLC`).
 
 :::danger Bad examples
 
