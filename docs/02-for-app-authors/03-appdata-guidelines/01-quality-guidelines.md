@@ -1,9 +1,14 @@
 # Quality guidelines
 
-For the quick guidelines for the actual content (descriptions, screenshots), see the Appstream [docs](https://www.freedesktop.org/software/appstream/docs/chap-Quickstart.html).
+The following guidelines are not required for submission to Flathub, but are best practices we recommend and consider for curation and promotion. These guidelines are designed to help your app and Flathub itself appear in the best light to users—they may change over time based on developer and user feedback.
 
-The following guidelines are optional, but recommended. We will likely promote apps that follow them in certain places.
-Therefor `must` is used in the following text, but it's not a requirement, it means that apps not following these guidelines will likely not be promoted.
+:::tip
+Apps following the quality guidelines may be featured more prominently across Flathub and native app store clients, like on the front page or at the top of category pages.
+:::
+
+The term `must` in these guidelines is used in the context of considering whether an app passes the app listing quality checks. Apps that do not follow these guidelines may still be published on Flathub.
+
+For the basics on how to write metadata for your app, see the [Appstream Metadata Quickstart](https://www.freedesktop.org/software/appstream/docs/chap-Quickstart.html).
 
 ## General
 
