@@ -75,28 +75,39 @@ The name should ideally be no longer than 15 characters, and must be shorter tha
 
 ### Just the name
 
-The name should be just the name, without any additional info. For example, don't append what the app does to the name; use the summary to provide this information instead.
+The name should be just the short name, without any additional information. For example, don't append what the app does or is used for to the name; use the summary to provide this information instead.
 
 :::danger Bad examples
 
-- Apostrophe - Markdown Editor
-- Apostrophe (Markdown Editor)
-- Apostrophe (Special Edition)
+- Krita - Digital Painting, Creative Freedom
+- Fractal (Matrix Client)
+- Apostrophe: the best free Markdown editor
+- Firefox Web Browser
+  :::
+  
+  :::tip Good examples
+
+- Krita
+- Fractal
+- Apostrophe
+- Firefox
   :::
 
 If the app is distinct among different versions of your app on Flathub (e.g. `Firefox Beta` versus the standard `Firefox`), then using the full name including the edition may be acceptable.
 
 ### No weird formatting
 
-The name should not have any weird formatting or punctuation. For example, it should not be all-lowercase, all-uppercase, camel case, pascal case, or contain dashes or periods. Cases where the formatting is part of an established brand may be exempt (e.g. `VLC`).
+App names should avoid nonstandard formatting and punctuation. For example, avoid all-lowercase, all-uppercase, camel/pascal case, and punctuation like dashes or periods.
 
 :::danger Bad examples
 
-- apostrophe
-- APOSTROPHE
+- krita
+- FRACTAL
 - ApostropheEditor
-- Apostrophe.org
+- Firefox.org
   :::
+
+Cases where the formatting is part of an established brand may be exempt (e.g. `VLC`).
 
 ## Summary
 
