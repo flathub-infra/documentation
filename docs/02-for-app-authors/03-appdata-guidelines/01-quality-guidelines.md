@@ -127,6 +127,10 @@ The summary should be understandable by a non-technical person, and not contain 
 - Free and open source Qt5 Matrix client
   :::
 
+:::tip
+There are separate fields for technical information. If you want to mention the toolkit do it in [categories](https://specifications.freedesktop.org/menu-spec/latest/apas02.html) or [keywords](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-keywords).
+:::
+
 ### No weird formatting
 
 The summary should not have any weird formatting or punctuation. It should use sentence case, rather than title case. It shouldn't end with a full stop.
