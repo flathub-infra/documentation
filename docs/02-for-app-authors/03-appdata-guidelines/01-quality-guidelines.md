@@ -84,7 +84,7 @@ The name should be just the name, without any additional info. For example, don'
 - Apostrophe (Special Edition)
   :::
 
-If the app is a distinct edition among different versions of your app on Flathub (e.g. `Plex` for desktop versus `Plex HTPC` for the home theater version), then using the full name including the edition may be acceptable.
+If the app is distinct among different versions of your app on Flathub (e.g. `Firefox Beta` versus the standard `Firefox`), then using the full name including the edition may be acceptable.
 
 ### No weird formatting
 
