@@ -31,7 +31,7 @@ The manifest must be at the top level and named after the application ID with th
 
 Every repository must contain a manifest describing how to build the application. If the application, and hence repository, is called `com.example.MyCoolApp`, this file must be called `com.example.MyCoolApp.json` or `com.example.MyCoolApp.yaml`. This is the only required file!
 
-This manifest may import other manifest files in the same repository. It's quite common to add the [shared-modules](shared-modules) repository as a submodule.
+This manifest may import other manifest files in the same repository. It's quite common to add the [shared-modules](../shared-modules) repository as a submodule.
 
 #### Example manifest
 
