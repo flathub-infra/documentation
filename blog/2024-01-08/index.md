@@ -9,8 +9,6 @@ Flathub has grown massively over the past few years, making it easier than ever 
 
 <!-- truncate -->
 
-## Growth
-
 Today, Flathub has over 2,400 apps, including many of the big names you would expect. In the early days our goal was mostly to make it easy to get the latest version of popular apps via Flatpak, and we can safely say this has been achieved: not only can you get pretty much any app on Flathub, they are often directly maintained by the developer—and it's the primary channel many new app developers choose for shipping their apps.
 
 ![App cards with high quality metadata on the homepage](good-metadata-apps.png)
