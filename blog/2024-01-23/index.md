@@ -23,7 +23,7 @@ We have a [public dashboard](https://flathub.org/statistics) that shares some ba
 
 But how can we measure how many _active users_ we have?
 
-Since Flathub necessarily serves downloads of Flatpak _runtimes_ (common platforms on which apps are built), we can estimate active users fairly well. For example, when installing or updating most apps, Flatpak will automatically install the base [FreeDesktop SDK](https://freedesktop-sdk.gitlab.io/) runtime on which the KDE and GNOME runtimes (and most other apps) are built. We can look at the number of downloads of _updates_ to a recent release of this runtime to understand how many active installs are out there getting Flatpaks from Flathub.
+Since Flathub necessarily serves downloads of Flatpak _runtimes_ (common platforms on which apps are built), we can estimate active users fairly well. For example, when installing or updating many apps, Flatpak will automatically install the base [FreeDesktop SDK](https://freedesktop-sdk.gitlab.io/) runtime on which the KDE and GNOME runtimes (and most other apps) are built. We can look at the number of downloads of _updates_ to a recent release of this runtime to estimate how many active installs are out there getting Flatpaks from Flathub.
 
 This methodology reveals that over the past few months there have over a million updates of each of the latest FreeDesktop SDK runtime releases, meaning we've passed the one million active user mark.
 
