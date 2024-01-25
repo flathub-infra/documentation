@@ -1,6 +1,6 @@
 ---
 slug: over-one-million-active-users-and-growing
-title: Over One Million Active Users—and Growing
+title: Over One Million Active Users, and Growing
 authors: [cassidyjames]
 tags: [flathub, milestone, stats]
 ---
