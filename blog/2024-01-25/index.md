@@ -11,9 +11,11 @@ Earlier this month we shared [new app metadata guidelines](../2024-01-08/index.m
 
 ## Milestones
 
+![Flathub: 1.6 billion downloads; 2,400+ apps; 850+ verified apps; 1 million+ active users](milestones.png)
+
 To date, Flathub has served a total of **1.6 billion downloads** of **over 2,400 apps** and their updates.
 
-Since introducing [verified apps](/docs/for-users/verification) last year, **over 800 apps have been verified** by their original authors; more than one third of all apps, with that number constantly increasing. 
+Since introducing [verified apps](/docs/for-users/verification) last year, **over 850 apps have been verified** by their original authors; more than one third of all apps, with that number constantly increasing. 
 
 And finally, we're thrilled to announce that Flathub has surpassed **one million active users**. 🎉️
 
