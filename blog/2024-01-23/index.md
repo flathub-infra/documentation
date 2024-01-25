@@ -13,7 +13,7 @@ Earlier this month we shared [new app metadata guidelines](../2024-01-08/index.m
 
 To date, Flathub has served a total of **1.6 billion downloads** of **over 2,400 apps** and their updates.
 
-Since introducing [verified apps](/docs/for-users/verification) last year, **over 800 apps have been verified** by their original authors—more than one third of all apps, with that number constantly increasing. 
+Since introducing [verified apps](/docs/for-users/verification) last year, **over 800 apps have been verified** by their original authors; more than one third of all apps, with that number constantly increasing. 
 
 And finally, we're thrilled to announce that Flathub has surpassed **one million active users**. 🎉️
 
@@ -39,7 +39,7 @@ We attribute the growth of Flathub to a few developments over the years, and esp
 
 1. **Popular app availability**: Since we started Flathub, we've seen apps like Firefox, Google Chrome, Discord, VLC, Spotify, Telegram, Microsoft Edge, Steam, OBS Studio, Zoom, Thunderbird, and _many_ more make their way into the store. These are many of the apps people want and expect, especially if they're coming to a Linux desktop for the first time. Each time another popular app hits Flathub, it makes Flathub that much more compelling to users.
 
-2. **Verified apps**: We've heard that some folks have held off installing specific apps or even using Flathub altogether because they didn't want a third-party maintainer redistributing an app they rely on—verifying apps solves this by assuring users their favorite app is actually coming from its developer. With an ever-increasing number of apps choosing to get verified—including both big names like Firefox, Discord, and Telegram as well as many newer indie apps—the trust and adoption of Flathub increases.
+2. **Verified apps**: We've heard that some folks have held off installing specific apps or even using Flathub altogether because they didn't want a third-party maintainer redistributing an app they rely on; verifying apps solves this by assuring users their favorite app is actually coming from its developer. With an ever-increasing number of apps choosing to get verified—including both big names and many newer indie apps—the trust and adoption of Flathub increases.
 
 3. **Steam Deck**: It's not [just a meme](https://mastodon.blaede.family/@cassidy/111031129234702967); we suspect Flathub being included as the default app source for the Steam Deck's desktop mode has had a large positive effect on the usage of Flathub. Just look at some of the [most popular apps](https://flathub.org/apps/collection/popular): retro game emulators, game compatibility tools, gaming-oriented chat services, alternate game launchers—all the kinds of apps you'd expect Steam Deck users to want. And in fact, "game" is the single most common category of app on Flathub. It turns out selling ["multiple millions" of devices](https://www.theverge.com/2023/11/9/23954205/valve-steam-deck-multiple-millions) has an impact on the ecosystem!
 
