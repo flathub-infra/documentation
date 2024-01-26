@@ -3,7 +3,7 @@ slug: over-one-million-active-users-and-growing
 title: Over One Million Active Users, and Growing
 authors: [cassidyjames]
 tags: [flathub, milestone, stats]
-image: ./images/milestones.png
+image: ./milestones.png
 ---
 
 Earlier this month we shared [new app metadata guidelines](../2024-01-08/index.md) in response to the growth and maturity of Flathub. Today we're proud to share about that growth in a bit more detail including a huge milestone, how we calculate stats, and what we believe is driving that growth.
