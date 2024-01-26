@@ -3,6 +3,7 @@ slug: over-one-million-active-users-and-growing
 title: Over One Million Active Users, and Growing
 authors: [cassidyjames]
 tags: [flathub, milestone, stats]
+image: milestones.png
 ---
 
 Earlier this month we shared [new app metadata guidelines](../2024-01-08/index.md) in response to the growth and maturity of Flathub. Today we're proud to share about that growth in a bit more detail including a huge milestone, how we calculate stats, and what we believe is driving that growth.
@@ -15,7 +16,7 @@ Earlier this month we shared [new app metadata guidelines](../2024-01-08/index.m
 
 To date, Flathub has served a total of **1.6 billion downloads** of **over 2,400 apps** and their updates.
 
-Since introducing [verified apps](/docs/for-users/verification) last year, **over 850 apps have been verified** by their original authors; more than one third of all apps, with that number constantly increasing. 
+Since introducing [verified apps](/docs/for-users/verification) last year, **over 850 apps have been verified** by their original authors; more than one third of all apps, with that number constantly increasing.
 
 And finally, we're thrilled to announce that Flathub has surpassed **one million active users**. 🎉️
 
@@ -45,11 +46,11 @@ We attribute the growth of Flathub to a few developments over the years, and esp
 
 3. **Steam Deck**: It's not [just a meme](https://mastodon.blaede.family/@cassidy/111031129234702967); we suspect Flathub being included as the default app source for the Steam Deck's desktop mode has had a large positive effect on the usage of Flathub. Just look at some of the [most popular apps](https://flathub.org/apps/collection/popular): retro game emulators, game compatibility tools, gaming-oriented chat services, alternate game launchers—all the kinds of apps you'd expect Steam Deck users to want. And in fact, "game" is the single most common category of app on Flathub. It turns out selling ["multiple millions" of devices](https://www.theverge.com/2023/11/9/23954205/valve-steam-deck-multiple-millions) has an impact on the ecosystem!
 
-4. **Linux distro adoption**: In addition to shipping on Steam Deck, Flathub now comes included out of the box on at least Clear Linux, Endless OS, KDE Neon, Linux Mint, Pop!_OS, and Zorin OS—and [as of Fedora 38](https://pagure.io/fesco/issue/2939), Flathub is available in its entirety when enabling third-party software sources. **Flathub is the preferred app store for Linux, and its grassroots adoption across the Linux desktop ecosystem proves that.**
+4. **Linux distro adoption**: In addition to shipping on Steam Deck, Flathub now comes included out of the box on at least Clear Linux, Endless OS, KDE Neon, Linux Mint, Pop!\_OS, and Zorin OS—and [as of Fedora 38](https://pagure.io/fesco/issue/2939), Flathub is available in its entirety when enabling third-party software sources. **Flathub is the preferred app store for Linux, and its grassroots adoption across the Linux desktop ecosystem proves that.**
 
 5. **New apps**: Last but definitely not least, we've entered a thrilling chapter of Flathub as an ecosystem. It's not just another source to get popular, big-name apps you'd expect to be able to get anywhere else; **Flathub has become the preferred app store for a growing number of indie, open source developers**. Developers are increasingly submitting their own new apps and directing their users to Flathub; from [all 50+ GNOME Circle apps](https://circle.gnome.org/#apps) to apps like [Endless Key](https://flathub.org/apps/org.endlessos.Key), [Librum](https://flathub.org/apps/com.librumreader.librum), [Lightwave Explorer](https://flathub.org/apps/io.github.NickKarpowicz.LightwaveExplorer), [Live Captions](https://flathub.org/apps/net.sapples.LiveCaptions), and [Planify](https://flathub.org/apps/io.github.alainm23.planify), Flathub is the best way to get apps into the hands of Linux users.
 
-And of course a large part of Flathub's continued growth has been due to the incredible work of the Flathub admins, contributors, and volunteers who have helped ensure Flathub remains the trustworthy and reliable service it has always been known as. 
+And of course a large part of Flathub's continued growth has been due to the incredible work of the Flathub admins, contributors, and volunteers who have helped ensure Flathub remains the trustworthy and reliable service it has always been known as.
 
 ## Here's to What's Next!
 
