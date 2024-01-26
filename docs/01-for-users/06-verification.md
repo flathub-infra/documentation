@@ -2,7 +2,9 @@
 
 ## What is a verified app?
 
-A verified app is an app that is published on Flathub by its original developer or a third party approved by the developer. Flathub has verified the developer's identity using the app id and the developer's website or profile on a source code hosting site.
+A verified app is an app that is published on Flathub by its original developer or a third party approved by the developer. Flathub has verified the developer's identity using the app ID and the developer's website or profile on a source code hosting site.
+
+[More information for developers →](../02-for-app-authors/10-verification.md)
 
 ## Why are some apps not verified?
 
