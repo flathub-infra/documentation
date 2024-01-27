@@ -152,17 +152,18 @@ during the build.
 
 The image tags of screenshots in [appinfo catalogue](https://www.freedesktop.org/software/appstream/docs/chap-CatalogData.html)
 are not of [type](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-screenshots)
-`thumbnail`.
+`thumbnail`. The file and the type is automatically created during the
+build process by appstream compose.
 
-The file and the type is automatically created during the build process
-by appstream compose.
+This can happen when screenshot tags are missing/not properly defined in
+the [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
+or if the image file/URL is malformed. The URL must be a direct link to
+a png or svg resource on the web.
 
-This can happen when [mirroring](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html)
-fails due to spurious connectivity issues and is usually resolved by
-restarting the build.
-
-This can also happen if the image file or the link is malformed. The
-link must be a direct link to a png or svg resource on the web.
+If the screenshot tag is fine but the error happens, it can mean that
+[mirroring](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html)
+failed due to connectivity issues. This is usually resolved by restarting
+the build.
 
 ### appstream-multiple-components
 
