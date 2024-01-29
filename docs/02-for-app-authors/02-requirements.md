@@ -199,9 +199,9 @@ Do note that CLI applications do not require a `.desktop` file but TUI applicati
 
 ### Appstream
 
-Appstream is the standard used to provide metadata about applications. Applications must provide appstream data and pass [validation](/docs/for-app-authors/appdata-guidelines/#use-flathubs-appstream-util). If application metadata has not been provided by the upstream, it should be licensed with [Creative Commons Zero, version 1](https://creativecommons.org/choose/zero/), by stating `CC0-1.0` in `metadata_license`.
+Appstream is the standard used to provide metadata about applications. Applications must provide appstream data and pass [validation](/docs/for-app-authors/appdata-guidelines/#use-flathubs-appstream-util).
 
-In [AppData guidelines](/docs/for-app-authors/appdata-guidelines) you'll find tips/best practices to help you get your AppData up to spec. For information about appstream, see [its documentation](https://www.freedesktop.org/software/appstream/docs/index.html).
+Please read the [AppData guidelines](/docs/for-app-authors/appdata-guidelines) for more information.
 
 ### .desktop files
 
