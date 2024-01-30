@@ -398,6 +398,17 @@ The manifest has no [finish-args](https://docs.flatpak.org/en/latest/manifests.h
 
 This is only selectively allowed for console applications if needed.
 
+## finish-args-portal-own-name, finish-args-portal-talk-name
+
+**Exceptions allowed**: No
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `talk-name` or `own-name` starting with
+`org.freedesktop.portal.`.
+
+Portal interfaces do not need to be manually added. These are allowed by
+Flatpak by default.
+
 ### finish-args-redundant-home-and-host
 
 **Exceptions allowed**: No
