@@ -186,7 +186,7 @@ the build.
 The [appinfo catalogue](https://www.freedesktop.org/software/appstream/docs/chap-CatalogData.html)
 file is malformed and has multiple `component` tags.
 
-## appstream-no-flathub-manifest-key
+### appstream-no-flathub-manifest-key
 
 **Exceptions allowed**: No
 
@@ -398,12 +398,23 @@ The manifest has no [finish-args](https://docs.flatpak.org/en/latest/manifests.h
 
 This is only selectively allowed for console applications if needed.
 
-## finish-args-portal-own-name, finish-args-portal-talk-name
+### finish-args-portal-own-name
 
 **Exceptions allowed**: No
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has a `talk-name` or `own-name` starting with
+in the manifest has a `own-name` starting with
+`org.freedesktop.portal.`.
+
+Portal interfaces do not need to be manually added. These are allowed by
+Flatpak by default.
+
+### finish-args-portal-talk-name
+
+**Exceptions allowed**: No
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `talk-name` starting with
 `org.freedesktop.portal.`.
 
 Portal interfaces do not need to be manually added. These are allowed by
@@ -453,19 +464,30 @@ Flatpak creates its own XDG config, cache and data directories under
 by the portal. Applications do not need to access the host's
 XDG directories or subpaths of them.
 
-### finish-args-wildcard-name-own-name, finish-args-wildcard-name-talk-name
+### finish-args-wildcard-name-own-name
 
 **Exceptions allowed**: No
 
 Name is one of `freedesktop, gnome, kde`.
 
-The manifest has a `own-name` or a `talk-name` that is one of
+The manifest has a `own-name` that is one of
 `org.freedesktop.*, org.gnome.*, org.kde.*`.
 
 Wildcard access to bus names in well known namespace is a security issue.
 
 Only exceptions to finish-args-wildcard-kde-own-name might be allowed
 in case of legacy tray usage.
+
+### finish-args-wildcard-name-talk-name
+
+**Exceptions allowed**: No
+
+Name is one of `freedesktop, gnome, kde`.
+
+The manifest has a `talk-name` that is one of
+`org.freedesktop.*, org.gnome.*, org.kde.*`.
+
+Wildcard access to bus names in well known namespace is a security issue.
 
 ### flat-manager-branch-repo-mismatch
 
