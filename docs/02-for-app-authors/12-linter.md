@@ -134,6 +134,20 @@ must supplied during the build with a proper filename, [id tag](https://www.free
 proper `desktop-id` in `launchable` [tag](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-launchable)
 and all of them must match the app id used in the [flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
 
+### appstream-missing-developer-name
+
+The [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
+is missing the `developer_name` tag.
+
+This must be present for proper display and classification by app stores.
+
+### appstream-missing-project-license
+
+The [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
+is missing the `project_license` tag.
+
+This must be present for proper display of the license by the app store.
+
 ### appstream-missing-icon-file
 
 **Exceptions allowed**: No
@@ -620,21 +634,6 @@ This property is required.
 
 Warnings are non-fatal but they should be resolved, if possible. Some of
 them might be promoted to an error in the future if needed.
-
-### appstream-missing-developer-name
-
-The [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
-is missing the `developer_name` tag.
-
-This should be present for proper display and classification by app stores.
-
-### appstream-missing-project-license
-
-The [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
-is missing the `project_license` tag.
-
-This should be present for proper display of the license by the app
-store.
 
 ### appstream-name-too-long
 
