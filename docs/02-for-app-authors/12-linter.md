@@ -453,6 +453,20 @@ Flatpak creates its own XDG config, cache and data directories under
 by the portal. Applications do not need to access the host's
 XDG directories or subpaths of them.
 
+### finish-args-wildcard-name-own-name, finish-args-wildcard-name-talk-name
+
+**Exceptions allowed**: No
+
+Name is one of `freedesktop, gnome, kde`.
+
+The manifest has a `own-name` or a `talk-name` that is one of
+`org.freedesktop.*, org.gnome.*, org.kde.*`.
+
+Wildcard access to bus names in well known namespace is a security issue.
+
+Only exceptions to finish-args-wildcard-kde-own-name might be allowed
+in case of legacy tray usage.
+
 ### flat-manager-branch-repo-mismatch
 
 **Exceptions allowed**: No
