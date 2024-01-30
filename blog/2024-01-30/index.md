@@ -29,7 +29,7 @@ Various Flathub and Flatpak folks can also be found around associated [stands]:
 - **Fedora Project**: building AW, level 1, booth 4
 - **Linux on Mobile**: building AW, level 1, booth 7
 
-Find us to chat app about Flathub, app submission and maintenance, Flatpak, and the Linux desktop app ecosystem.
+Find us to chat about Flathub, app submission and maintenance, Flatpak, and the Linux desktop app ecosystem.
 
 Be sure to check the [FOSDEM Stands page][stands] to confirm details and in case of any changes.
 
