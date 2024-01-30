@@ -186,6 +186,15 @@ the build.
 The [appinfo catalogue](https://www.freedesktop.org/software/appstream/docs/chap-CatalogData.html)
 file is malformed and has multiple `component` tags.
 
+## appstream-no-flathub-manifest-key
+
+**Exceptions allowed**: No
+
+The [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
+is missing the `flathub::manifest` tag.
+
+This must be present for externally uploaded apps.
+
 ### appstream-screenshots-not-mirrored-in-ostree
 
 **Exceptions allowed**: No
