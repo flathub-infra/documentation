@@ -1,9 +1,14 @@
 # Quality guidelines
 
-For the quick guidelines for the actual content (descriptions, screenshots), see the Appstream [docs](https://www.freedesktop.org/software/appstream/docs/chap-Quickstart.html).
+The following guidelines are not required for submission to Flathub, but are best practices we recommend and consider for curation and promotion. These guidelines are designed to help your app and Flathub itself appear in the best light to users—they may change over time based on developer and user feedback.
 
-The following guidelines are optional, but recommended. We will likely promote apps that follow them in certain places.
-Therefor `must` is used in the following text, but it's not a requirement, it means that apps not following these guidelines will likely not be promoted.
+:::tip
+Apps following the quality guidelines may be featured more prominently across Flathub and native app store clients, like on the front page or at the top of category pages.
+:::
+
+The term `must` in these guidelines is used in the context of considering whether an app passes the app listing quality checks. Apps that do not follow these guidelines may still be published on Flathub.
+
+For the basics on how to write metadata for your app, see the [Appstream Metadata Quickstart](https://www.freedesktop.org/software/appstream/docs/chap-Quickstart.html).
 
 ## General
 
@@ -11,7 +16,7 @@ Therefor `must` is used in the following text, but it's not a requirement, it me
 
 Your app should not violate any trademarks. This includes the name, icon, and summary.
 
-For example, if your app is a Telegram client or web wrapper, it should not be called `Telegram for Linux` or use the official Telegram icon. Instead, it should have its own identity (e.g. `Paper Plane`, with a custom icon). If it's made clear that it's a third party client it can be ok to mention the original service (e.g. `Tally for Plausible`), but in most cases it should be avoided.
+For example, if your app is a Telegram client or web wrapper, it should not be called `Telegram for Linux` or use the official Telegram icon. Instead, it should have its own identity (e.g. `Paper Plane`, with a custom icon). If it's made clear that it's a third-party client it can be ok to mention the original service (e.g. `Tally for Plausible`), but in most cases it should be avoided.
 
 :::tip
 If you're not sure if your app violates any trademarks, feel free to ask us on [Matrix](https://matrix.to/#/#flathub:matrix.org).
@@ -57,9 +62,9 @@ The icon should not have any baked-in shadows or glows. Both the Flathub website
 
 The icon should be somewhat in line with the contemporary icon styles (i.e. not look like it hasn't been updated in decades). The [GNOME](https://developer.gnome.org/hig/guidelines/app-icons.html) and [KDE ](https://develop.kde.org/hig/style/icons/colorful/application/) app icon guidelines are examples of the kind of style your icon should align with.
 
-![Two icons that are not in line with contemproary styles, and two that are.](assets/app-icon-style.png)
+![Two icons that are not in line with contemporary styles, and two that are.](assets/app-icon-style.png)
 
-In some cases it can make sense for the icon to align with the visuals of the app, rather than contemporary icon styles (especially relevant for games). This can be accommodated by embedding the custom style icon in one of the grid shapes, e.g. a square or circle. This way the unique style is preserved, but the icon's size and shape are in line with other apps.
+In some cases, it can make sense for the icon to align with the visuals of the app, rather than contemporary icon styles (especially relevant for games). This can be accommodated by embedding the custom style icon in one of the grid shapes, e.g. a square or circle. This way the unique style is preserved, but the icon's size and shape are in line with other apps.
 
 ## App Name
 
@@ -75,26 +80,39 @@ The name should ideally be no longer than 15 characters, and must be shorter tha
 
 ### Just the name
 
-The name should be just the name, without any additional info. For example, don't append what the app does to the name, and use the summary to provide this extra information instead.
+The name should be just the short name, without any additional information. For example, don't append what the app does or is used for to the name; use the summary to provide this information instead.
 
 :::danger Bad examples
 
-- Apostrophe - Markdown Editor
-- Apostrophe (Markdown Editor)
-- Apostrophe (Special Edition)
+- Krita - Digital Painting, Creative Freedom
+- Fractal (Matrix Client)
+- Apostrophe: the best free Markdown editor
+- Firefox Web Browser
   :::
+  
+  :::tip Good examples
+
+- Krita
+- Fractal
+- Apostrophe
+- Firefox
+  :::
+
+If the app is distinct among different versions of your app on Flathub (e.g. `Firefox Beta` versus the standard `Firefox`), then using the full name including the edition may be acceptable.
 
 ### No weird formatting
 
-The name should not have any weird formatting or punctuation. For example, it should not be all-lowercase, all-uppercase, camel case, or contain dashes or periods. Cases where the weird formatting is part of the brand are exempt from this (e.g. `VLC`).
+App names should avoid nonstandard formatting and punctuation. For example, avoid all-lowercase, all-uppercase, camel/pascal case, and punctuation like dashes or periods.
 
 :::danger Bad examples
 
-- apostrophe
-- APOSTROPHE
+- krita
+- FRACTAL
 - ApostropheEditor
-- Apostrophe.org
+- Firefox.org
   :::
+
+Cases where the formatting is part of an established brand may be exempt (e.g. `VLC`).
 
 ## Summary
 
@@ -106,7 +124,7 @@ The summary should ideally be between 10 and 25 characters, and no longer than 3
 
 - Write markdown in style
   :::
-:::danger Bad example
+  :::danger Bad example
 
 - Simple, easy to use, distraction-free markdown editor written in Python
   :::
@@ -121,6 +139,10 @@ The summary should be understandable by a non-technical person, and not contain 
 - An Electron Wrapper for the Telegram Web App
 - Free and open source Qt5 Matrix client
   :::
+
+:::tip
+There are separate fields for technical information. If you want to mention the toolkit do it in [categories](https://specifications.freedesktop.org/menu-spec/latest/apas02.html) or [keywords](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-keywords).
+:::
 
 ### No weird formatting
 
@@ -174,11 +196,17 @@ Avoid feature lists with more than 10 items, they are difficult to scan and make
 
 ### At least one screenshot
 
-Apps should have at least one screenshot in english. For medium complexity apps 3-6 is a good range, for very large apps with lots of screens 6-10 is appropriate. More than 10 is probably too many.
+Apps should have at least one screenshot in English. For medium complexity apps 3-6 is a good range, for very large apps with lots of screens 6-10 is appropriate. More than 10 is probably too many.
+
+:::tip
+Your best screenshot should be on the first position, because it will be the first thing a user sees when viewing your app on Flathub.
+
+We might also use this in other places, such as featured banners, so make sure it's a good one.
+:::
 
 ### Tag screenshots with correct language
 
-Screenshots should be tagged with the language they are in. For example, if you have a screenshot of the app in german, tag it with `xml:lang="de"`.
+Screenshots should be tagged with the language they are in. For example, if you have a screenshot of the app in German, tag it with `xml:lang="de"`.
 
 ```xml
   <screenshots>
@@ -206,7 +234,7 @@ Use the platform default configuration for all settings that affect screenshots,
 
 ### Include window shadow and rounded corners
 
-Screenshots must include the native titlebar, shadow and rounding. App stores do not add a shadow after the fact and without one screenshots can look glitchy or have low contrast depending on the background. Apps that are always fullscreen (such as most games) are exempt from this, but in these cases all screenshots must be fullscreen. Do not use a mix of windowed and fullscreen screenshots.
+Screenshots must include the native titlebar, shadow and rounding (if any). App stores do not add a shadow after the fact, and without one, screenshots can look glitchy or have low contrast depending on the background. Apps that are always fullscreen (such as most games) are exempt from this, but in these cases all screenshots must be fullscreen. Do not use a mix of windowed and fullscreen screenshots.
 
 :::tip
 Don't maximize your app window when taking screenshots, since this will remove the shadow and rounding.

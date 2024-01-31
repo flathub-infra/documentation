@@ -67,7 +67,7 @@ If the application has been renamed, you can additionally include `end-of-life-r
 
 The `end-of-life-rebase` will tell flatpak to automatically migrate the user data from the old package to the new package, making the process transparent for the user.
 
-Please also try to contact a flathub admin to archive the repo by either via pinging them in issues, [Matrix](https://matrix.to/#/#flatpak:matrix.org), or emailing flathub-admins@lists.freedesktop.org
+Please also try to contact a flathub admin to archive the repo by either creating an issue at [flathub/flathub](https://github.com/flathub/flathub/issues/new) or emailing flathub-admins@lists.freedesktop.org
 
 ### Flathub external data checker config
 
