@@ -652,6 +652,15 @@ using buildsystem `autotools` sets `--enable-debug=no`.
 
 This is not allowed.
 
+### no-exportable-icon-installed
+
+**Exceptions allowed**: No
+
+This means that no exportable icons were found in the [proper location](https://docs.flatpak.org/en/latest/conventions.html#appdata-files).
+An icon is considered by Flatpak to be exportable if it matches any of
+the following patterns: `$FLATPAK_ID, $FLATPAK_ID-foo, $FLATPAK_ID.foo`.
+They may end with extension suffixes like `.png` or `.svg`.
+
 ### toplevel-cleanup-debug
 
 **Exceptions allowed**: No
