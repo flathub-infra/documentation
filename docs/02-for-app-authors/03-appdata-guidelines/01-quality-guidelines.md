@@ -234,7 +234,7 @@ Use the platform default configuration for all settings that affect screenshots,
 
 ### Include window shadow and rounded corners
 
-Screenshots must include the native decoration such as any titlebar, shadow, and rounded corners. App stores do not add a shadow after the fact, and without one, screenshots can look glitchy or have low contrast depending on the background. Apps that are always fullscreen (such as most games) are exempt from this, but in these cases all screenshots must be fullscreen. Do not use a mix of windowed and fullscreen screenshots.
+Screenshots must include the native decoration such as any titlebar, window shadows, and rounded corners. App stores do not add a shadow after the fact, and without one, screenshots can look glitchy or have low contrast depending on the background. Apps that are always fullscreen (such as most games) are exempt from this, but in these cases all screenshots must be fullscreen. Do not use a mix of windowed and fullscreen screenshots.
 
 :::tip
 Don't maximize your app window when taking screenshots, since this will remove the shadow and rounding.
