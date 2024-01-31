@@ -137,14 +137,14 @@ and all of them must match the app id used in the [flatpak manifest](https://doc
 ### appstream-missing-developer-name
 
 The [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
-is missing the `developer_name` tag.
+is missing the `developer_name` tag. Please see the [AppData guidelines](/docs/for-app-authors/appdata-guidelines/#name-summary-and-developer-name).
 
 This must be present for proper display and classification by app stores.
 
 ### appstream-missing-project-license
 
 The [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
-is missing the `project_license` tag.
+is missing the `project_license` tag. Please see the [AppData guidelines](/docs/for-app-authors/appdata-guidelines/#license).
 
 This must be present for proper display of the license by the app store.
 
@@ -172,7 +172,7 @@ build process by appstream compose.
 This can happen when screenshot tags are missing/not properly defined in
 the [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
 or if the image file/URL is malformed. The URL must be a direct link to
-a png or svg resource on the web.
+an image resource on the web.
 
 If the screenshot tag is fine but the error happens, it can mean that
 [mirroring](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html)
@@ -191,7 +191,8 @@ file is malformed and has multiple `component` tags.
 **Exceptions allowed**: No
 
 The [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
-is missing the `flathub::manifest` tag.
+is missing the `flathub::manifest` tag. Please see the [AppData guidelines](/docs/for-app-authors/appdata-guidelines/#manifest-location)
+on how to define it.
 
 This must be present for externally uploaded apps.
 
@@ -353,6 +354,8 @@ Flatpak creates its own XDG config, cache and data directories under
 `~/.var/app/<app-id>`. Applications do not need to access the host's
 XDG directories.
 
+Please see the [Flatpak permission reference](https://docs.flatpak.org/en/latest/sandbox-permissions-reference.html#f5).
+
 ### finish-args-fallback-x11-without-wayland
 
 **Exceptions allowed**: No
@@ -463,6 +466,8 @@ Flatpak creates its own XDG config, cache and data directories under
 `~/.var/app/<app-id>`. Certain settings from host are exposed to Flatpak
 by the portal. Applications do not need to access the host's
 XDG directories or subpaths of them.
+
+Please see the [Flatpak permission reference](https://docs.flatpak.org/en/latest/sandbox-permissions-reference.html#f5).
 
 ### finish-args-wildcard-name-own-name
 
@@ -735,11 +740,12 @@ has one or more low-quality category and no proper (non low-quality)
 category.
 
 The following are considered to be low-quality categories:
-`KDE, GTK, Qt, Application, GNOME`.
+`KDE, GTK, Qt, Application, GNOME` and are best suited for `Keywords`
+instead.
 
 Low quality categories are filtered by appstream. Proper category names
 should be used. Please refer to the [category specification](https://specifications.freedesktop.org/menu-spec/latest/apa.html)
-for more details.
+for category names.
 
 ### finish-args-contains-both-x11-and-fallback
 
