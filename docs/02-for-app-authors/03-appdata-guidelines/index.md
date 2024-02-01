@@ -213,6 +213,7 @@ but it is best to include other links too.
 <url type="donation">https://example.org/donate</url>
 <url type="contact">https://example.org/contact</url>
 <url type="faq">https://example.org/faq</url>
+<url type="translate">https://example.org/translate</url>
 <url type="vcs-browser">https://example.org/repository</url>
 ```
 
