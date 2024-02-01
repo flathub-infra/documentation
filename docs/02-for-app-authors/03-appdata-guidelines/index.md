@@ -57,22 +57,25 @@ The ID must be same as the [Application-ID](./../requirements#application-id):
 All appdata must have a [metadata license tag](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-metadata_license)
 that is the license of the appdata file itself.
 
-If application metadata has not been provided by the upstream, it should be licensed with [Creative Commons Zero, version 1](https://creativecommons.org/choose/zero/).
+If application metadata has not been provided by the upstream, it should be licensed with [FSFAP](https://www.gnu.org/prep/maintain/html_node/License-Notices-for-Other-Files.html) or [Creative Commons Zero, version 1](https://creativecommons.org/choose/zero/).
+Please see the [specification](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-metadata_license)
+for other recommended licenses.
 
 ```xml
 <metadata_license>CC0-1.0</metadata_license>
 ```
 
-Followed by the project license:
+Followed by a mandatory `project_license` tag:
 
 ```xml
 <project_license>GPL-3.0</project_license>
 ```
 
-The value must be a valid [SPDX license identifier](https://spdx.org/licenses/).
+The value must be a valid [SPDX license identifier](https://spdx.org/licenses/). License [expression operators](https://spdx.github.io/spdx-spec/v2-draft/SPDX-license-expressions/#d4-composite-license-expressions) like `AND, OR`
+are also supported except `WITH`.
 
-Proprietary applications/custom licenses can use
-`LicenseRef-proprietary` with a link to the license:
+Proprietary applications/custom licenses can use `LicenseRef-proprietary`
+with a link to the license:
 
 ```xml
 <project_license>LicenseRef-proprietary=https://example.org/legal/</project_license>
