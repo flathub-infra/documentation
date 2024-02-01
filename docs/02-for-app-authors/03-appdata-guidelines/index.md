@@ -207,7 +207,11 @@ but it is best to include other links too.
 <url type="donation">https://example.org/donate</url>
 <url type="contact">https://example.org/contact</url>
 <url type="faq">https://example.org/faq</url>
+<url type="vcs-browser">https://example.org/repository</url>
 ```
+
+Including the `url type="vcs-browser"` tag for open-source projects
+to display the source code repository is highly recommended.
 
 ## Screenshots
 
