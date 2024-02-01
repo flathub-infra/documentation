@@ -19,6 +19,10 @@ flatpak run --command=appstream-util org.flatpak.Builder validate tld.domain.app
 
 ## Path and filename
 
+:::note
+`/app/share/appdata` and `%{id}.appdata.xml` are considered to be legcay paths.
+:::
+
 Place the AppData file into `/app/share/metainfo/`, name it `%{id}.metainfo.xml`, where `%{id}` is the [ID](#id).
 
 ## AppData generator
