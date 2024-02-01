@@ -21,12 +21,6 @@ flatpak run --command=appstream-util org.flatpak.Builder validate tld.domain.app
 
 Place the AppData file into `/app/share/metainfo/`, name it `%{id}.metainfo.xml`, where `%{id}` is the [ID](#id).
 
-## Upgrading
-
-If you already have an AppData file, it’s a good idea to run it through `appstream-util upgrade`, which does some automatic fixes.
-
-Although for backwards compatibility with RHEL 7 it uses `<component type="desktop">`, whereas the correct (new) type is `"desktop-application"`.
-
 ## Header
 
 All AppData files must start with:
