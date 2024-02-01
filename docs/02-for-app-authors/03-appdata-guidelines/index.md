@@ -3,7 +3,7 @@
 These are a set of guidelines for AppData that should be followed for submission on Flathub.
 
 :::tip
-Please check the [Quality Guidelines](/docs/for-app-authors/appdata-guidelines/quality-guidelines) 
+Please check the [Quality Guidelines](/docs/for-app-authors/appdata-guidelines/quality-guidelines)
 page too, to make your application metadata more presentable.
 :::
 
@@ -199,6 +199,21 @@ If they are present in both places, appstream will merge them.
 
 Please don't use, generic categories like
 `KDE, GTK, Qt, Application, GNOME, GUI`. These can be placed in `keywords`.
+
+### Brand color
+
+Applications should set a [brand color](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-branding)
+in both light and dark variants like so:
+
+```xml
+<branding>
+  <color type="primary" scheme_preference="light">#ff00ff</color>
+  <color type="primary" scheme_preference="dark">#993d3d</color>
+</branding>
+```
+
+This is used by Flathub and native app store clients on banners, app
+pages, etc.
 
 ## OARS information
 
