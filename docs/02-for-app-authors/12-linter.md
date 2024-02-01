@@ -661,7 +661,7 @@ This is not allowed.
 
 **Exceptions allowed**: No
 
-This means that no exportable icons were found in the [proper location](https://docs.flatpak.org/en/latest/conventions.html#appdata-files).
+This means that no exportable icons were found in the [proper location](https://docs.flatpak.org/en/latest/conventions.html#application-icons).
 An icon is considered by Flatpak to be exportable if it matches any of
 the following patterns: `$FLATPAK_ID, $FLATPAK_ID-foo, $FLATPAK_ID.foo`.
 They may end with extension suffixes like `.png` or `.svg`.
@@ -736,7 +736,7 @@ Only the English summary is checked.
 
 ### desktop-file-exec-key-empty
 
-The [desktop file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
+The [desktop file](https://docs.flatpak.org/en/latest/conventions.html#desktop-files)
 has a empty `Exec=` key.
 
 Although this gets rewritten to a fallback by flatpak during installation
@@ -744,7 +744,7 @@ an `Exec` key with a value should be present for compatibility.
 
 ### desktop-file-low-quality-category
 
-The [desktop file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
+The [desktop file](https://docs.flatpak.org/en/latest/conventions.html#desktop-files)
 has one or more low-quality category and no proper (non low-quality)
 category.
 
