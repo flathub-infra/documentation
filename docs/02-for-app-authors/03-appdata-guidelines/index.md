@@ -2,6 +2,11 @@
 
 These are a set of guidelines for AppData that should be followed for submission on Flathub.
 
+:::tip
+Please check the [Quality Guidelines](/docs/for-app-authors/appdata-guidelines/quality-guidelines) 
+page too, to make your application metadata more presentable.
+:::
+
 :::note
 Please consult the [official appstream documentation](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html) for more in-depth info.
 :::
