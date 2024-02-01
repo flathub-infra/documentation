@@ -27,7 +27,7 @@ Place the AppData file into `/app/share/metainfo/`, name it `%{id}.metainfo.xml`
 Please check the generated output and add any mandatory or recommended tags mentioned below.
 :::
 
-The [AppStream MetaInfo Creator](https://www.freedesktop.org/software/appstream/metainfocreator/) 
+The [AppStream MetaInfo Creator](https://www.freedesktop.org/software/appstream/metainfocreator/)
 tool can be used to generate a basic file.
 
 ## Header
@@ -248,11 +248,19 @@ It should look something like this:
 
 Applications must supply a releases tag in their appdata to pass
 validation. Please make sure to also follow the [quality guidelines](/docs/for-app-authors/appdata-guidelines/quality-guidelines#release-notes)
-while writing release notes. Releases in appdata should look like this:
+while writing release notes.
+
+Paragraphs in release description must not exceed 15 and they must not
+contain any direct URLs. Flathub supports showing a detailed release
+note link when `<url type="details">` tag is used. Release dates must
+not be in the future and versions must be [properly ordered](https://www.freedesktop.org/software/appstream/docs/chap-AppStream-Misc.html#spec-vercmp-recommendations).
+
+Releases in appdata should look like this:
 
 ```xml
 <releases>
-  <release version="X.Y.Z" date="YYYY-MM-DD">
+  <release version="1.0.1" date="2024-01-18">
+  <url type="details">https://example.org/changelog.html#version_1.0.1</url>
     <description>
       <p>Release description</p>
         <ul>
@@ -261,7 +269,8 @@ while writing release notes. Releases in appdata should look like this:
         </ul>
     </description>
   </release>
-  <release version="X.Y.Z" date="YYYY-MM-DD">
+  <release version="1.0.0" date="2023-08-07">
+  <url type="details">https://example.org/changelog.html#version_1.0.0</url>
     <description>
       <p>Release description</p>
         <ul>
