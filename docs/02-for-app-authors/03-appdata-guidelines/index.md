@@ -294,12 +294,10 @@ Appstream provides translation information, so that software centers can inform 
 
 You can specify this tag multiple times if needed.
 
-Please note that the `appstream-builder` expects the path to be standard:
+Please note that the `appstream-compose` expects the translations at:
 
-- for gettext it’s `share/locale/<lang>/<prefix>.mo`
-- for Qt it’s `share/<prefix>/translations/<prefix>_<lang>.qm`
-
-If it’s somewhere different (Qt apps often name the directory “locale” and not “translations”), you can work that around by moving/symlinking it into the proper place.
+- For `gettext` it’s `${FLATPAK_DEST}/share/locale/<lang>/LC_MESSAGES/<id>.mo` where `id` is the value in the translation tag.
+- For `qt` it’s either `${FLATPAK_DEST}/share/<id>/translations/<id>_<lang>.qm` or `${FLATPAK_DEST}/share/<id>/translations/<id>/<lang>.qm` where `id` is the value in the translation tag.
 
 To see if it was detected correctly, check the [generated output](#checking-the-generated-output).
 
