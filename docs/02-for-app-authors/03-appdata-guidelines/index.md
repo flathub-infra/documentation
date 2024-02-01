@@ -301,6 +301,23 @@ Please note that the `appstream-compose` expects the translations at:
 
 To see if it was detected correctly, check the [generated output](#checking-the-generated-output).
 
+## AppData translations
+
+Various tags in AppData support translations using the `xml:lang="<lang>"`
+property like so: `<name xml:lang="de">Translated name</name>`. English
+names must not use this property.
+
+The following tags can have translations: `name`, `summary`, `keywords`,
+`image`, `caption` and `description`. The `description` tag has to be
+translated by paragraph like so:
+
+```xml
+<description>
+  <p>Some description</p>
+  <p xml:lang="de">Translated description</p>
+</description>
+```
+
 ## Manifest location
 
 Applications that are directly uploaded to Flathub through their own
