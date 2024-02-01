@@ -21,6 +21,15 @@ flatpak run --command=appstream-util org.flatpak.Builder validate tld.domain.app
 
 Place the AppData file into `/app/share/metainfo/`, name it `%{id}.metainfo.xml`, where `%{id}` is the [ID](#id).
 
+## AppData generator
+
+:::note
+Please check the generated output and add any mandatory or recommended tags mentioned below.
+:::
+
+The [AppStream MetaInfo Creator](https://www.freedesktop.org/software/appstream/metainfocreator/) 
+tool can be used to generate a basic file.
+
 ## Header
 
 All AppData files must start with:
