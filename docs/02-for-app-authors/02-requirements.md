@@ -13,7 +13,7 @@ If you have any further questions, please ask on [Matrix](https://matrix.to/#/#f
 ## License
 
 All content hosted on Flathub must allow legal redistribution, and the license must be
-correctly specified in the app's appdata file. Non-redistributable files can be downloaded at install time
+correctly specified in the app's MetaInfo file. Non-redistributable files can be downloaded at install time
 using the `extra-data` source type.
 
 ## Application ID
@@ -35,7 +35,7 @@ This manifest may import other manifest files in the same repository. It's quite
 
 #### Example manifest
 
-This assumes that upstream brings appdata, icons and desktop files and installs them via their post build install. In this case we're using `meson` as the buildsystem.
+This assumes that upstream brings MetaInfo, icons and desktop files and installs them via their post build install. In this case we're using `meson` as the buildsystem.
 
 <Tabs groupId="manifest-language" defaultValue="json" queryString>
   <TabItem value="json" label="json" default>
@@ -201,7 +201,7 @@ Do note that CLI applications do not require a `.desktop` file but TUI applicati
 
 Appstream is the standard used to provide metadata about applications. Applications must provide appstream data and pass [validation](/docs/for-app-authors/appdata-guidelines/#use-flathubs-appstream-util).
 
-Please read the [AppData guidelines](/docs/for-app-authors/appdata-guidelines) for more information.
+Please read the [MetaInfo guidelines](/docs/for-app-authors/appdata-guidelines) for more information.
 
 ### .desktop files
 
