@@ -189,8 +189,8 @@ to know more.
 ## Categories and keywords
 
 If there’s a `type="desktop-id"` [launchable](#launchable), they are
-pulled from the desktop file and merged in the appdata. So defining them
-seperately in the MetaInfo is not necessary.
+pulled from the desktop file and merged in the [AppStream Catalog data](https://www.freedesktop.org/software/appstream/docs/chap-CatalogData.html). 
+So defining them seperately in the MetaInfo is not necessary.
 
 Please see the [specification](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-categories)
 on how to define them in MetaInfo.
