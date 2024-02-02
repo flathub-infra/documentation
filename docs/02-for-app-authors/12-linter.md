@@ -157,7 +157,7 @@ The build or the ostree repo is missing a 128px png icon in
 
 The file is automatically created during the build process by appstream
 compose provided a png icon of size 128px or more or an svg icon was
-installed to the [proper location](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
+installed to the [proper location](https://docs.flatpak.org/en/latest/conventions.html#application-icons)
 during the build.
 
 ### appstream-missing-screenshots
@@ -218,7 +218,7 @@ The process is automated when using [flatpak-github-actions](https://github.com/
 
 **Exceptions allowed**: No
 
-Only the main [desktop file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files),
+Only the main [desktop file](https://docs.flatpak.org/en/latest/conventions.html#desktop-files),
 exactly matching the `$FLATPAK_ID` is checked.
 
 The `Exec` key of the desktop file in the build has `flatpak run` in it.
@@ -230,7 +230,7 @@ as that is done by `flatpak` itself during installation.
 
 **Exceptions allowed**: No
 
-Only the main [desktop file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files),
+Only the main [desktop file](https://docs.flatpak.org/en/latest/conventions.html#desktop-files),
 exactly matching the `$FLATPAK_ID` is checked.
 
 The `Exec` key is missing in the desktop file supplied.
@@ -241,7 +241,7 @@ Desktop files must have an `Exec` key even when using `DBusActivable=true`.
 
 **Exceptions allowed**: No
 
-The [desktop file(s)](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
+The [desktop file(s)](https://docs.flatpak.org/en/latest/conventions.html#desktop-files)
 supplied in the build have failed validation with `desktop-file-validate`.
 
 Please correct the errors reported.
@@ -250,7 +250,7 @@ Please correct the errors reported.
 
 **Exceptions allowed**: No
 
-Only the main [desktop file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files),
+Only the main [desktop file](https://docs.flatpak.org/en/latest/conventions.html#desktop-files),
 exactly matching the `$FLATPAK_ID` is checked.
 
 The desktop file supplied in the build has no `Icon` key.
@@ -262,7 +262,7 @@ application.
 
 **Exceptions allowed**: No
 
-Only the main [desktop file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files),
+Only the main [desktop file](https://docs.flatpak.org/en/latest/conventions.html#desktop-files),
 exactly matching the `$FLATPAK_ID` is checked.
 
 The desktop file supplied in the build has an empty `Icon` key.
@@ -273,7 +273,7 @@ The `Icon` key in the desktop file must have a proper value.
 
 **Exceptions allowed**: No
 
-Only the main [desktop file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files),
+Only the main [desktop file](https://docs.flatpak.org/en/latest/conventions.html#desktop-files),
 exactly matching the `$FLATPAK_ID` is checked.
 
 The `Icon` key of the desktop file supplied in the build does not have
@@ -287,7 +287,7 @@ are allowed.
 
 **Exceptions allowed**: Yes[^2]
 
-Only the main [desktop file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files),
+Only the main [desktop file](https://docs.flatpak.org/en/latest/conventions.html#desktop-files),
 exactly matching the `$FLATPAK_ID` is checked.
 
 The desktop file supplied in the build sets `Hidden=true` or
@@ -297,7 +297,7 @@ The desktop file supplied in the build sets `Hidden=true` or
 
 **Exceptions allowed**: No
 
-The [desktop file(s)](https://docs.flatpak.org/en/latest/conventions.html#appdata-files),
+The [desktop file(s)](https://docs.flatpak.org/en/latest/conventions.html#desktop-files),
 are either not installed to the proper location during the build or does
 not match the `$FLATPAK_ID`.
 
