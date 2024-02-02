@@ -25,7 +25,7 @@ flatpak run --command=appstream-util org.flatpak.Builder validate tld.domain.app
 ## Path and filename
 
 :::note
-`/app/share/appdata` and `%{id}.appdata.xml` are considered to be legcay paths.
+`/app/share/appdata` and `%{id}.appdata.xml` are considered to be legcay path and filename respectively.
 :::
 
 Place the AppData file into `/app/share/metainfo/`, name it `%{id}.metainfo.xml`, where `%{id}` is the [ID](#id).
@@ -329,16 +329,19 @@ To see if it was detected correctly, check the [generated output](#checking-the-
 
 Various tags in AppData support translations using the `xml:lang="<lang>"`
 property like so: `<name xml:lang="de">Translated name</name>`. English
-names must not use this property.
+tag values must not use the `xml:lang` property.
 
 The following tags can have translations: `name`, `summary`, `keywords`,
 `image`, `caption` and `description`. The `description` tag has to be
-translated by paragraph like so:
+translated like so:
 
 ```xml
 <description>
   <p>Some description</p>
   <p xml:lang="de">Translated description</p>
+  <ul>
+    <li xml:lang="de">Translated list</li>
+  </ul>
 </description>
 ```
 
