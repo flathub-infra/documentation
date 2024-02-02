@@ -73,13 +73,13 @@ file which are not of [type](https://www.freedesktop.org/software/appstream/docs
 The catalogue file is automatically generated when [building the Flatpak](https://docs.flatpak.org/en/latest/building-introduction.html#flatpak-builder)
 by appstream which also does the mirroring when
 `--mirror-screenshots-url=URL` is passed to
-[Flatpak-builder](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html).
+[Flatpak Builder](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html).
 
 This can happen when mirroring fails due to spurious connectivity issues
 and is usually resolved by restarting the build.
 
 Externally uploaded apps must ensure `--mirror-screenshots-url=URL`
-was passed to Flatpak-builder.
+was passed to Flatpak Builder.
 
 ### appstream-failed-validation
 
@@ -207,10 +207,10 @@ must ensure to [mirror screenshots](https://docs.flatpak.org/en/latest/flatpak-b
 commit the screenshot ref and upload the screenshot ref for all
 architectures.
 
-Committing is done after Flatpak-builder exported a repo, using
-`ostree commit --repo=<repo name> --canonical-permissions
+Committing is done after [Flatpak Builder](https://docs.flatpak.org/en/latest/flatpak-builder.html)
+exported a repo, using `ostree commit --repo=<repo name> --canonical-permissions
 --branch=screenshots/<arch> <builddir>/screenshots`. For
-Flatpak-builder >= 1.3.4, the last path is `<builddir>/files/share/app-info/media`.
+Flatpak Builder >= 1.3.4, the last path is `<builddir>/files/share/app-info/media`.
 
 The process is automated when using [flatpak-github-actions](https://github.com/flatpak/flatpak-github-actions#inputs).
 
@@ -512,9 +512,9 @@ Externally uploaded applications must ensure to upload `stable` branch refs
 to the `stable` Flathub repo or `beta` branch refs to the `beta` Flathub
 repo.
 
-The branch is set during the build process by Flatpak-builder using
+The branch is set during the build process by Flatpak Builder using
 `--default-branch=BRANCH` or the `branch` or `default-branch` property
-in the manifest. Please see [Flatpak-builder documentation](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html)
+in the manifest. Please see [Flatpak Builder documentation](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html)
 for more details.
 
 Apps built on Flathub must avoid setting either key in the manifest.
@@ -674,7 +674,7 @@ The toplevel `cleanup` property in the [Flatpak manifest](https://docs.flatpak.o
 has `/lib/debug`.
 
 This must not be cleaned up as it is used to generate debug data for the
-Flatpak by Flatpak-builder.
+Flatpak by [Flatpak Builder](https://docs.flatpak.org/en/latest/flatpak-builder.html).
 
 ### toplevel-no-command
 
@@ -837,7 +837,8 @@ A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.
 using the `autotools` buildsystem is setting `--prefix` in `config-opts`
 to a value of `/app, /usr, ${FLATPAK_DEST}`.
 
-This is set by Flatpak-builder itself and is redundant.
+This is set by [Flatpak Builder](https://docs.flatpak.org/en/latest/flatpak-builder.html)
+itself and is redundant.
 
 ### module-module_name-buildsystem-is-plain-cmake
 
@@ -860,7 +861,8 @@ A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.
 using `cmake` or `cmake-ninja` buildsystem is setting `CMAKE_INSTALL_PREFIX`
 in `config-opts` to a value of `/app, /usr, ${FLATPAK_DEST}`.
 
-This is set by Flatpak-builder itself and is redundant.
+This is set by [Flatpak Builder](https://docs.flatpak.org/en/latest/flatpak-builder.html)
+itself and is redundant.
 
 ### toplevel-command-is-path
 
@@ -876,7 +878,7 @@ The toplevel `branch` property in the [Flatpak manifest](https://docs.flatpak.or
 is unnecessary.
 
 On Flathub, the branch is set by the builder using `--default-branch`
-argument of Flatpak-builder.
+argument of [Flatpak Builder](https://docs.flatpak.org/en/latest/flatpak-builder.html).
 
 Specifying the branch property may lead to other errors.
 
