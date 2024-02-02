@@ -19,7 +19,7 @@ The app id uses a code hosting domains like gitlab, github or codeberg
 and doesn't have 4 components: `{tld}.{doamin}.foo.bar`.
 
 Please follow the [app id guidelines](/docs/for-app-authors/requirements#application-id)
-and [flatpak conventions](https://docs.flatpak.org/en/latest/conventions.html#application-ids)
+and [Flatpak conventions](https://docs.flatpak.org/en/latest/conventions.html#application-ids)
 for more information.
 
 ### appid-ends-with-lowercase-desktop
@@ -28,24 +28,24 @@ for more information.
 
 The app id ends with lowecase `.desktop`.
 
-Please follow the [flatpak documentation](https://docs.flatpak.org/en/latest/conventions.html#application-ids)
+Please follow the [Flatpak documentation](https://docs.flatpak.org/en/latest/conventions.html#application-ids)
 for more information.
 
 ### appid-filename-mismatch
 
 **Exceptions allowed**: No
 
-The filename of the [flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+The filename of the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
 does not match the app id used in the manifest.
 
 ### appid-not-defined
 
 **Exceptions allowed**: No
 
-The app id is not defined in the [flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
+The app id is not defined in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
 
 This can happen when `id` or `app-id` property is missing from the
-manifest and consequently the [flatpak build metadata](https://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-metadata)
+manifest and consequently the [Flatpak build metadata](https://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-metadata)
 is missing the `name` property.
 
 `id` or `app-id` is mandatory in manifest.
@@ -59,7 +59,7 @@ and the first `{tld}` component does not start with `io` for github
 and gitlab; `page` for codeberg.
 
 Please follow the [app id guidelines](/docs/for-app-authors/requirements#application-id)
-and [flatpak conventions](https://docs.flatpak.org/en/latest/conventions.html#application-ids)
+and [Flatpak conventions](https://docs.flatpak.org/en/latest/conventions.html#application-ids)
 for more information.
 
 ### appstream-external-screenshot-url
@@ -70,16 +70,16 @@ The screenshots in [appinfo catalogue](https://www.freedesktop.org/software/apps
 file which are not of [type](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-screenshots)
 `source` aren't mirrored to https://dl.flathub.org/repo/screenshots.
 
-The catalogue file is automatically generated when [building the flatpak](https://docs.flatpak.org/en/latest/building-introduction.html#flatpak-builder)
+The catalogue file is automatically generated when [building the Flatpak](https://docs.flatpak.org/en/latest/building-introduction.html#flatpak-builder)
 by appstream which also does the mirroring when
 `--mirror-screenshots-url=URL` is passed to
-[flatpak-builder](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html).
+[Flatpak-builder](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html).
 
 This can happen when mirroring fails due to spurious connectivity issues
 and is usually resolved by restarting the build.
 
 Externally uploaded apps must ensure `--mirror-screenshots-url=URL`
-was passed to flatpak-builder.
+was passed to Flatpak-builder.
 
 ### appstream-failed-validation
 
@@ -99,7 +99,7 @@ The [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-f
 is missing from the build.
 
 Please make sure to install it to the correct folder and name the file
-according to the application id used in the [flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
+according to the application id used in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
 
 ### appstream-missing-appinfo
 
@@ -115,7 +115,7 @@ This can happen when compose fails or doesn't run at all.
 An [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
 must supplied during the build with a proper filename, [id tag](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-id-generic),
 proper `desktop-id` in `launchable` [tag](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-launchable)
-and all of them must match the app id used in the [flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
+and all of them must match the app id used in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
 
 ### appstream-missing-appinfo-file
 
@@ -132,7 +132,7 @@ This can happen when compose fails.
 An [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
 must supplied during the build with a proper filename, [id tag](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-id-generic),
 proper `desktop-id` in `launchable` [tag](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-launchable)
-and all of them must match the app id used in the [flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
+and all of them must match the app id used in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
 
 ### appstream-missing-developer-name
 
@@ -207,10 +207,10 @@ must ensure to [mirror screenshots](https://docs.flatpak.org/en/latest/flatpak-b
 commit the screenshot ref and upload the screenshot ref for all
 architectures.
 
-Committing is done after flatpak-builder exported a repo, using
+Committing is done after Flatpak-builder exported a repo, using
 `ostree commit --repo=<repo name> --canonical-permissions
 --branch=screenshots/<arch> <builddir>/screenshots`. For
-flatpak-builder >= 1.3.4, the last path is `<builddir>/files/share/app-info/media`.
+Flatpak-builder >= 1.3.4, the last path is `<builddir>/files/share/app-info/media`.
 
 The process is automated when using [flatpak-github-actions](https://github.com/flatpak/flatpak-github-actions#inputs).
 
@@ -380,7 +380,7 @@ This allows applications to launch arbitrary commands on the host and
 is restricted and granted on a case-by-case basis.
 
 This must not be used unless absolutely necessary and when no existing
-solutions using flatpak or [portals](https://flatpak.github.io/xdg-desktop-portal/docs/)
+solutions using Flatpak or [portals](https://flatpak.github.io/xdg-desktop-portal/docs/)
 exist.
 
 ### finish-args-incorrect-dbus-gvfs
@@ -450,7 +450,7 @@ to the manifest does nothing.
 The manifest has `--own-name=<FLATPAK_ID>` in
 [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing).
 
-This access is granted automatically by flatpak and there is no need
+This access is granted automatically by Flatpak and there is no need
 to specify manually. Please see the [bus access](/docs/for-app-authors/requirements#dbus-access)
 section to know more.
 
@@ -512,9 +512,9 @@ Externally uploaded applications must ensure to upload `stable` branch refs
 to the `stable` Flathub repo or `beta` branch refs to the `beta` Flathub
 repo.
 
-The branch is set during the build process by flatpak-builder using
+The branch is set during the build process by Flatpak-builder using
 `--default-branch=BRANCH` or the `branch` or `default-branch` property
-in the manifest. Please see [flatpak-builder documentation](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html)
+in the manifest. Please see [Flatpak-builder documentation](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html)
 for more details.
 
 Apps built on Flathub must avoid setting either key in the manifest.
@@ -590,7 +590,7 @@ The manifest schema failed validation.
 **Exceptions allowed**: No
 
 The `dest-filename` property in the
-[flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+[Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
 is a path.
 
 It must be a filename only.
@@ -599,9 +599,9 @@ It must be a filename only.
 
 **Exceptions allowed**: No
 
-A module in the [flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
 has type `git`, specifies no `commit` property and has `branch` property
-in the [flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
+in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
 
 In this case the `branch` must point to a commit hash of length 40
 characters.
@@ -612,7 +612,7 @@ This is done for reproducibility.
 
 **Exceptions allowed**: No
 
-A module in the [flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
 has type `git`, but specifies a local path using `path`.
 
 It must point to a web resource and use `url` property.
@@ -621,7 +621,7 @@ It must point to a web resource and use `url` property.
 
 **Exceptions allowed**: No
 
-A module in the [flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
 has type `git`, but, either specifies no `commit` or `tag` property or
 the `branch` property does not point to a commit hash.
 
@@ -634,7 +634,7 @@ This is done for reproducibility.
 
 **Exceptions allowed**: No
 
-A module in the [flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
 has type `git`, but no `url` property.
 
 It must point to a web resource and use `url` property.
@@ -643,7 +643,7 @@ It must point to a web resource and use `url` property.
 
 **Exceptions allowed**: No
 
-A module in the [flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
 has type `git`, but `url` property does not use a http/https link.
 
 The `url` property must use a `http` or a `https` link.
@@ -652,7 +652,7 @@ The `url` property must use a `http` or a `https` link.
 
 **Exceptions allowed**: No
 
-A module in the [flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
 using buildsystem `autotools` sets `--enable-debug=no`.
 
 This is not allowed.
@@ -670,17 +670,17 @@ They may end with extension suffixes like `.png` or `.svg`.
 
 **Exceptions allowed**: No
 
-The toplevel `cleanup` property in the [flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+The toplevel `cleanup` property in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
 has `/lib/debug`.
 
 This must not be cleaned up as it is used to generate debug data for the
-flatpak by flatpak-builder.
+Flatpak by Flatpak-builder.
 
 ### toplevel-no-command
 
 **Exceptions allowed**: No
 
-The toplevel `command` property in the [flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+The toplevel `command` property in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
 is absent.
 
 This property is required.
@@ -689,7 +689,7 @@ This property is required.
 
 **Exceptions allowed**: No
 
-The [flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+The [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
 has no `modules` property.
 
 This property is required.
@@ -739,7 +739,7 @@ Only the English summary is checked.
 The [desktop file](https://docs.flatpak.org/en/latest/conventions.html#desktop-files)
 has a empty `Exec=` key.
 
-Although this gets rewritten to a fallback by flatpak during installation
+Although this gets rewritten to a fallback by Flatpak during installation
 an `Exec` key with a value should be present for compatibility.
 
 ### desktop-file-low-quality-category
@@ -819,36 +819,36 @@ Specifying both explicitly is redundant.
 
 ### module-module_name-source-md5-deprecated
 
-A module in the [flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
 is using the deprecated and insecure `md5` checksum.
 
 It is recommended to switch to `sha256` or `sha512`.
 
 ### module-module_name-source-sha1-deprecated
 
-A module in the [flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
 is using the deprecated `sha1` checksum.
 
 It is recommended to switch to `sha256` or `sha512`.
 
 ### module-module_name-autotools-redundant-prefix
 
-A module in the [flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
 using the `autotools` buildsystem is setting `--prefix` in `config-opts`
 to a value of `/app, /usr, ${FLATPAK_DEST}`.
 
-This is set by flatpak-builder itself and is redundant.
+This is set by Flatpak-builder itself and is redundant.
 
 ### module-module_name-buildsystem-is-plain-cmake
 
-A module in the [flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
 is using plain `cmake` as buildsystem.
 
 It is recommended to switch to `cmake-ninja` as that is usually faster.
 
 ### module-module_name-cmake-non-release-build
 
-A module in the [flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
 is using `cmake` or `cmake-ninja` as buildsystem has a `CMAKE_BUILD_TYPE`
 value, not of `Release, RelWithDebInfo, MinSizeRel`.
 
@@ -856,15 +856,15 @@ It is recommended to use one of those as the build type.
 
 ### module-module_name-cmake-redundant-prefix
 
-A module in the [flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
 using `cmake` or `cmake-ninja` buildsystem is setting `CMAKE_INSTALL_PREFIX`
 in `config-opts` to a value of `/app, /usr, ${FLATPAK_DEST}`.
 
-This is set by flatpak-builder itself and is redundant.
+This is set by Flatpak-builder itself and is redundant.
 
 ### toplevel-command-is-path
 
-The toplevel `command` property in the [flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+The toplevel `command` property in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
 is a path.
 
 This must be just the name of the main binary of the application and the
@@ -872,11 +872,11 @@ binary must be present in `$FLATPAK_DEST/bin`.
 
 ### toplevel-unnecessary-branch
 
-The toplevel `branch` property in the [flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+The toplevel `branch` property in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
 is unnecessary.
 
 On Flathub, the branch is set by the builder using `--default-branch`
-argument of flatpak-builder.
+argument of Flatpak-builder.
 
 Specifying the branch property may lead to other errors.
 
