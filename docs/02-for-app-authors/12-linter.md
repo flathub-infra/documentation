@@ -88,7 +88,7 @@ was passed to flatpak-builder.
 The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
 has failed validation.
 
-Please use [Flathub's appstream-util](https://docs.flathub.org/docs/for-app-authors/appdata-guidelines/#use-flathubs-appstream-util)
+Please use [Flathub's appstream-util](https://docs.flathub.org/docs/for-app-authors/metainfo-guidelines/#use-flathubs-appstream-util)
 to validate the file and fix the issues reported.
 
 ### appstream-metainfo-missing
@@ -137,14 +137,14 @@ and all of them must match the app id used in the [flatpak manifest](https://doc
 ### appstream-missing-developer-name
 
 The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
-is missing the `developer_name` tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/appdata-guidelines/#name-summary-and-developer-name).
+is missing the `developer_name` tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#name-summary-and-developer-name).
 
 This must be present for proper display and classification by app stores.
 
 ### appstream-missing-project-license
 
 The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
-is missing the `project_license` tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/appdata-guidelines/#license).
+is missing the `project_license` tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#license).
 
 This must be present for proper display of the license by the app store.
 
@@ -191,7 +191,7 @@ file is malformed and has multiple `component` tags.
 **Exceptions allowed**: No
 
 The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
-is missing the `flathub::manifest` tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/appdata-guidelines/#manifest-location)
+is missing the `flathub::manifest` tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#manifest-location)
 on how to define it.
 
 This must be present for externally uploaded apps.
@@ -710,7 +710,7 @@ them might be promoted to an error in the future if needed.
 The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
 has a `name` tag of length greater that 20 characters.
 
-Please refer to the [quality guidelines](/docs/for-app-authors/appdata-guidelines/quality-guidelines#not-too-long)
+Please refer to the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#not-too-long)
 for more details.
 
 Only the English name is checked.
@@ -721,7 +721,7 @@ The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo
 is missing `caption` tag for one or more screenshots or the `caption`
 tag is empty.
 
-Please refer to the [quality guidelines](/docs/for-app-authors/appdata-guidelines/quality-guidelines#image-captions)
+Please refer to the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#image-captions)
 for more details.
 
 ### appstream-summary-too-long
@@ -729,7 +729,7 @@ for more details.
 The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
 has a `summary` tag of length greater that 35 characters.
 
-Please refer to the [quality guidelines](/docs/for-app-authors/appdata-guidelines/quality-guidelines#not-too-long-1)
+Please refer to the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#not-too-long-1)
 for more details.
 
 Only the English summary is checked.

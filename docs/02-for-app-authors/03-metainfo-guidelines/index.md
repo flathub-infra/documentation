@@ -3,7 +3,7 @@
 These are a set of guidelines for MetaInfo that should be followed for submission on Flathub.
 
 :::tip
-Please check the [Quality Guidelines](/docs/for-app-authors/appdata-guidelines/quality-guidelines)
+Please check the [Quality Guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines)
 page too, to make your application metadata more presentable.
 :::
 
@@ -105,7 +105,7 @@ with a link to the license:
 <name>App Name</name>
 <summary>Short summary</summary>
 ```
-Please make sure to follow the [quality guidelines](/docs/for-app-authors/appdata-guidelines/quality-guidelines#app-name)
+Please make sure to follow the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#app-name)
 for `name` and `summary`.
 
 A `developer_name` tag must be present. Flathub currently does not support
@@ -247,7 +247,7 @@ to display the source code repository is highly recommended.
 ## Screenshots
 
 All graphical applications must have one or more screenshots in the
-MetaInfo. Please make sure to follow the [quality guidelines](/docs/for-app-authors/appdata-guidelines/quality-guidelines#screenshots)
+MetaInfo. Please make sure to follow the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#screenshots)
 for screenshots.
 
 The link inside `image` tag must be a direct link to a image resource on
@@ -272,7 +272,7 @@ It should look something like this:
 ## Release
 
 Applications must supply a releases tag in their MetaInfo to pass
-validation. Please make sure to also follow the [quality guidelines](/docs/for-app-authors/appdata-guidelines/quality-guidelines#release-notes)
+validation. Please make sure to also follow the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#release-notes)
 while writing release notes.
 
 Paragraphs in release description must not exceed 15 and they must not

@@ -199,9 +199,9 @@ Do note that CLI applications do not require a `.desktop` file but TUI applicati
 
 ### Appstream
 
-Appstream is the standard used to provide metadata about applications. Applications must provide appstream data and pass [validation](/docs/for-app-authors/appdata-guidelines/#use-flathubs-appstream-util).
+Appstream is the standard used to provide metadata about applications. Applications must provide appstream data and pass [validation](/docs/for-app-authors/metainfo-guidelines/#use-flathubs-appstream-util).
 
-Please read the [MetaInfo guidelines](/docs/for-app-authors/appdata-guidelines) for more information.
+Please read the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines) for more information.
 
 ### .desktop files
 
