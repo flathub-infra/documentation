@@ -66,7 +66,7 @@ for more information.
 
 **Exceptions allowed**: No
 
-The screenshots in [appinfo catalogue](https://www.freedesktop.org/software/appstream/docs/chap-CatalogData.html)
+The screenshots in [AppStream Catalog data](https://www.freedesktop.org/software/appstream/docs/chap-CatalogData.html)
 file which are not of [type](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-screenshots)
 `source` aren't mirrored to https://dl.flathub.org/repo/screenshots.
 
@@ -164,7 +164,7 @@ during the build.
 
 **Exceptions allowed**: No
 
-The image tags of screenshots in [appinfo catalogue](https://www.freedesktop.org/software/appstream/docs/chap-CatalogData.html)
+The image tags of screenshots in [AppStream Catalog data](https://www.freedesktop.org/software/appstream/docs/chap-CatalogData.html)
 are not of [type](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-screenshots)
 `thumbnail`. The file and the type is automatically created during the
 build process by appstream compose.
@@ -183,7 +183,7 @@ the build.
 
 **Exceptions allowed**: No
 
-The [appinfo catalogue](https://www.freedesktop.org/software/appstream/docs/chap-CatalogData.html)
+The [AppStream Catalog data](https://www.freedesktop.org/software/appstream/docs/chap-CatalogData.html)
 file is malformed and has multiple `component` tags.
 
 ### appstream-no-flathub-manifest-key
