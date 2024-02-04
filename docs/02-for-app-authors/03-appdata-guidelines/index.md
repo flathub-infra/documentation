@@ -1,9 +1,9 @@
-# MetaInfo guidelines
+# AppData guidelines
 
-These are a set of guidelines for MetaInfo that should be followed for submission on Flathub.
+These are a set of guidelines for AppData that should be followed for submission on Flathub.
 
 :::tip
-Please check the [Quality Guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines)
+Please check the [Quality Guidelines](/docs/for-app-authors/appdata-guidelines/quality-guidelines)
 page too, to make your application metadata more presentable.
 :::
 
@@ -13,7 +13,7 @@ Please consult the [official appstream documentation](https://www.freedesktop.or
 
 ## Validation
 
-All MetaInfo must pass validation by `appstream-util`. Flathub uses modified `appstream-util` to validate MetaInfo during build.
+All appdata must pass validation by `appstream-util`. Flathub uses modified `appstream-util` to validate AppData during build.
 
 To run the same check locally, you can install and run it with a simple:
 
@@ -25,12 +25,12 @@ flatpak run --command=appstream-util org.flatpak.Builder validate tld.domain.app
 ## Path and filename
 
 :::note
-`/app/share/appdata` and `%{id}.appdata.xml` are considered to be legacy paths.
+`/app/share/appdata` and `%{id}.appdata.xml` are considered to be legcay paths.
 :::
 
-Place the MetaInfo file into `/app/share/metainfo/`, name it `%{id}.metainfo.xml`, where `%{id}` is the [ID](#id).
+Place the AppData file into `/app/share/metainfo/`, name it `%{id}.metainfo.xml`, where `%{id}` is the [ID](#id).
 
-## MetaInfo generator
+## AppData generator
 
 :::note
 Please check the generated output and add any mandatory or recommended tags mentioned below.
@@ -41,7 +41,7 @@ tool can be used to generate a basic file.
 
 ## Header
 
-All MetaInfo files must start with:
+All AppData files must start with:
 
 ```xml title="tld.domain.appid.metainfo.xml"
 <?xml version="1.0" encoding="UTF-8"?>
@@ -72,8 +72,8 @@ The ID must be same as the [Application-ID](./../requirements#application-id):
 
 ## License
 
-All MetaInfo must have a [metadata license tag](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-metadata_license)
-that is the license of the MetaInfo file itself.
+All appdata must have a [metadata license tag](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-metadata_license)
+that is the license of the appdata file itself.
 
 If application metadata has not been provided by the upstream, it should be licensed with [FSFAP](https://www.gnu.org/prep/maintain/html_node/License-Notices-for-Other-Files.html) or [Creative Commons Zero, version 1](https://creativecommons.org/choose/zero/).
 Please see the [specification](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-metadata_license)
@@ -105,7 +105,7 @@ with a link to the license:
 <name>App Name</name>
 <summary>Short summary</summary>
 ```
-Please make sure to follow the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#app-name)
+Please make sure to follow the [quality guidelines](/docs/for-app-authors/appdata-guidelines/quality-guidelines#app-name)
 for `name` and `summary`.
 
 A `developer_name` tag must be present. Flathub currently does not support
@@ -140,7 +140,7 @@ something like this:
 ## Launchable
 
 All graphical applications having a desktop file must have this tag in
-the MetaInfo. If this is present, `appstream-compose` will pull
+the appdata. If this is present, `appstream-compose` will pull
 icons, keywords and categories from the desktop file.
 
 The value must be the [Application-ID](./../requirements#application-id)
@@ -189,11 +189,11 @@ to know more.
 ## Categories and keywords
 
 If there’s a `type="desktop-id"` [launchable](#launchable), they are
-pulled from the desktop file and merged in the [AppStream Catalog data](https://www.freedesktop.org/software/appstream/docs/chap-CatalogData.html). 
-So defining them seperately in the MetaInfo is not necessary.
+pulled from the desktop file and merged in the appdata. So defining them
+seperately in the appdata is not necessary.
 
 Please see the [specification](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-categories)
-on how to define them in MetaInfo.
+on how to define them in appdata.
 
 If they are present in both places, appstream will merge them.
 
@@ -247,7 +247,7 @@ to display the source code repository is highly recommended.
 ## Screenshots
 
 All graphical applications must have one or more screenshots in the
-MetaInfo. Please make sure to follow the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#screenshots)
+appdata. Please make sure to follow the [quality guidelines](/docs/for-app-authors/appdata-guidelines/quality-guidelines#screenshots)
 for screenshots.
 
 The link inside `image` tag must be a direct link to a image resource on
@@ -271,8 +271,8 @@ It should look something like this:
 
 ## Release
 
-Applications must supply a releases tag in their MetaInfo to pass
-validation. Please make sure to also follow the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#release-notes)
+Applications must supply a releases tag in their appdata to pass
+validation. Please make sure to also follow the [quality guidelines](/docs/for-app-authors/appdata-guidelines/quality-guidelines#release-notes)
 while writing release notes.
 
 Paragraphs in release description must not exceed 15 and they must not
@@ -280,7 +280,7 @@ contain any direct URLs. Flathub supports showing a detailed release
 note link when `<url type="details">` tag is used. Release dates must
 not be in the future and versions must be [properly ordered](https://www.freedesktop.org/software/appstream/docs/chap-AppStream-Misc.html#spec-vercmp-recommendations).
 
-Releases in MetaInfo should look like this:
+Releases in appdata should look like this:
 
 ```xml
 <releases>
@@ -325,9 +325,9 @@ Please note that the `appstream-compose` expects the translations at:
 
 To see if it was detected correctly, check the [generated output](#checking-the-generated-output).
 
-## MetaInfo translations
+## AppData translations
 
-Various tags in MetaInfo support translations using the `xml:lang="<lang>"`
+Various tags in AppData support translations using the `xml:lang="<lang>"`
 property like so: `<name xml:lang="de">Translated name</name>`. English
 names must not use this property.
 

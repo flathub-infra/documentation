@@ -85,17 +85,17 @@ was passed to flatpak-builder.
 
 **Exceptions allowed**: No
 
-The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+The [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
 has failed validation.
 
-Please use [Flathub's appstream-util](./03-metainfo-guidelines/index.md#validation)
+Please use [Flathub's appstream-util](https://docs.flathub.org/docs/for-app-authors/appdata-guidelines/#use-flathubs-appstream-util)
 to validate the file and fix the issues reported.
 
 ### appstream-metainfo-missing
 
 **Exceptions allowed**: No
 
-The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+The [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
 is missing from the build.
 
 Please make sure to install it to the correct folder and name the file
@@ -112,7 +112,7 @@ compose.
 
 This can happen when compose fails or doesn't run at all.
 
-An [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+An [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
 must supplied during the build with a proper filename, [id tag](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-id-generic),
 proper `desktop-id` in `launchable` [tag](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-launchable)
 and all of them must match the app id used in the [flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
@@ -129,22 +129,22 @@ compose.
 
 This can happen when compose fails.
 
-An [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+An [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
 must supplied during the build with a proper filename, [id tag](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-id-generic),
 proper `desktop-id` in `launchable` [tag](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-launchable)
 and all of them must match the app id used in the [flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
 
 ### appstream-missing-developer-name
 
-The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
-is missing the `developer_name` tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#name-summary-and-developer-name).
+The [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
+is missing the `developer_name` tag. Please see the [AppData guidelines](/docs/for-app-authors/appdata-guidelines/#name-summary-and-developer-name).
 
 This must be present for proper display and classification by app stores.
 
 ### appstream-missing-project-license
 
-The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
-is missing the `project_license` tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#license).
+The [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
+is missing the `project_license` tag. Please see the [AppData guidelines](/docs/for-app-authors/appdata-guidelines/#license).
 
 This must be present for proper display of the license by the app store.
 
@@ -157,7 +157,7 @@ The build or the ostree repo is missing a 128px png icon in
 
 The file is automatically created during the build process by appstream
 compose provided a png icon of size 128px or more or an svg icon was
-installed to the [proper location](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+installed to the [proper location](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
 during the build.
 
 ### appstream-missing-screenshots
@@ -170,7 +170,7 @@ are not of [type](https://www.freedesktop.org/software/appstream/docs/chap-Metad
 build process by appstream compose.
 
 This can happen when screenshot tags are missing/not properly defined in
-the [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+the [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
 or if the image file/URL is malformed. The URL must be a direct link to
 an image resource on the web.
 
@@ -190,8 +190,8 @@ file is malformed and has multiple `component` tags.
 
 **Exceptions allowed**: No
 
-The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
-is missing the `flathub::manifest` tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#manifest-location)
+The [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
+is missing the `flathub::manifest` tag. Please see the [AppData guidelines](/docs/for-app-authors/appdata-guidelines/#manifest-location)
 on how to define it.
 
 This must be present for externally uploaded apps.
@@ -218,7 +218,7 @@ The process is automated when using [flatpak-github-actions](https://github.com/
 
 **Exceptions allowed**: No
 
-Only the main [desktop file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files),
+Only the main [desktop file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files),
 exactly matching the `$FLATPAK_ID` is checked.
 
 The `Exec` key of the desktop file in the build has `flatpak run` in it.
@@ -230,7 +230,7 @@ as that is done by `flatpak` itself during installation.
 
 **Exceptions allowed**: No
 
-Only the main [desktop file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files),
+Only the main [desktop file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files),
 exactly matching the `$FLATPAK_ID` is checked.
 
 The `Exec` key is missing in the desktop file supplied.
@@ -241,7 +241,7 @@ Desktop files must have an `Exec` key even when using `DBusActivable=true`.
 
 **Exceptions allowed**: No
 
-The [desktop file(s)](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+The [desktop file(s)](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
 supplied in the build have failed validation with `desktop-file-validate`.
 
 Please correct the errors reported.
@@ -250,7 +250,7 @@ Please correct the errors reported.
 
 **Exceptions allowed**: No
 
-Only the main [desktop file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files),
+Only the main [desktop file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files),
 exactly matching the `$FLATPAK_ID` is checked.
 
 The desktop file supplied in the build has no `Icon` key.
@@ -262,7 +262,7 @@ application.
 
 **Exceptions allowed**: No
 
-Only the main [desktop file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files),
+Only the main [desktop file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files),
 exactly matching the `$FLATPAK_ID` is checked.
 
 The desktop file supplied in the build has an empty `Icon` key.
@@ -273,7 +273,7 @@ The `Icon` key in the desktop file must have a proper value.
 
 **Exceptions allowed**: No
 
-Only the main [desktop file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files),
+Only the main [desktop file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files),
 exactly matching the `$FLATPAK_ID` is checked.
 
 The `Icon` key of the desktop file supplied in the build does not have
@@ -287,7 +287,7 @@ are allowed.
 
 **Exceptions allowed**: Yes[^2]
 
-Only the main [desktop file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files),
+Only the main [desktop file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files),
 exactly matching the `$FLATPAK_ID` is checked.
 
 The desktop file supplied in the build sets `Hidden=true` or
@@ -297,7 +297,7 @@ The desktop file supplied in the build sets `Hidden=true` or
 
 **Exceptions allowed**: No
 
-The [desktop file(s)](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files),
+The [desktop file(s)](https://docs.flatpak.org/en/latest/conventions.html#appdata-files),
 are either not installed to the proper location during the build or does
 not match the `$FLATPAK_ID`.
 
@@ -707,29 +707,29 @@ them might be promoted to an error in the future if needed.
 
 ### appstream-name-too-long
 
-The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+The [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
 has a `name` tag of length greater that 20 characters.
 
-Please refer to the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#not-too-long)
+Please refer to the [quality guidelines](/docs/for-app-authors/appdata-guidelines/quality-guidelines#not-too-long)
 for more details.
 
 Only the English name is checked.
 
 ### appstream-screenshot-missing-caption
 
-The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+The [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
 is missing `caption` tag for one or more screenshots or the `caption`
 tag is empty.
 
-Please refer to the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#image-captions)
+Please refer to the [quality guidelines](/docs/for-app-authors/appdata-guidelines/quality-guidelines#image-captions)
 for more details.
 
 ### appstream-summary-too-long
 
-The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+The [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
 has a `summary` tag of length greater that 35 characters.
 
-Please refer to the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#not-too-long-1)
+Please refer to the [quality guidelines](/docs/for-app-authors/appdata-guidelines/quality-guidelines#not-too-long-1)
 for more details.
 
 Only the English summary is checked.
