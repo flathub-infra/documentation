@@ -74,6 +74,10 @@ const config = {
             to: "/docs/for-app-authors/maintenance",
             from: "/docs/for-app-authors/maintanance",
           },
+          {
+            to: "/docs/for-app-authors/metainfo-guidelines",
+            from: "/docs/for-app-authors/appdata-guidelines",
+          },
         ],
       },
     ],
