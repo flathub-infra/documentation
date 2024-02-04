@@ -25,7 +25,7 @@ flatpak run --command=appstream-util org.flatpak.Builder validate tld.domain.app
 ## Path and filename
 
 :::note
-`/app/share/appdata` and `%{id}.appdata.xml` are considered to be legcay paths.
+`/app/share/appdata` and `%{id}.appdata.xml` are considered to be legacy paths.
 :::
 
 Place the MetaInfo file into `/app/share/metainfo/`, name it `%{id}.metainfo.xml`, where `%{id}` is the [ID](#id).
