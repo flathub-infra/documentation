@@ -88,7 +88,7 @@ was passed to flatpak-builder.
 The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
 has failed validation.
 
-Please use [Flathub's appstream-util](https://docs.flathub.org/docs/for-app-authors/metainfo-guidelines/#use-flathubs-appstream-util)
+Please use [Flathub's appstream-util](./03-metainfo-guidelines/index.md#validation)
 to validate the file and fix the issues reported.
 
 ### appstream-metainfo-missing
