@@ -358,6 +358,13 @@ flatpak manifest like so:
  </custom>
 ```
 
+## Extensions
+
+Extensions need to follow only some of the guidelines outlined above. All extensions should include a MetaInfo file
+and all application extensions must use the `extends` tag.
+
+An example of a MetaInfo file for extension is provided in the [Flatpak documentation](https://docs.flatpak.org/en/latest/extension.html#extension-manifest).
+
 ## Checking the generated output
 
 Once an app has been built, you can look for the `/app/share/app-info/xmls/<app-id>.xml.gz` archive, inside which is an XML file with all the info about the app combined into one file.
