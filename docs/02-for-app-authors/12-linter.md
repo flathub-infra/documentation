@@ -85,17 +85,17 @@ was passed to Flatpak Builder.
 
 **Exceptions allowed**: No
 
-The [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
+The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
 has failed validation.
 
-Please use [Flathub's appstream-util](https://docs.flathub.org/docs/for-app-authors/appdata-guidelines/#use-flathubs-appstream-util)
+Please use [Flathub's appstream-util](./03-metainfo-guidelines/index.md#validation)
 to validate the file and fix the issues reported.
 
 ### appstream-metainfo-missing
 
 **Exceptions allowed**: No
 
-The [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
+The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
 is missing from the build.
 
 Please make sure to install it to the correct folder and name the file
@@ -112,7 +112,7 @@ compose.
 
 This can happen when compose fails or doesn't run at all.
 
-An [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
+An [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
 must supplied during the build with a proper filename, [id tag](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-id-generic),
 proper `desktop-id` in `launchable` [tag](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-launchable)
 and all of them must match the app id used in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
@@ -129,22 +129,22 @@ compose.
 
 This can happen when compose fails.
 
-An [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
+An [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
 must supplied during the build with a proper filename, [id tag](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-id-generic),
 proper `desktop-id` in `launchable` [tag](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-launchable)
 and all of them must match the app id used in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
 
 ### appstream-missing-developer-name
 
-The [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
-is missing the `developer_name` tag. Please see the [AppData guidelines](/docs/for-app-authors/appdata-guidelines/#name-summary-and-developer-name).
+The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+is missing the `developer_name` tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#name-summary-and-developer-name).
 
 This must be present for proper display and classification by app stores.
 
 ### appstream-missing-project-license
 
-The [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
-is missing the `project_license` tag. Please see the [AppData guidelines](/docs/for-app-authors/appdata-guidelines/#license).
+The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+is missing the `project_license` tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#license).
 
 This must be present for proper display of the license by the app store.
 
@@ -170,7 +170,7 @@ are not of [type](https://www.freedesktop.org/software/appstream/docs/chap-Metad
 build process by appstream compose.
 
 This can happen when screenshot tags are missing/not properly defined in
-the [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
+the [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
 or if the image file/URL is malformed. The URL must be a direct link to
 an image resource on the web.
 
@@ -190,8 +190,8 @@ file is malformed and has multiple `component` tags.
 
 **Exceptions allowed**: No
 
-The [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
-is missing the `flathub::manifest` tag. Please see the [AppData guidelines](/docs/for-app-authors/appdata-guidelines/#manifest-location)
+The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+is missing the `flathub::manifest` tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#manifest-location)
 on how to define it.
 
 This must be present for externally uploaded apps.
@@ -707,29 +707,29 @@ them might be promoted to an error in the future if needed.
 
 ### appstream-name-too-long
 
-The [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
+The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
 has a `name` tag of length greater that 20 characters.
 
-Please refer to the [quality guidelines](/docs/for-app-authors/appdata-guidelines/quality-guidelines#not-too-long)
+Please refer to the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#not-too-long)
 for more details.
 
 Only the English name is checked.
 
 ### appstream-screenshot-missing-caption
 
-The [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
+The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
 is missing `caption` tag for one or more screenshots or the `caption`
 tag is empty.
 
-Please refer to the [quality guidelines](/docs/for-app-authors/appdata-guidelines/quality-guidelines#image-captions)
+Please refer to the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#image-captions)
 for more details.
 
 ### appstream-summary-too-long
 
-The [appdata file](https://docs.flatpak.org/en/latest/conventions.html#appdata-files)
+The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
 has a `summary` tag of length greater that 35 characters.
 
-Please refer to the [quality guidelines](/docs/for-app-authors/appdata-guidelines/quality-guidelines#not-too-long-1)
+Please refer to the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#not-too-long-1)
 for more details.
 
 Only the English summary is checked.

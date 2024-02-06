@@ -71,8 +71,16 @@ const config = {
       {
         redirects: [
           {
-            to: "/docs/for-app-authors/maintenance",
             from: "/docs/for-app-authors/maintanance",
+            to: "/docs/for-app-authors/maintenance",
+          },
+          {
+            from: "/docs/for-app-authors/appdata-guidelines/quality-guidelines",
+            to: "/docs/for-app-authors/metainfo-guidelines/quality-guidelines",
+          },
+          {
+            from: "/docs/for-app-authors/appdata-guidelines",
+            to: "/docs/for-app-authors/metainfo-guidelines",
           },
         ],
       },
