@@ -157,10 +157,6 @@ const config = {
                 label: "Mastodon",
                 href: "https://floss.social/@flathub",
               },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/FlatpakApps",
-              },
             ],
           },
           {
