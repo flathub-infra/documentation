@@ -214,6 +214,18 @@ Flatpak Builder >= 1.3.4, the last path is `<builddir>/files/share/app-info/medi
 
 The process is automated when using [flatpak-github-actions](https://github.com/flatpak/flatpak-github-actions#inputs).
 
+### appstream-unsupported-component-type
+
+**Exceptions allowed**: No
+
+The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+either uses an unsupported `component` type or is missing the `type`
+attribute. As a result the Appstream catalogue data has the wrong
+component type.
+
+The following types are supported on Flathub: `addon, console-application, desktop, desktop-application, runtime`. 
+Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#header) for the details.
+
 ### desktop-file-exec-has-flatpak-run
 
 **Exceptions allowed**: No
@@ -584,6 +596,17 @@ The manifest schema was malformed.
 **Exceptions allowed**: No
 
 The manifest schema failed validation.
+
+### metainfo-missing-component-type
+
+**Exceptions allowed**: No
+
+The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+is missing the `type` attribute in the `component` tag.
+
+All MetaInfo files must use a supported `type` attribute in the `component` 
+tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#header) 
+for the details.
 
 ### module-module_name-source-dest-filename-is-path
 
