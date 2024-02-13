@@ -8,7 +8,7 @@ Apps following the quality guidelines may be featured more prominently across Fl
 
 The term `must` in these guidelines is used in the context of considering whether an app passes the app listing quality checks. Apps that do not follow these guidelines may still be published on Flathub.
 
-For the basics on how to write metadata for your app, see the [Appstream Metadata Quickstart](https://www.freedesktop.org/software/appstream/docs/chap-Quickstart.html).
+For the basics on how to write metadata for your app, see the [MetaInfo Guidelines](/docs/for-app-authors/metainfo-guidelines).
 
 ## General
 
