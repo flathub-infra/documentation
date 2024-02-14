@@ -110,7 +110,7 @@ Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#
 for more details.
 
 A [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
-must supplied during the build with the [proper filename](/docs/for-app-authors/metainfo-guidelines/#path-and-filename),
+must be supplied during the build with the [proper filename](/docs/for-app-authors/metainfo-guidelines/#path-and-filename),
 [id tag](/docs/for-app-authors/metainfo-guidelines/#id),proper `desktop-id` in `launchable` [tag](/docs/for-app-authors/metainfo-guidelines/#launchable)
 and all of them must match the app id used in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
 
@@ -124,7 +124,7 @@ file.
 This can happen when compose fails.
 
 A [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
-must supplied during the build with the [proper filename](/docs/for-app-authors/metainfo-guidelines/#path-and-filename),
+must be supplied during the build with the [proper filename](/docs/for-app-authors/metainfo-guidelines/#path-and-filename),
 [id tag](/docs/for-app-authors/metainfo-guidelines/#id), proper `desktop-id` in `launchable` [tag](/docs/for-app-authors/metainfo-guidelines/#launchable)
 and all of them must match the app id used in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
 
