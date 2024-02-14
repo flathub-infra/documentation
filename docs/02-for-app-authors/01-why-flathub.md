@@ -21,4 +21,4 @@ If you are responsible for a commercial app that you would like to distribute th
 
 Note that at present, we have no mechanism to process payments for app publishers. In-app purchases, subscriptions or upgrades are acceptable provided that the [OARS metadata](https://hughsie.github.io/oars/generate.html#money) correctly reflects that such purchases are available.
 
-If you have any other queries about publishing a commercial app, we’d love to speak to you and would encourage you to [contact the Flathub admins](mailto:flathub@lists.freedesktop.org).
+If you have any other queries about publishing a commercial app, we’d love to speak to you and would encourage you to [contact the Flathub admins](mailto:admins@flathub.org).
