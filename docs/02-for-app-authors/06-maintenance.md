@@ -71,6 +71,8 @@ The `end-of-life-rebase` will tell flatpak to automatically migrate the user dat
 
 Please also try to contact a flathub admin to archive the repo by either creating an issue at [flathub/flathub](https://github.com/flathub/flathub/issues/new) or emailing [Flathub admins](mailto:admins@flathub.org).
 
+In case you want to step down as a maintainer but wish someone to take over maintenance, you can ask in the [tracker issue](https://github.com/flathub/flathub/issues/3693).
+
 ### Flathub external data checker config
 
 [Flatpak external data checker](/docs/for-app-authors/external-data-checker) is a tool that checks for updates of modules, which have been configured to be updated. If you are using the Flathub infrastructure (repo on the Flathub org), this tool will be run every hour for you and will create merge requests if there are newer version.
@@ -110,6 +112,22 @@ You can opt out of this by creating a `flathub.json` file with the following con
 ## Download statistics
 
 Flathub publishes download statistics for every app or runtime. The raw JSON files are available at [flathub.org/stats](https://flathub.org/stats/). These break out app downloads and updates. This is also the basis for the data shown on flathub.org, additionally there are some community members that generously provide frontends to interpret the data and make it more useful for app developers at [https://ahayzen.com/direct/flathub.html](https://ahayzen.com/direct/flathub.html) and [https://klausenbusk.github.io/flathub-stats/](https://klausenbusk.github.io/flathub-stats/)
+
+## Maintainer access to Flathub application repository
+
+This section applies to application repositories hosted in the [Flathub](https://github.com/flathub) organisation on GitHub.
+
+The GitHub account [submitting](/docs/for-app-authors/submission#how-to-submit-an-app) the application to Flathub along with any upstream developers of the application
+(if mentioned by the submitter or at reviewer's discretion) will be given access to the application repository once created.
+
+If an existing maintainer wants someone involved with upstream or the Flathub application repository, to also have access, they should open an issue on
+[GitHub](https://github.com/flathub/flathub/issues/new) or contact the admins via [admins@flathub.org](mailto:admins@flathub.org).
+
+An upstream developer or author may also use the same process as above to request access to the repository.
+
+In case an application becomes unmaintained (and the maintainer unreachable) for a prolonged period of time and you want to volunteer to start maintaining it, please open an issue on [GitHub](https://github.com/flathub/flathub/issues).
+
+Any such requests will be judged on a case-by-case basis and upstream authors/developers/contributors to the application (or the Flathub repository) in question will be preferred.
 
 ## Getting Help
 
