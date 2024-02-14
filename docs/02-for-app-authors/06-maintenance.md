@@ -56,7 +56,9 @@ There may come a point where an application is no longer maintained. In order to
 }
 ```
 
-If the application has been renamed, you can additionally include `end-of-life-rebase` with the new ID. Recent flatpak versions will prompt user if they'd like to switch to the renamed app.
+## End of life Rebase
+
+If the application has been renamed, you must additionally include `end-of-life-rebase` with the new ID. Recent flatpak versions will prompt user if they'd like to switch to the renamed app.
 
 ```json title="flathub.json"
 {
