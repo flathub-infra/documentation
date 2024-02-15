@@ -15,6 +15,7 @@ Capitalization of proper nouns including names of software, upstream projects, e
 - OSTree
 - AppStream
 - MetaInfo
+- GitHub
 :::
 
 :::danger Not this
@@ -24,6 +25,7 @@ Capitalization of proper nouns including names of software, upstream projects, e
 - ostree
 - Appstream
 - metainfo
+- Github
 :::
 
 An exception is when referring to typed commands or code, in which case they should always be written as `code`, e.g.: `flatpak install…`
