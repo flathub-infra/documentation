@@ -45,3 +45,5 @@ In cases where there are multiple correct spellings depending on regional/countr
 
 - We prefer “app” over “application”
 - The string added to a website for verification is the “verification token” (not “code”)
+- Use “native app store clients” to refer to apps like KDE Discover and GNOME Software
+- “MetaInfo” is the data shipped with an app (not “AppData” as that’s the deprecated term)
