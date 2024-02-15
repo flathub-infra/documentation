@@ -369,15 +369,15 @@ An example of a MetaInfo file for extension is provided in the [Flatpak document
 ## Checking the generated output
 
 Once an app has been built with a proper MetaInfo file, Flatpak Builder
-automatically invokes AppStream with the `compose` argument that composes
-the application metadata gathered from the desktop file, icon and the
-MetaInfo file into a combined XML file called the [AppStream Catalog data](https://www.freedesktop.org/software/appstream/docs/chap-CatalogData.html#sect-AppStream-XML).
+automatically invokes `appstreamcli` with the `compose` argument that
+composes the application metadata gathered from the desktop file, icon
+and the MetaInfo file into a combined XML file called the [AppStream Catalog data](https://www.freedesktop.org/software/appstream/docs/chap-CatalogData.html#sect-AppStream-XML).
 
 This file must not be manually created or modified. The file can be found
 in `<builddir>/files/share/app-info/xmls/<app-id>.xml.gz` or
 `${FLATPAK_DEST}/share/app-info/xmls/<app-id>.xml.gz` inside the sandbox.
 
-Compose also creates icons in `<builddir>/files/share/app-info/icons/flatpak/{64x64, 128x128}/<app-id>.png`
+The compose process also creates icons in `<builddir>/files/share/app-info/icons/flatpak/{64x64, 128x128}/<app-id>.png`
 provided a PNG icon of size 64px or more, or a SVG icon was installed
 to the [proper location](https://docs.flatpak.org/en/latest/conventions.html#application-icons)
 during the build.
