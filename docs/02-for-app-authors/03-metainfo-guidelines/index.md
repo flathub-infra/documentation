@@ -13,16 +13,13 @@ Please consult the [official appstream documentation](https://www.freedesktop.or
 
 ## Validation
 
-All MetaInfo must pass validation using `appstreamcli validate`. Flathub
-uses `appstreamcli`  with a custom set of overrides to validate the
-MetaInfo during the build.
+All MetaInfo files included in build must pass validation using the
+linter which also validates the MetaInfo file and the generated data.
 
-To run the same check locally, you can install and run it with a simple:
+To run the same check locally, [build and run the linter](/docs/for-app-authors/submission#before-submission)
+on the Flatpak.
 
-```bash
-flatpak install -y flathub org.flatpak.Builder
-flatpak run --command=flathub-appstreamcli org.flatpak.Builder validate tld.domain.appid.metainfo.xml
-```
+The error messages are explained in the [linter documentation](/docs/for-app-authors/linter).
 
 ## Path and filename
 
