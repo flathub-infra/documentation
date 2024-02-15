@@ -68,7 +68,8 @@ for more information.
 
 The screenshots in [AppStream catalog](/docs/for-app-authors/metainfo-guidelines/#checking-the-generated-output)
 file which are not of [type](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-screenshots)
-`source` aren't mirrored to https://dl.flathub.org/repo/screenshots.
+`source` aren't mirrored to https://dl.flathub.org/media or the legacy 
+https://dl.flathub.org/repo/screenshots.
 
 [Flatpak Builder](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html)
 invokes `appstreamcli compose` for mirroring when `--mirror-screenshots-url=URL`
@@ -87,7 +88,7 @@ was passed to Flatpak Builder.
 The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
 has failed validation.
 
-Please use [Flathub's appstream-util](./03-metainfo-guidelines/index.md#validation)
+Please use [Flathub's appstreamcli](./03-metainfo-guidelines/index.md#validation)
 to validate the file and fix the issues reported.
 
 ### appstream-metainfo-missing
@@ -131,7 +132,8 @@ and all of them must match the app id used in the [Flatpak manifest](https://doc
 ### appstream-missing-developer-name
 
 The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
-is missing the `developer_name` tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#name-summary-and-developer-name).
+is missing the `developer` tag with a child `name` tag or the legacy 
+`developer_name` tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#name-summary-and-developer-name).
 
 This must be present for proper display and classification by app stores.
 
@@ -202,8 +204,7 @@ architectures.
 
 Committing is done after [Flatpak Builder](https://docs.flatpak.org/en/latest/flatpak-builder.html)
 exported a repo, using `ostree commit --repo=<repo name> --canonical-permissions
---branch=screenshots/<arch> <builddir>/screenshots`. For
-Flatpak Builder >= 1.3.4, the last path is `<builddir>/files/share/app-info/media`.
+--branch=screenshots/<arch> <builddir>/files/share/app-info/media`.
 
 The process is automated when using [flatpak-github-actions](https://github.com/flatpak/flatpak-github-actions#inputs).
 
