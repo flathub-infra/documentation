@@ -13,13 +13,15 @@ Please consult the [official appstream documentation](https://www.freedesktop.or
 
 ## Validation
 
-All MetaInfo must pass validation by `appstream-util`. Flathub uses modified `appstream-util` to validate MetaInfo during build.
+All MetaInfo must pass validation using `appstreamcli validate`. Flathub
+uses `appstreamcli`  with a custom set of overrides to validate the
+MetaInfo during the build.
 
 To run the same check locally, you can install and run it with a simple:
 
 ```bash
 flatpak install -y flathub org.flatpak.Builder
-flatpak run --command=appstream-util org.flatpak.Builder validate tld.domain.appid.metainfo.xml
+flatpak run --command=flathub-appstreamcli org.flatpak.Builder validate tld.domain.appid.metainfo.xml
 ```
 
 ## Path and filename
@@ -89,8 +91,7 @@ Followed by a mandatory `project_license` tag:
 <project_license>GPL-3.0</project_license>
 ```
 
-The value must be a valid [SPDX license identifier](https://spdx.org/licenses/). License [expression operators](https://spdx.github.io/spdx-spec/v2-draft/SPDX-license-expressions/#d4-composite-license-expressions) like `AND, OR`
-are also supported except `WITH`.
+The value must be a valid [SPDX license identifier](https://spdx.org/licenses/). License [expression operators](https://spdx.github.io/spdx-spec/v2-draft/SPDX-license-expressions/#d4-composite-license-expressions) like `AND, OR, WITH` are supported.
 
 Proprietary applications/custom licenses can use `LicenseRef-proprietary`
 with a link to the license:
@@ -109,11 +110,13 @@ with a link to the license:
 Please make sure to follow the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#app-name)
 for `name` and `summary`.
 
-A `developer_name` tag must be present. Flathub currently does not support
-the newer `developer` tag.
+A `developer` [tag](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-developer)
+with a `name` child tag must be present.
 
 ```xml
-<developer_name>Developer name</developer_name>
+<developer id="tld.domain">
+  <name>Developer name</name>
+</developer>
 ```
 
 ## Description
@@ -141,7 +144,7 @@ something like this:
 ## Launchable
 
 All graphical applications having a desktop file must have this tag in
-the MetaInfo. If this is present, `appstream-compose` will pull
+the MetaInfo. If this is present, `appstreamcli compose` will pull
 icons, keywords and categories from the desktop file.
 
 The value must be the [Application-ID](./../requirements#application-id)
@@ -160,9 +163,7 @@ described below.
 ## Provides
 
 This can be used to link to other instances of the application using a
-different ID. For example if the the app was renamed at one point or there
-are distributions using the old naming scheme out there. It also prevents
-ODRS reviews to be “lost” on a rename.
+different ID. It also prevents ODRS reviews to be “lost” on a rename.
 
 :::note
 
@@ -186,6 +187,20 @@ Console applications must add their main binary name to the provides tag:
 
 Please see the [specification](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-provides)
 to know more.
+
+## Replaces
+
+In general renaming the application ID should be avoided, but if it was
+renamed at some point, this tag can be used to indicate that the
+application in current `id` tag replaces the one in this tag.
+
+```xml
+<id>org.example.current-app</id>
+  [...]
+  <replaces>
+    <id>org.example.old-app</id>
+  </replaces>
+```
 
 ## Categories and keywords
 
@@ -322,7 +337,8 @@ You can specify this tag multiple times if needed.
 Please note that the `appstream-compose` expects the translations at:
 
 - For `gettext` it’s `${FLATPAK_DEST}/share/locale/<lang>/LC_MESSAGES/<id>.mo` where `id` is the value in the translation tag.
-- For `qt` it’s either `${FLATPAK_DEST}/share/<id>/translations/<id>_<lang>.qm` or `${FLATPAK_DEST}/share/<id>/translations/<id>/<lang>.qm` where `id` is the value in the translation tag.
+- For `qt` if the `id` string has slashes it's either `${FLATPAK_DEST}/share/<id>_<lang>.qm` or `${FLATPAK_DEST}/share/<id>/<lang>.qm`. If the `id` string has no slashes it's
+  `${FLATPAK_DEST}/share/locale/<lang>/LC_MESSAGES/<id>.qm` where `id` is the value in the translation tag.
 
 To see if it was detected correctly, check the [generated output](#checking-the-generated-output).
 
