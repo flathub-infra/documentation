@@ -13,8 +13,9 @@ If you have any further questions, please ask on [Matrix](https://matrix.to/#/#f
 ## License
 
 All content hosted on Flathub must allow legal redistribution, and the license must be
-correctly specified in the app's MetaInfo file. Non-redistributable files can be downloaded at install time
-using the `extra-data` source type.
+correctly specified in the app's [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#license). 
+Non-redistributable files can be downloaded at install time using the 
+`extra-data` source type.
 
 ## Application ID
 
