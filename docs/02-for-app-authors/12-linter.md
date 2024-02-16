@@ -590,6 +590,16 @@ The manifest schema was malformed.
 
 The manifest schema failed validation.
 
+## metainfo-missing-component-tag
+
+**Exceptions allowed**: No
+
+The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+is missing the initial `component` tag.
+
+All MetaInfo files must start with the [component tag](/docs/for-app-authors/metainfo-guidelines/#header)
+with a proper `type` attribute.
+
 ### metainfo-missing-component-type
 
 **Exceptions allowed**: No
