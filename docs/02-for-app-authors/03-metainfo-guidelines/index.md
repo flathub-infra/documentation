@@ -120,6 +120,9 @@ with a `name` child tag must be present.
 </developer>
 ```
 
+Please see the [translations section](#metainfo-translations) to
+translate these tags.
+
 ## Description
 
 A short and informative description must be present. Please follow the
@@ -141,6 +144,9 @@ something like this:
   </ul>
 </description>
 ```
+
+Please see the [translations section](#metainfo-translations) to
+translate these tags.
 
 ## Launchable
 
@@ -217,6 +223,9 @@ If they are present in both places, appstream will merge them.
 Please don't use, generic categories like
 `KDE, GTK, Qt, Application, GNOME, GUI`. These can be placed in `keywords`.
 
+Please see the [translations section](#metainfo-translations) to
+translate the `keyword` tag.
+
 ### Brand color
 
 Applications should set a [brand color](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-branding)
@@ -286,6 +295,9 @@ It should look something like this:
 </screenshots>
 ```
 
+Please see the [translations section](#metainfo-translations) to
+translate these tags.
+
 ## Release
 
 Applications must supply a releases tag in their MetaInfo to pass
@@ -345,15 +357,27 @@ To see if it was detected correctly, check the [generated output](#checking-the-
 
 ## MetaInfo translations
 
-Various tags in MetaInfo support translations using the `xml:lang="<lang>"`
-property like so: `<name xml:lang="de">Translated name</name>`. English
-tag values must not use the `xml:lang` property.
+:::note
+English tag values must not use the `xml:lang` property.
+:::
 
-The following tags can have translations: `name`, `summary`, `keywords`,
-`image`, `caption` and `description`. The `description` tag has to be
-translated like so:
+Various tags in MetaInfo support translations using the `xml:lang="<lang>"`
+property like so: `<name xml:lang="de">Translated name</name>`.
+
+The following tags can have translations: `name`, `name` child tag in
+`developer`, `summary`, `keywords`, `image`, `caption` and `description`.
 
 ```xml
+
+<name xml:lang="de">Translated App name</name>
+
+<summary xml:lang="de">Translated summary</summary>
+
+<developer id="tld.domain">
+  <name>Developer name</name>
+  <name xml:lang="de">Translated developer name</name>
+</developer>
+
 <description>
   <p>Some description</p>
   <p xml:lang="de">Translated description</p>
@@ -361,6 +385,24 @@ translated like so:
     <li xml:lang="de">Translated list</li>
   </ul>
 </description>
+
+<screenshots>
+  <screenshot type="default">
+    <image>https://example.org/example1.png</image>
+    <caption>A caption</caption>
+    <caption xml:lang="de">Translated caption</caption>
+  </screenshot>
+  <screenshot>
+    <image xml:lang="de">https://example.org/example2.png</image>
+    <caption>A caption</caption>
+    <caption xml:lang="de">Translated caption</caption>
+  </screenshot>
+</screenshots>
+
+<keywords>
+  <keyword translate="no">Keyword</keyword>
+  <keyword xml:lang="de">Translated keyword</keyword>
+</keywords>
 ```
 
 ## Manifest location
