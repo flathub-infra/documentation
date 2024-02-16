@@ -28,7 +28,7 @@ Use Flathub verification to indicate that you are the author of the app and that
 
 ### Brand color
 
-Apps should set a [brand color](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-branding) (in two variants, light and dark). This color is used by Flathub and native app store clients on banners, app pages, etc.
+Apps should set a [brand color](/docs/for-app-authors/metainfo-guidelines/#brand-color) (in two variants, light and dark). This color is used by Flathub and native app store clients on banners, app pages, etc.
 
 ## App Icon
 
@@ -74,7 +74,7 @@ In some cases, it can make sense for the icon to align with the visuals of the a
 
 ### Not too long
 
-The name should ideally be no longer than 15 characters, and must be shorter than 20 characters.
+The [name](/docs/for-app-authors/metainfo-guidelines/#name-summary-and-developer-name) should ideally be no longer than 15 characters, and must be shorter than 20 characters.
 
 :::danger Bad examples
 
@@ -122,7 +122,7 @@ Cases where the formatting is part of an established brand may be exempt (e.g. `
 
 ### Not too long
 
-The summary should ideally be between 10 and 25 characters, and no longer than 35 characters.
+The [summary](/docs/for-app-authors/metainfo-guidelines/#name-summary-and-developer-name) should ideally be between 10 and 25 characters, and no longer than 35 characters.
 
 :::tip Good example
 
@@ -186,7 +186,7 @@ Starting summaries with an article is almost always unnecessary. Instead, either
 
 ### Don't repeat the summary
 
-The description should not just repeat or rephrase the summary. The summary is a kind of slogan or advertisement for the app, while the description should go into more detail about the purpose of the app, which features it has, and what makes it unique.
+The [description](/docs/for-app-authors/metainfo-guidelines/#description) should not just repeat or rephrase the summary. The summary is a kind of slogan or advertisement for the app, while the description should go into more detail about the purpose of the app, which features it has, and what makes it unique.
 
 ### Not too short
 
@@ -200,7 +200,7 @@ Avoid feature lists with more than 10 items, they are difficult to scan and make
 
 ### At least one screenshot
 
-Apps should have at least one screenshot in English. For medium complexity apps 3-6 is a good range, for very large apps with lots of screens 6-10 is appropriate. More than 10 is probably too many.
+Apps should have at least one [screenshot](/docs/for-app-authors/metainfo-guidelines/#screenshots) in English. For medium complexity apps 3-6 is a good range, for very large apps with lots of screens 6-10 is appropriate. More than 10 is probably too many.
 
 :::tip
 Your best screenshot should be on the first position, because it will be the first thing a user sees when viewing your app on Flathub.
@@ -210,15 +210,7 @@ We might also use this in other places, such as featured banners, so make sure i
 
 ### Tag screenshots with correct language
 
-Screenshots should be tagged with the language they are in. For example, if you have a screenshot of the app in German, tag it with `xml:lang="de"`.
-
-```xml
-  <screenshots>
-    <screenshot type="default">
-      <image xml:lang="de">https://www.example.com/de/app-name01.jpg</image>
-    </screenshot>
-  </screenshots>
-```
+Screenshots should be tagged with the [language](/docs/for-app-authors/metainfo-guidelines/#metainfo-translations) they are in. For example, if you have a screenshot of the app in German, tag it with `xml:lang="de"`.
 
 ### Just the app window
 
@@ -268,7 +260,7 @@ Screenshots should reflect the current state of the app's interface, not some pr
 
 ### Release notes for every release
 
-Make sure all your releases have release notes, even minor ones.
+Make sure all your releases have [release notes](/docs/for-app-authors/metainfo-guidelines/#release), even minor ones.
 
 ### Short but informative
 
@@ -283,3 +275,5 @@ Release notes should include some actual information about what changed rather t
 ### Take easily accessible content into account
 
 Apps acting as "readers" or "stores" for external content should take into account what is accessible by just navigating around in the app. If content of a certain type can be arrived at without searching or typing in URLs, the app should be tagged as containing it. For example, an RSS reader that doesn't feature any content can be "All Ages", but the rating for a manga app with pre-configured servers should reflect the content of those default sources.
+
+Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#oars-information) on how to generate proper age ratings.
