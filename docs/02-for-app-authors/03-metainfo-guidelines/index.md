@@ -107,6 +107,10 @@ with a link to the license:
 Please make sure to follow the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#app-name)
 for `name` and `summary`.
 
+:::note
+The deprecated `developer_name` tag is also supported for backwards compatibility
+:::
+
 A `developer` [tag](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-developer)
 with a `name` child tag must be present.
 
