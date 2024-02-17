@@ -226,6 +226,23 @@ Please don't use, generic categories like
 Please see the [translations section](#metainfo-translations) to
 translate the `keyword` tag.
 
+## Project Group
+
+The `<project_group/>` tag can be used if the application is affiliated
+with a known software project like for example GNOME, KDE or Mozilla.
+
+The following project group tag values `Freedesktop, FreeDesktop, GNOME, KDE`
+are  "protected", meaning only application IDs starting with
+`org.freedesktop, org.gnome, org.kde` respectively are allowed to use
+them.
+
+These IDs are only allowed for official applications from respective
+project groups.
+
+```xml
+<project_group>GNOME</project_group>
+```
+
 ### Brand color
 
 Applications should set a [brand color](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-branding)
