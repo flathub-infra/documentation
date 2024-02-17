@@ -129,6 +129,8 @@ A short and informative description must be present. Please follow the
 [specification](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-description)
 for the formatting options allowed. All HTML tags are not supported.
 
+Descriptions must not contain any direct links.
+
 ```xml
 <description>
   <p>Some description</p>
