@@ -129,9 +129,6 @@ A short and informative description must be present. Please follow the
 [specification](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-description)
 for the formatting options allowed. All HTML tags are not supported.
 
-The number of paragraphs must not exceed 15. In general it should look
-something like this:
-
 ```xml
 <description>
   <p>Some description</p>
@@ -321,9 +318,9 @@ Applications must supply a releases tag in their MetaInfo to pass
 validation. Please make sure to also follow the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#release-notes)
 while writing release notes.
 
-Paragraphs in release description must not exceed 15 and they must not
-contain any direct URLs. Flathub supports showing a detailed release
-note link when `<url type="details">` tag is used. Release dates must
+Paragraphs in release description must not contain any direct URLs. 
+Flathub supports showing a detailed release note link when 
+`<url type="details">` tag is used. Release dates must
 not be in the future and versions must be [properly ordered](https://www.freedesktop.org/software/appstream/docs/chap-AppStream-Misc.html#spec-vercmp-recommendations).
 
 Releases in MetaInfo should look like this:
