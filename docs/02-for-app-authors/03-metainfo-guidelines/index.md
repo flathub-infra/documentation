@@ -375,7 +375,8 @@ To see if it was detected correctly, check the [generated output](#checking-the-
 ## MetaInfo translations
 
 :::note
-English tag values must not use the `xml:lang` property.
+English tag values must not use the `xml:lang` property. A tag value
+without `xml:lang` must be present.
 :::
 
 Various tags in MetaInfo support translations using the `xml:lang="<lang>"`
