@@ -19,7 +19,10 @@ linter which also validates the MetaInfo file and the generated data.
 To run the same check locally, [build and run the linter](/docs/for-app-authors/submission#before-submission)
 on the Flatpak.
 
-The error messages are explained in the [linter documentation](/docs/for-app-authors/linter).
+The error messages coming from `appstreamcli` are in `appstream` block
+and explained in the [data validation](https://www.freedesktop.org/software/appstream/docs/chap-Validation.html#validator-issues-list)
+page. A list of error messages for the linter can be found in the 
+[linter page](/docs/for-app-authors/linter).
 
 ## Path and filename
 

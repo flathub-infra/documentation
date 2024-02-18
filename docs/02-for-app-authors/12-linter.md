@@ -91,6 +91,9 @@ has failed validation.
 Please use [Flathub's appstreamcli](./03-metainfo-guidelines/index.md#validation)
 to validate the file and fix the issues reported.
 
+Please check the [data validation](https://www.freedesktop.org/software/appstream/docs/chap-Validation.html#validator-issues-list)
+page for explanation of error codes.
+
 ### appstream-metainfo-missing
 
 **Exceptions allowed**: No
