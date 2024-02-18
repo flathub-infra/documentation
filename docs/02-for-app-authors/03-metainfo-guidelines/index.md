@@ -431,11 +431,7 @@ The following tags can have translations: `name`, `name` child tag in
 <screenshots>
   <screenshot type="default">
     <image>https://example.org/example1.png</image>
-    <caption>A caption</caption>
-    <caption xml:lang="de">Translated caption</caption>
-  </screenshot>
-  <screenshot>
-    <image xml:lang="de">https://example.org/example2.png</image>
+    <image xml:lang="de">https://example.org/example1_de.png</image>
     <caption>A caption</caption>
     <caption xml:lang="de">Translated caption</caption>
   </screenshot>
