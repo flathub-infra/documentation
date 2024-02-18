@@ -404,10 +404,12 @@ without `xml:lang` must be present.
 :::
 
 Various tags in MetaInfo support translations using the `xml:lang="<lang>"`
-property like so: `<name xml:lang="de">Translated name</name>`.
+property.
 
 The following tags can have translations: `name`, `name` child tag in
 `developer`, `summary`, `keywords`, `image`, `caption` and `description`.
+
+The `description` tag has to be translated by each `<p>` and `<li>` tags.
 
 ```xml
 
@@ -424,6 +426,7 @@ The following tags can have translations: `name`, `name` child tag in
   <p>Some description</p>
   <p xml:lang="de">Translated description</p>
   <ul>
+    <li>A list</li>
     <li xml:lang="de">Translated list</li>
   </ul>
 </description>
