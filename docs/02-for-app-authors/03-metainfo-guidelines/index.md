@@ -21,7 +21,7 @@ on the Flatpak.
 
 The error messages coming from `appstreamcli` are in `appstream` block
 and explained in the [data validation](https://www.freedesktop.org/software/appstream/docs/chap-Validation.html#validator-issues-list)
-page. A list of error messages for the linter can be found in the 
+page. A list of error messages for the linter can be found in the
 [linter page](/docs/for-app-authors/linter).
 
 ## Path and filename
@@ -228,6 +228,28 @@ Please don't use, generic categories like
 Please see the [translations section](#metainfo-translations) to
 translate the `keyword` tag.
 
+## Icons
+
+All desktop applications must install icons of the [required size](/docs/for-app-authors/requirements#application-icons)
+to the [proper location](https://docs.flatpak.org/en/latest/conventions.html#application-icons)
+and must also have a launchable entry so that  `appstreamcli compose`
+can fetch the icon from the desktop file.
+
+Console applications wanting to set icons for application stores, can
+also [install icons](https://docs.flatpak.org/en/latest/conventions.html#application-icons).
+If icons are installed an `icon` tag with `type=stock` can be used. The
+value must be the filename of the icon (usually the `$FLATPAK_ID`) and
+must not contain the extension suffix.
+
+If console applications do not install an icon, an `icon` tag with
+`type=remote` can be used with the tag value being a direct HTTP(S)
+link to an icon.
+
+```xml
+<icon type="stock">org.flatpak.qtdemo</icon>
+<icon type="remote">https://example.org/icon.png</icon>
+```
+
 ## Project Group
 
 The `<project_group/>` tag can be used if the application is affiliated
@@ -323,8 +345,8 @@ Applications must supply a releases tag in their MetaInfo to pass
 validation. Please make sure to also follow the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#release-notes)
 while writing release notes.
 
-Paragraphs in release description must not contain any direct URLs. 
-Flathub supports showing a detailed release note link when 
+Paragraphs in release description must not contain any direct URLs.
+Flathub supports showing a detailed release note link when
 `<url type="details">` tag is used. Release dates must
 not be in the future and versions must be [properly ordered](https://www.freedesktop.org/software/appstream/docs/chap-AppStream-Misc.html#spec-vercmp-recommendations).
 
