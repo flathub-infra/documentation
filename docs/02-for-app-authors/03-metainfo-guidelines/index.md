@@ -413,8 +413,10 @@ The `description` tag has to be translated by each `<p>` and `<li>` tags.
 
 ```xml
 
+<name>App name</name>
 <name xml:lang="de">Translated App name</name>
 
+<summary>A summary</summary>
 <summary xml:lang="de">Translated summary</summary>
 
 <developer id="tld.domain">
