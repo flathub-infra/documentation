@@ -216,8 +216,6 @@ If you need to change the desktop file, use the command `desktop-file-edit` on a
 
 Applications must provide application icons in at least 128×128px size, or a scalable SVG. Application icons should either be included as scalable SVGs or high-resolution PNGs, and unless they are directly copied from upstream during the package building, they should be limited to the minimum number. In general you shouldn't need to add any icon to your submission, but if you do, you should make sure to contribute upstream, so it is no longer needed in the future.
 
-"stock icons" are not supported.
-
 ## Permissions
 
 The Flatpak sandbox is still a work in progress. However, permissions should still be limited
