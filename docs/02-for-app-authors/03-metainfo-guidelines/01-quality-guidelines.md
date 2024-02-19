@@ -30,7 +30,7 @@ Use Flathub verification to indicate that you are the author of the app and that
 
 Apps should set a [brand color](/docs/for-app-authors/metainfo-guidelines/#brand-color) (in two variants, `light` and `dark`). This color is used by Flathub and native app store clients on banners, app pages, etc.
 
-Make sure the colors are not too similar to the app icon in order to ensure contrast when the color is used as a background behind the icon. Avoid using light colors color for the dark variant, or the same color for both dark and light. In most cases the dark variant should be a darker more muted version of the light brand color.
+Make sure the colors are not too similar to the app icon in order to ensure contrast when the color is used as a background behind the icon. Avoid using light colors for the dark variant, or the same color for both dark and light. In most cases the dark variant should be a darker, more muted version of the light brand color.
 
 ## App Icon
 
