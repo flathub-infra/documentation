@@ -223,7 +223,8 @@ on how to define them in MetaInfo.
 If they are present in both places, appstream will merge them.
 
 Please don't use, generic categories like
-`KDE, GTK, Qt, Application, GNOME, GUI`. These can be placed in `keywords`.
+`GTK, Qt, KDE, GNOME, Motif, Java, GUI, Application, XFCE, DDE`. 
+These can be placed in `keywords`.
 
 Please see the [translations section](#metainfo-translations) to
 translate the `keyword` tag.
