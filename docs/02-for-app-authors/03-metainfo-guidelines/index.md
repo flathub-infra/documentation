@@ -449,6 +449,17 @@ The `description` tag has to be translated by each `<p>` and `<li>` tags.
 </keywords>
 ```
 
+By default elements in MetaInfo that can be translatable will be marked
+as such. However `translate="no"` can be used to explicitly mark them
+as forbidden. The whole block of the `description` tag can be excluded
+by using `translate="no"`.
+
+```xml
+<developer id="tld.domain">
+  <name translate="no">Developer name</name>
+</developer>
+```
+
 ## Manifest location
 
 Applications that are directly uploaded to Flathub through their own
