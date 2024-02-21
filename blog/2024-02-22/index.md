@@ -38,7 +38,7 @@ This is the snippet you need to include in your metainfo file:
 </branding>
 ```
 
-In choosing the colors, try to make sure the colors work well in their respective context (e.g. don't use a light yellow for dark mode), and look good as a background behind the app icon (e.g. avoid using exactly the same color to maintain contrast). In most cases it's recommended to pick a lighter (or darker, for dark mode) version of one of the main colors from the icon. Alternatively you can also go with a complementary color that goes well with the icon's colors.
+In choosing the colors, try to make sure the colors work well in their respective context (e.g. don't use a light yellow for the dark color scheme), and look good as a background behind the app icon (e.g. avoid using exactly the same color to maintain contrast). In most cases it's recommended to pick a lighter tint of a main color from the icon for the light color scheme, and a darker shade for the dark color scheme. Alternatively you can also go with a complementary color that goes well with the icon's colors.
 
 ![Three examples of good/bad brand colors](color-examples.png)
 
