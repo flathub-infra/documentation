@@ -514,7 +514,7 @@ The target repo for Flathub is either `stable` or `beta`.
 
 This should not be reached by apps that are built on Flathub. They also
 should never use `branch/*` to name the branch of the Github repo for the
-app. Please see [this](https://docs.flathub.org/docs/for-app-authors/maintenance#the-repository)
+app. Please see [this](/docs/for-app-authors/maintenance#the-repository)
 for more details.
 
 Externally uploaded applications must ensure to upload `stable` branch refs
