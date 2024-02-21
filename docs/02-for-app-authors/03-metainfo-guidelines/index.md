@@ -238,7 +238,7 @@ translate the `keyword` tag.
 
 All desktop applications must install icons of the [required size](/docs/for-app-authors/requirements#application-icons)
 to the [proper location](https://docs.flatpak.org/en/latest/conventions.html#application-icons)
-and must also have a launchable entry so that  `appstreamcli compose`
+and must also have a [launchable](#launchable) entry so that  `appstreamcli compose`
 can fetch the icon from the desktop file.
 
 Console applications wanting to set icons for application stores, can
