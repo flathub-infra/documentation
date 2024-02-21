@@ -86,13 +86,15 @@ was passed to Flatpak Builder.
 **Exceptions allowed**: No
 
 The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
-has failed validation.
+has failed validation. The output from the validation is in the `appstream`
+block.
 
-Please use [Flathub's appstreamcli](./03-metainfo-guidelines/index.md#validation)
-to validate the file and fix the issues reported.
+Please use the [linter](/docs/for-app-authors/metainfo-guidelines/#validation)
+to validate the MetaInfo file and fix the issues reported.
 
-Please check the [data validation](https://www.freedesktop.org/software/appstream/docs/chap-Validation.html#validator-issues-list)
-page for explanation of error codes.
+A list of error codes and explanations can also be found online in the
+[data validation](https://www.freedesktop.org/software/appstream/docs/chap-Validation.html#validator-issues-list)
+page.
 
 ### appstream-metainfo-missing
 

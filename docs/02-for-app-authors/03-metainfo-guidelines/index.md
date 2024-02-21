@@ -14,15 +14,20 @@ Please consult the [official AppStream documentation](https://www.freedesktop.or
 ## Validation
 
 All MetaInfo files included in build must pass validation using the
-linter which also validates the MetaInfo file and the generated data.
+[linter](/docs/for-app-authors/linter) which can also validate the
+MetaInfo file. The validation can be performed with:
 
-To run the same check locally, [build and run the linter](/docs/for-app-authors/submission#before-submission)
-on the Flatpak.
+```sh
+flatpak-builder-lint appstream %{id}.metainfo.xml
+```
 
-The error messages coming from `appstreamcli` are in `appstream` block
-and explained in the [data validation](https://www.freedesktop.org/software/appstream/docs/chap-Validation.html#validator-issues-list)
-page. A list of error messages for the linter can be found in the
-[linter page](/docs/for-app-authors/linter).
+This runs `appstreamcli validate` from the [AppStream project](https://github.com/ximion/appstream/)
+with some Flathub specific checks integrated into it.
+
+Both errors and warnings are considered to be fatal by `appstreamcli`
+and needs to be resolved. A list of error codes and explanations can
+also be found online in the [data validation](https://www.freedesktop.org/software/appstream/docs/chap-Validation.html#validator-issues-list)
+page.
 
 ## Path and filename
 
@@ -223,7 +228,7 @@ on how to define them in MetaInfo.
 If they are present in both places, `appstreamcli compose` will merge them.
 
 Please don't use, generic categories like
-`GTK, Qt, KDE, GNOME, Motif, Java, GUI, Application, XFCE, DDE`. 
+`GTK, Qt, KDE, GNOME, Motif, Java, GUI, Application, XFCE, DDE`.
 These can be placed in `keywords`.
 
 Please see the [translations section](#metainfo-translations) to
