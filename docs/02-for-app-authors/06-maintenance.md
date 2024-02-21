@@ -118,12 +118,12 @@ Flathub publishes download statistics for every app or runtime. The raw JSON fil
 This section applies to application repositories hosted in the [Flathub](https://github.com/flathub) organisation on GitHub.
 
 The GitHub account [submitting](/docs/for-app-authors/submission#how-to-submit-an-app) the application to Flathub along with any upstream developers of the application
-(if mentioned by the submitter or at reviewer's discretion) will be given access to the application repository once created.
+(if mentioned by the submitter or at reviewer's discretion) will be given access to the application repository once created. In case the application belongs to a well-known
+software project like KDE or GNOME or Endless, their respective [team on Flathub](https://github.com/orgs/flathub/teams/) will also be given access.
 
-If an existing maintainer wants someone involved with upstream or the Flathub application repository, to also have access, they should open an issue on
-[GitHub](https://github.com/flathub/flathub/issues/new) or contact the admins via [admins@flathub.org](mailto:admins@flathub.org).
+If an existing maintainer wants a trusted member or someone involved with upstream or the Flathub application repository, to also have access, they should preferably open an issue on [GitHub](https://github.com/flathub/flathub/issues/new) or contact the admins via [admins@flathub.org](mailto:admins@flathub.org).
 
-An upstream developer or author may also use the same process as above to request access to the repository.
+An upstream developer or author of the application may also use the same process as above to request access to the repository.
 
 In case an application becomes unmaintained (and the maintainer unreachable) for a prolonged period of time and you want to volunteer to start maintaining it, please open an issue on [GitHub](https://github.com/flathub/flathub/issues).
 
