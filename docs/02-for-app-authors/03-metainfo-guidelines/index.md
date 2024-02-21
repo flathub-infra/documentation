@@ -8,7 +8,7 @@ page too, to make your application metadata more presentable.
 :::
 
 :::note
-Please consult the [official appstream documentation](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html) for more in-depth info.
+Please consult the [official AppStream documentation](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html) for more in-depth info.
 :::
 
 ## Validation
@@ -220,7 +220,7 @@ So defining them seperately in the MetaInfo is not necessary.
 Please see the [specification](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-categories)
 on how to define them in MetaInfo.
 
-If they are present in both places, appstream will merge them.
+If they are present in both places, `appstreamcli compose` will merge them.
 
 Please don't use, generic categories like
 `GTK, Qt, KDE, GNOME, Motif, Java, GUI, Application, XFCE, DDE`. 
@@ -389,7 +389,7 @@ Appstream provides translation information, so that software centers can inform 
 
 You can specify this tag multiple times if needed.
 
-Please note that the `appstream-compose` expects the translations at:
+Please note that the `appstreamcli compose` expects the translations at:
 
 - For `gettext` it’s `${FLATPAK_DEST}/share/locale/<lang>/LC_MESSAGES/<id>.mo` where `id` is the value in the translation tag.
 - For `qt` if the `id` string has slashes it's either `${FLATPAK_DEST}/share/<id>_<lang>.qm` or `${FLATPAK_DEST}/share/<id>/<lang>.qm`. If the `id` string has no slashes it's

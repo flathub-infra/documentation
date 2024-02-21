@@ -68,7 +68,7 @@ for more information.
 
 The screenshots in [AppStream catalog](/docs/for-app-authors/metainfo-guidelines/#checking-the-generated-output)
 file which are not of [type](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-screenshots)
-`source` aren't mirrored to https://dl.flathub.org/media or the legacy 
+`source` aren't mirrored to https://dl.flathub.org/media or the legacy
 https://dl.flathub.org/repo/screenshots.
 
 [Flatpak Builder](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html)
@@ -135,7 +135,7 @@ and all of them must match the app id used in the [Flatpak manifest](https://doc
 ### appstream-missing-developer-name
 
 The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
-is missing the `developer` tag with a child `name` tag or the legacy 
+is missing the `developer` tag with a child `name` tag or the legacy
 `developer_name` tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#name-summary-and-developer-name).
 
 This must be present for proper display and classification by app stores.
@@ -217,10 +217,10 @@ The process is automated when using [flatpak-github-actions](https://github.com/
 
 The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
 either uses an unsupported `component` type or is missing the `type`
-attribute. As a result the Appstream catalogue data has the wrong
-component type.
+attribute. As a result the [AppStream catalog data](/docs/for-app-authors/metainfo-guidelines/#checking-the-generated-output)
+has the wrong component type.
 
-The following types are supported on Flathub: `addon, console-application, desktop, desktop-application, runtime`. 
+The following types are supported on Flathub: `addon, console-application, desktop, desktop-application, runtime`.
 Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#header) for the details.
 
 ### desktop-file-exec-has-flatpak-run
@@ -611,8 +611,8 @@ with a proper `type` attribute.
 The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
 is missing the `type` attribute in the `component` tag.
 
-All MetaInfo files must use a supported `type` attribute in the `component` 
-tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#header) 
+All MetaInfo files must use a supported `type` attribute in the `component`
+tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#header)
 for the details.
 
 ### module-module_name-source-dest-filename-is-path
@@ -782,8 +782,8 @@ The following are considered to be low-quality categories:
 `KDE, GTK, Qt, Application, GNOME` and are best suited for `Keywords`
 instead.
 
-Low quality categories are filtered by appstream. Proper category names
-should be used. Please refer to the [category specification](https://specifications.freedesktop.org/menu-spec/latest/apa.html)
+Low quality categories are filtered by `appstreamcli compose`. Proper
+category names should be used. Please refer to the [category specification](https://specifications.freedesktop.org/menu-spec/latest/apa.html)
 for category names.
 
 ### finish-args-contains-both-x11-and-fallback
