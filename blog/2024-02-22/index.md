@@ -23,7 +23,7 @@ While it has been in appstream [for a few years](https://github.com/ximion/appst
 
 ![elementary AppCenter with brand colors on app banners](appcenter.png)
 
-Now that we can finally pick up these colors from appstream metainfo files we want to make use of them, and they are essential for the new banners.
+Now that we can finally pick these colors up from AppStream MetaInfo files, we want to make use of them—and they are essential for the new banners.
 
 ## Adding brand colors
 
