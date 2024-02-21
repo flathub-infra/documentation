@@ -31,7 +31,7 @@ Apps are expected to provide two different brand colors for light and dark. [Her
 
 This is the snippet you need to include in your MetaInfo file:
 
-```
+```xml
 <branding>
   <color type="primary" scheme_preference="light">#faa298</color>
   <color type="primary" scheme_preference="dark">#7f2c22</color>
