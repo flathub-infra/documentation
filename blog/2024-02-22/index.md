@@ -27,7 +27,7 @@ Now that we can finally pick up these colors from appstream metainfo files we wa
 
 ## Adding brand colors
 
-Apps are expected to provide two different brand colors for light and dark. [Here's an example](https://github.com/pika-backup/pika-backup/blob/8f2f04a1a27d2b04db48f7dbf26577009ff39be3/data/app.metainfo.xml.in#L44) of an appstream file in the wild including brand colors.
+Apps are expected to provide two different brand colors for light and dark. [Here's an example](https://github.com/pika-backup/pika-backup/blob/8f2f04a1a27d2b04db48f7dbf26577009ff39be3/data/app.metainfo.xml.in#L44) of a MetaInfo file in the wild including brand colors.
 
 This is the snippet you need to include in your MetaInfo file:
 
