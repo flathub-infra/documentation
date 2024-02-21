@@ -21,7 +21,7 @@ This idea was first implemented in elementary AppCenter, and later standardized 
 
 While it has been in appstream [for a few years](https://github.com/ximion/appstream/issues/187), it was unfortunately not possible for Flathub's backend to pick it up until the port to libappstream a few weeks ago. This is why many apps are still not providing this metadata as we have not been able to make of it until now.
 
-![elementary Appcenter with brand colors on app banners](appcenter.png)
+![elementary AppCenter with brand colors on app banners](appcenter.png)
 
 Now that we can finally pick up these colors from appstream metainfo files we want to make use of them, and they are essential for the new banners.
 
