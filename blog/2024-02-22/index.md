@@ -19,7 +19,7 @@ App brand colors are an easy and effective way for app developers to give their 
 
 This idea was first implemented in elementary AppCenter, and later standardized as part of the AppStream specification.
 
-While it has been in AppStream itself [for a few years](https://github.com/ximion/appstream/issues/187), it was unfortunately not possible for Flathub's backend to pick it up until the recent [port to libappstream](../2024-02-21/index.md). This is why many apps are still not providing this metadata: we have not been able to make of it until now.
+While it has been in AppStream itself [for a few years](https://github.com/ximion/appstream/issues/187), it was unfortunately not possible for Flathub's backend to pick it up until the recent [port to libappstream](../2024-02-21/index.md). This is why many apps are still not providing this metadata -- we have not been able to make use of it until now.
 
 ![elementary AppCenter with brand colors on app banners](appcenter.png)
 
@@ -44,6 +44,6 @@ In choosing the colors, try to make sure the colors work well in their respectiv
 
 ## What's next?
 
-Today we've updated the metadata quality guidelines with [a new section on app brand colors](https://docs.flathub.org/docs/for-app-authors/metainfo-guidelines/quality-guidelines/#brand-colors). The metadata validation system on the Flathub website now also has an additional check for whether the brand colors are provided, and they're required to fully pass metadata quality review.
+Today we've updated the MetaInfo quality guidelines with [a new section on app brand colors](https://docs.flathub.org/docs/for-app-authors/metainfo-guidelines/quality-guidelines/#brand-colors). Going forward, brand colors will required as part of the MetaInfo quality review.
 
 If you have an app on Flathub, check out the guidelines and update your MetaInfo with brand colors as soon as possible. This will help your app look as good as possible, and will make it eligible to be featured when the new banners ship. Let's make Flathub a more colorful, exciting place to find new apps!
