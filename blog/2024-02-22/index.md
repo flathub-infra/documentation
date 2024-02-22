@@ -44,6 +44,6 @@ In choosing the colors, try to make sure the colors work well in their respectiv
 
 ## What's next?
 
-Today we've updated the MetaInfo quality guidelines with [a new section on app brand colors](https://docs.flathub.org/docs/for-app-authors/metainfo-guidelines/quality-guidelines/#brand-colors). Going forward, brand colors will required as part of the MetaInfo quality review.
+Today we've updated the MetaInfo quality guidelines with [a new section on app brand colors](https://docs.flathub.org/docs/for-app-authors/metainfo-guidelines/quality-guidelines/#brand-colors). Going forward, brand colors will be required as part of the MetaInfo quality review.
 
 If you have an app on Flathub, check out the guidelines and update your MetaInfo with brand colors as soon as possible. This will help your app look as good as possible, and will make it eligible to be featured when the new banners ship. Let's make Flathub a more colorful, exciting place to find new apps!
