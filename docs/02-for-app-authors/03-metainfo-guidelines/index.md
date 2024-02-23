@@ -15,10 +15,15 @@ Please consult the [official AppStream documentation](https://www.freedesktop.or
 
 All MetaInfo files included in build must pass validation using the
 [linter](/docs/for-app-authors/linter) which can also validate the
-MetaInfo file. The validation can be performed with:
+MetaInfo file. Install `org.flatpak.Builder` from Flathub:
 
 ```sh
-flatpak-builder-lint appstream %{id}.metainfo.xml
+flatpak install -y flathub org.flatpak.Builder
+```
+Then the MetaInfo file validation can be performed with:
+
+```sh
+flatpak run --command=flatpak-builder-lint org.flatpak.Builder appstream %{id}.metainfo.xml
 ```
 
 This runs `appstreamcli validate` from the [AppStream project](https://github.com/ximion/appstream/)
