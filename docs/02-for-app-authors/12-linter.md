@@ -696,7 +696,7 @@ The manifest schema was malformed.
 
 The manifest schema failed validation.
 
-## metainfo-missing-component-tag
+### metainfo-missing-component-tag
 
 **Exceptions allowed**: No
 
