@@ -125,10 +125,12 @@ The deprecated `developer_name` tag is also supported for backwards compatibilit
 :::
 
 A `developer` [tag](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-developer)
-with a `name` child tag must be present.
+with a `name` child tag must be present. Only one `developer` tag is
+allowed and the `name` tag also must be present only once in
+[untranslated](#metainfo-translations) form.
 
 ```xml
-<developer id="tld.domain">
+<developer id="tld.vendor">
   <name>Developer name</name>
 </developer>
 ```
