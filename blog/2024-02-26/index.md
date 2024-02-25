@@ -5,7 +5,7 @@ authors: [razze, bertob]
 tags: [flathub, quality]
 ---
 
-We're gearing up to launch curated banners on the Flathub home page! However, before we can do that there's one more blocker: Banners need a background color for each app, and many apps don't provide this metadata yet. This is why today we're expanding our MetaInfo quality guidelines and quality checks on the website; If you haven't yet, please add these colors to your app's MetaInfo file today using the `<branding/>` appstream tag, and read on to learn more about brand colors.
+We're gearing up to launch curated banners on the Flathub home page! However, before we can do that there's one more blocker: Banners need a background color for each app, and many apps don't provide this metadata yet. This is why today we're expanding our MetaInfo quality guidelines and quality checks on the website; If you haven't yet, please add these colors to your app's MetaInfo file using the `<branding/>` appstream tag, and read on to learn more about brand colors.
 
 <!-- truncate -->
 
