@@ -19,7 +19,7 @@ App brand colors are an easy and effective way for app developers to give their 
 
 This idea was first implemented in elementary AppCenter, and later standardized as part of the [AppStream specification](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-branding).
 
-While it has been in AppStream itself [for a few years](https://github.com/ximion/appstream/issues/187), it was unfortunately not possible for Flathub's backend to pick it up until the recent [port to libappstream](../2024-02-21/index.md). This is why many apps are still not providing this metadata -- even if it was available from the app side we were unable to display it until now.
+While it has been in AppStream itself [for a few years](https://github.com/ximion/appstream/issues/187), it was unfortunately not possible for Flathub's backend to pick it up until the recent [port to libappstream](../2024-02-21/index.md). This is why many apps are still not providing this metadata—even if it was available from the app side we were unable to display it until now.
 
 ![elementary AppCenter with brand colors on app banners](appcenter.png)
 
