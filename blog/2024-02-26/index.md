@@ -1,5 +1,5 @@
 ---
-slug: quality-moderation
+slug: introducing-app-brand-colors
 title: "Introducing App Brand Colors"
 authors: [razze, bertob]
 tags: [flathub, quality]
