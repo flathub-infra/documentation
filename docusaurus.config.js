@@ -39,6 +39,9 @@ const config = {
           editUrl: "https://github.com/flathub/documentation/tree/main/",
         },
         blog: {
+          feedOptions: {
+            type: "all",
+          },
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
