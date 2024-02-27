@@ -85,7 +85,7 @@ was passed to Flatpak Builder.
 
 **Exceptions allowed**: No
 
-The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
 has failed validation. The output from the validation is in the `appstream`
 block.
 
@@ -93,19 +93,20 @@ AppStream considers both warnings (`W`) and errors (`E`) as fatal
 and they must be resolved.
 
 Please use the [linter](/docs/for-app-authors/metainfo-guidelines/#validation)
-to validate the MetaInfo file and fix the issues reported.
+to validate the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
+and fix the issues reported.
 
 Flathub increases the severity of the following checks from the upstream
 default of `info` to `error`. So they are documented below.
 
 - `cid-has-number-prefix` - The `id` tag contains a segement starting with a number. Please see the [application ID guidelines](/docs/for-app-authors/requirements#application-id) for more information.
 - `cid-missing-affiliation-gnome` - The application is using a `project_group` tag with the value `GNOME` but the [ID](/docs/for-app-authors/metainfo-guidelines/#id) does not start with `org.gnome`. Please see the [documentation](/docs/for-app-authors/metainfo-guidelines/#project-group) on how to use this tag.
-- `content-rating-missing` - The application is missing an [OARS rating](/docs/for-app-authors/metainfo-guidelines/#oars-information) in the Metainfo file.
-- `desktop-app-launchable-omitted` - The application is missing a [launchable tag](/docs/for-app-authors/metainfo-guidelines/#launchable) in the MetaInfo file.
-- `invalid-child-tag-name` - The Metainfo file has a child tag which isn't allowed under that parent tag.
-- `name-has-dot-suffix` - The [name](/docs/for-app-authors/metainfo-guidelines/#name-summary-and-developer-name) in the MetaInfo file ends in a dot (`.`).
-- `releases-info-missing` - The Metainfo file has no [release information](/docs/for-app-authors/metainfo-guidelines/#release).
-- `unknown-tag` - The Metainfo file has an invalid tag. Non-standard tags must be prefixed with `x-` or should be under `<custom>` tag.
+- `content-rating-missing` - The application is missing an [OARS rating](/docs/for-app-authors/metainfo-guidelines/#oars-information) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
+- `desktop-app-launchable-omitted` - The application is missing a [launchable tag](/docs/for-app-authors/metainfo-guidelines/#launchable) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
+- `invalid-child-tag-name` - The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has a child tag which isn't allowed under that parent tag.
+- `name-has-dot-suffix` - The [name](/docs/for-app-authors/metainfo-guidelines/#name-summary-and-developer-name) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) ends in a dot (`.`).
+- `releases-info-missing` - The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has no [release information](/docs/for-app-authors/metainfo-guidelines/#release).
+- `unknown-tag` - The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has an invalid tag. Non-standard tags must be prefixed with `x-` or should be under `<custom>` tag.
 
 A full list of error codes and explanations can also be found online in the
 [data validation](https://www.freedesktop.org/software/appstream/docs/chap-Validation.html#validator-issues-list)
@@ -115,7 +116,7 @@ page.
 
 **Exceptions allowed**: No
 
-The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
 is missing from the build.
 
 Please make sure to install it to the correct folder and name the file
@@ -130,7 +131,7 @@ The build or the ostree repo is missing the folder `files/share/app-info`.
 Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#checking-the-generated-output)
 for more details.
 
-A [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+A [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
 must be supplied during the build with the [proper filename](/docs/for-app-authors/metainfo-guidelines/#path-and-filename),
 [id tag](/docs/for-app-authors/metainfo-guidelines/#id),proper `desktop-id` in `launchable` [tag](/docs/for-app-authors/metainfo-guidelines/#launchable)
 and all of them must match the app id used in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
@@ -144,14 +145,14 @@ file.
 
 This can happen when compose fails.
 
-A [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+A [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
 must be supplied during the build with the [proper filename](/docs/for-app-authors/metainfo-guidelines/#path-and-filename),
 [id tag](/docs/for-app-authors/metainfo-guidelines/#id), proper `desktop-id` in `launchable` [tag](/docs/for-app-authors/metainfo-guidelines/#launchable)
 and all of them must match the app id used in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
 
 ### appstream-missing-developer-name
 
-The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
 is missing the `developer` tag with a child `name` tag or the legacy
 `developer_name` tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#name-summary-and-developer-name).
 
@@ -159,7 +160,7 @@ This must be present for proper display and classification by app stores.
 
 ### appstream-missing-project-license
 
-The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
 is missing the `project_license` tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#license).
 
 This must be present for proper display of the license by the app store.
@@ -207,7 +208,7 @@ The [AppStream catalog](/docs/for-app-authors/metainfo-guidelines/#checking-the-
 file has an `icon` key with `type=remote` but the URL in the tag does not
 start with `https://dl.flathub.org/media/`.
 
-Any remote icons from the MetaInfo file will automatically be mirrored
+Any remote icons from the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) will automatically be mirrored
 to the above media repo provided `--mirror-screenshots-url=https://dl.flathub.org/media/`
 was passed while [building the Flatpak](/docs/for-app-authors/submission#before-submission)
 to [Flatpak Builder](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html).
@@ -224,7 +225,7 @@ file has [type](https://www.freedesktop.org/software/appstream/docs/chap-Metadat
 `thumbnail`.
 
 This can happen when screenshot tags are missing/not properly defined in
-the [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
 or if the image file/URL is malformed.
 
 Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#screenshots)
@@ -246,7 +247,7 @@ file is malformed and has multiple `component` tags.
 
 **Exceptions allowed**: No
 
-The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
 is missing the `flathub::manifest` tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#manifest-location)
 on how to define it.
 
@@ -273,7 +274,7 @@ The process is automated when using [flatpak-github-actions](https://github.com/
 
 **Exceptions allowed**: No
 
-The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
 either uses an unsupported `component` type or is missing the `type`
 attribute. As a result the [AppStream catalog data](/docs/for-app-authors/metainfo-guidelines/#checking-the-generated-output)
 has the wrong component type.
@@ -715,7 +716,7 @@ The manifest schema failed validation.
 
 **Exceptions allowed**: No
 
-The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
 is missing the initial `component` tag.
 
 All MetaInfo files must start with the [component tag](/docs/for-app-authors/metainfo-guidelines/#header)
@@ -725,7 +726,7 @@ with a proper `type` attribute.
 
 **Exceptions allowed**: No
 
-The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
 is missing the `type` attribute in the `component` tag.
 
 All MetaInfo files must use a supported `type` attribute in the `component`
@@ -854,7 +855,7 @@ them might be promoted to an error in the future if needed.
 
 ### appstream-name-too-long
 
-The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
 has a `name` tag of length greater that 20 characters.
 
 Please refer to the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#not-too-long)
@@ -864,7 +865,7 @@ Only the English name is checked.
 
 ### appstream-screenshot-missing-caption
 
-The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
 is missing `caption` tag for one or more screenshots or the `caption`
 tag is empty.
 
@@ -873,7 +874,7 @@ for more details.
 
 ### appstream-summary-ends-in-dot
 
-The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
 has a `summary` tag ending with the dot or period character `.`.
 
 Please refer to the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#no-weird-formatting-1)
@@ -883,7 +884,7 @@ Only the English summary is checked.
 
 ### appstream-summary-too-long
 
-The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo-files)
+The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
 has a `summary` tag of length greater that 35 characters.
 
 Please refer to the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#not-too-long-1)
