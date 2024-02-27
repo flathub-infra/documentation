@@ -41,6 +41,7 @@ page.
 :::
 
 Place the MetaInfo file into `/app/share/metainfo/`, name it `%{id}.metainfo.xml`, where `%{id}` is the [ID](#id).
+This ID and the filename must match exactly with the `id` set in the [Flatpak manifest](/docs/for-app-authors/requirements#example-manifest).
 
 ## MetaInfo generator
 
