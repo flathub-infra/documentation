@@ -89,10 +89,25 @@ The [MetaInfo file](https://docs.flatpak.org/en/latest/conventions.html#metainfo
 has failed validation. The output from the validation is in the `appstream`
 block.
 
+AppStream considers both warnings (`W`) and errors (`E`) as fatal
+and they must be resolved.
+
 Please use the [linter](/docs/for-app-authors/metainfo-guidelines/#validation)
 to validate the MetaInfo file and fix the issues reported.
 
-A list of error codes and explanations can also be found online in the
+Flathub increases the severity of the following checks from the upstream
+default of `info` to `error`. So they are documented below.
+
+- `cid-has-number-prefix` - The `id` tag contains a segement starting with a number. Please see the [application ID guidelines](/docs/for-app-authors/requirements#application-id) for more information.
+- `cid-missing-affiliation-gnome` - The application is using a `project_group` tag with the value `GNOME` but the [ID](/docs/for-app-authors/metainfo-guidelines/#id) does not start with `org.gnome`. Please see the [documentation](/docs/for-app-authors/metainfo-guidelines/#project-group) on how to use this tag.
+- `content-rating-missing` - The application is missing an [OARS rating](/docs/for-app-authors/metainfo-guidelines/#oars-information) in the Metainfo file.
+- `desktop-app-launchable-omitted` - The application is missing a [launchable tag](/docs/for-app-authors/metainfo-guidelines/#launchable) in the MetaInfo file.
+- `invalid-child-tag-name` - The Metainfo file has a child tag which isn't allowed under that parent tag.
+- `name-has-dot-suffix` - The [name](/docs/for-app-authors/metainfo-guidelines/#name-summary-and-developer-name) in the MetaInfo file ends in a dot (`.`).
+- `releases-info-missing` - The Metainfo file has no [release information](/docs/for-app-authors/metainfo-guidelines/#release).
+- `unknown-tag` - The Metainfo file has an invalid tag. Non-standard tags must be prefixed with `x-` or should be under `<custom>` tag.
+
+A full list of error codes and explanations can also be found online in the
 [data validation](https://www.freedesktop.org/software/appstream/docs/chap-Validation.html#validator-issues-list)
 page.
 
