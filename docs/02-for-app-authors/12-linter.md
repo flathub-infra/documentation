@@ -929,7 +929,7 @@ in the manifest has both `--socket=x11` and `--socket=wayland`.
 
 Both are not needed. If the application does not support native wayland
 only `--socket=x11` should be used. If it does support native wayland,
-`--socket=fallback=x11` and `--socket=wayland` should be used.
+`--socket=fallback-x11` and `--socket=wayland` should be used.
 
 ### finish-args-deprecated-shm
 
