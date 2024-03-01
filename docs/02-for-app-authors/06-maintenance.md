@@ -73,42 +73,6 @@ Please also try to contact a flathub admin to archive the repo by either creatin
 
 In case you want to step down as a maintainer but wish someone to take over maintenance, you can ask in the [tracker issue](https://github.com/flathub/flathub/issues/3693).
 
-### Flathub external data checker config
-
-[Flatpak external data checker](/docs/for-app-authors/external-data-checker) is a tool that checks for updates of modules, which have been configured to be updated. If you are using the Flathub infrastructure (repo on the Flathub org), this tool will be run every hour for you and will create merge requests if there are newer version.
-
-#### Only create updates with important modules
-
-You can configure the external data checker to only create updates for modules that are marked as important. This is done by creating a `flathub.json` file with the following contents:
-
-```json title="flathub.json"
-{
-  "require-important-update": true
-}
-```
-
-This also needs your module config to have `is-important: true` set.
-
-#### Automatically merging PRs
-
-You can configure the external data checker to automatically merge PRs. This is done by creating a `flathub.json` file with the following contents:
-
-```json title="flathub.json"
-{
-  "automerge-flathubbot-prs": true
-}
-```
-
-#### Disable external data checker
-
-You can opt out of this by creating a `flathub.json` file with the following contents:
-
-```json title="flathub.json"
-{
-  "disable-external-data-checker": true
-}
-```
-
 ## Download statistics
 
 Flathub publishes download statistics for every app or runtime. The raw JSON files are available at [flathub.org/stats](https://flathub.org/stats/). These break out app downloads and updates. This is also the basis for the data shown on flathub.org, additionally there are some community members that generously provide frontends to interpret the data and make it more useful for app developers at [https://ahayzen.com/direct/flathub.html](https://ahayzen.com/direct/flathub.html) and [https://klausenbusk.github.io/flathub-stats/](https://klausenbusk.github.io/flathub-stats/)
