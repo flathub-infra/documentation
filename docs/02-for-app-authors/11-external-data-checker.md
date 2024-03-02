@@ -2,7 +2,7 @@
 
 The [Flatpak External Data Checker](https://github.com/flathub/flatpak-external-data-checker) is a tool that can be used to check for updates to external data sources. It is designed to be used in conjunction with the [Flathub](https://flathub.org) build system, but can be used with any Flatpak repository.
 
-Check the project's README for addition information not covered here.
+Check the project's README above for additional information not covered here.
 
 ## Configuration
 
