@@ -222,11 +222,13 @@ uploaded applications must ensure to mirror media as explained above.
 
 No image tag of screenshots in the [AppStream catalog](/docs/for-app-authors/metainfo-guidelines/#checking-the-generated-output)
 file has [type](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-screenshots)
-`thumbnail`.
+`thumbnail`. Thumbnail images are generated automatically by
+`appstreamcli compose` when the image in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
+meets the required size.
 
 This can happen when screenshot tags are missing/not properly defined in
 the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
-or if the image file/URL is malformed.
+or if the image file/URL is malformed or is below the required size.
 
 Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#screenshots)
 on how to define them.
