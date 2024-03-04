@@ -1044,7 +1044,9 @@ Specifying the branch property may lead to other errors.
 
 ## Exceptions
 
-Linter errors can be ignored with exceptions. Exceptions are granted on a case-by-case basis, and it's not because you see a package with an exception that your exception will be granted. Some are grandfathered as their existence predates the linter. The exception pull request needs to be merged for a package submission to be buildable.
+Linter errors can be ignored with exceptions. Exceptions are granted on a case-by-case basis.
+
+The exception pull request needs to be merged for a package submission to be buildable.
 
 To apply for an exception, you need to submit a [Pull Request](https://github.com/flathub/flatpak-builder-lint/pulls) for the JSON [exception file](https://github.com/flathub/flatpak-builder-lint/blob/master/flatpak_builder_lint/staticfiles/exceptions.json). The syntax is:
 
@@ -1054,5 +1056,5 @@ To apply for an exception, you need to submit a [Pull Request](https://github.co
 }
 ```
 
-There should be only one entry for the application, but it can contain multiple exceptions. Please make sure the reason is explanatory. The reason must not be "app-id predates this linter rule" for
-manually added exceptions by application maintainers.
+There should be only one entry for the application, but it can contain
+multiple exceptions. Please make sure the reason is explanatory.
