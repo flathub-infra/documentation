@@ -113,7 +113,7 @@ for other recommended licenses.
 Followed by a mandatory `project_license` tag:
 
 ```xml
-<project_license>GPL-3.0</project_license>
+<project_license>GPL-3.0-only</project_license>
 ```
 
 The value must be a valid [SPDX license identifier](https://spdx.org/licenses/). License [expression operators](https://spdx.github.io/spdx-spec/v2-draft/SPDX-license-expressions/#d4-composite-license-expressions) like `AND, OR, WITH` are supported.
