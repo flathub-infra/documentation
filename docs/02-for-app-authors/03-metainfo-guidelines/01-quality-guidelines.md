@@ -47,7 +47,14 @@ For example:
 
 Brand colors are often used as a background behind the app icon, so make sure the colors are not too similar to the app icon in order to ensure good contrast. Avoid using light colors for the dark variant, or the same color for both dark and light. In most cases the dark variant should be a darker, more muted version of the light brand color.
 
+Brand colors should be colorful. In particular, avoid white (or very light grays) and black (or very dark grays).
+
+When choosing brand colors, a good starting point is using a lighter/darker version of the primary color used in the icon (though be careful to maintain good contrast with the icon), or a complementary color that pairs well with the main icon color (e.g. blue if the icon is yellow).
+
+It's recommended to consider the brand colors an extension of the app icon, and have the icon designer choose them when making the icon.
+
 ![Good example of banner colors for light and dark.](assets/color-light-dark.png)
+
 
 ## App Icon
 
