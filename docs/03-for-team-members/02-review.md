@@ -17,4 +17,5 @@ If you wish to do this manually you should:
 ## Links
 
 - `org.gnome` ID is moderated, [this list](https://gitlab.gnome.org/Teams/Releng/AppOrganization/-/blob/main/data/registered-app-ids.yml) provides the current applications that are allowed to
-use it. (Note, that Flathub hosts some third party apps using that id for historical reasons but no new apps should be accepted if it isn't on that list)
+use it. (Note, that Flathub hosts some third party apps using that id for historical reasons but no new apps should be accepted if it isn't on that list).
+- Apps belonging to a group [here](https://invent.kde.org/explore/groups?page=1) are allowed to use `org.kde` IDs.
