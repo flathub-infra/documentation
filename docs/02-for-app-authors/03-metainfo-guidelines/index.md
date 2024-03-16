@@ -51,7 +51,7 @@ page.
 ## Path and filename
 
 :::note
-`/app/share/appdata` and `%{id}.appdata.xml` are considered to be legcay path and filename respectively.
+`/app/share/appdata` and `%{id}.appdata.xml` are considered to be the legacy path and filename, respectively.
 :::
 
 Place the MetaInfo file into `/app/share/metainfo/`, name it `%{id}.metainfo.xml`, where `%{id}` is the [ID](#id).
