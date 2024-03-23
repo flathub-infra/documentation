@@ -496,6 +496,14 @@ exist.
 
 ### finish-args-has-nosocket-socket
 
+The following error codes are included here:
+
+finish-args-has-nosocket-x11, finish-args-has-nosocket-fallback-x11,
+finish-args-has-nosocket-wayland, finish-args-has-nosocket-pulseaudio,
+finish-args-has-nosocket-system-bus, finish-args-has-nosocket-session-bus,
+finish-args-has-nosocket-ssh-auth, finish-args-has-nosocket-pcsc,
+finish-args-has-nosocket-cups, finish-args-has-nosocket-gpg-agent
+
 **Exceptions allowed**: No
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
@@ -508,6 +516,12 @@ is granted.
 
 ### finish-args-has-nodevice-device
 
+The following error codes are included here:
+
+finish-args-has-nodevice-dri, finish-args-has-nodevice-input,
+finish-args-has-nodevice-kvm, finish-args-has-nodevice-shm,
+finish-args-has-nodevice-all
+
 **Exceptions allowed**: No
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
@@ -519,6 +533,10 @@ These do not need to present in the build manifest. By default no access
 is granted.
 
 ### finish-args-has-unshare-subsystem
+
+The following error codes are included here:
+
+finish-args-has-unshare-network, finish-args-has-unshare-ipc
 
 **Exceptions allowed**: No
 
@@ -590,6 +608,13 @@ The manifest has both `--filesystem=home` and `--filesystem=host` in
 `host` grants access to `home`. Specifying both is redundant.
 
 ### finish-args-reserved-dir
+
+The following error codes are included here:
+
+finish-args-reserved-.flatpak-info, finish-args-reserved-app, finish-args-reserved-dev,
+finish-args-reserved-etc, finish-args-reserved-lib, finish-args-reserved-lib32,
+finish-args-reserved-proc, finish-args-reserved-root, finish-args-reserved-run/flatpak,
+finish-args-reserved-run/host, finish-args-reserved-sbin, finish-args-reserved-usr
 
 **Exceptions allowed**: No
 
