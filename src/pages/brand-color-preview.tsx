@@ -89,7 +89,7 @@ function BrandColorPreview() {
 
   return (
     <Layout title="Brand color preview" description="Preview your brand color">
-      <div className="h-screen flex flex-col max-w-11/12 mx-auto my-0 mt-4 w-11/12 2xl:w-[1400px] 2xl:max-w-[1400px]">
+      <div className="flex flex-col max-w-11/12 mx-auto my-4 w-11/12 2xl:w-[1400px] 2xl:max-w-[1400px]">
         <div className="p-4 flex flex-col gap-2">
           <div className="flex flex-col">
             <label className="font-semibold" htmlFor="name">
