@@ -60,7 +60,7 @@ const BannerPreview = ({
   );
 };
 
-function BannerPreview() {
+function BannerPreviewPage() {
   const [name, setName] = useState<string>("Name");
   const [summary, setSummary] = useState<string>("Summary");
 
@@ -196,4 +196,4 @@ function BannerPreview() {
   );
 }
 
-export default BannerPreview;
+export default BannerPreviewPage;
