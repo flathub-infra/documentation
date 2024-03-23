@@ -425,17 +425,45 @@ This must not be used except for very specific cases. Please follow the
 [requirements section](/docs/for-app-authors/requirements#dbus-access) to
 find out specific permissions needed.
 
+### finish-args-arbitrary-xdg-cache-access
+
+**Exceptions allowed**: Yes[^3]
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--filesystem=xdg-cache`, with or without any
+of `:ro, :rw, :create`.
+
+Flatpak creates its own XDG cache directory under
+`~/.var/app/<app-id>/cache`.
+Applications do not need to access the host's cache directory.
+
+Please see the [Flatpak permission reference](https://docs.flatpak.org/en/latest/sandbox-permissions-reference.html#f5).
+
+### finish-args-arbitrary-xdg-config-access
+
+**Exceptions allowed**: Yes[^3]
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--filesystem=xdg-config`, with or without any
+of `:ro, :rw, :create`.
+
+Flatpak creates its own XDG config directory under
+`~/.var/app/<app-id>/config`.
+Applications do not need to access the host's config directory.
+
+Please see the [Flatpak permission reference](https://docs.flatpak.org/en/latest/sandbox-permissions-reference.html#f5).
+
 ### finish-args-arbitrary-xdg-dir-access
 
 **Exceptions allowed**: Yes[^3]
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `--filesystem=xdg-<dir>` where `<dir>` is one of
-`data, config, cache`, with or without any of `:ro, :rw, :create`.
+in the manifest has `--filesystem=xdg-data`, with or without any
+of `:ro, :rw, :create`.
 
-Flatpak creates its own XDG config, cache and data directories under
-`~/.var/app/<app-id>`. Applications do not need to access the host's
-XDG directories.
+Flatpak creates its own XDG data directory under
+`~/.var/app/<app-id>/data`.
+Applications do not need to access the host's data directory.
 
 Please see the [Flatpak permission reference](https://docs.flatpak.org/en/latest/sandbox-permissions-reference.html#f5).
 
@@ -583,18 +611,45 @@ This access is granted automatically by Flatpak and there is no need
 to specify manually. Please see the [bus access](/docs/for-app-authors/requirements#dbus-access)
 section to know more.
 
-### finish-args-unnecessary-xdg-dir-access
+### finish-args-unnecessary-xdg-cache-access
 
 **Exceptions allowed**: Yes[^3]
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `--filesystem=xdg-dir/foo` where `dir` is one of
-`data, config, cache`, with or without any of `:ro, :rw, :create`.
+in the manifest has `--filesystem=xdg-cache/foo` with or without any
+of `:ro, :rw, :create`.
 
-Flatpak creates its own XDG config, cache and data directories under
-`~/.var/app/<app-id>`. Certain settings from host are exposed to Flatpak
-by the portal. Applications do not need to access the host's
-XDG directories or subpaths of them.
+Flatpak creates its own XDG cache directory under
+`~/.var/app/<app-id>/cache`. Applications do not need to access the
+host's cache directory or subpaths of it.
+
+Please see the [Flatpak permission reference](https://docs.flatpak.org/en/latest/sandbox-permissions-reference.html#f5).
+
+### finish-args-unnecessary-xdg-config-access
+
+**Exceptions allowed**: Yes[^3]
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--filesystem=xdg-config/foo` with or without any
+of `:ro, :rw, :create`.
+
+Flatpak creates its own XDG cache directory under
+`~/.var/app/<app-id>/config`. Applications do not need to access the
+host's config directory or subpaths of it.
+
+Please see the [Flatpak permission reference](https://docs.flatpak.org/en/latest/sandbox-permissions-reference.html#f5).
+
+### finish-args-unnecessary-xdg-data-access
+
+**Exceptions allowed**: Yes[^3]
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--filesystem=xdg-data/foo` with or without any
+of `:ro, :rw, :create`.
+
+Flatpak creates its own XDG cache directory under
+`~/.var/app/<app-id>/data`. Applications do not need to access the
+host's config directory or subpaths of it.
 
 Please see the [Flatpak permission reference](https://docs.flatpak.org/en/latest/sandbox-permissions-reference.html#f5).
 
