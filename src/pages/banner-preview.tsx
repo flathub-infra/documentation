@@ -60,7 +60,7 @@ const BannerPreview = ({
   );
 };
 
-function BrandColorPreview() {
+function BannerPreview() {
   const [name, setName] = useState<string>("Name");
   const [summary, setSummary] = useState<string>("Summary");
 
@@ -196,4 +196,4 @@ function BrandColorPreview() {
   );
 }
 
-export default BrandColorPreview;
+export default BannerPreview;
