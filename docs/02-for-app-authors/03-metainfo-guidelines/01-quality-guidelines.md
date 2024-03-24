@@ -55,6 +55,8 @@ It's recommended to consider the brand colors an extension of the app icon, and 
 
 ![Good example of banner colors for light and dark.](assets/color-light-dark.png)
 
+Feel free to play with our [banner preview](/banner-preview) to find your favorite colors.
+
 ## App Icon
 
 ### Icon size
