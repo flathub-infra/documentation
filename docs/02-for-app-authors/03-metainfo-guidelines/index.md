@@ -35,7 +35,7 @@ and needs to be resolved.
 Flathub increases the severity of the following checks from the upstream
 default of `info` to `error`. So they are documented below.
 
-- `cid-has-number-prefix` - The `id` tag contains a segement starting with a number. Please see the [application ID guidelines](/docs/for-app-authors/requirements#application-id) for more information.
+- `cid-has-number-prefix` - The `id` tag contains a segment starting with a number. Please see the [application ID guidelines](/docs/for-app-authors/requirements#application-id) for more information.
 - `cid-missing-affiliation-gnome` - The application is using a `project_group` tag with the value `GNOME` but the [ID](/docs/for-app-authors/metainfo-guidelines/#id) does not start with `org.gnome`. Please see the [documentation](/docs/for-app-authors/metainfo-guidelines/#project-group) on how to use this tag.
 - `content-rating-missing` - The application is missing an [OARS rating](/docs/for-app-authors/metainfo-guidelines/#oars-information) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
 - `desktop-app-launchable-omitted` - The application is missing a [launchable tag](/docs/for-app-authors/metainfo-guidelines/#launchable) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
@@ -242,7 +242,7 @@ application in current `id` tag replaces the one in this tag.
 
 If there’s a `type="desktop-id"` [launchable](#launchable), they are
 pulled from the desktop file and merged in the [AppStream Catalog data](https://www.freedesktop.org/software/appstream/docs/chap-CatalogData.html).
-So defining them seperately in the MetaInfo is not necessary.
+So defining them separately in the MetaInfo is not necessary.
 
 Please see the [specification](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-categories)
 on how to define them in MetaInfo.
