@@ -136,7 +136,7 @@ Please make sure to follow the [quality guidelines](/docs/for-app-authors/metain
 for `name` and `summary`.
 
 :::note
-The deprecated `developer_name` tag is also supported for backwards compatibility
+The deprecated `developer_name` tag is also supported for backwards compatibility. However, it's advisable to retain it to ensure compatibility with older releases / distributions.
 :::
 
 A `developer` [tag](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-developer)
