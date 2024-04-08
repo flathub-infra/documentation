@@ -453,7 +453,7 @@ Applications do not need to access the host's config directory.
 
 Please see the [Flatpak permission reference](https://docs.flatpak.org/en/latest/sandbox-permissions-reference.html#f5).
 
-### finish-args-arbitrary-xdg-dir-access
+### finish-args-arbitrary-xdg-data-access
 
 **Exceptions allowed**: Yes[^3]
 
@@ -678,28 +678,53 @@ host's config directory or subpaths of it.
 
 Please see the [Flatpak permission reference](https://docs.flatpak.org/en/latest/sandbox-permissions-reference.html#f5).
 
-### finish-args-wildcard-name-own-name
+### finish-args-wildcard-freedesktop-own-name
 
 **Exceptions allowed**: No
 
-Name is one of `freedesktop, gnome, kde`.
-
-The manifest has a `own-name` that is one of
-`org.freedesktop.*, org.gnome.*, org.kde.*`.
+The manifest has a `own-name` that is `org.freedesktop.*`.
 
 Wildcard access to bus names in well known namespace is a security issue.
 
-Only exceptions to finish-args-wildcard-kde-own-name might be allowed
-in case of legacy tray usage.
-
-### finish-args-wildcard-name-talk-name
+### finish-args-wildcard-gnome-own-name
 
 **Exceptions allowed**: No
 
-Name is one of `freedesktop, gnome, kde`.
+The manifest has a `own-name` that is one of `org.gnome.*`.
 
-The manifest has a `talk-name` that is one of
-`org.freedesktop.*, org.gnome.*, org.kde.*`.
+Wildcard access to bus names in well known namespace is a security issue.
+
+### finish-args-wildcard-kde-own-name
+
+**Exceptions allowed**: Yes
+
+The manifest has a `own-name` that is `org.kde.*`.
+
+Wildcard access to bus names in well known namespace is a security issue.
+
+Exceptions to this are allowed in case of legacy tray usage.
+
+### finish-args-wildcard-freedesktop-talk-name
+
+**Exceptions allowed**: No
+
+The manifest has a `talk-name` that is `org.freedesktop.*`.
+
+Wildcard access to bus names in well known namespace is a security issue.
+
+### finish-args-wildcard-gnome-talk-name
+
+**Exceptions allowed**: No
+
+The manifest has a `talk-name` that is one of `org.gnome.*`.
+
+Wildcard access to bus names in well known namespace is a security issue.
+
+### finish-args-wildcard-kde-talk-name
+
+**Exceptions allowed**: Yes
+
+The manifest has a `talk-name` that is `org.kde.*`.
 
 Wildcard access to bus names in well known namespace is a security issue.
 
