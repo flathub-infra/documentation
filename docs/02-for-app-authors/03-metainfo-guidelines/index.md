@@ -509,6 +509,23 @@ and all application extensions must use the `extends` tag.
 
 An example of a MetaInfo file for extension is provided in the [Flatpak documentation](https://docs.flatpak.org/en/latest/extension.html#extension-manifest).
 
+## Preview
+
+The MetaInfo file can be previewed using [GNOME Software](https://apps.gnome.org/Software/)
+either by installing the Flatpak package from the test build or locally.
+
+Note that test builds done from Flathub infrastructure will be missing
+screenshots.
+
+GNOME Software also has a flag to preview the MetaInfo file:
+`gnome-software --show-metainfo /path/to/$FLATPAK_ID.metainfo.xml`.
+
+Appstreamcli also offers a way to preview on the command line using
+`appstreamcli get --details --datapath /path/to/$FLATPAK_ID.metainfo.xml`
+or `appstreamcli get --details $ID` when the catalogue data is installed
+locally to the appstream cache (usually this means the Flatpak package is 
+installed).
+
 ## Checking the generated output
 
 Once an app has been built with a proper MetaInfo file, Flatpak Builder
