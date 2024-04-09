@@ -48,6 +48,10 @@ If you build for both `x86_64` and `aarch64` you do not need a `flathub.json` fi
 
 ### End of life
 
+:::note
+Extensions or BaseApps do not need to be EOL or EOL Rebased.
+:::
+
 There may come a point where an application is no longer maintained. In order to inform users at update or install time that it will no longer get updates, create `flathub.json` with these contents:
 
 ```json title="flathub.json"
