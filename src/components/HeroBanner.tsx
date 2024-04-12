@@ -131,7 +131,7 @@ export const HeroBanner = ({
                 className={clsx(
                   "line-clamp-2 text-sm text-center",
                   textColor,
-                  "lg:line-clamp-3 pb-8"
+                  "lg:line-clamp-3"
                 )}
               >
                 {summary}
