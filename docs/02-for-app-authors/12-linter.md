@@ -112,6 +112,25 @@ A full list of error codes and explanations can also be found online in the
 [data validation](https://www.freedesktop.org/software/appstream/docs/chap-Validation.html#validator-issues-list)
 page.
 
+### appstream-id-mismatch-flatpak-id
+
+**Exceptions allowed**: No[^1]
+
+The `id` tag in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
+does not match the `FLATPAK_ID` (the `id` or `app-id` used in manifest).
+
+No new submissions are allowed with a mismatch between the two.
+
+Existing applications may use the the `rename-appdata-file` or
+`rename-desktop-file` [property](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html)
+in the manifest or a patch to update the `id` tag in the MetaInfo file.
+Exceptions may be allowed for existing applications on a case-by-case
+basis.
+
+Please also make sure to add a `provides` and `replaces` tag when patching
+manually. See the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#provides)
+for more details.
+
 ### appstream-metainfo-missing
 
 **Exceptions allowed**: No
