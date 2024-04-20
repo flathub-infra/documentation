@@ -131,6 +131,17 @@ Please also make sure to add a `provides` and `replaces` tag when patching
 manually. See the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#provides)
 for more details.
 
+### appstream-launchable-file-missing
+
+**Exceptions allowed**: No
+
+The MetaInfo file had a [launchable tag](/docs/for-app-authors/metainfo-guidelines/#launchable)
+defined but the file was not found in `${FLATPAK_DEST}/share/applications`.
+
+This could be due to the tag having an incorrect value or the file
+was not installed in `${FLATPAK_DEST}/share/applications` or has the
+wrong filename.
+
 ### appstream-metainfo-missing
 
 **Exceptions allowed**: No
@@ -858,6 +869,16 @@ is missing the `type` attribute in the `component` tag.
 All MetaInfo files must use a supported `type` attribute in the `component`
 tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#header)
 for the details.
+
+### metainfo-missing-launchable-tag
+
+**Exceptions allowed**: No
+
+The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
+is missing the `launchable` tag.
+
+All MetaInfo files for desktop applications must have the
+[launchable tag](/docs/for-app-authors/metainfo-guidelines/#launchable).
 
 ### module-module_name-source-dest-filename-is-path
 
