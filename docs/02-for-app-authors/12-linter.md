@@ -180,7 +180,21 @@ must be supplied during the build with the [proper filename](/docs/for-app-autho
 [id tag](/docs/for-app-authors/metainfo-guidelines/#id), proper `desktop-id` in `launchable` [tag](/docs/for-app-authors/metainfo-guidelines/#launchable)
 and all of them must match the app id used in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
 
+### appstream-missing-categories
+
+**Exceptions allowed**: No
+
+The [AppStream catalog](/docs/for-app-authors/metainfo-guidelines/#checking-the-generated-output)
+file is missing `categories`.
+
+This is due to the desktop file having no valid categories.
+
+Certain low quality categories are filtered out. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#categories-and-keywords)
+for more details.
+
 ### appstream-missing-developer-name
+
+**Exceptions allowed**: No
 
 The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
 is missing the `developer` tag with a child `name` tag or the legacy
@@ -189,6 +203,8 @@ is missing the `developer` tag with a child `name` tag or the legacy
 This must be present for proper display and classification by app stores.
 
 ### appstream-missing-project-license
+
+**Exceptions allowed**: No
 
 The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
 is missing the `project_license` tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#license).
