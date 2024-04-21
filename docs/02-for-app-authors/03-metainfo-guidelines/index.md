@@ -44,7 +44,7 @@ default of `info` to `error`. So they are documented below.
 - `releases-info-missing` - The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has no [release information](/docs/for-app-authors/metainfo-guidelines/#release).
 - `unknown-tag` - The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has an invalid tag. Non-standard tags must be prefixed with `x-` or should be under `<custom>` tag.
 
-A full list of error codes and explanations can also be found online in 
+A full list of error codes and explanations can also be found online in
 the [data validation](https://www.freedesktop.org/software/appstream/docs/chap-Validation.html#validator-issues-list)
 page.
 
@@ -183,8 +183,8 @@ All graphical applications having a desktop file must have this tag in
 the MetaInfo. If this is present, `appstreamcli compose` will pull
 icons, keywords and categories from the desktop file.
 
-The value must be the [Application-ID](./../requirements#application-id)
-followed by `.desktop` suffix.
+The value must exactly be the [Application-ID](./../requirements#application-id)
+followed by `.desktop` suffix. Multiple launchable tags must not be used.
 
 ```xml
 <launchable type="desktop-id">org.flatpak.qtdemo.desktop</launchable>
@@ -523,7 +523,7 @@ GNOME Software also has a flag to preview the MetaInfo file:
 Appstreamcli also offers a way to preview on the command line using
 `appstreamcli get --details --datapath /path/to/$FLATPAK_ID.metainfo.xml`
 or `appstreamcli get --details $ID` when the catalogue data is installed
-locally to the appstream cache (usually this means the Flatpak package is 
+locally to the appstream cache (usually this means the Flatpak package is
 installed).
 
 ## Checking the generated output
