@@ -911,13 +911,11 @@ It must be a filename only.
 **Exceptions allowed**: No
 
 A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
-has type `git`, specifies no `commit` property and has `branch` property
-in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
+with type `git`, uses `branch` with a branch name in the
+[Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
 
-In this case the `branch` must point to a commit hash of length 40
-characters.
-
-This is done for reproducibility.
+It should use either `commit`, or `tag` and `commit` or a `tag` in place
+of `branch`.
 
 ### module-module_name-source-git-local-path
 
