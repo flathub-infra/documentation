@@ -138,9 +138,8 @@ for more details.
 The MetaInfo file had a [launchable tag](/docs/for-app-authors/metainfo-guidelines/#launchable)
 defined but the file was not found in `${FLATPAK_DEST}/share/applications`.
 
-This could be due to the tag having an incorrect value or the file
-was not installed in `${FLATPAK_DEST}/share/applications` or has the
-wrong filename.
+This could be due to the file not being installed in `${FLATPAK_DEST}/share/applications`
+or having the wrong filename. The filename must be `$FLATPAK_ID.desktop`.
 
 ### appstream-metainfo-missing
 
@@ -864,6 +863,20 @@ The manifest schema was malformed.
 **Exceptions allowed**: No
 
 The manifest schema failed validation.
+
+### metainfo-launchable-tag-wrong-value
+
+**Exceptions allowed**: No
+
+The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
+has the wrong value in the `launchable` tag.
+
+This must be the main desktop file of the application named by
+`$FLATPAK_ID.desktop` and there must not be multiple `launchable` tags
+present.
+
+Pleasee see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#launchable)
+on how to define it.
 
 ### metainfo-missing-component-tag
 
