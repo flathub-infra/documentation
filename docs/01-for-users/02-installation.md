@@ -27,3 +27,23 @@ The available subsets are:
 | verified       | Only allow verified apps                                            |
 | floss          | Only allow apps that are free and open source software              |
 | verified_floss | Only allow apps that are verified and free and open source software |
+
+### Remove subsets
+
+To remove a subset and return to the unfiltered repository, you can run:
+
+```bash
+flatpak remote-modify --subset= flathub
+```
+
+Or remove the remote:
+
+```bash
+flatpak remote-delete --force flathub
+```
+
+and add it again without the subset:
+
+```bash
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+```
