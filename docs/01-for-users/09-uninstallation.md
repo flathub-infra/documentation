@@ -31,13 +31,13 @@ It will ask you to confirm using `y/N` before proceeding. Anything
 stored outside of `~/.var/app/<app-id>` is outside of Flatpak's control
 and might be left as is.
 
-Often when you may have multiple branches of an application installed
-for example `beta` and `stable` or the same application installed from
+Often you may have multiple branches of an application installed, for
+example `beta` and `stable` or the same application installed from
 multiple different remotes or the same application installed both in
-system and user location.
+system and user locations.
 
 Then `flatpak uninstall` will present you with a choice for the specific
-ref to uninstall. For example:
+ref and location to uninstall. For example:
 
 ```
 $ flatpak uninstall org.example.foo
