@@ -54,6 +54,7 @@ A few common errors that are often reached are documented below in brief.
 
 - `description-markup-invalid, description-para-markup-invalid` - The `description` tag in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) contains an unsupported formating tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#description) for more details.
 - `description-has-plaintext-url` - The `description` tag in [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) contains a plaintext URL which is not allowed.
+- `desktop-app-launchable-missing` - The application is missing a [launchable tag](/docs/for-app-authors/metainfo-guidelines/#launchable) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
 - `tag-not-translatable` - A tag which is not translatable is using `xml:lang`. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#metainfo-translations) for more details.
 - `tag-duplicated` - A tag in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) is duplicated.
 - `cid-rdns-contains-hyphen` - The [id tag](/docs/for-app-authors/metainfo-guidelines/#id) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has a hyphen (`-`) in the domain part. The entire part of the id except the last component (`.foo`) is considered to be domain.
@@ -67,8 +68,13 @@ A few common errors that are often reached are documented below in brief.
 - `file-read-failed` - The desktop file, icon or the MetaInfo file is malformed and reading it failed.
 - `metainfo-ancient` - The MetaInfo does not start with the [component tag](/docs/for-app-authors/metainfo-guidelines/#header).
 - `releases-not-in-order` - The versions in release tag are not in the [proper order](/docs/for-app-authors/metainfo-guidelines/#release).
-- `content-rating-missing` - The [OARS tag](/docs/for-app-authors/metainfo-guidelines/#oars-information) is missing from the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).-
+- `content-rating-missing, content-rating-type-missing, content-rating-type-invalid` - The [OARS tag](/docs/for-app-authors/metainfo-guidelines/#oars-information) is missing from the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) or has no `type` key present or has an invalid `type` key present.
 - `custom-key-duplicated` - A `custom` tag with same `key` attribute is used twice. It must be used once.
+- `type-property-required` - The corresponding tag requires a `type` attribute. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines) for the tag.
+- `metainfo-localized-description-tag` - The MetaInfo file has translated the `description` tag itself. Please see the [translation section](/docs/for-app-authors/metainfo-guidelines/#metainfo-translations) on how to use translation attributes.
+- `circular-component-relation` - The `extends`, `provides`, `requires` or `recommends` tag in the MetaInfo file references the application's own ID.
+- `mimetypes-tag-deprecated` - The `mimetype` tag is deprecated in favour of a `mediatypes` child tag under the `provides` tag. Please see the specification on how to use it.
+- `custom-invalid-tag` - One of the `custom` tags in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) does not have the `value` child tag. Custom tags can have only `value` as child tags.
 
 ## Path and filename
 
