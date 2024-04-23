@@ -32,6 +32,12 @@ with some Flathub specific checks integrated into it.
 Both errors and warnings are considered to be fatal by `appstreamcli`
 and needs to be resolved.
 
+:::note
+A full list of error codes and explanations can also be found online in
+the [data validation](https://www.freedesktop.org/software/appstream/docs/chap-Validation.html#validator-issues-list)
+page.
+:::
+
 Flathub increases the severity of the following checks from the upstream
 default of `info` to `error`. So they are documented below.
 
@@ -43,10 +49,6 @@ default of `info` to `error`. So they are documented below.
 - `name-has-dot-suffix` - The [name](/docs/for-app-authors/metainfo-guidelines/#name-summary-and-developer-name) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) ends in a dot (`.`).
 - `releases-info-missing` - The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has no [release information](/docs/for-app-authors/metainfo-guidelines/#release).
 - `unknown-tag` - The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has an invalid tag. Non-standard tags must be prefixed with `x-` or should be under `<custom>` tag.
-
-A full list of error codes and explanations can also be found online in
-the [data validation](https://www.freedesktop.org/software/appstream/docs/chap-Validation.html#validator-issues-list)
-page.
 
 ## Path and filename
 
