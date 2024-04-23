@@ -97,7 +97,7 @@ and fix the issues reported.
 Flathub increases the severity of the following checks from the upstream
 default of `info` to `error`. So they are documented below.
 
-- `cid-has-number-prefix` - The `id` tag contains a segement starting with a number. Please see the [application ID guidelines](/docs/for-app-authors/requirements#application-id) for more information.
+- `cid-has-number-prefix` - The `id` tag contains a segment starting with a number. Please see the [application ID guidelines](/docs/for-app-authors/requirements#application-id) for more information.
 - `cid-missing-affiliation-gnome` - The application is using a `project_group` tag with the value `GNOME` but the [ID](/docs/for-app-authors/metainfo-guidelines/#id) does not start with `org.gnome`. Please see the [documentation](/docs/for-app-authors/metainfo-guidelines/#project-group) on how to use this tag.
 - `content-rating-missing` - The application is missing an [OARS rating](/docs/for-app-authors/metainfo-guidelines/#oars-information) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
 - `desktop-app-launchable-omitted` - The application is missing a [launchable tag](/docs/for-app-authors/metainfo-guidelines/#launchable) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
@@ -105,6 +105,26 @@ default of `info` to `error`. So they are documented below.
 - `name-has-dot-suffix` - The [name](/docs/for-app-authors/metainfo-guidelines/#name-summary-and-developer-name) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) ends in a dot (`.`).
 - `releases-info-missing` - The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has no [release information](/docs/for-app-authors/metainfo-guidelines/#release).
 - `unknown-tag` - The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has an invalid tag. Non-standard tags must be prefixed with `x-` or should be under `<custom>` tag.
+
+A few common errors that are often reached are documented below in brief.
+
+- `description-markup-invalid, description-para-markup-invalid` - The `description` tag in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) contains an unsupported formating tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#description) for more details.
+- `description-has-plaintext-url` - The `description` tag in [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) contains a plaintext URL which is not allowed.
+- `tag-not-translatable` - A tag which is not translatable is using `xml:lang`. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#metainfo-translations) for more details.
+- `tag-duplicated` - A tag in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) is duplicated.
+- `cid-rdns-contains-hyphen` - The [id tag](/docs/for-app-authors/metainfo-guidelines/#id) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has a hyphen (`-`) in the domain part. The entire part of the id except the last component (`.foo`) is considered to be domain.
+- `cid-missing-affiliation-freedesktop, cid-missing-affiliation-kde, cid-missing-affiliation-gnome` - The application usesa [reserved project group tag](/docs/for-app-authors/metainfo-guidelines/#project-group) value in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
+- `spdx-expression-invalid, spdx-license-unknown` - The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has an invalid or unknown [license tag](/docs/for-app-authors/metainfo-guidelines/#license).
+- `screenshot-no-media` - The [screenshot tag](/docs/for-app-authors/metainfo-guidelines/#screenshots) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) is not properly defined.
+- `screenshot-default-missing` - The [screenshot tag](/docs/for-app-authors/metainfo-guidelines/#screenshots) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) is missing `type=default` on one of them.
+- `screenshot-image-source-duplicated` - The [screenshot tag](/docs/for-app-authors/metainfo-guidelines/#screenshots) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has multiple `image` tags under one `screenshot` tag.
+- `metadata-license-missing` - the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) is missing a [metadata license tag](/docs/for-app-authors/metainfo-guidelines/#license).
+- `category-invalid, all-categories-ignored, app-categories-missing` - Categories are either invalid, missing or all were filtered. Pleasee see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#categories-and-keywords) for more details.
+- `file-read-failed` - The desktop file, icon or the MetaInfo file is malformed and reading it failed.
+- `metainfo-ancient` - The MetaInfo does not start with the [component tag](/docs/for-app-authors/metainfo-guidelines/#header).
+- `releases-not-in-order` - The versions in release tag are not in the [proper order](/docs/for-app-authors/metainfo-guidelines/#release).
+- `content-rating-missing` - The [OARS tag](/docs/for-app-authors/metainfo-guidelines/#oars-information) is missing from the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
+- `custom-key-duplicated` - A `custom` tag with same `key` attribute is used twice. It must be used once.
 
 ### appstream-id-mismatch-flatpak-id
 
