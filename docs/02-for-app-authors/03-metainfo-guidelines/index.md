@@ -85,7 +85,7 @@ must use `type="addon"`. SDK extensions or runtimes can use
 
 ## ID
 
-The ID must be same as the [Application-ID](./../requirements#application-id):
+The ID must be exactly the same as the [Application-ID](./../requirements#application-id):
 
 ```xml
 <!-- Good -->
