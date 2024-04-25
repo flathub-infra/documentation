@@ -64,6 +64,8 @@ There may come a point where an application is no longer maintained. In order to
 
 If the application has been renamed, you must additionally include `end-of-life-rebase` with the new ID. Recent flatpak versions will prompt user if they'd like to switch to the renamed app.
 
+Additionally, you can also update the MetaInfo file of the new application with a [provides tag](/docs/for-app-authors/metainfo-guidelines/#provides) and a [replaces tag](/docs/for-app-authors/metainfo-guidelines/#replaces) to reflect that it has been renamed.
+
 ```json title="flathub.json"
 {
   "end-of-life": "The application has been renamed to the.new.appid.",
