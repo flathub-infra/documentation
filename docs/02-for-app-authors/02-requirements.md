@@ -13,8 +13,8 @@ If you have any further questions, please ask on [Matrix](https://matrix.to/#/#f
 ## License
 
 All content hosted on Flathub must allow legal redistribution, and the license must be
-correctly specified in the app's [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#license). 
-Non-redistributable files can be downloaded at install time using the 
+correctly specified in the app's [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#license).
+Non-redistributable files can be downloaded at install time using the
 `extra-data` source type.
 
 ## Application ID
@@ -30,9 +30,10 @@ The manifest must be at the top level and named after the application ID with th
 
 ### Required files
 
-Every repository must contain a manifest describing how to build the application. If the application, and hence repository, is called `com.example.MyCoolApp`, this file must be called `com.example.MyCoolApp.json` or `com.example.MyCoolApp.yaml`. This is the only required file!
+Every repository must contain a manifest describing how to build the application.
 
-This manifest may import other manifest files in the same repository. It's quite common to add the [shared-modules](./shared-modules) repository as a submodule.
+The file must be named using the [Application ID](#application-id)
+followed by `.json, .yaml, .yml` depending on whether it is JSON or YAML.
 
 #### Example manifest
 
@@ -125,27 +126,19 @@ modules:
   </TabItem>
 </Tabs>
 
-### Optional
-
-- `README.md` with whatever information you see fit, but be advised that users are unlikely to ever read this. However packaging notes are valuable.
-- `flathub.json` (described below)
-
 ### Acceptable, but should be submitted upstream
 
-- Any patches necessary to build and run the application in the Flatpak environment
-- Additional metadata files (`com.example.MyCoolApp.metainfo.xml` and `com.example.MyCoolApp.desktop`) which are mandatory for Flathub apps but not shipped by some (primarily cross-platform) applications
+- Any patches necessary to build and run the application in the Flatpak
+  environment
+- Additional metadata files like the MetaInfo file, screenshots, icons
+  and desktop file
 
 ### Strongly discouraged
 
-Patches which add (or remove) application functionality do not belong in the Flathub repository. The application on Flathub should reflect, as closely as possible, the application in its unadulterated form, direct from its authors.
-
-There is a grey area here for functionality which is only appropriate in a Flatpak environment. The policy on Flathub is that this should live in the upstream version of the application, for several reasons:
-
-- The Flatpak environment can be detected at runtime by looking for a file named `/.flatpak-info`.
-- Code maintained outside the main application tree is likely to break as the application evolves.
-- It is entirely possible to build and distribute Flatpak applications through channels other than Flathub. In particular, tools like [GNOME Builder](https://wiki.gnome.org/Apps/Builder) take advantage of Flatpak to automatically fetch, build and run the application with a single click on any (Linux) computer. To enable this, not only does all functionality need to live upstream, but so too does the Flatpak manifest!
-
-For cross-platform applications which have a policy of not including platform-specific code in their main tree, the recommended approach is for the application author to create a separate repository for the Flatpak (or perhaps desktop Linux in general) version of the app.
+Patches which add or remove application functionality or large and
+complicated patchsets do not belong in the Flathub repository. The
+packaging on Flathub should reflect, as closely as possible, the
+application in its unadulterated form, direct from its authors.
 
 ## Stable releases, reproducible builds
 
@@ -161,36 +154,40 @@ When building from a git tag, both the tag name and the commit id should be spec
 ```
 
 This ensures that the build is reproducible, since tag can change their values over time. A commit can also be specified without a tag, however tag names are encouraged as they are better for readability.
+## No network access at build time
 
-Accessing the network is not allowed during the build process, to download extra files, everything that an app requires must be included within the manifest. There is a [community provided set of tools](https://github.com/flatpak/flatpak-builder-tools) to make this easier for some projects (such as npm) that would traditionally want to access the network.
+Accessing the network is not allowed during the build process.
+Everything that an app requires must be included within the manifest.
+
+If upstream has vendored tarballs those can be used.
+
+There is a [community provided set of tools](https://github.com/flatpak/flatpak-builder-tools)
+to generate a dependency manifest for Flatpak.
+
+This can be used for projects using npm, yarn, cargo etc. that
+traditionally depend on fetching dependencies at build time.
 
 ## External data checker for proprietary applications
 
-If application is distributed under proprietary license and uses `extra-data` to avoid redistribution, it shall specify `x-checker-data` key to be automatically scanned for URL changes and new releases. Example usage is described in the [flatpak-external-data-checker's documentation](https://github.com/flathub/flatpak-external-data-checker#changes-to-flatpak-manifests).
+External Data Checker is a tool that can automate updating sources in
+the Flatpak manifest and send PRs.
+
+Please see the [readme](https://github.com/flathub-infra/flatpak-external-data-checker)
+on how to use it.
 
 ## Branches and runtimes
 
-Flathub always builds in the flatpak branchname `stable` and it always passes
-`--default-branch=stable`. This means that a branch key doesn't need to be specified. If one is specified, it should be `stable`.
+Applications must be built against an SDK or runtime that hosted on Flathub.
 
-Applications must be built against an SDK that is itself hosted on Flathub.
-This requirement also applies to SDK extensions that may be required in order to build an application.
-The easiest way to see which runtimes are currently available is to install the flathub remote and
-run:
+Applications that target the `stable` Flathub repo are not allowed to
+use SDKs or runtimes that are in the `beta` repository and vice-versa.
+
+The easiest way to see which runtimes are currently available is to
+install the flathub remote and run:
 
 ```bash
 flatpak remote-ls --runtime --show-details flathub
 ```
-
-## Bundled Dependencies
-
-Bundled dependencies should meet the requirements on this page, including the license requirements.
-
-Take care to check the build directory for unnecessary files. These should be added to `cleanup`, in order to ensure smaller package sizes.
-
-## Patches
-
-It is fine to patch dependencies, but please send these upstream wherever possible!
 
 ## Desktop integration
 
@@ -206,7 +203,7 @@ Please read the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines)
 
 ### .desktop files
 
-Applications must include a desktop file and pass `desktop-file-validate`. You should make sure that the upstream project has one for future release if they don't.
+Applications must include a desktop file and pass `desktop-file-validate`.
 
 See [the desktop file spec](https://standards.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html) for more details.
 
@@ -214,12 +211,20 @@ If you need to change the desktop file, use the command `desktop-file-edit` on a
 
 ### Application icons
 
-Applications must provide application icons in at least 128×128px size, or a scalable SVG. Application icons should either be included as scalable SVGs or high-resolution PNGs, and unless they are directly copied from upstream during the package building, they should be limited to the minimum number. In general you shouldn't need to add any icon to your submission, but if you do, you should make sure to contribute upstream, so it is no longer needed in the future.
+Applications must provide at least a 256x256 PNG icon or a SVG icon.
+
+Icons must have square dimensions and must not [violate any trademarks](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#no-trademark-violations).
 
 ## Permissions
 
-The Flatpak sandbox is still a work in progress. However, permissions should still be limited
-as much as possible (see [flatpak-metadata](https://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-metadata) for an overview of permissions).
+Permissions should be limited as much as possible.
+
+Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html)
+and the [Flatpak permission reference](https://docs.flatpak.org/en/latest/sandbox-permissions-reference.html)
+for more information.
+
+A full list of permissions can be found in the [flatpak-metadata](https://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-metadata)
+page.
 
 ### Unrestricted permissions
 
