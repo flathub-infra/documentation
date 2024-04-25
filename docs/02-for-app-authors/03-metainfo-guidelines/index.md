@@ -52,7 +52,7 @@ default of `info` to `error`. So they are documented below.
 
 A few common errors that are often reached are documented below in brief.
 
-- `description-markup-invalid, description-para-markup-invalid` - The `description` tag in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) contains an unsupported formating tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#description) for more details.
+- `description-markup-invalid, description-para-markup-invalid` - The `description` tag in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) contains an unsupported formatting tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#description) for more details.
 - `description-has-plaintext-url` - The `description` tag in [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) contains a plaintext URL which is not allowed.
 - `desktop-app-launchable-missing` - The application is missing a [launchable tag](/docs/for-app-authors/metainfo-guidelines/#launchable) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
 - `tag-not-translatable` - A tag which is not translatable is using `xml:lang`. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#metainfo-translations) for more details.
