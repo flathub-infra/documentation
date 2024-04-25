@@ -335,7 +335,7 @@ project groups.
 <project_group>GNOME</project_group>
 ```
 
-### Brand color
+## Brand color
 
 Applications should set a [brand color](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-branding)
 in both light and dark variants like so:
