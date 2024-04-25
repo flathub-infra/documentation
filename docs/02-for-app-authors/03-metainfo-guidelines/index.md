@@ -98,7 +98,7 @@ tool can be used to generate a basic file.
 
 All MetaInfo files must start with:
 
-```xml title="tld.domain.appid.metainfo.xml"
+```xml title="tld.vendor.appid.metainfo.xml"
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright [year] [name] -->
 <component type="desktop-application">
@@ -495,7 +495,7 @@ The `description` tag has to be translated by each `<p>` and `<li>` tags.
 <summary>A summary</summary>
 <summary xml:lang="de">Translated summary</summary>
 
-<developer id="tld.domain">
+<developer id="tld.vendor">
   <name>Developer name</name>
   <name xml:lang="de">Translated developer name</name>
 </developer>
@@ -530,7 +530,7 @@ as forbidden. The whole block of the `description` tag can be excluded
 by using `translate="no"`.
 
 ```xml
-<developer id="tld.domain">
+<developer id="tld.vendor">
   <name translate="no">Developer name</name>
 </developer>
 ```
