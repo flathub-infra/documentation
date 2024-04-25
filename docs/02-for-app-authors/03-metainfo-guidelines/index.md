@@ -183,22 +183,30 @@ translate these tags.
 
 ## Description
 
-A short and informative description must be present. Please follow the
-[specification](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-description)
-for the formatting options allowed. All HTML tags are not supported.
+A short and informative description must be present.
+
+Only the following tags are supported: `p` (paragraph), `ol, ul` (ordered
+and unordered list), `li` (list items), `em` for italicized
+emphasis and `code` for inline code in monospace.
 
 Descriptions must not contain any direct links.
 
 ```xml
 <description>
-  <p>Some description</p>
-  <p>Some description</p>
+  <p>Some <em>description</em></p>
+  <p>Some <code>description</code></p>
   <p>A list of features</p>
   <ul>
     <li>Feature 1</li>
     <li>Feature 2</li>
     <li>Feature 3</li>
   </ul>
+  <p>The app can do:</p>
+  <ol>
+    <li>Feature 1</li>
+    <li>Feature 2</li>
+    <li>Feature 3</li>
+  </ol>
 </description>
 ```
 
@@ -411,6 +419,12 @@ Paragraphs in release description must not contain any direct URLs.
 Flathub supports showing a detailed release note link when
 `<url type="details">` tag is used. Release dates must
 not be in the future and versions must be [properly ordered](https://www.freedesktop.org/software/appstream/docs/chap-AppStream-Misc.html#spec-vercmp-recommendations).
+
+:::tip
+`appstreamcli vercmp <version 1> <version 2>` can be used to compare the
+order of two versions.
+:::
+
 
 Releases in MetaInfo should look like this:
 
