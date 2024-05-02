@@ -139,17 +139,11 @@ A few common errors that are often reached are documented below in brief.
 The `id` tag in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
 does not match the `FLATPAK_ID` (the `id` or `app-id` used in manifest).
 
-No new submissions are allowed with a mismatch between the two.
+Existing applications should ask for exceptions, no new applications
+will be accepted with a mimatch.
 
-Existing applications may use the the `rename-appdata-file` or
-`rename-desktop-file` [property](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html)
-in the manifest or a patch to update the `id` tag in the MetaInfo file.
-Exceptions may be allowed for existing applications on a case-by-case
-basis.
-
-Please also make sure to add a `provides` and `replaces` tag when patching
-manually. See the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#provides)
-for more details.
+Please see the [Renaming ID tag](/docs/for-app-authors/metainfo-guidelines/#renaming-id-tag)
+section before renaming the tag.
 
 ### appstream-launchable-file-missing
 
