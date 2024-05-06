@@ -419,7 +419,7 @@ dependent on the username.
 `--filesystem=~/foo`, `--filesystem=home`, `--filesystem=home/foo` should
 be used instead.
 
-Please consult the [sandbox permission reference](https://docs.flatpak.org/en/latest/sandbox-permissions-reference.html#filesystem-permissions)
+Please consult the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html)
 and the [manual page](https://docs.flatpak.org/en/latest/flatpak-command-reference.html?highlight=filesystem#).
 
 ### finish-args-absolute-run-media-path
@@ -469,7 +469,7 @@ Flatpak creates its own XDG cache directory under
 `~/.var/app/<app-id>/cache`.
 Applications do not need to access the host's cache directory.
 
-Please see the [Flatpak permission reference](https://docs.flatpak.org/en/latest/sandbox-permissions-reference.html#f5).
+Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#f7).
 
 ### finish-args-arbitrary-xdg-config-access
 
@@ -483,7 +483,7 @@ Flatpak creates its own XDG config directory under
 `~/.var/app/<app-id>/config`.
 Applications do not need to access the host's config directory.
 
-Please see the [Flatpak permission reference](https://docs.flatpak.org/en/latest/sandbox-permissions-reference.html#f5).
+Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#f7).
 
 ### finish-args-arbitrary-xdg-data-access
 
@@ -497,7 +497,7 @@ Flatpak creates its own XDG data directory under
 `~/.var/app/<app-id>/data`. Applications do not need to access the
 host's data directory.
 
-Please see the [Flatpak permission reference](https://docs.flatpak.org/en/latest/sandbox-permissions-reference.html#f5).
+Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#f7).
 
 ### finish-args-fallback-x11-without-wayland
 
@@ -675,7 +675,7 @@ Flatpak creates its own XDG cache directory under
 `~/.var/app/<app-id>/cache`. Applications do not need to access the
 host's cache directory or subpaths of it.
 
-Please see the [Flatpak permission reference](https://docs.flatpak.org/en/latest/sandbox-permissions-reference.html#f5).
+Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#f7).
 
 ### finish-args-unnecessary-xdg-config-access
 
@@ -689,7 +689,7 @@ Flatpak creates its own XDG cache directory under
 `~/.var/app/<app-id>/config`. Applications do not need to access the
 host's config directory or subpaths of it.
 
-Please see the [Flatpak permission reference](https://docs.flatpak.org/en/latest/sandbox-permissions-reference.html#f5).
+Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#f7).
 
 ### finish-args-unnecessary-xdg-data-access
 
@@ -703,7 +703,7 @@ Flatpak creates its own XDG cache directory under
 `~/.var/app/<app-id>/data`. Applications do not need to access the
 host's config directory or subpaths of it.
 
-Please see the [Flatpak permission reference](https://docs.flatpak.org/en/latest/sandbox-permissions-reference.html#f5).
+Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#f7).
 
 ### finish-args-wildcard-freedesktop-own-name
 
