@@ -593,9 +593,10 @@ installed).
 ## Checking the generated output
 
 Once an app has been built with a proper MetaInfo file, Flatpak Builder
-automatically invokes `appstreamcli` with the `compose` argument that
-composes the application metadata gathered from the desktop file, icon
-and the MetaInfo file into a combined XML file called the [AppStream Catalog data](https://www.freedesktop.org/software/appstream/docs/chap-CatalogData.html#sect-AppStream-XML).
+automatically invokes `appstreamcli compose` from the [AppStream Project](https://github.com/ximion/appstream/)
+that composes the application metadata gathered from the desktop file,
+icon and the MetaInfo file into a combined XML file called the
+[AppStream Catalog data](https://www.freedesktop.org/software/appstream/docs/chap-CatalogData.html#sect-AppStream-XML).
 
 This file must not be manually created or modified. The file can be found
 in `<builddir>/files/share/app-info/xmls/<app-id>.xml.gz` or
@@ -606,5 +607,10 @@ provided a PNG icon of size 64px or more, or a SVG icon was installed
 to the [proper location](https://docs.flatpak.org/en/latest/conventions.html#application-icons)
 during the build.
 
-Note that Flathub [requires](/docs/for-app-authors/requirements#application-icons)
-at least a 128px icon to be present.
+Flatpak then combines catalog data for each application into a combined
+AppStream catalog file for a repository. Software stores like Flathub,
+GNOME Software, KDE Discover and even Flatpak CLI reads this combined
+AppStream catalog file of a repository to display information about an
+application. So it is essential that this file contains no errors which
+by extension means that the MetaInfo file, icon and the desktop file
+passes all validation.
