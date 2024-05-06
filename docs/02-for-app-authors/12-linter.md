@@ -1202,3 +1202,10 @@ To apply for an exception, you need to submit a [Pull Request](https://github.co
 
 There should be only one entry for the application, but it can contain
 multiple exceptions. Please make sure the reason is explanatory.
+
+You can check the current set of published exceptions for an application
+with:
+
+```bash
+curl -s https://flathub.org/api/v2/exceptions|jq '."my.app.id"'
+```
