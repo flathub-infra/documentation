@@ -220,7 +220,6 @@ Icons must have square dimensions and must not [violate any trademarks](/docs/fo
 Permissions should be limited as much as possible.
 
 Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html)
-and the [Flatpak permission reference](https://docs.flatpak.org/en/latest/sandbox-permissions-reference.html)
 for more information.
 
 A full list of permissions can be found in the [flatpak-metadata](https://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-metadata)
