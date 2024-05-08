@@ -137,9 +137,9 @@ be renamed unless absolutely necessary.
 Please avoid renaming it, if the application is distributed across
 multiple distribution channels other than Flathub.
 
-If a rename is necessary, please add the old application ID as a
+If a rename is necessary, please add the old [ID tag](#id) as a
 [provides tag](#provides) and a [replaces tag](#replaces) in the
-MetaInfo file of the new application.
+[MetaInfo file](#path-and-filename).
 
 `rename-appdata-file` in the Flatpak manifest automatically updates the
 [ID tag](#id) in the [MetaInfo file](#path-and-filename) and adds the
