@@ -130,18 +130,20 @@ The ID must be exactly the same as the [Application-ID](./../requirements#applic
 
 ### Renaming ID tag
 
-The ID tag in the [MetaInfo file](#path-and-filename) is supposed to be
-a constant and unique identifier of an application and should not be
-renamed unless absolutely necessary.
+The [ID tag](#id) in the [MetaInfo file](#path-and-filename) is supposed
+to be a constant and unique identifier of an application and should not
+be renamed unless absolutely necessary.
 
 Please avoid renaming it, if the application is distributed across
 multiple distribution channels other than Flathub.
 
 If a rename is necessary, please add the old application ID as a
 [provides tag](#provides) and a [replaces tag](#replaces) in the
-MetaInfo file of the new application. `rename-appdata-file` and
-`rename-desktop-file` in the Flatpak manifest automatically adds
-the old ID to the `provides` tag.
+MetaInfo file of the new application.
+
+`rename-appdata-file` in the Flatpak manifest automatically updates the
+[ID tag](#id) in the [MetaInfo file](#path-and-filename) and adds the
+old ID to the [provides tag](#provides).
 
 ## License
 
