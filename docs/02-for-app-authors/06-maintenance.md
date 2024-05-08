@@ -44,7 +44,7 @@ Flathub has builders for `x86_64`, and `aarch64` as current runtimes (based on F
 }
 ```
 
-If you build for both `x86_64` and `aarch64` you do not need a `flathub.json` file. There will be no new architecture add or removed on current runtimes, which mean that if that situation ever occured, it would only happen when changing the runtime version in your package.
+If you build for both `x86_64` and `aarch64` you do not need a `flathub.json` file. There will be no new architecture add or removed on current runtimes, which mean that if that situation ever occurred, it would only happen when changing the runtime version in your package.
 
 ### End of life
 

@@ -15,7 +15,7 @@ Here is a list of linter errors, and whether exceptions may be applied, by defau
 
 **Exceptions allowed**: No[^1]
 
-The app id uses a code hosting domains like gitlab, github or codeberg
+The app id uses a code hosting domain like GitLab, GitHub or Codeberg
 and doesn't have 4 components: `{tld}.{doamin}.foo.bar`.
 
 Please follow the [app id guidelines](/docs/for-app-authors/requirements#application-id)
@@ -26,7 +26,7 @@ for more information.
 
 **Exceptions allowed**: No[^1]
 
-The app id ends with lowecase `.desktop`.
+The app id ends with lowercase `.desktop`.
 
 Please follow the [Flatpak documentation](https://docs.flatpak.org/en/latest/conventions.html#application-ids)
 for more information.
@@ -48,9 +48,9 @@ The app id (`id` or `app-id`) is not defined in the [Flatpak manifest](https://d
 
 **Exceptions allowed**: No[^1]
 
-The app id uses a code hosting domains like gitlab, github or codeberg
-and the first `{tld}` component does not start with `io` for github
-and gitlab; `page` for codeberg.
+The app id uses a code hosting domain like GitLab, GitHub or Codeberg
+and the first `{tld}` component does not start with `io` for GitHub
+and GitLab; `page` for Codeberg.
 
 Please follow the [app id guidelines](/docs/for-app-authors/requirements#application-id)
 and [Flatpak conventions](https://docs.flatpak.org/en/latest/conventions.html#application-ids)
@@ -121,7 +121,7 @@ A few common errors that are often reached are documented below in brief.
 - `screenshot-default-missing` - The [screenshot tag](/docs/for-app-authors/metainfo-guidelines/#screenshots) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) is missing `type=default` on one of them.
 - `screenshot-image-source-duplicated` - The [screenshot tag](/docs/for-app-authors/metainfo-guidelines/#screenshots) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has multiple `image` tags under one `screenshot` tag.
 - `metadata-license-missing` - the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) is missing a [metadata license tag](/docs/for-app-authors/metainfo-guidelines/#license).
-- `category-invalid, all-categories-ignored, app-categories-missing` - Categories are either invalid, missing or all were filtered. Pleasee see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#categories-and-keywords) for more details.
+- `category-invalid, all-categories-ignored, app-categories-missing` - Categories are either invalid, missing or all were filtered. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#categories-and-keywords) for more details.
 - `file-read-failed` - The desktop file, icon or the MetaInfo file is malformed and reading it failed.
 - `metainfo-ancient` - The MetaInfo does not start with the [component tag](/docs/for-app-authors/metainfo-guidelines/#header).
 - `releases-info-missing` - The release tag is missing entirely from the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename). Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#release) for more details.
@@ -143,7 +143,7 @@ The `id` tag in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#p
 does not match the `FLATPAK_ID` (the `id` or `app-id` used in manifest).
 
 Existing applications should ask for exceptions, no new applications
-will be accepted with a mimatch.
+will be accepted with a mismatch.
 
 Please see the [Renaming ID tag](/docs/for-app-authors/metainfo-guidelines/#renaming-id-tag)
 section before renaming the tag.
@@ -768,7 +768,7 @@ is being uploaded to.
 The target repo for Flathub is either `stable` or `beta`.
 
 This should not be reached by apps that are built on Flathub. They also
-should never use `branch/*` to name the branch of the Github repo for the
+should never use `branch/*` to name the branch of the GitHub repo for the
 app. Please see [this](/docs/for-app-authors/maintenance#the-repository)
 for more details.
 

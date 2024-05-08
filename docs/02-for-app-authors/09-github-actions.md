@@ -2,7 +2,7 @@
 
 ## Using GitHub actions on your own repository
 
-Build and deploy your Flatpak application using the official Github Actions:
+Build and deploy your Flatpak application using the official GitHub Actions:
 
 https://github.com/flathub-infra/flatpak-github-actions
 

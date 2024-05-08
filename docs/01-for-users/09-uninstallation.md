@@ -68,7 +68,7 @@ KDE Discover.
 
 ## Uninstalling unused dependencies
 
-Often when you have uninstalled a bunch of applictions, there might be
+Often when you have uninstalled a bunch of applications, there might be
 leftover runtimes that aren't needed anymore. To remove them you can run:
 
 ```bash

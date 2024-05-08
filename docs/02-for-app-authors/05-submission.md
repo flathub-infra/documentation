@@ -46,7 +46,7 @@ Flathub is managed through a GitHub project, and app submissions take place as p
    ```bash
    git checkout -b your_app_name
    ```
-   The name of the branch has no incidence on the submission and at no point in the submission will you need to change it. Doing so will make github close the Pull Request.
+   The name of the branch has no incidence on the submission and at no point in the submission will you need to change it. Doing so will make GitHub close the Pull Request.
 1. Add your app’s manifest to the branch, commit it and push the commit
 1. Open a pull request against the `new-pr` branch on GitHub. Please make sure to title the Pull Request with the name of the application. Example "Add org.example.MyAwesomeApp".
 1. Your pull request will then be reviewed by the Flathub reviewers. Keep in mind that the reviewers are volunteers.
@@ -57,7 +57,7 @@ Once your pull request has been approved, a new repository will be created for y
 
 Flathub is primarily intended as a service that is used by app developers to distribute their apps. Our goal is to give developers control of their apps and to allow them a closer relationship with their users without intermediaries getting in the way. However, as part of setting up Flathub, some applications are being distributed on Flathub without the involvement of their developers. We would prefer that these applications are controlled by their authors.
 
-If an application that belongs to you is being distributed without your involvement, please get in touch with [the Flathub admins](mailto:admins@flathub.org), so that we can discuss transfering ownership.
+If an application that belongs to you is being distributed without your involvement, please get in touch with [the Flathub admins](mailto:admins@flathub.org), so that we can discuss transferring ownership.
 
 ## There’s an app that I’d like to see on Flathub, but I’m not the developer
 
