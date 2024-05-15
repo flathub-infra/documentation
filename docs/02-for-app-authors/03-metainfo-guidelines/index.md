@@ -397,6 +397,7 @@ but it is best to include other links too.
 <url type="contact">https://example.org/contact</url>
 <url type="faq">https://example.org/faq</url>
 <url type="translate">https://example.org/translate</url>
+<url type="contribute">https://example.org/contribute</url>
 <url type="vcs-browser">https://example.org/repository</url>
 ```
 
