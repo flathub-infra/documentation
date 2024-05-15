@@ -46,7 +46,7 @@ default of `info` to `error`. So they are documented below.
 - `content-rating-missing` - The application is missing an [OARS rating](/docs/for-app-authors/metainfo-guidelines/#oars-information) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
 - `desktop-app-launchable-omitted` - The application is missing a [launchable tag](/docs/for-app-authors/metainfo-guidelines/#launchable) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
 - `invalid-child-tag-name` - The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has a child tag which isn't allowed under that parent tag.
-- `name-has-dot-suffix` - The [name](/docs/for-app-authors/metainfo-guidelines/#name-summary-and-developer-name) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) ends in a dot (`.`).
+- `name-has-dot-suffix` - The [name](/docs/for-app-authors/metainfo-guidelines/#name-and-summary) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) ends in a dot (`.`).
 - `releases-info-missing` - The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has no [release information](/docs/for-app-authors/metainfo-guidelines/#release).
 - `unknown-tag` - The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has an invalid tag. Non-standard tags must be prefixed with `x-` or should be under `<custom>` tag.
 
@@ -173,7 +173,7 @@ with a link to the license:
 <project_license>LicenseRef-proprietary=https://example.org/legal/</project_license>
 ```
 
-## Name, summary and developer name
+## Name and summary
 
 ```xml
 <name>App Name</name>
@@ -183,17 +183,19 @@ with a link to the license:
 Please make sure to follow the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#app-name)
 for `name` and `summary`.
 
-:::note
-The deprecated `developer_name` tag is also supported for backwards compatibility
-:::
+## Developer Name
 
 A `developer` [tag](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-developer)
-with a `name` child tag must be present. Only one `developer` tag is
-allowed and the `name` tag also must be present only once in
-[untranslated](#metainfo-translations) form.
+with an `id` attribute and a `name` child tag must be present. The `name`
+must be the author or developer of the application.
+
+The `id` must be a reverse DNS, for example `org.example`.
+
+Only one `developer` tag and only one child `name` tag in
+[untranslated](#metainfo-translations) form is allowed.
 
 ```xml
-<developer id="tld.vendor">
+<developer id="org.example">
   <name>Developer name</name>
 </developer>
 ```
@@ -515,7 +517,7 @@ The `description` tag has to be translated by each `<p>` and `<li>` tags.
 <summary>A summary</summary>
 <summary xml:lang="de">Translated summary</summary>
 
-<developer id="tld.vendor">
+<developer id="org.example">
   <name>Developer name</name>
   <name xml:lang="de">Translated developer name</name>
 </developer>
@@ -550,7 +552,7 @@ as forbidden. The whole block of the `description` tag can be excluded
 by using `translate="no"`.
 
 ```xml
-<developer id="tld.vendor">
+<developer id="org.example">
   <name translate="no">Developer name</name>
 </developer>
 ```
