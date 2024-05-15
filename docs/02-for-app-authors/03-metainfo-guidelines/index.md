@@ -175,13 +175,19 @@ with a link to the license:
 
 ## Name and summary
 
+:::note
+
+Name and summary should not violate any trademarks.
+
+:::
+
 ```xml
 <name>App Name</name>
 <summary>Short summary</summary>
 ```
 
-Please make sure to follow the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#app-name)
-for `name` and `summary`.
+Please make sure to follow the quality guidelines for [name](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#app-name)
+and [summary](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#summary).
 
 ## Developer Name
 
@@ -320,6 +326,13 @@ translate the `keyword` tag.
 
 ## Icons
 
+:::note
+
+Icons must not violate any trademark, be a copy of another application's
+icon or be confusingly similar.
+
+:::
+
 All desktop applications must install icons of the [required size](/docs/for-app-authors/requirements#application-icons)
 to the [proper location](https://docs.flatpak.org/en/latest/conventions.html#application-icons)
 and must also have a [launchable](#launchable) entry so that  `appstreamcli compose`
@@ -339,6 +352,9 @@ link to an icon.
 <icon type="stock">org.flatpak.qtdemo</icon>
 <icon type="remote">https://example.org/icon.png</icon>
 ```
+
+Please see the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#app-icon)
+for icons too.
 
 ## Project Group
 
