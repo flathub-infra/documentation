@@ -101,7 +101,7 @@ In some cases, it can make sense for the icon to align with the visuals of the a
 
 ### Not too long
 
-The [name](/docs/for-app-authors/metainfo-guidelines/#name-summary-and-developer-name) should ideally be no longer than 15 characters, and must be shorter than 20 characters.
+The [name](/docs/for-app-authors/metainfo-guidelines/#name-and-summary) should ideally be no longer than 15 characters, and must be shorter than 20 characters.
 
 :::danger Bad examples
 
@@ -149,7 +149,7 @@ Cases where the formatting is part of an established brand may be exempt (e.g. `
 
 ### Not too long
 
-The [summary](/docs/for-app-authors/metainfo-guidelines/#name-summary-and-developer-name) should ideally be between 10 and 25 characters, and no longer than 35 characters.
+The [summary](/docs/for-app-authors/metainfo-guidelines/#name-and-summary) should ideally be between 10 and 25 characters, and no longer than 35 characters.
 
 :::tip Good example
 
