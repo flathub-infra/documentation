@@ -23,7 +23,11 @@ This also needs your module config to have `is-important: true` set.
 ### Automatically merge PRs
 
 :::danger
-Automatically merging PRs ensures each update _builds_, but does not guarantee the app will launch or run correctly. We highly recommend human-testing each PR before merging it.
+This is not allowed by default on Flathub unless the app is [extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data)
+:::
+
+:::note
+Automatically merging PRs ensures each update builds, but does not guarantee the app will launch or run correctly. We highly recommend human-testing each PR before merging it.
 :::
 
 You can configure External Data Checker to automatically merge PRs. This is done by creating a `flathub.json` file in the root of your manifest's repo with the following contents:
