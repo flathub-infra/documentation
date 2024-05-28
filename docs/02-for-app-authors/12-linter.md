@@ -897,6 +897,13 @@ This should not be reached by applications built on Flathub. Externally
 uploaded applications must ensure they upload the proper application
 refs only.
 
+### flathub-json-automerge-enabled
+
+**Exceptions allowed**: No
+
+The `flathub.json` file has `automerge-flathubbot-prs` property enabled.
+This is no longer allowed by default.
+
 ### flathub-json-eol-rebase-without-message
 
 **Exceptions allowed**: No
