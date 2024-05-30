@@ -21,3 +21,6 @@ You can use the `--subset=verified` option when adding the Flathub remote. This 
 ```bash
 flatpak remote-add --if-not-exists --subset=verified flathub-verified https://flathub.org/repo/flathub.flatpakrepo
 ```
+
+If you wish to revert to the full repository, please see the section on
+[removing subsets](/docs/for-users/installation#remove-subsets).
