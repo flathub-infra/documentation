@@ -14,7 +14,7 @@ flatpak install -y flathub org.flatpak.Builder
    ```bash
    flatpak run org.flatpak.Builder --force-clean --sandbox --user --install --install-deps-from=flathub --ccache --mirror-screenshots-url=https://dl.flathub.org/media/ --repo=repo builddir <manifest>
    ```
-   If you are using an `extra-data` source, please use `flatpak-builder` from your distribution:
+   If you are using an [extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data) source, please use `flatpak-builder` from your distribution:
    ```bash
    flatpak-builder --force-clean --sandbox --user --install --install-deps-from=flathub --ccache --mirror-screenshots-url=https://dl.flathub.org/media/ --repo=repo builddir <manifest>
    ```

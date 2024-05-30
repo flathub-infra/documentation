@@ -928,7 +928,7 @@ the build won't be done.
 
 The `flathub.json` file had `publish-delay-hours` with value less than 3.
 
-This is only allowed for [extra-data](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html?highlight=extra-data#)
+This is only allowed for [extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data)
 applications.
 
 ### flathub-json-only-arches-empty
@@ -1111,7 +1111,7 @@ This property is required.
 [^2]: Only for console applications.
 [^3]: Might be granted on a case-by-case basis.
 [^4]: Only for tools that requires D-Bus access and the bus names are not predictable like D-Bus tools and IDEs.
-[^5]: Granted for `extra-data`.
+[^5]: Granted for [extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data) applications.
 
 ## Linter warnings
 
