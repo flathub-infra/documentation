@@ -316,11 +316,12 @@ translate these tags.
 
 A short and informative description must be present.
 
-Only the following tags are supported: `p` (paragraph), `ol, ul` (ordered
-and unordered list), `li` (list items), `em` for italicized
-emphasis and `code` for inline code in monospace.
+Only the following child tags are supported: `p` (paragraph), `ol, ul`
+(ordered and unordered list) with `li` (list items) child tags, `em` for
+italicized emphasis and `code` for inline code in monospace.
 
-Descriptions must not contain any direct links.
+The description must have at least one non empty `p`, `ol` or `ul` tag.
+It must not contain any direct URLs.
 
 ```xml
 <description>
@@ -557,10 +558,10 @@ Applications must supply a releases tag in their MetaInfo to pass
 validation. Please make sure to also follow the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#release-notes)
 while writing release notes.
 
-Paragraphs in release description must not contain any direct URLs.
-Flathub supports showing a detailed release note link when
-`<url type="details">` tag is used. Release dates must
-not be in the future and versions must be [properly ordered](https://www.freedesktop.org/software/appstream/docs/chap-AppStream-Misc.html#spec-vercmp-recommendations).
+The description tag follows the same formatting as the toplevel
+[description tag](#description). Flathub supports showing a detailed
+release note link when `<url type="details">` tag is used. Release dates
+must not be in the future and versions must be [properly ordered](https://www.freedesktop.org/software/appstream/docs/chap-AppStream-Misc.html#spec-vercmp-recommendations).
 
 :::tip
 `appstreamcli vercmp <version 1> <version 2>` can be used to compare the
@@ -573,7 +574,7 @@ Releases in MetaInfo should look like this:
 ```xml
 <releases>
   <release version="1.0.1" date="2024-01-18">
-  <url type="details">https://example.org/changelog.html#version_1.0.1</url>
+    <url type="details">https://example.org/changelog.html#version_1.0.1</url>
     <description>
       <p>Release description</p>
         <ul>
@@ -583,7 +584,7 @@ Releases in MetaInfo should look like this:
     </description>
   </release>
   <release version="1.0.0" date="2023-08-07">
-  <url type="details">https://example.org/changelog.html#version_1.0.0</url>
+    <url type="details">https://example.org/changelog.html#version_1.0.0</url>
     <description>
       <p>Release description</p>
         <ul>
