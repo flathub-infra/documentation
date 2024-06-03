@@ -4,6 +4,30 @@ Please refer to the Flatpak installation instructions for your distribution over
 
 These instructions will also show you how to install the Flathub repository.
 
+## Flathub Beta repository
+
+Apart from the primary stable repository above, Flathub also has beta
+repository that applications sometime use to serve secondary versions.
+
+This can be added with:
+
+```bash
+flatpak remote-add --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
+```
+
+To install applications from the `beta` repository:
+
+```bash
+flatpak install flathub-beta <app-id>
+```
+
+Both `stable` and `beta` branches can be installed for an application.
+To switch between branches while running:
+
+```bash
+flatpak run --branch=<beta|stable> <app-id>
+```
+
 ## Subsets
 
 In the case, that you only want a specific subset of apps, you can use the `--subset` option when adding the Flathub remote. You will only be able to install apps from the subset you specified.
