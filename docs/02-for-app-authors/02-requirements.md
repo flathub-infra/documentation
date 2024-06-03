@@ -36,6 +36,12 @@ Every repository must contain a manifest describing how to build the application
 The file must be named using the [Application ID](#application-id)
 followed by `.json, .yaml, .yml` depending on whether it is JSON or YAML.
 
+#### flathub.json
+
+Flathub supports building on `x86_64` and `aarch64` by default. If the
+application is supported on only one architecture, please include a
+`flathub.json` file in the submission with the [proper contents](/docs/for-app-authors/maintenance#limiting-the-set-of-architectures-to-build-on).
+
 #### Example manifest
 
 This assumes that upstream brings MetaInfo, icons and desktop files and installs them via their post build install. In this case we're using `meson` as the buildsystem.
@@ -202,7 +208,7 @@ Appstream is the standard used to provide metadata about applications. Applicati
 
 Please read the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines) for more information.
 
-### .desktop files
+### Desktop files
 
 Applications must include a desktop file and pass `desktop-file-validate`.
 
