@@ -449,6 +449,14 @@ as that is done by `flatpak` itself during installation.
 The `Exec` key is missing in the desktop file supplied. Desktop files
 must have an `Exec` key.
 
+### desktop-file-exec-not-in-app-bin
+
+**Exceptions allowed**: No
+
+The executable defined in the `Exec` key of the desktop file is not
+present in `/app/bin` inside the sandbox or not in `builddir/files/bin`
+for the local build directory.
+
 ### desktop-file-failed-validation
 
 **Exceptions allowed**: No
