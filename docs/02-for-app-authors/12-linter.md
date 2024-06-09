@@ -1087,6 +1087,26 @@ the following patterns: `$FLATPAK_ID, $FLATPAK_ID-foo, $FLATPAK_ID.foo`.
 
 They may end with extension suffixes like `.png` or `.svg`.
 
+### non-svg-icon-in-scalable-folder
+
+**Exceptions allowed**: No
+
+An icon file with an extension other than `.svg` was installed to
+`$FLATPAK_DEST/share/icons/hicolor/scalable/apps` (`builddir/share/icons/hicolor/scalable/apps`
+for the local build directory).
+
+The scalable folder is only reserved for SVG icons.
+
+### non-png-icon-in-hicolor-subfolder
+
+**Exceptions allowed**: No
+
+An icon file with an extension other than `.png` was installed to
+`$FLATPAK_DEST/share/icons/hicolor/$size/apps` (`builddir/share/icons/hicolor/$size/apps`
+for the local build directory).
+
+The sized folders are only reserved for PNG icons.
+
 ### toplevel-cleanup-debug
 
 **Exceptions allowed**: No
