@@ -2,14 +2,6 @@
 
 Flathub builds and publishes app updates after a change is made to an app's manifest. The exact time to publish can vary depending on the backlog.
 
-## Automatically publish updates
-
-Since Flathub builds apps based on their manifest (unless you're a trusted developer using direct upload), automating updates to your app's manifest enables you to automatically submit updates of your app to be built by and published on Flathub.
-
-For example, you may use [External Data Checker](./11-external-data-checker.md) to automatically propose (and optionally merge) updates to your app's manifest when you make a new release or tag on your source repository. Note that External Data Checker runs on manifests once per hour, so there may be a delay between a release and the associated PR.
-
-Another option is to implement a workflow in your app's source repository to submit a PR to the app's manifest when a release is made, though this would still require manual merging of the PR once the manifest's CI passes.
-
 ## For users
 
 Neither Flathub nor Flatpak dictate the update policy on end-user machines; instead, their OS and app store client (like GNOME Software or KDE Discover) determine the available options, and ultimately it's up to the user's preferences.
