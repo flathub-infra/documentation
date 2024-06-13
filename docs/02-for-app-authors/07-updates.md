@@ -1,6 +1,6 @@
 # Updates
 
-Flathub builds and publishes app updates a few hours after a change is made to an app's manifest, though the exact time to publish can vary depending on the build backlog.
+Flathub builds and publishes app updates after a change is made to an app's manifest. The exact time to publish can vary depending on the backlog.
 
 ## Automatically publish updates
 
