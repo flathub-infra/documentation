@@ -1,12 +1,16 @@
 # External Data Checker
 
-The [Flatpak External Data Checker](https://github.com/flathub/flatpak-external-data-checker) is a tool that can be used to check for updates to external data sources. It is designed to be used in conjunction with the [Flathub](https://flathub.org) build system, but can be used with any Flatpak repository.
-
-Check the project's README above for additional information not covered here.
+The [Flatpak External Data Checker](https://github.com/flathub/flatpak-external-data-checker) is a tool that can be used to automatically check for updates to external sources
+in the application manifest. It is designed to be used in conjunction with the [Flathub](https://flathub.org) build system, but can be used with any Flatpak repository.
 
 ## Configuration
 
-If you are using the Flathub infrastructure (i.e. your app's manifest is in a repo on the Flathub org), External Data Checker will be run every hour for you and will create merge requests if there are newer versions of external data found, depending on your configuration.
+External Data Checker runs hourly on Flathub by default. If the application manifest has a [checker](https://github.com/flathub-infra/flatpak-external-data-checker?tab=readme-ov-file#changes-to-flatpak-manifests) configured and if there are newer versions of external data found, a merge request
+with the update will be created through the [flathubbot GitHub account](https://github.com/flathubbot).
+
+By default, External Data Checker runs on the [default GitHub branch](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/changing-the-default-branch) only but it can be configured to run on multiple branches through a [custom workflow](https://github.com/flathub-infra/flatpak-external-data-checker?tab=readme-ov-file#custom-workflow). A custom schedule can also be configured with the above workflow.
+
+If a custom workflow is being used, please [disable](/docs/for-app-authors/external-data-checker#disable) the default Flathub provided workflow.
 
 ### Only create updates for important modules
 
