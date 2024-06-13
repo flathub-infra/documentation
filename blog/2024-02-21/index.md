@@ -2,7 +2,7 @@
 slug: improved-build-validation
 title: Improved build validation, increased moderation, and the long-awaited switch to libappstream
 authors: [barthalion]
-tags: [flathub, moderation, linter]
+tags: [moderation, linter]
 ---
 
 Flathub's automatic build validation is more thorough now, and includes checks for issues we previously would have only flagged manually. There is a chance that if your app has been passing the continuous integration checks previously, it will fail now; here's why, and what to do about it.
