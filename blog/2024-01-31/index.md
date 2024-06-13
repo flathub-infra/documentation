@@ -2,7 +2,7 @@
 slug: fosdem-2024
 title: Catch Us at FOSDEM 2024!
 authors: [cassidyjames]
-tags: [flathub, event]
+tags: [event]
 ---
 
 FOSDEM 2024—a free event for software developers to meet, share ideas, and collaborate—is this coming weekend in Brussels, Belgium and we'll be there! Learn where you can find us or even sit down and discuss Flathub itself, metadata and build validation, upcoming changes, and anything else on your mind.

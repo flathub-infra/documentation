@@ -2,7 +2,7 @@
 slug: new-flathub-docs
 title: New Flathub docs
 authors: razze
-tags: [flathub, launch]
+tags: [docs]
 ---
 
 You can now find our new documentation at [docs.flathub.org](/) or well here, if you're reading this.

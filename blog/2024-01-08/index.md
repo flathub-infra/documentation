@@ -2,7 +2,7 @@
 slug: quality-moderation
 title: "Raising the Bar: Introducing the new App Metadata Guidelines"
 authors: [razze, bertob]
-tags: [flathub, quality]
+tags: [quality]
 ---
 
 Flathub has grown massively over the past few years, making it easier than ever to get a ton of apps all from one place—but with that growth comes new problems. We're here with a solution to ensure developers' apps, Flathub, and the entire Linux desktop ecosystem is presented in what we believe is the best light possible.
