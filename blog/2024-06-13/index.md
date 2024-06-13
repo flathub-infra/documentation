@@ -9,6 +9,8 @@ Starting next week, June 17th, the linter will no longer allow enabling
 automatic merge for pull requests created by flatpak-external-data-checker,
 unless the app uses an extra-data source or has been added to the exceptions list.
 
+<!-- truncate -->
+
 The verified apps utilizing `automerge-flathubbot-prs` before May 28th have
 been grandfathered and no explicit action is required from the maintainers. If
 your app does not meet these criteria, you can still
