@@ -49,7 +49,7 @@ Flathub has builders for `x86_64`, and `aarch64` as current runtimes (based on F
 
 If you build for both `x86_64` and `aarch64` you do not need a `flathub.json` file. There will be no new architecture add or removed on current runtimes, which mean that if that situation ever occurred, it would only happen when changing the runtime version in your package.
 
-### End of life
+## End of life
 
 :::note
 Extensions or BaseApps do not need to be EOL or EOL Rebased.
@@ -78,7 +78,9 @@ Additionally, you can also update the MetaInfo file of the new application with 
 
 The `end-of-life-rebase` will tell flatpak to automatically migrate the user data from the old package to the new package, making the process transparent for the user.
 
-Please also try to contact a flathub admin to archive the repo by either creating an issue at [flathub/flathub](https://github.com/flathub/flathub/issues/new) or emailing [Flathub admins](mailto:admins@flathub.org).
+:::note
+Please also try to contact a Flathub admin to archive the repo by creating an [issue](https://github.com/flathub/flathub/issues/new).
+:::
 
 In case you want to step down as a maintainer but wish someone to take over maintenance, you can ask in the [tracker issue](https://github.com/flathub/flathub/issues/3693).
 
