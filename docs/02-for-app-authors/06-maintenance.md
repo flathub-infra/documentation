@@ -63,6 +63,8 @@ There may come a point where an application is no longer maintained. In order to
 }
 ```
 
+EOL-ing will remove the listing of the application from the [Flathub website](https://flathub.org/).
+
 ## End of life Rebase
 
 If the application has been renamed, you must additionally include `end-of-life-rebase` with the new ID. Recent flatpak versions will prompt user if they'd like to switch to the renamed app.
