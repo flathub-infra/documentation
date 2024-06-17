@@ -409,24 +409,16 @@ application in current `id` tag replaces the one in this tag.
 ## Categories and keywords
 
 If there’s a [launchable](#launchable) defined for a desktop application,
-they are pulled from the desktop file and merged in the [AppStream Catalog data](https://www.freedesktop.org/software/appstream/docs/chap-CatalogData.html).
-So defining them separately in the MetaInfo is not strictly necessary.
-
-Please see the [Menu specification](https://specifications.freedesktop.org/menu-spec/latest/apa.html)
-for a list of valid category names.
-
-Please see the [Appstream specification](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-categories)
-on how to define them in the MetaInfo file.
-
-If they are present in both places, `appstreamcli compose` will merge them.
+they are pulled from the desktop file. Defining them separately in the
+Metainfo file will override the contents of the desktop file.
 
 Please don't use, generic categories like
 `GTK, Qt, KDE, GNOME, Motif, Java, GUI, Application, XFCE, DDE` as these
-are filtered by Appstream. These can be placed in `keywords` if
+are filtered by Appstream. These can be placed in `Keywords` if
 necessary.
 
-Please see the [translations section](#metainfo-translations) to
-translate the `keyword` tag.
+Please see the [Menu specification](https://specifications.freedesktop.org/menu-spec/latest/apa.html)
+for a list of valid category names.
 
 ## Icons
 
