@@ -1099,7 +1099,7 @@ for the local build directory).
 
 The scalable folder is only reserved for SVG icons.
 
-### non-png-icon-in-hicolor-subfolder
+### non-png-icon-in-hicolor-size-folder
 
 **Exceptions allowed**: No
 
