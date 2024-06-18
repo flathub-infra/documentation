@@ -451,14 +451,6 @@ as that is done by `flatpak` itself during installation.
 The `Exec` key is missing in the desktop file supplied. Desktop files
 must have an `Exec` key.
 
-### desktop-file-exec-not-in-app-bin
-
-**Exceptions allowed**: No
-
-The executable defined in the `Exec` key of the desktop file is not
-present in `/app/bin` inside the sandbox or not in `builddir/files/bin`
-for the local build directory.
-
 ### desktop-file-failed-validation
 
 **Exceptions allowed**: No
@@ -493,8 +485,8 @@ The `Icon` key of the desktop file supplied in the build does not have
 a proper value.
 
 The value must be of the following patterns: `$FLATPAK_ID`, `$FLATPAK_ID.foo`
-or `$FLATPAK_ID-foo`. It may end with an extension but only `svg, png`
-are allowed.
+or `$FLATPAK_ID-foo`. It may end with an extension but only `svg, svgz,
+png` are allowed.
 
 ### desktop-file-icon-not-installed
 
@@ -1087,13 +1079,13 @@ This means that no exportable icons were found in the [proper location](https://
 An icon is considered by Flatpak to be exportable if it matches any of
 the following patterns: `$FLATPAK_ID, $FLATPAK_ID-foo, $FLATPAK_ID.foo`.
 
-They may end with extension suffixes like `.png` or `.svg`.
+They may end with extension suffixes like `.png`, `.svg` or `.svgz`.
 
 ### non-svg-icon-in-scalable-folder
 
 **Exceptions allowed**: No
 
-An icon file with an extension other than `.svg` was installed to
+An icon file with an extension other than `.svg, .svgz` was installed to
 `$FLATPAK_DEST/share/icons/hicolor/scalable/apps` (`builddir/share/icons/hicolor/scalable/apps`
 for the local build directory).
 
