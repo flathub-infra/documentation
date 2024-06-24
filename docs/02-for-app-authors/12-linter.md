@@ -271,15 +271,6 @@ is missing from the build.
 Please make sure to install it to the correct folder and name the file
 according to the application id used in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
 
-### appstream-missing-appinfo
-
-**Exceptions allowed**: No
-
-The build or the ostree repo is missing the folder `files/share/app-info`.
-
-This usually indicates something else is wrong. Please review additional
-errors if present.
-
 ### appstream-missing-appinfo-file
 
 **Exceptions allowed**: No
@@ -376,18 +367,18 @@ uploaded applications must ensure to mirror media as explained above.
 **Exceptions allowed**: No
 
 The [AppStream catalog](/docs/for-app-authors/metainfo-guidelines/#checking-the-generated-output)
-file is missing thumbnails of screenshots. These are generated
+file is missing screenshots tags. These are generated
 automatically and the error means something else is wrong.
 
 This can happen when screenshot tags are missing/not properly defined in
 the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
-or if the image file/URL is malformed or is below the required size.
-Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#screenshots)
+or if the image file/URL is not reachable. Please see the
+[MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#screenshots)
 on how to define them.
 
 If the screenshot tag is properly defined but the error happens, it can
 mean that [mirroring](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html)
-failed due to connectivity issues.
+failed due to connectivity issues in the builders.
 
 ### appstream-multiple-components
 
