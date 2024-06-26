@@ -489,12 +489,23 @@ or has the wrong filename.
 
 ### desktop-file-is-hidden
 
+**Exceptions allowed**: No
+
+The desktop file supplied in the build sets `Hidden=true`
+
+### desktop-file-is-nodisplay
+
 **Exceptions allowed**: Yes[^2]
 
-The desktop file supplied in the build sets `Hidden=true` or
-`NoDisplay=true`.
+The desktop file supplied in the build sets `NoDisplay=true`. This is
+only allowed for console applications.
 
-Graphical applications must not hide their main desktop file.
+### desktop-file-terminal-key-not-true
+
+**Exceptions allowed**: No
+
+This is for console applications only. The desktop file is set to
+display on desktop environments but no `Terminal=true` is present.
 
 ### desktop-file-not-installed
 
