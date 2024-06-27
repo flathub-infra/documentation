@@ -22,7 +22,17 @@ source type.
 
 Each application should have a unique application ID, following the standard reverse-DNS schema. See [the Flatpak documentation](http://docs.flatpak.org/en/latest/conventions.html#application-ids) for more information on this. The Application ID should be a real URL of a domain that the app author has control over or where their app is hosted.
 
+If the appid uses a code hosting component, for example, `io.github.user.project` or `io.gitlab.user.project`, the corresponding git repository
+`https://github.com/user/project.git, https://gitlab.com/user/project.git` must exist.
+
+For sourceforge appids `io.sourceforge.foo.bar`, the project must exist
+at `https://sourceforge.net/projects/foo`.
+
+Note that the last component of the appid must not be demangaled.
+
 Ignoring this will lead to problems down the line, such as not being able to verify the app and receiving payments. It also decides, which verification methods will be available. For e.g. using `io.github.flathub.TestApp` would only allow for `Github` or `Website` verification.
+
+Applications are not allowed to have >=6 components after splitting at each `.` in their IDs. This is only allowed for runtimes, baseapps and extensions.
 
 ## Repository layout
 
