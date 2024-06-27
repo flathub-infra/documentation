@@ -11,6 +11,94 @@ It's run against all builds sent to Flathub, and can be run locally to check you
 
 Here is a list of linter errors, and whether exceptions may be applied, by default.
 
+### appid-length-more-than-255-chars
+
+**Exceptions allowed**: No
+
+The length of appid string is more than 255 characters.
+
+Please follow the [app id guidelines](/docs/for-app-authors/requirements#application-id)
+and [Flatpak conventions](https://docs.flatpak.org/en/latest/conventions.html#application-ids)
+for more information.
+
+### appid-less-than-3-components
+
+**Exceptions allowed**: No
+
+The appid has less than 3 components after splitting at each `.`. At
+least 3 components is needed.
+
+Please follow the [app id guidelines](/docs/for-app-authors/requirements#application-id)
+and [Flatpak conventions](https://docs.flatpak.org/en/latest/conventions.html#application-ids)
+for more information.
+
+### appid-component-wrong-syntax
+
+**Exceptions allowed**: No
+
+The appid contains a disallowed character.
+
+Please follow the [app id guidelines](/docs/for-app-authors/requirements#application-id)
+and [Flatpak conventions](https://docs.flatpak.org/en/latest/conventions.html#application-ids)
+for more information.
+
+### appid-too-many-components-for-app
+
+**Exceptions allowed**: No
+
+The appid has >=6 components after splitting at each `.`. Applications
+must try to have at most 5 components.
+
+This is not checked for runtimes or baseapps.
+
+Please follow the [app id guidelines](/docs/for-app-authors/requirements#application-id)
+and [Flatpak conventions](https://docs.flatpak.org/en/latest/conventions.html#application-ids)
+for more information.
+
+### appid-code-host-not-found
+
+**Exceptions allowed**: No
+
+The appid uses a code host in the domain part but the code hosting url
+could not be determined.
+
+### appid-code-host-not-reachable
+
+**Exceptions allowed**: No
+
+The appid uses a code host in the domain part but the corresponding
+git repository could not be found.
+
+Please follow the [app id guidelines](/docs/for-app-authors/requirements#application-id)
+and [Flatpak conventions](https://docs.flatpak.org/en/latest/conventions.html#application-ids)
+for more information.
+
+### appid-domain-not-found
+
+**Exceptions allowed**: No
+
+The domain could not be determined from the appid.
+
+### appid-domain-not-resolvable
+
+**Exceptions allowed**: No
+
+The domain determined from the appid was not resolvable.
+
+Please follow the [app id guidelines](/docs/for-app-authors/requirements#application-id)
+and [Flatpak conventions](https://docs.flatpak.org/en/latest/conventions.html#application-ids)
+for more information.
+
+### appid-domain-not-registered
+
+**Exceptions allowed**: No
+
+The domain determined from the appid was not found to be registered.
+
+Please follow the [app id guidelines](/docs/for-app-authors/requirements#application-id)
+and [Flatpak conventions](https://docs.flatpak.org/en/latest/conventions.html#application-ids)
+for more information.
+
 ### appid-code-hosting-too-few-components
 
 **Exceptions allowed**: No[^1]
