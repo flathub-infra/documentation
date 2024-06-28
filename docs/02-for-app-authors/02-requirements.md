@@ -10,6 +10,110 @@ and integrate well in the desktop experience.
 If you have any further questions, please ask on [Matrix](https://matrix.to/#/#flatpak:matrix.org).
 :::
 
+## Application ID
+
+The following rules should be followed when creating application IDs.
+
+- Each component of the ID must contain only the allowed characters
+  `[A-Z][a-z][0-9]_`, must not exceed 255 characters and must have at
+  least 3 components. Eg. `com.example.foo` has 3 components.
+
+- The ID should be unique for each application and must exactly match the [ID tag](/docs/for-app-authors/metainfo-guidelines/#id)
+  in Metainfo file.
+
+- The reverse domain portion _must_ be in lowercase. The entire ID should be in lowercase if possible.
+
+```
+# Good
+com.example.foo
+
+# Allowed
+com.example.Foo
+
+# Wrong
+Com.example.foo
+com.Example.foo
+```
+
+- All portions _except_ the last component (the part after the last `.`)
+  must be _demangled_.
+
+  Demangling means converting dash `-` to underscore `_` and prefixing
+  intial digits of each component with an underscore `_`.
+
+```
+# Good
+com.example_site.foo
+com._0example.foo
+org._7_zip.7-zip
+
+# Wrong
+com.example-site.foo
+com.0example.foo
+org.7-zip.7-zip
+```
+
+- The author/developer/project of the application must have control
+  over the domain portion of the ID and the corresponding URL must be
+  reachable.
+
+  For example for `com.example_site.foo.bar` the URL
+  `http(s)://foo.example-site.com` must be reachable over HTTP(S) and
+  must be under control of author/developer/project of the application.
+
+- The ID must not end in `.desktop`.
+
+### Code hosting IDs
+
+A few additonal rules apply to applications using known code hosting
+prefixes in the ID.
+
+- Applications using code hosting IDs and hosted on
+  `github.com, gitlab.com, codeberg.org, framagit.org` must use
+  `io.github, io.gitlab, page.codeberg, io.frama` prefixes depending on
+  where the project is hosted. They must not
+  `com.github, com.gitlab, org.codeberg, org.framagit` unless the
+  project is an official project of the code hosting platform.
+
+  Projects hosted on Sourceforge can use `io.sourceforge, net.sourceforge`
+  prefixes.
+
+```
+# Good
+io.github.username.reponame
+io.sourceforge.project.app
+
+# Wrong
+com.github.username.reponame
+```
+
+- Code hosting IDs must have at least 4 components.
+
+```
+# Good
+io.github.username.reponame
+
+# Wrong
+io.github.username
+```
+
+- The git repository must be reachable.
+
+  For example, for the ID `io.github.username.reponame`, the git
+  repository must be reachable at
+  `https://github.com/username/reponame.git`. `username` can be
+  demangled if necessary.
+
+  For a sourceforge ID like `io.sourceforge.foo.bar` the project must be
+  reachable at `https://sourceforge.net/projects/foo`.
+
+Applications are not allowed to have >=6 components in the IDs. This is
+only allowed for baseapps and runtimes.
+
+The ID chosen will determine the type of verification method available.
+It must be a constant and unique identifier of the application. Please
+choose it carefully and don't hesitate to ask the reviewers for help.
+
 ## License
 
 All content hosted on Flathub must allow legal redistribution, and the license must be
@@ -17,22 +121,6 @@ correctly specified in the app's [MetaInfo file](/docs/for-app-authors/metainfo-
 Non-redistributable files can be downloaded at install time using the
 [extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data)
 source type.
-
-## Application ID
-
-Each application should have a unique application ID, following the standard reverse-DNS schema. See [the Flatpak documentation](http://docs.flatpak.org/en/latest/conventions.html#application-ids) for more information on this. The Application ID should be a real URL of a domain that the app author has control over or where their app is hosted.
-
-If the appid uses a code hosting component, for example, `io.github.user.project` or `io.gitlab.user.project`, the corresponding git repository
-`https://github.com/user/project.git, https://gitlab.com/user/project.git` must exist.
-
-For sourceforge appids `io.sourceforge.foo.bar`, the project must exist
-at `https://sourceforge.net/projects/foo`.
-
-Note that the last component of the appid must not be demangaled.
-
-Ignoring this will lead to problems down the line, such as not being able to verify the app and receiving payments. It also decides, which verification methods will be available. For e.g. using `io.github.flathub.TestApp` would only allow for `Github` or `Website` verification.
-
-Applications are not allowed to have >=6 components after splitting at each `.` in their IDs. This is only allowed for runtimes, baseapps and extensions.
 
 ## Repository layout
 
