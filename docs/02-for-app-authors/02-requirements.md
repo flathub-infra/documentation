@@ -21,7 +21,8 @@ The following rules should be followed when creating application IDs.
 - The ID should be unique for each application and must exactly match the [ID tag](/docs/for-app-authors/metainfo-guidelines/#id)
   in Metainfo file.
 
-- The reverse domain portion _must_ be in lowercase. The entire ID should be in lowercase if possible.
+- The domain portion ie. all components except the last, _must_
+  be in lowercase. The entire ID should be in lowercase if possible.
 
 ```
 # Good
@@ -36,10 +37,8 @@ com.Example.foo
 ```
 
 - All portions _except_ the last component (the part after the last `.`)
-  must be _demangled_.
-
-  Demangling means converting dash `-` to underscore `_` and prefixing
-  intial digits of each component with an underscore `_`.
+  must be must convert dash `-` to underscore `_` and prefix
+  intial digits with an underscore `_`.
 
 ```
 # Good
@@ -54,12 +53,12 @@ org.7-zip.7-zip
 ```
 
 - The author/developer/project of the application must have control
-  over the domain portion of the ID and the corresponding URL must be
-  reachable.
+  over domain portion of the ID ie. all components except the last and
+  the corresponding URL must be reachable over HTTP(S).
 
   For example for `com.example_site.foo.bar` the URL
-  `http(s)://foo.example-site.com` must be reachable over HTTP(S) and
-  must be under control of author/developer/project of the application.
+  `http(s)://foo.example-site.com` must be reachable and must be under
+  control of author/developer/project of the application.
 
 - The ID must not end in `.desktop`.
 
@@ -101,8 +100,7 @@ io.github.username
 
   For example, for the ID `io.github.username.reponame`, the git
   repository must be reachable at
-  `https://github.com/username/reponame.git`. `username` can be
-  demangled if necessary.
+  `https://github.com/username/reponame.git`.
 
   For a sourceforge ID like `io.sourceforge.foo.bar` the project must be
   reachable at `https://sourceforge.net/projects/foo`.
