@@ -18,7 +18,6 @@ Here is a list of linter errors, and whether exceptions may be applied, by defau
 The length of appid string is more than 255 characters.
 
 Please follow the [app id guidelines](/docs/for-app-authors/requirements#application-id)
-and [Flatpak conventions](https://docs.flatpak.org/en/latest/conventions.html#application-ids)
 for more information.
 
 ### appid-less-than-3-components
@@ -29,7 +28,6 @@ The appid has less than 3 components after splitting at each `.`. At
 least 3 components is needed.
 
 Please follow the [app id guidelines](/docs/for-app-authors/requirements#application-id)
-and [Flatpak conventions](https://docs.flatpak.org/en/latest/conventions.html#application-ids)
 for more information.
 
 ### appid-component-wrong-syntax
@@ -39,7 +37,6 @@ for more information.
 The appid contains a disallowed character.
 
 Please follow the [app id guidelines](/docs/for-app-authors/requirements#application-id)
-and [Flatpak conventions](https://docs.flatpak.org/en/latest/conventions.html#application-ids)
 for more information.
 
 ### appid-too-many-components-for-app
@@ -52,7 +49,6 @@ must try to have at most 5 components.
 This is not checked for runtimes or baseapps.
 
 Please follow the [app id guidelines](/docs/for-app-authors/requirements#application-id)
-and [Flatpak conventions](https://docs.flatpak.org/en/latest/conventions.html#application-ids)
 for more information.
 
 ### appid-code-host-not-found
@@ -70,7 +66,6 @@ The appid uses a code host in the domain part but the corresponding
 git repository could not be found.
 
 Please follow the [app id guidelines](/docs/for-app-authors/requirements#application-id)
-and [Flatpak conventions](https://docs.flatpak.org/en/latest/conventions.html#application-ids)
 for more information.
 
 ### appid-domain-not-found
@@ -79,24 +74,14 @@ for more information.
 
 The domain could not be determined from the appid.
 
-### appid-domain-not-resolvable
+### appid-url-not-reachable
 
 **Exceptions allowed**: No
 
-The domain determined from the appid was not resolvable.
+The URL determined from the domain portion of the appid was not
+reachable.
 
 Please follow the [app id guidelines](/docs/for-app-authors/requirements#application-id)
-and [Flatpak conventions](https://docs.flatpak.org/en/latest/conventions.html#application-ids)
-for more information.
-
-### appid-domain-not-registered
-
-**Exceptions allowed**: No
-
-The domain determined from the appid was not found to be registered.
-
-Please follow the [app id guidelines](/docs/for-app-authors/requirements#application-id)
-and [Flatpak conventions](https://docs.flatpak.org/en/latest/conventions.html#application-ids)
 for more information.
 
 ### appid-code-hosting-too-few-components
@@ -107,7 +92,6 @@ The app id uses a code hosting domain like GitLab, GitHub or Codeberg
 and doesn't have 4 components: `{tld}.{doamin}.foo.bar`.
 
 Please follow the [app id guidelines](/docs/for-app-authors/requirements#application-id)
-and [Flatpak conventions](https://docs.flatpak.org/en/latest/conventions.html#application-ids)
 for more information.
 
 ### appid-ends-with-lowercase-desktop
@@ -141,7 +125,6 @@ and the first `{tld}` component does not start with `io` for GitHub
 and GitLab; `page` for Codeberg.
 
 Please follow the [app id guidelines](/docs/for-app-authors/requirements#application-id)
-and [Flatpak conventions](https://docs.flatpak.org/en/latest/conventions.html#application-ids)
 for more information.
 
 ### appstream-external-screenshot-url
