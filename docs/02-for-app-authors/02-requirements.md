@@ -239,9 +239,9 @@ application in its unadulterated form, direct from its authors.
 
 ## Stable releases, reproducible builds
 
-Flathub only hosts stable application releases, and not development snapshots.
-Manifests should therefore refer to tarballs or git tags and not the tip of a
-branch.
+Flathub only hosts stable releases, and not development snapshots or
+Nightly releases. Manifests should therefore use stable tarballs/binaries
+or git tags or stables sources and must not update to new versions daily.
 
 When building from a git tag, both the tag name and the commit id should be specified in your manifest, like so:
 
