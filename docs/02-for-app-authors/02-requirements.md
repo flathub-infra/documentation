@@ -12,6 +12,10 @@ If you have any further questions, please ask on [Matrix](https://matrix.to/#/#f
 
 ## Application ID
 
+The ID chosen will determine the type of verification method available.
+It must be a constant and unique identifier of the application. Please
+choose it carefully and don't hesitate to ask the reviewers for help.
+
 The following rules should be followed when creating application IDs.
 
 - Each component of the ID must contain only the allowed characters
@@ -36,9 +40,9 @@ Com.example.foo
 com.Example.foo
 ```
 
-- All portions _except_ the last component (the part after the last `.`)
-  must be must convert dash `-` to underscore `_` and prefix
-  intial digits with an underscore `_`.
+- All components _except_ the last, must convert dash `-` to underscore
+  `_` and also prefix any intial digits with an underscore `_`. Doing
+  this for the last component is not strictly necessary.
 
 ```
 # Good
@@ -70,12 +74,14 @@ prefixes in the ID.
 - Applications using code hosting IDs and hosted on
   `github.com, gitlab.com, codeberg.org, framagit.org` must use
   `io.github, io.gitlab, page.codeberg, io.frama` prefixes depending on
-  where the project is hosted. They must not
-  `com.github, com.gitlab, org.codeberg, org.framagit` unless the
-  project is an official project of the code hosting platform.
+  where the project is hosted.
 
   Projects hosted on Sourceforge can use `io.sourceforge, net.sourceforge`
   prefixes.
+
+  They must not use `com.github, com.gitlab, org.codeberg, org.framagit`
+  unless the project is an official project of the code hosting
+  platform.
 
 ```
 # Good
@@ -88,14 +94,6 @@ com.github.username.reponame
 
 - Code hosting IDs must have at least 4 components.
 
-```
-# Good
-io.github.username.reponame
-
-# Wrong
-io.github.username
-```
-
 - The git repository must be reachable.
 
   For example, for the ID `io.github.username.reponame`, the git
@@ -107,10 +105,6 @@ io.github.username
 
 Applications are not allowed to have >=6 components in the IDs. This is
 only allowed for baseapps and runtimes.
-
-The ID chosen will determine the type of verification method available.
-It must be a constant and unique identifier of the application. Please
-choose it carefully and don't hesitate to ask the reviewers for help.
 
 ## License
 
