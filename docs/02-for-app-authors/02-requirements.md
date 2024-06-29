@@ -59,8 +59,8 @@ com.0example.foo
 ### Control over domain
 
 - The author/developer/project of the application must have control
-  over domain portion and the corresponding URL must be reachable over
-  HTTP(S).
+  over the domain portion of the ID and the corresponding URL must be
+  reachable over HTTP(S).
 
   For example for the ID `com.example_site.foo.bar` the URL
   `http(s)://foo.example-site.com` must be reachable and must be under
