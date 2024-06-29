@@ -66,7 +66,8 @@ com.0example.foo
   `http(s)://foo.example-site.com` must be reachable and must be under
   control of author/developer/project of the application.
 
-- For code hosting IDs, the git repository must be reachable.
+- For code hosting IDs, the git repository must be reachable and must
+  belong to the application/project.
 
   For example, for the ID `io.github.username.reponame`, the git
   repository must be reachable at
