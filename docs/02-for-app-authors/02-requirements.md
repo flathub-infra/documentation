@@ -1,10 +1,7 @@
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
 # Requirements
 
-The goal of these requirements is to ensure that the applications hosted on Flathub are safe to use
-and integrate well in the desktop experience.
+The goal of these requirements is to ensure that the applications hosted
+on Flathub are safe to use and integrate well in the desktop experience.
 
 :::tip
 If you have any further questions, please ask on [Matrix](https://matrix.to/#/#flatpak:matrix.org).
@@ -12,69 +9,45 @@ If you have any further questions, please ask on [Matrix](https://matrix.to/#/#f
 
 ## Application ID
 
-The ID chosen will determine the type of verification method available.
-It must be a constant and unique identifier of the application. Please
-choose it carefully and don't hesitate to ask the reviewers for help.
+The ID chosen will determine the type of [verification method](/docs/for-app-authors/verification#what-is-verification)
+available. It must be a constant and unique identifier of the application.
+
+Please choose it carefully and don't hesitate to ask the reviewers for
+help.
 
 The following rules should be followed when creating application IDs.
 
-- Each component of the ID must contain only the allowed characters
-  `[A-Z][a-z][0-9]_`, must not exceed 255 characters and must have at
-  least 3 components. Eg. `com.example.foo` has 3 components.
+- The ID must not exceed 255 characters, must have at least 3 components
+  and must not end in `.desktop`.
 
-- The ID should be unique for each application and must exactly match the [ID tag](/docs/for-app-authors/metainfo-guidelines/#id)
+  The ID can be split into _components_ at each `.`. Each component must
+  contain only the characters `[A-Z][a-z][0-9]_`.  A dash `-` is only
+  allowed in the last component.
+
+  All components except the last is taken as the _domain portion_ of
+  the ID.
+
+- The ID must exactly match the [ID tag](/docs/for-app-authors/metainfo-guidelines/#id)
   in Metainfo file.
 
-- The domain portion ie. all components except the last, _must_
-  be in lowercase. The entire ID should be in lowercase if possible.
-
-```
-# Good
-com.example.foo
-
-# Allowed
-com.example.Foo
-
-# Wrong
-Com.example.foo
-com.Example.foo
-```
-
-- All components _except_ the last, must convert dash `-` to underscore
-  `_` and also prefix any intial digits with an underscore `_`. Doing
-  this for the last component is not strictly necessary.
+- The domain portion must be in lowercase and must convert dash `-` to
+  underscore `_` and also prefix any intial digits with an underscore
+  `_`.
 
 ```
 # Good
 com.example_site.foo
 com._0example.foo
-org._7_zip.7-zip
 
 # Wrong
 com.example-site.foo
 com.0example.foo
-org.7-zip.7-zip
 ```
-
-- The author/developer/project of the application must have control
-  over domain portion of the ID ie. all components except the last and
-  the corresponding URL must be reachable over HTTP(S).
-
-  For example for `com.example_site.foo.bar` the URL
-  `http(s)://foo.example-site.com` must be reachable and must be under
-  control of author/developer/project of the application.
-
-- The ID must not end in `.desktop`.
-
-### Code hosting IDs
-
-A few additonal rules apply to applications using known code hosting
-prefixes in the ID.
 
 - Applications using code hosting IDs and hosted on
   `github.com, gitlab.com, codeberg.org, framagit.org` must use
   `io.github, io.gitlab, page.codeberg, io.frama` prefixes depending on
-  where the project is hosted.
+  where the project is hosted and must have at least 4 components.
 
   Projects hosted on Sourceforge can use `io.sourceforge, net.sourceforge`
   prefixes.
@@ -83,18 +56,17 @@ prefixes in the ID.
   unless the project is an official project of the code hosting
   platform.
 
-```
-# Good
-io.github.username.reponame
-io.sourceforge.project.app
+### Control over domain
 
-# Wrong
-com.github.username.reponame
-```
+- The author/developer/project of the application must have control
+  over domain portion and the corresponding URL must be reachable over
+  HTTP(S).
 
-- Code hosting IDs must have at least 4 components.
+  For example for the ID `com.example_site.foo.bar` the URL
+  `http(s)://foo.example-site.com` must be reachable and must be under
+  control of author/developer/project of the application.
 
-- The git repository must be reachable.
+- For code hosting IDs, the git repository must be reachable.
 
   For example, for the ID `io.github.username.reponame`, the git
   repository must be reachable at
@@ -108,279 +80,102 @@ only allowed for baseapps and runtimes.
 
 ## License
 
-All content hosted on Flathub must allow legal redistribution, and the license must be
-correctly specified in the app's [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#license).
-Non-redistributable files can be downloaded at install time using the
-[extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data)
+All content hosted on Flathub must allow legal redistribution, and the
+license must be correctly specified in the app's [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#license).
+
+Non-redistributable sources must use [extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data)
 source type.
 
-## Repository layout
+### No trademark violation
 
-The manifest must be at the top level and named after the application ID with the extension
-.json, .yml or .yaml. All patches and data files required also go in the repository.
+The application name and icon must not violate any trademarks and must
+be distinct.
 
-### Required files
+## Stable releases
 
-Every repository must contain a manifest describing how to build the application.
+Flathub only hosts stable releases and not development snapshots or
+nightly releases. Manifests should therefore use stable and versioned
+sources and must not update to new versions of the main application,
+daily in a consistent manner.
 
-The file must be named using the [Application ID](#application-id)
-followed by `.json, .yaml, .yml` depending on whether it is JSON or YAML.
+## Required files
 
-#### flathub.json
+The following files should be included in the submission.
 
-Flathub supports building on `x86_64` and `aarch64` by default. If the
+### Manifest
+
+The [application manifest](https://docs.flatpak.org/en/latest/manifests.html)
+must be at the top level and named after the [application ID](#application-id)
+with the extension `.json`, `.yml` or `.yaml` depending on whether it is
+JSON or YAML.
+
+All sources used in the manifest must be remotely fetchable using the
+URL or must be included with the submission. The [runtime(s)](https://docs.flatpak.org/en/latest/basic-concepts.html#runtimes)
+used in the manifest must be hosted on Flathub.
+
+### flathub.json
+
+Flathub builds on both `x86_64` and `aarch64` by default. If the
 application is supported on only one architecture, please include a
-`flathub.json` file in the submission with the [proper contents](/docs/for-app-authors/maintenance#limiting-the-set-of-architectures-to-build-on).
+`flathub.json` file in the submission with the
+[proper contents](/docs/for-app-authors/maintenance#limiting-the-set-of-architectures-to-build-on).
 
-#### Example manifest
+### Dependency manifest
 
-This assumes that upstream brings MetaInfo, icons and desktop files and installs them via their post build install. In this case we're using `meson` as the buildsystem.
-
-<Tabs groupId="manifest-language" defaultValue="json" queryString>
-  <TabItem value="json" label="json" default>
-
-```json title="io.github.example.MyCoolApp.json"
-{
-  "id": "io.github.example.MyCoolApp",
-  // The runtime is the environment that the application will run in, so you can use dependencies it provides
-  "runtime": "org.freedesktop.Platform",
-  "runtime-version": "23.08",
-  "sdk": "org.freedesktop.Sdk",
-  // This is the command that will be run when the application is launched
-  "command": "mycoolapp",
-  // These are the permissions that the application needs
-  // Read more about finishing here: https://docs.flatpak.org/en/latest/manifests.html#finishing
-  "finish-args": [
-    "--socket=fallback-x11",
-    "--socket=wayland",
-    "--socket=pulseaudio",
-    "--share=network",
-    "--share=ipc"
-  ],
-  "modules": [
-    {
-      "name": "mycoolapp",
-      // There are other types of buildsystems, like autotools, cmake, cmake-ninja, simple, qmake
-      "buildsystem": "meson",
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://github.com/example/mycoolapp/releases/download/v1.0.0/mycoolapp-source-1.0.0.tar.xz",
-          "dest": "mycoolapp",
-          "sha256": "e198214acdbb57363561dee2d73f27199999af26c283723067525bd854703e12",
-          // Automatically check for updates and create merge requests
-          "x-checker-data": {
-            // There are different types of checkers, see the documentation for more information
-            "type": "anitya",
-            // This is the ID of the project on anitya
-            "project-id": 1,
-            "url-template": "https://github.com/example/mycoolapp/releases/download/v$version/mycoolapp-source-$version.tar.xz"
-          }
-        }
-      ]
-    }
-  ]
-}
-```
-
-  </TabItem>
-  <TabItem value="yml" label="yml">
-
-```yml title="io.github.example.MyCoolApp.yml"
-id: io.github.example.MyCoolApp
-# The runtime is the environment that the application will run in, so you can use dependencies it provides
-runtime: org.freedesktop.Platform
-runtime-version: "23.08"
-sdk: org.freedesktop.Sdk
-# This is the command that will be run when the application is launched
-command: mycoolapp
-# These are the permissions that the application needs
-# Read more about finishing here: https://docs.flatpak.org/en/latest/manifests.html#finishing
-finish-args:
-  - --socket=fallback-x11
-  - --socket=wayland
-  - --socket=pulseaudio
-  - --share=network
-  - --share=ipc
-modules:
-  - name: mycoolapp
-    # There are other types of buildsystems, like autotools, cmake, cmake-ninja, simple, qmake
-    buildsystem: meson
-    sources:
-      - type: archive
-        url: https://github.com/example/mycoolapp/releases/download/v1.0.0/mycoolapp-source-1.0.0.tar.xz
-        dest: mycoolapp
-        sha256: e198214acdbb57363561dee2d73f27199999af26c283723067525bd854703e12
-        # Automatically check for updates and create merge requests
-        x-checker-data:
-          # There are different types of checkers, see the documentation for more information
-          type: anitya
-          # This is the ID of the project on anitya
-          project-id: 1
-          url-template: https://github.com/example/mycoolapp/releases/download/v$version/mycoolapp-source-$version.tar.xz
-```
-
-  </TabItem>
-</Tabs>
-
-### Acceptable, but should be submitted upstream
-
-- Any patches necessary to build and run the application in the Flatpak
-  environment
-- Additional metadata files like the MetaInfo file, screenshots, icons
-  and desktop file
-
-### Strongly discouraged
-
-Patches which add or remove application functionality or large and
-complicated patchsets do not belong in the Flathub repository. The
-packaging on Flathub should reflect, as closely as possible, the
-application in its unadulterated form, direct from its authors.
-
-## Stable releases, reproducible builds
-
-Flathub only hosts stable releases, and not development snapshots or
-Nightly releases. Manifests should therefore use stable tarballs/binaries
-or git tags or stables sources and must not update to new versions daily.
-
-When building from a git tag, both the tag name and the commit id should be specified in your manifest, like so:
-
-```json
-   "tag": "1.0.4",
-   "commit": "cdfb19b90587bc0c44404fae30c139f9ec1cca5c"
-```
-
-This ensures that the build is reproducible, since tag can change their values over time. A commit can also be specified without a tag, however tag names are encouraged as they are better for readability.
-## No network access at build time
-
-Accessing the network is not allowed during the build process.
-Everything that an app requires must be included within the manifest.
-
-If upstream has vendored tarballs those can be used.
+Flathub does not allow accessing the network during the build process
+so all dependencies used by the application must be supplied in the
+manifest or should be vendored.
 
 There is a [community provided set of tools](https://github.com/flatpak/flatpak-builder-tools)
-to generate a dependency manifest for Flatpak.
+that can be used to generate dependency manifests for npm, yarn, cargo,
+pip etc.
 
-This can be used for projects using npm, yarn, cargo etc. that
-traditionally depend on fetching dependencies at build time.
+This manifest must be included in the submission.
 
-## External data checker for proprietary applications
+## Required metadata
 
-External Data Checker is a tool that can automate updating sources in
-the Flatpak manifest and send PRs.
+Applications must have the following metadata included.
 
-Please see the [readme](https://github.com/flathub-infra/flatpak-external-data-checker)
-on how to use it.
-
-## Branches and runtimes
-
-Applications must be built against an SDK or runtime that hosted on Flathub.
-
-Applications that target the `stable` Flathub repo are not allowed to
-use SDKs or runtimes that are in the `beta` repository and vice-versa.
-
-The easiest way to see which runtimes are currently available is to
-install the flathub remote and run:
-
-```bash
-flatpak remote-ls --runtime --show-details flathub
-```
-
-## Desktop integration
-
-Flathub is primarily focused on graphical desktop applications and they have the following expectations to ensure effective desktop integration.
-
-Do note that CLI applications do not require a `.desktop` file but TUI applications _should_ have a `.desktop` file with `Terminal=true`.
+These metadata files should directly come from upstream whenever possible.
 
 ### Appstream
 
-Appstream is the standard used to provide metadata about applications. Applications must provide appstream data and pass [validation](/docs/for-app-authors/metainfo-guidelines/#validation).
+All submissions must provide a [Metainfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
+that passes [validation](/docs/for-app-authors/metainfo-guidelines/#validation).
 
-Please read the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines) for more information.
+### Desktop file
 
-### Desktop files
+All graphical applications must include a [desktop file](https://docs.flatpak.org/en/latest/conventions.html#desktop-files)
 
-Applications must include a desktop file and pass `desktop-file-validate`.
+Desktop file is optional for console applications.
 
-See [the desktop file spec](https://standards.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html) for more details.
+### Icons
 
-If you need to change the desktop file, use the command `desktop-file-edit` on a post installation rule.
+Graphical applications must provide, preferably a SVG icon or at least
+a 256x256 PNG icon, properly [named and installed](https://docs.flatpak.org/en/latest/conventions.html#application-icons).
 
-### Application icons
-
-Applications must provide at least a 256x256 PNG icon or a SVG icon.
-
-Icons must have square dimensions and must not [violate any trademarks](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#no-trademark-violations).
+Icon is optional for console applications.
 
 ## Permissions
 
-Permissions should be limited as much as possible.
+Static permissions should be limited as much as possible and applications
+should use [XDG Portals](https://flatpak.github.io/xdg-desktop-portal/docs/)
+and XDG standards whenever possible.
 
 Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html)
-for more information.
+and choose the permissions required for the application.
 
-A full list of permissions can be found in the [flatpak-metadata](https://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-metadata)
-page.
+## Best practices
 
-### Unrestricted permissions
+- Applications should build all components of the manifest from source
+  when possible.
 
-The following permissions can be freely used:
+- The application should be distributed with minimum modifications and
+  should closely follow upstream.
 
-- `--share=network`
-- `--share=ipc`
-- `--socket=x11`
-- `--socket=fallback-x11`
-- `--socket=wayland`
-- `--socket=pulseaudio`
-- `--device=dri`
+- Patches, which add or remove application functionality, large and
+  complicated patchsets, binary files, source code or any additional
+  tooling must not be in the submission.
 
-`--socket=x11` and `--socket=fallback-x11` are mutually exclusive and either also need `--share=ipc` to be requested.
-
-In general there should not be `--socket=x11` and `--socket=wayland`, beside a few exceptional cases.
-
-### DBus access
-
-Applications should not grant `--socket=system-bus` or `--socket=session-bus`, unless they are
-development tools. The `--log-session-bus` and `--log-system-bus` flags can be used with `flatpak run`
-in order to track down usage.
-
-#### Ownership
-
-By default you are granted access to `--own-name=$your_app_id`. So, the app-id used in the flatpak manifest and the bus name used
-has to match. If they don't match you might need to grant access with `--own-name`.
-
-Flatpak will also by default grant access to subnames of the MPRIS bus in the form of `org.mpris.MediaPlayer2.$your_app_id`. If that's
-not used by your application, you will need to add a `--talk-name` or `--own-name` as required. See the bus policy [documentation](https://docs.flatpak.org/en/latest/flatpak-command-reference.html#session-bus-policy-metadata) on this.
-
-Any ownership beyond that is usually questionable.
-
-#### Talk
-
-Talk permissions are largely unrestricted, with the exception of `org.freedesktop.Flatpak` but always try to use the minimum subset needed.
-
-### Filesystem access
-
-Applications should ideally use [portals](https://flatpak.github.io/xdg-desktop-portal/docs/) for
-file access. Further file access is often necessary and is acceptable, although it should be limited as much as possible.
-
-Additional recommendations:
-
-- For access to XDG directories, variables such as `xdg-music` and `xdg-run/foo` are recommended (see `man flatpak-metadata`).
-
-- Always append `:ro` if write access is not needed.
-
-- If an application hardcodes a path in `$HOME` and you don’t grant `home` access you can
-  use `--persist` and it will map the `$HOME` directory to your private directory e.g.
-  `--persist=.mozilla`. If the application takes args to set config/data dirs then use them.
-
-- Do not attempt to retain configs from non-flatpak installations. While possible it is
-  recommended that flatpak installs stay self-contained.
-
-- If an application uses `$TMPDIR` to contain lock files it may make sense to use `--env=TMPDIR=/var/tmp` or if
-  it shares those files outside the sandbox you may need to create a wrapper script that sets it to `$XDG_CACHE_HOME`.
-
-- Locations `xdg-config`, `xdg-data` and `xdg-cache` are restricted and need a [linter](linter) exception.
-
-### Device access
-
-While not ideal, `--device=all` can be used to access devices like controllers or webcams.
+- Applications should try to make sure their metadata follows the
+  [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines).
