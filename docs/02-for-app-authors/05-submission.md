@@ -91,8 +91,8 @@ guide.
 ### Someone else has put my app on Flathub—what do I do?
 
 Flathub is primarily intended as a service that is used by app developers
-to distribute their apps however third party submissions are allowed
-as long as the license and any terms do not block it.
+to distribute their apps. However, third party submissions are allowed
+as long as the application's license and terms of use (if any) do not block it.
 
 If an application that belongs to you is being distributed without your
 consent or involvement, please get in touch by [opening an issue](https://github.com/flathub/flathub/issues/new)
@@ -107,14 +107,14 @@ them to submit it. Please remain respectful, patient and courteous when
 making such requests.
 
 You can also submit it yourself following the submission process
-outlined above or you can also start a topic on the
+outlined above, or start a topic on the
 [Flathub forum](https://discourse.flathub.org/c/requests/5) to find
 interested volunteers.
 
 ### How long does it take to get submissions reviewed and merged?
 
 There is no definite time limit as all reviewers are volunteers and
-are often busy with other Flathub or infrastructure related work.
+are often busy with other Flathub- or infrastructure-related work.
 
 Merges are also done in batches. So you might have to wait for a while.
 
@@ -134,9 +134,10 @@ created and published.
 
 ### I can't see the app in my authored apps on the developer portal-why?
 
-The website should show the app on your authored apps after a while
-the _official_ build has been published post merge. You need to have
-write access to the Flathub app repository and login to the website.
+Once the app’s submission has been merged and the _official_ build has been
+published, the website should show the app on your authored apps after a short
+time.  You need to have write access to the Flathub app repository and log in
+to the website.
 
 If it does not work, please press the "Refresh" button [here](https://flathub.org/developer-portal)
 and it should show up.
