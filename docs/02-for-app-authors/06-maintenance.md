@@ -23,6 +23,28 @@ Buildbot also monitors the comments on any pull requests in your repository, and
 
 This is a great way to do updates, you do an update locally and tests that it works. Then you can make a pull request against master to verify that it builds on all architectures before you merge it.
 
+
+## Build moderation
+
+Whenever an _official build_ from a merge is built, if any [permission](/docs/for-app-authors/requirements#permissions)
+is changed or any critical [Appstream field](/docs/for-app-authors/metainfo-guidelines/)
+changes value, the build will be held for moderation.
+
+Moderators will manually review the build and the permission change
+and can approve or reject the change if it is wrong or for more
+information.
+
+If it is rejected [flathubbot](https://github.com/flathubbot) will open
+an issue in the app repository with a comment from the moderator. The
+maintainer of the app is supposed to reply to that and answer any queries
+or fix the issues mentioned.
+
+If it is approved it will get automatically published without the
+usual 4-5 hours publish delay.
+
+If the maintainer logged in to the website once, they will get emails
+whenever a build is held for moderation or rejected/approved.
+
 ## `flathub.json`
 
 You can create a file called `flathub.json` to control various parameters of the build infrastructure.
