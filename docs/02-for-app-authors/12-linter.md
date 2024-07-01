@@ -51,28 +51,12 @@ This is not checked for runtimes or baseapps.
 Please follow the [app id guidelines](/docs/for-app-authors/requirements#application-id)
 for more information.
 
-### appid-code-host-not-found
-
-**Exceptions allowed**: No
-
-The appid uses a code host in the domain part but the code hosting url
-could not be determined.
-
-### appid-code-host-not-reachable
-
-**Exceptions allowed**: No
-
-The appid uses a code host in the domain part but the corresponding
-git repository could not be found.
-
-Please follow the [app id guidelines](/docs/for-app-authors/requirements#application-id)
-for more information.
-
 ### appid-domain-not-found
 
 **Exceptions allowed**: No
 
-The domain could not be determined from the appid.
+The domain could not be determined from the appid. This is an internal
+error for the linter.
 
 ### appid-url-not-reachable
 
@@ -81,8 +65,8 @@ The domain could not be determined from the appid.
 The URL determined from the domain portion of the appid was not
 reachable.
 
-Please follow the [app id guidelines](/docs/for-app-authors/requirements#application-id)
-for more information.
+Please see the [Control over domain](/docs/for-app-authors/requirements#control-over-domain)
+section for more information.
 
 ### appid-code-hosting-too-few-components
 

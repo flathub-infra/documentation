@@ -66,15 +66,14 @@ com.0example.foo
   `http(s)://foo.example-site.com` must be reachable and must be under
   control of author/developer/project of the application.
 
-- For code hosting IDs, the git repository must be reachable and must
-  belong to the application/project.
+- For code hosting IDs starting with `io.github., io.gitlab., io.frama.,
+  page.codeberg.` the corresponding URL must be reachable.
 
-  For example, for the ID `io.github.username.reponame`, the git
-  repository must be reachable at
-  `https://github.com/username/reponame.git`.
+  For example for `io.github.foo.bar`, the website
+  `https://foo.github.io` must be reachable.
 
-  For a sourceforge ID like `io.sourceforge.foo.bar` the project must be
-  reachable at `https://sourceforge.net/projects/foo`.
+  For a sourceforge ID like `io.sourceforge.foo.bar` the project URL
+  must be reachable at `https://sourceforge.net/projects/foo`.
 
 Applications are not allowed to have >=6 components in the IDs. This is
 only allowed for baseapps and runtimes.
