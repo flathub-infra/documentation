@@ -118,7 +118,32 @@ are often busy with other Flathub or infrastructure related work.
 
 Merges are also done in batches. So you might have to wait for a while.
 
-### Getting help
+### How long does it take to get the build published after merge?
+
+Usually it should be published within 4-5 hours. Sometimes it might be
+delayed due to load. You can track the build by going to the
+[Buildbot interface](https://flathub.org/builds).
+
+Once published it should show up on the website within a few hours.
+
+### I don't see any screenshots from the test builds-why?
+
+Screenshots don't work from any test builds. If this is a submission, it
+will work after the submission is merged and an _official_ build is
+created and published.
+
+### I can't see the app in my authored apps on the developer portal-why?
+
+The website should show the app on your authored apps after a while
+the _official_ build has been published post merge. You need to have
+write access to the Flathub app repository and login to the website.
+
+If it does not work, please press the "Refresh" button [here](https://flathub.org/developer-portal)
+and it should show up.
+
+If it still does not work feel free to contact us.
+
+## Getting help
 
 Please don't hesitate to ask for help. General queries can be made on the
 [Matrix channel](https://matrix.to/#/#flathub:matrix.org) and on
