@@ -26,12 +26,13 @@ This is a great way to do updates, you do an update locally and tests that it wo
 
 ## Build moderation
 
-Whenever an _official build_ from a merge is built, if any [permission](/docs/for-app-authors/requirements#permissions)
-is changed or any critical [Appstream field](/docs/for-app-authors/metainfo-guidelines/)
+Whenever an _official build_ from a merge commit is built, if any
+[permission](/docs/for-app-authors/requirements#permissions) is changed
+or any critical [Appstream field](/docs/for-app-authors/metainfo-guidelines/)
 changes value, the build will be held for moderation.
 
 Moderators will manually review the build and the permission change
-and can approve or reject the change if it is wrong or for more
+and can approve or reject the change if it is wrong or ask for more
 information.
 
 If it is rejected [flathubbot](https://github.com/flathubbot) will open
