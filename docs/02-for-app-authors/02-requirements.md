@@ -66,14 +66,17 @@ com.0example.foo
   `http(s)://foo.example-site.com` must be reachable and must be under
   control of author/developer/project of the application.
 
-- For code hosting IDs starting with `io.github., io.gitlab., io.frama.,
-  page.codeberg.` the corresponding URL must be reachable.
+- For code hosting IDs starting with `io.github.foo.bar, page.codeberg.foo.bar`
+  the user must be reachable at `https://github.com/foo` or
+  `https://codeberg.org/foo` respectively.
 
-  For example for `io.github.foo.bar`, the website
-  `https://foo.github.io` must be reachable.
+  For a Sourceforge ID starting with `io.sourceforge.foo.bar`, the
+  project URL must be reachable at
+  `https://sourceforge.net/projects/foo`.
 
-  For a sourceforge ID like `io.sourceforge.foo.bar` the project URL
-  must be reachable at `https://sourceforge.net/projects/foo`.
+  For `io.gitlab.foo.bar, io.frama.foo.bar, org.gnome.gitlab.foo.bar,
+  org.freedesktop.gitlab.foo.bar`, `foo` must be a user or a toplevel
+  group on Gitlab.
 
 Applications are not allowed to have >=6 components in the IDs. This is
 only allowed for baseapps and runtimes.
