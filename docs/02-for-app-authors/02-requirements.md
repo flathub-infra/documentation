@@ -66,19 +66,20 @@ com.0example.foo
   `http(s)://foo.example-site.com` must be reachable and must be under
   control of author/developer/project of the application.
 
-- For code hosting IDs starting with `io.github.foo.bar, page.codeberg.foo.bar`
-  the user must be reachable at `https://github.com/foo` or
-  `https://codeberg.org/foo` respectively.
+- For code hosting IDs starting with `io.github.eg_foo.bar, page.codeberg.eg_foo.bar`
+  the repository must be reachable at `https://github.com/eg-foo/bar` or
+  `https://codeberg.org/eg-foo/bar` respectively.
 
-  For a Sourceforge ID starting with `io.sourceforge.foo.bar`, the
-  project URL must be reachable at
-  `https://sourceforge.net/projects/foo`.
+  For a Sourceforge ID starting with `io.sourceforge.eg_foo.bar`, the
+  project URL must be reachable at `https://sourceforge.net/projects/eg-foo`.
 
-  For `io.gitlab.foo.bar, io.frama.foo.bar, org.gnome.gitlab.foo.bar,
-  org.freedesktop.gitlab.foo.bar`, `foo` must be a user or a toplevel
-  group on Gitlab.
+  For `io.gitlab.eg_foo.bar, io.frama.eg_foo.bar, org.gnome.gitlab.eg_foo.bar,
+  org.freedesktop.gitlab.eg_foo.bar`, `foo` the repository must be
+  reachable at `https://gitlab.com/eg_foo/bar` and so on. If there is
+  more components for eg. `io.gitlab.foo_1.bar_1.app`, the repository
+  must be reachable at  `https://gitlab.com/foo-1/bar-1/app`.
 
-Applications are not allowed to have >=6 components in the IDs. This is
+Applications are not allowed to have >6 components in the IDs. This is
 only allowed for baseapps and runtimes.
 
 ## License
