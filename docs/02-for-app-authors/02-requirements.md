@@ -74,10 +74,10 @@ com.0example.foo
   project URL must be reachable at `https://sourceforge.net/projects/eg-foo`.
 
   For `io.gitlab.eg_foo.bar, io.frama.eg_foo.bar, org.gnome.gitlab.eg_foo.bar,
-  org.freedesktop.gitlab.eg_foo.bar`, `foo` the repository must be
-  reachable at `https://gitlab.com/eg_foo/bar` and so on. If there is
-  more components for eg. `io.gitlab.foo_1.bar_1.app`, the repository
-  must be reachable at  `https://gitlab.com/foo-1/bar-1/app`.
+  org.freedesktop.gitlab.eg_foo.bar`, the repository must be reachable at
+  `https://gitlab.com/eg_foo/bar` and so on. If there are more components
+  for example `io.gitlab.foo_1.bar_1.app`, the repository must be
+  reachable at  `https://gitlab.com/foo-1/bar-1/app` and so on.
 
 Applications are not allowed to have >6 components in the IDs. This is
 only allowed for baseapps and runtimes.
