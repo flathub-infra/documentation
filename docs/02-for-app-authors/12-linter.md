@@ -739,6 +739,19 @@ in the manifest has `--unshare=subsystem_name`.
 These do not need to present in the build manifest. By default no access
 is granted unless `--share=subsystem_name` is used.
 
+### finish-args-contains-both-x11-and-wayland
+
+**Exceptions allowed**: Yes
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has both `--socket=x11` and `--socket=wayland`.
+
+Both are not needed. If the application does not support native wayland
+only `--socket=x11` should be used. If it does support native wayland,
+`--socket=fallback-x11` and `--socket=wayland` should be used.
+
+Exceptions may be allowed on a case-by-case basis.
+
 ### finish-args-incorrect-dbus-gvfs
 
 **Exceptions allowed**: No
@@ -1250,15 +1263,6 @@ The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has both `--socket=x11` and `--socket=fallback-x11`.
 
 Both are never needed.
-
-### finish-args-contains-both-x11-and-wayland
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has both `--socket=x11` and `--socket=wayland`.
-
-Both are not needed. If the application does not support native wayland
-only `--socket=x11` should be used. If it does support native wayland,
-`--socket=fallback-x11` and `--socket=wayland` should be used.
 
 ### finish-args-deprecated-shm
 
