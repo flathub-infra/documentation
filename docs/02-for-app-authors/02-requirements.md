@@ -66,18 +66,18 @@ com.0example.foo
   `http(s)://foo.example-site.com` must be reachable and must be under
   control of author/developer/project of the application.
 
-- For code hosting IDs starting with `io.github.eg_foo.bar, page.codeberg.eg_foo.bar`
-  the repository must be reachable at `https://github.com/eg-foo/bar` or
-  `https://codeberg.org/eg-foo/bar` respectively.
+- For code hosting IDs starting with `io.github.example_foo.bar, page.codeberg.example_foo.bar`
+  the repository must be reachable at `https://github.com/example-foo/bar` or
+  `https://codeberg.org/example-foo/bar` respectively.
 
-  For a Sourceforge ID starting with `io.sourceforge.eg_foo.bar`, the
-  project URL must be reachable at `https://sourceforge.net/projects/eg-foo`.
+  For a Sourceforge ID starting with `io.sourceforge.example_foo.bar`, the
+  project URL must be reachable at `https://sourceforge.net/projects/example-foo`.
 
-  For `io.gitlab.eg_foo.bar, io.frama.eg_foo.bar, org.gnome.gitlab.eg_foo.bar,
-  org.freedesktop.gitlab.eg_foo.bar`, the repository must be reachable at
-  `https://gitlab.com/eg_foo/bar` and so on. If there are more components
-  for example `io.gitlab.foo_1.bar_1.app`, the repository must be
-  reachable at  `https://gitlab.com/foo-1/bar-1/app` and so on.
+  For `io.gitlab.example_foo.bar, io.frama.example_foo.bar, org.gnome.gitlab.example_foo.bar,
+  org.freedesktop.gitlab.example_foo.bar`, the repository must be reachable at
+  `https://gitlab.com/example-foo/bar` and so on. If there are more
+  components for example `io.gitlab.foo_1.bar_1.app`, the repository must
+  be reachable at  `https://gitlab.com/foo-1/bar-1/app` and so on.
 
 Applications are not allowed to have >6 components in the IDs. This is
 only allowed for baseapps and runtimes.
