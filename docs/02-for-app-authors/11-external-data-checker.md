@@ -27,7 +27,7 @@ This also needs your module config to have `is-important: true` set.
 ### Automatically merge PRs
 
 :::danger
-This is not allowed by default on Flathub unless the app is [extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data)
+This is not allowed by default on Flathub without a [Linter exception](/docs/for-app-authors/linter#exceptions) to [flathub-json-automerge-enabled](/docs/for-app-authors/linter#flathub-json-automerge-enabled)
 :::
 
 :::note
