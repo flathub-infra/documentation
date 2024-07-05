@@ -46,6 +46,30 @@ usual 4-5 hours publish delay.
 If the maintainer logged in to the website once, they will get emails
 whenever a build is held for moderation or rejected/approved.
 
+## Quality Review
+
+Flathub has several [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines)
+which applications can choose to follow if desired. Following the quality
+guidelines is entirely optional.
+
+Passing all the quality checks will make the application eligible to be
+featured in the flathub.org front page weekly banner and also in
+"App of the Day".
+
+Once an application is published, quality moderators will do a review
+of the application's metadata and will mark the checks as passing or
+failed. Some of the checks are automatic while some are done manually.
+
+The maintainer of the application can view the status of the quality
+checks by going to `https://flathub.org/apps/your.app.id` and clicking
+the "Details" button.
+
+Once a build fixing the quality issues is published, they can request
+a re-review by pressing the "Request Review" button.
+
+Feel free to ask for [help](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#where-to-get-help)
+regarding the quality checks.
+
 ## `flathub.json`
 
 You can create a file called `flathub.json` to control various parameters of the build infrastructure.
