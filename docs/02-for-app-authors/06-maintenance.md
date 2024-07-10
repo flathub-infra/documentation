@@ -141,7 +141,7 @@ Flathub publishes download statistics for every app or runtime. The raw JSON fil
 
 This section applies to application repositories hosted in the [Flathub](https://github.com/flathub) organisation on GitHub.
 
-The GitHub account [submitting](/docs/for-app-authors/submission#how-to-submit-an-app) the application to Flathub along with any upstream developers of the application
+The GitHub account [submitting](/docs/for-app-authors/submission#submission-pr) the application to Flathub along with any upstream developers of the application
 (if mentioned by the submitter or at reviewer's discretion) will be given access to the application repository once created. In case the application belongs to a well-known
 software project like KDE or GNOME or Endless, their respective [team on Flathub](https://github.com/orgs/flathub/teams/) will also be given access.
 

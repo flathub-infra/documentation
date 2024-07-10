@@ -619,8 +619,8 @@ The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `--socket=session-bus` or `--socket=system-bus`.
 
 This must not be used except for very specific cases. Please follow the
-[requirements section](/docs/for-app-authors/requirements#dbus-access) to
-find out specific permissions needed.
+[Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#d-bus-access)
+for more information
 
 ### finish-args-arbitrary-xdg-cache-access
 
@@ -838,7 +838,7 @@ The manifest has `--own-name=<FLATPAK_ID>` in
 This access is granted automatically by Flatpak and there is no need
 to specify manually.
 
-Please see the [bus access](/docs/for-app-authors/requirements#dbus-access)
+Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#d-bus-access)
 section for more details.
 
 ### finish-args-unnecessary-xdg-cache-access

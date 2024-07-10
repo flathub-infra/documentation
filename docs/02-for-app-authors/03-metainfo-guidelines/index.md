@@ -189,7 +189,8 @@ One of the `custom` tags in the [MetaInfo file](/docs/for-app-authors/metainfo-g
 :::
 
 Place the MetaInfo file into `/app/share/metainfo/`, name it `%{id}.metainfo.xml`, where `%{id}` is the [ID](#id).
-This ID and the filename must match exactly with the `id` set in the [Flatpak manifest](/docs/for-app-authors/requirements#example-manifest).
+This ID and the filename must match exactly with the `id` set in the
+[Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
 
 ## MetaInfo generator
 
@@ -429,7 +430,7 @@ icon or be confusingly similar.
 
 :::
 
-All desktop applications must install icons of the [required size](/docs/for-app-authors/requirements#application-icons)
+All desktop applications must install icons of the [required size](/docs/for-app-authors/requirements#icons)
 to the [proper location](https://docs.flatpak.org/en/latest/conventions.html#application-icons)
 and must also have a [launchable](#launchable) entry so that  `appstreamcli compose`
 can fetch the icon from the desktop file.
