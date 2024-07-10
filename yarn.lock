@@ -3541,7 +3541,7 @@ dns-packet@^5.2.2:
   dependencies:
     "@leichtgewicht/ip-codec" "^2.0.1"
 
-"docusaurus-plugin-search-local@patch:docusaurus-plugin-search-local@npm%3A2.0.1#./.yarn/patches/docusaurus-plugin-search-local-npm-2.0.1-4a07fbb27a.patch":
+docusaurus-plugin-search-local@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/docusaurus-plugin-search-local/-/docusaurus-plugin-search-local-2.0.1.tgz#2de0eb392016ac753164e1376f4fa408455576ba"
   integrity sha512-vS6LpTjHg4tkHLbnJqUH2v2sOM0/1HPXrQ1hXtxYalV/NCgaOLD2T+vjVvGbIkqxf91/h+Rzk2HydnyeAsa5Xw==
