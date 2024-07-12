@@ -622,7 +622,7 @@ This must not be used except for very specific cases. Please follow the
 [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#d-bus-access)
 for more information
 
-### finish-args-arbitrary-xdg-cache-access
+### finish-args-arbitrary-xdg-cache-mode-access
 
 **Exceptions allowed**: Yes[^3]
 
@@ -636,7 +636,7 @@ Applications do not need to access the host's cache directory.
 
 Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#f3).
 
-### finish-args-arbitrary-xdg-config-access
+### finish-args-arbitrary-xdg-config-mode-access
 
 **Exceptions allowed**: Yes[^3]
 
@@ -650,7 +650,7 @@ Applications do not need to access the host's config directory.
 
 Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#f3).
 
-### finish-args-arbitrary-xdg-data-access
+### finish-args-arbitrary-xdg-data-mode-access
 
 **Exceptions allowed**: Yes[^3]
 
@@ -841,7 +841,7 @@ to specify manually.
 Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#d-bus-access)
 section for more details.
 
-### finish-args-unnecessary-xdg-cache-access
+### finish-args-unnecessary-xdg-cache-subdir-mode-access
 
 **Exceptions allowed**: Yes[^3]
 
@@ -855,7 +855,7 @@ host's cache directory or subpaths of it.
 
 Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#f3).
 
-### finish-args-unnecessary-xdg-config-access
+### finish-args-unnecessary-xdg-config-subdir-mode-access
 
 **Exceptions allowed**: Yes[^3]
 
@@ -869,7 +869,7 @@ host's config directory or subpaths of it.
 
 Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#f3).
 
-### finish-args-unnecessary-xdg-data-access
+### finish-args-unnecessary-xdg-data-subdir-mode-access
 
 **Exceptions allowed**: Yes[^3]
 
