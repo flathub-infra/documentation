@@ -8,6 +8,8 @@ updates:
       docusaurus:
         patterns:
           - "@docusaurus/*"
+    ignore:
+      - dependency-name: "@docusaurus/*"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
