@@ -1,0 +1,45 @@
+diff --git a/lib/server/utils/scanDocuments.js b/lib/server/utils/scanDocuments.js
+index 6b5d8bfa646c2cdf6be383bdbe46a782c539c10c..97177eae076da24a919dfdfad0f5a55c5d82a71f 100644
+--- a/lib/server/utils/scanDocuments.js
++++ b/lib/server/utils/scanDocuments.js
+@@ -12,6 +12,17 @@ let nextDocId = 0;
+ const getNextDocId = () => {
+     return (nextDocId += 1);
+ };
++
++function getSlicedHash(hash, url) {
++  if (hash.includes("#") && !hash.startsWith("#")) {
++    if (hash.startsWith(url) && hash[url.length] === "#") {
++      return hash.slice(url.length);
++    }
++    return false;
++  }
++  return hash;
++}
++
+ async function scanDocuments(DocInfoWithFilePathList) {
+     const titleDocuments = [];
+     const headingDocuments = [];
+@@ -29,7 +40,12 @@ async function scanDocuments(DocInfoWithFilePathList) {
+             b: breadcrumb,
+         });
+         for (const section of sections) {
++            const slicedHash = getSlicedHash(section.hash, url);
++
+             if (section.title !== pageTitle) {
++                if (typeof slicedHash === 'boolean' && slicedHash === false) {
++                    continue;
++                }
+                 headingDocuments.push({
+                     i: getNextDocId(),
+                     t: section.title,
+@@ -39,6 +55,9 @@ async function scanDocuments(DocInfoWithFilePathList) {
+                 });
+             }
+             if (section.content) {
++                if (typeof slicedHash === 'boolean' && slicedHash === false) {
++                    continue;
++                }
+                 contentDocuments.push({
+                     i: getNextDocId(),
+                     t: section.content,
