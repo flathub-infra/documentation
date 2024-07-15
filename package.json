@@ -20,7 +20,7 @@
     "@docusaurus/preset-classic": "^3.4.0",
     "@mdx-js/react": "^3.0.1",
     "clsx": "^2.1.1",
-    "docusaurus-plugin-search-local": "patch:docusaurus-plugin-search-local@npm%3A2.0.1#./.yarn/patches/docusaurus-plugin-search-local-npm-2.0.1-4a07fbb27a.patch",
+    "docusaurus-plugin-search-local": "^2.0.1",
     "prism-react-renderer": "^2.3.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
