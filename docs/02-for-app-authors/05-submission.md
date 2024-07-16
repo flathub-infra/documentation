@@ -19,7 +19,7 @@ to build the application.
 flatpak install -y flathub org.flatpak.Builder
 ```
 
-1. Build and install:
+### Build and install
 
    ```bash
    flatpak run org.flatpak.Builder --force-clean --sandbox --user --install --install-deps-from=flathub --ccache --mirror-screenshots-url=https://dl.flathub.org/media/ --repo=repo builddir <manifest>
@@ -31,13 +31,15 @@ flatpak install -y flathub org.flatpak.Builder
    flatpak-builder --force-clean --sandbox --user --install --install-deps-from=flathub --ccache --mirror-screenshots-url=https://dl.flathub.org/media/ --repo=repo builddir <manifest>
    ```
 
-2. Run and test:
+### Run and test
 
    ```bash
    flatpak run <app id>
    ```
 
-3. Please run the [linter](/docs/for-app-authors/linter) once.
+### Run the linter
+
+   Please run the [linter](/docs/for-app-authors/linter) once.
    Consult the documentation for explanation of the errors. For certain
    errors you might need an [exception](/docs/for-app-authors/linter#exceptions).
 
