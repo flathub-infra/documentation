@@ -51,3 +51,48 @@ You can opt out of External Data Checker by creating a `flathub.json` file in th
   "disable-external-data-checker": true
 }
 ```
+
+
+### Run on multiple branches
+
+By default, the Flathub provided External Data checker workflow runs
+only on the default branch of the GitHub repository, but a custom
+workflow can be defined to run it on multiple branches. This is useful
+for extensions or baseapps which have multiple branches - one for each
+runtime version.
+
+This uses the docker image published by External Data Checker upstream.
+
+First [opt out](#disable) of the default Flathub provided workflow.
+
+Then, this needs to be committed to the Github repo at
+`.github/workflows/update.yaml`.
+
+```yaml
+name: Check for updates
+on:
+  schedule:
+    - cron: '0 14 * * 1' # Run once a week, on Monday, at 14:00
+  workflow_dispatch: {}
+jobs:
+  flatpak-external-data-checker:
+    runs-on: ubuntu-latest
+    if: github.repository_owner == 'flathub'
+    strategy:
+      matrix:
+        branch: [ branch/23.08, branch/24.08, beta ]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ matrix.branch }}
+      - uses: docker://ghcr.io/flathub/flatpak-external-data-checker:latest
+        env:
+          GIT_AUTHOR_NAME: Flatpak External Data Checker
+          GIT_COMMITTER_NAME: Flatpak External Data Checker
+          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          args: --update --never-fork <MANIFEST FILENAME>
+```
