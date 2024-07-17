@@ -38,8 +38,10 @@ jobs:
           cache: yarn
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Corepack enable
+        run: corepack enable
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
       - name: Build website
         run: yarn build
       - name: Upload artifact
