@@ -56,7 +56,7 @@ com.0example.foo
   unless the project is an official project of the code hosting
   platform.
 
-### Control over domain
+### Control over domain or repository
 
 - The author/developer/project of the application must have control
   over the domain portion of the ID and the corresponding URL must be
@@ -66,21 +66,31 @@ com.0example.foo
   `http(s)://foo.example-site.com` must be reachable and must be under
   control of author/developer/project of the application.
 
-- For code hosting IDs starting with `io.github.example_foo.bar, page.codeberg.example_foo.bar`
-  the repository must be reachable at `https://github.com/example-foo/bar` or
+- For GitHub and Codeberg IDs of the form
+  `io.github.example_foo.bar, page.codeberg.example_foo.bar` the
+  repository must be reachable at `https://github.com/example-foo/bar` or
   `https://codeberg.org/example-foo/bar` respectively.
 
-  For a Sourceforge ID starting with `io.sourceforge.example_foo.bar`, the
-  project URL must be reachable at `https://sourceforge.net/projects/example-foo`.
+  For Sourceforge IDs of the form
+  `io.sourceforge.example_foo.bar, net.sourceforge.example_foo.bar`, the
+  project URL must be reachable at
+  `https://sourceforge.net/projects/example-foo/`.
 
-  For `io.gitlab.example_foo.bar, io.frama.example_foo.bar, org.gnome.gitlab.example_foo.bar,
-  org.freedesktop.gitlab.example_foo.bar`, the repository must be reachable at
-  `https://gitlab.com/example-foo/bar` and so on. If there are more
-  components for example `io.gitlab.foo_1.bar_1.app`, the repository must
-  be reachable at  `https://gitlab.com/foo-1/bar-1/app` and so on.
+  For Gitlab IDs of the form `io.gitlab.example_foo.bar,
+  io.frama.example_foo.bar, org.gnome.gitlab.example_foo.bar,
+  org.freedesktop.gitlab.example_foo.bar`, the repository must be
+  reachable at `https://gitlab.com/example-foo/bar` and so on.
 
-Applications are not allowed to have >6 components in the IDs. This is
-only allowed for baseapps and runtimes.
+  If there are more components for example
+  `io.gitlab.example_foo.example_bar.example-app`,
+  the repository must be reachable at
+  `https://gitlab.com/example-foo/example-bar/example-app`
+  and so on.
+
+  Note that Gitlab namespaces are case sensitive.
+
+Applications are not allowed to have more than 6 components in the ID.
+This is only allowed for baseapps and runtimes.
 
 ## License
 
