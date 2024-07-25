@@ -65,7 +65,7 @@ error for the linter.
 The URL determined from the domain portion of the appid was not
 reachable.
 
-Please see the [Control over domain or repository](/docs/for-app-authors/requirements##control-over-domain-or-repository)
+Please see the [Control over domain or repository](/docs/for-app-authors/requirements#control-over-domain-or-repository)
 section for more information.
 
 ### appid-code-hosting-too-few-components
