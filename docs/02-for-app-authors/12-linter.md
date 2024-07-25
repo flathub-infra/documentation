@@ -682,7 +682,8 @@ for more information.
 **Exceptions allowed**: Yes[^3]
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `--talk-name=org.freedesktop.Flatpak`.
+in the manifest has `--talk-name=org.freedesktop.Flatpak` or
+`--talk-name=org.freedesktop.Flatpak.*`.
 
 This allows applications to launch arbitrary commands on the host and
 is restricted and granted on a case-by-case basis.
@@ -780,6 +781,29 @@ access.
 
 This means the application will not be able to launch in a X11 session.
 
+### finish-args-freedesktop-dbus-own-name
+
+**Exceptions allowed**: No
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--own-name=` starting with
+`org.freedesktop.DBus`.
+
+### finish-args-gvfs-own-name
+
+**Exceptions allowed**: No
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--own-name=org.gtk.vfs`.
+
+### finish-args-flatpak-own-name
+
+**Exceptions allowed**: No
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--own-name=` starting with
+`org.freedesktop.Flatpak`.
+
 ### finish-args-portal-own-name
 
 **Exceptions allowed**: No
@@ -791,6 +815,22 @@ in the manifest has a `--own-name=` starting with
 Portal interfaces do not need to be manually added. These are allowed by
 Flatpak by default.
 
+### finish-args-dconf-own-name
+
+**Exceptions allowed**: No
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--own-name=` starting with
+`ca.desrt.dconf`.
+
+### finish-args-freedesktop-dbus-talk-name
+
+**Exceptions allowed**: Yes[^3]
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--talk-name=` starting with
+`org.freedesktop.DBus`.
+
 ### finish-args-portal-talk-name
 
 **Exceptions allowed**: No
@@ -801,6 +841,88 @@ in the manifest has a `--talk-name=` starting with
 
 Portal interfaces do not need to be manually added. These are allowed by
 Flatpak by default.
+
+### finish-args-flatpak-talk-name
+
+**Exceptions allowed**: No
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--talk-name=` starting with
+`org.freedesktop.Flatpak.`.
+
+### finish-args-wildcard-freedesktop-system-own-name
+
+**Exceptions allowed**: No
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--system-own-name=org.freedesktop.*`
+
+### finish-args-wildcard-gnome-system-own-name
+
+**Exceptions allowed**: No
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--system-own-name=org.gnome.*`
+
+### finish-args-wildcard-kde-system-own-name
+
+**Exceptions allowed**: No
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--system-own-name=org.kde.*`
+
+### finish-args-freedesktop-dbus-system-own-name
+
+**Exceptions allowed**: No
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--system-own-name=` starting with
+`org.freedesktop.DBus`.
+
+### finish-args-flatpak-system-own-name
+
+**Exceptions allowed**: No
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--system-own-name=` starting with
+`org.freedesktop.Flatpak`.
+
+### finish-args-freedesktop-dbus-system-talk-name
+
+**Exceptions allowed**: Yes[^3]
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--system-talk-name=` starting with
+`org.freedesktop.DBus`.
+
+### finish-args-wildcard-freedesktop-system-talk-name
+
+**Exceptions allowed**: No
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--system-talk-name=org.freedesktop.*`.
+
+### finish-args-wildcard-gnome-system-talk-name
+
+**Exceptions allowed**: No
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--system-talk-name=org.gnome.*`.
+
+### finish-args-wildcard-kde-system-talk-name
+
+**Exceptions allowed**: No
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--system-talk-name=org.kde.*`.
+
+### finish-args-flatpak-system-talk-name
+
+**Exceptions allowed**: No
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--system-talk-name=` starting with
+`org.freedesktop.Flatpak`.
 
 ### finish-args-redundant-home-and-host
 
