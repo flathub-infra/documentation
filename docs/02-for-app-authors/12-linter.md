@@ -1192,6 +1192,17 @@ is missing the `launchable` tag.
 All MetaInfo files for desktop applications must have the
 [launchable tag](/docs/for-app-authors/metainfo-guidelines/#launchable).
 
+### metainfo-missing-screenshots
+
+**Exceptions allowed**: No
+
+The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
+is missing screenshots or the screenshots are not properly defined
+under the `screenshots/screenshot/image` tag.
+
+Please see the [Metainfo guide](/docs/for-app-authors/metainfo-guidelines/#screenshots)
+on how to define screenshots in the Metainfo file.
+
 ### module-module_name-source-dest-filename-is-path
 
 **Exceptions allowed**: No
