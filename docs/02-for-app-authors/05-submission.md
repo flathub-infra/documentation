@@ -75,18 +75,26 @@ Flathub submissions are managed through pull requests on GitHub.
 
 ## After submission
 
-Once your pull request has been submitted, it will be reviewed. Note
-that all reviewers are volunteers and have the right to reject an
-application if it does not meet all guidelines.
+Once your pull request has been submitted, it will be reviewed. Reviewers
+may post comments and may ask for certain fixes or clarifications. Once
+all comments are resolved, a _test_ build can be started on the pull
+request by commenting `bot, build $FLATPAK_ID`.
 
-Once approved, the reviewers will merge it and a new repository will be
-created for your application.
+If the test build is successful, the application is tested by installing
+and running it. Further feedback may be provided after that.
 
-You will receive an invitation to have write access for the repository.
-Please make sure to accept it before it expires.
+If the submission is approved, it will be marked as ready and
+merged into a new repository under the [Flathub GitHub organisation](https://github.com/flathub/)
+by the reviewers at a later time. Once the repository is created, you
+will receive an invitation to have write access to it. Please make sure
+to accept it before it expires.
 
 Once you have access, please see the [App Maintenance](/docs/for-app-authors/maintenance)
 guide.
+
+Note that submissions can be rejected at any stage or recalled post-merge
+if it is determined to be not suitable for Flathub or does not meet the
+guidelines.
 
 ## FAQ
 
