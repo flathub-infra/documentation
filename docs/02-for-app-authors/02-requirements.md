@@ -11,7 +11,7 @@ If you have any further questions, please ask on [Matrix](https://matrix.to/#/#f
 
 :::note
 The ID chosen will determine the type of [verification method](/docs/for-app-authors/verification#what-is-verification)
-available. It must be a constant and unique identifier of the
+available, if any. It must be a constant and unique identifier of the
 application. If it needs to be renamed at any point, the application
 needs to be [resubmitted](/docs/for-app-authors/maintenance#renaming-the-flatpak-id).
 :::

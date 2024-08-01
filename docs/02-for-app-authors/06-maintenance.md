@@ -159,10 +159,10 @@ Any such requests will be judged on a case-by-case basis and upstream authors/de
 If at any point, the ID needs to be renamed, the application first needs
 to be [resubmitted](/docs/for-app-authors/submission) with the new ID.
 
-The old ID must be added in the `provides` and `replaces` tags of the new
+The old ID must be added to the `provides` and `replaces` tags of the new
 [Metainfo file](/docs/for-app-authors/metainfo-guidelines/#renaming-id-tag).
 
-After submission is merged and once the application is _published_ under
+After the submission is merged and the application is _published_ under
 the new ID, the old application should be [EOL rebased](#end-of-life-rebase)
 to the new ID so that users can transition smoothly.
 
