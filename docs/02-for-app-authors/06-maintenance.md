@@ -153,6 +153,22 @@ In case an application becomes unmaintained (and the maintainer unreachable) for
 
 Any such requests will be judged on a case-by-case basis and upstream authors/developers/contributors to the application (or the Flathub repository) in question will be preferred.
 
+
+## Renaming the Flatpak ID
+
+If at any point, the ID needs to be renamed, the application first needs
+to be [resubmitted](/docs/for-app-authors/submission) with the new ID.
+
+The old ID must be added in the `provides` and `replaces` tags of the new
+[Metainfo file](/docs/for-app-authors/metainfo-guidelines/#renaming-id-tag).
+
+After submission is merged and once the application is _published_ under
+the new ID, the old application should be [EOL rebased](#end-of-life-rebase)
+to the new ID so that users can transition smoothly.
+
+Note that, such a transition might be confusing to users. So the decision
+to change IDs must be carefully planned and done in moderation.
+
 ## Getting Help
 
 If anything is not working or there is some behaviour you don’t understand, come to the [Matrix channel](https://matrix.to/#/#flatpak:matrix.org) or start a discussion on the [Flathub forum](https://discourse.flathub.org/).

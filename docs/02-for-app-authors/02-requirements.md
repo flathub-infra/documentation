@@ -9,16 +9,20 @@ If you have any further questions, please ask on [Matrix](https://matrix.to/#/#f
 
 ## Application ID
 
+:::note
 The ID chosen will determine the type of [verification method](/docs/for-app-authors/verification#what-is-verification)
-available. It must be a constant and unique identifier of the application.
+available. It must be a constant and unique identifier of the
+application. If it needs to be renamed at any point, the application
+needs to be [resubmitted](/docs/for-app-authors/maintenance#renaming-the-flatpak-id).
+:::
 
-Please choose it carefully and don't hesitate to ask the reviewers for
-help.
+Please choose the ID carefully and don't hesitate to ask the reviewers
+for help.
 
 The following rules should be followed when creating application IDs.
 
 - The ID must not exceed 255 characters, must have at least 3 components
-  and must not end in `.desktop`.
+  and must not end in generic terms like `.desktop` or `.app`.
 
   The ID can be split into _components_ at each `.`. Each component must
   contain only the characters `[A-Z][a-z][0-9]_`.  A dash `-` is only

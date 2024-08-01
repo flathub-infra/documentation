@@ -234,6 +234,11 @@ The ID must be exactly the same as the [Application-ID](./../requirements#applic
 
 ### Renaming ID tag
 
+:::note
+The ID tag must exactly match the Flatpak ID. If it has to be renamed
+completely, the application needs to be [resubmitted](/docs/for-app-authors/maintenance#renaming-the-flatpak-id).
+:::
+
 The [ID tag](#id) in the [MetaInfo file](#path-and-filename) is supposed
 to be a constant and unique identifier of an application and should not
 be renamed unless absolutely necessary.
