@@ -1,4 +1,14 @@
+---
+slug: 2-billion-downloads-2024
+title: 2 billion downloads, 4.7 million active users, 1k verified apps, and more stats from 2024 so far
+authors: [cassidyjames]
+tags: [milestone, stats]
+image: ./milestones.png
+---
+
 It's been a busy year, and our platform and developer community-building efforts are paying off. Let's take a look at what we've been up to over the last six months, and measure its effect.
+
+<!-- truncate -->
 
 At the beginning of the year we announced an incredible milestone for Flathub: over one million active users. But we didn't slow down; in February we attended FOSDEM, then announced improved app moderation and app brand colors in preparation for some new features. Those efforts ultimately launched with the new homepage and featured app banners in April.
 
