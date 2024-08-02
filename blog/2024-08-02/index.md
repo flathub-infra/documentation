@@ -22,7 +22,7 @@ Over [1,000 apps](https://flathub.org/apps/collection/verified/) have been verif
 
 Over 100 apps are now passing our quality guidelines that include checks like icon contrast on both light and dark backgrounds, quality screenshots, and consistent app naming and descriptions so users get a better experience browsing Flathub. We're proud of the apps that have gone above and beyond here, and we expect to see even more apps opt in over time.
 
-Developers, if you'd like to see your app featured on the home page, please ensure you are following these guidelines! We've [heard from app developers](https://fosstodon.org/@bragefuglseth/112430463664651417) that getting your app featured not only bunks its downloads, but can also bring an increase in contributions to your project if it's open source.
+Developers, if you'd like to see your app featured on the home page, please ensure you are following these guidelines! We've [heard from app developers](https://fosstodon.org/@bragefuglseth/112430463664651417) that getting your app featured not only gives a bump in downloads, but can also bring an increase in contributions to your project if it's open source.
 
 ## 4.7 million active users
 
