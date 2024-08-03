@@ -469,6 +469,14 @@ exported a repo, using `ostree commit --repo=<repo name> --canonical-permissions
 
 The process is automated when using [flatpak-github-actions](https://github.com/flathub-infra/flatpak-github-actions#inputs).
 
+
+### appstream-screenshots-files-not-found-in-ostree
+
+**Exceptions allowed**: No
+
+The screenshot filenames defined in catalogue data were not found in the
+OSTree screenshot ref.
+
 ### appstream-unsupported-component-type
 
 **Exceptions allowed**: No
