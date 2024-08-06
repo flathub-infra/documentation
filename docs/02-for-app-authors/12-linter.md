@@ -44,23 +44,23 @@ for more information.
 **Exceptions allowed**: No
 
 The appid has >=6 components after splitting at each `.`. Applications
-must try to have at most 5 components.
+must try to have at most 6 components.
 
 This is not checked for runtimes or baseapps.
 
 Please follow the [app id guidelines](/docs/for-app-authors/requirements#application-id)
 for more information.
 
-### appid-domain-not-found
+### appid-url-check-internal-error
 
 **Exceptions allowed**: No
 
-The domain could not be determined from the appid. This is an internal
+The URL could not be determined from the appid. This is an internal
 error for the linter.
 
 ### appid-url-not-reachable
 
-**Exceptions allowed**: No
+**Exceptions allowed**: Yes, one a case-by-case basis
 
 The URL determined from the domain portion of the appid was not
 reachable.
@@ -70,7 +70,7 @@ section for more information.
 
 ### appid-code-hosting-too-few-components
 
-**Exceptions allowed**: No[^1]
+**Exceptions allowed**: No
 
 The app id uses a code hosting domain like GitLab, GitHub or Codeberg
 and doesn't have 4 components: `{tld}.{doamin}.foo.bar`.
@@ -80,7 +80,7 @@ for more information.
 
 ### appid-ends-with-lowercase-desktop
 
-**Exceptions allowed**: No[^1]
+**Exceptions allowed**: No
 
 The app id ends with lowercase `.desktop`.
 
@@ -102,7 +102,7 @@ The app id (`id` or `app-id`) is not defined in the [Flatpak manifest](https://d
 
 ### appid-uses-code-hosting-domain
 
-**Exceptions allowed**: No[^1]
+**Exceptions allowed**: No
 
 The app id uses a code hosting domain like GitLab, GitHub or Codeberg
 and the first `{tld}` component does not start with `io` for GitHub
@@ -295,7 +295,7 @@ One of the `custom` tags in the [MetaInfo file](/docs/for-app-authors/metainfo-g
 
 ### appstream-id-mismatch-flatpak-id
 
-**Exceptions allowed**: No[^1]
+**Exceptions allowed**: Yes, on a case-by-case basis
 
 The `id` tag in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
 does not match the `FLATPAK_ID` (the `id` or `app-id` used in manifest).
@@ -558,7 +558,7 @@ The desktop file supplied in the build sets `Hidden=true`
 
 ### desktop-file-is-nodisplay
 
-**Exceptions allowed**: Yes[^2]
+**Exceptions allowed**: Yes, on a case-by-case basis
 
 The desktop file supplied in the build sets `NoDisplay=true`. This is
 only allowed for console applications.
@@ -610,7 +610,7 @@ Please use `/run/media` or `/run/media/` instead.
 
 ### finish-args-arbitrary-autostart-access
 
-**Exceptions allowed**: Yes[^3]
+**Exceptions allowed**: Yes, on a case-by-case basis
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `--filesystem=xdg-config/autostart` or
@@ -621,7 +621,7 @@ for that.
 
 ### finish-args-arbitrary-dbus-access
 
-**Exceptions allowed**: Yes[^4]
+**Exceptions allowed**: Yes, on a case-by-case basis
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `--socket=session-bus` or `--socket=system-bus`.
@@ -632,7 +632,11 @@ for more information
 
 ### finish-args-arbitrary-xdg-cache-mode-access
 
-**Exceptions allowed**: Yes[^3]
+The following errors are included here
+finish-args-arbitrary-xdg-cache-ro-access, finish-args-arbitrary-xdg-cache-rw-access
+and finish-args-arbitrary-xdg-cache-create-access
+
+**Exceptions allowed**: Yes, on a case-by-case basis
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `--filesystem=xdg-cache`, with or without any
@@ -646,7 +650,11 @@ Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/san
 
 ### finish-args-arbitrary-xdg-config-mode-access
 
-**Exceptions allowed**: Yes[^3]
+The following errors are included here
+finish-args-arbitrary-xdg-config-ro-access, finish-args-arbitrary-xdg-config-rw-access
+and finish-args-arbitrary-xdg-config-create-access
+
+**Exceptions allowed**: Yes, on a case-by-case basis
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `--filesystem=xdg-config`, with or without any
@@ -660,7 +668,11 @@ Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/san
 
 ### finish-args-arbitrary-xdg-data-mode-access
 
-**Exceptions allowed**: Yes[^3]
+The following errors are included here
+finish-args-arbitrary-xdg-data-ro-access, finish-args-arbitrary-xdg-data-rw-access
+and finish-args-arbitrary-xdg-data-create-access
+
+**Exceptions allowed**: Yes, on a case-by-case basis
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `--filesystem=xdg-data`, with or without any
@@ -687,7 +699,7 @@ for more information.
 
 ### finish-args-flatpak-spawn-access
 
-**Exceptions allowed**: Yes[^3]
+**Exceptions allowed**: Yes, on a case-by-case basis
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `--talk-name=org.freedesktop.Flatpak` or
@@ -750,7 +762,7 @@ is granted unless `--share=subsystem_name` is used.
 
 ### finish-args-contains-both-x11-and-wayland
 
-**Exceptions allowed**: Yes
+**Exceptions allowed**: Yes, on a case-by-case basis
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has both `--socket=x11` and `--socket=wayland`.
@@ -773,7 +785,7 @@ for permissions required for proper gvfs access.
 
 ### finish-args-not-defined
 
-**Exceptions allowed**: Yes[^2]
+**Exceptions allowed**: Yes, only for console applications
 
 The manifest has no [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing).
 
@@ -833,7 +845,7 @@ in the manifest has a `--own-name=` starting with
 
 ### finish-args-freedesktop-dbus-talk-name
 
-**Exceptions allowed**: Yes[^3]
+**Exceptions allowed**: Yes, on a case-by-case basis
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has a `--talk-name=` starting with
@@ -897,7 +909,7 @@ in the manifest has `--system-own-name=` starting with
 
 ### finish-args-freedesktop-dbus-system-talk-name
 
-**Exceptions allowed**: Yes[^3]
+**Exceptions allowed**: Yes, on a case-by-case basis
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `--system-talk-name=` starting with
@@ -973,7 +985,7 @@ section for more details.
 
 ### finish-args-unnecessary-xdg-cache-subdir-mode-access
 
-**Exceptions allowed**: Yes[^3]
+**Exceptions allowed**: Yes, on a case-by-case basis
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `--filesystem=xdg-cache/foo` with or without any
@@ -987,7 +999,7 @@ Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/san
 
 ### finish-args-unnecessary-xdg-config-subdir-mode-access
 
-**Exceptions allowed**: Yes[^3]
+**Exceptions allowed**: Yes, on a case-by-case basis
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `--filesystem=xdg-config/foo` with or without any
@@ -1001,7 +1013,7 @@ Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/san
 
 ### finish-args-unnecessary-xdg-data-subdir-mode-access
 
-**Exceptions allowed**: Yes[^3]
+**Exceptions allowed**: Yes, on a case-by-case basis
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `--filesystem=xdg-data/foo` with or without any
@@ -1101,7 +1113,7 @@ refs only.
 
 ### flathub-json-automerge-enabled
 
-**Exceptions allowed**: No
+**Exceptions allowed**: Yes, only for verified applications
 
 The `flathub.json` file has `automerge-flathubbot-prs` property enabled.
 This is no longer allowed by default.
@@ -1126,7 +1138,7 @@ the build won't be done.
 
 ### flathub-json-modified-publish-delay
 
-**Exceptions allowed**: Yes[^5]
+**Exceptions allowed**: Yes, on a case-by-case basis
 
 The `flathub.json` file had `publish-delay-hours` with value less than 3.
 
@@ -1143,10 +1155,8 @@ The `flathub.json` file had `only-arches` but it was empty.
 
 **Exceptions allowed**: No
 
-The `flathub.json` file had `skip-appstream-check`.
-
-This is only allowed for [BaseApps](https://docs.flatpak.org/en/latest/introduction.html?highlight=baseapp#terminology)
-or [Extensions](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html?highlight=extension#).
+The `flathub.json` file had `skip-appstream-check`. This is a legacy
+parameter and has no use.
 
 ### jsonschema-schema-error
 
@@ -1339,12 +1349,6 @@ The [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
 has no `modules` property.
 
 This property is required.
-
-[^1]: Only if the package existed before the linter was introduced.
-[^2]: Only for console applications.
-[^3]: Might be granted on a case-by-case basis.
-[^4]: Only for tools that requires D-Bus access and the bus names are not predictable like D-Bus tools and IDEs.
-[^5]: Granted for [extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data) applications.
 
 ## Linter warnings
 
