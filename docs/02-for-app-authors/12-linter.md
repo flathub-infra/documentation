@@ -944,15 +944,6 @@ The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `--system-talk-name=` starting with
 `org.freedesktop.Flatpak`.
 
-### finish-args-redundant-home-and-host
-
-**Exceptions allowed**: No
-
-The manifest has both `--filesystem=home` and `--filesystem=host` in
-[finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing).
-
-`host` grants access to `home`. Specifying both is redundant.
-
 ### finish-args-reserved-dir_name
 
 The following error codes are included here:
@@ -1350,18 +1341,33 @@ has no `modules` property.
 
 This property is required.
 
+### toplevel-command-is-path
+
+**Exceptions allowed**: No
+
+The toplevel `command` property in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+is a path.
+
+This must be just the name of the main binary of the application and the
+binary must be present in `$FLATPAK_DEST/bin`.
+
+### toplevel-unnecessary-branch
+
+**Exceptions allowed**: No
+
+The toplevel `branch` or `default-branch` property in the
+[Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+is unnecessary.
+
+On Flathub, the branch is set by the builder using `--default-branch`
+argument of [Flatpak Builder](https://docs.flatpak.org/en/latest/flatpak-builder.html).
+
+Specifying the branch or default-branch property leads to other issues.
+
 ## Linter warnings
 
 Warnings are non-fatal but they should be resolved, if possible. Some of
 them might be promoted to an error in the future if needed.
-
-### appstream-name-too-long
-
-The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
-has a `name` tag of length greater that 20 characters.
-
-Please refer to the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#not-too-long)
-for more details.
 
 ### appstream-screenshot-missing-caption
 
@@ -1371,30 +1377,6 @@ tag is empty.
 
 Please refer to the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#screenshots)
 for more details.
-
-### appstream-summary-ends-in-dot
-
-The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
-has a `summary` tag ending with the dot or period character `.`.
-
-Please refer to the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#no-weird-formatting-1)
-for more details.
-
-### appstream-summary-too-long
-
-The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
-has a `summary` tag of length greater that 35 characters.
-
-Please refer to the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#not-too-long-1)
-for more details.
-
-### desktop-file-exec-key-empty
-
-The [desktop file](https://docs.flatpak.org/en/latest/conventions.html#desktop-files)
-has a empty `Exec` key.
-
-Although this gets rewritten to a fallback by Flatpak during installation
-an `Exec` key with a value should be present for compatibility.
 
 ### desktop-file-low-quality-category
 
@@ -1409,55 +1391,12 @@ in the manifest has both `--socket=x11` and `--socket=fallback-x11`.
 
 Both are never needed.
 
-### finish-args-deprecated-shm
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `--device=shm`. This is deprecated.
-
-### finish-args-redundant-device-all
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `--device=all` and `--device=device_name` both.
-
-`all` grants access to all devices except `shm`.
-
 ### finish-args-x11-without-ipc
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `--socket=x11` but no `--share=ipc`.
 
 Applications needing `--socket=x11` also need SysV IPC access.
-
-### flathub-json-deprecated-i386-arch-excluded
-
-The `flathub.json` file tries to exclude (`exclude-arches`) a deprecated
-architecture on Flathub.
-
-### flathub-json-deprecated-arm-arch-excluded
-
-The `flathub.json` file tries to exclude (`exclude-arches`) a deprecated
-architecture on Flathub.
-
-### flathub-json-deprecated-i386-arch-included
-
-The `flathub.json` file tries to include (`only-arches`) a deprecated
-architecture on Flathub.
-
-### flathub-json-deprecated-arm-arch-included
-
-The `flathub.json` file tries to include (`only-arches`) a deprecated
-architecture on Flathub.
-
-### flathub-json-exclude-arches-empty
-
-The `flathub.json` file has empty `exclude-arches`.
-
-### flathub-json-redundant-only-arches
-
-The `flathub.json` file has `only-arches` with `aarch64, x86_64`.
-
-These are the only two architectures available on Flathub currently.
-Specifying both explicitly is redundant.
 
 ### module-module_name-source-md5-deprecated
 
@@ -1505,24 +1444,6 @@ in `config-opts` to a value of `/app, /usr, ${FLATPAK_DEST}`.
 
 This is set by [Flatpak Builder](https://docs.flatpak.org/en/latest/flatpak-builder.html)
 itself and is redundant.
-
-### toplevel-command-is-path
-
-The toplevel `command` property in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
-is a path.
-
-This must be just the name of the main binary of the application and the
-binary must be present in `$FLATPAK_DEST/bin`.
-
-### toplevel-unnecessary-branch
-
-The toplevel `branch` property in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
-is unnecessary.
-
-On Flathub, the branch is set by the builder using `--default-branch`
-argument of [Flatpak Builder](https://docs.flatpak.org/en/latest/flatpak-builder.html).
-
-Specifying the branch property may lead to other errors.
 
 ## Exceptions
 
