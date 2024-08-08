@@ -80,6 +80,10 @@ com.0example.foo
   project URL must be reachable at
   `https://sourceforge.net/projects/example-foo/`.
 
+  For Sourcehut IDs, of the form `site.srht.example.bar`, the
+  repository must be reachable at `https://sr.ht/~example/bar/`. Note
+  that Sourcehut namespaces are case sensitive.
+
   For Gitlab IDs of the form `io.gitlab.example_foo.bar,
   io.frama.example_foo.bar, org.gnome.gitlab.example_foo.bar,
   org.freedesktop.gitlab.example_foo.bar`, the repository must be
