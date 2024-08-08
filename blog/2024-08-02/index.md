@@ -20,7 +20,9 @@ Over [1,000 apps](https://flathub.org/apps/collection/verified/) have been verif
 
 ## 100+ apps meet stricter quality guidelines
 
-Over 100 apps are now passing our quality guidelines that include checks like icon contrast on both light and dark backgrounds, quality screenshots, and consistent app naming and descriptions so users get a better experience browsing Flathub. We're proud of the apps that have gone above and beyond here, and we expect to see even more apps opt in over time.
+Over 100 apps are now passing our quality guidelines that include checks like icon contrast on both light and dark backgrounds, quality screenshots, and consistent app naming and descriptions so users get a better experience browsing Flathub. These guidelines are what enable us to display visually appealing and consistent banners on the new home page, for example.
+
+This means that between late February and July, the developers of over 100 apps went out of their way to improve—and sometimes make significant changes to—their apps' metadata to get ready for these new guidelines and features on Flathub. We're proud of these developers who have gone above and beyond, and we look forward to even more apps opting in over time.
 
 Developers, if you'd like to see your app featured on the home page, please ensure you are following these guidelines! We've [heard from app developers](https://fosstodon.org/@bragefuglseth/112430463664651417) that getting your app featured not only gives a bump in downloads, but can also bring an increase in contributions to your project if it's open source.
 
