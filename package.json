@@ -31,7 +31,7 @@
     "@docusaurus/tsconfig": "3.3.2",
     "@gabrielcsapo/docusaurus-plugin-matomo": "^0.1.2",
     "@tailwindcss/forms": "^0.5.7",
-    "@tailwindcss/typography": "^0.5.13",
+    "@tailwindcss/typography": "^0.5.14",
     "@types/react": "^18.3.3",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.39",
