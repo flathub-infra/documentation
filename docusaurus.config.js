@@ -44,7 +44,10 @@ const config = {
         blog: {
           feedOptions: {
             type: "all",
+            xslt: true,
           },
+          onInlineAuthors: "throw",
+          onUntruncatedBlogPosts: "throw",
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
