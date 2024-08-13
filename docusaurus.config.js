@@ -117,7 +117,7 @@ const config = {
           { to: "/blog", label: "Blog", position: "left" },
           {
             href: "https://flathub.org",
-            label: "Apps",
+            label: "Store",
             position: "right",
           },
           {
