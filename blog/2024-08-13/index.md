@@ -14,7 +14,7 @@ At the beginning of the year we announced an incredible milestone for Flathub: [
 
 ## Milestones
 
-![Flathub: 70% of top apps verified, 100+ curated quality apps, 4.7 million active users, 2 billion downloads](milestones.png)
+![Flathub: 70% of top apps verified, 100+ curated quality apps, 4 million active users, 2 billion downloads](milestones.png)
 
 We're back with some new milestones thanks to the continued growth of Flathub as an app store and the incredible work of both our largely volunteer team and our growing app developer community:
 
@@ -30,9 +30,9 @@ This means that between late February and July, the developers of over 100 apps 
 
 Developers, if you'd like to see your app featured on the home page, please ensure you are following these guidelines! We've [heard from app developers](https://fosstodon.org/@bragefuglseth/112430463664651417) that getting your app featured not only gives a bump in downloads, but can also bring an increase in contributions to your project if it's open source.
 
-### 4.7 million active users
+### 4 million active users
 
-Six months ago we passed one million active users based on a simple if conservative estimate of updates to a common runtime version we had served. Using that same methodology, we now estimate we have over 4.7 million active users!
+Six months ago we passed one million active users based on a simple if conservative estimate of updates to a common runtime version we had served. Using that same methodology, we now estimate we have over 4 million active users!
 
 As a reminder, this data is publicly available and anyone can check our work. In fact, I personally would love if we could work with a volunteer from the community to automate this statistic so we don't have to do manual collation each time. If you're interested, check out [this GitHub issue](https://github.com/flathub-infra/website/issues/2945).
 
