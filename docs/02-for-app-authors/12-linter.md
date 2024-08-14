@@ -1104,7 +1104,8 @@ refs only.
 
 ### flathub-json-automerge-enabled
 
-**Exceptions allowed**: Yes, only for verified applications
+**Exceptions allowed**: Only for verified applications and extra-data
+apps if upstream rotates/deletes sources
 
 The `flathub.json` file has `automerge-flathubbot-prs` property enabled.
 This is no longer allowed by default.
