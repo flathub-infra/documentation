@@ -4,7 +4,10 @@ This is a guide in how to maintain your application once it is on Flathub. It as
 
 ## The repository
 
-The build information for each application on Flathub is stored in a repository on GitHub in the Flathub organization. For example, the Blender one is here: https://github.com/flathub/org.blender.Blender. On the `master` branch of this repository the primary build version of the app is stored. The `beta` branch is built into the beta repository (if you want to use that). Branches named `branch/*` are reserved specifically for BaseApps and extensions. Applications must not use it for naming GitHub branches or pushing their builds.
+The build information for each application on Flathub is stored in a repository on GitHub in the Flathub organization. The `master` branch of the git repository stores the primary
+version of the application that is served in the [Flathub stable repository](https://flathub.org/setup). The `beta` git branch can store a secondary version that is served in the [Flathub beta repository](/docs/for-users/installation#flathub-beta-repository).
+
+Branches named `branch/*` are reserved specifically for BaseApps and extensions. Applications must not use it for naming GitHub branches or pushing their builds.
 
 All of these branches along with `main`, `stable`, `beta/*` and `stable/*` are automatically <em>protected</em> which means that you can only merge pull requests and not push directly to them. Other branch names are free to use however you see fit.
 
@@ -19,6 +22,53 @@ You can track your build status, follow the build log for current and historic b
 Buildbot also monitors the comments on any pull requests in your repository, and if they include the magic phrase `bot, build` (by a repo collaborator or owner) then it will start a test build. Test builds are similar to regular builds, except the results will never be published into the Flathub repo. You can however install the app from the test repo, where it will be available for 5 days or until you delete it.
 
 This is a great way to do updates, you do an update locally and tests that it works. Then you can make a pull request against master to verify that it builds on all architectures before you merge it.
+
+
+## Build moderation
+
+Whenever an _official build_ from a merge commit is built, if any
+[permission](/docs/for-app-authors/requirements#permissions) is changed
+or any critical [Appstream field](/docs/for-app-authors/metainfo-guidelines/)
+changes value, the build will be held for moderation.
+
+Moderators will manually review the build and the permission change
+and can approve or reject the change if it is wrong or ask for more
+information.
+
+If it is rejected [flathubbot](https://github.com/flathubbot) will open
+an issue in the app repository with a comment from the moderator. The
+maintainer of the app is supposed to reply to that and answer any queries
+or fix the issues mentioned.
+
+If it is approved it will get automatically published without the
+usual 4-5 hours publish delay.
+
+If the maintainer logged in to the website once, they will get emails
+whenever a build is held for moderation or rejected/approved.
+
+## Quality Review
+
+Flathub has several [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines)
+which applications can choose to follow if desired. Following the quality
+guidelines is entirely optional.
+
+Passing all the quality checks will make the application eligible to be
+featured in the flathub.org front page weekly banner and also in
+"App of the Day".
+
+Once an application is published, quality moderators will do a review
+of the application's metadata and will mark the checks as passing or
+failed. Some of the checks are automatic while some are done manually.
+
+The maintainer of the application can view the status of the quality
+checks by going to `https://flathub.org/apps/your.app.id` and clicking
+the "Details" button.
+
+Once a build fixing the quality issues is published, they can request
+a re-review by pressing the "Request Review" button.
+
+Feel free to ask for [help](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#where-to-get-help)
+regarding the quality checks.
 
 ## `flathub.json`
 
@@ -44,9 +94,13 @@ Flathub has builders for `x86_64`, and `aarch64` as current runtimes (based on F
 }
 ```
 
-If you build for both `x86_64` and `aarch64` you do not need a `flathub.json` file. There will be no new architecture add or removed on current runtimes, which mean that if that situation ever occured, it would only happen when changing the runtime version in your package.
+If you build for both `x86_64` and `aarch64` you do not need a `flathub.json` file. There will be no new architecture add or removed on current runtimes, which mean that if that situation ever occurred, it would only happen when changing the runtime version in your package.
 
-### End of life
+## End of life
+
+:::note
+Extensions or BaseApps do not need to be EOL or EOL Rebased.
+:::
 
 There may come a point where an application is no longer maintained. In order to inform users at update or install time that it will no longer get updates, create `flathub.json` with these contents:
 
@@ -56,9 +110,13 @@ There may come a point where an application is no longer maintained. In order to
 }
 ```
 
+EOL-ing will remove the listing of the application from the [Flathub website](https://flathub.org/).
+
 ## End of life Rebase
 
 If the application has been renamed, you must additionally include `end-of-life-rebase` with the new ID. Recent flatpak versions will prompt user if they'd like to switch to the renamed app.
+
+Additionally, you can also update the MetaInfo file of the new application with a [provides tag](/docs/for-app-authors/metainfo-guidelines/#provides) and a [replaces tag](/docs/for-app-authors/metainfo-guidelines/#replaces) to reflect that it has been renamed.
 
 ```json title="flathub.json"
 {
@@ -69,45 +127,11 @@ If the application has been renamed, you must additionally include `end-of-life-
 
 The `end-of-life-rebase` will tell flatpak to automatically migrate the user data from the old package to the new package, making the process transparent for the user.
 
-Please also try to contact a flathub admin to archive the repo by either creating an issue at [flathub/flathub](https://github.com/flathub/flathub/issues/new) or emailing [Flathub admins](mailto:admins@flathub.org).
+:::note
+Please also try to contact a Flathub admin to archive the repo by creating an [issue](https://github.com/flathub/flathub/issues/new).
+:::
 
 In case you want to step down as a maintainer but wish someone to take over maintenance, you can ask in the [tracker issue](https://github.com/flathub/flathub/issues/3693).
-
-### Flathub external data checker config
-
-[Flatpak external data checker](/docs/for-app-authors/external-data-checker) is a tool that checks for updates of modules, which have been configured to be updated. If you are using the Flathub infrastructure (repo on the Flathub org), this tool will be run every hour for you and will create merge requests if there are newer version.
-
-#### Only create updates with important modules
-
-You can configure the external data checker to only create updates for modules that are marked as important. This is done by creating a `flathub.json` file with the following contents:
-
-```json title="flathub.json"
-{
-  "require-important-update": true
-}
-```
-
-This also needs your module config to have `is-important: true` set.
-
-#### Automatically merging PRs
-
-You can configure the external data checker to automatically merge PRs. This is done by creating a `flathub.json` file with the following contents:
-
-```json title="flathub.json"
-{
-  "automerge-flathubbot-prs": true
-}
-```
-
-#### Disable external data checker
-
-You can opt out of this by creating a `flathub.json` file with the following contents:
-
-```json title="flathub.json"
-{
-  "disable-external-data-checker": true
-}
-```
 
 ## Download statistics
 
@@ -117,7 +141,7 @@ Flathub publishes download statistics for every app or runtime. The raw JSON fil
 
 This section applies to application repositories hosted in the [Flathub](https://github.com/flathub) organisation on GitHub.
 
-The GitHub account [submitting](/docs/for-app-authors/submission#how-to-submit-an-app) the application to Flathub along with any upstream developers of the application
+The GitHub account [submitting](/docs/for-app-authors/submission#submission-pr) the application to Flathub along with any upstream developers of the application
 (if mentioned by the submitter or at reviewer's discretion) will be given access to the application repository once created. In case the application belongs to a well-known
 software project like KDE or GNOME or Endless, their respective [team on Flathub](https://github.com/orgs/flathub/teams/) will also be given access.
 
@@ -128,6 +152,22 @@ An upstream developer or author of the application may also use the same process
 In case an application becomes unmaintained (and the maintainer unreachable) for a prolonged period of time and you want to volunteer to start maintaining it, please open an issue on [GitHub](https://github.com/flathub/flathub/issues).
 
 Any such requests will be judged on a case-by-case basis and upstream authors/developers/contributors to the application (or the Flathub repository) in question will be preferred.
+
+
+## Renaming the Flatpak ID
+
+If at any point, the ID needs to be renamed, the application first needs
+to be [resubmitted](/docs/for-app-authors/submission) with the new ID.
+
+The old ID must be added to the `provides` and `replaces` tags of the new
+[Metainfo file](/docs/for-app-authors/metainfo-guidelines/#renaming-id-tag).
+
+After the submission is merged and the application is _published_ under
+the new ID, the old application should be [EOL rebased](#end-of-life-rebase)
+to the new ID so that users can transition smoothly.
+
+Note that, such a transition might be confusing to users. So the decision
+to change IDs must be carefully planned and done in moderation.
 
 ## Getting Help
 

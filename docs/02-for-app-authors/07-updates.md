@@ -1,6 +1,21 @@
 # Updates
 
-Flathub builds and publishes app updates a few hours after a change is made to an app's manifest, though the exact time to publish can vary depending on the build backlog.
+Flathub builds and publishes app updates after a change is made to an app's manifest. The exact time to publish can vary depending on the backlog.
+
+## Creating updates
+
+Updating an application on Flathub (unless it is a direct-upload) is done by submitting a pull
+request to the application repository on GitHub. Once the pull request is submitted, a [test
+build](/docs/for-app-authors/maintenance#test-builds-and-pull-requests) will be triggered
+against it. Once that is successful and the CI passes, the maintainers can merge the pull request
+which will create an "official build" on [Buildbot](/docs/for-app-authors/maintenance#buildbot).
+
+The official build, if successful, is directly published to the Flathub repository.
+
+Pull requests with updates can be automated with [External Data Checker](/docs/for-app-authors/external-data-checker)
+or by using a custom workflow that will submit a pull request to the Flathub repository.
+
+## For users
 
 Neither Flathub nor Flatpak dictate the update policy on end-user machines; instead, their OS and app store client (like GNOME Software or KDE Discover) determine the available options, and ultimately it's up to the user's preferences.
 

@@ -2,7 +2,7 @@
 slug: quality-moderation
 title: "Raising the Bar: Introducing the new App Metadata Guidelines"
 authors: [razze, bertob]
-tags: [flathub, quality]
+tags: [quality]
 ---
 
 Flathub has grown massively over the past few years, making it easier than ever to get a ton of apps all from one place—but with that growth comes new problems. We're here with a solution to ensure developers' apps, Flathub, and the entire Linux desktop ecosystem is presented in what we believe is the best light possible.
@@ -22,12 +22,13 @@ One of the biggest reasons for the prevalence of low quality app metadata is pro
 The unfortunate result of the status quo in metadata quality is that many apps don't look inviting for new users, and it's difficult to find truly high quality apps among the rest.
 
 So how can we make Flathub a place for people to discover awesome apps? We've thought about this quite a bit, and landed on a two-pronged approach:
+
 1. Raise the bar for metadata for all apps
 2. Introduce curation to highlight the best apps
 
 ## Raising the Bar
 
-As a first step towards improving metadata quality across the board we have added new, detailed [documentation for app metadata](https://docs.flathub.org/docs/for-app-authors/appdata-guidelines/quality-guidelines). This new page goes over all the most important aspects, and which common mistakes to avoid. These include, for example:
+As a first step towards improving metadata quality across the board we have added new, detailed [documentation for app metadata](/docs/for-app-authors/metainfo-guidelines/quality-guidelines). This new page goes over all the most important aspects, and which common mistakes to avoid. These include, for example:
 
 - App icons that fill the entire canvas
 - Summaries repeating the app name

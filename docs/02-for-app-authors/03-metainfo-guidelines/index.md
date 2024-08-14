@@ -14,23 +14,183 @@ Please consult the [official AppStream documentation](https://www.freedesktop.or
 ## Validation
 
 All MetaInfo files included in build must pass validation using the
-linter which also validates the MetaInfo file and the generated data.
+[linter](/docs/for-app-authors/linter) which can also validate the
+MetaInfo file. Install `org.flatpak.Builder` from Flathub:
 
-To run the same check locally, [build and run the linter](/docs/for-app-authors/submission#before-submission)
-on the Flatpak.
+```sh
+flatpak install -y flathub org.flatpak.Builder
+```
+Then the MetaInfo file validation can be performed with:
 
-The error messages coming from `appstreamcli` are in `appstream` block
-and explained in the [data validation](https://www.freedesktop.org/software/appstream/docs/chap-Validation.html#validator-issues-list)
-page. A list of error messages for the linter can be found in the
-[linter page](/docs/for-app-authors/linter).
+```sh
+flatpak run --command=flatpak-builder-lint org.flatpak.Builder appstream %{id}.metainfo.xml
+```
+
+This runs `appstreamcli validate` from the [AppStream project](https://github.com/ximion/appstream/)
+with some Flathub specific checks integrated into it.
+
+Both errors and warnings are considered to be fatal by `appstreamcli`
+and needs to be resolved.
+
+### Appstream Validation Errors
+
+:::note
+A full list of error codes and explanations can also be found online in
+the [data validation](https://www.freedesktop.org/software/appstream/docs/chap-Validation.html#validator-issues-list)
+page.
+:::
+
+Flathub increases the severity of the following checks from the upstream
+default of `info` to `error`. So they are documented below.
+
+#### cid-has-number-prefix
+
+The `id` tag contains a segment starting with a number. Please see the [application ID guidelines](/docs/for-app-authors/requirements#application-id) for more information.
+
+#### cid-missing-affiliation-gnome
+
+The application is using a `project_group` tag with the value `GNOME` but the [ID](/docs/for-app-authors/metainfo-guidelines/#id) does not start with `org.gnome`. Please see the [documentation](/docs/for-app-authors/metainfo-guidelines/#project-group) on how to use this tag.
+
+#### content-rating-missing
+
+The application is missing an [OARS rating](/docs/for-app-authors/metainfo-guidelines/#oars-information) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
+
+#### content-rating-missing
+ desktop-app-launchable-omitted
+
+The application is missing a [launchable tag](/docs/for-app-authors/metainfo-guidelines/#launchable) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
+
+#### invalid-child-tag-name
+
+The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has a child tag which isn't allowed under that parent tag.
+
+#### name-has-dot-suffix
+
+The [name](/docs/for-app-authors/metainfo-guidelines/#name-and-summary) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) ends in a dot (`.`).
+
+#### releases-info-missing
+
+The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has no [release information](/docs/for-app-authors/metainfo-guidelines/#release).
+
+#### unknown-tag
+
+The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has an invalid tag. Non-standard tags must be prefixed with `x-` or should be under `<custom>` tag.
+
+A few common errors that are often reached are documented below in brief.
+
+#### description-markup-invalid, description-para-markup-invalid
+
+The `description` tag in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) contains an unsupported formatting tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#description) for more details.
+
+#### description-enum-item-invalid
+
+The `description` tag in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) contains an unsupported child tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#description) for more details.
+
+#### description-enum-group-translated
+
+A `ul` or `ol` tag in description contains `xml:lang`. Please see the [translation section](/docs/for-app-authors/metainfo-guidelines/#metainfo-translations) on how to use translation attributes.
+
+#### desktop-app-launchable-missing
+
+The application is missing a [launchable tag](/docs/for-app-authors/metainfo-guidelines/#launchable) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
+
+#### tag-not-translatable
+
+A tag which is not translatable is using `xml:lang`. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#metainfo-translations) for more details.
+
+#### tag-duplicated
+
+A tag in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) is duplicated.
+
+#### cid-rdns-contains-hyphen
+
+The [id tag](/docs/for-app-authors/metainfo-guidelines/#id) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has a hyphen (`-`) in the domain part. The entire part of the id except the last component (`.foo`) is considered to be domain.
+
+#### cid-missing-affiliation-freedesktop, cid-missing-affiliation-kde
+
+The application uses a [reserved project group tag](/docs/for-app-authors/metainfo-guidelines/#project-group) value in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
+
+#### cid-missing-affiliation-freedesktop, cid-missing-affiliation-kde, spdx-expression-invalid, spdx-license-unknown, metadata-license-missing, metadata-license-invalid
+
+The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has an invalid or unknown [license tag](/docs/for-app-authors/metainfo-guidelines/#license).
+
+#### screenshot-no-media
+
+The [screenshot tag](/docs/for-app-authors/metainfo-guidelines/#screenshots) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) is not properly defined.
+
+#### screenshot-default-missing
+
+The [screenshot tag](/docs/for-app-authors/metainfo-guidelines/#screenshots) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) is missing `type=default` on one of them.
+
+#### screenshot-image-source-duplicated
+
+The [screenshot tag](/docs/for-app-authors/metainfo-guidelines/#screenshots) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has multiple `image` tags under one `screenshot` tag.
+
+#### metadata-license-missing
+
+The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) is missing a [metadata license tag](/docs/for-app-authors/metainfo-guidelines/#license).
+
+#### category-invalid, all-categories-ignored, app-categories-missing
+
+Categories are either invalid, missing or all were filtered. Pleasee see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#categories-and-keywords) for more details.
+
+#### file-read-failed
+
+The desktop file, icon or the MetaInfo file is malformed and reading it failed.
+
+#### metainfo-ancient
+
+The MetaInfo does not start with the [component tag](/docs/for-app-authors/metainfo-guidelines/#header).
+
+#### releases-info-missing
+
+The release tag is missing entirely from the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename). Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#release) for more details.
+
+#### releases-not-in-order
+
+The versions in release tag are not in the [proper order](/docs/for-app-authors/metainfo-guidelines/#release).
+
+#### release-version-missing, release-time-missing
+
+The release tag is missing the version or time attribute. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#release) for more details.
+
+#### content-rating-missing, content-rating-type-missing, content-rating-type-invalid
+
+The [OARS tag](/docs/for-app-authors/metainfo-guidelines/#oars-information) is missing from the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) or has no `type` key present or has an invalid `type` key present.
+
+#### custom-key-duplicated
+
+A `custom` tag with same `key` attribute is used twice. It must be used once.
+
+#### type-property-required
+
+The corresponding tag requires a `type` attribute. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines) for the tag.
+
+#### metainfo-localized-description-tag
+
+The MetaInfo file has translated the `description` tag itself. Please see the [translation section](/docs/for-app-authors/metainfo-guidelines/#metainfo-translations) on how to use translation attributes.
+
+#### circular-component-relation
+
+The `extends`, `provides`, `requires` or `recommends` tag in the MetaInfo file references the application's own ID.
+
+#### mimetypes-tag-deprecated
+
+The `mimetype` tag is deprecated in favour of a `mediatypes` child tag under the `provides` tag. Please see the specification on how to use it.
+
+#### custom-invalid-tag
+
+One of the `custom` tags in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) does not have the `value` child tag. Custom tags can have only `value` as child tags.
 
 ## Path and filename
 
 :::note
-`/app/share/appdata` and `%{id}.appdata.xml` are considered to be legcay path and filename respectively.
+`/app/share/appdata` and `%{id}.appdata.xml` are considered to be the legacy path and filename, respectively.
 :::
 
 Place the MetaInfo file into `/app/share/metainfo/`, name it `%{id}.metainfo.xml`, where `%{id}` is the [ID](#id).
+This ID and the filename must match exactly with the `id` set in the
+[Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
 
 ## MetaInfo generator
 
@@ -45,7 +205,7 @@ tool can be used to generate a basic file.
 
 All MetaInfo files must start with:
 
-```xml title="tld.domain.appid.metainfo.xml"
+```xml title="tld.vendor.appid.metainfo.xml"
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright [year] [name] -->
 <component type="desktop-application">
@@ -58,7 +218,7 @@ must use `type="addon"`. SDK extensions or runtimes can use
 
 ## ID
 
-The ID must be same as the [Application-ID](./../requirements#application-id):
+The ID must be exactly the same as the [Application-ID](./../requirements#application-id):
 
 ```xml
 <!-- Good -->
@@ -71,6 +231,25 @@ The ID must be same as the [Application-ID](./../requirements#application-id):
 <!-- Incorrect -->
 <id>qtdemo</id>
 ```
+
+### Renaming ID tag
+
+:::note
+The ID tag must exactly match the Flatpak ID. If it has to be renamed
+completely, the application needs to be [resubmitted](/docs/for-app-authors/maintenance#renaming-the-flatpak-id).
+:::
+
+The [ID tag](#id) in the [MetaInfo file](#path-and-filename) is supposed
+to be a constant and unique identifier of an application and should not
+be renamed unless absolutely necessary.
+
+If a rename is necessary, please add the old [ID tag](#id) as a
+[provides tag](#provides) and a [replaces tag](#replaces) in the
+[MetaInfo file](#path-and-filename).
+
+`rename-appdata-file` in the Flatpak manifest can automatically update
+the [ID tag](#id) in the [MetaInfo file](#path-and-filename) and add the
+old ID to the [provides tag](#provides).
 
 ## License
 
@@ -88,7 +267,7 @@ for other recommended licenses.
 Followed by a mandatory `project_license` tag:
 
 ```xml
-<project_license>GPL-3.0</project_license>
+<project_license>GPL-3.0-only</project_license>
 ```
 
 The value must be a valid [SPDX license identifier](https://spdx.org/licenses/). License [expression operators](https://spdx.github.io/spdx-spec/v2-draft/SPDX-license-expressions/#d4-composite-license-expressions) like `AND, OR, WITH` are supported.
@@ -100,25 +279,35 @@ with a link to the license:
 <project_license>LicenseRef-proprietary=https://example.org/legal/</project_license>
 ```
 
-## Name, summary and developer name
+## Name and summary
+
+:::note
+
+Name and summary should not violate any trademarks.
+
+:::
 
 ```xml
 <name>App Name</name>
 <summary>Short summary</summary>
 ```
 
-Please make sure to follow the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#app-name)
-for `name` and `summary`.
+Please make sure to follow the quality guidelines for [name](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#app-name)
+and [summary](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#summary).
 
-:::note
-The deprecated `developer_name` tag is also supported for backwards compatibility
-:::
+## Developer Name
 
 A `developer` [tag](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-developer)
-with a `name` child tag must be present.
+with an `id` attribute and a `name` child tag must be present. The `name`
+must be the author or developer of the application.
+
+The `id` must be a reverse DNS, for example `org.example`.
+
+Only one `developer` tag and only one child `name` tag in
+[untranslated](#metainfo-translations) form is allowed.
 
 ```xml
-<developer id="tld.domain">
+<developer id="org.example">
   <name>Developer name</name>
 </developer>
 ```
@@ -128,22 +317,31 @@ translate these tags.
 
 ## Description
 
-A short and informative description must be present. Please follow the
-[specification](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-description)
-for the formatting options allowed. All HTML tags are not supported.
+A short and informative description must be present.
 
-Descriptions must not contain any direct links.
+Only the following child tags are supported: `p` (paragraph), `ol, ul`
+(ordered and unordered list) with `li` (list items) child tags, `em` for
+italicized emphasis and `code` for inline code in monospace.
+
+The description must have at least one non empty `p`, `ol` or `ul` tag.
+It must not contain any direct URLs.
 
 ```xml
 <description>
-  <p>Some description</p>
-  <p>Some description</p>
+  <p>Some <em>description</em></p>
+  <p>Some <code>description</code></p>
   <p>A list of features</p>
   <ul>
     <li>Feature 1</li>
     <li>Feature 2</li>
     <li>Feature 3</li>
   </ul>
+  <p>The app can do:</p>
+  <ol>
+    <li>Feature 1</li>
+    <li>Feature 2</li>
+    <li>Feature 3</li>
+  </ol>
 </description>
 ```
 
@@ -156,8 +354,8 @@ All graphical applications having a desktop file must have this tag in
 the MetaInfo. If this is present, `appstreamcli compose` will pull
 icons, keywords and categories from the desktop file.
 
-The value must be the [Application-ID](./../requirements#application-id)
-followed by `.desktop` suffix.
+The value must exactly be the [Application-ID](./../requirements#application-id)
+followed by `.desktop` suffix. Multiple launchable tags must not be used.
 
 ```xml
 <launchable type="desktop-id">org.flatpak.qtdemo.desktop</launchable>
@@ -213,27 +411,30 @@ application in current `id` tag replaces the one in this tag.
 
 ## Categories and keywords
 
-If there’s a `type="desktop-id"` [launchable](#launchable), they are
-pulled from the desktop file and merged in the [AppStream Catalog data](https://www.freedesktop.org/software/appstream/docs/chap-CatalogData.html).
-So defining them seperately in the MetaInfo is not necessary.
-
-Please see the [specification](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-categories)
-on how to define them in MetaInfo.
-
-If they are present in both places, `appstreamcli compose` will merge them.
+If there’s a [launchable](#launchable) defined for a desktop application,
+they are pulled from the desktop file. Defining them separately in the
+Metainfo file will override the contents of the desktop file.
 
 Please don't use, generic categories like
-`GTK, Qt, KDE, GNOME, Motif, Java, GUI, Application, XFCE, DDE`. 
-These can be placed in `keywords`.
+`GTK, Qt, KDE, GNOME, Motif, Java, GUI, Application, XFCE, DDE` as these
+are filtered by Appstream. These can be placed in `Keywords` if
+necessary.
 
-Please see the [translations section](#metainfo-translations) to
-translate the `keyword` tag.
+Please see the [Menu specification](https://specifications.freedesktop.org/menu-spec/latest/apa.html)
+for a list of valid category names.
 
 ## Icons
 
-All desktop applications must install icons of the [required size](/docs/for-app-authors/requirements#application-icons)
+:::note
+
+Icons must not violate any trademark, be a copy of another application's
+icon or be confusingly similar.
+
+:::
+
+All desktop applications must install icons of the [required size](/docs/for-app-authors/requirements#icons)
 to the [proper location](https://docs.flatpak.org/en/latest/conventions.html#application-icons)
-and must also have a launchable entry so that  `appstreamcli compose`
+and must also have a [launchable](#launchable) entry so that  `appstreamcli compose`
 can fetch the icon from the desktop file.
 
 Console applications wanting to set icons for application stores, can
@@ -250,6 +451,9 @@ link to an icon.
 <icon type="stock">org.flatpak.qtdemo</icon>
 <icon type="remote">https://example.org/icon.png</icon>
 ```
+
+Please see the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#app-icon)
+for icons too.
 
 ## Project Group
 
@@ -268,7 +472,7 @@ project groups.
 <project_group>GNOME</project_group>
 ```
 
-### Brand color
+## Brand color
 
 Applications should set a [brand color](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-branding)
 in both light and dark variants like so:
@@ -282,6 +486,8 @@ in both light and dark variants like so:
 
 This is used by Flathub and native app store clients on banners, app
 pages, etc.
+
+Brand color and app banners can be previewd at https://docs.flathub.org/banner-preview/
 
 ## OARS information
 
@@ -306,6 +512,7 @@ but it is best to include other links too.
 <url type="contact">https://example.org/contact</url>
 <url type="faq">https://example.org/faq</url>
 <url type="translate">https://example.org/translate</url>
+<url type="contribute">https://example.org/contribute</url>
 <url type="vcs-browser">https://example.org/repository</url>
 ```
 
@@ -346,17 +553,23 @@ Applications must supply a releases tag in their MetaInfo to pass
 validation. Please make sure to also follow the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#release-notes)
 while writing release notes.
 
-Paragraphs in release description must not contain any direct URLs.
-Flathub supports showing a detailed release note link when
-`<url type="details">` tag is used. Release dates must
-not be in the future and versions must be [properly ordered](https://www.freedesktop.org/software/appstream/docs/chap-AppStream-Misc.html#spec-vercmp-recommendations).
+The description tag follows the same formatting as the toplevel
+[description tag](#description). Flathub supports showing a detailed
+release note link when `<url type="details">` tag is used. Release dates
+must not be in the future and versions must be [properly ordered](https://www.freedesktop.org/software/appstream/docs/chap-AppStream-Misc.html#spec-vercmp-recommendations).
+
+:::tip
+`appstreamcli vercmp <version 1> <version 2>` can be used to compare the
+order of two versions.
+:::
+
 
 Releases in MetaInfo should look like this:
 
 ```xml
 <releases>
   <release version="1.0.1" date="2024-01-18">
-  <url type="details">https://example.org/changelog.html#version_1.0.1</url>
+    <url type="details">https://example.org/changelog.html#version_1.0.1</url>
     <description>
       <p>Release description</p>
         <ul>
@@ -366,7 +579,7 @@ Releases in MetaInfo should look like this:
     </description>
   </release>
   <release version="1.0.0" date="2023-08-07">
-  <url type="details">https://example.org/changelog.html#version_1.0.0</url>
+    <url type="details">https://example.org/changelog.html#version_1.0.0</url>
     <description>
       <p>Release description</p>
         <ul>
@@ -420,7 +633,7 @@ The `description` tag has to be translated by each `<p>` and `<li>` tags.
 <summary>A summary</summary>
 <summary xml:lang="de">Translated summary</summary>
 
-<developer id="tld.domain">
+<developer id="org.example">
   <name>Developer name</name>
   <name xml:lang="de">Translated developer name</name>
 </developer>
@@ -455,7 +668,7 @@ as forbidden. The whole block of the `description` tag can be excluded
 by using `translate="no"`.
 
 ```xml
-<developer id="tld.domain">
+<developer id="org.example">
   <name translate="no">Developer name</name>
 </developer>
 ```
@@ -480,12 +693,30 @@ and all application extensions must use the `extends` tag.
 
 An example of a MetaInfo file for extension is provided in the [Flatpak documentation](https://docs.flatpak.org/en/latest/extension.html#extension-manifest).
 
+## Preview
+
+The MetaInfo file can be previewed using [GNOME Software](https://apps.gnome.org/Software/)
+either by installing the Flatpak package from the test build or locally.
+
+Note that test builds done from Flathub infrastructure will be missing
+screenshots.
+
+GNOME Software also has a flag to preview the MetaInfo file:
+`gnome-software --show-metainfo /path/to/$FLATPAK_ID.metainfo.xml`.
+
+Appstreamcli also offers a way to preview on the command line using
+`appstreamcli get --details --datapath /path/to/$FLATPAK_ID.metainfo.xml`
+or `appstreamcli get --details $ID` when the catalogue data is installed
+locally to the appstream cache (usually this means the Flatpak package is
+installed).
+
 ## Checking the generated output
 
 Once an app has been built with a proper MetaInfo file, Flatpak Builder
-automatically invokes `appstreamcli` with the `compose` argument that
-composes the application metadata gathered from the desktop file, icon
-and the MetaInfo file into a combined XML file called the [AppStream Catalog data](https://www.freedesktop.org/software/appstream/docs/chap-CatalogData.html#sect-AppStream-XML).
+automatically invokes `appstreamcli compose` from the [AppStream Project](https://github.com/ximion/appstream/)
+that composes the application metadata gathered from the desktop file,
+icon and the MetaInfo file into a combined XML file called the
+[AppStream Catalog data](https://www.freedesktop.org/software/appstream/docs/chap-CatalogData.html#sect-AppStream-XML).
 
 This file must not be manually created or modified. The file can be found
 in `<builddir>/files/share/app-info/xmls/<app-id>.xml.gz` or
@@ -496,5 +727,10 @@ provided a PNG icon of size 64px or more, or a SVG icon was installed
 to the [proper location](https://docs.flatpak.org/en/latest/conventions.html#application-icons)
 during the build.
 
-Note that Flathub [requires](/docs/for-app-authors/requirements#application-icons)
-at least a 128px icon to be present.
+Flatpak then combines catalog data for each application into a combined
+AppStream catalog file for a repository. Software stores like Flathub,
+GNOME Software, KDE Discover and even Flatpak CLI reads this combined
+AppStream catalog file of a repository to display information about an
+application. So it is essential that this file contains no errors which
+by extension means that the MetaInfo file, icon and the desktop file
+passes all validation.

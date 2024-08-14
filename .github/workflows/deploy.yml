@@ -28,12 +28,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Number of commits to fetch. 0 indicates all history for all branches and tags.
+          # Needed for sitemap generation with valid lastmod https://github.com/facebook/docusaurus/pull/9954#issuecomment-2032900942
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
           cache: yarn
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Build website

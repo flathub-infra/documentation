@@ -26,9 +26,13 @@ If you're not sure if your app violates any trademarks, feel free to ask us on [
 
 Use Flathub verification to indicate that you are the author of the app and that you are managing the app on Flathub.
 
-### Brand color
+## Brand colors
 
-Apps should set a [brand color](/docs/for-app-authors/metainfo-guidelines/#brand-color) (in two variants, `light` and `dark`). This color is used by Flathub and native app store clients on banners, app pages, etc.
+### Has primary brand colors
+
+Apps should set two primary [brand colors](/docs/for-app-authors/metainfo-guidelines/#brand-color), `light` and `dark`.
+
+For example:
 
 ```xml
 <branding>
@@ -37,11 +41,21 @@ Apps should set a [brand color](/docs/for-app-authors/metainfo-guidelines/#brand
 </branding>
 ```
 
-![One bad and two good examples of brand colors with regard to contast to the app icon.](assets/color-examples.png)
+### Good brand colors
 
-Brand colors are often used as a background behind the app icon, so make sure the colors are not too similar to the app icon in order to ensure good contrast. Avoid using light colors for the dark variant, or the same color for both dark and light. In most cases the dark variant should be a darker, more muted version of the light brand color.
+![One bad and two good examples of brand colors with regard to contrast to the app icon.](assets/color-examples.png)
+
+Brand colors are often used as a background behind the app icon, so make sure the colors are not too similar to the app icon in order to ensure good contrast. Avoid using light colors for the dark variant, or the same color for both dark and light. In most cases the dark variant should be a darker, more muted version of the light brand color. Do not use the same color for the dark and light variants.
+
+Brand colors should be colorful. In particular, avoid white (or very light grays) and black (or very dark grays).
+
+When choosing brand colors, a good starting point is using a lighter/darker version of the primary color used in the icon (though be careful to maintain good contrast with the icon), or a complementary color that pairs well with the main icon color (e.g. blue if the icon is yellow).
+
+It's recommended to consider the brand colors an extension of the app icon, and have the icon designer choose them when making the icon.
 
 ![Good example of banner colors for light and dark.](assets/color-light-dark.png)
+
+Feel free to play with our [banner preview](/banner-preview) to find your favorite colors.
 
 ## App Icon
 
@@ -87,7 +101,7 @@ In some cases, it can make sense for the icon to align with the visuals of the a
 
 ### Not too long
 
-The [name](/docs/for-app-authors/metainfo-guidelines/#name-summary-and-developer-name) should ideally be no longer than 15 characters, and must be shorter than 20 characters.
+The [name](/docs/for-app-authors/metainfo-guidelines/#name-and-summary) should ideally be no longer than 15 characters, and must be shorter than 20 characters.
 
 :::danger Bad examples
 
@@ -135,7 +149,7 @@ Cases where the formatting is part of an established brand may be exempt (e.g. `
 
 ### Not too long
 
-The [summary](/docs/for-app-authors/metainfo-guidelines/#name-summary-and-developer-name) should ideally be between 10 and 25 characters, and no longer than 35 characters.
+The [summary](/docs/for-app-authors/metainfo-guidelines/#name-and-summary) should ideally be between 10 and 25 characters, and no longer than 35 characters.
 
 :::tip Good example
 
@@ -290,3 +304,7 @@ Release notes should include some actual information about what changed rather t
 Apps acting as "readers" or "stores" for external content should take into account what is accessible by just navigating around in the app. If content of a certain type can be arrived at without searching or typing in URLs, the app should be tagged as containing it. For example, an RSS reader that doesn't feature any content can be "All Ages", but the rating for a manga app with pre-configured servers should reflect the content of those default sources.
 
 Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#oars-information) on how to generate proper age ratings.
+
+## Where to Get Help
+
+We understand these guidelines can seem daunting, especially for new or smaller apps. Being able to feature apps in places users will expect to see well-designed apps does require some design work, but the community is here to help: [chat with us on Matrix](https://matrix.to/#/#flathub:matrix.org) or [start a discussion on Discourse](https://discourse.flathub.org/) for advice and to find folks willing to help out.

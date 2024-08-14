@@ -1,6 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
+const tailwindPlugin = require("./plugins/tailwind-plugin.cjs");
+
 const lightCodeTheme = require("prism-react-renderer").themes.github;
 const darkCodeTheme = require("prism-react-renderer").themes.dracula;
 
@@ -18,6 +20,7 @@ const config = {
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
+  onBrokenAnchors: "throw",
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -39,6 +42,12 @@ const config = {
           editUrl: "https://github.com/flathub/documentation/tree/main/",
         },
         blog: {
+          feedOptions: {
+            type: "all",
+            xslt: true,
+          },
+          onInlineAuthors: "throw",
+          onUntruncatedBlogPosts: "throw",
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -47,11 +56,17 @@ const config = {
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
+        sitemap: {
+          lastmod: "date",
+          priority: null,
+          changefreq: null,
+        },
       }),
     ],
   ],
 
   plugins: [
+    tailwindPlugin,
     [
       require.resolve("docusaurus-plugin-search-local"),
       {

@@ -2,7 +2,7 @@
 slug: improved-build-validation
 title: Improved build validation, increased moderation, and the long-awaited switch to libappstream
 authors: [barthalion]
-tags: [flathub, moderation, linter]
+tags: [moderation, linter]
 ---
 
 Flathub's automatic build validation is more thorough now, and includes checks for issues we previously would have only flagged manually. There is a chance that if your app has been passing the continuous integration checks previously, it will fail now; here's why, and what to do about it.
@@ -19,7 +19,7 @@ Flathub has also switched to a modern, well-maintained AppStream library, known 
 
 This work has been ongoing since 2021. At one point along the way we briefly switched over to `libappstream`, but had to revert due to unexpected breakage; however, today we are finally ready with all blocking issues addressed! While we were focused on closing the gaps to prevent potentially broken builds from being published, we regret that we failed to provide a heads-up about the coming validation changes. Any future breaking changes will be properly announced on this blog, and going forward we will also inform maintainers of affected apps about required changes in advance.
 
-[1]: https://docs.flathub.org/docs/for-app-authors/linter/
+[1]: /docs/for-app-authors/linter/
 [2]: https://github.com/flathub-infra/flatpak-builder-lint
 [3]: https://www.freedesktop.org/software/appstream/docs/
 [4]: https://tecnocode.co.uk/
