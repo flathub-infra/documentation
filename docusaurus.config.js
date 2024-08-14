@@ -131,6 +131,11 @@ const config = {
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
+            href: "https://flathub.org",
+            label: "Store",
+            position: "right",
+          },
+          {
             href: "https://github.com/flathub/documentation",
             label: "GitHub",
             position: "right",
