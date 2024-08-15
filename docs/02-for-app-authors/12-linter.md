@@ -578,6 +578,24 @@ The [desktop file(s)](https://docs.flatpak.org/en/latest/conventions.html#deskto
 are either not installed to the proper location during the build or does
 not match the `$FLATPAK_ID`.
 
+### finish-args-contains-both-x11-and-fallback
+
+**Exceptions allowed**: No
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has both `--socket=x11` and `--socket=fallback-x11`.
+
+Both are never needed.
+
+### finish-args-x11-without-ipc
+
+**Exceptions allowed**: No
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--socket=x11` but no `--share=ipc`.
+
+Applications needing `--socket=x11` also need SysV IPC access.
+
 ### finish-args-absolute-home-path
 
 **Exceptions allowed**: No
@@ -1384,20 +1402,6 @@ for more details.
 The [desktop file](https://docs.flatpak.org/en/latest/conventions.html#desktop-files)
 has one or more [low-quality categories](/docs/for-app-authors/metainfo-guidelines/#categories-and-keywords)
 and no proper (non low-quality) category.
-
-### finish-args-contains-both-x11-and-fallback
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has both `--socket=x11` and `--socket=fallback-x11`.
-
-Both are never needed.
-
-### finish-args-x11-without-ipc
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `--socket=x11` but no `--share=ipc`.
-
-Applications needing `--socket=x11` also need SysV IPC access.
 
 ### module-module_name-source-md5-deprecated
 
