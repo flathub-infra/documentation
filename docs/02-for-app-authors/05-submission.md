@@ -25,10 +25,12 @@ flatpak install -y flathub org.flatpak.Builder
    flatpak run org.flatpak.Builder --force-clean --sandbox --user --install --install-deps-from=flathub --ccache --mirror-screenshots-url=https://dl.flathub.org/media/ --repo=repo builddir <manifest>
    ```
 
-   If you are using an [extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data) source, please use `flatpak-builder` from your distribution:
+   If you are using an [extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data) source:
 
    ```bash
-   flatpak-builder --force-clean --sandbox --user --install --install-deps-from=flathub --ccache --mirror-screenshots-url=https://dl.flathub.org/media/ --repo=repo builddir <manifest>
+   flatpak run org.flatpak.Builder --force-clean --sandbox --user --install-deps-from=flathub --ccache --mirror-screenshots-url=https://dl.flathub.org/media/ --repo=repo builddir <manifest>
+   flatpak remote-add --user --no-gpg-verify my-app file://$(pwd)/repo
+   flatpak install --user -y my-app $FLATPAK_ID
    ```
 
 ### Run and test
@@ -43,14 +45,14 @@ flatpak install -y flathub org.flatpak.Builder
    Consult the documentation for explanation of the errors. For certain
    errors you might need an [exception](/docs/for-app-authors/linter#exceptions).
 
+   Some linter errors regarding external icons, screenshots or screenshot
+   files may happen in a local build but not on Flathub. Those can be
+   safely ignored. Feel free to ask for help with any linter issues.
+
    ```bash
    flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest <manifest>
    flatpak run --command=flatpak-builder-lint org.flatpak.Builder repo repo
    ```
-
-   Following the above instructions, if you see
-   `appstream-screenshots-files-not-found-in-ostree` in errors, you can
-   ignore this.
 
 Once this is done you can open the submission pull request!
 
