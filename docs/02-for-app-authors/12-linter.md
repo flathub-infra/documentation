@@ -578,6 +578,13 @@ The [desktop file(s)](https://docs.flatpak.org/en/latest/conventions.html#deskto
 are either not installed to the proper location during the build or does
 not match the `$FLATPAK_ID`.
 
+### external-gitmodule-url-found
+
+**Exceptions allowed**: No
+
+Git submodules outside of the GitHub orgs `flathub, flathub-infra, flatpak`
+are not allowed.
+
 ### finish-args-contains-both-x11-and-fallback
 
 **Exceptions allowed**: No
