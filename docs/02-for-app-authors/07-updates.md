@@ -29,4 +29,4 @@ However, generally:
 
 - Most app store clients will **notify users of available updates at least daily**, even when automatic updates are not enabled
 
-- Apps can implement their own update logic using the [UpdateMonitor Portal](https://flatpak.github.io/xdg-desktop-portal/docs/#gdbus-org.freedesktop.portal.Flatpak.UpdateMonitor), e.g. to **prompt users to install an update and restart the app**
+- Apps can implement their own update logic using the [UpdateMonitor Portal](https://docs.flatpak.org/en/latest/portal-api-reference.html#gdbus-interface-org-freedesktop-portal-Flatpak-UpdateMonitor), e.g. to **prompt users to install an update and restart the app**
