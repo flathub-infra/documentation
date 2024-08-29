@@ -657,7 +657,7 @@ The `description` tag has to be translated by each `<p>` and `<li>` tags.
 </screenshots>
 
 <keywords>
-  <keyword translate="no">Keyword</keyword>
+  <keyword>Keyword</keyword>
   <keyword xml:lang="de">Translated keyword</keyword>
 </keywords>
 ```
