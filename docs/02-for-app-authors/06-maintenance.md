@@ -102,7 +102,15 @@ If you build for both `x86_64` and `aarch64` you do not need a `flathub.json` fi
 Extensions or BaseApps do not need to be EOL or EOL Rebased.
 :::
 
-There may come a point where an application is no longer maintained. In order to inform users at update or install time that it will no longer get updates, create `flathub.json` with these contents:
+There may come a point where an application is no longer maintained. In
+order to inform users at update or install time that it will no longer
+get updates, create a `flathub.json` file in manifest root with the
+contents below.
+
+Then open a pull request in the Flathub repository of the application and
+once the build on the pull request is successful, merge it. If the
+application exists on `beta` branch too, the same process needs
+to be followed there as well.
 
 ```json title="flathub.json"
 {
@@ -110,13 +118,28 @@ There may come a point where an application is no longer maintained. In order to
 }
 ```
 
-EOL-ing will remove the listing of the application from the [Flathub website](https://flathub.org/).
+EOL-ing will remove the listing of the application from the
+[Flathub website](https://flathub.org/).
 
 ## End of life Rebase
 
-If the application has been renamed, you must additionally include `end-of-life-rebase` with the new ID. Recent flatpak versions will prompt user if they'd like to switch to the renamed app.
+:::note
+End of life Rebase PR must be merged once the application under the new
+ID is published.
+:::
 
-Additionally, you can also update the MetaInfo file of the new application with a [provides tag](/docs/for-app-authors/metainfo-guidelines/#provides) and a [replaces tag](/docs/for-app-authors/metainfo-guidelines/#replaces) to reflect that it has been renamed.
+If the application has been [renamed](#renaming-the-flatpak-id),
+and you wish users to migrate to the new ID, create a `flathub.json`
+file in manifest root with the contents below.
+
+Then open a pull request in the Flathub repository of the application and
+once the build on the pull request is successful, merge it. If the
+application exists on `beta` branch too, the same process needs
+to be followed there as well.
+
+Flatpak will prompt the user when updating or installing whether they
+want to migrate to the new ID. Any data managed by Flatpak will also
+be migrated automatically on entering yes.
 
 ```json title="flathub.json"
 {
@@ -124,12 +147,6 @@ Additionally, you can also update the MetaInfo file of the new application with 
   "end-of-life-rebase": "the.new.appid"
 }
 ```
-
-The `end-of-life-rebase` will tell flatpak to automatically migrate the user data from the old package to the new package, making the process transparent for the user.
-
-:::note
-Please also try to contact a Flathub admin to archive the repo by creating an [issue](https://github.com/flathub/flathub/issues/new).
-:::
 
 In case you want to step down as a maintainer but wish someone to take over maintenance, you can ask in the [tracker issue](https://github.com/flathub/flathub/issues/3693).
 
