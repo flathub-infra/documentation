@@ -21,8 +21,8 @@ for help.
 
 The following rules should be followed when creating application IDs.
 
-- The ID must not exceed 255 characters, must have at least 3 components
-  and must not end in generic terms like `.desktop` or `.app`.
+- The ID must not exceed 255 characters and must have at least 3
+  components.
 
   The ID can be split into _components_ at each `.`. Each component must
   contain only the characters `[A-Z][a-z][0-9]_`.  A dash `-` is only
@@ -31,15 +31,12 @@ The following rules should be followed when creating application IDs.
   All components except the last is taken as the _domain portion_ of
   the ID.
 
-- The ID must exactly match the [ID tag](/docs/for-app-authors/metainfo-guidelines/#id)
-  in Metainfo file.
-
 - The domain portion must be in lowercase and must convert dash `-` to
   underscore `_` and also prefix any intial digits with an underscore
   `_`.
 
 ```
-# Good
+# Correct
 com.example_site.foo
 com._0example.foo
 
@@ -47,6 +44,12 @@ com._0example.foo
 com.example-site.foo
 com.0example.foo
 ```
+
+- The ID must not end in generic terms like `.desktop` or `.app`. It's
+  fine to repeate the the application name in such cases.
+
+- The ID must exactly match the [ID tag](/docs/for-app-authors/metainfo-guidelines/#id)
+  in Metainfo file.
 
 - Applications using code hosting IDs and hosted on
   `github.com, gitlab.com, codeberg.org, framagit.org` must use
@@ -69,6 +72,10 @@ com.0example.foo
   For example for the ID `com.example_site.foo.bar` the URL
   `http(s)://foo.example-site.com` must be reachable and must be under
   control of author/developer/project of the application.
+
+  It's also preferable to have some visible proof on the webpage that
+  connects the application being submitted or its developer/project with
+  the domain being used in the ID.
 
 - For GitHub and Codeberg IDs of the form
   `io.github.example_foo.bar, page.codeberg.example_foo.bar` the
@@ -97,8 +104,7 @@ com.0example.foo
 
   Note that Gitlab namespaces are case sensitive.
 
-Applications are not allowed to have more than 6 components in the ID.
-This is only allowed for baseapps and runtimes.
+Applications are not allowed to have more than 5 components in the ID.
 
 ## License
 
@@ -158,12 +164,16 @@ This manifest must be included in the submission.
 
 Applications must have the following metadata included.
 
-These metadata files should directly come from upstream whenever possible.
+These metadata files should directly come from upstream whenever
+possible as these are widely adopeted Freedesktop standards that can be
+used by other distributions as well.
 
 ### Appstream
 
 All submissions must provide a [Metainfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
 that passes [validation](/docs/for-app-authors/metainfo-guidelines/#validation).
+
+Metainfo file is optional for runtimes, extensions and baseapps.
 
 ### Desktop file
 
