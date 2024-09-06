@@ -137,9 +137,14 @@ must be at the top level and named after the [application ID](#application-id)
 with the extension `.json`, `.yml` or `.yaml` depending on whether it is
 JSON or YAML.
 
-All sources used in the manifest must be remotely fetchable using the
-URL or must be included with the submission. The [runtime(s)](https://docs.flatpak.org/en/latest/basic-concepts.html#runtimes)
+The [runtime(s)](https://docs.flatpak.org/en/latest/basic-concepts.html#runtimes)
 used in the manifest must be hosted on Flathub.
+
+#### No network access during build
+
+All sources used in the manifest must be publicly accessible using URLs
+or must be included as local sources in the submission PR. There is no
+network access during the build process.
 
 ### flathub.json
 
@@ -158,7 +163,7 @@ There is a [community provided set of tools](https://github.com/flatpak/flatpak-
 that can be used to generate dependency manifests for npm, yarn, cargo,
 pip etc.
 
-This manifest must be included in the submission.
+These manifests must be included in the submission.
 
 ## Required metadata
 
