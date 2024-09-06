@@ -142,9 +142,11 @@ used in the manifest must be hosted on Flathub.
 
 #### No network access during build
 
-All sources used in the manifest must be publicly accessible using URLs
-or must be included as local sources in the submission PR. There is no
-network access during the build process.
+All dependencies needed to build and run the application must be present
+in the manifest as sources with publicly accessible URLs or must be
+included as local sources in the submission pull request.
+
+There is no network access during the build process.
 
 ### flathub.json
 
