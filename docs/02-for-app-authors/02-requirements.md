@@ -46,7 +46,7 @@ com.0example.foo
 ```
 
 - The ID must not end in generic terms like `.desktop` or `.app`. It's
-  fine to repeate the the application name in such cases.
+  fine to repeat the application name in such cases.
 
 - The ID must exactly match the [ID tag](/docs/for-app-authors/metainfo-guidelines/#id)
   in Metainfo file.
