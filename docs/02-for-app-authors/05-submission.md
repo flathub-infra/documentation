@@ -41,12 +41,12 @@ flatpak install -y flathub org.flatpak.Builder
 
 ### Run the linter
 
-   Please run the [linter](/docs/for-app-authors/linter) once.
-   Consult the documentation for explanation of the errors. For certain
-   errors you might need an [exception](/docs/for-app-authors/linter#exceptions).
+   Please try to run the [linter](/docs/for-app-authors/linter) once
+   locally. Consult the documentation for explanation of the errors. For
+   certain errors you might need an [exception](/docs/for-app-authors/linter#exceptions).
 
    Some linter errors regarding external icons, screenshots or screenshot
-   files may happen in a local build but not on Flathub. Those can be
+   files may happen in a local build but not on Flathub CI. Those can be
    safely ignored. Feel free to ask for help with any linter issues.
 
    ```bash
