@@ -411,17 +411,32 @@ application in current `id` tag replaces the one in this tag.
 
 ## Categories and keywords
 
+
 If there’s a [launchable](#launchable) defined for a desktop application,
-they are pulled from the desktop file. Defining them separately in the
-Metainfo file will override the contents of the desktop file.
+categories and keywords are pulled from the desktop file. Defining them
+separately in the Metainfo file will override the contents of the
+desktop file.
 
 Please don't use, generic categories like
 `GTK, Qt, KDE, GNOME, Motif, Java, GUI, Application, XFCE, DDE` as these
 are filtered by Appstream. These can be placed in `Keywords` if
-necessary.
-
-Please see the [Menu specification](https://specifications.freedesktop.org/menu-spec/latest/apa.html)
+necessary. Please see the [Menu specification](https://specifications.freedesktop.org/menu-spec/latest/apa.html)
 for a list of valid category names.
+
+Console applications with no desktop file can define them in the Metainfo
+file.
+
+```xml
+  <categories>
+    <category>Development</category>
+    <category>Science</category>
+  </categories>
+
+  <keywords>
+    <keyword>IDE</keyword>
+    <keyword>development</keyword>
+  </keywords>
+```
 
 ## Icons
 
