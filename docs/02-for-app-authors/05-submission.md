@@ -21,7 +21,7 @@ flatpak install -y flathub org.flatpak.Builder
 
 ### Build and install
 
-Add the Flatpak repo user-wide:
+Add the Flathub repo user-wide:
 
    ```bash
    flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
