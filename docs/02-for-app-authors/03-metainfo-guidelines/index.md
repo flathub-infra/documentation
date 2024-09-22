@@ -452,6 +452,9 @@ to the [proper location](https://docs.flatpak.org/en/latest/conventions.html#app
 and must also have a [launchable](#launchable) entry so that  `appstreamcli compose`
 can fetch the icon from the desktop file.
 
+Console applications wanting to appear in Flathub website search results
+must also provide icons.
+
 Console applications wanting to set icons for application stores, can
 also [install icons](https://docs.flatpak.org/en/latest/conventions.html#application-icons).
 If icons are installed an `icon` tag with `type=stock` can be used. The
@@ -539,6 +542,9 @@ to display the source code repository is highly recommended.
 All graphical applications must have one or more screenshots in the
 MetaInfo. Please make sure to follow the [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines#screenshots)
 for screenshots.
+
+Console applications wanting to appear in Flathub website search results
+must provide screenshots.
 
 The link inside `image` tag must be a direct link to a image resource on
 the web. If the images are hosted in a git repository, the

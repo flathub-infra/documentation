@@ -185,6 +185,8 @@ used by other distributions as well.
 All submissions must provide a [Metainfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
 that passes [validation](/docs/for-app-authors/metainfo-guidelines/#validation).
 
+A Metainfo file is mandatory to appear on the Flathub website.
+
 Metainfo file is optional for runtimes, extensions and baseapps.
 
 ### Desktop file
@@ -198,7 +200,8 @@ Desktop file is optional for console applications.
 Graphical applications must provide, preferably a SVG icon or at least
 a 256x256 PNG icon, properly [named and installed](https://docs.flatpak.org/en/latest/conventions.html#application-icons).
 
-Icon is optional for console applications.
+Icon is optional for console applications but it is mandatory to appear
+on Flathub website search results.
 
 ## Permissions
 
