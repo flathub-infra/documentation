@@ -65,9 +65,14 @@ com.0example.foo
 
 ### Control over domain or repository
 
-- The author/developer/project of the application must have control
-  over the domain portion of the ID and the corresponding URL must be
-  reachable over HTTP(S).
+- The domain being used in the ID must be directly related to the
+  application being submitted. Please don't use your personal domain to
+  submit an app you didn't develop/aren't involved with.
+
+  It must be a domain directly related to the original project and the
+  author/developer/project of the application must have control over the
+  domain portion of the ID and the corresponding URL must be reachable
+  over HTTP(S).
 
   For example for the ID `com.example_site.foo.bar` the URL
   `http(s)://foo.example-site.com` must be reachable and must be under
