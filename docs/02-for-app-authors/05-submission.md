@@ -21,6 +21,14 @@ flatpak install -y flathub org.flatpak.Builder
 
 ### Build and install
 
+Add the Flathub repo user-wide:
+
+   ```bash
+   flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+   ```
+
+Then build your manifest:
+
    ```bash
    flatpak run org.flatpak.Builder --force-clean --sandbox --user --install --install-deps-from=flathub --ccache --mirror-screenshots-url=https://dl.flathub.org/media/ --repo=repo builddir <manifest>
    ```
