@@ -19,61 +19,11 @@ Any action from Flathub and `peter-evans/create-pull-request` is allowed
 to be used.
 
 This can be used in place of the regular global x-checker action to
-support updating your dependency manifests or metainfo files.
-
-Please remember to [disable](/docs/for-app-authors/external-data-checker#disable)
-the global x-checker action and restrict scheduled jobs to once a week
-to not overload Flathub's CI. An example is provided below.
-
-This expects [Flatpak-builder-tools](https://github.com/flatpak/flatpak-builder-tools)
-to be present as a submodule.
-
-```yaml
-name: Update Python sources
-on:
-  schedule:
-    - cron: '0 0 * * 0'
-  workflow_dispatch:
-
-permissions:
-  contents: write
-  pull-requests: write
-
-jobs:
-  update-python-sources:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          submodules: true
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - name: Install Linux dependencies
-        run: sudo apt-get update -qq && sudo apt-get install -y jq flatpak
-      - name: Enable Flathub
-        run: flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-      - name: Install runtimes
-        run: flatpak install -y flathub org.freedesktop.Platform//24.08 org.freedesktop.Sdk//24.08
-      - name: Extract commit
-        id: app-commit
-        run: echo "commit=$( jq '.modules[] | select(.name == "flatpak-builder-lint") | .sources[] | select(.type == "git") | .commit' com.example.manifest.json )" >> $GITHUB_OUTPUT
-      - name: Clone application repo
-        uses: actions/checkout@v4
-        with:
-          repository:
-          ref: ${{ steps.app-commit.outputs.commit }}
-          path: app
-      - name: Generate python sources
-        run: flatpak-pip-generator --runtime='org.freedesktop.Sdk//24.08' --requirements-file='/app/foo/bar/requirements.txt' --output pypi-dependencies.json
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
-        with:
-          commit-message: Update python sources
-          title: Update python sources
-          base: master
-```
-
+support updating your dependency manifests or metainfo files. Please
+remember to [disable](/docs/for-app-authors/external-data-checker#disable)
+the global x-checker action if you are using this to generate application
+updates and restrict scheduled jobs to once a week to not overload
+Flathub's CI.
 
 ## For users
 
