@@ -826,6 +826,16 @@ access.
 
 This means the application will not be able to launch in a X11 session.
 
+### finish-args-incorrect-secret-service-talk-name
+
+**Exceptions allowed**: No
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--talk-name=org.freedesktop.Secrets`.
+
+This is incorrect. The correct name is in lowercase
+`org.freedesktop.secrets`.
+
 ### finish-args-freedesktop-dbus-own-name
 
 **Exceptions allowed**: No
