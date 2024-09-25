@@ -60,7 +60,7 @@ error for the linter.
 
 ### appid-url-not-reachable
 
-**Exceptions allowed**: Yes, one a case-by-case basis
+**Exceptions allowed**: Yes, on a case-by-case basis
 
 The URL determined from the domain portion of the appid was not
 reachable.
