@@ -19,10 +19,14 @@ You can track your build status, follow the build log for current and historic b
 
 ## Test builds and pull requests
 
-Buildbot also monitors the comments on any pull requests in your repository, and if they include the magic phrase `bot, build` (by a repo collaborator or owner) then it will start a test build. Test builds are similar to regular builds, except the results will never be published into the Flathub repo. You can however install the app from the test repo, where it will be available for 5 days or until you delete it.
+Buildbot also monitors every pull requests in the application repository.
+A new test build will be started on every push to a pull request and
+on every merge or push to the protected branches listed above.
 
-This is a great way to do updates, you do an update locally and tests that it works. Then you can make a pull request against master to verify that it builds on all architectures before you merge it.
+You can also manually start the test build or a rebuild on a pull request
+by commenting `bot, build`.
 
+Test builds are temporary and kept for not more than 2 days.
 
 ## Build moderation
 
