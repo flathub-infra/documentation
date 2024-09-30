@@ -251,7 +251,7 @@ Do not use screenshots taken on other platforms, especially if it's immediately 
 
 ### Default settings
 
-Use the platform default configuration for all settings that affect screenshots, including window controls, interface font, large text, high contrast, dark style, and so on. Having some screenshots to show off that e.g. dark style is supported is fine, but these should not be the only screenshots.
+Use the platform default configuration for all settings that affect screenshots, including window controls, interface font, large text, high contrast, dark style, accent color, and so on. Having some screenshots to show off that e.g. dark style is supported is fine, but these should not be the only screenshots.
 
 ![Examples of screenshots with default settings and custom font, window button layout, and high contrast enabled.](assets/screenshot-default.png)
 
