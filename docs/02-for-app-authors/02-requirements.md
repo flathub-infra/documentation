@@ -111,6 +111,8 @@ com.0example.foo
 
 Applications are not allowed to have more than 5 components in the ID.
 
+BaseApps must end their ID in `.BaseApp`.
+
 ## License
 
 All content hosted on Flathub must allow legal redistribution, and the
