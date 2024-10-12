@@ -1,11 +1,21 @@
 # Flatpak builder lint
 
-The Flatpak builder lint tool is a linter for Flatpak manifests. It's used to check for common errors, to enforce a consistent style and permissions.
-It can be found in the [flatpak-builder-lint](https://github.com/flathub/flatpak-builder-lint) repository.
+Flatpak builder lint is a linter for Flatpak manifests and builds. It is
+primarily developed for Flathub, but can be useful for other Flatpak
+repositories as well.
 
-Please follow [installation instructions](https://github.com/flathub/flatpak-builder-lint#flatpak) to install and run locally.
+Please follow [installation instructions](https://github.com/flathub-infra/flatpak-builder-lint?tab=readme-ov-file#flatpak)
+to install and run it locally.
 
-It's run against all builds sent to Flathub, and can be run locally to check your manifest before submitting it. You can find more information in the readme.
+The `manifest` check and the `repo` check is run against all builds
+on Flathub, and can also be run locally:
+
+```bash
+flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest <manifest>
+flatpak run --command=flatpak-builder-lint org.flatpak.Builder repo repo
+```
+
+You can find more information in the [project readme](https://github.com/flathub-infra/flatpak-builder-lint/blob/master/README.md).
 
 ## Linter errors
 
