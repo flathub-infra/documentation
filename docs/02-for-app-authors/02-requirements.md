@@ -178,9 +178,10 @@ These manifests must be included in the submission.
 
 Applications must have the following metadata included.
 
-These metadata files should directly come from upstream whenever
-possible as these are widely adopeted Freedesktop standards that can be
-used by other distributions as well.
+:::note
+These metadata files should directly come from the upstream project
+whenever possible as these are widely adopted Freedesktop standards.
+:::
 
 ### Appstream
 
