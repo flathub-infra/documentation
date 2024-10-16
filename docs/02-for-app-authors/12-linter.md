@@ -14,7 +14,7 @@ on Flathub, and can also be run locally.
 flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest <manifest>
 ```
 
-The `repo` check below expects a OSTree repository in the current path
+The `repo` check below expects an OSTree repository in the current path
 called `repo`. This is generated when
 [building the manifest with Flatpak Builder](/docs/for-app-authors/submission#build-and-install)
 and passing the `--repo=repo` argument.
