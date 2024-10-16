@@ -25,6 +25,32 @@ flatpak run --command=flatpak-builder-lint org.flatpak.Builder repo repo
 
 You can find more information in the [project readme](https://github.com/flathub-infra/flatpak-builder-lint/blob/master/README.md).
 
+## Exceptions
+
+Linter errors can be ignored with exceptions. Exceptions are granted on
+a case-by-case basis and the exception pull request needs to be merged
+first. Once merged it usually takes a couple of hours to be available.
+
+To apply for an exception, you need to submit a [Pull Request](https://github.com/flathub/flatpak-builder-lint/pulls) for the JSON [exception file](https://github.com/flathub/flatpak-builder-lint/blob/master/flatpak_builder_lint/staticfiles/exceptions.json). The syntax is:
+
+```json
+"my.app.id": {
+    "linter-error": "reason for the exception"
+}
+```
+
+There should be only one entry for the application, but it can contain
+multiple exceptions. Please make sure the reason is explanatory.
+
+### Check currently published exceptions
+
+You can check the current set of published exceptions for an application
+with:
+
+```bash
+curl -s https://flathub.org/api/v2/exceptions|jq '."my.app.id"'
+```
+
 ## Linter errors
 
 Here is a list of linter errors, and whether exceptions may be applied, by default.
@@ -1485,28 +1511,3 @@ in `config-opts` to a value of `/app, /usr, ${FLATPAK_DEST}`.
 This is set by [Flatpak Builder](https://docs.flatpak.org/en/latest/flatpak-builder.html)
 itself and is redundant.
 
-## Exceptions
-
-Linter errors can be ignored with exceptions. Exceptions are granted on
-a case-by-case basis and the exception pull request needs to be merged
-first. Once merged it usually takes a couple of hours to be available.
-
-To apply for an exception, you need to submit a [Pull Request](https://github.com/flathub/flatpak-builder-lint/pulls) for the JSON [exception file](https://github.com/flathub/flatpak-builder-lint/blob/master/flatpak_builder_lint/staticfiles/exceptions.json). The syntax is:
-
-```json
-"my.app.id": {
-    "linter-error": "reason for the exception"
-}
-```
-
-There should be only one entry for the application, but it can contain
-multiple exceptions. Please make sure the reason is explanatory.
-
-### Check currently published exceptions
-
-You can check the current set of published exceptions for an application
-with:
-
-```bash
-curl -s https://flathub.org/api/v2/exceptions|jq '."my.app.id"'
-```
