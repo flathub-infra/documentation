@@ -12,6 +12,29 @@ However, in order to give developers the choice of the most suitable environment
 - [org.gnome](https://gitlab.gnome.org/GNOME/gnome-build-meta): This is the GNOME runtime. On top of the Freedesktop runtime, it includes the Python3 binding for GTK, GTK 4, and the GNOME platform.
 - [org.kde](https://invent.kde.org/packaging/flatpak-kde-runtime): This is the KDE runtime. The version is based on the version of Qt that is available in the runtime. Qt5 based runtime include the KDE platform that is still Qt5 based.
 
+### Check software available in runtimes
+
+The best way to check software packaged in the runtime is to look at their respective manifests
+in the git repository or release contents. This can be done using:
+
+```bash
+flatpak run --command=cat org.freedesktop.Platform /usr/manifest.json|jq -r '."modules"|.[]|."name"'
+```
+
+`pkg-config` can be used for modules that install pkg-config files:
+
+```bash
+flatpak run --command=pkg-config org.freedesktop.Sdk --list-all
+
+flatpak run --command=pkg-config org.freedesktop.Sdk --modversion appstream
+```
+
+`ldconfig` can be used to list all sonames:
+
+```bash
+flatpak run --command=ldconfig org.freedesktop.Platform -p
+```
+
 ## Requirements
 
 - **Release frequency**: major releases no more frequently than 6 monthly, to avoid bloating the repository both on Flathub and on user systems
