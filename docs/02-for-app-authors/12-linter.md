@@ -8,10 +8,18 @@ Please follow [installation instructions](https://github.com/flathub-infra/flatp
 to install and run it locally.
 
 The `manifest` check and the `repo` check is run against all builds
-on Flathub, and can also be run locally:
+on Flathub, and can also be run locally.
 
 ```bash
 flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest <manifest>
+```
+
+The `repo` check below expects a OSTree repository in the current path
+called `repo`. This is generated when
+[building the manifest with Flatpak Builder](/docs/for-app-authors/submission#build-and-install)
+and passing the `--repo=repo` argument.
+
+```bash
 flatpak run --command=flatpak-builder-lint org.flatpak.Builder repo repo
 ```
 
