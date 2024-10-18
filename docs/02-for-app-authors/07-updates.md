@@ -6,7 +6,7 @@ Flathub builds and publishes app updates after a change is made to an app's mani
 
 Updating an application on Flathub (unless it is a direct-upload) is done by submitting a pull
 request to the application repository on GitHub. Once the pull request is submitted, a [test
-build](/docs/for-app-authors/maintenance#test-builds-and-pull-requests) will be triggered
+build](/docs/for-app-authors/maintenance#buildbot) will be triggered
 against it. Once that is successful and the CI passes, the maintainers can merge the pull request
 which will create an "official build" on [Buildbot](/docs/for-app-authors/maintenance#buildbot).
 
