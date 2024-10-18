@@ -392,6 +392,10 @@ This is due to the desktop file having no valid categories.
 Certain low quality categories are filtered out. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#categories-and-keywords)
 for more details.
 
+If this error is accompanied with `desktop-file-low-quality-category`,
+it means that all categories set in desktop file or Metainfo file were
+filtered.
+
 ### appstream-missing-developer-name
 
 **Exceptions allowed**: No
@@ -1464,6 +1468,9 @@ The [desktop file](https://docs.flatpak.org/en/latest/conventions.html#desktop-f
 has one or more [low-quality categories](/docs/for-app-authors/metainfo-guidelines/#categories-and-keywords)
 and no proper (non low-quality) category.
 
+If this error is accompanied with `appstream-missing-categories`, it means
+that all categories set in desktop file or Metainfo file were filtered.
+
 ### module-module_name-source-md5-deprecated
 
 A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
@@ -1477,15 +1484,6 @@ A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.
 is using the deprecated `sha1` checksum.
 
 It is recommended to switch to `sha256` or `sha512`.
-
-### module-module_name-autotools-redundant-prefix
-
-A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
-using the `autotools` buildsystem is setting `--prefix` in `config-opts`
-to a value of `/app, /usr, ${FLATPAK_DEST}`.
-
-This is set by [Flatpak Builder](https://docs.flatpak.org/en/latest/flatpak-builder.html)
-itself and is redundant.
 
 ### module-module_name-buildsystem-is-plain-cmake
 
@@ -1501,13 +1499,3 @@ is using `cmake` or `cmake-ninja` as buildsystem has a `CMAKE_BUILD_TYPE`
 value, not of `Release, RelWithDebInfo, MinSizeRel`.
 
 It is recommended to use one of those as the build type.
-
-### module-module_name-cmake-redundant-prefix
-
-A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
-using `cmake` or `cmake-ninja` buildsystem is setting `CMAKE_INSTALL_PREFIX`
-in `config-opts` to a value of `/app, /usr, ${FLATPAK_DEST}`.
-
-This is set by [Flatpak Builder](https://docs.flatpak.org/en/latest/flatpak-builder.html)
-itself and is redundant.
-
