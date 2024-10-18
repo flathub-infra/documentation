@@ -13,20 +13,27 @@ All of these branches along with `main`, `stable`, `beta/*` and `stable/*` are a
 
 ## Buildbot
 
-There is a Buildbot instance running on https://flathub.org/builds, which monitors the GitHub repositories. Each time that `master`, `beta` or `branch/*` branch changes it queues a build of the application, and if the build succeeds on all the architectures, then a test repository is generated where you can download and test the build. The build is published (i.e. signed and imported) into the Flathub Flatpak repo manually (via the web ui) or automatically after three hours, and the build will be available to your users. Use the three hours to test the build and make sure it works. If it doesn't, you can take the build down and try again.
+[Buildbot](https://flathub.org/builds) monitors all the protected branches
+and every pull requests in the application repository.
 
-You can track your build status, follow the build log for current and historic builds, start builds or publish a build on the Buildbot instance website. You will need to be logged in with your GitHub account to do this.
+A _test_ build will be started on every push to a pull request and if
+it is successful the bot will post a link to a Flatpak bundle generated
+from the PR contents. This temporary build can be used to test the changes
+made in the PR.
 
-## Test builds and pull requests
+Test builds can also be manually started by commenting `bot, build` in
+the pull request.
 
-Buildbot also monitors every pull requests in the application repository.
-A new test build will be started on every push to a pull request and
-on every merge or push to the protected branches listed above.
+An _official_ build will be started on every merge or push to the
+protected branches of the repository. If successful, the official build
+will get published usually within 4-5 hours unless it is caught in
+[moderation](#build-moderation).
 
-You can also manually start the test build or a rebuild on a pull request
-by commenting `bot, build`.
-
-Test builds are temporary and kept for not more than 2 days.
+Maintainers can also start an _official_ build manually by going to the
+[Buildbot](https://flathub.org/builds) frontpage, logging in and clicking
+the "Start build" button. The git repo branch must be entered in `branch`,
+the link to the git repo must be entered in `repo uri` and the appid must
+be entered.
 
 ## Build moderation
 
