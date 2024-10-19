@@ -26,6 +26,7 @@ flatpak run --command=cat org.freedesktop.Platform /usr/manifest.json|jq -r '."m
 ```bash
 flatpak run --command=pkg-config org.freedesktop.Sdk --list-all
 
+# Check version of a specific module for example appstream
 flatpak run --command=pkg-config org.freedesktop.Sdk --modversion appstream
 ```
 
