@@ -1,5 +1,7 @@
 # Modifying default permissions
 
+test
+
 Often applications on Flathub may come with a broader set of permissions
 by default than what a specific user may require. This is often done to
 support a wide userbase. However maintainers are encouraged to allow
