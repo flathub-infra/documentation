@@ -16,6 +16,8 @@ All of these branches along with `main`, `stable`, `beta/*` and `stable/*` are a
 [Buildbot](https://flathub.org/builds) monitors all the protected branches
 and every pull requests in the application repository.
 
+### Test builds
+
 A _test_ build will be started on every push to a pull request and if
 it is successful the bot will post a link to a Flatpak bundle generated
 from the PR contents. This temporary build can be used to test the changes
@@ -24,6 +26,8 @@ made in the PR.
 Test builds can also be manually started by commenting `bot, build` in
 the pull request.
 
+### Official builds
+
 An _official_ build will be started on every merge or push to the
 protected branches of the repository. If successful, the official build
 will get published usually within 4-5 hours unless it is caught in
@@ -31,9 +35,10 @@ will get published usually within 4-5 hours unless it is caught in
 
 Maintainers can also start an _official_ build manually by going to the
 [Buildbot](https://flathub.org/builds) frontpage, logging in and clicking
-the "Start build" button. The git repo branch must be entered in `branch`,
-the link to the git repo must be entered in `repo uri` and the appid must
-be entered.
+the "Start build" button. The git repo branch (either `master`, `beta` or `branch/*`)
+must be entered in the `branch` field, the link to the git repo must be
+entered in the `repo uri` field and the appid must be entered in the
+`appid` field.
 
 ## Build moderation
 
