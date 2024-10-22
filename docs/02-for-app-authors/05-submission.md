@@ -94,7 +94,7 @@ If the test build is successful, the application is tested by installing
 and running it. Further feedback may be provided after that.
 
 If the submission is approved, it will be marked as ready and
-merged into a new repository under the [Flathub GitHub organisation](https://github.com/flathub/)
+merged into a new repository under the [Flathub GitHub organization](https://github.com/flathub/)
 by the reviewers at a later time. Once the repository is created, you
 will receive an invitation to have write access to it. Please make sure
 to accept it before it expires.
