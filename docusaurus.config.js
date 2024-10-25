@@ -176,6 +176,7 @@ const config = {
               {
                 label: "Mastodon",
                 href: "https://floss.social/@flathub",
+                rel: "noreferrer me",
               },
             ],
           },
