@@ -709,15 +709,15 @@ The following errors are included here
 finish-args-arbitrary-xdg-cache-ro-access, finish-args-arbitrary-xdg-cache-rw-access
 and finish-args-arbitrary-xdg-cache-create-access
 
-**Exceptions allowed**: Yes, on a case-by-case basis
+**Exceptions allowed**: No
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `--filesystem=xdg-cache`, with or without any
 of `:ro, :rw, :create`.
 
 Flatpak creates its own XDG cache directory under
-`~/.var/app/<app-id>/cache`.
-Applications do not need to access the host's cache directory.
+`~/.var/app/<app-id>/cache`. Applications should never access the entirety
+of host's cache directory.
 
 Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#f3).
 
@@ -727,15 +727,15 @@ The following errors are included here
 finish-args-arbitrary-xdg-config-ro-access, finish-args-arbitrary-xdg-config-rw-access
 and finish-args-arbitrary-xdg-config-create-access
 
-**Exceptions allowed**: Yes, on a case-by-case basis
+**Exceptions allowed**: No
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `--filesystem=xdg-config`, with or without any
 of `:ro, :rw, :create`.
 
 Flatpak creates its own XDG config directory under
-`~/.var/app/<app-id>/config`.
-Applications do not need to access the host's config directory.
+`~/.var/app/<app-id>/config`. Applications should never access the entirety
+of host's config directory.
 
 Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#f3).
 
@@ -745,15 +745,15 @@ The following errors are included here
 finish-args-arbitrary-xdg-data-ro-access, finish-args-arbitrary-xdg-data-rw-access
 and finish-args-arbitrary-xdg-data-create-access
 
-**Exceptions allowed**: Yes, on a case-by-case basis
+**Exceptions allowed**: No
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `--filesystem=xdg-data`, with or without any
 of `:ro, :rw, :create`.
 
 Flatpak creates its own XDG data directory under
-`~/.var/app/<app-id>/data`. Applications do not need to access the
-host's data directory.
+`~/.var/app/<app-id>/data`. Applications should never access the entirety
+of host's data directory.
 
 Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#f3).
 
@@ -1066,8 +1066,8 @@ in the manifest has `--filesystem=xdg-cache/foo` with or without any
 of `:ro, :rw, :create`.
 
 Flatpak creates its own XDG cache directory under
-`~/.var/app/<app-id>/cache`. Applications do not need to access the
-host's cache directory or subpaths of it.
+`~/.var/app/<app-id>/cache`. Applications usually do not need to access
+the host's cache directory or subpaths of it.
 
 Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#f3).
 
@@ -1079,9 +1079,9 @@ The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `--filesystem=xdg-config/foo` with or without any
 of `:ro, :rw, :create`.
 
-Flatpak creates its own XDG cache directory under
-`~/.var/app/<app-id>/config`. Applications do not need to access the
-host's config directory or subpaths of it.
+Flatpak creates its own XDG config directory under
+`~/.var/app/<app-id>/config`. Applications usually do not need to access
+the host's config directory or subpaths of it.
 
 Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#f3).
 
@@ -1093,9 +1093,9 @@ The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `--filesystem=xdg-data/foo` with or without any
 of `:ro, :rw, :create`.
 
-Flatpak creates its own XDG cache directory under
-`~/.var/app/<app-id>/data`. Applications do not need to access the
-host's config directory or subpaths of it.
+Flatpak creates its own XDG data directory under
+`~/.var/app/<app-id>/data`. Applications usually do not need to access
+the host's data directory or subpaths of it.
 
 Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#f3).
 
