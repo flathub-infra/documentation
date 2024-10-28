@@ -181,6 +181,9 @@ Applications must have the following metadata included.
 :::note
 These metadata files should directly come from the upstream project
 whenever possible as these are widely adopted Freedesktop standards.
+
+Please try to avoid making them Flathub specific and submit or include
+them upstream whenever possible.
 :::
 
 ### Appstream
