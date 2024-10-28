@@ -53,9 +53,11 @@ Then build your manifest:
    locally. Consult the documentation for explanation of the errors. For
    certain errors you might need an [exception](/docs/for-app-authors/linter#exceptions).
 
+   :::note
    Some linter errors regarding external icons, screenshots or screenshot
    files may happen in a local build but not on Flathub CI. Those can be
    safely ignored. Feel free to ask for help with any linter issues.
+   :::
 
    ```bash
    flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest <manifest>
