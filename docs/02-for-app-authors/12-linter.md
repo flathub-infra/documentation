@@ -195,8 +195,12 @@ the [data validation](https://www.freedesktop.org/software/appstream/docs/chap-V
 page.
 :::
 
-Flathub increases the severity of the following checks from the upstream
-default of `info` to `error`. So they are documented below.
+Flathub increases the severity of the following Appstream checks
+to `error`: `all-categories-ignored, category-invalid, cid-desktopapp-is-not-rdns, cid-has-number-prefix, cid-missing-affiliation-gnome, cid-rdns-contains-hyphen, content-rating-missing, desktop-app-launchable-omitted, desktop-file-not-found, invalid-child-tag-name, metainfo-filename-cid-mismatch, metainfo-legacy-path, metainfo-legacy-path, name-has-dot-suffix, releases-info-missing, unknown-tag`
+and decreases the severity of the following to not cause an error:
+`cid-domain-not-lowercase, component-name-too-long, description-has-plaintext-url, developer-id-invalid, component-name-too-long, summary-too-long`
+
+Explanations for Appstream errors are provided below.
 
 #### cid-has-number-prefix
 
@@ -204,14 +208,13 @@ The `id` tag contains a segment starting with a number. Please see the [applicat
 
 #### cid-missing-affiliation-gnome
 
-he application is using a `project_group` tag with the value `GNOME` but the [ID](/docs/for-app-authors/metainfo-guidelines/#id) does not start with `org.gnome`. Please see the [documentation](/docs/for-app-authors/metainfo-guidelines/#project-group) on how to use this tag.
+The application is using a `project_group` tag with the value `GNOME` but the [ID](/docs/for-app-authors/metainfo-guidelines/#id) does not start with `org.gnome`. Please see the [documentation](/docs/for-app-authors/metainfo-guidelines/#project-group) on how to use this tag.
 
 #### content-rating-missing
 
 The application is missing an [OARS rating](/docs/for-app-authors/metainfo-guidelines/#oars-information) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
 
-#### content-rating-missing
- desktop-app-launchable-omitted
+#### desktop-app-launchable-omitted
 
 The application is missing a [launchable tag](/docs/for-app-authors/metainfo-guidelines/#launchable) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
 
