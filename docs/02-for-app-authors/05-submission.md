@@ -70,19 +70,29 @@ Once this is done you can open the submission pull request!
 
 Flathub submissions are managed through pull requests on GitHub.
 
+:::tip
+If you have [GitHub CLI](https://cli.github.com/) installed run:
+```bash
+gh repo fork --clone flathub/flathub && cd flathub && git checkout --track origin/new-pr
+```
+and proceed directly to step 3.
+:::
+
 1. Fork the [Flathub repository on GitHub](https://github.com/flathub/flathub/fork) with _"Copy the master branch only"_ unchecked.
+
 2. Clone the fork:
    ```bash
    git clone --branch=new-pr git@github.com:your_github_username/flathub.git && cd flathub
    ```
-3. Create a new branch with your app’s name:
+3. Create a new branch for the submission:
    ```bash
-   git checkout -b your_app_name
+   git checkout -b my-app-submission new-pr
    ```
 4. Add the [required files](/docs/for-app-authors/requirements#required-files)
-   using git, commit them and push.
+   using `git add`, commit them and push using `git commit` and
+   `git push`.
 
-5. Now open a pull request against the `new-pr` branch on GitHub.
+5. Now open a pull request against the `new-pr` _base_ branch on GitHub.
    The title of the PR should be "Add org.example.MyAwesomeApp".
 
 ## After submission
