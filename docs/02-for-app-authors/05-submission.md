@@ -92,7 +92,12 @@ and proceed directly to step 3.
    using `git add`, commit them and push using `git commit` and
    `git push`.
 
-5. Now open a pull request against the `new-pr` _base_ branch on GitHub.
+:::warning
+Please do not open the PR against the `master` branch of [flathub/flathub](https://github.com/flathub/flathub)
+repository.
+:::
+
+5. Now open a pull request against the `new-pr` **base branch** on GitHub.
    The title of the PR should be "Add org.example.MyAwesomeApp".
 
 ## After submission
