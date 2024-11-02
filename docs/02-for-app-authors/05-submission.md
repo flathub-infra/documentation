@@ -4,9 +4,11 @@ App submissions are extremely welcome and the process is straightforward.
 
 ## Before submission
 
+### Requirements
+
 Please follow the [requirements](/docs/for-app-authors/requirements) to
-ensure that the submission is technically and legally compatible for
-Flathub.
+ensure that the submission has all the required files and is technically
+and legally compatible for Flathub.
 
 It's best practice to make sure your submission correctly builds and runs
 locally with Flatpak. This will help you to fix any potential issues and
