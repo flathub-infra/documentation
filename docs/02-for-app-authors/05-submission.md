@@ -1,6 +1,8 @@
 # Submission
 
 App submissions are extremely welcome and the process is straightforward.
+Some basic familiarity with Git and Flatpak is required to submit and
+maintain an app on Flathub.
 
 ## Before submission
 
@@ -9,6 +11,8 @@ App submissions are extremely welcome and the process is straightforward.
 Please follow the [requirements](/docs/for-app-authors/requirements) to
 ensure that the submission has all the required files and is technically
 and legally compatible for Flathub.
+
+### Build and install
 
 It's best practice to make sure your submission correctly builds and runs
 locally with Flatpak. This will help you to fix any potential issues and
@@ -20,8 +24,6 @@ to build the application.
 ```bash
 flatpak install -y flathub org.flatpak.Builder
 ```
-
-### Build and install
 
 Add the Flathub repo user-wide:
 
