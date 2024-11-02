@@ -704,7 +704,8 @@ in the manifest has `--socket=session-bus` or `--socket=system-bus`.
 
 This must not be used except for very specific cases. Please follow the
 [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#d-bus-access)
-for more information
+for more information and find out the specific DBus names required using
+`--log-session-bus`.
 
 ### finish-args-arbitrary-xdg-cache-mode-access
 
