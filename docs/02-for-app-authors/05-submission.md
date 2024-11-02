@@ -97,22 +97,12 @@ and proceed directly to step 3.
    `git push`.
 
 :::warning
-Please do not open the PR against the `master` branch of [flathub/flathub](https://github.com/flathub/flathub)
-repository.
+Please do not open the PR against the `master` base branch of
+[flathub/flathub](https://github.com/flathub/flathub) repository.
 :::
 
 5. Now open a pull request against the `new-pr` **base branch** on GitHub.
    The title of the PR should be "Add org.example.MyAwesomeApp".
-
-:::tip
-If you have [GitHub CLI](https://cli.github.com/) installed, the PR
-can also be created with:
-```bash
-gh pr create --template "pull_request_template.md" --base new-pr --title "Add org.example.MyAwesomeApp"
-```
-
-Please don't forget to fill out the checklist afterwards!
-:::
 
 ## After submission
 
