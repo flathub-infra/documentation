@@ -4,12 +4,25 @@ This is a guide in how to maintain your application once it is on Flathub. It as
 
 ## The repository
 
-The build information for each application on Flathub is stored in a repository on GitHub in the Flathub organization. The `master` branch of the git repository stores the primary
-version of the application that is served in the [Flathub stable repository](https://flathub.org/setup). The `beta` git branch can store a secondary version that is served in the [Flathub beta repository](/docs/for-users/installation#flathub-beta-repository).
+The `master` branch of the git repository stores the primary version of
+the application that is served in the [Flathub stable repository](https://flathub.org/setup)
+and corresponds to the `stable` Flatpak ref branch.
 
-Branches named `branch/*` are reserved specifically for BaseApps and extensions. Applications must not use it for naming GitHub branches or pushing their builds.
+The `beta` git branch can store a secondary version that is served in
+the [Flathub beta repository](/docs/for-users/installation#flathub-beta-repository)
+and corresponds to the `beta` Flatpak ref branch.
 
-All of these branches along with `main`, `stable`, `beta/*` and `stable/*` are automatically <em>protected</em> which means that you can only merge pull requests and not push directly to them. Other branch names are free to use however you see fit.
+Applications must only use either `master` or `beta` git branches. No
+other git branches are allowed.
+
+Branches named `branch/*` are reserved specifically for BaseApps and
+Extensions and must not be used by anyone else.
+
+All of those branches along with `main`, `stable`, `beta/*` and `stable/*`
+are automatically _protected_ which means that you can only merge pull
+requests and not push directly to them or delete the branches.
+
+Other git branch names are free to use.
 
 ## Buildbot
 
