@@ -163,8 +163,9 @@ Please avoid choosing broad permissions unless justified.
 #### No network access during build
 
 All dependencies needed to build and run the application must be present
-in the manifest as sources with publicly accessible URLs or must be
-included as local sources in the submission pull request.
+in the manifest as [sources](https://docs.flatpak.org/en/latest/module-sources.html)
+with publicly accessible URLs or must be included as local sources in
+the submission pull request.
 
 There is no network access during the build process.
 
