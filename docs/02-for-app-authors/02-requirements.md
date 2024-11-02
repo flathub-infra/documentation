@@ -142,10 +142,23 @@ The following files should be included in the submission.
 The [application manifest](https://docs.flatpak.org/en/latest/manifests.html)
 must be at the top level and named after the [application ID](#application-id)
 with the extension `.json`, `.yml` or `.yaml` depending on whether it is
-JSON or YAML.
+JSON or YAML file.
 
 The [runtime(s)](https://docs.flatpak.org/en/latest/basic-concepts.html#runtimes)
 used in the manifest must be hosted on Flathub.
+
+#### Permissions
+
+Static permissions should be limited as much as possible and applications
+should use [XDG Portals](https://flatpak.github.io/xdg-desktop-portal/docs/)
+and XDG standards whenever possible.
+
+Please follow the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html)
+when writing the manifest or choosing finish-args. Anything listed in
+"Standard Permissions" can be freely used. DBus, Filesystem and Device
+access should be limited to only what the application needs.
+
+Please avoid choosing broad permissions unless justified.
 
 #### No network access during build
 
@@ -208,15 +221,6 @@ a 256x256 PNG icon, properly [named and installed](https://docs.flatpak.org/en/l
 
 Icon is optional for console applications but it is mandatory to appear
 on Flathub website search results.
-
-## Permissions
-
-Static permissions should be limited as much as possible and applications
-should use [XDG Portals](https://flatpak.github.io/xdg-desktop-portal/docs/)
-and XDG standards whenever possible.
-
-Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html)
-and choose the permissions required for the application.
 
 ## Best practices
 
