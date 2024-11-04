@@ -12,7 +12,7 @@ are sent when the submission is accepted, if you don't have access,
 please open an [issue](https://github.com/flathub/flathub/issues) asking
 for it.
 
-Once you have access [log in to Flathub](https://www.flathub.org/login). Go to the developer tab, if you're not already there. Click the "Developer Settings" button under the app you want to verify. At the top of the page, find the "Setup Verification" section. The instructions there will walk you through the verification process.
+Once you have access [log in to Flathub](https://flathub.org/login). Go to the developer tab, if you're not already there. Click the "Developer Settings" button under the app you want to verify. At the top of the page, find the "Setup Verification" section. The instructions there will walk you through the verification process.
 
 ### Website
 
