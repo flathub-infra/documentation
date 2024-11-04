@@ -64,7 +64,6 @@ If your application ID follows all the [requirements](https://docs.flathub.org/d
 but the Flathub website shows an incorrect or unexpected domain for verification
 please open an [issue](https://github.com/flathub-infra/website/issues).
 
-### I published an extension or a runtime but the website does not show the verification check
+### I published an extension or a runtime, but the website does not show the verification check
 
-Verification is only for applications, extensions or runtimes are not
-supported.
+Verification is only for applications. Extensions or runtimes are not supported.
