@@ -1321,16 +1321,7 @@ with type `git`, uses `branch` with a branch name in the
 It should use either `commit`, or `tag` and `commit` or a `tag` in place
 of `branch`.
 
-### module-module_name-source-git-local-path
-
-**Exceptions allowed**: No
-
-A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
-has type `git`, but specifies a local path using `path`.
-
-It must point to a web resource and use `url` property.
-
-### module-module_name-source-git-no-commit-or-tag
+### module-module_name-source-git-no-tag-commit-branch
 
 **Exceptions allowed**: No
 
