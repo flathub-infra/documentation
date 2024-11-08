@@ -4,6 +4,9 @@ App submissions are extremely welcome and the process is straightforward.
 Some basic familiarity with Git and Flatpak is required to submit and
 maintain an app on Flathub.
 
+Note that submissions can be rejected at any stage or recalled post-merge
+if it is determined to be not suitable for Flathub.
+
 ## Before submission
 
 ### Requirements
@@ -122,10 +125,6 @@ to accept it before it expires.
 
 Once you have access, please see the [App Maintenance](/docs/for-app-authors/maintenance)
 guide.
-
-Note that submissions can be rejected at any stage or recalled post-merge
-if it is determined to be not suitable for Flathub or does not meet the
-guidelines.
 
 ## FAQ
 
