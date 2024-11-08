@@ -510,10 +510,10 @@ pages, etc.
 
 Brand color and app banners can be previewed at https://docs.flathub.org/banner-preview/
 
-## OARS information
+## Open Age Ratings Service (OARS)
 
 Use the [OARS website](https://hughsie.github.io/oars/generate.html) to
-generate these and make sure to use `type="oars-1.1"`.
+generate age rating information for your application. Make sure to use `type="oars-1.1"`.
 
 Applications must be properly tagged by OARS data based on their content.
 
