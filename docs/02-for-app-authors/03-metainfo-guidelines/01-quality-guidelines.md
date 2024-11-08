@@ -303,7 +303,7 @@ Release notes should include some actual information about what changed rather t
 
 Apps acting as "readers" or "stores" for external content should take into account what is accessible by just navigating around in the app. If content of a certain type can be arrived at without searching or typing in URLs, the app should be tagged as containing it. For example, an RSS reader that doesn't feature any content can be "All Ages", but the rating for a manga app with pre-configured servers should reflect the content of those default sources.
 
-Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#oars-information) on how to generate proper age ratings.
+Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#open-age-ratings-service-oars) on how to generate proper age ratings.
 
 ## Where to Get Help
 

@@ -57,7 +57,7 @@ The application is using a `project_group` tag with the value `GNOME` but the [I
 
 #### content-rating-missing
 
-The application is missing an [OARS rating](/docs/for-app-authors/metainfo-guidelines/#oars-information) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
+The application is missing an [OARS rating](/docs/for-app-authors/metainfo-guidelines/#open-age-ratings-service-oars) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
 
 #### desktop-app-launchable-omitted
 
@@ -159,7 +159,7 @@ The release tag is missing the version or time attribute. Please see the [MetaIn
 
 #### content-rating-missing, content-rating-type-missing, content-rating-type-invalid
 
-The [OARS tag](/docs/for-app-authors/metainfo-guidelines/#oars-information) is missing from the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) or has no `type` key present or has an invalid `type` key present.
+The [OARS tag](/docs/for-app-authors/metainfo-guidelines/#open-age-ratings-service-oars) is missing from the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) or has no `type` key present or has an invalid `type` key present.
 
 #### custom-key-duplicated
 
