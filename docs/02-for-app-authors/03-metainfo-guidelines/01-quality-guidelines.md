@@ -283,6 +283,8 @@ Screenshots of apps that display content (media viewers, notes apps, chat, socia
 
 Screenshots should reflect the current state of the app's interface, not some previous version. If an app update makes visible changes to the interface, screenshots should be updated at the same time.
 
+This also applies to changes in the environment's default window decoration layout.
+
 ## Release Notes
 
 ### Release notes for every release
