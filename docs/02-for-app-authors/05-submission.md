@@ -68,6 +68,9 @@ Then build your manifest:
 
    ```bash
    flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest <manifest>
+   ```
+
+   ```bash
    flatpak run --command=flatpak-builder-lint org.flatpak.Builder repo repo
    ```
 
