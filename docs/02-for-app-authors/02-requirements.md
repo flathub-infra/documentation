@@ -56,12 +56,12 @@ The following rules should be followed when creating application IDs.
 
 ### Control over domain or repository
 
-The domain is constructed by reversing the components of the domain
+The _domain_ is constructed by reversing the components of the domain
 portion of the ID and converting underscores to dashes.
 
 - The domain must be directly related to the project or the application
   being submitted and the author or the developer or the project must have
-  control over the domain the corresponding URL must be reachable over
+  control over the domain. The corresponding URL must be reachable over
   HTTP(S).
 
   [Verification](/docs/for-app-authors/verification) may require placing
