@@ -3,47 +3,36 @@
 The goal of these requirements is to ensure that the applications hosted
 on Flathub are safe to use and integrate well in the desktop experience.
 
-:::tip
-If you have any further questions, please ask on [Matrix](https://matrix.to/#/#flatpak:matrix.org).
-:::
-
 ## Application ID
 
 :::note
-The ID chosen will determine the type of [verification method](/docs/for-app-authors/verification#what-is-verification)
-available, if any. It must be a constant and unique identifier of the
-application. If it needs to be renamed at any point, the application
-needs to be [resubmitted](/docs/for-app-authors/maintenance#renaming-the-flatpak-id).
+Please choose the ID carefully and don't hesitate to ask the reviewers
+for help as it will determine the type of [verification method](/docs/for-app-authors/verification#what-is-verification)
+available, if any.
+
+If it needs to be renamed at any point, the application needs to be
+[resubmitted](/docs/for-app-authors/maintenance#renaming-the-flatpak-id).
 :::
 
-Please choose the ID carefully and don't hesitate to ask the reviewers
-for help.
+The application ID is a constant and unique identifier of the
+application consisting of the reverse-DNS format
+`{tld}.{vendor}.{product}`.
+
+The _components_ of the ID are the substrings obtained by splitting it
+at each `.`. All components except the last is taken as the _domain portion_
+of the ID.
 
 The following rules should be followed when creating application IDs.
 
 - The ID must not exceed 255 characters and must have at least 3
-  components.
+  components. Applications must not exceed 5 components.
 
-  The ID can be split into _components_ at each `.`. Each component must
-  contain only the characters `[A-Z][a-z][0-9]_`.  A dash `-` is only
-  allowed in the last component.
-
-  All components except the last is taken as the _domain portion_ of
-  the ID.
+- Each component must contain only the characters `[A-Z][a-z][0-9]_`. A
+  dash `-` is only allowed in the last component.
 
 - The domain portion must be in lowercase and must convert dash `-` to
   underscore `_` and also prefix any intial digits with an underscore
   `_`.
-
-```
-# Correct
-com.example_site.foo
-com._0example.foo
-
-# Wrong
-com.example-site.foo
-com.0example.foo
-```
 
 - The ID must not end in generic terms like `.desktop` or `.app`. It's
   fine to repeat the application name in such cases.
@@ -53,65 +42,53 @@ com.0example.foo
 
 - Applications using code hosting IDs and hosted on
   `github.com, gitlab.com, codeberg.org, framagit.org` must use
-  `io.github, io.gitlab, page.codeberg, io.frama` prefixes depending on
-  where the project is hosted and must have at least 4 components.
+  `io.github., io.gitlab., page.codeberg., io.frama.` prefixes
+  respectively and must have at least 4 components.
 
-  Projects hosted on Sourceforge can use `io.sourceforge, net.sourceforge`
-  prefixes.
+  `com.github., com.gitlab., org.codeberg., org.framagit.` prefixes are
+  reserved for official projects of the code hosting platform.
 
-  They must not use `com.github, com.gitlab, org.codeberg, org.framagit`
-  unless the project is an official project of the code hosting
-  platform.
+  Applications using code hosting IDs and hosted on Sourceforge can
+  use `io.sourceforge., net.sourceforge.` prefixes.
+
+- [BaseApps](https://docs.flatpak.org/en/latest/dependencies.html#baseapps)
+  must end their ID in `.BaseApp`.
 
 ### Control over domain or repository
 
-- The domain being used in the ID must be directly related to the
-  application being submitted. Please don't use your personal domain to
-  submit an app you didn't develop/aren't involved with.
+The domain is constructed by reversing the components of the domain
+portion of the ID and converting underscores to dashes.
 
-  It must be a domain directly related to the original project and the
-  author/developer/project of the application must have control over the
-  domain portion of the ID and the corresponding URL must be reachable
-  over HTTP(S).
+- The domain must be directly related to the project or the application
+  being submitted and the author or the developer or the project must have
+  control over the domain the corresponding URL must be reachable over
+  HTTP(S).
 
-  For example for the ID `com.example_site.foo.bar` the URL
-  `http(s)://foo.example-site.com` must be reachable and must be under
-  control of author/developer/project of the application.
+  [Verification](/docs/for-app-authors/verification) may require placing
+  a token under `https://{host name}/.well-known/org.flathub.VerifiedApps.txt`
 
-  It's also preferable to have some visible proof on the webpage that
-  connects the application being submitted or its developer/project with
-  the domain being used in the ID.
+  It's preferable to have visible proof on the webpage linking the
+  application or the developer or the project to the domain calculated
+  from the ID.
 
-- For GitHub and Codeberg IDs of the form
-  `io.github.example_foo.bar, page.codeberg.example_foo.bar` the
-  repository must be reachable at `https://github.com/example-foo/bar` or
-  `https://codeberg.org/example-foo/bar` respectively.
+#### Code hosting
 
-  For Sourceforge IDs of the form
-  `io.sourceforge.example_foo.bar, net.sourceforge.example_foo.bar`, the
-  project URL must be reachable at
-  `https://sourceforge.net/projects/example-foo/`.
+A _repository URL_ (or project URL) is calculated for code hosting IDs
+by using the domain and by taking the last component of the ID as-is.
+Note, that some code hosting platforms like GitLab may have
+case-sensitive namespaces.
 
-  For Sourcehut IDs, of the form `site.srht.example.bar`, the
-  repository must be reachable at `https://sr.ht/~example/bar/`. Note
-  that Sourcehut namespaces are case sensitive.
+- Applications using code hosting IDs must have the repository URL
+  reachable.
 
-  For Gitlab IDs of the form `io.gitlab.example_foo.bar,
-  io.frama.example_foo.bar, org.gnome.gitlab.example_foo.bar,
-  org.freedesktop.gitlab.example_foo.bar`, the repository must be
-  reachable at `https://gitlab.com/example-foo/bar` and so on.
+For example, the repository URL for the ID `io.github.example_foo.bar`
+will be `https://github.com/example-foo/bar` and for the ID
+`io.sourceforge.example_foo.bar`, it will be
+`https://sourceforge.net/projects/example-foo/`.
 
-  If there are more components for example
-  `io.gitlab.example_foo.example_bar.example-app`,
-  the repository must be reachable at
-  `https://gitlab.com/example-foo/example-bar/example-app`
-  and so on.
-
-  Note that Gitlab namespaces are case sensitive.
-
-Applications are not allowed to have more than 5 components in the ID.
-
-BaseApps must end their ID in `.BaseApp`.
+[Flatpak extensions](https://docs.flatpak.org/en/latest/extension.html)
+and [BaseApps](https://docs.flatpak.org/en/latest/dependencies.html#baseapps)
+can be exempt from these rules.
 
 ## License
 
