@@ -1,6 +1,17 @@
 # Maintenance
 
-This is a guide in how to maintain your application once it is on Flathub. It assumes your application is already on Flathub, and that you have access rights to its repository. If this is not true, please read the [submission](/docs/for-app-authors/submission) page first and check your email for GitHub repository access requests.
+This is a guide on how to maintain an application once it is published
+on Flathub. Some familiarity with Git, GitHub and Flatpak is required
+to maintain an application.
+
+Please familiarize yourself with the repository layout, branch structure,
+and Buildbot discussed below. The workflow involves [submitting updates](/docs/for-app-authors/updates#creating-updates)
+or changes via pull requests and merging them when the build is successful
+and tested.
+
+Maintainers should try to update the application's runtime whenever
+feasible and ensure that it does not rely on an end-of-life (EOL)
+runtime. The runtime support policies can be found [here](/docs/for-app-authors/runtimes#currently-hosted-runtimes).
 
 ## The repository
 
@@ -78,8 +89,7 @@ whenever a build is held for moderation or rejected/approved.
 ## Quality Review
 
 Flathub has several [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines)
-which applications can choose to follow if desired. Following the quality
-guidelines is entirely optional.
+which applications can choose to follow if desired.
 
 Passing all the quality checks will make the application eligible to be
 featured in the flathub.org front page weekly banner and also in
@@ -87,7 +97,7 @@ featured in the flathub.org front page weekly banner and also in
 
 Once an application is published, quality moderators will do a review
 of the application's metadata and will mark the checks as passing or
-failed. Some of the checks are automatic while some are done manually.
+failed. Some of the checks are automated while some are manual.
 
 The maintainer of the application can view the status of the quality
 checks by going to `https://flathub.org/apps/your.app.id` and clicking
@@ -177,28 +187,51 @@ be migrated automatically on entering yes.
 }
 ```
 
-In case you want to step down as a maintainer but wish someone to take over maintenance, you can ask in the [tracker issue](https://github.com/flathub/flathub/issues/3693).
+In case you want to step down as a maintainer but wish someone to take
+over maintenance, you can ask in the [tracker issue](https://github.com/flathub/flathub/issues/3693).
 
 ## Download statistics
 
-Flathub publishes download statistics for every app or runtime. The raw JSON files are available at [flathub.org/stats](https://flathub.org/stats/). These break out app downloads and updates. This is also the basis for the data shown on flathub.org, additionally there are some community members that generously provide frontends to interpret the data and make it more useful for app developers at [https://ahayzen.com/direct/flathub.html](https://ahayzen.com/direct/flathub.html) and [https://klausenbusk.github.io/flathub-stats/](https://klausenbusk.github.io/flathub-stats/)
+Flathub publishes download statistics for every app and runtime. The raw
+JSON files are available at [flathub.org/stats](https://flathub.org/stats/).
+This is also the basis for the data shown on flathub.org.
+
+A new app needs to collect data for a certain period before the
+'Statistics' tab becomes available on the app details page. These stats
+are merged when an app is [EOL rebased](#end-of-life-rebase).
+
+Additionally there are some community members that generously provide
+frontends to interpret the data and make it more useful for app developers
+at [https://ahayzen.com/direct/flathub.html](https://ahayzen.com/direct/flathub.html)
+and [https://klausenbusk.github.io/flathub-stats/](https://klausenbusk.github.io/flathub-stats/).
 
 ## Maintainer access to Flathub application repository
 
-This section applies to application repositories hosted in the [Flathub](https://github.com/flathub) organisation on GitHub.
+This section applies to application repositories hosted in the
+[Flathub](https://github.com/flathub) organisation on GitHub.
 
-The GitHub account [submitting](/docs/for-app-authors/submission#submission-pr) the application to Flathub along with any upstream developers of the application
-(if mentioned by the submitter or at reviewer's discretion) will be given access to the application repository once created. In case the application belongs to a well-known
-software project like KDE or GNOME or Endless, their respective [team on Flathub](https://github.com/orgs/flathub/teams/) will also be given access.
+The GitHub account [submitting](/docs/for-app-authors/submission#submission-pr)
+the application to Flathub along with any upstream developers of the
+application (if mentioned by the submitter or at reviewer's discretion)
+will be given access to the application repository once created. In case
+the application belongs to a well-known vendor like KDE or GNOME or
+Endless, their respective [team on Flathub](https://github.com/orgs/flathub/teams/)
+will also be given access.
 
-If an existing maintainer wants a trusted member or someone involved with upstream or the Flathub application repository, to also have access, they should preferably open an issue on [GitHub](https://github.com/flathub/flathub/issues/new) or contact the admins via [admins@flathub.org](mailto:admins@flathub.org).
+If an existing maintainer wants a trusted member or someone involved with
+upstream or the Flathub application repository, to also have access, they
+should open an issue on [GitHub](https://github.com/flathub/flathub/issues/new).
 
-An upstream developer or author of the application may also use the same process as above to request access to the repository.
+An upstream developer or author of the application may also use the same
+process as above to request access to the repository.
 
-In case an application becomes unmaintained (and the maintainer unreachable) for a prolonged period of time and you want to volunteer to start maintaining it, please open an issue on [GitHub](https://github.com/flathub/flathub/issues).
+In case an application becomes unmaintained (and the maintainer unreachable)
+for a prolonged period of time and you want to volunteer to start
+maintaining it, please open an issue on [GitHub](https://github.com/flathub/flathub/issues).
 
-Any such requests will be judged on a case-by-case basis and upstream authors/developers/contributors to the application (or the Flathub repository) in question will be preferred.
-
+Any such requests will be judged on a case-by-case basis and upstream
+authors/developers/contributors to the application
+(or the Flathub repository) in question will be preferred.
 
 ## Renaming the Flatpak ID
 
