@@ -55,24 +55,32 @@ Flathub hosts three major runtimes currently.
 
 ### Check software available in runtimes
 
-The best way to check software packaged in the runtime is to look at their respective manifests
-in the git repository or release contents. This can be done using:
+The best way to check software packaged in the runtime is to look at
+their respective manifests in the git repository or release contents.
+
+This can be done using:
 
 ```bash
-flatpak run --command=cat org.freedesktop.Platform /usr/manifest.json|jq -r '."modules"|.[]|."name"'
+flatpak run --command=cat <runtime ID>//<runtime branch> /usr/manifest.json|jq -r '."modules"|.[]|."name"'|sed -E 's#.*/(.*)\.bst#\1#'|sort -u
+
+# List all contents in GNOME 47 runtime
+flatpak run --command=cat org.gnome.Platform//47 /usr/manifest.json|jq -r '."modules"|.[]|."name"'|sed -E 's#.*/(.*)\.bst#\1#'|sort -u
 ```
 
 `pkg-config` can be used for modules that install pkg-config files:
 
 ```bash
-flatpak run --command=pkg-config org.freedesktop.Sdk --list-all
+flatpak run --command=pkg-config <Sdk ID>//<sdk branch> --list-all
 
-# Check version of a specific module for example appstream
-flatpak run --command=pkg-config org.freedesktop.Sdk --modversion appstream
+# Check version appstream in Freedesktop SDK 24.08
+flatpak run --command=pkg-config org.freedesktop.Sdk//24.08 --modversion appstream
 ```
 
-`ldconfig` can be used to list all sonames:
+`ldconfig` can be used to list all libraries:
 
 ```bash
-flatpak run --command=ldconfig org.freedesktop.Platform -p
+flatpak run --command=ldconfig <runtime ID>//<runtime branch> -p
+
+# Check libraries in Freedesktop runtime 24.08
+flatpak run --command=ldconfig org.freedesktop.Platform//24.08 -p|awk '/\.so/ {print $1}'
 ```
