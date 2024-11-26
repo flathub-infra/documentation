@@ -5,7 +5,7 @@ each application must be built to target a specific runtime and
 its associated branch.
 
 As runtimes are distribution-agnostic, they offer a stable,
-cross-platform foundation for applications ensuring applications remain
+cross-platform foundation for applications ensuring they remain
 functional independent of operating system updates.
 
 From a user and developer perspective, it is advantageous for Flatpak
