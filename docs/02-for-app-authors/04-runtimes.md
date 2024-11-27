@@ -38,8 +38,8 @@ Flathub hosts three major runtimes currently.
 
   Major version releases of the runtime are synced with [GNOME releases](https://release.gnome.org/calendar/)
   and are announced on [GNOME Discourse](https://discourse.gnome.org/tag/announcement).
-  Usually a given branch is supported for an year and EOL-ed at the `.1`
-  release of new stable GNOME version.
+  Usually a given branch of the runtime is supported for an year and
+  EOL-ed upon the release of a newstable version.
 
 - [KDE runtime](https://invent.kde.org/packaging/flatpak-kde-runtime):
   This is the KDE runtime built on top of the Freedesktop runtime and
