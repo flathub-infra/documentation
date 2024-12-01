@@ -153,7 +153,8 @@ to be followed there as well.
 
 ```json title="flathub.json"
 {
-  "end-of-life": "This application is no longer maintained because..."
+  "end-of-life": "This application is no longer maintained because…"
+  "end-of-life"[hu]: "Ez az alkalmazás már nincs karbantartva, mert…"
 }
 ```
 
