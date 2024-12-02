@@ -3836,10 +3836,10 @@ dns-packet@^5.2.2:
   dependencies:
     "@leichtgewicht/ip-codec" "^2.0.1"
 
-docusaurus-plugin-search-local@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/docusaurus-plugin-search-local/-/docusaurus-plugin-search-local-2.1.0.tgz#74a80d14faefaf5643c0e9f485aaa46f14dceec5"
-  integrity sha512-pHQ1UffJ33IDUZ3e5/FFcfX5ktnza4KCi5ivK7ndKJjeU4GyQdUb5/WsCQ5z0+V3GIFL3GmB1C/kOU0wUZFJnQ==
+docusaurus-plugin-search-local@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/docusaurus-plugin-search-local/-/docusaurus-plugin-search-local-2.1.2.tgz#d16f14885c5488cf21b0f44b9915b8ddfc9ef574"
+  integrity sha512-cnCrEzMlXyDOyGtiojlCHNKDiZfPIljqzS+A8zi5J0EIMb1co5QKW/3t5OhdRXDgTRY/gVWPyaart9l2pACV0A==
   dependencies:
     "@braintree/sanitize-url" "^6.0.0"
     cheerio "^1.0.0"
