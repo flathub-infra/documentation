@@ -357,8 +357,9 @@ All graphical applications having a desktop file must have this tag in
 the MetaInfo. If this is present, `appstreamcli compose` will pull
 icons, keywords and categories from the desktop file.
 
-The value must exactly be the [Application-ID](./../requirements#application-id)
-followed by `.desktop` suffix. Multiple launchable tags must not be used.
+The value must correspond to an installed desktop file and adhere to the
+permitted [exportable patterns](https://docs.flatpak.org/en/latest/conventions.html#desktop-files).
+Multiple launchable tags must not be used.
 
 ```xml
 <launchable type="desktop-id">org.flatpak.qtdemo.desktop</launchable>
