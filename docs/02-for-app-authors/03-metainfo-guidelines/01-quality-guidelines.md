@@ -62,8 +62,8 @@ For example:
 
 ```xml
 <branding>
-	<color type="primary" scheme_preference="light">#faa298</color>
-	<color type="primary" scheme_preference="dark">#7f2c22</color>
+  <color type="primary" scheme_preference="light">#faa298</color>
+  <color type="primary" scheme_preference="dark">#7f2c22</color>
 </branding>
 ```
 
