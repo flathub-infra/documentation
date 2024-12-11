@@ -124,7 +124,7 @@ very hard to see if the background color is similar. Dark colors near the
 edges are also a problem since shadows don't help much with contrast on
 dark backgrounds.
 
-![Illustration of why icons should not be dark near the edges, showingtwo similar device icons on dark and light backgrounds.](assets/app-icon-contrast.png)
+![Illustration of why icons should not be dark near the edges, showing two similar device icons on dark and light backgrounds.](assets/app-icon-contrast.png)
 
 ### Not too much or too little detail
 
