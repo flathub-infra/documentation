@@ -91,9 +91,19 @@ whenever a build is held for moderation or rejected/approved.
 Flathub has several [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines)
 which applications can choose to follow if desired.
 
-Passing all the quality checks will make the application eligible to be
-featured in the flathub.org front page weekly banner and also in
-"App of the Day".
+### Benefits of passing quality checks
+
+Passing the quality checks enhances an application's visibility
+on the Flathub homepage. Applications that meet _all_ the checks can be
+featured prominently on the weekly banner and "App of the Day"
+highlights on a rotational basis. The more guidelines an application
+meets, the higher its chances of being featured in the trending section
+of flathub.org. Additionally, some Linux distributions and software
+centres may use the list of approved apps to curate their own featured
+selections.
+
+These benefits may evolve as we explore new ways for enhanced curation
+and promotion.
 
 Once an application is published, quality moderators will do a review
 of the application's metadata and will mark the checks as passing or

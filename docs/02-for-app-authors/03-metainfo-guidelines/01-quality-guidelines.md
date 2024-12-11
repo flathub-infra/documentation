@@ -2,13 +2,23 @@
 
 The following guidelines are not required for submission to Flathub, but are best practices we recommend and consider for curation and promotion. These guidelines are designed to help your app and Flathub itself appear in the best light to users—they may change over time based on developer and user feedback.
 
-:::tip
-Apps following the quality guidelines may be featured more prominently across Flathub and native app store clients, like on the front page or at the top of category pages.
-:::
-
 The term `must` in these guidelines is used in the context of considering whether an app passes the app listing quality checks. Apps that do not follow these guidelines may still be published on Flathub.
 
 For the basics on how to write metadata for your app, see the [MetaInfo Guidelines](/docs/for-app-authors/metainfo-guidelines).
+
+### Benefits of passing quality checks
+
+Passing the quality checks enhances an application's visibility
+on the Flathub homepage. Applications that meet _all_ the checks can be
+featured prominently on the weekly banner and "App of the Day"
+highlights on a rotational basis. The more guidelines an application
+meets, the higher its chances of being featured in the trending section
+of flathub.org. Additionally, some Linux distributions and software
+centres may use the list of approved apps to curate their own featured
+selections.
+
+These benefits may evolve as we explore new ways for enhanced curation
+and promotion.
 
 ## General
 
