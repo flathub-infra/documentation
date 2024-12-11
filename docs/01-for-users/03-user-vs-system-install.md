@@ -4,19 +4,8 @@ Flatpak applications can be installed either per-user or system-wide. The
 difference is that per-user installations are only available to the user
 that installed them, while system-wide installations are available to all
 users on the system. System-wide installations can be updated by any user
-with administrator privileges.
-
-The choice between per-user and system-wide installations depends on the
-use case. Per-user installations are recommended for most users, unless
-they have a specific reason to use system-wide installations. The main
-advantage of system-wide installations is that they allow multiple users
-to share a common set of applications. For example, if you have a
-multi-user workstation, you can install applications system-wide so that
-all users can use them. Another advantage is that system-wide
-installations are generally easier to manage, as you only need to update
-them once. However, system-wide installations can be problematic if you
-have multiple users with different needs, as it is difficult to ensure
-that each user will only have access to the applications they need.
+with administrator privileges. The choice between per-user and
+system-wide installations depends on the use case.
 
 ### Per-user installations
 
