@@ -45,11 +45,11 @@ are available to all users on the system.
 To install an application or runtime system-wide, run:
 
 ```bash
-sudo flatpak install <remote> <name>
+flatpak install <remote> <name>
 ```
 
 To update an application or runtime, run:
 
 ```bash
-sudo flatpak update <name>
+flatpak update <name>
 ```
