@@ -2,21 +2,28 @@
 
 ## What is a verified app?
 
-A verified app is an app that is published on Flathub by its original developer or a third party approved by the developer. Flathub has verified the developer's identity using the app ID and the developer's website or profile on a source code hosting site.
+A verified app on Flathub is one whose developer has confirmed their
+ownership of the app ID using a uniquely generated token. This means
+either the app is maintained directly by the developer or a party
+authorised or approved by them.
 
 [More information for developers →](../02-for-app-authors/10-verification.md)
 
 ## Why are some apps not verified?
 
-Some apps are published on Flathub by third parties that are unaffiliated with the original developer. This is allowed, but such apps are not eligible for verification.
+Some apps are published on Flathub by the community or third parties
+and not directly maintained by the original developer. This means such
+apps are not eligible for verification.
 
 ## How do I know if an app is verified?
 
-Some apps have a checkmark on the app page. This means the app is published on Flathub by its original developer or a third party approved by the developer.
+Apps will have a blue tick on the Flathub app page indicating they are
+verified.
 
 ## I only want to install verified apps. How do I do that?
 
-You can use the `--subset=verified` option when adding the Flathub remote. This will only add the verified apps to your local repository.
+You can use the `--subset=verified` option when adding the Flathub
+remote. This will only add the verified apps to your local repository.
 
 ```bash
 flatpak remote-add --if-not-exists --subset=verified flathub-verified https://flathub.org/repo/flathub.flatpakrepo
