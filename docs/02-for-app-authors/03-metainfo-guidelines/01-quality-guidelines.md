@@ -8,8 +8,8 @@ regarding these guidelines.
 The following guidelines are not required for submission to Flathub,
 but are best practices we recommend and consider for curation and
 promotion. These guidelines are designed to help your app and Flathub
-itself appear in the best light to users—they may change over time based
-on developer and user feedback.
+itself appear in the best light to users. The guidelines may change over
+time based on developer and user feedback.
 
 The term `must` in these guidelines is used in the context of considering
 whether an app passes the app listing quality checks. Apps that do not
