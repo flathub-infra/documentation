@@ -83,13 +83,13 @@ The first step is to gain ownership over your app; see [Someone else has put my 
 ### I have an existing app but I cannot verify it due to wrong application ID
 
 In most cases, the application needs to be resubmitted with the correct
-application ID. Please read the application ID [requirements](https://docs.flathub.org/docs/for-app-authors/requirements#application-id)
-carefully and then follow the [resubmition guide](https://docs.flathub.org/docs/for-app-authors/maintenance#renaming-the-flatpak-id)
+application ID. Please read the application ID [requirements](/docs/for-app-authors/requirements#application-id)
+carefully and then follow the [resubmition guide](/docs/for-app-authors/maintenance/#renaming-the-flatpak-id)
 to resubmit it.
 
 ### I have an existing app which follows all application ID rules but website shows the wrong domain
 
-If your application ID follows all the [requirements](https://docs.flathub.org/docs/for-app-authors/requirements#application-id)
+If your application ID follows all the [requirements](/docs/for-app-authors/requirements/#application-id)
 but the Flathub website shows an incorrect or unexpected domain for
 verification please
 [open an issue](https://github.com/flathub-infra/website/issues).
