@@ -73,8 +73,9 @@ Apps already on Flathub with a `com.github.` or `com.gitlab.` app ID
 prefix may be verified, but
 **no new apps with these prefixes will be accepted**.
 
-Official apps from GitHub and GitLab may request manual verification by
-contacting [the Flathub admins](mailto:admins@flathub.org).
+Official apps from these code hosting platforms like GitHub, GitLab
+and others may request manual verification by
+[opening an issue](https://github.com/flathub/flathub/issues/new).
 
 ### I'd like to verify my app that someone else already published
 

@@ -135,12 +135,15 @@ guide.
 
 Flathub is primarily intended as a service that is used by app developers
 to distribute their apps. However, third party submissions are allowed
-as long as the application's license and terms of use (if any) do not block it.
+as long as the application's license and terms of use (if any) do not
+block it.
 
 If an application that belongs to you is being distributed without your
 consent or involvement, please get in touch by [opening an issue](https://github.com/flathub/flathub/issues/new)
-or contacting privately by [email](mailto:admins@flathub.org) so that
-the next steps can be discussed.
+so that the next steps can be discussed.
+
+If there is a security issue or sensitive information involved, please
+send an [email](mailto:admins@flathub.org) instead.
 
 ### There’s an app that I’d like to see on Flathub, but I’m not the developer
 
@@ -193,5 +196,6 @@ Please don't hesitate to ask for help. General queries can be made on the
 [Matrix channel](https://matrix.to/#/#flathub:matrix.org) and on
 [Discourse](https://discourse.flathub.org/). Technical queries or
 requests can be made through
-[issues](https://github.com/flathub/flathub/issues/new). Private matters
-can be discussed via [email](mailto:admins@flathub.org).
+[issues](https://github.com/flathub/flathub/issues/new). Security issues
+and private matters can be discussed via
+[email](mailto:admins@flathub.org).
