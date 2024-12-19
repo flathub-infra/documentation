@@ -57,12 +57,15 @@ protected branches of the repository. If successful, the official build
 will get published usually within 4-5 hours unless it is caught in
 [moderation](#build-moderation).
 
-Maintainers can also start an _official_ build manually by going to the
+Maintainers can also start an official build manually by going to the
 [Buildbot](https://flathub.org/builds) frontpage, logging in and clicking
-the "Start build" button. The git repo branch (either `master`, `beta` or `branch/*`)
-must be entered in the `branch` field, the link to the git repo must be
-entered in the `repo uri` field and the appid must be entered in the
-`appid` field.
+the "Start build" button.
+
+The git repo branch (either `master`, `beta` or `branch/*`) must be
+entered in the `branch` field, the link to the Flathub git repo
+(eg. `https://github.com/flathub/com.example.Bar.git`) must be entered
+in the `repo uri` field and the appid (eg. `com.example.Bar`) must be
+entered in the `appid` field.
 
 ## Build moderation
 
