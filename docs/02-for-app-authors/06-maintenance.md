@@ -11,7 +11,7 @@ and tested.
 
 Maintainers should try to update the application's runtime whenever
 feasible and ensure that it does not rely on an end-of-life (EOL)
-runtime. The runtime support policies can be found [here](/docs/for-app-authors/runtimes#currently-hosted-runtimes).
+runtime. They should also be aware of the [runtime support policies](/docs/for-app-authors/runtimes#currently-hosted-runtimes).
 
 ## The repository
 
