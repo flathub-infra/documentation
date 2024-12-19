@@ -119,7 +119,8 @@ the "Details" button.
 Once a build fixing the quality issues is published, they can request
 a re-review by pressing the "Request Review" button.
 
-Feel free to ask for [help](https://github.com/flathub/flathub/issues/new?assignees=&labels=&projects=&template=1-quality-mod.md&title=Quality+guideline+problems+for+%3Capp+name%3E) regarding the quality checks.
+Feel free to [ask for help](https://github.com/flathub/flathub/issues/new?assignees=&labels=&projects=&template=1-quality-mod.md&title=Quality+guideline+problems+for+%3Capp+name%3E)
+regarding the quality checks.
 
 ## `flathub.json`
 
