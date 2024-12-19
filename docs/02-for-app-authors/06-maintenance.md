@@ -54,7 +54,7 @@ the pull request.
 
 An _official_ build will be started on every merge or push to the
 protected branches of the repository. If successful, the official build
-will get published usually within 4-5 hours unless it is caught in
+will get published usually within 4-5 hours unless it is held in
 [moderation](#build-moderation).
 
 Maintainers can also start an official build manually by going to the
@@ -72,9 +72,9 @@ changes from the git branch.
 
 ## Build moderation
 
-Whenever an _official build_ from a merge commit is built, if any
-[permission](/docs/for-app-authors/requirements#permissions) is changed
-or any critical [Appstream field](/docs/for-app-authors/metainfo-guidelines/)
+Whenever an _official build_ from a merge commit or push is built, if
+any [permission](/docs/for-app-authors/requirements#permissions) is
+changed or any critical [Appstream field](/docs/for-app-authors/metainfo-guidelines/)
 changes value, the build will be held for moderation.
 
 Moderators will manually review the build and the permission change
