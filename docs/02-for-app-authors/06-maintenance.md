@@ -65,7 +65,10 @@ The git repo branch (either `master`, `beta` or `branch/*`) must be
 entered in the `branch` field, the link to the Flathub git repo
 (eg. `https://github.com/flathub/com.example.Bar.git`) must be entered
 in the `repo uri` field and the appid (eg. `com.example.Bar`) must be
-entered in the `appid` field.
+entered in the `appid` field. The rest should be left empty and then
+the "Start build" button on the popup form needs to be clicked after
+filling it up. That should start a new official build with the latest
+changes from the git branch.
 
 ## Build moderation
 
