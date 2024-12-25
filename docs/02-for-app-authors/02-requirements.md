@@ -107,7 +107,8 @@ be distinct.
 
 The Flathub stable repository is dedicated to hosting only stable
 software. The Flathub beta repository can be used to publish beta
-software, though it will not be listed on the website.
+software, though it will not be listed on the website and users must
+be manually migrated if switched to the stable repo later.
 
 Nightly releases, development snapshots, or any software requiring daily
 updates must not be published to either repo.
