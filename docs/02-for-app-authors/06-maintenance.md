@@ -203,6 +203,11 @@ be migrated automatically on entering yes.
 }
 ```
 
+Note, that it is not possible to EOL rebase from one branch to a
+different branch, for example, from `beta` to `stable`. The appid
+used in `end-of-life-rebase` must also be available in the same Flatpak
+remote.
+
 In case you want to step down as a maintainer but wish someone to take
 over maintenance, you can ask in the [tracker issue](https://github.com/flathub/flathub/issues/3693).
 
