@@ -105,10 +105,12 @@ be distinct.
 
 ## Stable releases
 
-Flathub only hosts stable releases and not development snapshots or
-nightly releases. Manifests should therefore use stable and versioned
-sources and must not update to new versions of the main application,
-daily in a consistent manner.
+The Flathub stable repository is dedicated to hosting only stable
+software. The Flathub beta repository can be used to publish beta
+software, though it will not be listed on the website.
+
+Nightly releases, development snapshots, or any software requiring daily
+updates must not be published to either repo.
 
 ## Required files
 
