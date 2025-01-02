@@ -124,7 +124,8 @@ If the submission is approved, it will be marked as ready and
 merged into a new repository under the [Flathub GitHub organisation](https://github.com/flathub/)
 by the reviewers at a later time. Once the repository is created, you
 will receive an invitation to have write access to it. Please make sure
-to accept it before it expires.
+to have [2FA enabled on GitHub](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication)
+and accept it within one week.
 
 Once you have access, please see the [App Maintenance](/docs/for-app-authors/maintenance)
 guide.
