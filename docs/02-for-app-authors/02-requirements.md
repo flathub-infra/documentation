@@ -65,7 +65,7 @@ portion of the ID and converting underscores to dashes.
   HTTP(S).
 
   [Verification](/docs/for-app-authors/verification) may require placing
-  a token under `https://{host name}/.well-known/org.flathub.VerifiedApps.txt`
+  a token under `https://{domain name}/.well-known/org.flathub.VerifiedApps.txt`
 
   It's preferable to have visible proof on the webpage linking the
   application or the developer or the project to the domain calculated
