@@ -1321,12 +1321,12 @@ with type `git`, uses `branch` with a branch name in the
 It should use either `commit`, or `tag` and `commit` or a `tag` in place
 of `branch`.
 
-### module-module_name-checker-uses-commit-query
+### module-module_name-checker-tracks-commits
 
 **Exceptions allowed**: Case-by-case basis
 
 A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
-uses the `commit-query` property in `x-checker-data`. Tracking or updating
+is tracking commits in `x-checker-data`. Tracking or updating
 a module on each commit is not allowed. See the [stable release section](/docs/for-app-authors/requirements#stable-releases).
 
 ### module-module_name-source-git-no-tag-commit-branch
