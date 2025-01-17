@@ -801,6 +801,46 @@ as a baseline here.
 </requires>
 ```
 
+### Desktop only apps
+
+In short, desktop only apps should have:
+
+```xml
+<requires>
+  <control>keyboard</control>
+  <control>pointing</control>
+  <display_length compare="ge">768</display_length>
+</requires>
+```
+
+### Mobile only apps
+
+Mobile and tablet only apps should have:
+
+
+```xml
+<requires>
+  <control>touch</control>
+  <display_length compare="le">1279</display_length>
+</requires>
+```
+
+### Desktop and and mobile
+
+Apps that support and work on mobile, tablet and desktop should have:
+
+
+```xml
+<recommends>
+  <control>keyboard</control>
+  <control>pointing</control>
+  <control>touch</control>
+</recommends>
+<requires>
+  <display_length compare="ge">360</display_length>
+</requires>
+```
+
 ## Manifest location
 
 Applications that are directly uploaded to Flathub through their own
