@@ -710,14 +710,19 @@ Device or hardware support metadata describes what kinds of input and
 output devices an app supports.
 
 The `requires` tag denotes an absolute requirement on the property
-while the `recommends` and `supports` tag is a recommendation of a
-non-essential requirement. Software stores use this information to
-categorise apps and show device support information.
+while the `recommends` and `supports` tag is a recommendation.
+Software stores can use this information to categorise apps and show
+device support information.
+
+A general recommendation is provided below based on how software stores
+categorise applications into supported device categories. Specific
+properties, relations and sizes can also be used irrespective of the
+recommendations.
 
 ### Control
 
 If the app supports and works on both desktop and touch devices, it
-should have the below metadata.
+should have:
 
 ```xml
 <!-- Desktop AND mobile supported -->
@@ -728,7 +733,7 @@ should have the below metadata.
 </recommends>
 ```
 
-If it only works on desktop devices, it should have
+If it only works on desktop devices, it should have:
 
 ```xml
 <!-- ONLY desktop supported -->
@@ -738,7 +743,7 @@ If it only works on desktop devices, it should have
 </requires>
 ```
 
-If it only works on touch devices it should have
+If it only works on touch devices it should have:
 
 ```xml
 <!-- ONLY mobile supported -->
@@ -760,11 +765,6 @@ The `compare` attribute must be one of `eq, ne, lt, gt, le, ge` which
 are `equals to`, `not equals to`, `less than`, `greater than`,
 `less than or equals to` and `greater than or equals to` respectively.
 If `compare` is not specified `ge` is used implicitly.
-
-A general recommendation is provided below based on how software stores
-classify applications into supported device categories. Specific
-relations and sizes can also be used irrespective of the
-recommendations.
 
 To indicate support for _both_ small mobile/tablet screen and desktop
 screen sizes,  use any value `>=1` and `<=360` with the `ge`
