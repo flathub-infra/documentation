@@ -766,9 +766,15 @@ are `equals to`, `not equals to`, `less than`, `greater than`,
 `less than or equals to` and `greater than or equals to` respectively.
 If `compare` is not specified `ge` is used implicitly.
 
-To indicate support for _both_ small mobile/tablet screen and desktop
-screen sizes,  use any value `>=1` and `<=360` with the `ge`
-relation.
+:::note
+The specific value used in the tag should be a realistic measurement of
+the minimum size that the app can scale to without harming
+functionality.
+:::
+
+If the app supports _both_ small mobile/tablet screen and desktop
+screen sizes, use any value `>=1` and `<=360` with the `ge` relation.
+Usually `360` is used as a baseline here.
 
 ```xml
 <requires>
@@ -777,7 +783,7 @@ relation.
 </requires>
 ```
 
-To indicate support for _only_ desktop screen sizes, use any value
+If the app supports _only_ desktop screen sizes, use any value
 `>=361` with the `ge` relation. Usually `768` is used as a baseline
 here.
 
@@ -788,9 +794,9 @@ here.
 </requires>
 ```
 
-To indicate support for _only_ mobile/tablet screen sizes use the
-any value between `>=768` and `<=1279` with the `le` relation.
-Usually `1279` is used as a baseline here.
+If the app supports _only_ mobile/tablet screen sizes use any value
+`>=768` and `<=1279` with the `le` relation. Usually `1279` is used as
+a baseline here.
 
 ```xml
 <requires>
