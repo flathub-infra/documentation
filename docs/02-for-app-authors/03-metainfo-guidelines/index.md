@@ -807,9 +807,9 @@ organisation](https://github.com/flathub) must add the location to their
 flatpak manifest like so:
 
 ```xml
- <custom>
-    <value key="flathub::manifest">https://example.com/url_with_a_git_hash/com.example.my-app.json</value>
- </custom>
+<custom>
+  <value key="flathub::manifest">https://example.com/url_with_a_git_hash/com.example.my-app.json</value>
+</custom>
 ```
 
 ## Extensions
