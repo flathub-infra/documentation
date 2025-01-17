@@ -757,7 +757,7 @@ are available as well.
 ### Display size
 
 This can be used to indicate support for a specific display size(s). The
-tag value must be an integer, measured in logical pixels.
+tag value must be a positive integer, measured in logical pixels.
 
 The `compare` attribute is usually used with `ge` or `le` which
 means `greater than or equals to` and `less than or equals to`
@@ -768,7 +768,7 @@ the minimum size that the app can scale to without harming functionality.
 Software stores may use specific values or ranges to classify an app
 into mobile, tablet or desktop compatible app.
 
-A value of `>=1` and `<=360` with the `ge` relation indicates that the
+A value of `<=360` with the `ge` relation indicates that the
 app supports mobile, tablet and desktop devices. Usually `360` is used
 as a baseline here.
 
