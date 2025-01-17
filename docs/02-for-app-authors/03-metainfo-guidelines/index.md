@@ -710,19 +710,16 @@ Device or hardware support metadata describes what kinds of input and
 output devices an app supports.
 
 The `requires` tag denotes an absolute requirement on the property
-while the `recommends` and `supports` tag is a recommendation.
+while the `recommends` and `supports` tag is a recommendation. These
+parent tags must be present at most once in the metainfo.
+
 Software stores can use this information to categorise apps and show
 device support information.
 
-A general recommendation is provided below based on how software stores
-categorise applications into supported device categories. Specific
-properties, relations and sizes can also be used irrespective of the
-recommendations.
-
 ### Control
 
-If the app supports and works on both desktop and touch devices, it
-should have:
+The below metadata will indicate that the app supports both desktop and
+touch (mobile and tablet) devices.
 
 ```xml
 <!-- Desktop AND mobile supported -->
@@ -733,7 +730,8 @@ should have:
 </recommends>
 ```
 
-If it only works on desktop devices, it should have:
+The below metadata will indicate that the app supports only desktop
+devices.
 
 ```xml
 <!-- ONLY desktop supported -->
@@ -743,10 +741,11 @@ If it only works on desktop devices, it should have:
 </requires>
 ```
 
-If it only works on touch devices it should have:
+The below metadata will indicate that the app supports only touch
+(mobile and tablet) devices.
 
 ```xml
-<!-- ONLY mobile supported -->
+<!-- ONLY touch supported -->
 <requires>
   <control>touch</control>
 </requires>
@@ -757,24 +756,21 @@ are available as well.
 
 ### Display size
 
-This can be used to indicate support for a specific display size(s) as
-well as support for a class of devices like mobile, tablet or desktop.
-The tag value must be an integer, measured in logical pixels.
+This can be used to indicate support for a specific display size(s). The
+tag value must be an integer, measured in logical pixels.
 
-The `compare` attribute must be one of `eq, ne, lt, gt, le, ge` which
-are `equals to`, `not equals to`, `less than`, `greater than`,
-`less than or equals to` and `greater than or equals to` respectively.
-If `compare` is not specified `ge` is used implicitly.
+The `compare` attribute is usually used with `ge` or `le` which
+means `greater than or equals to` and `less than or equals to`
+respectively. If `compare` is not specified `ge` is used implicitly.
 
-:::note
 The specific value used in the tag should be a realistic measurement of
-the minimum size that the app can scale to without harming
-functionality.
-:::
+the minimum size that the app can scale to without harming functionality.
+Software stores may use specific values or ranges to classify an app
+into mobile, tablet or desktop compatible app.
 
-If the app supports _both_ small mobile/tablet screen and desktop
-screen sizes, use any value `>=1` and `<=360` with the `ge` relation.
-Usually `360` is used as a baseline here.
+A value of `>=1` and `<=360` with the `ge` relation indicates that the
+app supports mobile, tablet and desktop devices. Usually `360` is used
+as a baseline here.
 
 ```xml
 <requires>
@@ -783,9 +779,9 @@ Usually `360` is used as a baseline here.
 </requires>
 ```
 
-If the app supports _only_ desktop screen sizes, use any value
-`>=361` with the `ge` relation. Usually `768` is used as a baseline
-here.
+A value of `>=361` with the `ge` relation indicates that
+the app supports only desktop devices. Usually `768` is used as a
+baseline here.
 
 ```xml
 <requires>
@@ -794,9 +790,9 @@ here.
 </requires>
 ```
 
-If the app supports _only_ mobile/tablet screen sizes use any value
-`>=768` and `<=1279` with the `le` relation. Usually `1279` is used as
-a baseline here.
+A value of `>=768` and `<=1279` with the `le` relation indicates that
+the app supports only mobile and tablet devices. Usually `1279` is used
+as a baseline here.
 
 ```xml
 <requires>
