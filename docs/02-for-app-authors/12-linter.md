@@ -1061,6 +1061,19 @@ to specify manually.
 Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#d-bus-access)
 section for more details.
 
+### finish-args-unnecessary-appid-talk-name
+
+**Exceptions allowed**: No
+
+The manifest has `--talk-name=<FLATPAK_ID>` in
+[finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing).
+
+This access is granted automatically by Flatpak and there is no need
+to specify manually.
+
+Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#d-bus-access)
+section for more details.
+
 ### finish-args-unnecessary-xdg-cache-subdir-mode-access
 
 **Exceptions allowed**: Yes, on a case-by-case basis
