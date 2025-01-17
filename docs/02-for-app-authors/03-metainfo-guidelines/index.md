@@ -698,6 +698,108 @@ by using `translate="no"`.
 </developer>
 ```
 
+## Device support
+
+:::tip
+```bash
+appstreamcli check-syscompat --details $FLATPAK_ID.metainfo.xml
+```
+can be used to get an overview of the compatibility.
+:::
+
+Device or hardware support metadata describes what kinds of input and
+output devices an app supports.
+
+The `requires` tag denotes an absolute requirement on the property
+while the `recommends` and `supports` tag is a recommendation of a
+non-essential requirement. Software stores uses this information to
+categorise apps and show device support information.
+
+### Control
+
+If the app supports and works on both desktop and touch devices, it
+should have the below metadata.
+
+```xml
+  <!-- Desktop AND mobile supported -->
+  <recommends>
+    <control>keyboard</control>
+    <control>pointing</control>
+    <control>touch</control>
+  </recommends>
+```
+
+If it only works on desktop devices, it should have
+
+```
+  <!-- ONLY desktop supported -->
+  <requires>
+    <control>keyboard</control>
+    <control>pointing</control>
+  </requires>
+```
+
+If it only works on touch devices it should have
+
+```
+  <!-- ONLY mobile supported -->
+  <requires>
+    <control>touch</control>
+  </requires>
+```
+
+Additionally, `tablet`, `gamepad`, and [other properties](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-relations-control)
+are available as well.
+
+### Display size
+
+This can be used to indicate support for a specific display size(s) as
+well as support for a class of devices like mobile, tablet or desktop.
+The tag value must be an integer, measured in logical pixels.
+
+The `compare` attribute must be one of `eq, ne, lt, gt, le, ge` which
+are `equals to`, `not equals to`, `less than`, `greater than`,
+`less than or equals to` and `greater than or equals to` respectively.
+If `compare` is not specified `ge` is used implicitly.
+
+A general recommendation is provided below based on how software stores
+classify applications into supported device categories. Specific
+relations and sizes can also be used irrespective of the
+recommendations.
+
+To indicate support for _both_ small mobile/tablet screen and desktop
+screen sizes,  use any value `>=1` and `<=360` with the `ge`
+relation.
+
+```xml
+  <requires>
+    <!-- Mobile/tablet AND desktop supported -->
+    <display_length compare="ge">360</display_length>
+  </requires>
+```
+
+To indicate support for _only_ desktop screen sizes, use any value
+`>=361` with the `ge` relation. Usually `768` is used as a baseline
+here.
+
+```xml
+  <requires>
+    <!-- ONLY desktop supported -->
+    <display_length compare="ge">768</display_length>
+  </requires>
+```
+
+To indicate support for _only_ mobile/tablet screen sizes use the
+any value between `>=768` and `<=1279` with the `le` relation.
+Usually `1279` is used as a baseline here.
+
+```xml
+  <requires>
+    <!-- ONLY mobile/tablet supported -->
+    <display_length compare="le">1279</display_length>
+  </requires>
+```
+
 ## Manifest location
 
 Applications that are directly uploaded to Flathub through their own
