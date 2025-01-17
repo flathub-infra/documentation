@@ -825,7 +825,7 @@ Mobile and tablet only apps should have:
 </requires>
 ```
 
-### Desktop and and mobile
+### Desktop and mobile
 
 Apps that support and work on mobile, tablet and desktop should have:
 
