@@ -710,11 +710,12 @@ Device or hardware support metadata describes what kinds of input and
 output devices an app supports.
 
 The `requires` tag denotes an absolute requirement on the property
-while the `recommends` and `supports` tag is a recommendation. These
-parent tags must be present at most once in the metainfo.
+while the `recommends` and `supports` tag is a recommendation. Each of
+these parent tags must be present at most once in the metainfo but
+the child tags can be repeated inside them.
 
 Software stores can use this information to categorise apps and show
-device support information.
+device support information to the user.
 
 ### Control
 
@@ -752,7 +753,25 @@ The below metadata will indicate that the app supports only touch
 ```
 
 Additionally, `tablet`, `gamepad`, and [other properties](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-relations-control)
-are available as well.
+are available as well. For example, if an app has a mandatory requirement
+on gamepad, it should use
+
+```xml
+<requires>
+  <control>gamepad</control>
+</requires>
+```
+
+but if it supports gamepad along with other inputs like keyboard and
+mouse, it should instead use
+
+```xml
+<recommends>
+  <control>keyboard</control>
+  <control>pointing</control>
+  <control>gamepad</control>
+</recommends>
+```
 
 ### Display size
 
@@ -762,6 +781,8 @@ tag value must be a positive integer, measured in logical pixels.
 The `compare` attribute is usually used with `ge` or `le` which
 means `greater than or equals to` and `less than or equals to`
 respectively. If `compare` is not specified `ge` is used implicitly.
+The `side` attribute can be specified either to `shortest` or `longest`
+and if it is not specified, `shortest` is assumed implicitly.
 
 The specific value used in the tag should be a realistic measurement of
 the minimum size that the app can scale to without harming functionality.
