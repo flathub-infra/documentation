@@ -862,6 +862,13 @@ should have:
 </requires>
 ```
 
+### Mobile collection
+
+An app is eligible to appear in the [Flathub store mobile collection](https://flathub.org/apps/collection/mobile/1)
+if it has the above tags with values that support mobile and tablets.
+It must also have an icon. The collection is sorted in descending
+order based on trending.
+
 ## Manifest location
 
 Applications that are directly uploaded to Flathub through their own
