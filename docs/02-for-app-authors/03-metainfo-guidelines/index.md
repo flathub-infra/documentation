@@ -778,11 +778,10 @@ mouse, it should instead use
 This can be used to indicate support for a specific display size(s). The
 tag value must be a positive integer, measured in logical pixels.
 
-The `compare` attribute is usually used with `ge` or `le` which
-means `greater than or equals to` and `less than or equals to`
-respectively. If `compare` is not specified `ge` is used implicitly.
-The `side` attribute can be specified either to `shortest` or `longest`
-and if it is not specified, `shortest` is assumed implicitly.
+The `compare` attribute is usually used with `ge` which
+means `greater than or equals to`. If `compare` is not specified
+`ge` is used implicitly. The `side` attribute is usually used with
+`shortest` and if it is not specified, `shortest` is assumed implicitly.
 
 The specific value used in the tag should be a realistic measurement of
 the minimum size that the app can scale to without harming functionality.
@@ -824,7 +823,7 @@ as a baseline here.
 
 ### Desktop only apps
 
-In short, desktop only apps should have:
+Desktop only apps typically should have:
 
 ```xml
 <requires>
@@ -836,7 +835,7 @@ In short, desktop only apps should have:
 
 ### Mobile only apps
 
-Mobile and tablet only apps should have:
+Mobile and tablet only apps typically should have:
 
 
 ```xml
@@ -848,7 +847,8 @@ Mobile and tablet only apps should have:
 
 ### Desktop and mobile apps
 
-Apps that support and work on mobile, tablet and desktop should have:
+Apps that support and work on mobile, tablet and desktop typically
+should have:
 
 
 ```xml
