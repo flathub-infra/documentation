@@ -428,6 +428,17 @@ The error indicates that the required icon sizes were not supplied or the
 generation failed due to some other error. Please see any additional
 errors if present.
 
+### appstream-release-tag-missing-timestamp
+
+**Exceptions allowed**: No
+
+A `release` tag in the [AppStream catalog](/docs/for-app-authors/metainfo-guidelines/#checking-the-generated-output)
+file is missing the `timestamp` attribute.
+
+This tag is automatically generated  provided the `date` attribute is
+correctly set for the `release` tag in metainfo. A timestamp may not
+be generated if the `release` tag in metainfo are misformatted.
+
 ### appstream-missing-icon-key
 
 **Exceptions allowed**: No
