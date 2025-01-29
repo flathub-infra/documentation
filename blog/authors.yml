@@ -1,8 +1,10 @@
 razze:
   name: Kolja Lampe
   title: Flathub Community Member
-  url: https://github.com/razzeee
   image_url: https://github.com/razzeee.png
+  socials:
+    github: razzeee
+    mastodon: https://osna.social/@razze
 
 bertob:
   name: Tobias Bernard
