@@ -13,9 +13,7 @@ With apps made for different form factors, it can be hard to find what works for
 
 <!-- truncate -->
 
-![On the go: Apps for your Linux phones and tablets; displaying: Alpaca (Chat with local AI models), Errands (Manage your tasks), Paper Clip (Edit PDF document metadata), Jogger (Fitness tracker), Netsleuth (Calculate IP subnets), Time Switch (Set a task to run after a timer)](banner.png#gh-light-mode-only)
-
-![On the go: Apps for your Linux phones and tablets; displaying: Alpaca (Chat with local AI models), Errands (Manage your tasks), Paper Clip (Edit PDF document metadata), Jogger (Fitness tracker), Netsleuth (Calculate IP subnets), Time Switch (Set a task to run after a timer)](banner-dark.png#gh-dark-mode-only)
+[![On the go: Apps for your Linux phones and tablets](banner.png#gh-light-mode-only) ![On the go: Apps for your Linux phones and tablets](banner-dark.png#gh-dark-mode-only)][collection]
 
 As the premier source of apps for Linux, Flathub serves a wide range of people across a huge variety of hardware: from ultra powerful developer workstations to thin and light tablets; from handheld gaming consoles to a growing number of mobile phones. Generally any app on Flathub will work on a desktop or laptop with a large display, keyboard, and mouse or trackpad. However, devices with only touch input and smaller screen sizes have more constraints.
 
