@@ -17,6 +17,9 @@ cassidyjames:
   title: Flathub Community Member
   url: https://cassidyjames.com/
   image_url: https://cassidyjames.com/images/me.jpg
+  socials:
+    github: cassidyjames
+    mastodon: https://mastodon.blaede.family/@cassidy
 
 barthalion:
   name: Bart Piotrowski
