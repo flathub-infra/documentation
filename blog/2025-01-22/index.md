@@ -1,11 +1,12 @@
 ---
-slug: on-the-go-mobile-collection
+slug: on-the-go-linux-mobile-collection
 title: "On the Go: Making it Easier to Find Linux Apps for Phones & Tablets"
 authors:
   - cassidyjames
 tags:
   - quality
   - mobile
+  - moderation
 ---
 
 With apps made for different form factors, it can be hard to find what works for your specific device. For example, we know it can be a bit difficult to find great apps that are actually designed to be used on a mobile phone or tablet. To help solve this, we're introducing a new collection: On the Go.
