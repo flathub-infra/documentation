@@ -19,6 +19,10 @@ As the premier source of apps for Linux, Flathub serves a wide range of people a
 
 Using [existing data][documentation] and open standards, we're now highlighting apps on Flathub that report as being designed to work on these mobile form factors. This new [On the Go collection][collection] uses existing device support data submitted by app developers in their MetaInfo, the same spec that is used to build those app's listings for Flathub and other app store clients. The collection is featured on the Flathub.org home page for all devices.
 
+![On the go: Apps for your Linux phones and tablets; displaying: Alpaca (Chat with local AI models), Errands (Manage your tasks), Paper Clip (Edit PDF document metadata), Jogger (Fitness tracker), Netsleuth (Calculate IP subnets), Time Switch (Set a task to run after a timer)](banner.png#gh-light-mode-only)
+
+![On the go: Apps for your Linux phones and tablets; displaying: Alpaca (Chat with local AI models), Errands (Manage your tasks), Paper Clip (Edit PDF document metadata), Jogger (Fitness tracker), Netsleuth (Calculate IP subnets), Time Switch (Set a task to run after a timer)](banner-dark.png#gh-dark-mode-only)
+
 Many of these apps are adaptive across screen sizes and input methods; you might be surprised to know that your favorite app on your desktop will also work great on a Linux phone, tablet, or Steam Deck's touch screen. We aim to help reveal just how rich and well-rounded the app ecosystem already is for these devices—and to give app developers another place for their apps to shine and be discovered.
 
 ## Developers: It's Up to You
