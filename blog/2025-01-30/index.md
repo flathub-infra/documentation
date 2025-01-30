@@ -13,15 +13,17 @@ With apps made for different form factors, it can be hard to find what works for
 
 <!-- truncate -->
 
+![On the go: Apps for your Linux phones and tablets; displaying: Alpaca (Chat with local AI models), Errands (Manage your tasks), Paper Clip (Edit PDF document metadata), Jogger (Fitness tracker), Netsleuth (Calculate IP subnets), Time Switch (Set a task to run after a timer)](banner.png#gh-light-mode-only)
+
+![On the go: Apps for your Linux phones and tablets; displaying: Alpaca (Chat with local AI models), Errands (Manage your tasks), Paper Clip (Edit PDF document metadata), Jogger (Fitness tracker), Netsleuth (Calculate IP subnets), Time Switch (Set a task to run after a timer)](banner-dark.png#gh-dark-mode-only)
+
 As the premier source of apps for Linux, Flathub serves a wide range of people across a huge variety of hardware: from ultra powerful developer workstations to thin and light tablets; from handheld gaming consoles to a growing number of mobile phones. Generally any app on Flathub will work on a desktop or laptop with a large display, keyboard, and mouse or trackpad. However, devices with only touch input and smaller screen sizes have more constraints.
 
 ## Revealing the App Ecosystem
 
 Using [existing data][documentation] and open standards, we're now highlighting apps on Flathub that report as being designed to work on these mobile form factors. This new [On the Go collection][collection] uses existing device support data submitted by app developers in their MetaInfo, the same spec that is used to build those app's listings for Flathub and other app store clients. The collection is featured on the Flathub.org home page for all devices.
 
-![On the go: Apps for your Linux phones and tablets; displaying: Alpaca (Chat with local AI models), Errands (Manage your tasks), Paper Clip (Edit PDF document metadata), Jogger (Fitness tracker), Netsleuth (Calculate IP subnets), Time Switch (Set a task to run after a timer)](banner.png#gh-light-mode-only)
-
-![On the go: Apps for your Linux phones and tablets; displaying: Alpaca (Chat with local AI models), Errands (Manage your tasks), Paper Clip (Edit PDF document metadata), Jogger (Fitness tracker), Netsleuth (Calculate IP subnets), Time Switch (Set a task to run after a timer)](banner-dark.png#gh-dark-mode-only)
+<!-- Multi-device example image here -->
 
 Many of these apps are adaptive across screen sizes and input methods; you might be surprised to know that your favorite app on your desktop will also work great on a Linux phone, tablet, or Steam Deck's touch screen. We aim to help reveal just how rich and well-rounded the app ecosystem already is for these devices—and to give app developers another place for their apps to shine and be discovered.
 
