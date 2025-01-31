@@ -9,6 +9,10 @@ on:
 jobs:
   check:
     name: Check
+    permissions:
+      contents: read
+      deployments: write
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - name: Check out Git repository
@@ -29,3 +33,11 @@ jobs:
         run: yarn build
         env:
           CI: true
+
+      - name: Publish preview
+        if: success()
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy ./build --project-name=documentation
