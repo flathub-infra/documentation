@@ -3,9 +3,9 @@
 ## What is a verified app?
 
 A verified app on Flathub is one whose developer has confirmed their
-ownership of the app ID using a uniquely generated token. This means
-either the app is maintained directly by the developer or a party
-authorised or approved by them.
+ownership of the app ID using a uniquely generated token. This usually
+also may mean that either the app is maintained directly by the
+developer or a party authorised or approved by them.
 
 [More information for developers →](../02-for-app-authors/10-verification.md)
 
