@@ -11,7 +11,7 @@ There is a storm coming and we are re-architecting our build infrastructure.
 
 Buildbot has never been designed to do what Flathub needs: taking arbitrary inputs like application IDs and dynamically creating new pipelines. However, there's no misuse one cannot achieve if something is being configured in A Real Programming Language, and so, back in 2019, [Alex Larsson][alex] piled a bunch of hacks so we could have not only dynamic configuration based on Flathub organization in GitHub, but also some custom views displaying latest builds.
 
-Fast-forward to 2025. These hacks no longer work with the latest release of Buildbot, rendering our soft fork stuck on a version from 2021. For whatever reason, updating GitHub CI status stopped to work well, allowing people to merge untested code changes. It also requires periodical restarts because it grinds to a halt for no particular reason, dropping new builds in the meantime. The worst offense: I never liked it.
+Fast-forward to 2025, these hacks no longer work with the latest release of Buildbot, rendering our soft fork stuck on a version from 2021. For whatever reason, updating GitHub CI status stopped to work well, allowing people to merge untested code changes. It also requires periodical restarts because it grinds to a halt for no particular reason, dropping new builds in the meantime. The worst offense: I never liked it.
 
 Interlude: Equinix Metal née Packet has been sponsoring our heavy-lifting servers doing actual building for the past 5 years. Unfortunately, they are shutting down, meaning we need to move out by the end of April 2025.
 
@@ -31,11 +31,11 @@ It ain't much, but it's honest work.
 
 An important piece of the future Buildbot replacement is being agnostic of its CI/CD implementation. The idea is to provide only a business logic service, while actual building is delegated elsewhere. As such, it requires some relatively generic tool to execute tasks instead of maintaining two or more pipeline definitions for whatever is the CI/CD solution of the decade.
 
-After evaluating modern `make` replacements, I settled on [just][just]. It seems simple enough for executing external commands, and has a nifty way of defining recipes with a specific shebang from the get-go, so it's all single file even when using a mix of Python and Bash.
+After evaluating modern `make` replacements, I settled on [just][just]. It seems simple enough for executing external commands, and has a nifty way of defining recipes with a specific shebang from the get-go, so it's all a single file even when using a mix of Python and Bash.
 
 I copied all build steps done by the Buildbot workers to specific recipes to have a single entry point. Then I started doing back flips with GitHub Actions to see if this is a viable way in the first place; turns out it is, although not without some hurdles.
 
-While GitHub Actions have a native way of executing all steps inside a Docker container, the host running said container is full of bloat and barely any free disk space. [bbhtt][bbhtt] suggested how to remove unneeded files, which also meant each build step is prefixed with `docker run` as we want to re-use existing [flatpak-builder-lint][flatpak-builder-lint] image instead of meddling with Ubuntu.
+While GitHub Actions have a native way of executing all steps inside a Docker container, the host running said container is full of bloat and barely has any free disk space. [bbhtt][bbhtt] suggested how to remove unneeded files, which also meant each build step is prefixed with `docker run` as we want to re-use existing [flatpak-builder-lint][flatpak-builder-lint] image instead of meddling with Ubuntu.
 
 Then I went to GNOME GItLab to implement identical pipeline because I have no mouth and I must write YAML. GitLab has its set of quirks but after configuring its runners to stop dropping job output and kindly asking GitLab to stop unconditionally kill jobs whose logs exceeded a certain size, we've got the answer: it will blend!
 
