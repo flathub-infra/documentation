@@ -26,3 +26,6 @@ barthalion:
   title: Flathub Fixer
   url: https://barthalion.blog
   image_url: https://github.com/barthalion.png
+  socials:
+    github: barthalion
+    mastodon: https://social.treehouse.systems/@barthalion/
