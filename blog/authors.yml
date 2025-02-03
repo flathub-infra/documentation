@@ -9,20 +9,24 @@ razze:
 bertob:
   name: Tobias Bernard
   title: Flathub Community Member
-  url: https://tobiasbernard.com/
   image_url: https://github.com/bertob.png
+  socials:
+    Website: https://tobiasbernard.com/
 
 cassidyjames:
   name: Cassidy James Blaede
   title: Flathub Community Member
-  url: https://cassidyjames.com/
   image_url: https://cassidyjames.com/images/me.jpg
   socials:
+    Website: https://cassidyjames.com/
     github: cassidyjames
     mastodon: https://mastodon.blaede.family/@cassidy
 
 barthalion:
   name: Bart Piotrowski
   title: Flathub Fixer
-  url: https://barthalion.blog
   image_url: https://github.com/barthalion.png
+  socials:
+    Website: https://barthalion.blog
+    github: barthalion
+    mastodon: https://social.treehouse.systems/@barthalion
