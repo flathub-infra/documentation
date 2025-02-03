@@ -1273,6 +1273,13 @@ The manifest schema was malformed.
 
 The manifest schema failed validation.
 
+### manifest-has-bundled-extension
+
+**Exceptions allowed**: Yes
+
+The Flatpak manifest uses a [bundled extension](https://docs.flatpak.org/en/latest/extension.html#bundled-extensions).
+Bundled extensions needs to be manually approved through exceptions.
+
 ### metainfo-launchable-tag-wrong-value
 
 **Exceptions allowed**: No
