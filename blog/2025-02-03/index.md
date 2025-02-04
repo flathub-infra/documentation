@@ -64,4 +64,4 @@ There's no punchline here: I'm only starting the legwork to figure out which lan
 [justpak]: https://github.com/barthalion/justpak
 [bbhtt]: https://bbhtt.space/about/
 [flatpak-builder-lint]: https://github.com/flathub-infra/flatpak-builder-lint
-[vorarbeiter]: https://github.com/flathub-infra/vorarbaiter
+[vorarbeiter]: https://github.com/flathub-infra/vorarbaiter/issues
