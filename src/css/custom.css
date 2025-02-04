@@ -49,3 +49,13 @@
   width: 256px;
   height: 256px
 }
+
+/**
+ * Support GitHub-styled themed images; see:
+ * https://docusaurus.io/docs/markdown-features/assets#github-style-themed-images
+ * https://github.blog/changelog/2021-11-24-specify-theme-context-for-images-in-markdown/
+ */
+[data-theme='light'] img[src$='#gh-dark-mode-only'],
+[data-theme='dark'] img[src$='#gh-light-mode-only'] {
+  display: none;
+}
