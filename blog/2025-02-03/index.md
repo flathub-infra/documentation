@@ -37,7 +37,7 @@ I copied all build steps done by the Buildbot workers to specific recipes to hav
 
 While GitHub Actions have a native way of executing all steps inside a Docker container, the host running said container is full of bloat and barely has any free disk space. [bbhtt][bbhtt] suggested how to remove unneeded files, which also meant each build step is prefixed with `docker run` as we want to re-use existing [flatpak-builder-lint][flatpak-builder-lint] image instead of meddling with Ubuntu.
 
-Then I went to GNOME GItLab to implement identical pipeline because I have no mouth and I must write YAML. GitLab has its set of quirks but after configuring its runners to stop dropping job output and kindly asking GitLab to stop unconditionally kill jobs whose logs exceeded a certain size, we've got the answer: it will blend!
+Then I went to GNOME GitLab to implement identical pipeline because I have no mouth and I must write YAML. GitLab has its set of quirks but after configuring its runners to stop dropping job output and kindly asking GitLab to stop unconditionally kill jobs whose logs exceeded a certain size, we've got the answer: it will blend!
 
 | Application ID     | Buildbot | GitHub Actions    | GNOME GitLab |
 |--------------------|----------|-------------------|--------------|
