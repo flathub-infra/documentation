@@ -1,6 +1,7 @@
 ---
 slug: on-the-go-linux-mobile-collection
 title: "On the Go: Making it Easier to Find Linux Apps for Phones & Tablets"
+image: ./foliate-adaptive.png
 authors:
   - cassidyjames
 tags:
