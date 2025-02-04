@@ -901,7 +901,7 @@ GNOME Software also has a flag to preview the MetaInfo file:
 `gnome-software --show-metainfo /path/to/$FLATPAK_ID.metainfo.xml`.
 
 Appstreamcli also offers a way to preview on the command line using
-`appstreamcli get --details --datapath /path/to/$FLATPAK_ID.metainfo.xml`
+`appstreamcli get --details --datapath /path/to/$FLATPAK_ID.metainfo.xml $ID`
 or `appstreamcli get --details $ID` when the catalogue data is installed
 locally to the appstream cache (usually this means the Flatpak package is
 installed).
