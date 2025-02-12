@@ -70,6 +70,12 @@ the "Start build" button on the popup form needs to be clicked after
 filling it up. That should start a new official build with the latest
 changes from the git branch.
 
+### Building locally
+
+To reproduce the build tooling and environment used by Flathub for test
+and official builds, use the `org.flatpak.Builder` package to build the
+app. The steps are mentioned in detail in the [submission documentation](/docs/for-app-authors/submission#build-and-install).
+
 ## Build moderation
 
 Whenever an _official build_ from a merge commit or push is built, if
