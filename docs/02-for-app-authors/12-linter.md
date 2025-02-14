@@ -661,9 +661,8 @@ Both are never needed.
 **Exceptions allowed**: No
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `--socket=x11` but no `--share=ipc`.
-
-Applications needing `--socket=x11` also need SysV IPC access.
+in the manifest has `--socket=x11` or `--socket=fallback-x11` but no
+`--share=ipc`.
 
 ### finish-args-absolute-home-path
 
