@@ -1272,6 +1272,13 @@ The manifest schema was malformed.
 
 The manifest schema failed validation.
 
+### manifest-file-is-symlink
+
+**Exceptions allowed**: No
+
+The [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+is a symlink.
+
 ### manifest-has-bundled-extension
 
 **Exceptions allowed**: Yes
