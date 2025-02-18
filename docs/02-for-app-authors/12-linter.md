@@ -1286,6 +1286,13 @@ is a symlink.
 The Flatpak manifest uses a [bundled extension](https://docs.flatpak.org/en/latest/extension.html#bundled-extensions).
 Bundled extensions needs to be manually approved through exceptions.
 
+### metainfo-svg-screenshots
+
+**Exceptions allowed**: No
+
+There is a SVG or SVGZ screenshot link in the
+[MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
+
 ### metainfo-launchable-tag-wrong-value
 
 **Exceptions allowed**: No
