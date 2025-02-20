@@ -3,6 +3,47 @@
 The goal of these requirements is to ensure that the applications hosted
 on Flathub are safe to use and integrate well in the desktop experience.
 
+## Submission Policy
+
+:::tip
+Each application is evaluated on a case-by-case basis and if you are
+unsure whether it fits the guidelines, please feel free to ask via
+[GitHub issues](https://github.com/flathub/flathub/issues) or in the
+[Flathub Matrix room](https://matrix.to/#/#flathub:matrix.org).
+:::
+
+Flathub aims to provide a curated collection of high-quality, sandboxed
+graphical desktop applications that seamlessly integrate with the Linux
+desktop environment and enhance the user experience.
+
+This policy defines the types of applications that are not eligible
+for submission. These guidelines may evolve over time, and exceptions
+may be granted in specific cases.
+
+- **Non-functional submissions**: Applications that are not fully
+  functional during review that degrade the user experience will not be
+  accepted unless improved.
+
+- **Console applications**: Flatpak is generally not well-suited for
+  console or terminal-based applications. Any such submissions that is
+  not sufficiently user facing or offers overly niche or limited
+  functionality will not be accepted.
+
+- **Low-Effort submissions**: Submissions that offer very minimal
+  functionality often consisting of simple scripts, single source-files
+  or forks of existing projects without any significant modification
+  will not be accepted.
+
+- **Misleading or malicious applications**: Applications that
+  impersontate, provide false or misleading descriptions, functionality,
+  attempt to deceive users, violate trademarks, infringes copyrights or
+  contains malicious code will not be accepted.
+
+If the issues identified during the review are resolved and the
+submission is improved such that it passes the guidelines, it will be
+reconsidered for approval. Note that submissions can be removed even
+after they are accepted at our discretion.
+
 ## Application ID
 
 :::note
