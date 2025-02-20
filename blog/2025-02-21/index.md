@@ -73,6 +73,16 @@ Every app must be submitted to Flathub for consideration to be hosted and distri
 
 - **App IDs must accurately reflect the developer's domain name** or code hosting location; e.g. if an app is submitted that purports to be Lutris, its ID must be obviously associated with that app (in this case, [Lutris.net](https://lutris.net)).
 
-Each of these requirements are checked—and if a reviewer finds something out of place, they have the power to request changes to the submission or reject it completely.
+Each of these requirements are checked—and if a reviewer finds something out of place, they can request changes to the submission or reject it completely.
 
 ## Automated Testing
+
+In addition to human review, Flathub makes use of automated testing for a number of quality and safety checks.
+
+<!-- …need to cover this in more detail -->
+
+## Verification
+
+Apps can be [verified](https://docs.flathub.org/docs/for-app-authors/verification) on Flathub; this process confirms that an app is published by the original developer or an authorized party by proving ownership of the app ID. While all apps are held to the same high standards of safety and review on Flathub, this extra layer helps users confirm that the app they are getting is _also_ provided or authorized by its developer.
+
+Around half of the apps on Flathub so far are verified, with the number regularly increasing.
