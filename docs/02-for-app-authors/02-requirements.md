@@ -43,7 +43,8 @@ If the issues identified during the review are resolved and the
 submission is improved such that it passes the guidelines, it will be
 reconsidered for approval. Submissions are accepted at the discretion
 of the reviewers and can be removed even after they are accepted if it
-is found to violate any policy.
+is found to violate any policy. They also must comply with
+[Flathub's Terms Of Service](https://flathub.org/terms-and-conditions).
 
 ## Application ID
 
