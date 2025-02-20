@@ -15,7 +15,7 @@ With thousands of apps and billions of downloads, Flathub has a responsibility t
 - [ ] automated tests
 - [ ] Verification
 - [x] Flatpak itself (sandboxing)
-- [ ] Permissions: static and runtime
+- [x] Permissions: static and runtime
 - [ ] Reproducible builds
 - [ ] clients (GNOME Software/KDE Discover/CLI)
 - [ ] updates (e.g. what gets held)
@@ -28,15 +28,40 @@ Each app on Flathub is distributed as a [Flatpak](https://flatpak.org/). This ap
 
 From a technical perspective, Flatpak does not require elevated privileges to install apps, isolates apps from one another, and limits app access to the host environment. It makes deep use of existing Linux security technologies such as cgroups, namespaces, bind mounts, and seccomp as well as [Bubblewrap](https://github.com/containers/bubblewrap) for sandboxing.
 
-### Permissions: Static & Runtime
+Due to this sandboxing, apps don't have permission to access to many aspects of the host OS or user data they might need. To get that access, apps must request it using Portals or static permissions.
 
-As a result of using Flatpak and its sandboxing, each app must define what _static_ permissions it needs to function. These are clearly defined up front and include access to common resources such as the network, Bluetooth, and audio devices. Apps must also define whether or not they are designed for the more secure Wayland display protocol and what permanent file access they need—if any—without user prompting. Static permissions are designed to be as narrowly-scoped as possible and are unchanging per release of an app. They are not designed to be modified by an end user except in cases of development or debugging.
+### Portals
 
-Apps can also make use of _runtime_ permissions via an API called Portals. These permissions do not need defining or granting ahead of time, as desktop environments provide the mechanisms to give user consent and control over them e.g. by indicating their use, directly prompting the user before the permission is granted, and allowing revocation. Portals APIs include handling auto-start and background activity; access to the camera, clipboard, documents, files, location, screen casting, screenshots, secrets like passwords, trash, and USB devices; setting global shortcuts; inhibiting suspend or shut down; capturing input; monitoring memory, network, or power profiles; sending notifications; printing; setting a wallpaper; and more. In each case, the OS or desktop environment is in charge of managing if and how a user is notified or prompted for permissions—and if the permission is not granted, the app must handle it gracefully.
+Most permissions should be requested and granted on demand via an API called _Portals_. These permissions do not need to be granted ahead of time, as desktop environments provide the mechanisms to give user consent and control over them e.g. by indicating their use, directly prompting the user before the permission is granted, and allowing revocation.
 
-Read more about permissions from the [Flatpak documentation](https://docs.flatpak.org/en/latest/sandbox-permissions.html) and [XDG Desktop Portal documentation](https://flatpak.github.io/xdg-desktop-portal/docs/).
+![Illustration of portal, light](https://flatpak.github.io/xdg-desktop-portal/docs/_static/xdg-portal-light.png#gh-only-light)
+![Illustration of a portal, dark](https://flatpak.github.io/xdg-desktop-portal/docs/_static/xdg-portal-dark.png#gh-only-dark)
+
+Portals include APIs for handling auto-start and background activity; access to the camera, clipboard, documents, files, location, screen casting, screenshots, secrets like passwords, trash, and USB devices; setting global shortcuts; inhibiting suspend or shut down; capturing input; monitoring memory, network, or power profiles; sending notifications; printing; setting a wallpaper; and more. In each case, the user's desktop environment (like GNOME or KDE) manages if and how a user is notified or prompted for permissions—and if the permission is not granted, the app must handle it gracefully.
+
+Read more about Portals from the [XDG Desktop Portal documentation](https://flatpak.github.io/xdg-desktop-portal/docs/).
+
+### Static Permissions
+
+Apps must also define any _static_ permissions they need to function. These are clearly defined up front and include access to resources such as the network, Bluetooth, and audio devices. For regular file handling such as opening or saving, apps can use the File Chooser portal. In some cases apps may only make sense with permanent access to specific a folder, in which case a narrowly-scoped static permission (e.g. read-only access to the user's Music folder) may be used.
+
+Static permissions are designed to be as narrowly-scoped as possible and are unchanging per release of an app. They are not designed to be modified by an end user except in cases of development or debugging. Due to this, Flatpak always prefers apps to use Portals over static permissions whenever possible.
+
+Read more about static permissions from the [Flatpak documentation](https://docs.flatpak.org/en/latest/sandbox-permissions.html).
 
 ### Shared Runtimes
+
+Every app is built against a Flatpak runtime hosted by Flathub. The runtimes provide basic dependencies, are well-maintained by the Linux community, and are organized according to various platforms a developer may target; for example, GNOME, KDE, or a generic FreeDesktop SDK. This means many apps—especially those targeting a platform like GNOME or KDE and using its developer libraries—don't need to pull in external dependencies.
+
+Runtimes are automatically installed with apps that require them, and are updated separately by the user's OS, app store, or CLI when needed. When a dependency in a runtime is updated, e.g. for a critical security update, it rolls out as an update to all users of apps that use that runtime.
+
+Learn more about runtimes from the [Flatpak documentation](https://docs.flatpak.org/en/latest/basic-concepts.html#runtimes).
+
+### Shared Modules
+
+In some cases there are commonly-used libraries not provided directly by one of the available runtimes. Flathub provides Git submodules for these libraries to centralize the maintenance, as well as automated tooling to propose updating these libraries in apps.
+
+Learn more about shared modules from the [Flathub documentation](https://docs.flathub.org/docs/for-app-authors/shared-modules).
 
 ## Submission & Human Review
 
