@@ -26,6 +26,8 @@ Apps take a long journey from a developer's source code to being used on someone
 
 Each app on Flathub is distributed as a [Flatpak](https://flatpak.org/). This app packaging format was specifically designed with security and safety at its core, and has been continuously improved over the past decade. It has received endorsements, development, and wide adoption from organizations such as Bambu Lab, Bitwig, CodeThink, Collabora, Discord, The Document Foundation, elementary, Endless, GDevelop, KiCad, Kodi, GNOME, Intel, KDE, LibreOffice, Mozilla, OBS Studio, Plex, Prusa Research, Purism, Red Hat, System76, Telegram, Valve, and many more.
 
+![Flatpak logo](flatpak.png)
+
 From a technical perspective, Flatpak does not require elevated privileges to install apps, isolates apps from one another, and limits app access to the host environment. It makes deep use of existing Linux security technologies such as cgroups, namespaces, bind mounts, and seccomp as well as [Bubblewrap](https://github.com/containers/bubblewrap) for sandboxing.
 
 Due to this sandboxing, apps don't have permission to access to many aspects of the host OS or user data they might need. To get that access, apps must request it using Portals or static permissions.
@@ -34,8 +36,8 @@ Due to this sandboxing, apps don't have permission to access to many aspects of 
 
 Most permissions should be requested and granted on demand via an API called _Portals_. These permissions do not need to be granted ahead of time, as desktop environments provide the mechanisms to give user consent and control over them e.g. by indicating their use, directly prompting the user before the permission is granted, and allowing revocation.
 
-![Illustration of portal, light](https://flatpak.github.io/xdg-desktop-portal/docs/_static/xdg-portal-light.png#gh-only-light)
-![Illustration of a portal, dark](https://flatpak.github.io/xdg-desktop-portal/docs/_static/xdg-portal-dark.png#gh-only-dark)
+![Illustration of portal, light](xdg-portal-light.png#gh-light-mode-only)
+![Illustration of a portal, dark](xdg-portal-dark.png#gh-dark-mode-only)
 
 Portals include APIs for handling auto-start and background activity; access to the camera, clipboard, documents, files, location, screen casting, screenshots, secrets like passwords, trash, and USB devices; setting global shortcuts; inhibiting suspend or shut down; capturing input; monitoring memory, network, or power profiles; sending notifications; printing; setting a wallpaper; and more. In each case, the user's desktop environment (like GNOME or KDE) manages if and how a user is notified or prompted for permissions—and if the permission is not granted, the app must handle it gracefully.
 
@@ -84,5 +86,7 @@ In addition to human review, Flathub makes use of automated testing for a number
 ## Verification
 
 Apps can be [verified](https://docs.flathub.org/docs/for-app-authors/verification) on Flathub; this process confirms that an app is published by the original developer or an authorized party by proving ownership of the app ID. While all apps are held to the same high standards of safety and review on Flathub, this extra layer helps users confirm that the app they are getting is _also_ provided or authorized by its developer.
+
+![Verified](verified.png)
 
 Around half of the apps on Flathub so far are verified, with the number regularly increasing.
