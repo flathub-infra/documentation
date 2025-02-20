@@ -29,13 +29,13 @@ may be granted in specific cases.
   not sufficiently user facing or offers overly niche or limited
   functionality will not be accepted.
 
-- **Low-Effort submissions**: Submissions that offer very minimal
+- **Low-effort submissions**: Submissions that offer very minimal
   functionality often consisting of simple scripts, single source-files
   or forks of existing projects without any significant modification
   will not be accepted.
 
 - **Misleading or malicious applications**: Applications that
-  impersontate, provide false or misleading descriptions, functionality,
+  impersonate, provide false or misleading descriptions, functionality,
   attempt to deceive users, violate trademarks, infringes copyrights or
   contains malicious code will not be accepted.
 
