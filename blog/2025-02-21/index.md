@@ -149,7 +149,11 @@ Flathub has granted a select group of trusted partners, including Mozilla and OB
 
 Lastly, some apps (around 6%) use [extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data) to instruct Flatpak to download and unpack an existing package (e.g. a Debian package) during installation. This process runs in a tight unprivileged Flatpak sandbox that does not allow host filesystem or network access, and the sandbox cannot be modified by app developers. These are largely proprietary apps that cannot be built on Flathub’s infrastructure, or apps using complex toolchains that require network access during build. This is discouraged since it does not enable the same level of auditability nor multi-architecture support that building from source does. As a result, this is heavily scrutinized during human review and only accepted as a last resort.
 
-Even with the above, the vast majority of apps are built reproducibly from source on Flathub’s infrastructure—and the handful that aren’t still greatly benefit from the transparency and auditability built into all of the other layers.
+Even with the above, the vast majority of apps are built reproducibly
+from source on Flathub’s infrastructure and 83% of the app catalog
+supports multiple architectures. The handful of apps that aren’t built
+from source still greatly benefit from the transparency and auditability
+built into all of the other layers.
 
 ## Incident Response
 
