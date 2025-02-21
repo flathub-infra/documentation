@@ -101,9 +101,9 @@ Once an app is accepted onto Flathub, it’s not just the wild west; there are s
 - **Static permission changes are held for human review** before an update is released to users
 - **Critical MetaInfo changes are held for human review**, e.g. if an app name, developer name, app summary, or license changes
 
-## Caveats
+## Special Cases
 
-There are a few caveats to some of the points above which I would be remiss not to mention.
+There are a few sepcial cases to some of the points above which I would be remiss not to mention.
 
 First, Flathub has granted a small handful of trusted partners (including Mozilla and OBS Studio) the ability to directly upload their builds from their own infrastructure. These projects have an entire CI pipeline which validates the state of their app, and they perform QA before tagging the release and pushing it to Flathub. Even for these few cases of direct uploads, we require a public manifest and build pipeline to enable similar reproducibility and auditability as outlined above. We also require the apps to be verified, and still run automated tests such as our linter against them.
 
