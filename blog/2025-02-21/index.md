@@ -17,7 +17,7 @@ Apps take a long journey from a developer’s source code to being used on someo
 
 Each app on Flathub is distributed as a [Flatpak](https://flatpak.org/). This app packaging format was specifically designed with security and safety at its core, and has been continuously improved over the past decade. It has received endorsements, development, and wide adoption from organizations such as Bambu Lab, Bitwig, CodeThink, Collabora, Discord, The Document Foundation, elementary, Endless, GDevelop, KiCad, Kodi, GNOME, Intel, KDE, LibreOffice, Mozilla, OBS Studio, Plex, Prusa Research, Purism, Red Hat, System76, Telegram, Valve, and many more.
 
-![Flatpak logo](flatpak-alt.png)
+![Flatpak logo](flatpak.png)
 
 From a technical perspective, Flatpak does not require elevated privileges to install apps, isolates apps from one another, and limits app access to the host environment. It makes deep use of existing Linux security technologies such as cgroups, namespaces, bind mounts, and seccomp as well as [Bubblewrap](https://github.com/containers/bubblewrap) for sandboxing.
 
@@ -74,7 +74,7 @@ We mirror the exact sources each app is built against in case the original sourc
 
 Apps can be [verified](https://docs.flathub.org/docs/for-app-authors/verification) on Flathub; this process confirms that an app is published by the original developer or an authorized party by proving ownership of the app ID. While all apps are held to the same high standards of safety and review on Flathub, this extra layer helps users confirm that the app they are getting is _also_ provided or authorized by its developer.
 
-![Verified checkmark](verified-alt.png)
+![Verified checkmark](verified.png)
 
 Over half of the apps on Flathub so far are verified, with the number regularly increasing.
 
