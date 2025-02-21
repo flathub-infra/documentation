@@ -12,7 +12,7 @@ With thousands of apps and billions of downloads, Flathub has a responsibility t
 
 <!-- truncate -->
 
-While apps and updates can be fairly quickly published to Flathub, behind the scenes each one takes a long journey full of safety nets to get from a developer’s source code to being used on someone’s device.
+Apps and updates can be fairly quickly published to Flathub, but behind the scenes each one takes a long journey full of safety nets to get from a developer’s source code to being used on someone’s device. While information about this process is available between various documentation pages and the Flathub source code, I thought it could be helpful to share a comprehensive look at that journey all in one place.
 
 ## Flatpak Security & Sandboxing
 
