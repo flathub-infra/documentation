@@ -45,7 +45,7 @@ Every app is built against a [Flatpak runtime](https://docs.flatpak.org/en/lates
 
 Runtimes are automatically installed with apps that require them, and are updated separately by the user’s OS, app store, or CLI when needed. When a dependency in a runtime is updated, e.g. for a critical security update, it rolls out as an update to all users of apps that use that runtime.
 
-In some cases there are commonly-used libraries not provided directly by one of the available runtimes. Flathub provides [shared modules](https://docs.flathub.org/docs/for-app-authors/shared-modules) for these libraries to centralize the maintenance, as well as automated tooling to propose updating these libraries in apps.
+In some cases there are commonly-used libraries not provided directly by one of the available runtimes. Flathub provides [shared modules](https://docs.flathub.org/docs/for-app-authors/shared-modules) for these libraries to centralize the maintenance, as well as [automated tooling](https://github.com/flathub-infra/flatpak-external-data-checker) to propose updating these libraries in apps.
 
 ## Submission & Human Review
 
@@ -61,7 +61,7 @@ Each of the documented requirements are checked—and if a reviewer finds someth
 
 ## Automated Testing
 
-In addition to human review, Flathub also makes use of automated testing for a number of quality and safety checks. For example, our automated tests block unsafe or outright wrong permissions, such as apps requesting access to session or system busses or desktop environment namespaces. Our automated tests also help ensure reproducible builds by disallowing pointing at bare git branches without a specific commit and/or tag specified.
+In addition to human review, Flathub also makes use of automated testing for a number of quality and safety checks. For example, our automated tests block unsafe or outright wrong permissions, such as apps requesting access to whole session or system buses or unsafe bus names. Our automated tests also help ensure reproducible builds by disallowing pointing at bare git branches without a specific commit and/or tag specified.
 
 ## Reproducibility & Auditability
 
@@ -96,25 +96,25 @@ Flathub.org and GNOME Software also display the app’s verified status.
 Once an app is accepted onto Flathub, it’s not just the wild west; there are still a number of safety protections built into the flow:
 
 - **Flathub maintains ownership over the manifest repo**, while app developers are invited as limited collaborators
-- **The manifest’s default branch is protected**, preventing direct pushes without a pull request
-- **The manifest’s commit history cannot be rewritten**, making it harder to sneak something in
+- **The manifest repo’s default branch is protected**, preventing direct pushes without a pull request
+- **The manifest repo’s commit history cannot be rewritten**, making it harder to sneak something in
 - **Flathub’s automated tests must pass** before a PR can be merged and an update can be pushed
 - **Static permission changes are held for human review** before an update is released to users
 - **Critical MetaInfo changes are held for human review**, e.g. if an app name, developer name, app summary, or license changes
 
-## Caveats
+## Special Cases
 
-There are a few caveats to some of the points above which I would be remiss not to mention.
+There are a few sepcial cases to some of the points above which I would be remiss not to mention.
 
 First, Flathub has granted a small handful of trusted partners (including Mozilla and OBS Studio) the ability to directly upload their builds from their own infrastructure. These projects have an entire CI pipeline which validates the state of their app, and they perform QA before tagging the release and pushing it to Flathub. Even for these few cases of direct uploads, we require a public manifest and build pipeline to enable similar reproducibility and auditability as outlined above. We also require the apps to be verified, and still run automated tests such as our linter against them.
 
-Lastly, some apps (around 6%) use [extra-data](https://docs.flatpak.org/en/latest/conventions.html#exporting-through-extra-data) to instruct Flatpak to download and unpack an existing package (e.g. a Debian package) during installation. These are largely proprietary apps that cannot be built on Flathub’s infrastructure, or apps using complex toolchains that require network access during build. This is discouraged since it does not enable the same level of auditability nor multi-architecture support that building from source does. As a result, this is heavily scrutinized during human review and only accepted as a last resort.
+Lastly, some apps (around 6%) use [extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data) to instruct Flatpak to download and unpack an existing package (e.g. a Debian package) during installation. These are largely proprietary apps that cannot be built on Flathub’s infrastructure, or apps using complex toolchains that require network access during build. This is discouraged since it does not enable the same level of auditability nor multi-architecture support that building from source does. As a result, this is heavily scrutinized during human review and only accepted as a last resort.
 
 Even with the above, the vast majority of apps are built reproducibly from source on Flathub’s infrastructure—and the handful that aren’t still greatly benefit from the transparency and auditability built into all of the other layers.
 
 ## Incident Response
 
-While we expect to catch the vast majority of safety issues with the above, we are also able to respond to anything that may have slipped through. For example, we have the ability to quickly drop an app from the remote in case we find it’s malicious; we can also revert, drop, or veto changes made to apps.
+While we expect to catch the vast majority of safety issues with the above, we are also able to respond to anything that may have slipped through. For example, we have the ability to remove an app from the Flathub remote in case we find that it’s malicious. We can also revert, recall, or block broken or malicious app updates.
 
 We take security reports and legal issues very seriously; please [contact the Flathub admins](mailto:admins@flathub.org) to report an issue, or [chat with us on Matrix](https://matrix.to/#/#flathub:matrix.org).
 
