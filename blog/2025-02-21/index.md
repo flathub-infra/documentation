@@ -92,11 +92,11 @@ Flathub.org and GNOME Software also display the app’s verified status.
 
 ## Updates
 
-Once an app is accepted onto Flathub, it's not just the wild west; there are still a number of safety protections built into the flow:
+Once an app is accepted onto Flathub, it’s not just the wild west; there are still a number of safety protections built into the flow:
 
 - **Flathub maintains ownership over the manifest repo**, while app developers are invited as limited collaborators
 - **The manifest’s default branch is protected**, preventing direct pushes without a pull request
-- **Flathub's automated tests must pass** before a PR can be merged and an update can be pushed
+- **Flathub’s automated tests must pass** before a PR can be merged and an update can be pushed
 - **Static permission changes are held for human review** before an update is released to users
 - **Critical MetaInfo changes are held for human review**, e.g. if an app changes its name
 
@@ -116,4 +116,8 @@ We take security reports and legal issues very seriously; please [contact the Fl
 
 ---
 
+## In Summary…
 
+As you can see, Flathub takes safety very seriously. We’ve worked with the greater Linux and FreeDesktop ecosystem for _over a decade_ on efforts such as Flatpak, OSTree, Portals, and even desktop environments and app store clients to help build the best app distribution experience—for both users and app developers—with safety as a core requirement. We believe our in-depth, multi-layered approach to safety has set a high bar that few others have met—and we will continue to raise it.
+
+Thank you to all of the contributors to Flatpak, Flathub, and all of the technologies our ecosystem depends on for supporting us. Thank you to the developers of thousands of apps for entrusting us with the distribution of your apps to users. And as always, thank you to the billions of users trusting Flathub as your source of apps on Linux. ♥
