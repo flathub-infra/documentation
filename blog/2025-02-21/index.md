@@ -1,6 +1,7 @@
 ---
 slug: app-safety-layered-approach-source-to-user
 title: "Flathub Safety: A Layered Approach from Source to User"
+image: ./safety.png
 authors:
   - cassidyjames
 tags:
