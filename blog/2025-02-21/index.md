@@ -53,7 +53,7 @@ If an app needs to bundle other dependencies, they must be defined in the manife
 
 Once an app is developed, it must be submitted to Flathub for consideration to be hosted and distributed. At this stage, humans from Flathub review the app to ensure it follows the [requirements](https://docs.flathub.org/docs/for-app-authors/requirements). Of note:
 
-- **Apps must be sandboxed Flatpaks with narrow permissions**, including using appropriate runtime permissions instead of broad static permissions whenever possible.
+- **Apps must be sandboxed with as narrow permissions as possible** while still functioning, including using appropriate runtime permissions instead of broad static permissions when possible.
 
 - **Apps must not be misleading or malicious**, which covers impersonating other apps or including outright malicious code or functionality.
 
