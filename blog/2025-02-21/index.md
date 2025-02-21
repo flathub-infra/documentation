@@ -80,7 +80,7 @@ Over half of the apps on Flathub so far are verified, with the number regularly 
 
 ## App Store Clients
 
-Once an app is developed, submitted, tested, approved, built, and distributed, it appears in app store clients like Flathub.org, KDE Discover, GNOME Software, and elementary AppCenter—as well as the Flatpak CLU. While exact implementations vary and the presentation is up to the specific app store client, generally each will show:
+Once an app is developed, submitted, tested, approved, built, and distributed, it appears in app store clients like Flathub.org, KDE Discover, GNOME Software, and elementary AppCenter—as well as the Flatpak CLI. While exact implementations vary and the presentation is up to the specific app store client, generally each will show:
 
 - Static permissions and their impact on safety
 - Open Age Rating Service rating and details
