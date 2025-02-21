@@ -141,6 +141,9 @@ various built-in protections to ensure security.
 - **Static permission changes are held for human review** before an update is released to users
 - **Critical MetaInfo changes are held for human review**, e.g. if an app name, developer name, app summary, or license changes
 
+![Build moderation dashboard showing permission changes of Kodi, light](moderation-light.png#gh-light-mode-only)
+![Build moderation dashboard showing permission changes of Kodi, dark](moderation-dark.png#gh-dark-mode-only)
+
 ## Special Cases
 
 There are a few special cases to some of the points above which I would be remiss not to mention.
