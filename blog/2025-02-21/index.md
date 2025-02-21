@@ -26,18 +26,53 @@ Flatpak apps are also built from a declarative manifest, which defines the exact
 
 Due to Flatpak’s sandboxing, apps don’t have permission to access to many aspects of the host OS or user data they might need. To get that access, apps must request it using Portals or static permissions.
 
-### Portals & Static Permissions
+### Dynamic permissions
 
-Most permissions can be requested and granted on demand via an API called [Portals](https://flatpak.github.io/xdg-desktop-portal/docs/). These permissions do not need to be given ahead of time, as desktop environments provide the mechanisms to give user consent and control over them e.g. by indicating their use, directly prompting the user before the permission is granted, and allowing revocation.
+Most permissions can be requested and granted on demand via an API
+called [Portals](https://flatpak.github.io/xdg-desktop-portal/docs/).
+These permissions do not need to be given ahead of time, as desktop
+environments provide the mechanisms to give user consent and control
+over them e.g. by indicating their use, directly prompting the user
+before the permission is granted, and allowing revocation.
 
 ![Illustration of portal, light](xdg-portal-light.png#gh-light-mode-only)
 ![Illustration of a portal, dark](xdg-portal-dark.png#gh-dark-mode-only)
 
-Portals include APIs for handling auto-start and background activity; access to the camera, clipboard, documents, files, location, screen casting, screenshots, secrets like passwords, trash, and USB devices; setting global shortcuts; inhibiting suspend or shut down; capturing input; monitoring memory, network, or power profiles; sending notifications; printing; setting a wallpaper; and more. In each case, the user’s desktop environment (like GNOME or KDE) manages if and how a user is notified or prompted for permissions—and if the permission is not granted, the app must handle it gracefully.
+Portals include APIs for handling auto-start and background activity;
+access to the camera, clipboard, documents, files, location, screen
+casting, screenshots, secrets like passwords, trash, and USB devices;
+setting global shortcuts; inhibiting suspend or shut down; capturing
+input; monitoring memory, network, or power profiles; sending
+notifications; printing; setting a wallpaper; and more. In each case,
+the user’s desktop environment (like GNOME or KDE) manages if and how a
+user is notified or prompted for permissions—and if the permission is
+not granted, the app must handle it gracefully.
 
-Apps must also define any [static permissions](https://docs.flatpak.org/en/latest/sandbox-permissions.html) they need to function. These are clearly defined up front and include access to resources such as the network, Bluetooth, and audio devices. For regular file handling such as opening or saving, apps can use the File Chooser portal. In some cases apps may only make sense with permanent access to specific a folder, in which case a narrowly-scoped static permission (e.g. read-only access to the user’s Music folder) may be used.
+Portals is a fairly new addition to the Freedesktop ecosystem; desktop
+environments need to implement them and app developers are increasingly
+adopting them.
 
-Static permissions are designed to be as narrowly-scoped as possible and are unchanging per release of an app. They are not designed to be modified by an end user except in cases of development, debugging, or [reducing permissions](https://docs.flathub.org/docs/for-users/permissions). Due to this, Flatpak always prefers apps to use Portals over static permissions whenever possible.
+### Static permissions
+
+Static permissions are set by application developers at build time.
+They allow exposing specific resources from the host into the sandbox
+which makes them accessible as if the sandbox was not there. They serve
+multiple purposes:
+
+1. Give Flatpak apps access to basic and safe resources  for which
+   dynamic permissions would not make sense. For example Wayland or
+   access to dri device nodes for hardware acceleration
+2. Allow apps who haven't implemented portals to be functional
+3. Provide a solution when a portal is not available yet for a
+   specific feature
+
+See also
+
+* [Sandbox Permissions on flatpak.org](https://docs.flatpak.org/en/latest/sandbox-permissions.html)
+* [Permissions on flathub.org](https://docs.flathub.org/docs/for-app-authors/requirements#permissions)
+
+Static permissions are reviewed by Flathub human reviewers when a new
+application is submitted and when they are updated between releases.
 
 ### Shared Runtimes & Modules
 
