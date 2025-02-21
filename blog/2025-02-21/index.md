@@ -52,7 +52,7 @@ user is notified or prompted for permissions—and if the permission is
 not granted, the app must handle it gracefully.
 
 Some permissions are not covered by Portals, such as basic and generally safe
-resources for which dynamic permissions wouldn't make sense. In these cases—or
+resources for which dynamic permissions wouldn’t make sense. In these cases—or
 if a Portal does not yet exist or is not widely adopted for a certain
 permission—developers may use [static permissions](https://docs.flathub.org/docs/for-app-authors/requirements#permissions). 
 These are set by the developer at build time in the public build manifest.
@@ -83,7 +83,7 @@ Once an app is developed, it must be submitted to Flathub for consideration to b
 
 - **App IDs must accurately reflect the developer’s domain name** or code hosting location; e.g. if an app is submitted that purports to be Lutris, its ID must be obviously associated with that app (in this case, [Lutris.net](https://lutris.net)).
 
-Each of the documented requirements are checked—and if a reviewer finds something out of place they request changes to the submission, ask for rationale, or reject it completely.
+The app’s Flatpak manifest is reviewed, including all static permissions. Each of the documented requirements are checked—and if a reviewer finds something out of place they request changes to the submission, ask for rationale, or reject it completely.
 
 ## Automated Testing
 
@@ -95,7 +95,7 @@ Once an app has been approved and passes initial tests, it is built using the op
 
 For further auditability, we specify the git commit of the manifest repo used for the build in the Flatpak build subject. The build itself is signed by Flathub’s key, and Flatpak/OSTree verify these signatures when installing and updating apps.
 
-We mirror the exact sources each app is built against in case the original source goes down or there is some other issue, and anyone can build the Flatpak back from those mirrored sources to reproduce or audit the build. The manifest used to build the app is hosted on Flathub's GitHub org, plus distributed to every user in the app’s sandbox at `/app/manifest.json`—both of which can be compared, inspected, and used to rebuild the app exactly as it was built by Flathub.
+We mirror the exact sources each app is built against in case the original source goes down or there is some other issue, and anyone can build the Flatpak back from those mirrored sources to reproduce or audit the build. The manifest used to build the app is hosted on Flathub’s GitHub org, plus distributed to every user in the app’s sandbox at `/app/manifest.json`—both of which can be compared, inspected, and used to rebuild the app exactly as it was built by Flathub.
 
 ## Verification
 
