@@ -24,7 +24,7 @@ From a technical perspective, Flatpak does not require elevated privileges to in
 
 Flatpak apps are also built from a declarative manifest, which defines the exact sources and environment to build from to enable auditability and as much reproducibility as possible.
 
-Due to Flatpak’s sandboxing, apps don’t have permission to access many aspects of the host OS or user data they might need. To get that access, apps must either request it using Portals or static permissions.
+Due to Flatpak’s sandboxing, apps don’t have permission to access many aspects of the host OS or user data they might need. To get that access, apps must either request it using Portals or use static permissions.
 
 ### Dynamic permissions
 
@@ -61,7 +61,7 @@ multiple purposes:
 
 1. Give Flatpak apps access to basic and safe resources  for which
    dynamic permissions would not make sense. For example Wayland or
-   access to dri device nodes for hardware acceleration
+   hardware acceleration
 2. Allow apps who haven't implemented portals to be functional
 3. Provide a solution when a portal is not available yet for a
    specific feature
