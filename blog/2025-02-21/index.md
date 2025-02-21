@@ -24,7 +24,7 @@ From a technical perspective, Flatpak does not require elevated privileges to in
 
 Flatpak apps are also built from a declarative manifest, which defines the exact sources and environment to build from to enable auditability and as much reproducibility as possible.
 
-Due to Flatpak’s sandboxing, apps don’t have permission to access to many aspects of the host OS or user data they might need. To get that access, apps must request it using Portals or static permissions.
+Due to Flatpak’s sandboxing, apps don’t have permission to access many aspects of the host OS or user data they might need. To get that access, apps must either request it using Portals or static permissions.
 
 ### Dynamic permissions
 
@@ -80,15 +80,16 @@ Every app is built against a [Flatpak runtime](https://docs.flatpak.org/en/lates
 
 Runtimes are automatically installed with apps that require them, and are updated separately by the user’s OS, app store, or CLI when needed. When a dependency in a runtime is updated, e.g. for a critical security update, it rolls out as an update to all users of apps that use that runtime.
 
-In some cases there are commonly-used libraries not provided directly by one of the available runtimes. Flathub provides [shared modules](https://docs.flathub.org/docs/for-app-authors/shared-modules) for these libraries to centralize the maintenance, as well as [automated tooling](https://github.com/flathub-infra/flatpak-external-data-checker) to propose updating these libraries in apps.
+In some cases there are commonly-used libraries not provided directly by one of the available runtimes. Flathub provides [shared modules](https://docs.flathub.org/docs/for-app-authors/shared-modules) for these libraries to centralize the maintenance.
 
 If an app needs to bundle other dependencies, they must be defined in the manifest. We also provide [tooling to automatically suggest updates](https://github.com/flathub-infra/flatpak-external-data-checker) to these dependencies.
 
 ## Submission & Human Review
 
-Once an app is developed, it must be submitted to Flathub for consideration to be hosted and distributed. At this stage, humans from Flathub review the app to ensure it follows the [requirements](https://docs.flathub.org/docs/for-app-authors/requirements). Of note:
+Once an app is developed, it must be submitted to Flathub for consideration to be hosted and distributed. At this stage, human Flathub reviewers will review the app to ensure it follows the [requirements](https://docs.flathub.org/docs/for-app-authors/requirements). Of note:
 
-- **Apps must be sandboxed with as narrow permissions as possible** while still functioning, including using appropriate runtime permissions instead of broad static permissions when possible.
+- **Apps must be sandboxed with as narrow permissions as possible** while still functioning, including using appropriate runtime permissions instead of broad static permissions when possible. All broad
+  static permissions need to be justified by the submitter during review.
 
 - **Apps must not be misleading or malicious**, which covers impersonating other apps or including outright malicious code or functionality.
 
@@ -130,7 +131,8 @@ Flathub.org and GNOME Software also display the app’s verified status.
 
 ## Updates
 
-Once an app is accepted onto Flathub, it’s not just the wild west; there are still a number of safety protections built into the flow:
+Once an app is accepted onto Flathub, it still remains subject to
+various built-in protections to ensure security.
 
 - **Flathub maintains ownership over the manifest repo**, while app developers are invited as limited collaborators
 - **The manifest repo’s default branch is protected**, preventing direct pushes without a pull request
@@ -143,7 +145,7 @@ Once an app is accepted onto Flathub, it’s not just the wild west; there are s
 
 There are a few special cases to some of the points above which I would be remiss not to mention.
 
-First, Flathub has granted a small handful of trusted partners (including Mozilla and OBS Studio) the ability to directly upload their builds from their own infrastructure. These projects have an entire CI pipeline which validates the state of their app, and they perform QA before tagging the release and pushing it to Flathub. Even for these few cases of direct uploads, we require a public manifest and build pipeline to enable similar reproducibility and auditability as outlined above. We also require the apps to be verified, and still run automated tests such as our linter against them.
+Flathub has granted a select group of trusted partners, including Mozilla and OBS Studio, the ability to directly upload their builds from their own infrastructure. These projects have an entire CI pipeline which validates the state of their app, and they perform QA before tagging the release and pushing it to Flathub. Even for these few cases of direct uploads, we require a public manifest and build pipeline to enable similar reproducibility and auditability as outlined above. We also require the apps to be verified, and still run automated tests such as our linter against them.
 
 Lastly, some apps (around 6%) use [extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data) to instruct Flatpak to download and unpack an existing package (e.g. a Debian package) during installation. This process runs in a tight unprivileged Flatpak sandbox that does not allow host filesystem or network access, and the sandbox cannot be modified by app developers. These are largely proprietary apps that cannot be built on Flathub’s infrastructure, or apps using complex toolchains that require network access during build. This is discouraged since it does not enable the same level of auditability nor multi-architecture support that building from source does. As a result, this is heavily scrutinized during human review and only accepted as a last resort.
 
@@ -161,4 +163,8 @@ We take security reports and legal issues very seriously; please [contact the Fl
 
 As you can see, Flathub takes safety very seriously. We’ve worked with the greater Linux and FreeDesktop ecosystem for _over a decade_ on efforts such as Flatpak, OSTree, Portals, and even desktop environments and app store clients to help build the best app distribution experience—for both users and app developers—with safety as a core requirement. We believe our in-depth, multi-layered approach to safety has set a high bar that few others have met—and we will continue to raise it.
 
-Thank you to all of the contributors to Flatpak, Flathub, and all of the technologies our ecosystem depends on for supporting us. Thank you to the developers of thousands of apps for entrusting us with the distribution of your apps to users. Thank you to bbhtt, Jordan, and Sonny for the thorough reviews of this blog post. And as always, thank you to the millions of users trusting Flathub as your source of apps on Linux. ♥
+Thank you to all contributors to Flatpak, Flathub, and the technologies
+our ecosystem relies on. Thanks to the thousands of developers for
+trusting us with app distribution, and to bbhtt, Jordan, and Sonny for
+reviewing this post. And as always, thank you to the millions of users
+trusting Flathub as your source of apps on Linux. ♥
