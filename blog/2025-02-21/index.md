@@ -6,6 +6,9 @@ authors:
   - cassidyjames
 tags:
   - moderation
+  - safety
+  - permissions
+  - review
 ---
 
 With thousands of apps and billions of downloads, Flathub has a responsibility to help ensure the safety of our millions of active users. We take this responsibility very seriously with a layered, in-depth approach including sandboxing, permissions, transparency, policy, human review, automation, reproducibility, auditability, verification, and user interface.
