@@ -100,11 +100,15 @@ Once an app is developed, submitted, tested, approved, built, and distributed, i
 
 Flathub.org and GNOME Software also display the app's verified status.
 
+## Caveats
+
+There are a few caveats to some of the points above which I would be remiss not to mention. First, Flathub has granted a small handful of trusted partners the ability to directly upload their 
+
 ## Incident Response
 
 While we expect to catch the vast majority of safety issues with the above, we are also able to respond to anything that may have slipped through. For example, we have the ability to quickly drop an app from the remote in case we find it's malicious; we can also revert, drop, or veto changes made to apps.
 
-We take security reports and legal issues very seriously; please [contact the Flathub admins](admins@flathub.org) to report an issue, or [chat with us on Matrix](https://matrix.to/#/#flathub:matrix.org).
+We take security reports and legal issues very seriously; please [contact the Flathub admins](mailto:admins@flathub.org) to report an issue, or [chat with us on Matrix](https://matrix.to/#/#flathub:matrix.org).
 
 ---
 
