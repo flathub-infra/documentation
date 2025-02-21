@@ -7,19 +7,9 @@ tags:
   - moderation
 ---
 
-With thousands of apps and billions of downloads, Flathub has a responsibility to ensure safety of our millions of active users. We take this responsibility very seriously with a layered, in-depth approach including policy, human review, transparency, automation, sandboxing, permissions, and user interface.
+With thousands of apps and billions of downloads, Flathub has a responsibility to help ensure the safety of our millions of active users. We take this responsibility very seriously with a layered, in-depth approach including sandboxing, permissions, transparency, policy, human review, automation, reproducibility, auditability, verification, and user interface.
 
 <!-- truncate -->
-
-- [x] app submission checks
-- [x] automated tests
-- [x] Verification
-- [x] Flatpak itself (sandboxing)
-- [x] Permissions: static and runtime
-- [x] Reproducible builds
-- [ ] clients (GNOME Software/KDE Discover/CLI)
-- [ ] updates (e.g. what gets held)
-- [x] signing
 
 Apps take a long journey from a developer’s source code to being used on someone’s device; let’s take a look at that journey from a perspective of safety.
 
@@ -86,7 +76,7 @@ Apps can be [verified](https://docs.flathub.org/docs/for-app-authors/verificatio
 
 ![Verified checkmark](verified-alt.png)
 
-Around half of the apps on Flathub so far are verified, with the number regularly increasing.
+Over half of the apps on Flathub so far are verified, with the number regularly increasing.
 
 ## App Store Clients
 
@@ -99,6 +89,16 @@ Once an app is developed, submitted, tested, approved, built, and distributed, i
 - If static permissions increase between releases
 
 Flathub.org and GNOME Software also display the app’s verified status.
+
+## Updates
+
+Once an app is accepted onto Flathub, it's not just the wild west; there are still a number of safety protections built into the flow:
+
+- **Flathub maintains ownership over the manifest repo**, while app developers are invited as limited collaborators
+- **The manifest’s default branch is protected**, preventing direct pushes without a pull request
+- **Flathub's automated tests must pass** before a PR can be merged and an update can be pushed
+- **Static permission changes are held for human review** before an update is released to users
+- **Critical MetaInfo changes are held for human review**, e.g. if an app changes its name
 
 ## Caveats
 
