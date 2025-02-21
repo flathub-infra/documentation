@@ -24,20 +24,55 @@ From a technical perspective, Flatpak does not require elevated privileges to in
 
 Flatpak apps are also built from a declarative manifest, which defines the exact sources and environment to build from to enable auditability and as much reproducibility as possible.
 
-Due to Flatpak’s sandboxing, apps don’t have permission to access to many aspects of the host OS or user data they might need. To get that access, apps must request it using Portals or static permissions.
+Due to Flatpak’s sandboxing, apps don’t have permission to access many aspects of the host OS or user data they might need. To get that access, apps must either request it using Portals or use static permissions.
 
-### Portals & Static Permissions
+### Dynamic permissions
 
-Most permissions can be requested and granted on demand via an API called [Portals](https://flatpak.github.io/xdg-desktop-portal/docs/). These permissions do not need to be given ahead of time, as desktop environments provide the mechanisms to give user consent and control over them e.g. by indicating their use, directly prompting the user before the permission is granted, and allowing revocation.
+Most permissions can be requested and granted on demand via an API
+called [Portals](https://flatpak.github.io/xdg-desktop-portal/docs/).
+These permissions do not need to be given ahead of time, as desktop
+environments provide the mechanisms to give user consent and control
+over them e.g. by indicating their use, directly prompting the user
+before the permission is granted, and allowing revocation.
 
 ![Illustration of portal, light](xdg-portal-light.png#gh-light-mode-only)
 ![Illustration of a portal, dark](xdg-portal-dark.png#gh-dark-mode-only)
 
-Portals include APIs for handling auto-start and background activity; access to the camera, clipboard, documents, files, location, screen casting, screenshots, secrets like passwords, trash, and USB devices; setting global shortcuts; inhibiting suspend or shut down; capturing input; monitoring memory, network, or power profiles; sending notifications; printing; setting a wallpaper; and more. In each case, the user’s desktop environment (like GNOME or KDE) manages if and how a user is notified or prompted for permissions—and if the permission is not granted, the app must handle it gracefully.
+Portals include APIs for handling auto-start and background activity;
+access to the camera, clipboard, documents, files, location, screen
+casting, screenshots, secrets like passwords, trash, and USB devices;
+setting global shortcuts; inhibiting suspend or shut down; capturing
+input; monitoring memory, network, or power profiles; sending
+notifications; printing; setting a wallpaper; and more. In each case,
+the user’s desktop environment (like GNOME or KDE) manages if and how a
+user is notified or prompted for permissions—and if the permission is
+not granted, the app must handle it gracefully.
 
-Apps must also define any [static permissions](https://docs.flatpak.org/en/latest/sandbox-permissions.html) they need to function. These are clearly defined up front and include access to resources such as the network, Bluetooth, and audio devices. For regular file handling such as opening or saving, apps can use the File Chooser portal. In some cases apps may only make sense with permanent access to specific a folder, in which case a narrowly-scoped static permission (e.g. read-only access to the user’s Music folder) may be used.
+Portals is a fairly new addition to the Freedesktop ecosystem; desktop
+environments need to implement them and app developers are increasingly
+adopting them.
 
-Static permissions are designed to be as narrowly-scoped as possible and are unchanging per release of an app. They are not designed to be modified by an end user except in cases of development, debugging, or [reducing permissions](https://docs.flathub.org/docs/for-users/permissions). Due to this, Flatpak always prefers apps to use Portals over static permissions whenever possible.
+### Static permissions
+
+Static permissions are set by application developers at build time.
+They allow exposing specific resources from the host into the sandbox
+which makes them accessible as if the sandbox was not there. They serve
+multiple purposes:
+
+1. Give Flatpak apps access to basic and safe resources  for which
+   dynamic permissions would not make sense. For example Wayland or
+   hardware acceleration
+2. Allow apps who haven't implemented portals to be functional
+3. Provide a solution when a portal is not available yet for a
+   specific feature
+
+See also
+
+* [Sandbox Permissions on flatpak.org](https://docs.flatpak.org/en/latest/sandbox-permissions.html)
+* [Permissions on flathub.org](https://docs.flathub.org/docs/for-app-authors/requirements#permissions)
+
+Static permissions are reviewed by Flathub human reviewers when a new
+application is submitted and when they are updated between releases.
 
 ### Shared Runtimes & Modules
 
@@ -45,15 +80,16 @@ Every app is built against a [Flatpak runtime](https://docs.flatpak.org/en/lates
 
 Runtimes are automatically installed with apps that require them, and are updated separately by the user’s OS, app store, or CLI when needed. When a dependency in a runtime is updated, e.g. for a critical security update, it rolls out as an update to all users of apps that use that runtime.
 
-In some cases there are commonly-used libraries not provided directly by one of the available runtimes. Flathub provides [shared modules](https://docs.flathub.org/docs/for-app-authors/shared-modules) for these libraries to centralize the maintenance, as well as [automated tooling](https://github.com/flathub-infra/flatpak-external-data-checker) to propose updating these libraries in apps.
+In some cases there are commonly-used libraries not provided directly by one of the available runtimes. Flathub provides [shared modules](https://docs.flathub.org/docs/for-app-authors/shared-modules) for these libraries to centralize the maintenance.
 
 If an app needs to bundle other dependencies, they must be defined in the manifest. We also provide [tooling to automatically suggest updates](https://github.com/flathub-infra/flatpak-external-data-checker) to these dependencies.
 
 ## Submission & Human Review
 
-Once an app is developed, it must be submitted to Flathub for consideration to be hosted and distributed. At this stage, humans from Flathub review the app to ensure it follows the [requirements](https://docs.flathub.org/docs/for-app-authors/requirements). Of note:
+Once an app is developed, it must be submitted to Flathub for consideration to be hosted and distributed. At this stage, human Flathub reviewers will review the app to ensure it follows the [requirements](https://docs.flathub.org/docs/for-app-authors/requirements). Of note:
 
-- **Apps must be sandboxed with as narrow permissions as possible** while still functioning, including using appropriate runtime permissions instead of broad static permissions when possible.
+- **Apps must be sandboxed with as narrow permissions as possible** while still functioning, including using appropriate runtime permissions instead of broad static permissions when possible. All broad
+  static permissions need to be justified by the submitter during review.
 
 - **Apps must not be misleading or malicious**, which covers impersonating other apps or including outright malicious code or functionality.
 
@@ -95,7 +131,8 @@ Flathub.org and GNOME Software also display the app’s verified status.
 
 ## Updates
 
-Once an app is accepted onto Flathub, it’s not just the wild west; there are still a number of safety protections built into the flow:
+Once an app is accepted onto Flathub, it still remains subject to
+various built-in protections to ensure security.
 
 - **Flathub maintains ownership over the manifest repo**, while app developers are invited as limited collaborators
 - **The manifest repo’s default branch is protected**, preventing direct pushes without a pull request
@@ -104,15 +141,22 @@ Once an app is accepted onto Flathub, it’s not just the wild west; there are s
 - **Static permission changes are held for human review** before an update is released to users
 - **Critical MetaInfo changes are held for human review**, e.g. if an app name, developer name, app summary, or license changes
 
+![Build moderation dashboard showing permission changes of Kodi, light](moderation-light.png#gh-light-mode-only)
+![Build moderation dashboard showing permission changes of Kodi, dark](moderation-dark.png#gh-dark-mode-only)
+
 ## Special Cases
 
 There are a few special cases to some of the points above which I would be remiss not to mention.
 
-First, Flathub has granted a small handful of trusted partners (including Mozilla and OBS Studio) the ability to directly upload their builds from their own infrastructure. These projects have an entire CI pipeline which validates the state of their app, and they perform QA before tagging the release and pushing it to Flathub. Even for these few cases of direct uploads, we require a public manifest and build pipeline to enable similar reproducibility and auditability as outlined above. We also require the apps to be verified, and still run automated tests such as our linter against them.
+Flathub has granted a select group of trusted partners, including Mozilla and OBS Studio, the ability to directly upload their builds from their own infrastructure. These projects have an entire CI pipeline which validates the state of their app, and they perform QA before tagging the release and pushing it to Flathub. Even for these few cases of direct uploads, we require a public manifest and build pipeline to enable similar reproducibility and auditability as outlined above. We also require the apps to be verified, and still run automated tests such as our linter against them.
 
 Lastly, some apps (around 6%) use [extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data) to instruct Flatpak to download and unpack an existing package (e.g. a Debian package) during installation. This process runs in a tight unprivileged Flatpak sandbox that does not allow host filesystem or network access, and the sandbox cannot be modified by app developers. These are largely proprietary apps that cannot be built on Flathub’s infrastructure, or apps using complex toolchains that require network access during build. This is discouraged since it does not enable the same level of auditability nor multi-architecture support that building from source does. As a result, this is heavily scrutinized during human review and only accepted as a last resort.
 
-Even with the above, the vast majority of apps are built reproducibly from source on Flathub’s infrastructure—and the handful that aren’t still greatly benefit from the transparency and auditability built into all of the other layers.
+Even with the above, the vast majority of apps are built reproducibly
+from source on Flathub’s infrastructure and 83% of the app catalog
+supports multiple architectures. The handful of apps that aren’t built
+from source still greatly benefit from the transparency and auditability
+built into all of the other layers.
 
 ## Incident Response
 
@@ -126,4 +170,8 @@ We take security reports and legal issues very seriously; please [contact the Fl
 
 As you can see, Flathub takes safety very seriously. We’ve worked with the greater Linux and FreeDesktop ecosystem for _over a decade_ on efforts such as Flatpak, OSTree, Portals, and even desktop environments and app store clients to help build the best app distribution experience—for both users and app developers—with safety as a core requirement. We believe our in-depth, multi-layered approach to safety has set a high bar that few others have met—and we will continue to raise it.
 
-Thank you to all of the contributors to Flatpak, Flathub, and all of the technologies our ecosystem depends on for supporting us. Thank you to the developers of thousands of apps for entrusting us with the distribution of your apps to users. Thank you to bbhtt, Jordan, and Sonny for the thorough reviews of this blog post. And as always, thank you to the millions of users trusting Flathub as your source of apps on Linux. ♥
+Thank you to all contributors to Flatpak, Flathub, and the technologies
+our ecosystem relies on. Thanks to the thousands of developers for
+trusting us with app distribution, and to bbhtt, Jordan, and Sonny for
+reviewing this post. And as always, thank you to the millions of users
+trusting Flathub as your source of apps on Linux. ♥
