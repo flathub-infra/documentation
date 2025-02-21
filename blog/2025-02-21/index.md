@@ -96,6 +96,7 @@ Once an app is accepted onto Flathub, it’s not just the wild west; there are s
 
 - **Flathub maintains ownership over the manifest repo**, while app developers are invited as limited collaborators
 - **The manifest’s default branch is protected**, preventing direct pushes without a pull request
+- **The manifest’s commit history cannot be rewritten**, making it harder to sneak something in
 - **Flathub’s automated tests must pass** before a PR can be merged and an update can be pushed
 - **Static permission changes are held for human review** before an update is released to users
 - **Critical MetaInfo changes are held for human review**, e.g. if an app changes its name or license
