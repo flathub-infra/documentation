@@ -66,7 +66,7 @@ In addition to human review, Flathub also makes use of automated testing for a n
 
 Once an app has been approved and passes initial tests, it is built using the open source and publicly-available flatpak-builder utility from the approved public manifest, on Flathub’s infrastructure, and without network access. Sources for the app are validated against the documented checksums, and the build fails if they do not match.
 
-For further auditability, we insert the git short rev into the Flatpak build subject so anyone can confirm which commit of the manifest repo a specific build was built from. The build itself is signed by Flathub’s key, and Flatpak/OSTree verify these signatures when installing and updating apps.
+For further auditability, we specify the git commit of the manifest repo used for the build in the Flatpak build subject. The build itself is signed by Flathub’s key, and Flatpak/OSTree verify these signatures when installing and updating apps.
 
 We mirror the exact sources each app is built against in case the original source goes down or there is some other issue, and anyone can build the Flatpak back from those mirrored source to reproduce or audit the build. The manifest used to build the app is distributed to every user in the app’s sandbox at `/app/manifest.json`, which can be inspected and used to rebuild the app exactly as it was built by Flathub.
 
