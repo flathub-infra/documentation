@@ -68,7 +68,7 @@ Once an app has been approved and passes initial tests, it is built using the op
 
 For further auditability, we specify the git commit of the manifest repo used for the build in the Flatpak build subject. The build itself is signed by Flathub’s key, and Flatpak/OSTree verify these signatures when installing and updating apps.
 
-We mirror the exact sources each app is built against in case the original source goes down or there is some other issue, and anyone can build the Flatpak back from those mirrored source to reproduce or audit the build. The manifest used to build the app is distributed to every user in the app’s sandbox at `/app/manifest.json`, which can be inspected and used to rebuild the app exactly as it was built by Flathub.
+We mirror the exact sources each app is built against in case the original source goes down or there is some other issue, and anyone can build the Flatpak back from those mirrored sources to reproduce or audit the build. The manifest used to build the app is hosted on Flathub's GitHub org, plus distributed to every user in the app’s sandbox at `/app/manifest.json`—both of which can be compared, inspected, and used to rebuild the app exactly as it was built by Flathub.
 
 ## Verification
 
