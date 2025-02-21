@@ -78,7 +78,7 @@ Once an app has been approved and passes initial tests, it is built using the op
 
 For further auditability, we insert the git short rev into the Flatpak build subject so anyone can confirm which commit of the manifest repo a specific build was built from. The build itself is signed by Flathub's key, and Flatpak/OSTree verify these signatures when installing and updating apps.
 
-We mirror the exact sources each app is built against in case the original source goes down or there is some other issue, and anyone can build the Flatpak back from those mirrored source to reproduce or audit the build. The manifest used to build the app is distributed to every user in the app’s sandbox at `/app/manifest.json`, which can be inspected and used rebuild the app exactly as it was built by Flathub.
+We mirror the exact sources each app is built against in case the original source goes down or there is some other issue, and anyone can build the Flatpak back from those mirrored source to reproduce or audit the build. The manifest used to build the app is distributed to every user in the app’s sandbox at `/app/manifest.json`, which can be inspected and used to rebuild the app exactly as it was built by Flathub.
 
 ## Verification
 
@@ -102,7 +102,11 @@ Flathub.org and GNOME Software also display the app's verified status.
 
 ## Caveats
 
-There are a few caveats to some of the points above which I would be remiss not to mention. First, Flathub has granted a small handful of trusted partners the ability to directly upload their 
+There are a few caveats to some of the points above which I would be remiss not to mention. First, Flathub has granted a small handful of trusted partners (including Mozilla and OBS Studio) the ability to directly upload their builds from their own infrastructure. Even for the few cases of direct uploads, we require a public manifest and build pipeline to enable similar reproducibility and auditability as outlined above. We also require the apps to be verified.
+
+Lastly, some apps (around 6%) use [extra-data](https://docs.flatpak.org/en/latest/conventions.html#exporting-through-extra-data) to download and unpack an existing package (e.g. a Debian package) during installation. These are largely proprietary apps that cannot be built on Flathub’s infrastructure, or apps using complex toolchains that require network access during build. This is discouraged since it does not enable the same level of auditability nor multi-architecture support that building from source does. As a result, this is heavily scrutinized during human review and only accepted as a last resort.
+
+Even with the above, the vast majority of apps are built reproducibly from source on Flathub's infrastructure—and the handful that aren't still greatly benefit from the transparency and auditability built into the other layers.
 
 ## Incident Response
 
