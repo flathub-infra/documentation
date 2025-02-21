@@ -21,7 +21,7 @@ Each app on Flathub is distributed as a [Flatpak](https://flatpak.org/). This ap
 
 From a technical perspective, Flatpak does not require elevated privileges to install apps, isolates apps from one another, and limits app access to the host environment. It makes deep use of existing Linux security technologies such as cgroups, namespaces, bind mounts, and seccomp as well as [Bubblewrap](https://github.com/containers/bubblewrap) for sandboxing.
 
-Flatpak apps are also built from a declarative manifest, which defines the exact sources to build from to enable as much reproducibility as possible.
+Flatpak apps are also built from a declarative manifest, which defines the exact sources and environment to build from to enable as much reproducibility as possible.
 
 Due to Flatpak’s sandboxing, apps don’t have permission to access to many aspects of the host OS or user data they might need. To get that access, apps must request it using Portals or static permissions.
 
