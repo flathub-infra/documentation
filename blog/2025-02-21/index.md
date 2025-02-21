@@ -103,7 +103,9 @@ Once an app is accepted onto Flathub, it’s not just the wild west; there are s
 
 ## Caveats
 
-There are a few caveats to some of the points above which I would be remiss not to mention. First, Flathub has granted a small handful of trusted partners (including Mozilla and OBS Studio) the ability to directly upload their builds from their own infrastructure. Even for the few cases of direct uploads, we require a public manifest and build pipeline to enable similar reproducibility and auditability as outlined above. We also require the apps to be verified, and still run automated tests such as our linter against them.
+There are a few caveats to some of the points above which I would be remiss not to mention.
+
+First, Flathub has granted a small handful of trusted partners (including Mozilla and OBS Studio) the ability to directly upload their builds from their own infrastructure. These projects have an entire CI pipeline which validates the state of their app, and they perform QA before tagging the release and pushing it to Flathub. Even for these few cases of direct uploads, we require a public manifest and build pipeline to enable similar reproducibility and auditability as outlined above. We also require the apps to be verified, and still run automated tests such as our linter against them.
 
 Lastly, some apps (around 6%) use [extra-data](https://docs.flatpak.org/en/latest/conventions.html#exporting-through-extra-data) to instruct Flatpak to download and unpack an existing package (e.g. a Debian package) during installation. These are largely proprietary apps that cannot be built on Flathub’s infrastructure, or apps using complex toolchains that require network access during build. This is discouraged since it does not enable the same level of auditability nor multi-architecture support that building from source does. As a result, this is heavily scrutinized during human review and only accepted as a last resort.
 
