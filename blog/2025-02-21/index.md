@@ -12,7 +12,7 @@ With thousands of apps and billions of downloads, Flathub has a responsibility t
 
 <!-- truncate -->
 
-Apps take a long journey from a developer’s source code to being used on someone’s device; let’s take a look at that journey from a perspective of safety.
+While apps and updates can be fairly quickly published to Flathub, behind the scenes each one takes a long journey full of safety nets to get from a developer’s source code to being used on someone’s device.
 
 ## Flatpak Security & Sandboxing
 
@@ -22,7 +22,7 @@ Each app on Flathub is distributed as a [Flatpak](https://flatpak.org/). This ap
 
 From a technical perspective, Flatpak does not require elevated privileges to install apps, isolates apps from one another, and limits app access to the host environment. It makes deep use of existing Linux security technologies such as cgroups, namespaces, bind mounts, and seccomp as well as [Bubblewrap](https://github.com/containers/bubblewrap) for sandboxing.
 
-Flatpak apps are also built from a declarative manifest, which defines the exact sources and environment to build from to enable as much reproducibility as possible.
+Flatpak apps are also built from a declarative manifest, which defines the exact sources and environment to build from to enable auditability and as much reproducibility as possible.
 
 Due to Flatpak’s sandboxing, apps don’t have permission to access to many aspects of the host OS or user data they might need. To get that access, apps must request it using Portals or static permissions.
 
@@ -41,11 +41,13 @@ Static permissions are designed to be as narrowly-scoped as possible and are unc
 
 ### Shared Runtimes & Modules
 
-Every app is built against a [Flatpak runtime](https://docs.flatpak.org/en/latest/basic-concepts.html#runtimes) hosted by Flathub. The runtimes provide basic dependencies, are well-maintained by the Linux community, and are organized according to various platforms a developer may target; for example, GNOME, KDE, or a generic FreeDesktop SDK. This means many apps—especially those targeting a platform like GNOME or KDE and using its developer libraries—don’t need to pull in external dependencies.
+Every app is built against a [Flatpak runtime](https://docs.flatpak.org/en/latest/basic-concepts.html#runtimes) hosted by Flathub. The runtimes provide basic dependencies, are well-maintained by the Linux community, and are organized according to various platforms a developer may target; for example, GNOME, KDE, or a generic FreeDesktop SDK. This means many apps—especially those targeting a platform like GNOME or KDE and using its developer libraries—don’t need to pull in external dependencies for critical components.
 
 Runtimes are automatically installed with apps that require them, and are updated separately by the user’s OS, app store, or CLI when needed. When a dependency in a runtime is updated, e.g. for a critical security update, it rolls out as an update to all users of apps that use that runtime.
 
 In some cases there are commonly-used libraries not provided directly by one of the available runtimes. Flathub provides [shared modules](https://docs.flathub.org/docs/for-app-authors/shared-modules) for these libraries to centralize the maintenance, as well as [automated tooling](https://github.com/flathub-infra/flatpak-external-data-checker) to propose updating these libraries in apps.
+
+If an app needs to bundle other dependencies, they must be defined in the manifest. We also provide [tooling to automatically suggest updates](https://github.com/flathub-infra/flatpak-external-data-checker) to these dependencies.
 
 ## Submission & Human Review
 
@@ -61,7 +63,7 @@ Each of the documented requirements are checked—and if a reviewer finds someth
 
 ## Automated Testing
 
-In addition to human review, Flathub also makes use of automated testing for a number of quality and safety checks. For example, our automated tests block unsafe or outright wrong permissions, such as apps requesting access to whole session or system buses or unsafe bus names. Our automated tests also help ensure reproducible builds by disallowing pointing at bare git branches without a specific commit and/or tag specified.
+In addition to human review, Flathub also makes use of automated testing for a number of quality and safety checks. For example, our automated tests block unsafe or outright wrong permissions, such as apps requesting access to whole session or system buses or unsafe bus names. Our automated tests also help ensure reproducible builds by disallowing pointing at bare git branches without a specific commit.
 
 ## Reproducibility & Auditability
 
