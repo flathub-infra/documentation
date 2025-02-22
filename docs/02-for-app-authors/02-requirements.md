@@ -17,14 +17,14 @@ graphical desktop applications that seamlessly integrate with the Linux
 desktop environment and enhance the user experience.
 
 This policy defines the types of applications that are not eligible
-for submission. These guidelines may evolve over time, and exceptions
-may be granted in specific cases.
+for submission and applies to new submissions only. These guidelines
+may evolve over time, and exceptions may be granted in specific cases.
 
-- **Non-functional submissions**: Applications that are not fully
+- **Non-functional submissions**: App submissions that are not fully
   functional during review that degrade the user experience will not be
   accepted unless improved.
 
-- **Console applications**: Flatpak is generally not well-suited for
+- **Console app submissions**: Flatpak is generally not well-suited for
   console or terminal-based applications. Any such submissions that is
   not sufficiently user facing or offers overly niche or limited
   functionality will not be accepted.
@@ -34,7 +34,15 @@ may be granted in specific cases.
   or forks of existing projects without any significant modification
   will not be accepted.
 
-- **Misleading or malicious applications**: Applications that
+- **Submissions incompatible or restricted by Flatpak sandbox**: Certain
+  types of applications, such as evelopment tools and IDEs with a broad
+  scope, are generally not well-suited for Flatpak due to inherent
+  sandboxing limitations and severely degrade the user experience. Unless
+  these applications are being officially submitted by the upstream
+  developers and/or upstream has explicitly committed to supporting
+  Flatpak they will not be accepted.
+
+- **Misleading or malicious app submissions**: App submissions that
   impersonate, provide false or misleading descriptions, functionality,
   attempt to deceive users, violate trademarks, infringes copyrights or
   contains malicious code will not be accepted.
