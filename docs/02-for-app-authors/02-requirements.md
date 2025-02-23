@@ -35,7 +35,7 @@ may evolve over time, and exceptions may be granted in specific cases.
   will not be accepted.
 
 - **Submissions incompatible or restricted by Flatpak sandbox**: Certain
-  types of applications, such as evelopment tools and IDEs with a broad
+  types of applications, such as development tools and IDEs with a broad
   scope, are generally not well-suited for Flatpak due to inherent
   sandboxing limitations and severely degrade the user experience. Unless
   these applications are being officially submitted by the upstream
