@@ -29,10 +29,10 @@ may evolve over time, and exceptions may be granted in specific cases.
   not sufficiently user facing or offers overly niche or limited
   functionality will not be accepted.
 
-- **Low-effort submissions**: Submissions that offer very minimal
-  functionality often consisting of simple scripts, single source-files
-  or forks of existing projects without any significant modification
-  will not be accepted.
+- **Minimal submissions**: Submissions that offer very minimal
+  functionality often consisting of simple scripts, single or simple
+  sources or aren't suitable as desktop apps or forks of existing
+  projects without any significant modification will not be accepted.
 
 - **Submissions incompatible or restricted by Flatpak sandbox**: Certain
   types of applications, such as development tools and IDEs with a broad
