@@ -976,6 +976,13 @@ The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has a `--own-name=` starting with
 `ca.desrt.dconf`.
 
+### finish-args-mpris-flatpak-id-own-name
+
+**Exceptions allowed**: No
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--own-name=org.mpris.MediaPlayer2.$FLATPAK_ID`.
+
 ### finish-args-freedesktop-dbus-talk-name
 
 **Exceptions allowed**: Yes, on a case-by-case basis
@@ -995,6 +1002,13 @@ in the manifest has a `--talk-name=` starting with
 Portal interfaces do not need to be manually added. These are allowed by
 Flatpak by default.
 
+### finish-args-mpris-flatpak-id-talk-name
+
+**Exceptions allowed**: No
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--talk-name=org.mpris.MediaPlayer2.$FLATPAK_ID`.
+
 ### finish-args-flatpak-talk-name
 
 **Exceptions allowed**: No
@@ -1002,6 +1016,13 @@ Flatpak by default.
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has a `--talk-name=` starting with
 `org.freedesktop.Flatpak.`.
+
+### finish-args-mpris-flatpak-id-system-own-name
+
+**Exceptions allowed**: No
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `-system-own-name=org.mpris.MediaPlayer2.$FLATPAK_ID`.
 
 ### finish-args-wildcard-freedesktop-system-own-name
 
@@ -1047,6 +1068,13 @@ in the manifest has `--system-own-name=` starting with
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `--system-talk-name=` starting with
 `org.freedesktop.DBus`.
+
+### finish-args-mpris-flatpak-id-system-talk-name
+
+**Exceptions allowed**: No
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `-system-talk-name=org.mpris.MediaPlayer2.$FLATPAK_ID`.
 
 ### finish-args-wildcard-freedesktop-system-talk-name
 
