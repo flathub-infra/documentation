@@ -8,6 +8,13 @@ repository.
 
 ## Flathub Beta repository
 
+:::warning
+The Flathub Beta repository primarily serves as a testing ground for
+alpha and beta versions of applications. As a result, it may include
+unstable, experimental versions of applications. Please proceed with
+caution when using using this.
+:::
+
 Apart from the primary stable repository above, Flathub also has beta
 repository that applications sometime use to serve secondary versions.
 
