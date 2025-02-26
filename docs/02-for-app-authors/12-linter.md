@@ -1610,3 +1610,9 @@ is using `cmake` or `cmake-ninja` as buildsystem has a `CMAKE_BUILD_TYPE`
 value, not of `Release, RelWithDebInfo, MinSizeRel`.
 
 It is recommended to use one of those as the build type.
+
+### runtime-is-eol-id-branch
+
+**Exceptions allowed**: Yes
+
+The Flatpak package is using a runtime that is [End-of-Life](/docs/for-app-authors/runtimes#currently-hosted-runtimes).
