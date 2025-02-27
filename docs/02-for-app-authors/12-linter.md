@@ -48,7 +48,7 @@ You can check the current set of published exceptions for an application
 with:
 
 ```bash
-curl -s https://flathub.org/api/v2/exceptions|jq '."my.app.id"'
+curl -s https://flathub.org/api/v2/exceptions/my.app.id
 ```
 
 ## Linter errors
