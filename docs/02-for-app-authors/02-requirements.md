@@ -49,6 +49,10 @@ may evolve over time, and exceptions may be granted in specific cases.
   officially by upstream with the intention of maintaining it in official
   capacity.
 
+- **Extensions or BaseApps**: Flatpak extensions that add support for
+  new languages, language specific tooling etc. or BaseApps will need a
+  clear use case defined and prospective users to be accepted.
+
 - **Misleading or malicious app submissions**: App submissions that
   impersonate, provide false or misleading descriptions, functionality,
   attempt to deceive users, violate trademarks, infringes copyrights or
