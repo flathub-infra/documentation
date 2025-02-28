@@ -42,6 +42,13 @@ may evolve over time, and exceptions may be granted in specific cases.
   developers and/or upstream has explicitly committed to supporting
   Flatpak they will not be accepted.
 
+- **Windows app submissions using Wine or emulation or translation layers**:
+  Windows application submissions that are using Wine or any submissions
+  that aren't native to Linux desktop and is using some emulation or
+  translation layer will only be accepted if they are submitted
+  officially by upstream with the intention of maintaining it in official
+  capacity.
+
 - **Misleading or malicious app submissions**: App submissions that
   impersonate, provide false or misleading descriptions, functionality,
   attempt to deceive users, violate trademarks, infringes copyrights or
