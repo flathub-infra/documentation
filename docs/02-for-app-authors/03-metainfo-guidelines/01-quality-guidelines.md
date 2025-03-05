@@ -387,6 +387,11 @@ smaller (2000x1400 for HiDPI).
 
 ![Examples for screenshots that are too large, and the correct size.](assets/screenshot-size.png)
 
+For complex apps that are often used maximized and with many UI panels 
+(e.g. 3D modeling or game engines), larger screenshots may be used so 
+long as they are visually helpful, the specific UI text is less 
+important, and the screenshot is demonstrative of typical use of the app.
+
 ### Image captions
 
 Every screenshot should have a [caption](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-screenshots)
