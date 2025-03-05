@@ -382,15 +382,17 @@ remove the shadow and rounding.
 ### Reasonable window size
 
 In order to ensure that text and interface elements are visible scaled
-down in the app store UI the window size should be 1000x700 pixels or
-smaller (2000x1400 for HiDPI).
+down in the app store UI, the window size should typically be around 
+1000x700 pixels or smaller (2000x1400 for HiDPI).
 
 ![Examples for screenshots that are too large, and the correct size.](assets/screenshot-size.png)
 
 For complex apps that are often used maximized and with many UI panels 
 (e.g. 3D modeling or game engines), larger screenshots may be used so 
 long as they are visually helpful, the specific UI text is less 
-important, and the screenshot is demonstrative of typical use of the app.
+important, and the screenshot is demonstrative of typical use of the 
+app. However, extra care should be taken to avoid large, empty areas 
+of the window.
 
 ### Image captions
 
