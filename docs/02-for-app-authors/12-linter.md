@@ -369,6 +369,11 @@ file.
 This usually indicates something else is wrong. Please review additional
 errors if present.
 
+### appstream-missing-component-type
+
+The [AppStream catalog](/docs/for-app-authors/metainfo-guidelines/#checking-the-generated-output)
+file is missing the `type` attribute in component tag.
+
 ### appstream-missing-categories
 
 
@@ -1265,7 +1270,6 @@ All MetaInfo files must start with the [component tag](/docs/for-app-authors/met
 with a proper `type` attribute.
 
 ### metainfo-missing-component-type
-
 
 The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
 is missing the `type` attribute in the `component` tag.
