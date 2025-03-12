@@ -1,7 +1,7 @@
 razze:
   name: Kolja Lampe
   title: Flathub Community Member
-  image_url: https://github.com/razzeee.png
+  image_url: https://docs.flathub.org/avatars/razzeee.png
   socials:
     github: razzeee
     mastodon: https://osna.social/@razze
@@ -9,14 +9,14 @@ razze:
 bertob:
   name: Tobias Bernard
   title: Flathub Community Member
-  image_url: https://github.com/bertob.png
+  image_url: https://docs.flathub.org/avatars/bertob.png
   socials:
     Website: https://tobiasbernard.com/
 
 cassidyjames:
   name: Cassidy James Blaede
   title: Flathub Community Member
-  image_url: https://cassidyjames.com/images/me.jpg
+  image_url: https://docs.flathub.org/avatars/cassidy.jpg
   socials:
     Website: https://cassidyjames.com/
     github: cassidyjames
@@ -25,7 +25,7 @@ cassidyjames:
 barthalion:
   name: Bart Piotrowski
   title: Flathub Fixer
-  image_url: https://github.com/barthalion.png
+  image_url: https://docs.flathub.org/avatars/barthalion.png
   socials:
     Website: https://barthalion.blog
     github: barthalion
