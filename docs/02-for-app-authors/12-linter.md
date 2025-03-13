@@ -560,6 +560,17 @@ The [desktop file(s)](https://docs.flatpak.org/en/latest/conventions.html#deskto
 are either not installed to the proper location during the build or does
 not match the `$FLATPAK_ID`.
 
+### elf-arch-multiple-found
+
+Multiple ELF architectures were found after analysing the contents of the
+ref or build directory. All ELFs should match the architecture of the
+host.
+
+### elf-arch-not-found
+
+The architecture of ELFs in the ref contents or build directory does
+not match the architecture of the OSTree ref.
+
 ### external-gitmodule-url-found
 
 Git submodules outside of the GitHub orgs `flathub, flathub-infra, flatpak`
@@ -1047,6 +1058,20 @@ The manifest has a `talk-name` that is `org.kde.*`.
 
 Wildcard access to bus names in well known namespace is a security issue.
 
+### finish-args-no-required-flatpak
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has some newly introduced Flatpak context metadata
+such as `--device=input` or `--device=usb` but doesn't have
+`--require-version`.
+
+### finish-args-insufficient-required-flatpak
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has newly introduced Flatpak context metadata
+such as `--device=input` or `--device=usb` but the specified
+`--require-version` is insufficient. It should be >=1.16.0.
+;
 ### flat-manager-branch-repo-mismatch
 
 The branch of the ostree ref does not match the target Flathub repo it
