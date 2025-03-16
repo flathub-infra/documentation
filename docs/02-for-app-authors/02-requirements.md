@@ -95,7 +95,7 @@ The following rules should be followed when creating application IDs.
 - The domain portion must be in lowercase and must convert dash `-` to
   underscore `_` and also prefix any intial digits with an underscore
   `_`. If any component after the domain portion also starts with an
-  intial digit, it needs to be prefixed with an an underscore similarly.
+  initial digit, it needs to be prefixed with an an underscore similarly.
 
 - The ID must not end in generic terms like `.desktop` or `.app`. It's
   fine to repeat the application name in such cases.
