@@ -94,7 +94,8 @@ The following rules should be followed when creating application IDs.
 
 - The domain portion must be in lowercase and must convert dash `-` to
   underscore `_` and also prefix any intial digits with an underscore
-  `_`.
+  `_`. If any component after the domain portion also starts with an
+  intial digit, it needs to be prefixed with an an underscore similarly.
 
 - The ID must not end in generic terms like `.desktop` or `.app`. It's
   fine to repeat the application name in such cases.
@@ -124,7 +125,8 @@ portion of the ID and converting underscores to dashes.
 - The domain must be directly related to the project or the application
   being submitted and the author or the developer or the project must have
   control over the domain. The corresponding URL must be reachable over
-  HTTP(S).
+  HTTPS. In some edge cases, if it is not reachable, an exception can be
+  granted after manually checking.
 
   [Verification](/docs/for-app-authors/verification) may require placing
   a token under `https://{domain name}/.well-known/org.flathub.VerifiedApps.txt`
@@ -141,7 +143,9 @@ Note, that some code hosting platforms like GitLab may have
 case-sensitive namespaces.
 
 - Applications using code hosting IDs must have the repository URL
-  reachable.
+  reachable. In some edge cases, if the calculated code hosting URL
+  doesn't match exactly, an exception can be granted after manually
+  checking.
 
 For example, the repository URL for the ID `io.github.example_foo.bar`
 will be `https://github.com/example-foo/bar` and for the ID
