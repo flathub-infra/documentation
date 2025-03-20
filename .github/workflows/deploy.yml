@@ -21,6 +21,7 @@ jobs:
           # Needed for sitemap generation with valid lastmod
           # https://github.com/facebook/docusaurus/pull/9954#issuecomment-2032900942
           fetch-depth: 0
+          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: 20
