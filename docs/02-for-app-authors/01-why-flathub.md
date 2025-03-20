@@ -19,6 +19,6 @@ with a wider audience.
 
 ## Submitting apps
 
-Please follow the [submission requirements](/docs/for-app-authors/requirements)
+Please follow the [submission requirements](http://flathub.org/)
 and the [submission guide](/docs/for-app-authors/submission) to start
 distributing your app!
