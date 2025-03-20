@@ -62,5 +62,9 @@ jobs:
   deploy-call:
     needs:
       - check
+    permissions:
+      pages: write
+      id-token: write
+      contents: read
     if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
     uses: ./.github/workflows/deploy.yml
