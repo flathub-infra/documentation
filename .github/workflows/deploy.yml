@@ -1,10 +1,7 @@
 name: Deploy
 
 on:
-  workflow_run:
-    workflows: [Check]
-    types: [completed]
-    branches: [main]
+  workflow_call:
   workflow_dispatch:
 
 concurrency:
