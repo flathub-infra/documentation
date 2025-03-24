@@ -144,7 +144,7 @@ function BannerPreviewPage() {
                   type="file"
                   id="screenshot"
                   name="screenshot"
-                  accept="image/png"
+                  accept="image/png, image/jpeg, image/webp"
                   onChange={(e) => handleScreenshotChange(e)}
                 />
               </div>
