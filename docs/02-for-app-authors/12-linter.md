@@ -845,6 +845,12 @@ in the manifest has a `--own-name=` starting with
 Portal interfaces do not need to be manually added. These are allowed by
 Flatpak by default.
 
+### finish-args-portal-impl-component-own-name
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--own-name=` starting with
+`org.freedesktop.impl.portal.`.
+
 ### finish-args-dconf-own-name
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
@@ -871,6 +877,12 @@ in the manifest has a `--talk-name=` starting with
 Portal interfaces do not need to be manually added. These are allowed by
 Flatpak by default.
 
+### finish-args-portal-impl-component-talk-name
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--talk-name=` starting with
+`org.freedesktop.impl.portal.`.
+
 ### finish-args-mpris-flatpak-id-talk-name
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
@@ -886,6 +898,12 @@ in the manifest has a `--talk-name=` starting with
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `-system-own-name=org.mpris.MediaPlayer2.$FLATPAK_ID`.
+
+### finish-args-portal-impl-component-system-own-name
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--system-own-name=` starting with
+`org.freedesktop.impl.portal.`.
 
 ### finish-args-wildcard-freedesktop-system-own-name
 
@@ -913,6 +931,12 @@ in the manifest has `--system-own-name=` starting with
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `--system-own-name=` starting with
 `org.freedesktop.Flatpak`.
+
+### finish-args-portal-impl-component-system-talk-name
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--system-talk-name=` starting with
+`org.freedesktop.impl.portal.`.
 
 ### finish-args-freedesktop-dbus-system-talk-name
 
