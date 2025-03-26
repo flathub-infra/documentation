@@ -849,7 +849,8 @@ Flatpak by default.
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has a `--own-name=` starting with
-`org.freedesktop.impl.portal.`.
+`org.freedesktop.impl.portal.`. `component` is the last component of the
+bus name in lowercase.
 
 ### finish-args-dconf-own-name
 
@@ -881,7 +882,8 @@ Flatpak by default.
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has a `--talk-name=` starting with
-`org.freedesktop.impl.portal.`.
+`org.freedesktop.impl.portal.`. `component` is the last component of the
+bus name in lowercase.
 
 ### finish-args-mpris-flatpak-id-talk-name
 
@@ -903,7 +905,8 @@ in the manifest has `-system-own-name=org.mpris.MediaPlayer2.$FLATPAK_ID`.
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has a `--system-own-name=` starting with
-`org.freedesktop.impl.portal.`.
+`org.freedesktop.impl.portal.`. `component` is the last component of the
+bus name in lowercase.
 
 ### finish-args-wildcard-freedesktop-system-own-name
 
@@ -936,7 +939,8 @@ in the manifest has `--system-own-name=` starting with
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has a `--system-talk-name=` starting with
-`org.freedesktop.impl.portal.`.
+`org.freedesktop.impl.portal.`. `component` is the last component of the
+bus name in lowercase.
 
 ### finish-args-freedesktop-dbus-system-talk-name
 
