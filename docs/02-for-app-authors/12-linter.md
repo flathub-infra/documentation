@@ -589,6 +589,29 @@ The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `--socket=x11` or `--socket=fallback-x11` but no
 `--share=ipc`.
 
+### finish-args-legacy-icon-folder-permission
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has filesystem access to `~/.icons`. This is a
+[legacy path](https://docs.flatpak.org/en/latest/desktop-integration.html#icons)
+and should not be used.
+
+### finish-args-legacy-font-folder-permission
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has filesystem access to `~/.fonts`. This is a
+[legacy path](https://docs.flatpak.org/en/latest/desktop-integration.html#fonts)
+and should not be used.
+
+### finish-args-incorrect-theme-folder-permission
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has filesystem access to `~/.themes`. The correct way
+to integrate third party themes for Flatpaks is to package them as
+[Flatpak extensions](https://docs.flatpak.org/en/latest/desktop-integration.html#theming).
+[Unmaintained extensions](https://docs.flatpak.org/en/latest/extension.html#creating-an-unmaintained-gtk-theme-extension)
+can also be used for this.
+
 ### finish-args-absolute-home-path
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
