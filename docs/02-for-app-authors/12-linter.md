@@ -582,6 +582,11 @@ are not allowed in the [Flathub manifest repository on GitHub](https://github.co
 
 Files larger than 20 MB are now allowed in Flathub GitHub repository.
 
+### manifest-directory-too-large
+
+The manifest directory of the Flathub GitHub repository exceeds 25 MB
+excluding the size of `.git/`.
+
 ### finish-args-contains-both-x11-and-fallback
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
