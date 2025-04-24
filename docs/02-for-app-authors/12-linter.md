@@ -576,12 +576,6 @@ not match the architecture of the OSTree ref.
 Git submodules outside of the GitHub orgs `flathub, flathub-infra, flatpak`
 are not allowed in the [Flathub manifest repository on GitHub](https://github.com/flathub/).
 
-### large-git-file-found-filename
-
-`filename` is the basename of the file.
-
-Files larger than 20 MB are now allowed in Flathub GitHub repository.
-
 ### manifest-directory-too-large
 
 The manifest directory of the Flathub GitHub repository exceeds 25 MB
