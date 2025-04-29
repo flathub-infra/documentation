@@ -167,11 +167,9 @@ Merges are also done in batches. So you might have to wait for a while.
 
 ### How long does it take to get the build published after merge?
 
-Usually it should be published within 4-5 hours. Sometimes it might be
-delayed due to load. You can track the build by going to the
-[Buildbot interface](https://flathub.org/builds).
-
-Once published it should show up on the website within a few hours.
+Usually it should be published within 1-2 hour. Sometimes it might be
+delayed due to load. Once published it should show up on the website
+within a few hours.
 
 ### I don't see any screenshots from the test builds-why?
 

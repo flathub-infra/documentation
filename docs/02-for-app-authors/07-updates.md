@@ -8,12 +8,13 @@ backlog.
 
 Updating an application on Flathub (unless it is a direct-upload) is
 done by submitting a pull request to the application repository on
-GitHub. Once the pull request is submitted, a [test build](/docs/for-app-authors/maintenance#buildbot)
+GitHub. Once the pull request is submitted, a [test build](/docs/for-app-authors/maintenance#test-builds)
 will be triggered against it. Once that is successful and the CI passes,
 the maintainers can merge the pull request which will create an
-"official build" on [Buildbot](/docs/for-app-authors/maintenance#buildbot).
+[official build](/docs/for-app-authors/maintenance#official-builds).
 
-The official build, if successful, is directly published to the Flathub repository.
+The official build, if successful, is directly published to the Flathub
+repository.
 
 Pull requests with updates can be automated with [External Data Checker](/docs/for-app-authors/external-data-checker)
 or by using a custom workflow that will submit a pull request to the
