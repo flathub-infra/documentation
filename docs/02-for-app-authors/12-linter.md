@@ -476,7 +476,7 @@ Committing is done after [Flatpak Builder](https://docs.flatpak.org/en/latest/fl
 exported a repo, using `ostree commit --repo=<repo name> --canonical-permissions
 --branch=screenshots/<arch> <builddir>/files/share/app-info/media`.
 
-The process is automated when using [flatpak-github-actions](https://github.com/flathub-infra/flatpak-github-actions#inputs).
+The process is automated when using [flatpak-github-actions](https://github.com/flatpak/flatpak-github-actions#inputs).
 
 ### appstream-screenshots-files-not-found-in-ostree
 
