@@ -4,8 +4,8 @@ This is a guide on how to maintain an application once it is published
 on Flathub. Some familiarity with Git, GitHub and Flatpak is required
 to maintain an application.
 
-Please familiarize yourself with the repository layout, branch structure,
-and Buildbot discussed below. The workflow involves [submitting updates](/docs/for-app-authors/updates#creating-updates)
+Please familiarize yourself with the repository layout, branch structure
+as discussed below. The workflow involves [submitting updates](/docs/for-app-authors/updates#creating-updates)
 or changes via pull requests and merging them when the build is successful
 and tested.
 
@@ -35,12 +35,7 @@ requests and not push directly to them or delete the branches.
 
 Other git branch names are free to use.
 
-## Buildbot
-
-[Buildbot](https://flathub.org/builds) monitors all the protected branches
-and every pull requests in the application repository.
-
-### Test builds
+## Test builds
 
 A _test_ build will be started on every push to a pull request and if
 it is successful the bot will post a link to a Flatpak bundle generated
@@ -54,21 +49,12 @@ the pull request.
 
 An _official_ build will be started on every merge or push to the
 protected branches of the repository. If successful, the official build
-will get published usually within 4-5 hours unless it is held in
+will get published usually within 1-2 hours unless it is held in
 [moderation](#build-moderation).
 
-Maintainers can also start an official build manually by going to the
-[Buildbot](https://flathub.org/builds) frontpage, logging in and clicking
-the "Start build" button.
-
-The git repo branch (either `master`, `beta` or `branch/*`) must be
-entered in the `branch` field, the link to the Flathub git repo
-(eg. `https://github.com/flathub/com.example.Bar.git`) must be entered
-in the `repo uri` field and the appid (eg. `com.example.Bar`) must be
-entered in the `appid` field. The rest should be left empty and then
-the "Start build" button on the popup form needs to be clicked after
-filling it up. That should start a new official build with the latest
-changes from the git branch.
+If an official build fails, please ask the Flathub admins to restart
+it by [opening an issue](https://github.com/flathub/flathub/issues)
+or via [Matrix](https://matrix.to/#/#flathub:matrix.org).
 
 ### Building locally
 
@@ -93,7 +79,7 @@ maintainer of the app is supposed to reply to that and answer any queries
 or fix the issues mentioned.
 
 If it is approved it will get automatically published without the
-usual 4-5 hours publish delay.
+any publish delay.
 
 If the maintainer logged in to the website once, they will get emails
 whenever a build is held for moderation or rejected/approved.

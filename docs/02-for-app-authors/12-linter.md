@@ -476,7 +476,7 @@ Committing is done after [Flatpak Builder](https://docs.flatpak.org/en/latest/fl
 exported a repo, using `ostree commit --repo=<repo name> --canonical-permissions
 --branch=screenshots/<arch> <builddir>/files/share/app-info/media`.
 
-The process is automated when using [flatpak-github-actions](https://github.com/flathub-infra/flatpak-github-actions#inputs).
+The process is automated when using [flatpak-github-actions](https://github.com/flatpak/flatpak-github-actions#inputs).
 
 ### appstream-screenshots-files-not-found-in-ostree
 
@@ -574,7 +574,12 @@ not match the architecture of the OSTree ref.
 ### external-gitmodule-url-found
 
 Git submodules outside of the GitHub orgs `flathub, flathub-infra, flatpak`
-are not allowed.
+are not allowed in the [Flathub manifest repository on GitHub](https://github.com/flathub/).
+
+### manifest-directory-too-large
+
+The manifest directory of the Flathub GitHub repository exceeds 25 MB
+excluding the size of `.git/`.
 
 ### finish-args-contains-both-x11-and-fallback
 
@@ -588,6 +593,29 @@ Both are never needed.
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `--socket=x11` or `--socket=fallback-x11` but no
 `--share=ipc`.
+
+### finish-args-legacy-icon-folder-permission
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has filesystem access to `~/.icons`. This is a
+[legacy path](https://docs.flatpak.org/en/latest/desktop-integration.html#icons)
+and should not be used.
+
+### finish-args-legacy-font-folder-permission
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has filesystem access to `~/.fonts`. This is a
+[legacy path](https://docs.flatpak.org/en/latest/desktop-integration.html#fonts)
+and should not be used.
+
+### finish-args-incorrect-theme-folder-permission
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has filesystem access to `~/.themes`. The correct way
+to integrate third party themes for Flatpaks is to package them as
+[Flatpak extensions](https://docs.flatpak.org/en/latest/desktop-integration.html#theming).
+[Unmaintained extensions](https://docs.flatpak.org/en/latest/extension.html#creating-an-unmaintained-gtk-theme-extension)
+can also be used for this.
 
 ### finish-args-absolute-home-path
 
@@ -845,6 +873,13 @@ in the manifest has a `--own-name=` starting with
 Portal interfaces do not need to be manually added. These are allowed by
 Flatpak by default.
 
+### finish-args-portal-impl-component-own-name
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--own-name=` starting with
+`org.freedesktop.impl.portal.`. `component` is the last component of the
+bus name in lowercase.
+
 ### finish-args-dconf-own-name
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
@@ -871,6 +906,13 @@ in the manifest has a `--talk-name=` starting with
 Portal interfaces do not need to be manually added. These are allowed by
 Flatpak by default.
 
+### finish-args-portal-impl-component-talk-name
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--talk-name=` starting with
+`org.freedesktop.impl.portal.`. `component` is the last component of the
+bus name in lowercase.
+
 ### finish-args-mpris-flatpak-id-talk-name
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
@@ -886,6 +928,13 @@ in the manifest has a `--talk-name=` starting with
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `-system-own-name=org.mpris.MediaPlayer2.$FLATPAK_ID`.
+
+### finish-args-portal-impl-component-system-own-name
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--system-own-name=` starting with
+`org.freedesktop.impl.portal.`. `component` is the last component of the
+bus name in lowercase.
 
 ### finish-args-wildcard-freedesktop-system-own-name
 
@@ -913,6 +962,13 @@ in the manifest has `--system-own-name=` starting with
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `--system-own-name=` starting with
 `org.freedesktop.Flatpak`.
+
+### finish-args-portal-impl-component-system-talk-name
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--system-talk-name=` starting with
+`org.freedesktop.impl.portal.`. `component` is the last component of the
+bus name in lowercase.
 
 ### finish-args-freedesktop-dbus-system-talk-name
 

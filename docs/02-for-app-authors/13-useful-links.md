@@ -7,6 +7,6 @@
 - [Flatpak Builder command reference](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html)
 - [Flatpak Builder manifest reference](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html#flatpak-builder-manifest-reference)
 - [Flathub linter](https://github.com/flathub/flatpak-builder-lint)
-- [Flathub Buildbot](https://buildbot.flathub.org/)
-- [Flathub GitHub actions](https://github.com/flathub-infra/flatpak-github-actions)
+- [Vorarbeiter](https://github.com/flathub-infra/vorarbeiter) (Flathub build dispatcher)
+- [Flathub GitHub actions](https://github.com/flatpak/flatpak-github-actions)
 - [External data checker](https://github.com/flathub/flatpak-external-data-checker)
