@@ -106,7 +106,7 @@ section for more information.
 ### appid-code-hosting-too-few-components
 
 The app id uses a code hosting domain like GitLab, GitHub or Codeberg
-and doesn't have 4 components: `{tld}.{doamin}.foo.bar`.
+and doesn't have 4 components: `{tld}.{domain}.foo.bar`.
 
 Please follow the [app id guidelines](/docs/for-app-authors/requirements#application-id)
 for more information.
