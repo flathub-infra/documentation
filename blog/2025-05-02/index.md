@@ -13,7 +13,7 @@ We have replaced Buildbot with a custom service, and we hope you haven't noticed
 
 [Vorarbeiter][vorarbeiter] is a German word for "foreman" and a living proof of
 my school-related trauma. The new service is a middleman between GitHub and
-GitHub Actions. It is happily humming since April 21st, and largely does what
+GitHub Actions. It has been happily humming since April 21st, and largely does what
 Buildbot did: builds apps, with a sprinkle of publishing logic.
 
 While what happens under the hood is solid, there is no UI yet. Flathub bot
