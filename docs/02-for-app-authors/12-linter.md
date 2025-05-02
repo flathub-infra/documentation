@@ -1181,13 +1181,6 @@ The `flathub.json` file excluded all currently available architectures on
 Flathub ie. `aarch64, x86_64`. At least one must be present otherwise
 the build won't be done.
 
-### flathub-json-modified-publish-delay
-
-The `flathub.json` file had `publish-delay-hours` with value less than 3.
-
-This is only allowed for [extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data)
-applications.
-
 ### flathub-json-only-arches-empty
 
 The `flathub.json` file had `only-arches` but it was empty.
