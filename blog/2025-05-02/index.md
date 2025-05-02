@@ -62,4 +62,4 @@ though! If you encounter any issues with the new workflow, don't hesitate to
 [runson]: https://runs-on.com/
 [aws]: https://aws.amazon.com/blogs/opensource/aws-promotional-credits-open-source-projects/
 [revamp]: https://docs.flathub.org/blog/flathub-build-infrastructure-revamp
-[issues]: https://github.com/flathub-infra/vorarbeiter/issues
+[issue]: https://github.com/flathub-infra/vorarbeiter/issues
