@@ -42,7 +42,24 @@ machines automatically within seconds, and tears them down the moment the build
 if finished. This is completely invisible to developers, but is both faster and
 more cost-effective, even if we were to pay the bill ourselves.
 
+There is still more work to be done. I want to improve observability of the new
+service to make sure we can have automatic alerts when we have abnormal build
+error rate or unprocessed publishing queue. In fact, we already notify
+maintainers and Flathub admins when a build triggered on the master branch
+failed, but there is potential to be more proactive here.
+
+The unsolved challenge so far is caching. Every new pipeline re-downloads
+Flatpak runtimes, SDKs, and source code needed to build the app. Ideally, we
+should cache at least the runtimes, but with runners being ephemeral, we should
+also attempt to implement a distributed solution for ccache to reduce build
+times.
+
+Given [the challenging circumstances][revamp], this is more than good enough,
+though! If you encounter any issues with the new workflow, don't hesitate to
+[open an issue][issue] in the project's GitHub repository.
+
 [vorarbeiter]: https://github.com/flathub-infra/vorarbeiter
 [runson]: https://runs-on.com/
 [aws]: https://aws.amazon.com/blogs/opensource/aws-promotional-credits-open-source-projects/
-
+[revamp]: https://docs.flathub.org/blog/flathub-build-infrastructure-revamp
+[issues]: https://github.com/flathub-infra/vorarbeiter/issues
