@@ -39,11 +39,11 @@ how much credits we are spending, which is why we don't run large runners all
 the time. This is possible thanks to [RunsOn][runson], which handles all the
 magic for us. It receives pipeline events from GitHub and provisions new
 machines automatically within seconds, and tears them down the moment the build
-if finished. This is completely invisible to developers, but is both faster and
+is finished. This is completely invisible to developers, but is both faster and
 more cost-effective, even if we were to pay the bill ourselves.
 
 There is still more work to be done. I want to improve observability of the new
-service to make sure we can have automatic alerts when we have abnormal build
+service to make sure we can have automatic alerts when we have an abnormal build
 error rate or unprocessed publishing queue. In fact, we already notify
 maintainers and Flathub admins when a build triggered on the master branch
 failed, but there is potential to be more proactive here.
