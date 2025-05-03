@@ -45,7 +45,7 @@ made in the PR.
 Test builds can also be manually started by commenting `bot, build` in
 the pull request.
 
-### Official builds
+## Official builds
 
 An _official_ build will be started on every merge or push to the
 protected branches of the repository. If successful, the official build
@@ -56,7 +56,18 @@ If an official build fails, please ask the Flathub admins to restart
 it by [opening an issue](https://github.com/flathub/flathub/issues)
 or via [Matrix](https://matrix.to/#/#flathub:matrix.org).
 
-### Building locally
+## Large builds
+
+Most builds are done on GitHub actions using the GitHub hosted runners
+but the total execution time of the CI is limited by GitHub to 6 hours
+and the available free space for the build is limited to around 20-25
+GB. 
+
+Apps that exhaust these two limits will fail to build and as such needs
+to be redirected to external runners. Please [open an issue](https://github.com/flathub/flathub/issues)
+if you are the maintainer of such an app.
+
+## Building locally
 
 To reproduce the build tooling and environment used by Flathub for test
 and official builds, use the `org.flatpak.Builder` package to build the
