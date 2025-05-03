@@ -112,7 +112,10 @@ shapes that are hard to see.
 You can use our icon grid (<a href="/img/app-icon-grid.svg" download>SVG
 template download</a>) with square and circular base shapes to check if
 your icon's footprint is too large or too small. The examples below
-show the grid overlaid on some app icons.
+show the grid overlaid on some app icons. The first icon fills too much
+of the icon grid and extends beyond the grid and the second icon fills
+too little of the icon grid due to the transparency, so they don't pass
+this guideline.
 
 ![Examples of icons with footprints that are too large, too small, and just right.](assets/app-icon-footprint.png)
 
