@@ -78,7 +78,7 @@ the same color for both dark and light. In most cases the dark variant
 should be a darker, more muted version of the light brand color. Do not
 use the same color for the dark and light variants.
 
-Brand colors should be colorful. In particular, avoid white (or very
+Brand colors should be **colorful**. In particular, avoid white (or very
 light grays) and black (or very dark grays).
 
 When choosing brand colors, a good starting point is using a
