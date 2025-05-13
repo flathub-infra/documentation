@@ -42,6 +42,11 @@ may evolve over time, and exceptions may be granted in specific cases.
   developers and/or upstream has explicitly committed to supporting
   Flatpak they will not be accepted.
 
+- **Duplicate apps via different toolkits or frameworks**: Multiple
+  submissions of the same app (in terms of functionality, content,
+  visuals, or user experience) each built with different frameworks or
+  toolkits will not be accepted.
+
 - **Windows app submissions using Wine or emulation or translation layers**:
   Windows application submissions that are using Wine or any submissions
   that aren't native to Linux desktop and is using some emulation or
@@ -154,6 +159,24 @@ will be `https://github.com/example-foo/bar` and for the ID
 [Flatpak extensions](https://docs.flatpak.org/en/latest/extension.html)
 and [BaseApps](https://docs.flatpak.org/en/latest/dependencies.html#baseapps)
 can be exempt from these rules.
+
+## Renaming Flatpak ID
+
+Flatpak IDs (app IDs) are supposed to be a constant and unique identifier
+throughout an app's lifetime. As such, [app ID renames](/docs/for-app-authors/maintenance#renaming-the-flatpak-id)
+are conservatively accepted on a case-by-case basis provided valid
+reasons for the rename exists.
+
+While exceptions can be made (for example an upstream ID change makes
+the currently published app non-functional), in general, the following
+types of renames won't be accepted.
+
+- A rename that does not change the domain portion of the app ID will
+  not be accepted.
+
+- A rename that changes the domain portion of the app ID but with no
+  intention to [verify](/docs/for-app-authors/verification) it will not
+  be accepted.
 
 ## License
 
@@ -283,3 +306,4 @@ on Flathub website search results.
 
 - Applications should try to make sure their metadata follows the
   [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines).
+
