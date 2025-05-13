@@ -47,6 +47,11 @@ may evolve over time, and exceptions may be granted in specific cases.
   visuals, or user experience) each built with different frameworks or
   toolkits will not be accepted.
 
+- **Duplicate apps via minimal forks**: Multiple
+  submissions of a forked app with minimal changes in the fork
+  (in terms of functionality, content, visuals, or user experience)
+  will not be accepted.
+
 - **Windows app submissions using Wine or emulation or translation layers**:
   Windows application submissions that are using Wine or any submissions
   that aren't native to Linux desktop and is using some emulation or
