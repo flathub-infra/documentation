@@ -26,7 +26,7 @@ These may evolve over time, and exceptions may be granted in specific
 cases.
 
 :::tip
-If you believe something is violating these policies, please [open an issue]((https://github.com/flathub/flathub/issues).
+If you believe something is violating these policies, please [open an issue](https://github.com/flathub/flathub/issues).
 :::
 
 - **Non-functional submissions**: App submissions that are not fully
