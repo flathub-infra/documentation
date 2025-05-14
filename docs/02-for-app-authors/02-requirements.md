@@ -3,7 +3,7 @@
 The goal of these requirements is to ensure that the applications hosted
 on Flathub are safe to use and integrate well in the desktop experience.
 
-## Submission Policy
+## Submission and inclusion policy
 
 :::tip
 Each application is evaluated on a case-by-case basis and if you are
@@ -16,9 +16,18 @@ Flathub aims to provide a curated collection of high-quality, sandboxed
 graphical desktop applications that seamlessly integrate with the Linux
 desktop environment and enhance the user experience.
 
-This policy defines the types of applications that are not eligible
-for submission and applies to new submissions only. These guidelines
-may evolve over time, and exceptions may be granted in specific cases.
+This defines specific policies for submission and inclusion, and applies
+to all submissions that are (were) submitted or included after the policy
+was documented, for as long as they remain on Flathub. Submissions are
+accepted at the discretion of the reviewers and are liable to be removed
+even after they are included, if it is found to violate any policy. They
+must also comply with [Flathub's Terms Of Service](https://flathub.org/terms-and-conditions).
+These may evolve over time, and exceptions may be granted in specific
+cases.
+
+:::tip
+If you believe something is violating these policies, please [open an issue]((https://github.com/flathub/flathub/issues).
+:::
 
 - **Non-functional submissions**: App submissions that are not fully
   functional during review that degrade the user experience will not be
@@ -35,20 +44,17 @@ may evolve over time, and exceptions may be granted in specific cases.
   projects without any significant modification will not be accepted.
 
 - **Submissions incompatible or restricted by Flatpak sandbox**: Certain
-  types of applications, such as development tools and IDEs with a broad
+  types of submissions, such as development tools and IDEs with a broad
   scope, are generally not well-suited for Flatpak due to inherent
-  sandboxing limitations and severely degrade the user experience. Unless
-  these applications are being officially submitted by the upstream
-  developers and/or upstream has explicitly committed to supporting
-  Flatpak they will not be accepted.
+  sandboxing limitations and severely degrade the user experience.
+  Unless these applications are being officially submitted by the
+  upstream developers and/or upstream has explicitly committed to
+  supporting Flatpak they will not be accepted.
 
-- **Duplicate apps via different toolkits or frameworks**: Multiple
-  submissions of the same app (in terms of functionality, content,
-  visuals, or user experience) each built with different frameworks or
-  toolkits will not be accepted.
-
-- **Duplicate apps via minimal forks**: Multiple
-  submissions of a forked app with minimal changes in the fork
+- **Duplicate submissions**: Multiple submissions of the same app
+  (in terms of functionality, content, visuals, or user experience) each
+  built with different frameworks or toolkits will not be accepted.
+  Multiple submissions of a forked app with minimal changes in the fork
   (in terms of functionality, content, visuals, or user experience)
   will not be accepted.
 
@@ -63,17 +69,13 @@ may evolve over time, and exceptions may be granted in specific cases.
   new languages, language specific tooling etc. or BaseApps will need a
   clear use case defined and prospective users to be accepted.
 
-- **Misleading or malicious app submissions**: App submissions that
-  impersonate, provide false or misleading descriptions, functionality,
-  attempt to deceive users, violate trademarks, infringes copyrights or
-  contains malicious code will not be accepted.
-
-If the issues identified during the review are resolved and the
-submission is improved such that it passes the guidelines, it will be
-reconsidered for approval. Submissions are accepted at the discretion
-of the reviewers and can be removed even after they are accepted if it
-is found to violate any policy. They also must comply with
-[Flathub's Terms Of Service](https://flathub.org/terms-and-conditions).
+- **Misleading, malicious or illegal submissions**: Submissions that
+  impersonate; engage or encourage to engage in unlawful activities;
+  provide false, misleading information and functionality; attempt to
+  deceive or violate any laws, trademarks and copyrights; acts in a
+  malicious manner or contains malicious code will not be accepted. In
+  most cases these are liable to be outright rejected or removed from
+  the store.
 
 ## Application ID
 
