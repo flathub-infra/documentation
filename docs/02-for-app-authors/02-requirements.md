@@ -3,7 +3,7 @@
 The goal of these requirements is to ensure that the applications hosted
 on Flathub are safe to use and integrate well in the desktop experience.
 
-## Submission and inclusion policy
+## Inclusion policy
 
 :::tip
 Each application is evaluated on a case-by-case basis and if you are
