@@ -762,6 +762,26 @@ This must not be used unless absolutely necessary and when no existing
 solutions using Flatpak or [portals](https://flatpak.github.io/xdg-desktop-portal/docs/)
 exist.
 
+### finish-args-has-dev-input
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--device=input`.
+
+This permission was introduced first in Flatpak 1.16.0 and is backwards
+incompatible with supported older Flatpak releases like 1.14.x. So it
+requires a manual exception to be granted in addition to specifying
+`--require-version` in the manifest's finish-args.
+
+### finish-args-has-dev-usb
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--device=usb`.
+
+This permission was introduced first in Flatpak 1.16.0 and is backwards
+incompatible with supported older Flatpak releases like 1.14.x. So it
+requires a manual exception to be granted in addition to specifying
+`--require-version` in the manifest's finish-args.
+
 ### finish-args-has-nosocket-socket_name
 
 The following error codes are included here:
