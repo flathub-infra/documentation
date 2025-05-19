@@ -23,11 +23,16 @@ The `beta` git branch can store a secondary version that is served in
 the [Flathub beta repository](/docs/for-users/installation#flathub-beta-repository)
 and corresponds to the `beta` Flatpak ref branch.
 
-Applications must only use either `master` or `beta` git branches. No
-other git branches are allowed.
+Applications must only use either `master` or `beta` git branches and the
+corresponding `stable` and `beta` Flatpak ref branches respectively. No
+other git or ref branches are allowed for applications.
 
 Branches named `branch/*` are reserved specifically for BaseApps and
-Extensions and must not be used by anyone else.
+Extensions and must not be used by anyone else. If a build is triggered
+from the `branch/foobar` git branch of the Flathub GitHub repo, the
+corresponding Flatpak ref branch will be set to `foobar`. Extensions
+and baseapps are also allowed to set a custom Flatpak ref branch in the
+manifest via the `branch` key.
 
 All of those branches along with `main`, `stable`, `beta/*` and `stable/*`
 are automatically _protected_ which means that you can only merge pull
@@ -39,8 +44,11 @@ Other git branch names are free to use.
 
 A _test_ build will be started on every push to a pull request and if
 it is successful the bot will post a link to a Flatpak bundle generated
-from the PR contents. This temporary build can be used to test the changes
-made in the PR.
+from the PR contents. This is a temporary build that will be active for
+a few days and can be used to test changes made in the PR. Once testing
+is done, it should be uninstalled via `flatpak remove` (the ref ending
+in `/test`). In some cases it is best to install and use it separately
+so that the actual stable installation remains unaffected.
 
 Test builds can also be manually started by commenting `bot, build` in
 the pull request.
@@ -52,19 +60,23 @@ protected branches of the repository. If successful, the official build
 will get published usually within 1-2 hours unless it is held in
 [moderation](#build-moderation).
 
-If an official build fails, please ask the Flathub admins to restart
-it by [opening an issue](https://github.com/flathub/flathub/issues)
+If an official build fails, an issue will be opened in the GitHub
+repository of the application by an automated account and Flathub admins
+will be also be automatically notified so that they can restart or
+create a new build. The maintainer can also communicate via that issue.
+
+If no issue was opened or there was some other issue, please ask the
+Flathub admins to restart it by [opening an issue](https://github.com/flathub/flathub/issues)
 or via [Matrix](https://matrix.to/#/#flathub:matrix.org).
 
 ## Large builds
 
 Most builds are done on GitHub actions using the GitHub hosted runners
 but the total execution time of the CI is limited by GitHub to 6 hours
-and the available free space for the build is limited to around 20-25
-GB. 
+and the available free space and memory for the build is also limited.
 
-Apps that exhaust these two limits will fail to build and as such needs
-to be redirected to external runners. Please [open an issue](https://github.com/flathub/flathub/issues)
+Apps that exhaust any of these limits will fail to build and as such
+needs to be redirected to external runners. Please [open an issue](https://github.com/flathub/flathub/issues)
 if you are the maintainer of such an app.
 
 ## Building locally
@@ -172,7 +184,7 @@ to be followed there as well.
 
 ```json title="flathub.json"
 {
-  "end-of-life": "This application is no longer maintained because..."
+  "end-of-life": "This application is no longer maintained."
 }
 ```
 
