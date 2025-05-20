@@ -79,6 +79,9 @@ Apps that exhaust any of these limits will fail to build and as such
 needs to be redirected to external runners. Please [open an issue](https://github.com/flathub/flathub/issues)
 if you are the maintainer of such an app.
 
+Once the app is redirected to external runners, [test builds](#test-builds)
+need to be manually started by commenting `bot, build`.
+
 ## Building locally
 
 To reproduce the build tooling and environment used by Flathub for test
