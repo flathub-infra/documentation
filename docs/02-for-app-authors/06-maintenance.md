@@ -72,12 +72,16 @@ or via [Matrix](https://matrix.to/#/#flathub:matrix.org).
 ## Large builds
 
 Most builds are done on GitHub actions using the GitHub hosted runners
-but the total execution time of the CI is limited by GitHub to 6 hours
-and the available free space and memory for the build is also limited.
+but the total execution time of the CI is limited by GitHub to 6 hours,
+the available memory is limited to around 10-15 G and the available
+free space for the build is limited to around 50 G.
 
-Apps that exhaust any of these limits will fail to build and as such
-needs to be redirected to external runners. Please [open an issue](https://github.com/flathub/flathub/issues)
+Apps that exhaust any of these limits will fail to build and needs to be
+sparingly redirected to external runners. Please [open an issue](https://github.com/flathub/flathub/issues)
 if you are the maintainer of such an app.
+
+The external runners have a 9 hour timeout, larger free space and
+memory.
 
 Once the app is redirected to external runners, [test builds](#test-builds)
 need to be manually started by commenting `bot, build`.
