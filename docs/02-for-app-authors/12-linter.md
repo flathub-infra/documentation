@@ -1147,7 +1147,15 @@ The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has newly introduced Flatpak context metadata
 such as `--device=input` or `--device=usb` but the specified
 `--require-version` is insufficient. It should be >=1.16.0.
-;
+
+### flatpak-repo-too-large
+
+The Flatpak repo exported from the build exceeds 3 GB.
+
+Maintainers should try to reduce the size of the sources in the manifest
+and any large source in the manifest should be converted to use
+[extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data).
+
 ### flat-manager-branch-repo-mismatch
 
 The branch of the ostree ref does not match the target Flathub repo it
