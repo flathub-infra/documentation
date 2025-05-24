@@ -1150,7 +1150,9 @@ such as `--device=input` or `--device=usb` but the specified
 
 ### flatpak-repo-too-large
 
-The Flatpak repo exported from the build exceeds 3 GB.
+The Flatpak repo exported from the build exceeds the maximum allowed
+size. The maximum allowed size starts at 10 GB and after that
+`(number of app/ refs in the repo) * 10 GB`.
 
 Maintainers should try to reduce the size of the sources in the manifest
 and any large source in the manifest should be converted to use
