@@ -163,9 +163,19 @@ will be `https://github.com/example-foo/bar` and for the ID
 `io.sourceforge.example_foo.bar`, it will be
 `https://sourceforge.net/projects/example-foo/`.
 
+### Extensions and baseapps
+
+[BaseApps](https://docs.flatpak.org/en/latest/dependencies.html#baseapps)
+must have `BaseApp` as the last component of the Flatpak ID and for the
+rest of the ID, the above rules apply.
+
 [Flatpak extensions](https://docs.flatpak.org/en/latest/extension.html)
-and [BaseApps](https://docs.flatpak.org/en/latest/dependencies.html#baseapps)
-can be exempt from these rules.
+must prefix their ID with the extension point ID, which is either
+defined in one of the [runtimes](/docs/for-app-authors/runtimes) or
+in an app. If the extension point is defined in an app, it must use
+the app's ID as a prefix.
+
+They are exempt from the above rules.
 
 ## Renaming Flatpak ID
 
