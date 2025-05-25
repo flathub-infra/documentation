@@ -273,13 +273,24 @@ Followed by a mandatory `project_license` tag:
 <project_license>GPL-3.0-only</project_license>
 ```
 
-The value must be a valid [SPDX license identifier](https://spdx.org/licenses/). License [expression operators](https://spdx.github.io/spdx-spec/v2-draft/SPDX-license-expressions/#d4-composite-license-expressions) like `AND, OR, WITH` are supported.
+The value must be a valid [SPDX license identifier](https://spdx.org/licenses/)
+or a valid [SPDX License expression](https://spdx.github.io/spdx-spec/v3.0.1/annexes/spdx-license-expressions/).
 
-Proprietary applications/custom licenses can use `LicenseRef-proprietary`
+License [expression operators](https://spdx.github.io/spdx-spec/v2-draft/SPDX-license-expressions/#d4-composite-license-expressions)
+like `AND, OR, WITH` are supported.
+
+Proprietary licenses must use `LicenseRef-proprietary`
 with a link to the license:
 
 ```xml
 <project_license>LicenseRef-proprietary=https://example.org/legal/</project_license>
+```
+
+Custom licenses can use the following format, where `<identifier>` is
+a valid license identiifer:
+
+```xml
+<project_license>LicenseRef-<identifier></project_license>
 ```
 
 ## Name and summary
