@@ -201,12 +201,46 @@ All content hosted on Flathub must allow legal redistribution, and the
 license must be correctly specified in the app's [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#license).
 
 Non-redistributable sources must use [extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data)
-source type.
+source type. Any part of the application such as the name or icon must
+not violate any trademarks and must be distinct.
 
-### No trademark violation
+## Permissions
 
-The application name and icon must not violate any trademarks and must
-be distinct.
+Static permissions should be limited as much as possible and applications
+should use [XDG Portals](https://flatpak.github.io/xdg-desktop-portal/docs/)
+and XDG standards whenever possible.
+
+Please follow the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html)
+when writing the manifest or choosing finish-args. Anything listed in
+"Standard Permissions" can be freely used. DBus, Filesystem and Device
+access should be limited to only what the application needs.
+
+Please avoid choosing broad permissions unless justified.
+
+## No network access during build
+
+All dependencies needed to build and run the application must be present
+in the manifest as [sources](https://docs.flatpak.org/en/latest/module-sources.html)
+with publicly accessible URLs or must be included as local sources in
+the submission pull request. Binary or precompiled files must not be
+present in the submission pull request.
+
+There is no network access during the build process.
+
+## Building from source
+
+Unless blocked by technical reasons, all submissions must be built from
+the source code. Exceptions can be made to this in certain cases such
+as due to maintainability concerns or lack of the necessary tooling.
+
+## Patches
+
+Patches, which add or remove application functionality; large and
+complicated patchsets, binary files, source code or any additional
+tooling must not be a part of the submission.
+
+The application should be distributed with minimum modifications and
+should closely follow upstream.
 
 ## Stable releases
 
@@ -231,28 +265,6 @@ JSON or YAML file.
 
 The [runtime(s)](https://docs.flatpak.org/en/latest/basic-concepts.html#runtimes)
 used in the manifest must be hosted on Flathub.
-
-#### Permissions
-
-Static permissions should be limited as much as possible and applications
-should use [XDG Portals](https://flatpak.github.io/xdg-desktop-portal/docs/)
-and XDG standards whenever possible.
-
-Please follow the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html)
-when writing the manifest or choosing finish-args. Anything listed in
-"Standard Permissions" can be freely used. DBus, Filesystem and Device
-access should be limited to only what the application needs.
-
-Please avoid choosing broad permissions unless justified.
-
-#### No network access during build
-
-All dependencies needed to build and run the application must be present
-in the manifest as [sources](https://docs.flatpak.org/en/latest/module-sources.html)
-with publicly accessible URLs or must be included as local sources in
-the submission pull request.
-
-There is no network access during the build process.
 
 ### flathub.json
 
@@ -311,16 +323,5 @@ on Flathub website search results.
 
 ## Best practices
 
-- Applications should build all components of the manifest from source
-  when possible.
-
-- The application should be distributed with minimum modifications and
-  should closely follow upstream.
-
-- Patches, which add or remove application functionality, large and
-  complicated patchsets, binary files, source code or any additional
-  tooling must not be in the submission.
-
 - Applications should try to make sure their metadata follows the
   [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines).
-
