@@ -43,6 +43,14 @@ If you believe something is violating these policies, please [open an issue](htt
   sources or aren't suitable as desktop apps or forks of existing
   projects without any significant modification will not be accepted.
 
+- **Impermissible submissions**: In addition to the other guidelines,
+  the following non-exhaustive types of submissions will not be
+  accepted: documentation or help files only, media-only content
+  (e.g., images, audio, video), fonts, firmware, low-effort wrapper
+  applications, shell/WM/DE extensions, tray applets, system
+  utilities (e.g., `sudo`, `xeyes`) and CLI utility programs
+  (e.g., `elinks`, `gh`).
+
 - **Submissions incompatible or restricted by Flatpak sandbox**: Certain
   types of submissions, such as development tools and IDEs with a broad
   scope, are generally not well-suited for Flatpak due to inherent
