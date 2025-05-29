@@ -212,6 +212,9 @@ Non-redistributable sources must use [extra-data](https://docs.flatpak.org/en/la
 source type. Any part of the application such as the name or icon must
 not violate any trademarks and must be distinct.
 
+License must be correctly declared in the metainfo file and must
+match with license information available in its source.
+
 ## Permissions
 
 Static permissions should be limited as much as possible and applications
@@ -233,13 +236,22 @@ with publicly accessible URLs or must be included as local sources in
 the submission pull request. Binary or precompiled files must not be
 present in the submission pull request.
 
-There is no network access during the build process.
+There is no network access during the build process. This means using
+`--share=network` inside `build-args` will not work.
+
+```yaml
+# This will NOT work
+build-options:
+  build-args:
+    - --share=network
+```
 
 ## Building from source
 
 Unless blocked by technical reasons, all submissions must be built from
 the source code. Exceptions can be made to this in certain cases such
-as due to maintainability concerns or lack of the necessary tooling.
+as due to maintainability concerns, lack of the necessary tooling or
+in the case of well established vendors.
 
 ## Patches
 
