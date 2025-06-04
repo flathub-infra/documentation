@@ -78,7 +78,8 @@ Once this is done you can open the submission pull request!
 
 ## Submission PR
 
-Flathub submissions are managed through pull requests on GitHub.
+Flathub submissions are managed through pull requests on GitHub. Please
+use the github.com web interface to create the pull request.
 
 :::tip
 If you have [GitHub CLI](https://cli.github.com/) installed run:
