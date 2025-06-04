@@ -1238,6 +1238,11 @@ is a symlink.
 The Flatpak manifest uses a [bundled extension](https://docs.flatpak.org/en/latest/extension.html#bundled-extensions).
 Bundled extensions needs to be manually approved through exceptions.
 
+### manifest-unknown-properties
+
+The [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+has a property that is not recognised by Flatpak Builder.
+
 ### metainfo-svg-screenshots
 
 There is a SVG or SVGZ screenshot link in the
