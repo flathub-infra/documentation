@@ -1233,10 +1233,10 @@ The manifest schema failed validation.
 The [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
 is a symlink.
 
-### manifest-has-bundled-extension
+### appid-unprefixed-bundled-extension-extension_id
 
-The Flatpak manifest uses a [bundled extension](https://docs.flatpak.org/en/latest/extension.html#bundled-extensions).
-Bundled extensions needs to be manually approved through exceptions.
+The Flatpak manifest has a [bundled extension](https://docs.flatpak.org/en/latest/extension.html#bundled-extensions)
+whose extension ID does not start with the parent app-id.
 
 ### manifest-unknown-properties
 
