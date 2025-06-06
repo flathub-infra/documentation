@@ -40,6 +40,54 @@ requests and not push directly to them or delete the branches.
 
 Other git branch names are free to use.
 
+### Creating new git branches for publishing
+
+**Publishing to beta**: Please don't use GitHub to create the `beta`
+git branch. Please also don't locally create or push the `beta` git branch
+first.
+
+The process is:
+
+1. Create a normal pull request with the changes that will be merged to
+the future `beta` git branch. Say for example the PR branch is
+`my-beta-pr-branch`.
+
+2. Once the build is successful, create the `beta` branch locally using
+`git` from the previous parent branch usually `master`:
+
+```sh
+git checkout -b beta master
+```
+
+3. Now merge the changes from the PR branch to beta:
+
+```sh
+git merge my-beta-pr-branch
+```
+
+4. Now push the `beta` branch and it will trigger an official build.
+Future changes to this branch will have to go through pull requests.
+
+```sh
+git push
+```
+
+**Creating new branches for extensions/baseapps**: Please don't use
+GitHub to create the `beta` git branch. Please also don't locally
+create or push the `beta` git branch first.
+
+Extensions or baseapps having multiple branches for example
+`branch/22.08, branch/23.08, branch/24.08` should follow the same
+process as above.
+
+The only change would be in the second step where the new branch would
+be `branch/25.08` (for example) and the previous parent branch would be
+`branch/24.08` (for example).
+
+```sh
+git checkout -b branch/25.08 branch/24.08
+```
+
 ## Test builds
 
 A _test_ build will be started on every push to a pull request and if
