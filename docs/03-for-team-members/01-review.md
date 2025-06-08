@@ -17,9 +17,19 @@ long period.
   if needed.
 - Do a test build before merge.
 
-Once the PR ready to be merged you can use the /merge, /merge:beta
-commands. Any @names after the command will be invited as collaborators
-to the repository.
+Once the PR ready to be merged you can use the merge command to merge
+the submission. The syntax is
+
+```
+/merge:<optional target repo default branch, default:master> head=<pr head commit sha, 40 chars> <additional colloborators @foo @baz, default: PR author>
+
+# Examples
+
+/merge head=SHA -> creates 'master'
+/merge:beta head=SHA -> creates 'beta'
+/merge:24.08 head=SHA -> creates 'branch/24.08'
+/merge:24.08 head=SHA @foo @baz -> creates 'branch/24.08', adds PR author, GitHub user 'foo' and 'baz' to colloborators
+```
 
 ## Links
 
