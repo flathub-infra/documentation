@@ -29,21 +29,21 @@ cases.
 If you believe something is violating these policies, please [open an issue](https://github.com/flathub/flathub/issues).
 :::
 
-- **Non-functional submissions**: App submissions that are not fully
+1. **Non-functional submissions**: App submissions that are not fully
   functional during review that degrade the user experience will not be
   accepted unless improved.
 
-- **Console app submissions**: Flatpak is generally not well-suited for
+1. **Console app submissions**: Flatpak is generally not well-suited for
   console or terminal-based applications. Any such submissions that is
   not sufficiently user facing or offers overly niche or limited
   functionality will not be accepted.
 
-- **Minimal submissions**: Submissions that offer very minimal
+1. **Minimal submissions**: Submissions that offer very minimal
   functionality often consisting of simple scripts, single or simple
   sources or aren't suitable as desktop apps or forks of existing
   projects without any significant modification will not be accepted.
 
-- **Impermissible submissions**: In addition to the other guidelines,
+1. **Impermissible submissions**: In addition to the other guidelines,
   the following non-exhaustive types of submissions will not be
   accepted: documentation or help files only, media-only content
   (e.g., images, audio, video), fonts, firmware, low-effort wrapper
@@ -51,7 +51,7 @@ If you believe something is violating these policies, please [open an issue](htt
   utilities (e.g., `sudo`, `xeyes`) and CLI utility programs
   (e.g., `elinks`, `gh`).
 
-- **Submissions incompatible or restricted by Flatpak sandbox**: Certain
+1. **Submissions incompatible or restricted by Flatpak sandbox**: Certain
   types of submissions, such as development tools and IDEs with a broad
   scope, are generally not well-suited for Flatpak due to inherent
   sandboxing limitations and severely degrade the user experience.
@@ -59,25 +59,25 @@ If you believe something is violating these policies, please [open an issue](htt
   upstream developers and/or upstream has explicitly committed to
   supporting Flatpak they will not be accepted.
 
-- **Duplicate submissions**: Multiple submissions of the same app
+1. **Duplicate submissions**: Multiple submissions of the same app
   (in terms of functionality, content, visuals, or user experience) each
   built with different frameworks or toolkits will not be accepted.
   Multiple submissions of a forked app with minimal changes in the fork
   (in terms of functionality, content, visuals, or user experience)
   will not be accepted.
 
-- **Windows app submissions using Wine or emulation or translation layers**:
+1. **Windows app submissions using Wine or emulation or translation layers**:
   Windows application submissions that are using Wine or any submissions
   that aren't native to Linux desktop and is using some emulation or
   translation layer will only be accepted if they are submitted
   officially by upstream with the intention of maintaining it in official
   capacity.
 
-- **Extensions or BaseApps**: Flatpak extensions that add support for
+1. **Extensions or BaseApps**: Flatpak extensions that add support for
   new languages, language specific tooling etc. or BaseApps will need a
   clear use case defined and prospective users to be accepted.
 
-- **Misleading, malicious or illegal submissions**: Submissions that
+1. **Misleading, malicious or illegal submissions**: Submissions that
   impersonate; engage or encourage to engage in unlawful activities;
   provide false, misleading information and functionality; attempt to
   deceive or violate any laws, trademarks and copyrights; acts in a
