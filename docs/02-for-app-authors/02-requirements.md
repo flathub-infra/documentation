@@ -87,7 +87,7 @@ If you believe something is violating these policies, please [open an issue](htt
 
 ## Application ID
 
-:::note
+:::important
 Please choose the ID carefully and don't hesitate to ask the reviewers
 for help as it will determine the type of [verification method](/docs/for-app-authors/verification#what-is-verification)
 available, if any.
@@ -279,7 +279,7 @@ The following files should be included in the submission.
 ### Manifest
 
 The [application manifest](https://docs.flatpak.org/en/latest/manifests.html)
-must be at the top level and named after the [application ID](#application-id)
+**must be at the top level** and named after the [application ID](#application-id)
 with the extension `.json`, `.yml` or `.yaml` depending on whether it is
 JSON or YAML file.
 
