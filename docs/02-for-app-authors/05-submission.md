@@ -116,10 +116,24 @@ Please do not open the PR against the `master` base branch of
 Once your pull request has been submitted, it will be reviewed. Reviewers
 may post comments and may ask for certain fixes or clarifications. Once
 all comments are resolved, a _test_ build can be started on the pull
-request by commenting `bot, build $FLATPAK_ID`.
+request by commenting `bot, build`.
 
 If the test build is successful, the application is tested by installing
 and running it. Further feedback may be provided after that.
+
+### Review
+
+The PR will be reviewed by the reviewers. Please consider that
+reviewers are volunteers, and know well about packaging for
+flatpak. So time to response vary and you should be patient. Also make
+sure you answer all the questions.
+
+At no point in the submission there is a need to close the PR to
+address anything, including when the application ID needs to be
+adjusted. Also there is no reason merge the `master` branch into your
+submission branch.
+
+### Approval
 
 If the submission is approved, it will be marked as ready and
 merged into a new repository under the [Flathub GitHub organisation](https://github.com/flathub/)
