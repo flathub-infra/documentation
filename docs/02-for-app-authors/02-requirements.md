@@ -29,49 +29,48 @@ cases.
 If you believe something is violating these policies, please [open an issue](https://github.com/flathub/flathub/issues).
 :::
 
-1. **Non-functional submissions**: App submissions that are not fully
-  functional during review that degrade the user experience will not be
-  accepted unless improved.
+1. **Non-functional submissions**: Submissions that are not fully
+  functional during review and/or offer a poor user experience will not
+  be accepted unless improved.
 
-1. **Console app submissions**: Flatpak is generally not well-suited for
-  console or terminal-based applications. Any such submissions that is
-  not sufficiently user facing or offers overly niche or limited
-  functionality will not be accepted.
+1. **Console software submissions**: Console software submissions that
+  are not sufficiently user facing or offers very niche, technical or
+  limited functionality will not be accepted.
 
 1. **Minimal submissions**: Submissions that offer very minimal
   functionality often consisting of simple scripts, single or simple
-  sources or aren't suitable as desktop apps or forks of existing
-  projects without any significant modification will not be accepted.
+  sources or aren't suitable as desktop applications or are forks of
+  existing projects without any significant modifications will not be
+  accepted.
 
 1. **Impermissible submissions**: In addition to the other guidelines,
-  the following non-exhaustive types of submissions will not be
-  accepted: documentation or help files only, media-only content
-  (e.g., images, audio, video), fonts, firmware, low-effort wrapper
+  the following non-exhaustive types of application submissions will
+  not be accepted: documentation or help files only, media-only content
+  (e.g., images, audio, video), fonts, firmware, simple web wrapper
   applications, shell/WM/DE extensions, tray applets, system
   utilities (e.g., `sudo`, `xeyes`) and CLI utility programs
   (e.g., `elinks`, `gh`).
 
 1. **Submissions incompatible or restricted by Flatpak sandbox**: Certain
   types of submissions, such as development tools and IDEs with a broad
-  scope, are generally not well-suited for Flatpak due to inherent
+  scope are generally not well-suited for Flatpak due to inherent
   sandboxing limitations and severely degrade the user experience.
   Unless these applications are being officially submitted by the
   upstream developers and/or upstream has explicitly committed to
   supporting Flatpak they will not be accepted.
 
-1. **Duplicate submissions**: Multiple submissions of the same app
-  (in terms of functionality, content, visuals, or user experience) each
-  built with different frameworks or toolkits will not be accepted.
-  Multiple submissions of a forked app with minimal changes in the fork
-  (in terms of functionality, content, visuals, or user experience)
-  will not be accepted.
+1. **Duplicate submissions**: Multiple submissions of the same
+  application (in terms of functionality, content, visuals, or user
+  experience) each built with different frameworks or toolkits will not
+  be accepted. Multiple submissions of a forked app with minimal
+  changes in the fork (in terms of functionality, content, visuals, or
+  user experience) will not be accepted.
 
-1. **Windows app submissions using Wine or emulation or translation layers**:
-  Windows application submissions that are using Wine or any submissions
-  that aren't native to Linux desktop and is using some emulation or
-  translation layer will only be accepted if they are submitted
-  officially by upstream with the intention of maintaining it in official
-  capacity.
+1. **Software using emulation or translation layers**: Windows software
+  submissions that are using Wine or any submissions that aren't native
+  to the Linux desktop and is using some emulation or translation layer
+  will only be accepted if they are submitted officially by upstream
+  with the intention of maintaining it in an official capacity.
 
 1. **Extensions or BaseApps**: Flatpak extensions that add support for
   new languages, language specific tooling etc. or BaseApps will need a
@@ -101,8 +100,8 @@ application consisting of the reverse-DNS format
 `{tld}.{vendor}.{product}`.
 
 The _components_ of the ID are the substrings obtained by splitting it
-at each `.`. All components except the last is taken as the _domain portion_
-of the ID.
+at each dot `.`. All components except the last is taken as the
+_domain portion_ of the ID.
 
 The following rules should be followed when creating application IDs.
 
@@ -116,8 +115,8 @@ The following rules should be followed when creating application IDs.
   underscore `_`. If any component has an initial digit, it needs to
   be prefixed with an underscore similarly.
 
-- The ID must not end in generic terms like `.desktop` or `.app`. It's
-  fine to repeat the application name in such cases.
+- The ID must not end in generic terms like `.desktop, .app, .linux`.
+  It's fine to repeat the application name in such cases.
 
 - The ID must exactly match the [ID tag](/docs/for-app-authors/metainfo-guidelines/#id)
   in Metainfo file.
@@ -133,19 +132,16 @@ The following rules should be followed when creating application IDs.
   Applications using code hosting IDs and hosted on Sourceforge can
   use `io.sourceforge., net.sourceforge.` prefixes.
 
-- [BaseApps](https://docs.flatpak.org/en/latest/dependencies.html#baseapps)
-  must end their ID in `.BaseApp`.
-
 ### Control over domain or repository
 
 The _domain_ is constructed by reversing the components of the domain
 portion of the ID and converting underscores to dashes.
 
 - The domain must be directly related to the project or the application
-  being submitted and the author or the developer or the project must have
-  control over the domain. The corresponding URL must be reachable over
-  HTTPS. In some edge cases, if it is not reachable, an exception can be
-  granted after manually checking.
+  being submitted and the author or the developer or the project must
+  have control over the domain. The corresponding URL must be reachable
+  over HTTPS. In some edge cases, if it is not reachable, an exception
+  can be granted after manually checking.
 
   [Verification](/docs/for-app-authors/verification) may require placing
   a token under `https://{domain name}/.well-known/org.flathub.VerifiedApps.txt`
@@ -171,7 +167,7 @@ will be `https://github.com/example-foo/bar` and for the ID
 `io.sourceforge.example_foo.bar`, it will be
 `https://sourceforge.net/projects/example-foo/`.
 
-### Extensions and baseapps
+### Extensions and BaseApps
 
 [BaseApps](https://docs.flatpak.org/en/latest/dependencies.html#baseapps)
 must have `BaseApp` as the last component of the Flatpak ID and for the
@@ -181,9 +177,8 @@ rest of the ID, the above rules apply.
 must prefix their ID with the extension point ID, which is either
 defined in one of the [runtimes](/docs/for-app-authors/runtimes) or
 in an app. If the extension point is defined in an app, it must use
-the app's ID as a prefix.
-
-They are exempt from the above rules.
+the app's ID as a prefix. They are exempt from the
+[domain control rules](/docs/for-app-authors/requirements#control-over-domain-or-repository).
 
 ## Renaming Flatpak ID
 
@@ -255,16 +250,11 @@ in the case of well established vendors.
 
 ## Patches
 
-Patches, which add or remove application functionality; large and
-complicated patchsets, binary files, source code or any additional
-tooling must not be a part of the submission.
+Submissions should aim to distribute the application with minimal
+modifications and should closely follow the upstream source.
 
-The application should be distributed with minimum modifications and
-should closely follow upstream.
-
-If any modification is necessary, like to address build failures or
-incompatibilities with flatpak, these patches should be included along
-with the manifest.
+If any modifications are necessary (e.g., through patching), all
+patches must be included in the submission along with the manifest.
 
 ## Stable releases
 
@@ -278,6 +268,12 @@ updates must not be published to either repo.
 
 ## Required files
 
+:::important
+Under no circumstances should source code be included in the submission.
+Flathub is not intended to host application source code, including that
+of any dependencies.
+:::
+
 The following files should be included in the submission.
 
 ### Manifest
@@ -285,7 +281,7 @@ The following files should be included in the submission.
 The [application manifest](https://docs.flatpak.org/en/latest/manifests.html)
 **must be at the top level** and named after the [application ID](#application-id)
 with the extension `.json`, `.yml` or `.yaml` depending on whether it is
-JSON or YAML file.
+a JSON or YAML file.
 
 The [runtime(s)](https://docs.flatpak.org/en/latest/basic-concepts.html#runtimes)
 used in the manifest must be hosted on Flathub.
@@ -299,9 +295,9 @@ application is supported on only one architecture, please include a
 
 ### Dependency manifest
 
-Flathub does not allow accessing the network during the build process
-so all dependencies used by the application must be supplied in the
-manifest or should be vendored.
+There is [no network access](/docs/for-app-authors/requirements#no-network-access-during-build)
+during the build process so all dependencies used by the application
+must be supplied in the manifest or should be vendored.
 
 There is a [community provided set of tools](https://github.com/flatpak/flatpak-builder-tools)
 that can be used to generate dependency manifests for npm, yarn, cargo,
@@ -309,17 +305,11 @@ pip etc.
 
 These manifests must be included in the submission.
 
-:::important
-Under no circumstances should source code be included in the
-submission. Flathub isn't a place to host the application source code;
-this includes the dependencies.
-:::
-
 ## Required metadata
 
 Applications must provide the following metadata.
 
-:::note
+:::important
 These metadata files should directly come from the upstream project
 whenever possible as these are widely adopted Freedesktop standards.
 
@@ -335,7 +325,7 @@ that passes [validation](/docs/for-app-authors/metainfo-guidelines/#validation).
 
 A Metainfo file is mandatory to appear on the Flathub website.
 
-Metainfo file is optional for runtimes, extensions and baseapps.
+Metainfo file is optional for runtimes, extensions and BaseApps.
 
 ### Desktop file
 
@@ -348,8 +338,8 @@ Desktop file is optional for console applications.
 Graphical applications must provide, preferably a SVG icon or at least
 a 256x256 PNG icon, properly [named and installed](https://docs.flatpak.org/en/latest/conventions.html#application-icons).
 
-Icon is optional for console applications but it is mandatory to appear
-on Flathub website search results.
+Icon is optional for console applications but it is mandatory if
+they intend to appear on Flathub website search results.
 
 ## Best practices
 
