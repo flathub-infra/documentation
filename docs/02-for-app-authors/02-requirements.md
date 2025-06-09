@@ -262,6 +262,10 @@ tooling must not be a part of the submission.
 The application should be distributed with minimum modifications and
 should closely follow upstream.
 
+If any modification is necessary, like to address build failures or
+incompatibilities with flatpak, these patches should be included along
+with the manifest.
+
 ## Stable releases
 
 The Flathub stable repository is dedicated to hosting only stable
@@ -305,9 +309,15 @@ pip etc.
 
 These manifests must be included in the submission.
 
+:::important
+Under no circumstances should source code be included in the
+submission. Flathub isn't a place to host the application source code;
+this includes the dependencies.
+:::
+
 ## Required metadata
 
-Applications must have the following metadata included.
+Applications must provide the following metadata.
 
 :::note
 These metadata files should directly come from the upstream project
