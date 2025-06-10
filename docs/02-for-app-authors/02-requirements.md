@@ -297,7 +297,9 @@ application is supported on only one architecture, please include a
 
 There is [no network access](/docs/for-app-authors/requirements#no-network-access-during-build)
 during the build process so all dependencies used by the application
-must be supplied in the manifest or should be vendored.
+must be supplied in the specified in the manifest as sources
+with publicly accessible URLs so that they can be downloaded before
+the build starts.
 
 There is a [community provided set of tools](https://github.com/flatpak/flatpak-builder-tools)
 that can be used to generate dependency manifests for npm, yarn, cargo,
