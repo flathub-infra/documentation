@@ -290,8 +290,11 @@ used in the manifest must be hosted on Flathub.
 
 Flathub builds on both `x86_64` and `aarch64` by default. If the
 application is supported on only one architecture, please include a
-`flathub.json` file in the submission with the
+`flathub.json` file in the submission pull request with the
 [proper contents](/docs/for-app-authors/maintenance#limiting-the-set-of-architectures-to-build-on).
+
+The `flathub.json` file should reside in the toplevel root, next to
+the Flatpak manifest.
 
 ### Dependency manifest
 
