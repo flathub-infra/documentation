@@ -111,29 +111,25 @@ Please do not open the PR against the `master` base branch of
 5. Now open a pull request against the `new-pr` **base branch** on GitHub.
    The title of the PR should be "Add org.example.MyAwesomeApp".
 
-## After submission
+## Review
 
-Once your pull request has been submitted, it will be reviewed. Reviewers
-may post comments and may ask for certain fixes or clarifications. Once
-all comments are resolved, a _test_ build can be started on the pull
-request by commenting `bot, build`.
+:::important
+Please note that at no point during the submission process is it
+necessary to close the pull request in order to address review
+comments — this includes changes to the [application ID](/docs/for-app-authors/requirements#application-id).
+Additionally, there is no reason to merge the `master` branch into the
+submission branch at any point.
+:::
 
-If the test build is successful, the application is tested by installing
-and running it. Further feedback may be provided after that.
+Once the pull request has been submitted, it will be reviewed by the
+reviewers. Please consider that reviewers are volunteers and the response
+time may vary. Reviewers may post comments, ask for certain changes,
+fixes or clarifications. Please answer all these questions.
 
-### Review
+Once all comments are resolved, a _test_ build can be started on the
+pull request by commenting `bot, build`.
 
-The PR will be reviewed by the reviewers. Please consider that
-reviewers are volunteers, and know well about packaging for
-flatpak. So time to response vary and you should be patient. Also make
-sure you answer all the questions.
-
-At no point in the submission there is a need to close the PR to
-address anything, including when the application ID needs to be
-adjusted. Also there is no reason merge the `master` branch into your
-submission branch.
-
-### Approval
+## Approval
 
 If the submission is approved, it will be marked as ready and
 merged into a new repository under the [Flathub GitHub organisation](https://github.com/flathub/)
@@ -194,15 +190,13 @@ created and published.
 
 ### I can't see the app in my authored apps on the developer portal-why?
 
-Once the app’s submission has been merged and the _official_ build has been
-published, the website should show the app on your authored apps after a short
-time.  You need to have write access to the Flathub app repository and log in
-to the website.
+Once the app’s submission has been merged and the _official_ build has
+been published, the website should show the app on your authored apps
+after a short time. You need to have write access to the Flathub app
+repository and log in to the website.
 
 If it does not work, please press the "Refresh" button [here](https://flathub.org/developer-portal)
-and it should show up.
-
-If it still does not work feel free to contact us.
+and it should show up. If it still does not work feel free to contact us.
 
 ## Getting help
 

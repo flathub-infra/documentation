@@ -197,11 +197,17 @@ regarding the quality checks.
 
 ## `flathub.json`
 
-You can create a file called `flathub.json` to control various parameters of the build infrastructure.
+You can create a file called `flathub.json` to control various
+parameters of the build infrastructure. The `flathub.json` file should
+reside in the toplevel root, next to the Flatpak manifest.
 
 ### Limiting the set of architectures to build on
 
-Flathub has builders for `x86_64`, and `aarch64` as current runtimes (based on Freedesktop.org SDK 20.08 or later) only support `x86_64` and `aarch64`. By default all applications build on all these. If your application does not work on some architectures, you can configure it to skip or build certain architectures.
+Flathub has builders for `x86_64`, and `aarch64` as current runtimes
+(based on Freedesktop.org SDK 20.08 or later) only support `x86_64` and
+`aarch64`. By default all applications build on all these. If your
+application does not work on some architectures, you can configure it
+to skip or build certain architectures.
 
 #### Don’t build on `aarch64`
 
@@ -219,7 +225,10 @@ Flathub has builders for `x86_64`, and `aarch64` as current runtimes (based on F
 }
 ```
 
-If you build for both `x86_64` and `aarch64` you do not need a `flathub.json` file. There will be no new architecture add or removed on current runtimes, which mean that if that situation ever occurred, it would only happen when changing the runtime version in your package.
+If you build for both `x86_64` and `aarch64` you do not need a
+`flathub.json` file. There will be no new architecture add or removed
+on current runtimes, which mean that if that situation ever occurred, it
+would only happen when changing the runtime version in your package.
 
 ## End of life
 
@@ -341,4 +350,6 @@ to change IDs must be carefully planned and done in moderation.
 
 ## Getting Help
 
-If anything is not working or there is some behaviour you don’t understand, come to the [Matrix channel](https://matrix.to/#/#flatpak:matrix.org) or start a discussion on the [Flathub forum](https://discourse.flathub.org/).
+If anything is not working or there is some behaviour you don’t
+understand, come to the [Matrix channel](https://matrix.to/#/#flatpak:matrix.org)
+or start a discussion on the [Flathub forum](https://discourse.flathub.org/).
