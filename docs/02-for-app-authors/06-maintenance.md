@@ -131,8 +131,9 @@ if you are the maintainer of such an app.
 The external runners have a 9 hour timeout, larger free space and
 memory.
 
-Once the app is redirected to external runners, [test builds](#test-builds)
-need to be manually started by commenting `bot, build`.
+Once the app is redirected to external runners, any further
+[test builds](#test-builds) need to be manually started by commenting
+`bot, build`.
 
 ## Building locally
 
