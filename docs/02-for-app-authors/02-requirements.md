@@ -29,72 +29,85 @@ cases.
 If you believe something is violating these policies, please [open an issue](https://github.com/flathub/flathub/issues).
 :::
 
-1. **Non-functional submissions**: Submissions that are not fully
-  functional during review and/or offer a poor user experience will not
-  be accepted unless improved.
+#### Non-functional submissions
 
-1. **Console software submissions**: Console software submissions that
-  are not sufficiently user facing or offers very niche, technical or
-  limited functionality will not be accepted.
+Submissions that are not fully functional during review and/or offer a
+poor user experience will not be accepted unless improved.
 
-1. **Minimal submissions**: Submissions that offer very minimal
-  functionality often consisting of simple scripts, single or simple
-  sources or aren't suitable as desktop applications or are forks of
-  existing projects without any significant modifications will not be
-  accepted.
+#### Console software submissions
 
-1. **Impermissible submissions**: In addition to the other guidelines,
-  the following non-exhaustive types of application submissions will
-  not be accepted: documentation or help files only, media-only content
-  (e.g., images, audio, video), fonts, firmware, simple web wrapper
-  applications, shell/WM/DE extensions, tray applets, system
-  utilities (e.g., `sudo`, `xeyes`) and CLI utility programs
-  (e.g., `elinks`, `gh`).
+Console software submissions that are not sufficiently user facing or
+offers very niche, technical or limited functionality will not be
+accepted.
 
-1. **Submissions incompatible or restricted by Flatpak sandbox**: Certain
-  types of submissions, such as development tools and IDEs with a broad
-  scope are generally not well-suited for Flatpak due to inherent
-  sandboxing limitations and severely degrade the user experience.
-  Unless these applications are being officially submitted by the
-  upstream developers and/or upstream has explicitly committed to
-  supporting Flatpak they will not be accepted.
+#### Minimal submissions
 
-1. **Duplicate submissions**: Multiple submissions of the same
-  application (in terms of functionality, content, visuals, or user
-  experience) each built with different frameworks or toolkits will not
-  be accepted. Multiple submissions of a forked app with minimal
-  changes in the fork (in terms of functionality, content, visuals, or
-  user experience) will not be accepted.
+Submissions that offer very minimal functionality often consisting of
+simple scripts, single or simple sources or aren't suitable as desktop
+applications or are forks of existing projects without any significant
+modifications will not be accepted.
 
-1. **Software using emulation or translation layers**: Windows software
-  submissions that are using Wine or any submissions that aren't native
-  to the Linux desktop and is using some emulation or translation layer
-  will only be accepted if they are submitted officially by upstream
-  with the intention of maintaining it in an official capacity.
+#### Impermissible submissions
 
-1. **Extensions or BaseApps**: Flatpak extensions that add support for
-  new languages, language specific tooling etc. or BaseApps will need a
-  clear use case defined and prospective users to be accepted.
+In addition to the other guidelines, the following non-exhaustive types
+of application submissions will not be accepted: documentation or help
+files only, media-only content (e.g., images, audio, video), fonts,
+firmware, simple web wrapper applications, shell/WM/DE extensions, tray
+applets, system utilities (e.g., `sudo`, `xeyes`) and CLI utility programs
+(e.g., `elinks`, `gh`).
 
-1. **Structure and organisation**: The project that is being submitted
-  (if open source or source available), should be well-organised,
-  structured and should follow the established conventions of the
-  programming language it uses. They must also be distributed in a
-  sensible manner such as through git tags or tarballs hosted on
-  well-known hosts so that it is easy to consume the source from the
-  Flatpak manifest and verify it. Proprietary apps must also be
-  distributed in sensible manner such as through tarballs or some binary
-  formats hosted on a well-known host. The submission may be subject to
-  additional scrutiny if it exhibits signs of poor structure, bad
-  practices, instability, or obfuscation.
+#### Submissions incompatible or restricted by Flatpak sandbox
 
-1. **Misleading, malicious or illegal submissions**: Submissions that
-  impersonate; engage or encourage to engage in unlawful activities;
-  provide false, misleading information and functionality; attempt to
-  deceive or violate any laws, trademarks and copyrights; acts in a
-  malicious manner or contains malicious code will not be accepted. In
-  most cases these are liable to be outright rejected or removed from
-  the store.
+Certain types of submissions, such as development tools and IDEs with a
+broad scope are generally not well-suited for Flatpak due to inherent
+sandboxing limitations and severely degrade the user experience. Unless
+these applications are being officially submitted by the upstream
+developers and/or upstream has explicitly committed to supporting
+Flatpak they will not be accepted.
+
+#### Duplicate submissions
+
+Multiple submissions of the same application (in terms of functionality,
+content, visuals, or user experience) each built with different
+frameworks or toolkits will not be accepted. Multiple submissions of a
+forked app with minimal changes in the fork (in terms of functionality,
+content, visuals, or user experience) will not be accepted.
+
+#### Software using emulation or translation layers
+
+Windows software submissions that are using Wine or any submissions
+that aren't native to the Linux desktop and is using some emulation or
+translation layer will only be accepted if they are submitted officially
+by upstream with the intention of maintaining it in an official
+capacity.
+
+#### Extensions or BaseApps
+
+Flatpak extensions that add support for new languages, language
+specific tooling etc. or BaseApps will need a clear use case defined
+and prospective users to be accepted.
+
+#### Structure and organisation
+
+The project that is being submitted (if open source or source
+available), should be well-organised, structured and should follow the
+established conventions of the programming language it uses. They must
+also be distributed in a sensible manner such as through git tags or
+tarballs hosted on well-known hosts so that it is easy to consume the
+source from the Flatpak manifest and verify it. Proprietary apps must
+also be distributed in sensible manner such as through tarballs or some
+binary formats hosted on a well-known host. The submission may be
+subject to additional scrutiny if it exhibits signs of poor structure,
+bad practices, instability, or obfuscation.
+
+#### Misleading, malicious or illegal submissions
+
+Submissions that impersonate; engage or encourage to engage in unlawful
+activities; provide false, misleading information and functionality;
+attempt to deceive or violate any laws, trademarks and copyrights;
+act in a malicious manner or contains malicious code will not be
+accepted. In most cases these are liable to be outright rejected or
+removed from the store.
 
 ## Application ID
 
