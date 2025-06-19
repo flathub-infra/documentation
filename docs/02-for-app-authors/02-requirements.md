@@ -370,8 +370,3 @@ a 256x256 PNG icon, properly [named and installed](https://docs.flatpak.org/en/l
 
 Icon is optional for console applications but it is mandatory if
 they intend to appear on Flathub website search results.
-
-## Best practices
-
-- Applications should try to make sure their metadata follows the
-  [quality guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines).
