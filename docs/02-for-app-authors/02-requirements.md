@@ -76,6 +76,19 @@ If you believe something is violating these policies, please [open an issue](htt
   new languages, language specific tooling etc. or BaseApps will need a
   clear use case defined and prospective users to be accepted.
 
+1. **Structure and organisation**: The project that is being submitted
+  (if open source or source available), should be well-organised,
+  structured and should follow the established conventions of the
+  programming language it uses. They must also be distributed in a
+  sensible manner such as through git tags or tarballs hosted on
+  well-known hosts so that it is easy to consume the source from the
+  Flatpak manifest and verify it. Proprietary apps must also be
+  distributed in sensible manner such as through tarballs or some binary
+  formats hosted on a well-known host.
+
+  The submission may be subject to additional scrutiny if it exhibits
+  signs of poor structure, bad practices, instability, or obfuscation.
+
 1. **Misleading, malicious or illegal submissions**: Submissions that
   impersonate; engage or encourage to engage in unlawful activities;
   provide false, misleading information and functionality; attempt to
