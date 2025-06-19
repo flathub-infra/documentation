@@ -84,10 +84,9 @@ If you believe something is violating these policies, please [open an issue](htt
   well-known hosts so that it is easy to consume the source from the
   Flatpak manifest and verify it. Proprietary apps must also be
   distributed in sensible manner such as through tarballs or some binary
-  formats hosted on a well-known host.
-
-  The submission may be subject to additional scrutiny if it exhibits
-  signs of poor structure, bad practices, instability, or obfuscation.
+  formats hosted on a well-known host. The submission may be subject to
+  additional scrutiny if it exhibits signs of poor structure, bad
+  practices, instability, or obfuscation.
 
 1. **Misleading, malicious or illegal submissions**: Submissions that
   impersonate; engage or encourage to engage in unlawful activities;
