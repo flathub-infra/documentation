@@ -1243,6 +1243,18 @@ whose extension ID does not start with the parent app-id.
 The [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
 has a property that is not recognised by Flatpak Builder.
 
+### manifest-toplevel-build-network-access
+
+The [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+has network access during build in the toplevel. This is not allowed
+for apps on Flathub.
+
+```yaml
+build-options:
+  build-args:
+    - --share=network
+```
+
 ### metainfo-svg-screenshots
 
 There is a SVG or SVGZ screenshot link in the
@@ -1280,6 +1292,17 @@ under the `screenshots/screenshot/image` tag.
 
 Please see the [Metainfo guide](/docs/for-app-authors/metainfo-guidelines/#screenshots)
 on how to define screenshots in the Metainfo file.
+
+### module-module_name-build-network-access
+
+The module `module_name` has network access during build in the
+[Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
+
+```yaml
+build-options:
+  build-args:
+    - --share=network
+```
 
 ### module-module_name-source-dest-filename-is-path
 
