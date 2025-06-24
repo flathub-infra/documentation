@@ -48,6 +48,12 @@ Then build your manifest:
    flatpak install --user -y my-app $FLATPAK_ID
    ```
 
+   Once it is built successfully using the above command run:
+
+   ```bash
+   ostree commit --repo=repo --canonical-permissions --branch=screenshots/$(flatpak --default-arch) builddir/files/share/app-info/media
+   ```
+
 ### Run and test
 
    ```bash
@@ -59,12 +65,6 @@ Then build your manifest:
    Please try to run the [linter](/docs/for-app-authors/linter) once
    locally. Consult the documentation for explanation of the errors. For
    certain errors you might need an [exception](/docs/for-app-authors/linter#exceptions).
-
-   :::note
-   Some linter errors regarding external icons, screenshots or screenshot
-   files may happen in a local build but not on Flathub CI. Those can be
-   safely ignored. Feel free to ask for help with any linter issues.
-   :::
 
    ```bash
    flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest <manifest>
