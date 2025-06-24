@@ -688,6 +688,41 @@ This must not be used except for very specific cases. Please follow the
 for more information and find out the specific DBus names required using
 `--log-session-bus`.
 
+### finish-args-host-filesystem-access
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `host` filesystem access.
+
+### finish-args-home-filesystem-access
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `home` filesystem access.
+
+### finish-args-autostart-filesystem-access
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has filesystem access to `~/.config/autostart`.
+
+### finish-args-systemd-filesystem-access
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has filesystem access to `~/.config/systemd`.
+
+### finish-args-gnupg-filesystem-access
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has filesystem access to `~/.gnupg`.
+
+### finish-args-ssh-filesystem-access
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has filesystem access to `~/.ssh`.
+
+### finish-args-desktopfile-filesystem-access
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has filesystem access to `~/.local/share/applications`.
+
 ### finish-args-arbitrary-xdg-cache-mode-access
 
 The following errors are included here
