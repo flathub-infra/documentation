@@ -81,6 +81,19 @@ translation layer will only be accepted if they are submitted officially
 by upstream with the intention of maintaining it in an official
 capacity.
 
+#### End of life dependencies
+
+Submissions using an end-of-life runtime, extension or baseapp
+will not be accepted.
+
+Submissions that use high-risk, end-of-life software, such as
+OpenSSL 1.x, Python 2, or Qt5 WebKit, and request the network or any
+other invasive permissions may be rejected due to security concerns.
+
+Submissions where the main application is itself end-of-life may be
+rejected, unless the submitter can demonstrate their ability to
+maintain it for the foreseeable future and perform runtime upgrades.
+
 #### Extensions or BaseApps
 
 Flatpak extensions that add support for new languages, language
