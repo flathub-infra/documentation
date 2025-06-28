@@ -42,42 +42,49 @@ Other git branch names are free to use.
 
 ### Creating new git branches for publishing
 
-**Publishing to beta**: Please don't use GitHub to create the `beta`
-git branch. Please also don't locally create or push the `beta` git branch
-first.
+The process is described below.
 
-The process is:
+#### Creating the beta branch
 
-1. Create a normal pull request with the changes that will be merged to
-the future `beta` git branch. Say for example the PR branch is
+:::important
+Please make a pull request first targeting the current default git
+branch before creating or pushing the `beta` git branch.
+:::
+
+First, create a pull request targeting the current default git branch
+(usually `master`) with the changes that will be merged to the future
+`beta` git branch. Say, for example the PR branch is
 `my-beta-pr-branch`.
 
-2. Once the build is successful, create the `beta` branch locally using
-`git` from the previous parent branch usually `master`:
+Once the build is successful, create the `beta` branch locally using
+`git` from the previous parent branch (usually `master`):
 
 ```sh
 git checkout -b beta master
 ```
 
-3. Now merge the changes from the PR branch to beta:
+Now merge the changes from the PR branch to the `beta` branch:
 
 ```sh
 git merge my-beta-pr-branch
 ```
 
-4. Now push the `beta` branch and it will trigger an official build.
+Finally, push the `beta` branch and it will trigger an official build.
 Future changes to this branch will have to go through pull requests.
 
 ```sh
 git push
 ```
 
-**Creating new branches for extensions/baseapps**: Please don't use
-GitHub to create the `beta` git branch. Please also don't locally
-create or push the `beta` git branch first.
+#### Creating new branches for extensions or baseapps
 
-Extensions or baseapps having multiple branches for example
-`branch/22.08, branch/23.08, branch/24.08` should follow the same
+:::important
+Please make a pull request first targeting the current default git
+branch before creating or pushing the new git branch.
+:::
+
+Extensions or baseapps having multiple branches, for example
+`branch/22.08, branch/23.08, branch/24.08`, should follow the same
 process as above.
 
 The only change would be in the second step where the new branch would
