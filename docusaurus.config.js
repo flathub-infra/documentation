@@ -98,6 +98,10 @@ const config = {
             from: "/docs/for-app-authors/appdata-guidelines",
             to: "/docs/for-app-authors/metainfo-guidelines",
           },
+          {
+            from: "/linter",
+            to: "/docs/for-app-authors/linter",
+          },
         ],
       },
     ],
