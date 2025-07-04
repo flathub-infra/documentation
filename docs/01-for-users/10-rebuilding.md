@@ -1,33 +1,35 @@
 # Rebuilding a Flatpak from published sources
 
-Most of the time, if you want to rebuild a Flaptak from Flathub, you can go to
-the [Flathub organization on GitHub](https://github.com/flathub), find the
-repository for the application that you want to rebuild, clone it and then
-follow the [Building your first
-Flatpak](https://docs.flatpak.org/en/latest/first-build.html) steps from the
-Flatpak documentation.
+Most of the time, if you want to rebuild a Flaptak from Flathub, you can
+go to the [Flathub organization on GitHub](https://github.com/flathub),
+find the repository for the application that you want to rebuild, clone
+it and then follow the [Building your first Flatpak](https://docs.flatpak.org/en/latest/first-build.html)
+steps from the Flatpak documentation. But let's say that you want to
+rebuild a specific version of the Flatpak exactly as it was published
+on Flathub, for example, to verify that the build is reproducible.
 
-But let's say that you want to rebuild a specific version of the Flatpak
-exactly as it was published on Flathub, for example to verify that the build is
-reproducible. In this guide, we will desecribe the process of doing that which
-is equivalent to downloading an `SRPM` and rebuilding the RPM from it, but for
-Flatpaks.
+In this guide, we will describe the process of doing that. This is
+equivalent to downloading an `SRPM` and rebuilding the RPM from it, but
+for Flatpaks.
 
-Let's pick a small Flatpak as example:
+Let's pick a small Flatpak as an example:
 [`org.kde.minuet`](https://github.com/flathub/org.kde.minuet)
 
-Let's first install the latest version:
+Let's first install the latest version from Flathub:
 
 ```bash
 flatpak --user install flathub org.kde.minuet
 ```
 
-We can now find the git commit that was used to build this Flatpak by looking
-at the `Subject` field in the output of the `flatpak info` command:
+We can now find the git commit that was used to build this Flatpak by
+looking at the `Subject` field in the output of the `flatpak info`
+command:
 
 ```bash
-flatpak info --user org.kde.minuet
+flatpak info --user org.kde.minuet//stable
+```
 
+```
 Minuet - Music Education Software
 
           ID: org.kde.minuet
@@ -49,20 +51,23 @@ Installation: user
         Date: 2025-07-01 13:59:17 +0000
 ```
 
-Here it's [b403e3f69e11](https://github.com/flathub/org.kde.minuet/commit/b403e3f69e11).
+Here it is the commit [b403e3f69e11](https://github.com/flathub/org.kde.minuet/commit/b403e3f69e11).
 
-But that does not tell us exactly what version (and exact commits) of the
-runtime and sdk were used to build it. The sources used to build it may also no
-longer be accessible anymore from remote servers.
+But that does not tell us the exact version and commits of the
+runtime and the SDK that were used to build it. Moreover, the sources
+used to build it may also no longer be accessible from the remote
+servers.
 
-To fully reproduce the build without relying on other parties, we need to get
-the processed manifest from the Flatpak and fetch the sources from Flathub.
+So, to fully reproduce the build without relying on external parties, we
+need to get the processed manifest from the Flatpak and fetch the
+sources from Flathub.
 
-The processed manifest is stored in the Flapak itself:
+The processed manifest is stored in the Flatpak itself:
 
 ```bash
 flatpak run --user --command=/bin/cat org.kde.minuet /app/manifest.json
 ```
+
 ```json
 {
   "id" : "org.kde.minuet",
@@ -132,23 +137,27 @@ flatpak run --user --command=/bin/cat org.kde.minuet /app/manifest.json
 }
 ```
 
-Notice that this manifest includes the exact commit of the runtime it was build
-against.
+Notice that this manifest includes the exact commit of the runtime and
+SDk it was built against.
 
-Let's store it in a folder:
+Let's store this manifest in a new folder:
 
 ```bash
 mkdir org.kde.minuet
 cd org.kde.minuet
-flatpak run --user --command=/bin/cat org.kde.minuet /app/manifest.json >org.kde.minuet.json
+flatpak run --user --command=/bin/cat --filesystem=$(pwd) org.kde.minuet /app/manifest.json >manifest.json
 ```
 
-Let's get the sources that are referenced in this manifest. To do that we can
-fetch the special `.Sources` extension:
+Now we install the sources extension of the app from Flathub to obtain
+the sources referenced in this manifest:
 
 ```bash
-flatpak install --user org.kde.minuet.Sources
+flatpak install --user flathub org.kde.minuet.Sources//stable
+```
+
+```
 flatpak info --user org.kde.minuet.Sources
+
           ID: org.kde.minuet.Sources
          Ref: runtime/org.kde.minuet.Sources/x86_64/stable
         Arch: x86_64
@@ -164,7 +173,7 @@ Installation: user
         Date: 2025-07-01 13:59:16 +0000
 ```
 
-You can then find them in the Flatpak runtime folder:
+The sources extension can now be found in the Flatpak runtime folder:
 
 ```console
 $ tree ~/.local/share/flatpak/runtime/org.kde.minuet.Sources/x86_64/stable/fdafb56a6e907f87a359c8a048471fc1747291bdcbe0e952ad2d0cf3d66fc0dc/files
@@ -179,47 +188,71 @@ $ tree ~/.local/share/flatpak/runtime/org.kde.minuet.Sources/x86_64/stable/fdafb
     └── org.kde.minuet.json
 ```
 
-We can then copy the sources and patches from this folder into our current one:
+We first create a `.flatpak-builder` folder which should lie alongside
+the manifest in the same directory. Then we copy the sources
+(`archive`, `git` etc.) and place them inside the `.flatpak-builder`
+folder:
 
 ```bash
-cp ~/.local/share/flatpak/runtime/org.kde.minuet.Sources/x86_64/stable/fdafb56a6e907f87a359c8a048471fc1747291bdcbe0e952ad2d0cf3d66fc0dc/files/manifest/*.patch .
 mkdir -p .flatpak-builder
 cp -a ~/.local/share/flatpak/runtime/org.kde.minuet.Sources/x86_64/stable/fdafb56a6e907f87a359c8a048471fc1747291bdcbe0e952ad2d0cf3d66fc0dc/files/downloads .flatpak-builder
 ```
 
-Before we start building the Flatpak with those, we have to make sure that we
-are using the right commit for the Runtime and Sdk (see the processed manifest
-above):
+The patch file needs to be placed alongside the manifest:
 
 ```bash
-flatpak --user install flathub org.kde.Platform//6.9
+cp ~/.local/share/flatpak/runtime/org.kde.minuet.Sources/x86_64/stable/fdafb56a6e907f87a359c8a048471fc1747291bdcbe0e952ad2d0cf3d66fc0dc/files/manifest/*.patch .
+```
+
+Before we start building the Flatpak with those, we have to make sure
+that we are using the right commit for the runtime and SDK.
+
+We first install the runtime and the SDK:
+
+```bash
+flatpak --user install flathub org.kde.{Platform,Sdk}//6.9
+```
+
+Then we update them to the commit obtained from the manifest above:
+
+```bash
 flatpak --user update \
       --commit=f930fae18cfc829f51db18b9324905a3bebee0ec7e9d4d62afbb17f696fb20d0 \
       org.kde.Platform//6.9
-flatpak --user install org.kde.Sdk//6.9
 flatpak --user update \
       --commit=3170c974605b5af73a78bef2ae022df9b8dd7496569928a3766f0706c6c6515d \
       org.kde.Sdk//6.9
 ```
 
-And then we can rebuild the Flatpak using:
+Now we can rebuild the Flatpak using:
 
 ```bash
-flatpak-builder --user --disable-download --repo=repo --force-clean --disable-rofiles-fuse app org.kde.minuet.json
+flatpak-builder --user --disable-download --repo=repo --force-clean --disable-rofiles-fuse builddir manifest.json
 ```
 
-If the manifest has git sources flatpak-builder will try to fetch it from the
-remote to verify the commit, so you may need to edit the manifest and replace
-git remotes to `file://` or `dir` counterparts if the remote repository is no
-longer available.
+This process can be reproduced for any Flatpak on Flathub and any
+version of the Flatpak as long as the sources extension is available
+and older versions haven't been pruned.
 
-Note that you can reproduce this process for any version of the Flatpak by
-looking at the commit log and downgrading it to a specific commit. See
-[Downgrading](/docs/for-users/downgrading) for an example.
+### Notes
 
-Some Flathub specific notes:
-- Older versions of a Flatpak are pruned after some time.
-- Sources are uploaded only from the `x86_64` pipeline. So if a manifest is
-  using arch specific sources like eg DEBs, only one arch will be available.
-  This is not an issue for applications that are entirely build from source
-  tarballs or git repos.
+- Flathub may periodically prune older versions to keep the Flatpak
+  repository size in check. The last three commits of an app should
+  be available.
+
+- If the manifest has `git` sources, flatpak-builder may try to fetch
+  them from the git remote. If the remote repository is no longer
+  available, the manifest can be edited to replace the `url` of `git`
+  sources with `file://` or `dir` counterparts pointing to the git repo
+  obtained from the sources extension.
+
+- Flatpak Builder does not pin extensions to an exact commit in the
+  generated manifest. This can be worked around by inspecting the
+  extension repository's git history and copying the corresponding
+  build recipe from that point into the application manifest.
+
+- Flathub uploads the sources extension only from `x86_64` build
+  pipelines. If a manifest has architecture specific binary sources,
+  the sources of only one architecture will be available. This is not an
+  issue for applications that are entirely built from source tarballs or
+  git repos.
