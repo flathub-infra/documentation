@@ -52,9 +52,9 @@ modifications will not be accepted.
 In addition to the other guidelines, the following non-exhaustive types
 of application submissions will not be accepted: documentation or help
 files only, media-only content (e.g., images, audio, video), fonts,
-firmware, simple web wrapper applications, shell/WM/DE extensions, tray
-applets, system utilities (e.g., `sudo`, `xeyes`) and CLI utility programs
-(e.g., `elinks`, `gh`).
+firmware, simple web wrappers/web consoles, shell/WM/DE extensions, tray
+applets, system utilities (e.g., `sudo`, `xeyes`) and CLI utility
+programs (e.g., `elinks`, `gh`).
 
 #### Submissions incompatible or restricted by Flatpak sandbox
 
@@ -360,6 +360,11 @@ Please avoid making them Flathub specific by including a copy in the
 submission pull request and instead try to use them from upstream if
 possible.
 :::
+
+## Name and Icon
+
+The application name and icon as presented to the Flathub website
+and to users must be distinct and must not violate any trademarks.
 
 ### Appstream
 
