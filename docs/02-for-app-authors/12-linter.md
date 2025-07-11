@@ -723,6 +723,11 @@ in the manifest has filesystem access to `~/.ssh`.
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has filesystem access to `~/.local/share/applications`.
 
+### finish-args-uses-no-talk-name
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--no-talk-name` or `--no-system-talk-name`.
+
 ### finish-args-arbitrary-xdg-cache-mode-access
 
 The following errors are included here
