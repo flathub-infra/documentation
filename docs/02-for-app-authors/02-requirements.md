@@ -52,7 +52,9 @@ modifications will not be accepted.
 In addition to the other guidelines, the following non-exhaustive types
 of application submissions will not be accepted: documentation or help
 files only, media-only content (e.g., images, audio, video), fonts,
-firmware, simple web wrappers/web consoles, shell/WM/DE extensions, tray
+firmware, simple web wrappers/web consoles, applications only working
+in very specific envionments such as requiring a specific DE or distro
+(unless it is for example a settings app), shell/WM/DE extensions, tray
 applets, system utilities (e.g., `sudo`, `xeyes`) and CLI utility
 programs (e.g., `elinks`, `gh`).
 
