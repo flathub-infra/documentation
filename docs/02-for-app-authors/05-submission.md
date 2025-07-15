@@ -37,21 +37,15 @@ Add the Flathub repo user-wide:
 Then build your manifest:
 
    ```bash
-   flatpak run org.flatpak.Builder --force-clean --sandbox --user --install --install-deps-from=flathub --ccache --mirror-screenshots-url=https://dl.flathub.org/media/ --repo=repo builddir <manifest>
+   flatpak run --command=flathub-build org.flatpak.Builder --install <manifest>
    ```
 
    If you are using an [extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data) source:
 
    ```bash
-   flatpak run org.flatpak.Builder --force-clean --sandbox --user --install-deps-from=flathub --ccache --mirror-screenshots-url=https://dl.flathub.org/media/ --repo=repo builddir <manifest>
+   flatpak run --command=flathub-build org.flatpak.Builder <manifest>
    flatpak remote-add --user --no-gpg-verify my-app file://$(pwd)/repo
    flatpak install --user -y my-app $FLATPAK_ID
-   ```
-
-   Once it is built successfully using the above command run:
-
-   ```bash
-   ostree commit --repo=repo --canonical-permissions --branch=screenshots/$(flatpak --default-arch) builddir/files/share/app-info/media
    ```
 
 ### Run and test
