@@ -198,7 +198,7 @@ Note, that some code hosting platforms like GitLab may have
 case-sensitive namespaces.
 
 - Applications using code hosting IDs must have the repository URL
-  reachable. In some edge cases, if the calculated code hosting URL
+  reachable. In some cases, if the calculated code hosting URL
   doesn't match exactly, an exception can be granted after manually
   checking.
 
@@ -355,12 +355,11 @@ These manifests must be included in the submission.
 Applications must provide the following metadata.
 
 :::important
-These metadata files should directly come from the upstream project
-whenever possible as these are widely adopted Freedesktop standards.
+These metadata files must be integrated in the upstream project. Please
+do not include a copy in the submission pull request.
 
-Please avoid making them Flathub specific by including a copy in the
-submission pull request and instead try to use them from upstream if
-possible.
+Flatpak manifests using [extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data)
+sources for the main application is an exception to this.
 :::
 
 ## Name and Icon
