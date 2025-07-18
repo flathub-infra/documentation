@@ -234,6 +234,11 @@ If you build for both `x86_64` and `aarch64` you do not need a
 on current runtimes, which mean that if that situation ever occurred, it
 would only happen when changing the runtime version in your package.
 
+:::warning
+Dropping the build for an architecture that already had a version published, will cause it to remain stuck on that version indefinitely.
+Please [open an issue](https://github.com/flathub/flathub/issues/new) and ask for removal of that architecture.
+:::
+
 ## End of life
 
 :::note
