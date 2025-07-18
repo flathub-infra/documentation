@@ -235,8 +235,8 @@ on current runtimes, which mean that if that situation ever occurred, it
 would only happen when changing the runtime version in your package.
 
 :::warning
-Dropping an architecture, that already shipped a version, will cause it to be remain on that version.
-Make sure, to create an issue on [flathub/flathub](https://github.com/flathub/flathub/issues/new/choose) and ask for removal of that architecture.
+Dropping the build for an architecture that already had a version published, will cause it to remain stuck on that version indefinitely.
+Please [open an issue](https://github.com/flathub/flathub/issues/new) and ask for removal of that architecture.
 :::
 
 ## End of life
