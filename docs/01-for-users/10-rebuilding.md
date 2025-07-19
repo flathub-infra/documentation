@@ -1,5 +1,11 @@
 # Rebuilding a Flatpak from published sources
 
+:::tip
+[flathub-repro-checker](https://github.com/flathub-infra/flathub-repro-checker)
+checker can be used to check reproducibility of apps published on
+Flathub. 
+:::
+
 Most of the time, if you want to rebuild a Flaptak from Flathub, you can
 go to the [Flathub organization on GitHub](https://github.com/flathub),
 find the repository for the application that you want to rebuild, clone
