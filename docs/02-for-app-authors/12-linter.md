@@ -1465,20 +1465,6 @@ argument of [Flatpak Builder](https://docs.flatpak.org/en/latest/flatpak-builder
 
 Specifying the branch or default-branch property leads to other issues.
 
-## Linter warnings
-
-Warnings are non-fatal but they should be resolved, if possible. Some of
-them might be promoted to an error in the future if needed.
-
-### appstream-screenshot-missing-caption
-
-The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
-is missing `caption` tag for one or more screenshots or the `caption`
-tag is empty.
-
-Please refer to the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#screenshots)
-for more details.
-
 ### desktop-file-low-quality-category
 
 The [desktop file](https://docs.flatpak.org/en/latest/conventions.html#desktop-files)
@@ -1502,20 +1488,19 @@ is using the deprecated `sha1` checksum.
 
 It is recommended to switch to `sha256` or `sha512`.
 
-### module-module_name-buildsystem-is-plain-cmake
+## Linter warnings
 
-A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
-is using plain `cmake` as buildsystem.
+Warnings are non-fatal but they should be resolved, if possible. Some of
+them might be promoted to an error in the future if needed.
 
-It is recommended to switch to `cmake-ninja` as that is usually faster.
+### appstream-screenshot-missing-caption
 
-### module-module_name-cmake-non-release-build
+The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
+is missing `caption` tag for one or more screenshots or the `caption`
+tag is empty.
 
-A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
-is using `cmake` or `cmake-ninja` as buildsystem has a `CMAKE_BUILD_TYPE`
-value, not of `Release, RelWithDebInfo, MinSizeRel`.
-
-It is recommended to use one of those as the build type.
+Please refer to the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#screenshots)
+for more details.
 
 ### runtime-is-eol-id-branch
 
