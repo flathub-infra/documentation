@@ -1283,6 +1283,12 @@ whose extension ID does not start with the parent app-id.
 The [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
 has a property that is not recognised by Flatpak Builder.
 
+### manifest-json-warnings
+
+The [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+has some invalid JSON structure which json-glib is raising a warning
+on.
+
 ### manifest-toplevel-build-network-access
 
 The [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
