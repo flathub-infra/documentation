@@ -62,6 +62,6 @@ There's no punchline here: I'm only starting the legwork to figure out which lan
 [webhook-proxy]: https://github.com/flathub-infra/webhook-proxy
 [just]: https://just.systems/
 [justpak]: https://github.com/barthalion/justpak
-[bbhtt]: https://bbhtt.space/about/
+[bbhtt]: https://bbhtt.in/about/
 [flatpak-builder-lint]: https://github.com/flathub-infra/flatpak-builder-lint
 [vorarbeiter]: https://github.com/flathub-infra/vorarbaiter/issues
