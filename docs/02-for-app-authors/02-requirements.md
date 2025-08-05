@@ -31,8 +31,9 @@ If you believe something is violating these policies, please [open an issue](htt
 
 #### Non-functional submissions
 
-Submissions that are not fully functional during review and/or offer a
-poor user experience will not be accepted unless improved.
+Submissions that are not fully functional, provide a poor user
+experience, or contain clearly or easily visible issues will not be
+accepted unless these issues are addressed.
 
 #### Console software submissions
 
