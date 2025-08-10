@@ -53,8 +53,16 @@ branch before creating or pushing the `beta` git branch.
 
 First, create a pull request targeting the current default git branch
 (usually `master`) with the changes that will be merged to the future
-`beta` git branch. Say, for example the PR branch is
-`my-beta-pr-branch`.
+`beta` git branch.
+
+Say, for example the PR branch is `my-pr-branch`.
+
+```sh
+git checkout -b my-pr-branch master
+
+# git add, git commit, git push
+# Open PR
+```
 
 Once the build is successful, create the `beta` branch locally using
 `git` from the previous parent branch (usually `master`):
@@ -63,18 +71,22 @@ Once the build is successful, create the `beta` branch locally using
 git checkout -b beta master
 ```
 
-Now merge the changes from the PR branch to the `beta` branch:
+Now merge the changes from the PR branch to the newly created `beta`
+branch:
 
 ```sh
-git merge my-beta-pr-branch
+git merge my-pr-branch
 ```
 
 Finally, push the `beta` branch and it will trigger an official build.
-Future changes to this branch will have to go through pull requests.
 
 ```sh
 git push
 ```
+
+Once pushed, the branch protections on the `beta` branch will be active
+and any future change to this branch will have to go through the usual
+pull request workflow.
 
 #### Creating new branches for extensions or baseapps
 
@@ -87,13 +99,44 @@ Extensions or baseapps having multiple branches, for example
 `branch/22.08, branch/23.08, branch/24.08`, should follow the same
 process as above.
 
-The only change would be in the second step where the new branch would
-be `branch/25.08` (for example) and the previous parent branch would be
-`branch/24.08` (for example).
+First, create a pull request targeting the current default git branch
+(say `branch/24.08`) with the changes that will be merged to the future
+`branch/25.08` git branch.
+
+Say, for example the PR branch is `my-pr-branch`.
+
+```sh
+git checkout -b my-pr-branch branch/24.08
+
+# git add, git commit, git push
+# Open PR
+```
+
+Once the build is successful, create the `branch/25.08` branch locally
+using `git` from the previous parent branch, in this case it is
+`branch/24.08`:
 
 ```sh
 git checkout -b branch/25.08 branch/24.08
 ```
+
+Now merge the changes from the PR branch to the newly created
+`branch/25.08` branch:
+
+```sh
+git merge my-pr-branch
+```
+
+Finally, push the `branch/25.08` branch and it will trigger an
+official build.
+
+```sh
+git push
+```
+
+Once pushed, the branch protections on this branch will be active and
+any future change to this branch will have to go through the usual pull
+request workflow.
 
 ## Test builds
 
