@@ -141,8 +141,17 @@ application consisting of the reverse-DNS format
 `{tld}.{vendor}.{product}`.
 
 The _components_ of the ID are the substrings obtained by splitting it
-at each dot `.`. All components except the last is taken as the
-_domain portion_ of the ID.
+at each dot `.`.
+
+_Demangling_ an ID or any of its component means removing any leading
+underscore (`_`) and converting any other underscore (`_`) to a
+dash (`-`).
+
+The _domain_ from the ID is determined by reversing its components and
+demangling them to form a FQDN, which is then matched against
+[PSL](https://publicsuffix.org/). If a match is not found in PSL, all
+component except the last from the previous final form is taken as the
+domain.
 
 The following rules should be followed when creating application IDs.
 
@@ -174,9 +183,6 @@ The following rules should be followed when creating application IDs.
   use `io.sourceforge., net.sourceforge.` prefixes.
 
 ### Control over domain or repository
-
-The _domain_ is constructed by reversing the components of the domain
-portion of the ID and converting underscores to dashes.
 
 - The domain must be directly related to the project or the application
   being submitted and the author or the developer or the project must
