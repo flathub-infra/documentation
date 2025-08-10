@@ -1221,6 +1221,16 @@ for more details.
 
 Apps built on Flathub must avoid setting either key in the manifest.
 
+### flat-manager-wrong-ref-branch-for-beta-repo
+
+The target repo is Flathub beta but the branch of ref does not end with
+`beta` or `beta-extra`.
+
+### flat-manager-wrong-ref-branch-for-stable-repo
+
+The target repo is Flathub stable but the branch of ref ends with
+`beta` or `beta-extra`.
+
 ### flat-manager-no-app-ref-uploaded
 
 The flat manager token was of type `app` but no ostree refs starting with
