@@ -163,6 +163,20 @@ outlined above, or start a topic on the
 [Flathub forum](https://discourse.flathub.org/c/requests/5) to find
 interested volunteers.
 
+### I want to submit my app but I don't have a website - what should I do?
+
+If you don’t have your own domain or website, you can use a code
+hosting service such as GitHub, GitLab, or Codeberg etc. These platforms
+provide free static [code hosting](/docs/for-app-authors/requirements#code-hosting)
+websites.
+
+Please see the respective documentation of the code hosting platform for
+more information:
+
+- [GitHub Pages](https://docs.github.com/en/pages/quickstart)
+- [GitLab Pages](https://docs.gitlab.com/user/project/pages/)
+- [Codeberg Pages](https://docs.codeberg.org/codeberg-pages/)
+
 ### How long does it take to get submissions reviewed and merged?
 
 There is no definite time limit as all reviewers are volunteers and
