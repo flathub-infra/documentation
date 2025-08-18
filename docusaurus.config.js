@@ -102,6 +102,10 @@ const config = {
             from: "/linter",
             to: "/docs/for-app-authors/linter",
           },
+          {
+            from: "/publish",
+            to: "/docs/for-app-authors/submission",
+          },
         ],
       },
     ],
