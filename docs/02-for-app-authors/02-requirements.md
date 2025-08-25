@@ -54,7 +54,7 @@ In addition to the other guidelines, the following non-exhaustive types
 of application submissions will not be accepted: documentation or help
 files only, media-only content (e.g., images, audio, video), fonts,
 firmware, simple web wrappers/web consoles, applications only working
-in very specific envionments such as requiring a specific DE or distro
+in very specific environments such as requiring a specific DE or distro
 (unless it is for example a settings app), shell/WM/DE extensions, tray
 applets, system utilities (e.g., `sudo`, `xeyes`) and CLI utility
 programs (e.g., `elinks`, `gh`).
@@ -84,7 +84,7 @@ translation layer will only be accepted if they are submitted officially
 by upstream with the intention of maintaining it in an official
 capacity.
 
-#### End of life dependencies
+#### End-of-life dependencies
 
 Submissions using an end-of-life runtime, extension or baseapp
 will not be accepted.
@@ -108,7 +108,7 @@ and prospective users to be accepted.
 The project that is being submitted (if open source or source
 available), should be well-organised, structured and should follow the
 established conventions of the programming language it uses. They must
-also be distributed in a sensible manner such as through git tags or
+also be distributed in a sensible manner such as through Git tags or
 tarballs hosted on well-known hosts so that it is easy to consume the
 source from the Flatpak manifest and verify it. Proprietary apps must
 also be distributed in sensible manner such as through tarballs or some
@@ -265,7 +265,7 @@ and XDG standards whenever possible.
 
 Please follow the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html)
 when writing the manifest or choosing finish-args. Anything listed in
-"Standard Permissions" can be freely used. DBus, Filesystem and Device
+"Standard Permissions" can be freely used. D-Bus, Filesystem and Device
 access should be limited to only what the application needs.
 
 Please avoid choosing broad permissions unless justified.
@@ -340,7 +340,7 @@ application is supported on only one architecture, please include a
 `flathub.json` file in the submission pull request with the
 [proper contents](/docs/for-app-authors/maintenance#limiting-the-set-of-architectures-to-build-on).
 
-The `flathub.json` file should reside in the toplevel root, next to
+The `flathub.json` file should reside in the top-level root, next to
 the Flatpak manifest.
 
 ### Dependency manifest
