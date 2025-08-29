@@ -802,6 +802,20 @@ This must not be used unless absolutely necessary and when no existing
 solutions using Flatpak or [portals](https://flatpak.github.io/xdg-desktop-portal/docs/)
 exist.
 
+### finish-args-has-socket-gpg-agent
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--socket=gpg-agent`.
+
+This socket allows performing privileged operations with GPG on host.
+
+### finish-args-has-socket-ssh-auth
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--socket=ssh-auth`.
+
+This socket allows performing privileged operations with SSH on host.
+
 ### finish-args-has-dev-input
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
