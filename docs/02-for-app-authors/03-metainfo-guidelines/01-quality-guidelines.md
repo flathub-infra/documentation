@@ -46,6 +46,12 @@ custom icon). If it's made clear that it's a third-party client it can be
 ok to mention the original service (e.g. `Tally for Plausible`), but in
 most cases, it should be avoided.
 
+### Runtime not end-of-life
+
+Your app must target a runtime that is not end-of-life (EOL). This means you should not use deprecated or obsolete runtimes, as they may not receive security updates or support.
+
+Check [Runtimes](/docs/for-app-authors/runtimes) for runtime support periods and expected eol dates.
+
 ### Managed by app author
 
 Use Flathub verification to indicate that you are the author of the app
@@ -173,7 +179,7 @@ should ideally, be no longer than 15 characters, and must be shorter than
 
 - Apostrophe Markdown
 - Minimal Markdown Editor
-:::
+  :::
 
 ### Just the name
 
@@ -187,7 +193,7 @@ to the name; use the summary to provide this information instead.
 - Fractal (Matrix Client)
 - Apostrophe: the best free Markdown editor
 - Firefox Web Browser
-:::
+  :::
 
 :::tip Good examples
 
@@ -195,7 +201,7 @@ to the name; use the summary to provide this information instead.
 - Fractal
 - Apostrophe
 - Firefox
-:::
+  :::
 
 If the app is distinct among different versions of your app on Flathub
 (e.g. `Firefox Beta` versus the standard `Firefox`), then using the full
@@ -213,7 +219,7 @@ punctuation like dashes or periods.
 - FRACTAL
 - ApostropheEditor
 - Firefox.org
-:::
+  :::
 
 Cases where the formatting is part of an established brand may be
 exempt (e.g. `VLC`).
@@ -229,12 +235,12 @@ characters.
 :::tip Good example
 
 - Write markdown in style
-:::
-:::danger Bad example
+  :::
+  :::danger Bad example
 
 - Simple, easy-to-use, distraction-free markdown editor written in
-Python
-:::
+  Python
+  :::
 
 ### Not technical
 
@@ -251,7 +257,7 @@ Avoid generic nouns like "app", "tool", or "client".
 - GTK4 chat app written in Rust
 - An Electron Wrapper for the Telegram Web App
 - Free and open source Qt5 Matrix client
-:::
+  :::
 
 :::tip
 There are separate fields for technical information. If you want to
@@ -267,7 +273,7 @@ a full stop.
 :::danger Bad example
 
 - A Simple Markdown Editor.
-:::
+  :::
 
 ### Don't repeat the name
 
@@ -277,7 +283,7 @@ looks bad.
 :::danger Bad example
 
 - Apostrophe - A simple markdown editor
-:::
+  :::
 
 ### Don't start with an article
 
@@ -289,13 +295,13 @@ verb.
 
 - An image viewer
 - The LibreOffice suite
-:::
+  :::
 
 :::tip Good examples
 
 - View images and videos
 - Edit documents
-:::
+  :::
 
 ## Description
 
