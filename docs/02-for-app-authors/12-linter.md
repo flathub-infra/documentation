@@ -927,6 +927,30 @@ The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has a `--own-name=` starting with
 `org.freedesktop.DBus`.
 
+### finish-args-systemd1-own-name
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--own-name=` starting with
+`org.freedesktop.systemd1`.
+
+### finish-args-login1-own-name
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--own-name=` starting with
+`org.freedesktop.login1`.
+
+### finish-args-kwin-own-name
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--own-name=` starting with
+`org.kde.KWin`.
+
+### finish-args-plasmashell-own-name
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--own-name=` starting with
+`org.kde.plasmashell`.
+
 ### finish-args-gvfs-own-name
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
@@ -997,6 +1021,30 @@ in the manifest has `--talk-name=org.mpris.MediaPlayer2.$FLATPAK_ID`.
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has a `--talk-name=` starting with
 `org.freedesktop.Flatpak.`.
+
+### finish-args-systemd1-system-own-name
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--system-own-name=` starting with
+`org.freedesktop.systemd1`.
+
+### finish-args-login1-system-own-name
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--system-own-name=` starting with
+`org.freedesktop.login1`.
+
+### finish-args-kwin-system-own-name
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--system-own-name=` starting with
+`org.kde.KWin`.
+
+### finish-args-plasmashell-system-own-name
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--system-own-name=` starting with
+`org.kde.plasmashell`.
 
 ### finish-args-mpris-flatpak-id-system-own-name
 
@@ -1076,6 +1124,30 @@ The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `--system-talk-name=` starting with
 `org.freedesktop.Flatpak`.
 
+### finish-args-systemd1-system-talk-name
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--system-talk-name=` starting with
+`org.freedesktop.systemd1`.
+
+### finish-args-login1-system-talk-name
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--system-talk-name=` starting with
+`org.freedesktop.login1`.
+
+### finish-args-kwin-system-talk-name
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--system-talk-name=` starting with
+`org.kde.KWin`.
+
+### finish-args-plasmashell-system-talk-name
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--system-talk-name=` starting with
+`org.kde.plasmashell`.
+
 ### finish-args-reserved-dir_name
 
 The following error codes are included here:
@@ -1102,6 +1174,30 @@ to specify manually.
 
 Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#d-bus-access)
 section for more details.
+
+### finish-args-systemd1-talk-name
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--talk-name=` starting with
+`org.freedesktop.systemd1`.
+
+### finish-args-login1-talk-name
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--talk-name=` starting with
+`org.freedesktop.login1`.
+
+### finish-args-kwin-talk-name
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--talk-name=` starting with
+`org.kde.KWin`.
+
+### finish-args-plasmashell-talk-name
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has a `--talk-name=` starting with
+`org.kde.plasmashell`.
 
 ### finish-args-unnecessary-appid-talk-name
 
