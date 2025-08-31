@@ -921,74 +921,6 @@ in the manifest has `--talk-name=org.freedesktop.Secrets`.
 This is incorrect. The correct name is in lowercase
 `org.freedesktop.secrets`.
 
-### finish-args-freedesktop-dbus-own-name
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has a `--own-name=` starting with
-`org.freedesktop.DBus`.
-
-### finish-args-systemd1-own-name
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has a `--own-name=` starting with
-`org.freedesktop.systemd1`.
-
-### finish-args-login1-own-name
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has a `--own-name=` starting with
-`org.freedesktop.login1`.
-
-### finish-args-kwin-own-name
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has a `--own-name=` starting with
-`org.kde.KWin`.
-
-### finish-args-plasmashell-own-name
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has a `--own-name=` starting with
-`org.kde.plasmashell`.
-
-### finish-args-gvfs-own-name
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has a `--own-name=org.gtk.vfs`.
-
-### finish-args-flatpak-own-name
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has a `--own-name=` starting with
-`org.freedesktop.Flatpak`.
-
-### finish-args-portal-own-name
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has a `--own-name=` starting with
-`org.freedesktop.portal.`.
-
-Portal interfaces do not need to be manually added. These are allowed by
-Flatpak by default.
-
-### finish-args-portal-impl-component-own-name
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has a `--own-name=` starting with
-`org.freedesktop.impl.portal.`. `component` is the last component of the
-bus name in lowercase.
-
-### finish-args-dconf-own-name
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has a `--own-name=` starting with
-`ca.desrt.dconf`.
-
-### finish-args-mpris-flatpak-id-own-name
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `--own-name=org.mpris.MediaPlayer2.$FLATPAK_ID`.
-
 ### finish-args-freedesktop-dbus-talk-name
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
@@ -1022,68 +954,27 @@ The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has a `--talk-name=` starting with
 `org.freedesktop.Flatpak.`.
 
-### finish-args-systemd1-system-own-name
+### finish-args-own-name-cpt
 
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has a `--system-own-name=` starting with
-`org.freedesktop.systemd1`.
+All `--own-name` in
+[finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+are blocked by default unless it exactly matches Flatpak ID or is an
+exact subname of the Flatpak ID or is a subname of MPRIS.
 
-### finish-args-login1-system-own-name
+An `--own-name=org.foo.bar` will generate an error string of
+`finish-args-own-name-org.foo.bar` and if it is `--own-name=org.foo.*`
+it will generate `finish-args-own-name-wildcard-org.foo`.
 
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has a `--system-own-name=` starting with
-`org.freedesktop.login1`.
+### finish-args-system-own-name-cpt
 
-### finish-args-kwin-system-own-name
+All `--system-own-name` in
+[finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+are blocked by default.
 
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has a `--system-own-name=` starting with
-`org.kde.KWin`.
-
-### finish-args-plasmashell-system-own-name
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has a `--system-own-name=` starting with
-`org.kde.plasmashell`.
-
-### finish-args-mpris-flatpak-id-system-own-name
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `-system-own-name=org.mpris.MediaPlayer2.$FLATPAK_ID`.
-
-### finish-args-portal-impl-component-system-own-name
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has a `--system-own-name=` starting with
-`org.freedesktop.impl.portal.`. `component` is the last component of the
-bus name in lowercase.
-
-### finish-args-wildcard-freedesktop-system-own-name
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `--system-own-name=org.freedesktop.*`
-
-### finish-args-wildcard-gnome-system-own-name
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `--system-own-name=org.gnome.*`
-
-### finish-args-wildcard-kde-system-own-name
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `--system-own-name=org.kde.*`
-
-### finish-args-freedesktop-dbus-system-own-name
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `--system-own-name=` starting with
-`org.freedesktop.DBus`.
-
-### finish-args-flatpak-system-own-name
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `--system-own-name=` starting with
-`org.freedesktop.Flatpak`.
+A `--system-own-name=org.foo.bar` will generate an error string of
+`finish-args-system-own-name-org.foo.bar` and if it is
+`--system-own-name=org.foo.*` it will generate
+`finish-args-system-own-name-wildcard-org.foo`.
 
 ### finish-args-portal-impl-component-system-talk-name
 
@@ -1164,17 +1055,6 @@ The manifest has both `--filesystem=/dir_name` in
 These paths are reserved by flatpak itself or the runtime and adding them
 to the manifest does nothing.
 
-### finish-args-unnecessary-appid-own-name
-
-The manifest has `--own-name=<FLATPAK_ID>` in
-[finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing).
-
-This access is granted automatically by Flatpak and there is no need
-to specify manually.
-
-Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#d-bus-access)
-section for more details.
-
 ### finish-args-systemd1-talk-name
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
@@ -1245,26 +1125,6 @@ Flatpak creates its own XDG data directory under
 the host's data directory or subpaths of it.
 
 Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#f3).
-
-### finish-args-wildcard-freedesktop-own-name
-
-The manifest has a `own-name` that is `org.freedesktop.*`.
-
-Wildcard access to bus names in well known namespace is a security issue.
-
-### finish-args-wildcard-gnome-own-name
-
-The manifest has a `own-name` that is one of `org.gnome.*`.
-
-Wildcard access to bus names in well known namespace is a security issue.
-
-### finish-args-wildcard-kde-own-name
-
-The manifest has a `own-name` that is `org.kde.*`.
-
-Wildcard access to bus names in well known namespace is a security issue.
-
-Exceptions to this are allowed in case of legacy tray usage.
 
 ### finish-args-wildcard-freedesktop-talk-name
 
