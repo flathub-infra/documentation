@@ -620,22 +620,22 @@ can also be used for this.
 ### finish-args-full-home-config-access
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has filesystem access to entire `~/.config`.
+in the manifest has filesystem access to entire `~/.config` or its subdirectories.
 
 ### finish-args-full-home-cache-access
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has filesystem access to entire `~/.cache`.
+in the manifest has filesystem access to entire `~/.cache` or its subdirectories.
 
 ### finish-args-full-home-local-access
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has filesystem access to entire `~/.local`.
+in the manifest has filesystem access to entire `~/.local` or its subdirectories.
 
 ### finish-args-full-home-local-share-access
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has filesystem access to entire `~/.local/share`.
+in the manifest has filesystem access to entire `~/.local/share` or its subdirectories.
 
 ### finish-args-absolute-home-path
 
