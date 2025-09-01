@@ -617,6 +617,26 @@ to integrate third party themes for Flatpaks is to package them as
 [Unmaintained extensions](https://docs.flatpak.org/en/latest/extension.html#creating-an-unmaintained-gtk-theme-extension)
 can also be used for this.
 
+### finish-args-full-home-config-access
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has filesystem access to entire `~/.config`.
+
+### finish-args-full-home-cache-access
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has filesystem access to entire `~/.cache`.
+
+### finish-args-full-home-local-access
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has filesystem access to entire `~/.local`.
+
+### finish-args-full-home-local-share-access
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has filesystem access to entire `~/.local/share`.
+
 ### finish-args-absolute-home-path
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
