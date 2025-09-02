@@ -520,7 +520,7 @@ in both light and dark variants like so:
 This is used by Flathub and native app store clients on banners, app
 pages, etc.
 
-Brand color and app banners can be previewed at https://docs.flathub.org/banner-preview/
+Brand color and app banners can be previewed at https://docs.flathub.org/banner-preview
 
 ## Open Age Ratings Service (OARS)
 
