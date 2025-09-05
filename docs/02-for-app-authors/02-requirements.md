@@ -257,6 +257,33 @@ not violate any trademarks and must be distinct.
 License must be correctly declared in the metainfo file and must
 match with license information available in its source.
 
+## Installing license files
+
+Application maintainers and submitters must ensure that license files
+for each module in the Flatpak manifest is installed to
+`$FLATPAK_DEST/share/licenses`.
+
+Recent versions of Flatpak builder can do this automatically for common
+license file names, so in most cases nothing needs to be done. But if
+it doesn't, please try to use the `license-files` key in the manifest
+to specify an array of paths for license files, relative to the source
+directory.
+
+Another option is to use `post-install` commands to install the license
+files:
+
+```yaml
+  - name: my-module
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DFOOBAR=ON
+      - ...
+    post-install:
+      - install -Dm0644 LICENSE -t ${FLATPAK_DEST}/share/licenses/my-module
+    sources:
+      - ...
+```
+
 ## Permissions
 
 Static permissions should be limited as much as possible and applications
