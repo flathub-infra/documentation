@@ -261,7 +261,7 @@ match with license information available in its source.
 
 Application maintainers and submitters must ensure that license files
 for each module in the Flatpak manifest is installed to
-`$FLATPAK_DEST/share/licenses`.
+`$FLATPAK_DEST/share/licenses/$FLATPAK_ID`.
 
 Recent versions of Flatpak builder can do this automatically for common
 license file names, so in most cases nothing needs to be done. But if
@@ -279,7 +279,7 @@ files:
       - -DFOOBAR=ON
       - ...
     post-install:
-      - install -Dm0644 LICENSE -t ${FLATPAK_DEST}/share/licenses/my-module
+      - install -Dm0644 LICENSE -t ${FLATPAK_DEST}/share/licenses/$FLATPAK_ID/my-module
     sources:
       - ...
 ```
