@@ -7,6 +7,10 @@ maintain an app on Flathub.
 Note that submissions can be rejected at any stage or recalled post-merge
 if it is determined to be not suitable for Flathub.
 
+:::important
+This procedure is only for submitting new applications (or renaming). At no point an update ever needs to go through this process.
+:::
+
 ## Before submission
 
 ### Requirements
