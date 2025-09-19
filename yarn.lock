@@ -2627,25 +2627,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docusaurus/types@npm:^2.0.0-beta.14":
-  version: 2.4.3
-  resolution: "@docusaurus/types@npm:2.4.3"
-  dependencies:
-    "@types/history": "npm:^4.7.11"
-    "@types/react": "npm:*"
-    commander: "npm:^5.1.0"
-    joi: "npm:^17.6.0"
-    react-helmet-async: "npm:^1.3.0"
-    utility-types: "npm:^3.10.0"
-    webpack: "npm:^5.73.0"
-    webpack-merge: "npm:^5.8.0"
-  peerDependencies:
-    react: ^16.8.4 || ^17.0.0
-    react-dom: ^16.8.4 || ^17.0.0
-  checksum: 10c0/71ae109849862629033cc2f275b1064c1e2dde7f39b065793320fc1a442c40353fcc8730a7274da9814c577a059f0ddb956429228ad407ada6c0f5b5816d0aee
-  languageName: node
-  linkType: hard
-
 "@docusaurus/utils-common@npm:3.8.1":
   version: 3.8.1
   resolution: "@docusaurus/utils-common@npm:3.8.1"
@@ -2726,15 +2707,6 @@ __metadata:
   dependencies:
     tslib: "npm:^2.4.0"
   checksum: 10c0/e6d54bf2b1e64cdd83d2916411e44e579b6ae35d5def0dea61a3c452d9921373044dff32a8b8473ae60c80692bdc39323e98b96a3f3d87ba6886b24dd0ef7ca1
-  languageName: node
-  linkType: hard
-
-"@gabrielcsapo/docusaurus-plugin-matomo@npm:^0.1.2":
-  version: 0.1.2
-  resolution: "@gabrielcsapo/docusaurus-plugin-matomo@npm:0.1.2"
-  dependencies:
-    "@docusaurus/types": "npm:^2.0.0-beta.14"
-  checksum: 10c0/41d70e16bea77b041e5e8e330d2bc089c9f536765dbcc0575f80d907c8e39aa4bdd04389e63b900583e1d74f9e3452d292e72eff7936b7137d503a2a7c844250
   languageName: node
   linkType: hard
 
@@ -6143,6 +6115,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"docusaurus-plugin-matomo@npm:^0.0.8":
+  version: 0.0.8
+  resolution: "docusaurus-plugin-matomo@npm:0.0.8"
+  peerDependencies:
+    "@docusaurus/core": ^2.0.0-alpha.56 || ^3.0.0
+  checksum: 10c0/14acaf78565bcdd584a1a0e010414e628f0be41478271defaaa7626b9c62c374369dd2bdb1ec8231b9afa2a820c9c69ad7cbf54dda5cbe286457967bafaccd11
+  languageName: node
+  linkType: hard
+
 "docusaurus-plugin-search-local@npm:^2.1.0":
   version: 2.1.2
   resolution: "docusaurus-plugin-search-local@npm:2.1.2"
@@ -6928,7 +6909,6 @@ __metadata:
     "@docusaurus/plugin-client-redirects": "npm:3.8.1"
     "@docusaurus/preset-classic": "npm:3.8.1"
     "@docusaurus/tsconfig": "npm:3.8.1"
-    "@gabrielcsapo/docusaurus-plugin-matomo": "npm:^0.1.2"
     "@mdx-js/react": "npm:^3.1.1"
     "@tailwindcss/forms": "npm:^0.5.10"
     "@tailwindcss/postcss": "npm:^4.1.12"
@@ -6936,6 +6916,7 @@ __metadata:
     "@types/react": "npm:^19.1.8"
     autoprefixer: "npm:^10.4.21"
     clsx: "npm:^2.1.1"
+    docusaurus-plugin-matomo: "npm:^0.0.8"
     docusaurus-plugin-search-local: "npm:^2.1.0"
     postcss: "npm:^8.5.6"
     prism-react-renderer: "npm:^2.4.1"
@@ -8212,7 +8193,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"joi@npm:^17.6.0, joi@npm:^17.9.2":
+"joi@npm:^17.9.2":
   version: 17.13.3
   resolution: "joi@npm:17.13.3"
   dependencies:
@@ -11540,22 +11521,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-helmet-async@npm:^1.3.0":
-  version: 1.3.0
-  resolution: "react-helmet-async@npm:1.3.0"
-  dependencies:
-    "@babel/runtime": "npm:^7.12.5"
-    invariant: "npm:^2.2.4"
-    prop-types: "npm:^15.7.2"
-    react-fast-compare: "npm:^3.2.0"
-    shallowequal: "npm:^1.1.0"
-  peerDependencies:
-    react: ^16.6.0 || ^17.0.0 || ^18.0.0
-    react-dom: ^16.6.0 || ^17.0.0 || ^18.0.0
-  checksum: 10c0/8f3e6d26beff61d2ed18f7b41561df3e4d83a7582914c7196aa65158c7f3cce939276547d7a0b8987952d9d44131406df74efba02d1f8fa8a3940b49e6ced70b
-  languageName: node
-  linkType: hard
-
 "react-is@npm:^16.13.1, react-is@npm:^16.6.0, react-is@npm:^16.7.0":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -13489,7 +13454,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack-merge@npm:^5.8.0, webpack-merge@npm:^5.9.0":
+"webpack-merge@npm:^5.9.0":
   version: 5.10.0
   resolution: "webpack-merge@npm:5.10.0"
   dependencies:
@@ -13518,7 +13483,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5.73.0, webpack@npm:^5.88.1, webpack@npm:^5.95.0":
+"webpack@npm:^5.88.1, webpack@npm:^5.95.0":
   version: 5.98.0
   resolution: "webpack@npm:5.98.0"
   dependencies:
