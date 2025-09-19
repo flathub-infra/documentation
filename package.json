@@ -16,10 +16,12 @@
   },
   "dependencies": {
     "@docusaurus/core": "3.8.1",
+    "@docusaurus/faster": "^3.8.1",
     "@docusaurus/plugin-client-redirects": "3.8.1",
     "@docusaurus/preset-classic": "3.8.1",
     "@mdx-js/react": "^3.1.1",
     "clsx": "^2.1.1",
+    "docusaurus-plugin-matomo": "^0.0.8",
     "docusaurus-plugin-search-local": "^2.1.0",
     "prism-react-renderer": "^2.4.1",
     "react": "^19.1.0",
@@ -29,7 +31,6 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.8.1",
     "@docusaurus/tsconfig": "3.8.1",
-    "@gabrielcsapo/docusaurus-plugin-matomo": "^0.1.2",
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/postcss": "^4.1.12",
     "@tailwindcss/typography": "^0.5.16",
@@ -53,5 +54,6 @@
   },
   "engines": {
     "node": ">=18.0"
-  }
+  },
+  "packageManager": "yarn@4.7.0"
 }

@@ -1,7 +1,7 @@
 import React, { JSX } from "react";
 import Layout from "@theme/Layout";
 
-import FlathubDocs from "../../static/img/flathub-docs.svg";
+import FlathubDocsSvg from "../../static/img/flathub-docs.svg";
 
 export default function Home(): JSX.Element {
   return (
@@ -37,7 +37,7 @@ export default function Home(): JSX.Element {
             paddingBottom: "24px",
           }}
         >
-          <FlathubDocs />
+          <FlathubDocsSvg />
         </div>
 
         <h2>Getting started</h2>
