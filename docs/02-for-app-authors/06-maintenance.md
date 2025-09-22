@@ -362,28 +362,47 @@ and [https://klausenbusk.github.io/flathub-stats/](https://klausenbusk.github.io
 This section applies to application repositories hosted in the
 [Flathub](https://github.com/flathub) organisation on GitHub.
 
+### Default access
+
 The GitHub account [submitting](/docs/for-app-authors/submission#submission-pr)
 the application to Flathub along with any upstream developers of the
 application (if mentioned by the submitter or at reviewer's discretion)
 will be given access to the application repository once created. In case
 the application belongs to a well-known vendor like KDE or GNOME or
-Endless, their respective [team on Flathub](https://github.com/orgs/flathub/teams/)
+Endless, their respective [GitHub team on Flathub](https://github.com/orgs/flathub/teams/)
 will also be given access.
 
-If an existing maintainer wants a trusted member or someone involved with
-upstream or the Flathub application repository, to also have access, they
-should open an issue on [GitHub](https://github.com/flathub/flathub/issues/new).
+### Requesting access
 
-An upstream developer or author of the application may also use the same
-process as above to request access to the repository.
+If an existing maintainer of the Flatpak, a trusted member/contributor,
+or an upstream developer/author of the application wants to request
+access for themselves or others, they should [open an issue on GitHub](https://github.com/flathub/flathub/issues/new).
 
-In case an application becomes unmaintained (and the maintainer unreachable)
-for a prolonged period of time and you want to volunteer to start
-maintaining it, please open an issue on [GitHub](https://github.com/flathub/flathub/issues).
+In case an application becomes unmaintained (and/or the current
+maintainer(s) unreachable) for a prolonged period of time and someone
+wants to volunteer to start maintaining it, they should also
+[open an issue on GitHub](https://github.com/flathub/flathub/issues/new).
+In this case having some prior contributions either to the upstream
+application in question or to Flatpak/Flathub ecosystem is necessary.
 
-Any such requests will be judged on a case-by-case basis and upstream
-authors/developers/contributors to the application
-(or the Flathub repository) in question will be preferred.
+### Removing access
+
+If an existing maintainer wishes to step down, adjust access
+(for themselves or others), or if the upstream project wants to take
+over as the sole maintainer(s), they should also
+[open an issue on GitHub](https://github.com/flathub/flathub/issues/new).
+
+### Note
+
+A visible history of contribution or other proof of affiliation may be
+requested in order to verify the access request.
+
+Any such requests will be judged on a case-by-case basis and requests
+from upstream authors/developers to the application in question will
+generally be preferred.
+
+Requests can be granted or denied at the discretion of the Flathub
+admins.
 
 ## Renaming the Flatpak ID
 
