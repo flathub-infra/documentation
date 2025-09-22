@@ -44,7 +44,7 @@ aaaaaaaa-0000-aaaa-0000-aaaaaaaaaaaa
 ```
 
 For convenience and flexibility, verification of the well-known URI will
-follow redirects.
+follow redirects but HTTPS is mandatory.
 
 ### Source code hosting site
 
@@ -70,8 +70,8 @@ For GNOME and KDE apps, additional checks may be performed to ensure the
 account is authorized to perform verification for that app.
 
 Apps already on Flathub with a `com.github.` or `com.gitlab.` app ID
-prefix may be verified, but
-**no new apps with these prefixes will be accepted**.
+prefix may be verified with login provider verification, but no new
+apps with these prefixes will be accepted
 
 Official apps from these code hosting platforms like GitHub, GitLab
 and others may request manual verification by
