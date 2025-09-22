@@ -343,9 +343,9 @@ updates must not be published to either repo.
 ## Required files
 
 :::important
-Under no circumstances should source code be included in the submission.
-Flathub is not intended to host application source code, including that
-of any dependencies.
+Under no circumstances should source code nor build artificats be
+included in the submission. Flathub is not intended to host neither
+application source code nor binaries, including that of any dependencies.
 :::
 
 The following files should be included in the submission.
