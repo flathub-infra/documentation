@@ -97,6 +97,13 @@ Submissions where the main application is itself end-of-life may be
 rejected, unless the submitter can demonstrate their ability to
 maintain it for the foreseeable future and perform runtime upgrades.
 
+#### Unacceptable software design practices
+
+Submissions that include antipatterns or insecure design choices, for
+example, disabling or ignoring security checks, insecure cryptography
+practices, exposing sensitive information, overly permissive
+configurations etc. will not be accepted.
+
 #### Extensions or BaseApps
 
 Flatpak extensions that add support for new languages, language
