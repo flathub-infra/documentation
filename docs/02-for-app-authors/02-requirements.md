@@ -421,6 +421,37 @@ A Metainfo file is mandatory to appear on the Flathub website.
 
 Metainfo file is optional for runtimes, extensions and BaseApps.
 
+#### Description notes
+
+Unofficially packaged, _proprietary_ submissions **must** add a note like
+below as the **first** `p` tag of `description`.
+
+Unofficially packaged, open source submissions _may_ also follow this.
+
+```xml
+<description>
+  <p>**This is a community package of APP NAME and not officially supported by UPSTREAM**</p>
+</description>
+```
+
+If the submission is only available in one (or very few) non-English
+languages a similar note **must** be added.
+
+```xml
+<description>
+  <p>**This app is only available of the LANG language.**</p>
+</description>
+```
+
+If the user needs to perform additional post installation steps to run
+the submission, they **must** be mentioned or linked.
+
+```xml
+<description>
+  <p>**Please follow https://example.org/setup after installation.**</p>
+</description>
+```
+
 ### Desktop file
 
 All graphical applications must include a [desktop file](https://docs.flatpak.org/en/latest/conventions.html#desktop-files)
