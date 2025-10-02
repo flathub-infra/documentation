@@ -93,6 +93,9 @@ Submissions that use high-risk, end-of-life software, such as
 OpenSSL 1.x, Python 2, or Qt5 WebKit, and request the network or any
 other invasive permissions may be rejected due to security concerns.
 
+Submissions using end-of-life dependencies may not be accepted in
+some cases.
+
 Submissions where the main application is itself end-of-life may be
 rejected, unless the submitter can demonstrate their ability to
 maintain it for the foreseeable future and perform runtime upgrades.
