@@ -361,7 +361,8 @@ The description must have at least one non empty `p`, `ol` or `ul` tag.
 ### Website specific formatting
 
 The Flathub website will make the content of any `p` tag bold, if it is
-enclosed inside `**` like so:
+enclosed inside `**` like below. Some new submissions may need to use
+this in some cases, please see the [requirements](/docs/for-app-authors/requirements#description-notes).
 
 ```xml
 <description>
