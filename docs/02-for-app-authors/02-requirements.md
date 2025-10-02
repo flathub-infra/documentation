@@ -434,8 +434,8 @@ Unofficially packaged, open source submissions _may_ also follow this.
 </description>
 ```
 
-If the submission is only available in one (or very few) non-English
-languages a similar note **must** be added.
+If the submission is unavailable in English and only exists in a small
+number of select locales, a similar note **must** be added.
 
 ```xml
 <description>
