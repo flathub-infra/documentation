@@ -338,7 +338,6 @@ Only the following child tags are supported: `p` (paragraph), `ol, ul`
 italicized emphasis and `code` for inline code in monospace.
 
 The description must have at least one non empty `p`, `ol` or `ul` tag.
-It must not contain any direct URLs.
 
 ```xml
 <description>
@@ -356,6 +355,17 @@ It must not contain any direct URLs.
     <li>Feature 2</li>
     <li>Feature 3</li>
   </ol>
+</description>
+```
+
+### Website specific formatting
+
+The Flathub website will make the content of any `p` tag bold, if it is
+enclosed inside `**` like so:
+
+```xml
+<description>
+  <p>**Make this line bold please**</p>
 </description>
 ```
 
