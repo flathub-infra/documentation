@@ -21,16 +21,34 @@ jobs:
           # https://github.com/facebook/docusaurus/pull/9954#issuecomment-2032900942
           fetch-depth: 0
           persist-credentials: false
-      - uses: actions/setup-node@v5
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
         with:
-          node-version: 20
-          cache: yarn
+          node-version: "20"
+          package-manager-cache: false
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
+
+      - name: Cache yarn
+        uses: actions/cache@d4323d4df104b026a6aa633fdb11d772146be0bf
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-deploy-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-deploy-
+
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --frozen-lockfile --prefer-offline
+
       - name: Build website
         run: yarn build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:

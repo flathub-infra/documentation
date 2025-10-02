@@ -47,9 +47,23 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: "20"
+          package-manager-cache: false
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
+
+      - name: Cache yarn
+        uses: actions/cache@d4323d4df104b026a6aa633fdb11d772146be0bf
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-check-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-check-
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --frozen-lockfile --prefer-offline
 
       - name: Typecheck
         run: yarn typecheck
