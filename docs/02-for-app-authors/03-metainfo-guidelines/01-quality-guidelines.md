@@ -115,7 +115,7 @@ filling the entire canvas and having the icon touch the edges of the
 canvas (except with small protruding elements). Similarly, avoid thin
 shapes that are hard to see.
 
-You can use our icon grid (<a href="/img/app-icon-grid.svg" download>SVG
+You can use our icon grid (<a href="pathname:///img/app-icon-grid.svg" download>SVG
 template download</a>) with square and circular base shapes to check if
 your icon's footprint is too large or too small. The examples below
 show the grid overlaid on some app icons. The first icon fills too much

@@ -35,8 +35,8 @@ const config = {
     mermaid: true,
     emoji: true,
     hooks: {
-      onBrokenMarkdownLinks: "warn",
-      onBrokenMarkdownImages: "warn",
+      onBrokenMarkdownLinks: "throw",
+      onBrokenMarkdownImages: "throw",
     },
   },
 
