@@ -304,8 +304,23 @@ to be followed there as well.
 }
 ```
 
-EOL-ing will remove the listing of the application from the
-[Flathub website](https://flathub.org/).
+EOL-ing the main branch will remove the listing of the application
+from the [Flathub website](https://flathub.org/); EOL-ing the
+beta branch will remove it from `flatpak search` results.
+
+### Beta end of life
+
+This flexible mechanism allows to EOL-ing only the beta branch, in
+case the maintainer decides it's not worth keeping it anymore.
+Add a similar text in the `flathub.json` file of the beta branch:
+
+```json title="flathub.json"
+{
+  "end-of-life": "The beta branch is no longer maintained."
+}
+```
+
+Then open a pull request and merge it against the beta branch.
 
 ## End of life Rebase
 
