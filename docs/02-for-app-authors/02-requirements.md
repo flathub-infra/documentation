@@ -207,7 +207,11 @@ The following rules should be followed when creating application IDs.
 #### Code hosting
 
 A _repository URL_ (or project URL) is calculated for code hosting IDs
-by using the domain and by taking the last component of the ID as-is.
+by using the domain and by taking the last component of the ID as-is
+(except when the last component starts with a leading underscore and then
+a digit, in which case following Appstream conventions, the leading
+underscore is stripped from that component).
+
 Note, that some code hosting platforms like GitLab may have
 case-sensitive namespaces.
 
