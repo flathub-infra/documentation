@@ -430,7 +430,7 @@ Unofficially packaged, open source submissions _may_ also follow this.
 
 ```xml
 <description>
-  <p>**This is a community package of APP NAME and not officially supported by UPSTREAM**</p>
+  <p>**This is a community package of APP NAME and not officially supported by UPSTREAM NAME.**</p>
 </description>
 ```
 
@@ -439,7 +439,7 @@ languages a similar note **must** be added.
 
 ```xml
 <description>
-  <p>**This app is only available of the LANG language.**</p>
+  <p>**This app is only available in LANG NAME.**</p>
 </description>
 ```
 
