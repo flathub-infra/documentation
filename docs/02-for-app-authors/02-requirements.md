@@ -107,6 +107,10 @@ example, disabling or ignoring security checks, insecure cryptography
 practices, exposing sensitive information, overly permissive
 configurations etc. will not be accepted.
 
+Submissions with unethical, manipulative or exploitative software
+designs will not be accepted. Submissions that promote gambling or
+games of chances involving real-world money will not be accepted.
+
 #### Extensions or BaseApps
 
 Flatpak extensions that add support for new languages, language
