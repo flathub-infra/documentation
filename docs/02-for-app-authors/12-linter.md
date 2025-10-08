@@ -1462,14 +1462,11 @@ binary must be present in `$FLATPAK_DEST/bin`.
 
 ### toplevel-unnecessary-branch
 
-The toplevel `branch` or `default-branch` property in the
-[Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
-is unnecessary.
+The toplevel `branch` property in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+is unnecessary for applications.
 
-On Flathub, the branch is set by the builder using `--default-branch`
-argument of [Flatpak Builder](https://docs.flatpak.org/en/latest/flatpak-builder.html).
-
-Specifying the branch or default-branch property leads to other issues.
+On Flathub, the branch is automatically set by the build service
+using `--default-branch` argument.
 
 ### desktop-file-low-quality-category
 
