@@ -18,9 +18,9 @@ Over the past few months, we've been working to enhance our tooling and infrastr
 
 ## What's New
 
-In coordination with maintainers of the freedesktop-sdk, GNOME, and KDE runtimes, we've implemented enhanced license handling that automatically includes license and copyright notice files in the runtimes themselves, deduplicated to be as space-efficient as possible. This improvement has been applied to all supported freedesktop-sdk, GNOME, and KDE runtimes, plus backported to freedesktop-sdk 22.08 and newer, GNOME 45 and newer, KDE 5.15-22.08 and newer, and KDE 6.6 and newer. These updated runtimes cover over 90% of apps on Flathub and have already rolled out to users as regular Flatpak updates.
+In coordination with maintainers of the [freedesktop-sdk](https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/merge_requests/27806), [GNOME](https://gitlab.gnome.org/GNOME/gnome-build-meta/-/merge_requests/4056), and [KDE](https://invent.kde.org/packaging/flatpak-kde-runtime/-/merge_requests/264) runtimes, we've implemented enhanced license handling that automatically includes license and copyright notice files in the runtimes themselves, deduplicated to be as space-efficient as possible. This improvement has been applied to all supported freedesktop-sdk, GNOME, and KDE runtimes, plus backported to freedesktop-sdk 22.08 and newer, GNOME 45 and newer, KDE 5.15-22.08 and newer, and KDE 6.6 and newer. These updated runtimes cover over 90% of apps on Flathub and have already rolled out to users as regular Flatpak updates.
 
-We've also worked with the Flatpak developers to add new functionality to flatpak-builder 1.4.5 that automatically recognizes and includes common license files. This enhancement, now deployed to the Flathub build service, helps ensure apps' own licenses as well as the licenses of any bundled libraries are retained and shipped to users along with the app itself.
+We've also worked with the Flatpak developers to add new functionality to [flatpak-builder](https://github.com/flatpak/flatpak-builder/pull/655) 1.4.5 that automatically recognizes and includes common license files. This enhancement, now deployed to the Flathub build service, helps ensure apps' own licenses as well as the licenses of any bundled libraries are retained and shipped to users along with the app itself.
 
 These improvements represent an important milestone in the maturity of the Flatpak ecosystem, making license compliance easier and more automatic for the entire community.
 
@@ -28,7 +28,7 @@ These improvements represent an important milestone in the maturity of the Flatp
 
 ### App Developers
 
-We encourage you to rebuild your apps with flatpak-builder 1.4.5 or newer to take advantage of the new automatic license detection. You can verify that license and copyright notices are properly included in your Flatpak's /app/share/licenses - both for your app and any included dependencies. In most cases, simply rebuilding your app will automatically include the necessary licenses, but you can also fine-tune which license files are included using the license-files key in your app's Flatpak manifest if needed.
+We encourage you to rebuild your apps with flatpak-builder 1.4.5 or newer to take advantage of the new automatic license detection. You can verify that license and copyright notices are properly included in your Flatpak's `/app/share/licenses` - both for your app and any included dependencies. In most cases, simply rebuilding your app will automatically include the necessary licenses, but you can also fine-tune which license files are included using the license-files key in your app's Flatpak manifest if needed.
 
 For apps with binary sources (e.g. debs or rpms), we encourage app maintainers to explicitly include relevant license files in the Flatpak itself for consistency and auditability.
 
@@ -38,7 +38,7 @@ If your app currently targets an end-of-life runtime that did receive the backpo
 
 ### Distributors
 
-If you redistribute binaries from Flathub, such as pre-installed runtimes or apps, you should rebuild your distributed images (ISOs, containers, etc.) with the updated runtimes and apps from Flathub.  You can verify that appropriate licenses are included with the Flatpaks in the runtime filesystem at /usr/share/licenses inside each runtime.
+If you redistribute binaries from Flathub, such as pre-installed runtimes or apps, you should rebuild your distributed images (ISOs, containers, etc.) with the updated runtimes and apps from Flathub.  You can verify that appropriate licenses are included with the Flatpaks in the runtime filesystem at `/usr/share/licenses` inside each runtime.
 
 ## Get in Touch
 
