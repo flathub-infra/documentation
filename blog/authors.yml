@@ -24,9 +24,18 @@ cassidyjames:
 
 barthalion:
   name: Bart Piotrowski
-  title: Flathub Fixer
+  title: Flathub Janitor
   image_url: /avatars/barthalion.png
   socials:
     Website: https://barthalion.blog
     github: barthalion
     mastodon: https://social.treehouse.systems/@barthalion
+
+ramcq:
+  name: Robert McQueen
+  title: Flathub Community Member
+  image_url: /avatars/ramcq.jpg
+  socials:
+    Website: https://ramcq.net/
+    github: ramcq
+    mastodon: https://nondeterministic.computer/@ramcq
