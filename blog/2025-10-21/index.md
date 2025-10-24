@@ -6,6 +6,9 @@ authors:
   - ramcq
 tags:
   - legal
+  - license
+  - floss
+  - builder
 ---
 
 ***tl;dr:*** Flathub has improved tooling to make license compliance easier for developers. Distros should rebuild OS images with updated runtimes from Flathub; app developers should ensure they're using up-to-date runtimes and verify that licenses and copyright notices are properly included.
