@@ -44,12 +44,13 @@ Then build your manifest:
    flatpak run --command=flathub-build org.flatpak.Builder --install <manifest>
    ```
 
-   If you are using an [extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data) source:
+#### Extra data
+
+If you are using [extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data):
 
    ```bash
    flatpak run --command=flathub-build org.flatpak.Builder <manifest>
-   flatpak remote-add --user --no-gpg-verify my-app file://$(pwd)/repo
-   flatpak install --user -y my-app $FLATPAK_ID
+   flatpak install --user -y ./repo $FLATPAK_ID
    ```
 
 ### Run and test
