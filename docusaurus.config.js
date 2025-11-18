@@ -78,7 +78,7 @@ const config = {
   plugins: [
     tailwindPlugin,
     [
-      require.resolve("docusaurus-plugin-search-local"),
+      require.resolve("@easyops-cn/docusaurus-search-local"),
       {
         hashed: true,
       },
