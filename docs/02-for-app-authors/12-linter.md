@@ -1433,7 +1433,7 @@ The sized folders are only reserved for PNG icons.
 ### toplevel-cleanup-debug
 
 The toplevel `cleanup` property in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
-has `/lib/debug`.
+has `/lib/debug` or a subdirectory of it.
 
 This must not be cleaned up as it is used to generate debug data for the
 Flatpak by [Flatpak Builder](https://docs.flatpak.org/en/latest/flatpak-builder.html).
@@ -1490,6 +1490,11 @@ A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.
 is using the deprecated `sha1` checksum.
 
 It is recommended to switch to `sha256` or `sha512`.
+
+### module-module_name-cleanup-debug
+
+The module `module_name` has a `cleanup` with `/lib/debug` or a
+subdirectory of it.
 
 ## Linter warnings
 
