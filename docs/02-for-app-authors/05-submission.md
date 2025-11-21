@@ -125,6 +125,10 @@ reviewers. Please consider that reviewers are volunteers and the response
 time may vary. Reviewers may post comments, ask for certain changes,
 fixes or clarifications. Please answer all these questions.
 
+Pull requests that remove the template, does not follow the submission
+guidelines or contain excessive AI-generated content may be
+closed without a review.
+
 Once all comments are resolved, a _test_ build can be started on the
 pull request by commenting `bot, build`.
 
