@@ -233,7 +233,7 @@ flatpak --user update \
 Now we can rebuild the Flatpak using:
 
 ```bash
-flatpak-builder --user --disable-download --repo=repo --force-clean --disable-rofiles-fuse builddir manifest.json
+flatpak run org.flatpak.Builder --user --disable-download --repo=repo --force-clean --disable-rofiles-fuse builddir manifest.json
 ```
 
 This process can be reproduced for any Flatpak on Flathub and any
