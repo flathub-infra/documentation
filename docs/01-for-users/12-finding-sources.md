@@ -3,9 +3,13 @@ title: Finding sources of a published Flatpak
 sidebar_position: 12
 ---
 
-All applications and runtimes published on Flathub come with a manifest listing the sources they used. In most of the cases, that manifest can be used to rebuild the Flatpak directly. See [Rebuilding a Flatpak from published sources](/docs/for-users/rebuilding) for how to do this.
+All applications and runtimes published on Flathub come with a manifest
+listing the sources they used. In most of the cases, that manifest can
+be used to rebuild the Flatpak directly. See [Rebuilding a Flatpak from published sources](/docs/for-users/rebuilding)
+for how to do this.
 
-Application manifests are located in `/app/manifest.json` while Runtime manifests can be found at `/usr/manifest.json`
+Application manifests are located in `/app/manifest.json` while runtime
+manifests can be found at `/usr/manifest.json`.
 
 Below is an *incomplete* excerpt.
 
@@ -92,9 +96,17 @@ flatpak run --command=cat org.kde.Platform//6.9 /usr/manifest.json
 }
 ```
 
-The the git commit from which the Flatpak originated is mentioned in the OSTree commit subject. It can be found using the `flatpak info/remote-info` commands.
+The the git commit from which the Flatpak originated is mentioned in
+the OSTree commit subject. It can be found using the
+`flatpak info` or `flatpak remote-info` commands.
 
-The repository with the source code might be listed in the Flatpak metadata, the `os-release` file or other well-known locations. For applications, you will find the repositories in the [Flathub organization](https://github.com/flathub/) on Github. Runtimes are usually hosted in external repositories by their respective projects. They may or may not be using different tooling in order to be built. Please refer to each project for further details.
+The repository with the source code might be listed in the Flatpak
+metadata, the `os-release` file or other well-known locations. For
+applications, you will find the repositories in the
+[Flathub organization](https://github.com/flathub/) on Github. Runtimes
+are usually hosted in external repositories by their respective projects.
+They may or may not be using different tooling in order to be built.
+Please refer to each project for further details.
 
 ```bash
 flatpak info flathub org.kde.Platform//6.9
@@ -118,10 +130,14 @@ Collection: org.flathub.Stable
       Date: 2025-10-16 08:30:37 +0000
 ```
 
-We an see that the subject mentions `094cc415694670dd34c808a48e500a73d1b177bb` which we can find [here](https://invent.kde.org/packaging/flatpak-kde-runtime/-/commit/094cc415694670dd34c808a48e500a73d1b177bb)
+We an see that the subject mentions
+`094cc415694670dd34c808a48e500a73d1b177bb` which we can find [here](https://invent.kde.org/packaging/flatpak-kde-runtime/-/commit/094cc415694670dd34c808a48e500a73d1b177bb).
 
 The runtimes on Flathub originate from the following repositories:
 
-   - `org.freedesktop.Platform` can be found in the [freedesktop-sdk](https://gitlab.com/freedesktop-sdk/freedesktop-sdk/) group on gitlab.com.
-   - `org.gnome.Platform` can be found in [gnome/gnome-build-meta](https://gitlab.gnome.org/GNOME/gnome-build-meta/) repository on the GNOME gitlab.
-   - `org.kde.Platform` can be found in [packaging/flatpak-kde-runtime](https://invent.kde.org/packaging/flatpak-kde-runtime) repository on the KDE gitlab.
+  - `org.freedesktop.Platform` can be found in the [freedesktop-sdk](https://gitlab.com/freedesktop-sdk/freedesktop-sdk/)
+    group on gitlab.com.
+  - `org.gnome.Platform` can be found in [gnome/gnome-build-meta](https://gitlab.gnome.org/GNOME/gnome-build-meta/)
+    repository on the GNOME gitlab.
+  - `org.kde.Platform` can be found in [packaging/flatpak-kde-runtime](https://invent.kde.org/packaging/flatpak-kde-runtime)
+    repository on the KDE gitlab.

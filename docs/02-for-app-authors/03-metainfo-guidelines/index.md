@@ -1,6 +1,7 @@
 # MetaInfo guidelines
 
-These are a set of guidelines for MetaInfo that should be followed for submission on Flathub.
+These are a set of guidelines for MetaInfo that should be followed for
+submission on Flathub.
 
 :::tip
 Please check the [Quality Guidelines](/docs/for-app-authors/metainfo-guidelines/quality-guidelines)
@@ -8,7 +9,8 @@ page too, to make your application metadata more presentable.
 :::
 
 :::note
-Please consult the [official AppStream documentation](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html) for more in-depth info.
+Please consult the [official AppStream documentation](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html
+for more in-depth info.
 :::
 
 ## Validation
@@ -32,173 +34,22 @@ with some Flathub specific checks integrated into it.
 Both errors and warnings are considered to be fatal by `appstreamcli`
 and needs to be resolved.
 
-### Appstream Validation Errors
-
-:::note
-A full list of error codes and explanations can also be found online in
-the [data validation](https://www.freedesktop.org/software/appstream/docs/chap-Validation.html#validator-issues-list)
-page.
-:::
-
-Flathub increases the severity of the following Appstream checks
-to `error`: `all-categories-ignored, category-invalid, cid-desktopapp-is-not-rdns, cid-has-number-prefix, cid-missing-affiliation-gnome, cid-rdns-contains-hyphen, content-rating-missing, desktop-app-launchable-omitted, desktop-file-not-found, invalid-child-tag-name, metainfo-filename-cid-mismatch, metainfo-legacy-path, metainfo-legacy-path, name-has-dot-suffix, releases-info-missing, unknown-tag`
-and decreases the severity of the following to not cause an error:
-`cid-domain-not-lowercase, component-name-too-long, description-has-plaintext-url, developer-id-invalid, component-name-too-long, summary-too-long`
-
-Explanations for Appstream errors are provided below.
-
-#### cid-has-number-prefix
-
-The `id` tag contains a segment starting with a number. Please see the [application ID guidelines](/docs/for-app-authors/requirements#application-id) for more information.
-
-#### cid-missing-affiliation-gnome
-
-The application is using a `project_group` tag with the value `GNOME` but the [ID](/docs/for-app-authors/metainfo-guidelines/#id) does not start with `org.gnome`. Please see the [documentation](/docs/for-app-authors/metainfo-guidelines/#project-group) on how to use this tag.
-
-#### content-rating-missing
-
-The application is missing an [OARS rating](/docs/for-app-authors/metainfo-guidelines/#open-age-ratings-service-oars) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
-
-#### desktop-app-launchable-omitted
-
-The application is missing a [launchable tag](/docs/for-app-authors/metainfo-guidelines/#launchable) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
-
-#### invalid-child-tag-name
-
-The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has a child tag which isn't allowed under that parent tag.
-
-#### name-has-dot-suffix
-
-The [name](/docs/for-app-authors/metainfo-guidelines/#name-and-summary) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) ends in a dot (`.`).
-
-#### releases-info-missing
-
-The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has no [release information](/docs/for-app-authors/metainfo-guidelines/#release).
-
-#### unknown-tag
-
-The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has an invalid tag. Non-standard tags must be prefixed with `x-` or should be under `<custom>` tag.
-
-A few common errors that are often reached are documented below in brief.
-
-#### description-markup-invalid, description-para-markup-invalid
-
-The `description` tag in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) contains an unsupported formatting tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#description) for more details.
-
-#### description-enum-item-invalid
-
-The `description` tag in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) contains an unsupported child tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#description) for more details.
-
-#### description-enum-group-translated
-
-A `ul` or `ol` tag in description contains `xml:lang`. Please see the [translation section](/docs/for-app-authors/metainfo-guidelines/#metainfo-translations) on how to use translation attributes.
-
-#### desktop-app-launchable-missing
-
-The application is missing a [launchable tag](/docs/for-app-authors/metainfo-guidelines/#launchable) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
-
-#### tag-not-translatable
-
-A tag which is not translatable is using `xml:lang`. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#metainfo-translations) for more details.
-
-#### tag-duplicated
-
-A tag in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) is duplicated.
-
-#### cid-rdns-contains-hyphen
-
-The [id tag](/docs/for-app-authors/metainfo-guidelines/#id) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has a hyphen (`-`) in the domain part. The entire part of the id except the last component (`.foo`) is considered to be domain.
-
-#### cid-missing-affiliation-freedesktop, cid-missing-affiliation-kde
-
-The application uses a [reserved project group tag](/docs/for-app-authors/metainfo-guidelines/#project-group) value in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
-
-#### cid-missing-affiliation-freedesktop, cid-missing-affiliation-kde, spdx-expression-invalid, spdx-license-unknown, metadata-license-missing, metadata-license-invalid
-
-The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has an invalid or unknown [license tag](/docs/for-app-authors/metainfo-guidelines/#license).
-
-#### screenshot-no-media
-
-The [screenshot tag](/docs/for-app-authors/metainfo-guidelines/#screenshots) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) is not properly defined.
-
-#### screenshot-default-missing
-
-The [screenshot tag](/docs/for-app-authors/metainfo-guidelines/#screenshots) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) is missing `type=default` on one of them.
-
-#### screenshot-image-source-duplicated
-
-The [screenshot tag](/docs/for-app-authors/metainfo-guidelines/#screenshots) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has multiple `image` tags under one `screenshot` tag.
-
-#### metadata-license-missing
-
-The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) is missing a [metadata license tag](/docs/for-app-authors/metainfo-guidelines/#license).
-
-#### category-invalid, all-categories-ignored, app-categories-missing
-
-Categories are either invalid, missing or all were filtered. Pleasee see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#categories-and-keywords) for more details.
-
-#### file-read-failed
-
-The desktop file, icon or the MetaInfo file is malformed and reading it failed.
-
-#### metainfo-ancient
-
-The MetaInfo does not start with the [component tag](/docs/for-app-authors/metainfo-guidelines/#header).
-
-#### releases-info-missing
-
-The release tag is missing entirely from the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename). Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#release) for more details.
-
-#### releases-not-in-order
-
-The versions in release tag are not in the [proper order](/docs/for-app-authors/metainfo-guidelines/#release).
-
-#### release-version-missing, release-time-missing
-
-The release tag is missing the version or time attribute. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#release) for more details.
-
-#### content-rating-missing, content-rating-type-missing, content-rating-type-invalid
-
-The [OARS tag](/docs/for-app-authors/metainfo-guidelines/#open-age-ratings-service-oars) is missing from the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) or has no `type` key present or has an invalid `type` key present.
-
-#### custom-key-duplicated
-
-A `custom` tag with same `key` attribute is used twice. It must be used once.
-
-#### type-property-required
-
-The corresponding tag requires a `type` attribute. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines) for the tag.
-
-#### metainfo-localized-description-tag
-
-The MetaInfo file has translated the `description` tag itself. Please see the [translation section](/docs/for-app-authors/metainfo-guidelines/#metainfo-translations) on how to use translation attributes.
-
-#### circular-component-relation
-
-The `extends`, `provides`, `requires` or `recommends` tag in the MetaInfo file references the application's own ID.
-
-#### mimetypes-tag-deprecated
-
-The `mimetype` tag is deprecated in favour of a `mediatypes` child tag under the `provides` tag. Please see the specification on how to use it.
-
-#### custom-invalid-tag
-
-One of the `custom` tags in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) does not have the `value` child tag. Custom tags can have only `value` as child tags.
-
 ## Path and filename
 
 :::note
-`/app/share/appdata` and `%{id}.appdata.xml` are considered to be the legacy path and filename, respectively.
+`/app/share/appdata` and `%{id}.appdata.xml` are considered to be the
+legacy path and filename, respectively.
 :::
 
-Place the MetaInfo file into `/app/share/metainfo/`, name it `%{id}.metainfo.xml`, where `%{id}` is the [ID](#id).
-This ID and the filename must match exactly with the `id` set in the
-[Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
+Place the MetaInfo file into `/app/share/metainfo/`, name it
+`%{id}.metainfo.xml`, where `%{id}` is the [ID](#id). This ID and the
+filename must match exactly with the `id` set in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html).
 
 ## MetaInfo generator
 
 :::note
-Please check the generated output and add any mandatory or recommended tags mentioned below.
+Please check the generated output and add any mandatory or recommended
+tags mentioned below.
 :::
 
 The [AppStream MetaInfo Creator](https://www.freedesktop.org/software/appstream/metainfocreator/)
@@ -259,7 +110,9 @@ old ID to the [provides tag](#provides).
 All MetaInfo must have a [metadata license tag](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-metadata_license)
 that is the license of the MetaInfo file itself.
 
-If application metadata has not been provided by the upstream, it should be licensed with [FSFAP](https://www.gnu.org/prep/maintain/html_node/License-Notices-for-Other-Files.html) or [Creative Commons Zero, version 1](https://creativecommons.org/choose/zero/).
+If application metadata has not been provided by the upstream, it should
+be licensed with [FSFAP](https://www.gnu.org/prep/maintain/html_node/License-Notices-for-Other-Files.html)
+or [Creative Commons Zero, version 1](https://creativecommons.org/choose/zero/).
 Please see the [specification](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-metadata_license)
 for other recommended licenses.
 
@@ -400,7 +253,8 @@ different ID. It also prevents ODRS reviews to be “lost” on a rename.
 
 :::note
 
-The old desktop file name is automatically added if we use `rename-desktop-file` in the Flatpak manifest.
+The old desktop file name is automatically added if we use `rename-desktop-file`
+in the Flatpak manifest.
 
 :::
 
@@ -475,8 +329,8 @@ icon or be confusingly similar.
 
 All desktop applications must install icons of the [required size](/docs/for-app-authors/requirements#icons)
 to the [proper location](https://docs.flatpak.org/en/latest/conventions.html#application-icons)
-and must also have a [launchable](#launchable) entry so that  `appstreamcli compose`
-can fetch the icon from the desktop file.
+and must also have a [launchable](#launchable) entry so that
+`appstreamcli compose` can fetch the icon from the desktop file.
 
 Console applications wanting to appear in Flathub website search results
 must also provide icons.
@@ -504,10 +358,10 @@ for icons too.
 The `<project_group/>` tag can be used if the application is affiliated
 with a known software project like for example GNOME, KDE or Mozilla.
 
-The following project group tag values `Freedesktop, FreeDesktop, GNOME, KDE`
-are  "protected", meaning only application IDs starting with
-`org.freedesktop, org.gnome, org.kde` respectively are allowed to use
-them.
+The following project group tag values
+`Freedesktop, FreeDesktop, GNOME, KDE` are  "protected", meaning only
+application IDs starting with `org.freedesktop, org.gnome, org.kde`
+respectively are allowed to use them.
 
 These IDs are only allowed for official applications from respective
 project groups.
@@ -640,7 +494,12 @@ Releases in MetaInfo should look like this:
 
 ## Translations
 
-Appstream provides translation information, so that software centers can inform users if the app is translated into their language. If the app uses Mozilla `.xpi` or Google `.pak` files for translation, the translation info is populated automatically. If the app uses gettext `.mo` or Qt `.qm` files, you’ll need to provide the prefix of these files with a `<translation/>` tag:
+Appstream provides translation information, so that software centers can
+inform users if the app is translated into their language. If the app
+uses Mozilla `.xpi` or Google `.pak` files for translation, the
+translation info is populated automatically. If the app uses
+gettext `.mo` or Qt `.qm` files, you’ll need to provide the prefix of
+these files with a `<translation/>` tag:
 
 ```xml
 <translation type="gettext">gnome-builder</translation>
@@ -651,11 +510,17 @@ You can specify this tag multiple times if needed.
 
 Please note that the `appstreamcli compose` expects the translations at:
 
-- For `gettext` it’s `${FLATPAK_DEST}/share/locale/<lang>/LC_MESSAGES/<id>.mo` where `id` is the value in the translation tag.
-- For `qt` if the `id` string has slashes it's either `${FLATPAK_DEST}/share/<id>_<lang>.qm` or `${FLATPAK_DEST}/share/<id>/<lang>.qm`. If the `id` string has no slashes it's
-  `${FLATPAK_DEST}/share/locale/<lang>/LC_MESSAGES/<id>.qm` where `id` is the value in the translation tag.
+- For `gettext` it’s `${FLATPAK_DEST}/share/locale/<lang>/LC_MESSAGES/<id>.mo`
+  where `id` is the value in the translation tag.
 
-To see if it was detected correctly, check the [generated output](#checking-the-generated-output).
+- For `qt` if the `id` string has slashes it's either
+  `${FLATPAK_DEST}/share/<id>_<lang>.qm` or
+  `${FLATPAK_DEST}/share/<id>/<lang>.qm`. If the `id` string has no
+  slashes it's `${FLATPAK_DEST}/share/locale/<lang>/LC_MESSAGES/<id>.qm`
+  where `id` is the value in the translation tag.
+
+To see if it was detected correctly, check the
+[generated output](#checking-the-generated-output).
 
 ## MetaInfo translations
 
@@ -906,8 +771,9 @@ flatpak manifest like so:
 
 ## Extensions
 
-Extensions need to follow only some of the guidelines outlined above. All extensions should include a MetaInfo file
-and all application extensions must use the `extends` tag.
+Extensions need to follow only some of the guidelines outlined above.
+All extensions should include a MetaInfo file and all application
+extensions must use the `extends` tag.
 
 An example of a MetaInfo file for extension is provided in the [Flatpak documentation](https://docs.flatpak.org/en/latest/extension.html#extension-manifest).
 

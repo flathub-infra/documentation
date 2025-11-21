@@ -8,7 +8,8 @@ Note that submissions can be rejected at any stage or recalled post-merge
 if it is determined to be not suitable for Flathub.
 
 :::important
-This procedure is only for submitting new applications (or renaming). At no point an update ever needs to go through this process.
+This procedure is only for submitting new applications (or renaming). At
+no point an update ever needs to go through this process.
 :::
 
 ## Before submission
@@ -88,7 +89,8 @@ gh repo fork --clone flathub/flathub && cd flathub && git checkout --track origi
 and proceed directly to step 3.
 :::
 
-1. Fork the [Flathub repository on GitHub](https://github.com/flathub/flathub/fork) with _"Copy the master branch only"_ unchecked.
+1. Fork the [Flathub repository on GitHub](https://github.com/flathub/flathub/fork) with
+   _"Copy the master branch only"_ unchecked.
 
 2. Clone the fork:
    ```bash

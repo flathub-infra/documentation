@@ -3,7 +3,7 @@
 :::tip
 [flathub-repro-checker](https://github.com/flathub-infra/flathub-repro-checker)
 checker can be used to check reproducibility of apps published on
-Flathub. 
+Flathub.
 :::
 
 Most of the time, if you want to rebuild a Flaptak from Flathub, you can

@@ -54,7 +54,7 @@ not granted, the app must handle it gracefully.
 Some permissions are not covered by Portals, such as basic and generally safe
 resources for which dynamic permissions wouldn’t make sense. In these cases—or
 if a Portal does not yet exist or is not widely adopted for a certain
-permission—developers may use [static permissions](https://docs.flathub.org/docs/for-app-authors/requirements#permissions). 
+permission—developers may use [static permissions](https://docs.flathub.org/docs/for-app-authors/requirements#permissions).
 These are set by the developer at build time in the public build manifest.
 
 Static permissions are intended to be as narrowly-scoped as possible and are
@@ -119,7 +119,7 @@ Flathub.org and GNOME Software also display the app’s verified status.
 
 ## Updates
 
-Once an app is accepted onto Flathub, it still remains subject to number of 
+Once an app is accepted onto Flathub, it still remains subject to number of
 safety protections built into the flow:
 
 - **Flathub maintains ownership over the manifest repo**, while app developers are invited as limited collaborators
