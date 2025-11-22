@@ -9,7 +9,7 @@ page too, to make your application metadata more presentable.
 :::
 
 :::note
-Please consult the [official AppStream documentation](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html
+Please consult the [official AppStream documentation](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html)
 for more in-depth info.
 :::
 
