@@ -130,7 +130,7 @@ Collection: org.flathub.Stable
       Date: 2025-10-16 08:30:37 +0000
 ```
 
-We an see that the subject mentions
+We can see that the subject mentions
 `094cc415694670dd34c808a48e500a73d1b177bb` which we can find [here](https://invent.kde.org/packaging/flatpak-kde-runtime/-/commit/094cc415694670dd34c808a48e500a73d1b177bb).
 
 The runtimes on Flathub originate from the following repositories:
