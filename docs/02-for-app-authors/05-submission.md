@@ -14,6 +14,17 @@ no point an update ever needs to go through this process.
 
 ## Before submission
 
+:::important
+
+AI-generated submissions are not allowed as these are typically
+low-quality, often violate the submission requirements, and create
+unnecessary work for the reviewers.  They also raise ethical and legal
+concerns such as potential licence infringement and resource wastage.
+
+We reserve the right to reject such submissions, without any review.
+
+:::
+
 ### Requirements
 
 Please follow the [requirements](/docs/for-app-authors/requirements) to
