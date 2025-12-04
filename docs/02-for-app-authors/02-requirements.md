@@ -232,6 +232,12 @@ will be `https://github.com/example-foo/bar` and for the ID
 `io.sourceforge.example_foo.bar`, it will be
 `https://sourceforge.net/projects/example-foo/`.
 
+#### Protected ID prefixes
+
+- `org.gnome.`: Only apps in [this list](https://gitlab.gnome.org/Teams/Releng/AppOrganization/-/blob/main/data/registered-app-ids.yml)
+  are allowed to use it.
+- `org.kde.`: The project must be hosted in a [group on KDE Invent](https://invent.kde.org/explore/groups?page=1).
+
 ### Extensions and BaseApps
 
 [BaseApps](https://docs.flatpak.org/en/latest/dependencies.html#baseapps)
