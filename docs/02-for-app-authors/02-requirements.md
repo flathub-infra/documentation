@@ -237,6 +237,7 @@ will be `https://github.com/example-foo/bar` and for the ID
 - `org.gnome.`: Only apps in [this list](https://gitlab.gnome.org/Teams/Releng/AppOrganization/-/blob/main/data/registered-app-ids.yml)
   are allowed to use it.
 - `org.kde.`: The project must be hosted in a [group on KDE Invent](https://invent.kde.org/explore/groups?page=1).
+- `com.system76.`: The project must be hosted in the [pop-os organization on GitHub](https://github.com/pop-os).
 
 ### Extensions and BaseApps
 
@@ -438,8 +439,8 @@ Some common examples of things to avoid include:
 
 - A Firefox fork cannot mention `Firefox` in its name or use
   any of the official icon, logo or artwork.
-- Third party apps, for example, a music player made for GNOME cannot
-  use `GNOME` in its name or use any of the official icon, logo or
+- Third party apps, for example, a music player made for GNOME or COSMIC cannot
+  use `GNOME` or `COSMIC` in its name or use any of the official icon, logo or
   artwork.
 - A WhatsApp client or wrapper cannot have `WhatsApp` in its name or use
   any of the official icon, logo or artwork.
@@ -448,6 +449,7 @@ Vendors often have their own requirements and policies. Some are
 listed below. Please refer to them for further details.
 
 - GNOME: https://wiki.gnome.org/Foundation/SoftwarePolicy, https://foundation.gnome.org/licensing-guidelines
+- COSMIC: https://github.com/pop-os/cosmic-epoch/blob/master/TRADEMARK.md, https://github.com/pop-os/pop/blob/master/LICENSING.md
 
 ### Appstream
 
