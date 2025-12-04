@@ -25,6 +25,8 @@ flatpak run --command=flatpak-builder-lint org.flatpak.Builder repo repo
 
 You can find more information in the [project readme](https://github.com/flathub-infra/flatpak-builder-lint/blob/master/README.md).
 
+For checking the `metainfo.xml` file you can use `flatpak run --env=G_DEBUG=fatal-criticals org.freedesktop.appstream.cli validate  <path to metainfo.xml` ([Appream Cli Flathub](https://flathub.org/en/apps/org.freedesktop.appstream.cli))
+
 ## Exceptions
 
 Linter errors can be ignored with exceptions. Exceptions on Flathub
