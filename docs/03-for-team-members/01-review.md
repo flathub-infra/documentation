@@ -16,6 +16,18 @@ long period.
 - Ensure it uses proper permissions, ask to submit linter exceptions
   if needed.
 - Do a test build before merge.
+- In general, for the domain `example.com` obtained from the rDNS ID,
+  we should verify that the submitter controls the domain or the website
+  or in case of community repackages - that the domain is related to
+  upstream and the website mentions the app or its authors etc.
+
+## Special app-id rules
+
+- `org.gnome` ID is moderated, [this list](https://gitlab.gnome.org/Teams/Releng/AppOrganization/-/blob/main/data/registered-app-ids.yml)
+   provides the current applications that are allowed to use it.
+- Apps belonging to a group [here](https://invent.kde.org/explore/groups?page=1)
+  are allowed to use `org.kde` IDs. flathub/kde team should be cc-ed
+  for `org.kde.` submissions.
 
 Once the PR ready to be merged you can use the merge command to merge
 the submission. The syntax is
@@ -30,10 +42,3 @@ the submission. The syntax is
 /merge:24.08 head=SHA -> creates 'branch/24.08'
 /merge:24.08 head=SHA @foo @baz -> creates 'branch/24.08', adds PR author, GitHub user 'foo' and 'baz' to colloborators
 ```
-
-## Links
-
-- `org.gnome` ID is moderated, [this list](https://gitlab.gnome.org/Teams/Releng/AppOrganization/-/blob/main/data/registered-app-ids.yml)
-   provides the current applications that are allowed to use it.
-- Apps belonging to a group [here](https://invent.kde.org/explore/groups?page=1)
-  are allowed to use `org.kde` IDs.
