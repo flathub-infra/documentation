@@ -416,8 +416,32 @@ sources for the main application is an exception to this.
 
 ## Name and Icon
 
+### No trademark violations
+
 The application name and icon as presented to the Flathub website
 and to users must be distinct and must not violate any trademarks.
+
+Official affiliation must not be implied by using a vendor's name in the
+application name or icon unless the application is actually part of that
+vendor's project.
+
+Icons should be sufficiently distinct to convey the project's own
+identity and prevent any risk of user confusion.
+
+Some common examples of things to avoid include:
+
+- A Firefox fork cannot mention `Firefox` in its name or use
+  any of the official icon, logo or artwork.
+- Third party apps, for example, a music player made for GNOME cannot
+  use `GNOME` in its name or use any of the official icon, logo or
+  artwork.
+- A WhatsApp client or wrapper cannot have `WhatsApp` in its name or use
+  any of the official icon, logo or artwork.
+
+Vendors often have their own requirements and policies. Some are
+listed below. Please refer to them for further details.
+
+- GNOME: https://wiki.gnome.org/Foundation/SoftwarePolicy, https://foundation.gnome.org/licensing-guidelines
 
 ### Appstream
 

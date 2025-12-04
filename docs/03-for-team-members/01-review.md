@@ -20,6 +20,9 @@ long period.
   we should verify that the submitter controls the domain or the website
   or in case of community repackages - that the domain is related to
   upstream and the website mentions the app or its authors etc.
+- Verify that no user-visible elements of the submission - such as the
+  app name or icon in the metainfo or desktop file, violate
+  trademarks. Refer to the [requirements](/docs/for-app-authors/requirements#no-trademark-violations).
 
 ## Special app-id rules
 
