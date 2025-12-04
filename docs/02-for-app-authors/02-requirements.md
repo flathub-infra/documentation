@@ -461,7 +461,7 @@ the submission, they **must** be mentioned or linked.
 
 ### Desktop file
 
-All graphical applications must include a [desktop file](https://docs.flatpak.org/en/latest/conventions.html#desktop-files)
+All graphical applications must include a [desktop file](https://docs.flatpak.org/en/latest/conventions.html#desktop-files).
 
 Desktop file is optional for console applications.
 
