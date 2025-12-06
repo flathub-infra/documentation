@@ -8,10 +8,22 @@ Note that submissions can be rejected at any stage or recalled post-merge
 if it is determined to be not suitable for Flathub.
 
 :::important
-This procedure is only for submitting new applications (or renaming). At no point an update ever needs to go through this process.
+This procedure is only for submitting new applications (or renaming). At
+no point an update ever needs to go through this process.
 :::
 
 ## Before submission
+
+:::important
+
+AI-generated submissions are not allowed as these are typically
+low-quality, often violate the submission requirements, and create
+unnecessary work for the reviewers.  They also raise ethical and legal
+concerns such as potential licence infringement and resource wastage.
+
+We reserve the right to reject such submissions, without any review.
+
+:::
 
 ### Requirements
 
@@ -88,7 +100,8 @@ gh repo fork --clone flathub/flathub && cd flathub && git checkout --track origi
 and proceed directly to step 3.
 :::
 
-1. Fork the [Flathub repository on GitHub](https://github.com/flathub/flathub/fork) with _"Copy the master branch only"_ unchecked.
+1. Fork the [Flathub repository on GitHub](https://github.com/flathub/flathub/fork) with
+   _"Copy the master branch only"_ unchecked.
 
 2. Clone the fork:
    ```bash
@@ -124,6 +137,12 @@ Once the pull request has been submitted, it will be reviewed by the
 reviewers. Please consider that reviewers are volunteers and the response
 time may vary. Reviewers may post comments, ask for certain changes,
 fixes or clarifications. Please answer all these questions.
+
+Pull requests that remove the template, does not follow the submission
+guidelines or contain excessive AI-generated content may be
+closed without a review. In general, spammy activity, wasting
+reviewer's time may result in closing the pull request and/or a ban
+from further submissions.
 
 Once all comments are resolved, a _test_ build can be started on the
 pull request by commenting `bot, build`.

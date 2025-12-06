@@ -3,7 +3,7 @@
 :::tip
 [flathub-repro-checker](https://github.com/flathub-infra/flathub-repro-checker)
 checker can be used to check reproducibility of apps published on
-Flathub. 
+Flathub.
 :::
 
 Most of the time, if you want to rebuild a Flaptak from Flathub, you can
@@ -233,7 +233,7 @@ flatpak --user update \
 Now we can rebuild the Flatpak using:
 
 ```bash
-flatpak-builder --user --disable-download --repo=repo --force-clean --disable-rofiles-fuse builddir manifest.json
+flatpak run org.flatpak.Builder --user --disable-download --repo=repo --force-clean --disable-rofiles-fuse builddir manifest.json
 ```
 
 This process can be reproduced for any Flatpak on Flathub and any

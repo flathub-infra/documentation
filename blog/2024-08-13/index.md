@@ -42,6 +42,6 @@ Those users have been busy, too: to date we have served over two billion downloa
 
 ## Thank you!
 
-Thank you to our download-happy community of users who have put their trust in Flathub as their source of apps on Linux. Thank you to all of the developers of those apps, and in particular those developers who have chosen to follow the quality guidelines to help make Flathub a more consistent and engaging space. And thank you to every contributor to Flathub itself whether you are someone who fixed a typo in the developer documentation, helped translate the store, contributed mockups and design work, or spent countless hours keeping everything running smoothly. 
+Thank you to our download-happy community of users who have put their trust in Flathub as their source of apps on Linux. Thank you to all of the developers of those apps, and in particular those developers who have chosen to follow the quality guidelines to help make Flathub a more consistent and engaging space. And thank you to every contributor to Flathub itself whether you are someone who fixed a typo in the developer documentation, helped translate the store, contributed mockups and design work, or spent countless hours keeping everything running smoothly.
 
 As a grassroots effort, we wouldn't have become the Linux app store without each and every one of you. ❤️

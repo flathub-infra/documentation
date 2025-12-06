@@ -181,97 +181,136 @@ Explanations for Appstream errors are provided below.
 
 #### cid-has-number-prefix
 
-The `id` tag contains a segment starting with a number. Please see the [application ID guidelines](/docs/for-app-authors/requirements#application-id) for more information.
+The `id` tag contains a segment starting with a number. Please see the
+[application ID guidelines](/docs/for-app-authors/requirements#application-id)
+for more information.
 
 #### cid-missing-affiliation-gnome
 
-The application is using a `project_group` tag with the value `GNOME` but the [ID](/docs/for-app-authors/metainfo-guidelines/#id) does not start with `org.gnome`. Please see the [documentation](/docs/for-app-authors/metainfo-guidelines/#project-group) on how to use this tag.
+The application is using a `project_group` tag with the value `GNOME` but
+the [ID](/docs/for-app-authors/metainfo-guidelines/#id) does not start
+with `org.gnome`. Please see the [documentation](/docs/for-app-authors/metainfo-guidelines/#project-group)
+on how to use this tag.
 
 #### content-rating-missing
 
-The application is missing an [OARS rating](/docs/for-app-authors/metainfo-guidelines/#open-age-ratings-service-oars) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
+The application is missing an [OARS rating](/docs/for-app-authors/metainfo-guidelines/#open-age-ratings-service-oars)
+in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
 
 #### desktop-app-launchable-omitted
 
-The application is missing a [launchable tag](/docs/for-app-authors/metainfo-guidelines/#launchable) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
+The application is missing a [launchable tag](/docs/for-app-authors/metainfo-guidelines/#launchable)
+in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
 
 #### invalid-child-tag-name
 
-The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has a child tag which isn't allowed under that parent tag.
+The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
+has a child tag which isn't allowed under that parent tag.
 
 #### name-has-dot-suffix
 
-The [name](/docs/for-app-authors/metainfo-guidelines/#name-and-summary) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) ends in a dot (`.`).
+The [name](/docs/for-app-authors/metainfo-guidelines/#name-and-summary)
+in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
+ends in a dot (`.`).
 
 #### releases-info-missing
 
-The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has no [release information](/docs/for-app-authors/metainfo-guidelines/#release).
+The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
+has no [release information](/docs/for-app-authors/metainfo-guidelines/#release).
 
 #### unknown-tag
 
-The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has an invalid tag. Non-standard tags must be prefixed with `x-` or should be under `<custom>` tag.
+The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
+has an invalid tag. Non-standard tags must be prefixed with `x-` or
+should be under `<custom>` tag.
 
 A few common errors that are often reached are documented below in brief.
 
 #### description-markup-invalid, description-para-markup-invalid
 
-The `description` tag in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) contains an unsupported formatting tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#description) for more details.
+The `description` tag in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
+contains an unsupported formatting tag. Please see the
+[MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#description)
+for more details.
 
 #### description-enum-item-invalid
 
-The `description` tag in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) contains an unsupported child tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#description) for more details.
+The `description` tag in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
+contains an unsupported child tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#description)
+for more details.
 
 #### description-enum-group-translated
 
-A `ul` or `ol` tag in description contains `xml:lang`. Please see the [translation section](/docs/for-app-authors/metainfo-guidelines/#metainfo-translations) on how to use translation attributes.
+A `ul` or `ol` tag in description contains `xml:lang`. Please see the
+[translation section](/docs/for-app-authors/metainfo-guidelines/#metainfo-translations)
+on how to use translation attributes.
 
 #### desktop-app-launchable-missing
 
-The application is missing a [launchable tag](/docs/for-app-authors/metainfo-guidelines/#launchable) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
+The application is missing a [launchable tag](/docs/for-app-authors/metainfo-guidelines/#launchable)
+in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
 
 #### tag-not-translatable
 
-A tag which is not translatable is using `xml:lang`. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#metainfo-translations) for more details.
+A tag which is not translatable is using `xml:lang`. Please see the
+[MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#metainfo-translations)
+for more details.
 
 #### tag-duplicated
 
-A tag in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) is duplicated.
+A tag in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
+is duplicated.
 
 #### cid-rdns-contains-hyphen
 
-The [id tag](/docs/for-app-authors/metainfo-guidelines/#id) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has a hyphen (`-`) in the domain part. The entire part of the id except the last component (`.foo`) is considered to be domain.
+The [id tag](/docs/for-app-authors/metainfo-guidelines/#id) in the
+[MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
+has a hyphen (`-`) in the domain part. The entire part of the id except
+the last component (`.foo`) is considered to be domain.
 
 #### cid-missing-affiliation-freedesktop, cid-missing-affiliation-kde
 
-The application uses a [reserved project group tag](/docs/for-app-authors/metainfo-guidelines/#project-group) value in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
+The application uses a [reserved project group tag](/docs/for-app-authors/metainfo-guidelines/#project-group)
+value in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
 
 #### cid-missing-affiliation-freedesktop, cid-missing-affiliation-kde, spdx-expression-invalid, spdx-license-unknown, metadata-license-missing, metadata-license-invalid
 
-The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has an invalid or unknown [license tag](/docs/for-app-authors/metainfo-guidelines/#license).
+The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
+has an invalid or unknown [license tag](/docs/for-app-authors/metainfo-guidelines/#license).
 
 #### screenshot-no-media
 
-The [screenshot tag](/docs/for-app-authors/metainfo-guidelines/#screenshots) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) is not properly defined.
+The [screenshot tag](/docs/for-app-authors/metainfo-guidelines/#screenshots)
+in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
+is not properly defined.
 
 #### screenshot-default-missing
 
-The [screenshot tag](/docs/for-app-authors/metainfo-guidelines/#screenshots) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) is missing `type=default` on one of them.
+The [screenshot tag](/docs/for-app-authors/metainfo-guidelines/#screenshots)
+in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
+is missing `type=default` on one of them.
 
 #### screenshot-image-source-duplicated
 
-The [screenshot tag](/docs/for-app-authors/metainfo-guidelines/#screenshots) in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) has multiple `image` tags under one `screenshot` tag.
+The [screenshot tag](/docs/for-app-authors/metainfo-guidelines/#screenshots)
+in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
+has multiple `image` tags under one `screenshot` tag.
 
 #### metadata-license-missing
 
-The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) is missing a [metadata license tag](/docs/for-app-authors/metainfo-guidelines/#license).
+The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
+is missing a [metadata license tag](/docs/for-app-authors/metainfo-guidelines/#license).
 
 #### category-invalid, all-categories-ignored, app-categories-missing
 
-Categories are either invalid, missing or all were filtered. Pleasee see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#categories-and-keywords) for more details.
+Categories are either invalid, missing or all were filtered. Pleasee see
+the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#categories-and-keywords)
+for more details.
 
 #### file-read-failed
 
-The desktop file, icon or the MetaInfo file is malformed and reading it failed.
+The desktop file, icon or the MetaInfo file is malformed and reading it
+failed.
 
 #### metainfo-ancient
 
@@ -279,7 +318,9 @@ The MetaInfo does not start with the [component tag](/docs/for-app-authors/metai
 
 #### releases-info-missing
 
-The release tag is missing entirely from the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename). Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#release) for more details.
+The release tag is missing entirely from the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename).
+Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#release)
+for more details.
 
 #### releases-not-in-order
 
@@ -287,35 +328,47 @@ The versions in release tag are not in the [proper order](/docs/for-app-authors/
 
 #### release-version-missing, release-time-missing
 
-The release tag is missing the version or time attribute. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#release) for more details.
+The release tag is missing the version or time attribute. Please see the
+[MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#release)
+for more details.
 
 #### content-rating-missing, content-rating-type-missing, content-rating-type-invalid
 
-The [OARS tag](/docs/for-app-authors/metainfo-guidelines/#open-age-ratings-service-oars) is missing from the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) or has no `type` key present or has an invalid `type` key present.
+The [OARS tag](/docs/for-app-authors/metainfo-guidelines/#open-age-ratings-service-oars)
+is missing from the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
+or has no `type` key present or has an invalid `type` key present.
 
 #### custom-key-duplicated
 
-A `custom` tag with same `key` attribute is used twice. It must be used once.
+A `custom` tag with same `key` attribute is used twice. It must be used
+once.
 
 #### type-property-required
 
-The corresponding tag requires a `type` attribute. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines) for the tag.
+The corresponding tag requires a `type` attribute. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines)
+for the tag.
 
 #### metainfo-localized-description-tag
 
-The MetaInfo file has translated the `description` tag itself. Please see the [translation section](/docs/for-app-authors/metainfo-guidelines/#metainfo-translations) on how to use translation attributes.
+The MetaInfo file has translated the `description` tag itself. Please
+see the [translation section](/docs/for-app-authors/metainfo-guidelines/#metainfo-translations)
+on how to use translation attributes.
 
 #### circular-component-relation
 
-The `extends`, `provides`, `requires` or `recommends` tag in the MetaInfo file references the application's own ID.
+The `extends`, `provides`, `requires` or `recommends` tag in the
+MetaInfo file references the application's own ID.
 
 #### mimetypes-tag-deprecated
 
-The `mimetype` tag is deprecated in favour of a `mediatypes` child tag under the `provides` tag. Please see the specification on how to use it.
+The `mimetype` tag is deprecated in favour of a `mediatypes` child tag
+under the `provides` tag. Please see the specification on how to use it.
 
 #### custom-invalid-tag
 
-One of the `custom` tags in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename) does not have the `value` child tag. Custom tags can have only `value` as child tags.
+One of the `custom` tags in the [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename
+ does not have the `value` child tag. Custom tags can have only `value`
+ as child tags.
 
 ### appstream-id-mismatch-flatpak-id
 
@@ -469,7 +522,9 @@ The ostree ref is missing a `screenshots/{arch}` ref.
 This error should not be reached on Flathub and can be ignored if an
 app submission is targetting Flathub.
 
-Externally uploaded apps must ensure to [mirror screenshots](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html), commit the screenshot ref and upload the screenshot ref for all
+Externally uploaded apps must ensure to
+[mirror screenshots](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html),
+commit the screenshot ref and upload the screenshot ref for all
 architectures.
 
 Committing is done after [Flatpak Builder](https://docs.flatpak.org/en/latest/flatpak-builder.html)
