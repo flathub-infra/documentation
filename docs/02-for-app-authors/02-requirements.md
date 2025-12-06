@@ -232,6 +232,13 @@ will be `https://github.com/example-foo/bar` and for the ID
 `io.sourceforge.example_foo.bar`, it will be
 `https://sourceforge.net/projects/example-foo/`.
 
+#### Protected ID prefixes
+
+- `org.gnome.`: Only apps in [this list](https://gitlab.gnome.org/Teams/Releng/AppOrganization/-/blob/main/data/registered-app-ids.yml)
+  are allowed to use it.
+- `org.kde.`: The project must be hosted in a [group on KDE Invent](https://invent.kde.org/explore/groups?page=1).
+- `com.system76.`: The project must be hosted in the [pop-os organization on GitHub](https://github.com/pop-os).
+
 ### Extensions and BaseApps
 
 [BaseApps](https://docs.flatpak.org/en/latest/dependencies.html#baseapps)
@@ -416,8 +423,33 @@ sources for the main application is an exception to this.
 
 ## Name and Icon
 
+### No trademark violations
+
 The application name and icon as presented to the Flathub website
 and to users must be distinct and must not violate any trademarks.
+
+Official affiliation must not be implied by using a vendor's name in the
+application name or icon unless the application is actually part of that
+vendor's project.
+
+Icons should be sufficiently distinct to convey the project's own
+identity and prevent any risk of user confusion.
+
+Some common examples of things to avoid include:
+
+- A Firefox fork cannot mention `Firefox` in its name or use
+  any of the official icon, logo or artwork.
+- Third party apps, for example, a music player made for GNOME or COSMIC cannot
+  use `GNOME` or `COSMIC` in its name or use any of the official icon, logo or
+  artwork.
+- A WhatsApp client or wrapper cannot have `WhatsApp` in its name or use
+  any of the official icon, logo or artwork.
+
+Vendors often have their own requirements and policies. Some are
+listed below. Please refer to them for further details.
+
+- GNOME: https://wiki.gnome.org/Foundation/SoftwarePolicy, https://foundation.gnome.org/licensing-guidelines
+- COSMIC: https://github.com/pop-os/cosmic-epoch/blob/master/TRADEMARK.md, https://github.com/pop-os/pop/blob/master/LICENSING.md
 
 ### Appstream
 
@@ -461,7 +493,7 @@ the submission, they **must** be mentioned or linked.
 
 ### Desktop file
 
-All graphical applications must include a [desktop file](https://docs.flatpak.org/en/latest/conventions.html#desktop-files)
+All graphical applications must include a [desktop file](https://docs.flatpak.org/en/latest/conventions.html#desktop-files).
 
 Desktop file is optional for console applications.
 
