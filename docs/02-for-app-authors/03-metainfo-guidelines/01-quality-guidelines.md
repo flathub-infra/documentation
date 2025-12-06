@@ -36,15 +36,7 @@ and promotion.
 
 ### No trademark violations
 
-Your app should not violate any trademarks. This includes the name,
-icon, and summary.
-
-For example, if your app is a Telegram client or web wrapper, it should
-not be called `Telegram for Linux` or use the official Telegram icon.
-Instead, it should have its own identity (e.g. `Paper Plane`, with a
-custom icon). If it's made clear that it's a third-party client it can be
-ok to mention the original service (e.g. `Tally for Plausible`), but in
-most cases, it should be avoided.
+Please see the policy in the [requirements section](/docs/for-app-authors/requirements#no-trademark-violations).
 
 ### Runtime not end-of-life
 

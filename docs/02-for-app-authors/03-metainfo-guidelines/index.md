@@ -149,9 +149,7 @@ a valid license identiifer:
 ## Name and summary
 
 :::note
-
-Name and summary should not violate any trademarks.
-
+The name should not [violate any trademarks](/docs/for-app-authors/requirements#no-trademark-violations).
 :::
 
 ```xml
@@ -321,10 +319,7 @@ file.
 ## Icons
 
 :::note
-
-Icons must not violate any trademark, be a copy of another application's
-icon or be confusingly similar.
-
+The icon should not [violate any trademarks](/docs/for-app-authors/requirements#no-trademark-violations).
 :::
 
 All desktop applications must install icons of the [required size](/docs/for-app-authors/requirements#icons)
