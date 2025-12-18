@@ -1,7 +1,6 @@
 import clsx from "clsx";
 
-import "swiper/css";
-import "swiper/css/navigation";
+import "swiper/swiper-bundle.css";
 import { register } from "swiper/element/bundle";
 
 // import required modules
@@ -114,8 +113,8 @@ export const HeroBanner = ({
         >
           <div className="flex justify-center flex-row w-full h-full gap-6 px-16">
             <div className="flex flex-col justify-center items-center lg:w-1/3 h-auto w-full">
-              <div className="relative flex shrink-0 flex-wrap items-center justify-center drop-shadow-md lg:h-[128px] lg:w-[128px]">
-                <img src={logo} className="h-[128px] w-[128px]" alt="Logo" />
+              <div className="relative flex shrink-0 flex-wrap items-center justify-center drop-shadow-md lg:size-32">
+                <img src={logo} className="size-32" alt="Logo" />
               </div>
               <div className="flex pt-3">
                 <span
