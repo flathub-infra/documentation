@@ -172,11 +172,6 @@ the [data validation](https://www.freedesktop.org/software/appstream/docs/chap-V
 page.
 :::
 
-Flathub increases the severity of the following Appstream checks
-to `error`: `all-categories-ignored, category-invalid, cid-desktopapp-is-not-rdns, cid-has-number-prefix, cid-missing-affiliation-gnome, cid-rdns-contains-hyphen, content-rating-missing, desktop-app-launchable-omitted, desktop-file-not-found, invalid-child-tag-name, metainfo-filename-cid-mismatch, metainfo-legacy-path, metainfo-legacy-path, name-has-dot-suffix, releases-info-missing, unknown-tag`
-and decreases the severity of the following to not cause an error:
-`cid-domain-not-lowercase, component-name-too-long, description-has-plaintext-url, developer-id-invalid, component-name-too-long, summary-too-long`
-
 Explanations for Appstream errors are provided below.
 
 #### cid-has-number-prefix
