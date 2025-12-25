@@ -37,9 +37,8 @@ accepted unless these issues are addressed.
 
 #### Console software submissions
 
-Console software submissions that are not sufficiently user facing or
-offers very niche, technical or limited functionality will not be
-accepted.
+Console software submissions are not accepted anymore. Exceptions may
+be given to Flatpak or Flathub related tooling.
 
 #### Minimal submissions
 
