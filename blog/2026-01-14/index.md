@@ -10,7 +10,7 @@ tags:
 We are approaching 1 year since the switch to Vorarbeiter for building and
 publishing apps. In this time, we have made several improvements it's time to
 brag about.
-
+<!-- truncate -->
 ## RunsOn
 
 In the initial announcement, I mentioned we are using [RunsOn][runson], a
