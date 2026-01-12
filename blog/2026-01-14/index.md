@@ -13,12 +13,12 @@ brag about.
 
 ## RunsOn
 
-In the initial announcement, I have mentioned we are using [RunsOn][runson], a
+In the initial announcement, I mentioned we are using [RunsOn][runson], a
 just-in-time runner provisioning system, to build large apps such as Chromium.
 Since then, we have fully switched to RunsOn for all builds. Free GitHub runners
-available to open source projects are badly overloaded and there are limits on
+available to open source projects are heavily overloaded and there are limits on
 how many concurrent builds can run at a time. With RunsOn, we can request an
-arbitrary amount of threads, memory and disk space, for cheaper than if we were
+arbitrary amount of threads, memory and disk space, for less than if we were
 to use paid GitHub runners.
 
 We also rely more on spot instances, which are even cheaper than the usual on
@@ -49,7 +49,7 @@ complex.
 
 One of the Buildbot limitations was that it was difficult to retrofit pull requests
 marking apps as end-of-life without rebuilding them. Flat-manager itself exposes
-an API call for this since 2019 but we could not really use it, requiring apps to
+an API call for this since 2019 but we could not really use it, as apps had to
 be in a buildable state only to deprecate them.
 
 Vorarbeiter will now detect that a PR modifies only the end-of-life keys in the
