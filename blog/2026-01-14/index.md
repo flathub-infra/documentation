@@ -27,7 +27,7 @@ spending too much time on the retry ping-pong, retried builds use the on-demand
 instances from the get-go. The same catch applies to large builds, which are unlikely
 to finish in time before spot instances are reclaimed.
 
-The cost breakdown since May 2023 is as follows:
+The cost breakdown since May 2025 is as follows:
 
 ![Cost breakdown](./aws_costs.png)
 
