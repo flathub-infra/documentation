@@ -7,25 +7,26 @@ tags:
   - infrastructure
 ---
 
-We are approaching 1 year since the switch to Vorarbeiter for building and
-publishing apps. In this time, we have made several improvements it's time to
-brag about.
+It is almost a year since the switch to Vorarbeiter for building and publishing
+apps. We've made several improvements since then, and it's time to brag about
+them.
 <!-- truncate -->
 ## RunsOn
 
-In the initial announcement, I mentioned we are using [RunsOn][runson], a
+In the initial announcement, I mentioned we were using [RunsOn][runson], a
 just-in-time runner provisioning system, to build large apps such as Chromium.
 Since then, we have fully switched to RunsOn for all builds. Free GitHub runners
 available to open source projects are heavily overloaded and there are limits on
 how many concurrent builds can run at a time. With RunsOn, we can request an
-arbitrary amount of threads, memory and disk space, for less than if we were
+arbitrary number of threads, memory and disk space, for less than if we were
 to use paid GitHub runners.
 
 We also rely more on spot instances, which are even cheaper than the usual on
-demand machines. The downside is that jobs sometimes get interrupted, but to avoid
-spending too much time on the retry ping-pong, retried builds use the on-demand
-instances from the get-go. The same catch applies to large builds, which are unlikely
-to finish in time before spot instances are reclaimed.
+demand machines. The downside is that jobs sometimes get interrupted. To avoid
+spending too much time on retry ping-pong, builds retried with the special
+`bot, retry` command use the on-demand instances from the get-go. The same
+catch applies to large builds, which are unlikely to finish in time before spot
+instances are reclaimed.
 
 The cost breakdown since May 2025 is as follows:
 
@@ -76,7 +77,7 @@ the result of the rebuild with what is published on Flathub.
 
 While these tests have been running for a while now, we have recently restarted them
 from scratch after enabling S3 storage for diffoscope artifacts. The current
-status can be viewed on [the new vorarbeiter's web UI][reprowebui].
+status is on [the reproducible builds page][reprowebui].
 
 Failures are not currently acted on. When we collect more results, we may
 start to surface them to app maintainers for investigation. We also don't test
