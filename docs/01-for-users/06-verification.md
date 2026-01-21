@@ -26,7 +26,7 @@ You can use the `--subset=verified` option when adding the Flathub
 remote. This will only add the verified apps to your local repository.
 
 ```bash
-flatpak remote-add --if-not-exists --subset=verified --title='Flathub Verified' flathub-verified https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists --subset=verified --title='Flathub Verified' flathub-verified https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
 
 If you wish to revert to the full repository, please see the section on
