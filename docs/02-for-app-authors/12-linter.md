@@ -1444,7 +1444,7 @@ present and `branch` is used, it must point to a git commit hash.
 
 This is done for reproducibility.
 
-### module-module_name-source-git-no-commit-or-tag
+### module-module_name-source-git-no-url
 
 A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
 has type `git`, but no `url` property.
