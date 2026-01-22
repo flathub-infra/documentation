@@ -1581,3 +1581,19 @@ for more details.
 ### runtime-is-eol-id-branch
 
 The Flatpak package is using a runtime that is [End-of-Life](/docs/for-app-authors/runtimes#currently-hosted-runtimes).
+
+### module-module_name-source-git-no-commit-with-tag
+
+A module in the manifest specifies a git tag with
+`tag` but not a commit SHA with `commit`. The module
+should use both for reproducibility.
+
+```yaml
+modules:
+  - name: module_name
+    sources:
+      - type: git
+        url: https://example.org/repo/foo.git
+        tag: <git tag>
+        commit: <commit hash>
+```
