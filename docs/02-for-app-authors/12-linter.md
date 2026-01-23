@@ -1444,6 +1444,16 @@ present and `branch` is used, it must point to a git commit hash.
 
 This is done for reproducibility.
 
+### module-module_name-source-git-no-commit-with-tag
+
+A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+has type `git`, but specifies no `commit` while it specifies a `tag`.
+
+A `commit` should be present if `tag` is.
+
+This is done for reproducibility as sometime a `tag` get wrongfuly
+changed by the upstream maintainers.
+
 ### module-module_name-source-git-no-url
 
 A module in the [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
