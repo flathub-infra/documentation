@@ -433,14 +433,14 @@ These manifests must be included in the submission.
 
 ## Required metadata
 
-Applications must provide the following metadata.
+Applications must provide the following metadata typically as part
+of their source code.
 
 :::important
 These metadata files must be integrated in the upstream project. Please
-do not include a copy in the submission pull request.
-
-Flatpak manifests using [extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data)
-sources for the main application is an exception to this.
+do not include a copy in the submission pull request unless it is
+using an [extra-data source](https://docs.flatpak.org/en/latest/module-sources.html#extra-data)
+for the application.
 :::
 
 ## Name and Icon
