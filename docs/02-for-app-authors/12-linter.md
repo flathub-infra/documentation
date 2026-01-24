@@ -1556,6 +1556,11 @@ It is recommended to switch to `sha256` or `sha512`.
 The module `module_name` has a `cleanup` with `/lib/debug` or a
 subdirectory of it.
 
+### module-module_name-source-dir-not-allowed
+
+The module `module_name` has a `type: dir` source. Please consider
+replacing it with `type: file` or other kinds of sources.
+
 ## Linter warnings
 
 Warnings are non-fatal but they should be resolved, if possible. Some of
@@ -1587,6 +1592,8 @@ The Flatpak package is using a runtime that is [End-of-Life](/docs/for-app-autho
 A module in the manifest specifies a git tag with
 `tag` but not a commit SHA with `commit`. The module
 should use both for reproducibility.
+
+This is an error for new submissions.
 
 ```yaml
 modules:
