@@ -15,14 +15,8 @@ no point an update ever needs to go through this process.
 ## Before submission
 
 :::important
-
-AI-generated submissions are not allowed as these are typically
-low-quality, often violate the submission requirements, and create
-unnecessary work for the reviewers.  They also raise ethical and legal
-concerns such as potential licence infringement and resource wastage.
-
-We reserve the right to reject such submissions, without any review.
-
+Please see the [Generative AI policy](/docs/for-app-authors/requirements#generative-ai-policy)
+before submitting.
 :::
 
 ### Requirements
@@ -144,9 +138,6 @@ closed without a review. In general, spammy activity, wasting
 reviewer's time may result in closing the pull request and/or a ban
 from further submissions.
 
-:::important
-Triggering a review by a chatbot like **copilot** will lead to immediate closure of the PR and could make the submitter blocked. Since Microsoft doesn't allow users and projects to block copilot, it will be done by proxy.
-:::
 
 Once all comments are resolved, a _test_ build can be started on the
 pull request by commenting `bot, build`.
