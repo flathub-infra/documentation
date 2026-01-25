@@ -1561,6 +1561,30 @@ subdirectory of it.
 The module `module_name` has a `type: dir` source. Please consider
 replacing it with `type: file` or other kinds of sources.
 
+### module-module_name-multiple-git-sources-stacked
+
+The module `module_name` is stacking multiple sources of `type: git`.
+Git sources cannot be stacked together.
+
+Please consider unstacking them by specifying `dest`.
+
+```yaml
+modules:
+    - name: foo
+      buildsystem: meson
+      sources:
+        - type: git
+          url: https://example.org/repo/foo.git
+          tag: <git tag>
+          commit: <commit hash>
+
+        - type: git
+          url: https://example.org/repo/bar.git
+          tag: <git tag>
+          commit: <commit hash>
+          dest: subprojects/bar
+```
+
 ## Linter warnings
 
 Warnings are non-fatal but they should be resolved, if possible. Some of
