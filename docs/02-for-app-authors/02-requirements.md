@@ -129,6 +129,15 @@ binary formats hosted on a well-known host. The submission may be
 subject to additional scrutiny if it exhibits signs of poor structure,
 bad practices, instability, or obfuscation.
 
+#### Trust and history
+
+Submission decisions may take a submitter's prior conduct into account.
+
+A pattern of policy violations, uncooperative behaviour, multiple
+abandoned or poorly maintained apps, misleading practices, or failure to
+address security and compliance issues may result in rejection of current
+or new submissions.
+
 #### Misleading, malicious or illegal submissions
 
 Submissions that impersonate; engage or encourage to engage in unlawful

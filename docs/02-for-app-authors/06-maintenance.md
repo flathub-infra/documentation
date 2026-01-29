@@ -4,14 +4,76 @@ This is a guide on how to maintain an application once it is published
 on Flathub. Some familiarity with Git, GitHub and Flatpak is required
 to maintain an application.
 
-Please familiarize yourself with the repository layout, branch structure
-as discussed below. The workflow involves [submitting updates](/docs/for-app-authors/updates#creating-updates)
-or changes via pull requests and merging them when the build is successful
-and tested.
+## Requirements and expectations
 
-Maintainers should try to update the application's runtime whenever
-feasible and ensure that it does not rely on an end-of-life (EOL)
-runtime. They should also be aware of the [runtime support policies](/docs/for-app-authors/runtimes#currently-hosted-runtimes).
+_A **maintainer** refers to anyone responsible for maintaining an
+application, extension, runtime, or baseapp published on Flathub._
+
+### Understanding limits
+
+Developing and maintaining software can be demanding, and maintainers
+may at times face time constraints, burnout, or shifting priorities. In
+such cases, they may consider appointing co-maintainers, delegating
+responsibilities, or [reaching out to Flathub admins](/docs/for-app-authors/maintenance#getting-help)
+for help. Maintainers should also avoid submitting or maintaining more
+applications than they can reasonably manage within their capacity.
+
+### Requirements
+
+- Adhere to and comply with the Flathub policies (for example, the
+  [requirements](/docs/for-app-authors/requirements)) that were in
+  effect at the time their submission was accepted.
+
+### Expectations
+
+None of the expectations outlined below are strict requirements. They
+represent best practices intended to support long-term sustainability
+and provide a smooth, frictionless experience for everyone. However,
+persistent or repeated disregard for these expectations may
+influence submission reviews and, in some cases, lead to action being
+taken. For example, prolonged absence or an unmaintained state may
+result in pull requests being merged or the application being marked
+end-of-life (EOL) by a Flathub admin or trusted maintainer.
+
+Current and prospective maintainers on Flathub are expected to:
+
+- Be familiar with Git, GitHub, Flatpak, and `flatpak-builder`.
+
+- Be able to build the application and its dependencies offline using
+  `flatpak-builder`.
+
+- Understand the Flathub repository layout and branch structure as
+  discussed below.
+
+- Follow the established [update workflow](/docs/for-app-authors/updates#creating-updates)
+  which involves submitting updates and other changes via pull requests,
+  and merging them only after successful builds and appropriate testing.
+
+- Test the builds produced in pull requests before merging the pull
+  request.
+
+- Keep the runtime up to date where feasible, and avoid
+  relying on end-of-life (EOL) runtimes in accordance with the
+  [runtime support policies](/docs/for-app-authors/runtimes#currently-hosted-runtimes).
+
+- Keep their submission in a functional, well-maintained state and
+  be responsive to issues and pull requests.
+
+- Be aware of Flathub policy changes and adapt to them when notified
+  or requested.
+
+- Mark the application as [end-of-life (EOL)](/docs/for-app-authors/maintenance#end-of-life)
+  if development has ceased or the application is no longer functional.
+
+- Understand that Flathub is largely run and managed by volunteers in
+  their free time, and that much of the infrastructure is generously
+  donated. Abuse of these resources should be avoided, and there should
+  be no expectation of prioritized support or work.
+
+- Stay engaged with the Flathub community through available channels,
+  including the [Flathub Discourse](https://discourse.flathub.org/), the
+  [Flathub blog](https://docs.flathub.org/blog), and the
+  [Flathub Matrix channel](https://matrix.to/#/#flathub:matrix.org).
 
 ## The repository
 
