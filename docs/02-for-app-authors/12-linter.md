@@ -771,12 +771,22 @@ for more information and find out the specific DBus names required using
 ### finish-args-host-filesystem-access
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `host` filesystem access.
+in the manifest has read and write `host` filesystem access.
 
 ### finish-args-home-filesystem-access
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `home` filesystem access.
+in the manifest has read and write `home` filesystem access.
+
+### finish-args-host-ro-filesystem-access
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has read-only `host` filesystem access.
+
+### finish-args-home-ro-filesystem-access
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has read-only `home` filesystem access.
 
 ### finish-args-autostart-filesystem-access
 
