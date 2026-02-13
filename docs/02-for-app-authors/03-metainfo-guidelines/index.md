@@ -606,11 +606,11 @@ touch (mobile and tablet) devices.
 
 ```xml
 <!-- Desktop AND mobile supported -->
-<recommends>
+<supports>
   <control>keyboard</control>
   <control>pointing</control>
   <control>touch</control>
-</recommends>
+</supports>
 ```
 
 The below metadata will indicate that the app supports only desktop
@@ -648,11 +648,11 @@ but if it supports gamepad along with other inputs like keyboard and
 mouse, it should instead use
 
 ```xml
-<recommends>
+<supports>
   <control>keyboard</control>
   <control>pointing</control>
   <control>gamepad</control>
-</recommends>
+</supports>
 ```
 
 ### Display size
@@ -734,11 +734,11 @@ should have:
 
 
 ```xml
-<recommends>
+<supports>
   <control>keyboard</control>
   <control>pointing</control>
   <control>touch</control>
-</recommends>
+</supports>
 <requires>
   <display_length compare="ge">360</display_length>
 </requires>
