@@ -60,12 +60,14 @@ programs (e.g., `elinks`, `gh`).
 
 #### Submissions incompatible or restricted by Flatpak sandbox
 
-Certain types of submissions, such as development tools and IDEs with a
-broad scope are generally not well-suited for Flatpak due to inherent
-sandboxing limitations and severely degrade the user experience. Unless
-these applications are being officially submitted by the upstream
-developers and/or upstream has explicitly committed to supporting
-Flatpak they will not be accepted.
+Certain types of submissions, such as development tools, file managers,
+terminals, IDEs with a broad scope are generally not well-suited for
+Flatpak due to inherent sandboxing limitations and severely degrade
+the user experience. Unless these applications are being officially
+submitted by the upstream developers and/or upstream has explicitly
+committed to supporting Flatpak they will not be accepted. In some
+cases, submissions in these categories may not be accepted at all if
+the trade-offs outweigh the benefits of distributing them via Flatpak.
 
 #### Duplicate submissions
 
