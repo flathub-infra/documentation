@@ -29,34 +29,62 @@ cases.
 If you believe something is violating these policies, please [open an issue](https://github.com/flathub/flathub/issues).
 :::
 
+### Impermissible submissions
+
+Submissions must demonstrate sufficient functional scope, user-facing
+value, desktop integration and functionality and justify distribution.
+
+The following non-exhaustive categories of submissions will not be
+accepted:
+
 #### Non-functional submissions
 
-Submissions that are not fully functional, provide a poor user
-experience, or contain clearly or easily visible issues will not be
-accepted unless these issues are addressed.
+Submissions that are not fully functional or have easily visible issues
+at the time of submission.
 
-#### Console software submissions
+#### Console software
 
-Console software submissions are not accepted anymore. Exceptions may
-be given to Flatpak or Flathub related tooling.
+Console softwares will not be accepted. Exceptions may be given to
+Flatpak or Flathub related tooling.
 
 #### Minimal submissions
 
-Submissions that offer very minimal functionality often consisting of
-simple scripts, single or simple sources or aren't suitable as desktop
-applications or are forks of existing projects without any significant
-modifications will not be accepted.
+Submissions that offer very minimal functionality consisting of simple
+scripts, single or simple sources and/or exists as a thin wrapper or
+launcher around other tools will not be accepted.
 
-#### Impermissible submissions
+Simple web wrapper applications that embed a web engine and load a
+remote website without adding significant functionality or meaningful
+desktop integration will not be accepted.
 
-In addition to the other guidelines, the following non-exhaustive types
-of application submissions will not be accepted: documentation or help
-files only, media-only content (e.g., images, audio, video), fonts,
-firmware, simple web wrappers/web consoles, applications only working
-in very specific environments such as requiring a specific DE or distro
-(unless it is for example a settings app), shell/WM/DE extensions, tray
-applets, system utilities (e.g., `sudo`, `xeyes`) and CLI utility
-programs (e.g., `elinks`, `gh`).
+Exceptions can be given on a case by case basis.
+
+#### Extensions
+
+Shell, window manager, desktop environment extensions will not be
+accepted.
+
+#### Tray-only applications
+
+Applications that operate exclusively as tray applets will not be
+accepted.
+
+#### System utilities
+
+System utilities which are generally used on host will not be accepted.
+
+#### Environment-locked applications
+
+Applications that function only in highly specific environments such as
+requiring a particular desktop environment or distribution. Exceptions
+to this can be considered on a case by case basis. An example of an
+exception may be a desktop settings application.
+
+#### Host-dependent applications
+
+Applications that rely on host components or complicated post
+installation setups for core functionality. Exceptions to this can be
+considered on a case by case basis.
 
 #### Submissions incompatible or restricted by Flatpak sandbox
 
@@ -81,7 +109,7 @@ content, visuals, or user experience) will not be accepted.
 
 If an application is provided by the upstream author or developers
 as a Flatpak outside of Flathub, third party submissions of it to
-Flathub may be rejected.
+Flathub will be rejected.
 
 #### Software using emulation or translation layers
 
@@ -91,53 +119,42 @@ translation layer will only be accepted if they are submitted officially
 by upstream with the intention of maintaining it in an official
 capacity.
 
-#### End-of-life dependencies
+### End-of-life dependency policy
 
 Submissions using an end-of-life runtime, extension or baseapp
 will not be accepted.
 
 Submissions that use high-risk, end-of-life software, such as
 OpenSSL 1.x, Python 2, or Qt5 WebKit, and request the network or any
-other invasive permissions may be rejected due to security concerns.
+other invasive permissions will not be accepted.
 
-Submissions using end-of-life dependencies may not be accepted in
-some cases.
-
-Submissions where the main application is itself end-of-life may be
-rejected, unless the submitter can demonstrate their ability to
+Submissions where the main application is itself end-of-life will
+not be accepted unless the submitter can demonstrate their ability to
 maintain it for the foreseeable future and perform runtime upgrades.
 
-#### Unacceptable software design practices
+### Software design and distribution policy
 
-Submissions that include antipatterns or insecure design choices, for
-example, disabling or ignoring security checks, insecure cryptography
-practices, exposing sensitive information, overly permissive
-configurations etc. will not be accepted.
+Applications that include insecure or harmful design choices, such as
+disabling or bypassing security mechanisms, using insecure cryptographic
+practices, exposing or accessing sensitive information, or shipping
+overly permissive configurations will not be accepted.
 
-Submissions with unethical, manipulative or exploitative software
-designs will not be accepted. Submissions that promote gambling or
-games of chances involving real-world money will not be accepted.
+Submissions that employ unethical, manipulative, or exploitative design
+patterns will also be rejected. Applications promoting gambling or
+games of chance involving real-world money are not permitted.
 
-#### Extensions or BaseApps
+Projects must demonstrate reasonable structure, organization,
+maintainability, and be distributed in a verifiable manner. Open source
+and source-available projects must follow established conventions of
+their respective ecosystem.
+
+### Extensions or BaseApps
 
 Flatpak extensions that add support for new languages, language
 specific tooling etc. or BaseApps will need a clear use case defined
 and prospective users to be accepted.
 
-#### Structure and organisation
-
-The project that is being submitted (if open source or source
-available), should be well-organised, structured and should follow the
-established conventions of the programming language it uses. They must
-also be distributed in a sensible manner such as through Git tags or
-tarballs hosted on well-known hosts so that it is easy to consume the
-source from the Flatpak manifest and verify it. Proprietary apps must
-also be distributed in sensible manner such as through tarballs or some
-binary formats hosted on a well-known host. The submission may be
-subject to additional scrutiny if it exhibits signs of poor structure,
-bad practices, instability, or obfuscation.
-
-#### Trust and history
+### Trust and history
 
 Submission decisions may take a submitter's prior conduct into account.
 
@@ -146,16 +163,16 @@ abandoned or poorly maintained apps, misleading practices, or failure to
 address security and compliance issues may result in rejection of current
 or new submissions.
 
-#### Misleading, malicious or illegal submissions
+### Misleading, malicious or illegal submissions
 
-Submissions that impersonate; engage or encourage to engage in unlawful
+Submissions that impersonate, engage or encourage to engage in unlawful
 activities; provide false, misleading information and functionality;
 attempt to deceive or violate any laws, trademarks and copyrights;
 act in a malicious manner or contains malicious code will not be
 accepted. In most cases these are liable to be outright rejected or
 removed from the store.
 
-## Generative AI policy
+### Generative AI policy
 
 Submission pull requests must not be generated, opened, or automated
 using AI tools or agents. Please also do not request review from any AI
@@ -206,7 +223,7 @@ demangling them to form a FQDN, which is then matched against
 component except the last from the previous final form is taken as the
 domain.
 
-The following rules should be followed when creating application IDs.
+The following rules must be followed when creating application IDs.
 
 - The ID must not exceed 255 characters and must have at least 3
   components. Applications must not exceed 5 components.
@@ -305,6 +322,9 @@ types of renames won't be accepted.
 - A rename that does not change the domain portion of the app ID will
   not be accepted.
 
+- A rename changing the domain portion of the app ID but the previous
+  app is already verified.
+
 - A rename that changes the domain portion of the app ID but with no
   intention to [verify](/docs/for-app-authors/verification) it will not
   be accepted.
@@ -329,7 +349,7 @@ for each module in the Flatpak manifest is installed to
 
 Recent versions of Flatpak builder can do this automatically for common
 license file names as long as the module does not use
-`buildsystem: simple` in which case the licence file should be manually
+`buildsystem: simple`, in which case the licence file must be manually
 installed.
 
 ```yaml
@@ -341,16 +361,17 @@ installed.
 
 ## Permissions
 
-Static permissions should be limited as much as possible and applications
-should use [XDG Portals](https://flatpak.github.io/xdg-desktop-portal/docs/)
-and XDG standards whenever possible.
+[Static permissions](https://docs.flatpak.org/en/latest/sandbox-permissions.html)
+must be kept to an absolute minimum. Applications should rely on
+[XDG Portals](https://flatpak.github.io/xdg-desktop-portal/docs/) and
+follow established XDG standards wherever possible.
 
-Please follow the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html)
-when writing the manifest or choosing finish-args. Anything listed in
-"Standard Permissions" can be freely used. D-Bus, Filesystem and Device
-access should be limited to only what the application needs.
-
-Please avoid choosing broad permissions unless justified.
+When a suitable XDG portal exists, is supported across the ecosystem,
+and covers the application's use case, or can be implemented in the
+application itself — using the portal becomes mandatory instead of
+static permissions. Exceptions to this can be allowed on a case by
+case basis but note that using niche or unmaintained setups or
+dependencies may not count as grounds for allowing an exception.
 
 ## No network access during build
 
@@ -372,15 +393,25 @@ build-options:
 
 ## Building from source
 
-Unless blocked by technical reasons, all submissions must be built from
-the source code. Exceptions can be made to this in certain cases such
-as due to maintainability concerns, lack of the necessary tooling or
-in the case of well established vendors.
+All source available submissions must be built entirely from source
+code. This requirement applies to the main application component
+defined in the manifest, as well as any runtime dependencies included
+in the manifest.
+
+Exceptions may be granted to well-known vendors on a case-by-case
+basis, for example where the necessary tooling to perform an offline
+source build is not available. However, the use of niche tooling or
+uncommon build setups may not constitute grounds for an exception.
+
+When tooling for an offline source build is unavailable, application
+developers are generally encouraged (though not strictly required) to
+help develop, contribute, or upstream the necessary tooling for their
+app and for the benefit of the wider Flatpak ecosystem.
 
 ## Patches
 
-Submissions should aim to distribute the application with minimal
-modifications and should closely follow the upstream source.
+Submissions must aim to distribute the application with minimal
+modifications and must closely follow the upstream source.
 
 If any modifications are necessary (e.g., through patching), all
 patches must be included in the submission along with the manifest.
@@ -403,7 +434,7 @@ included in the submission. Flathub is not intended to host neither
 application source code nor binaries, including that of any dependencies.
 :::
 
-The following files should be included in the submission.
+The following files must be included in the submission.
 
 ### Manifest
 
@@ -422,7 +453,7 @@ application is supported on only one architecture, please include a
 `flathub.json` file in the submission pull request with the
 [proper contents](/docs/for-app-authors/maintenance#limiting-the-set-of-architectures-to-build-on).
 
-The `flathub.json` file should reside in the top-level root, next to
+The `flathub.json` file must reside in the top-level root, next to
 the Flatpak manifest.
 
 ### Dependency manifest
@@ -462,7 +493,7 @@ Official affiliation must not be implied by using a vendor's name in the
 application name or icon unless the application is actually part of that
 vendor's project.
 
-Icons should be sufficiently distinct to convey the project's own
+Icons must be sufficiently distinct to convey the project's own
 identity and prevent any risk of user confusion.
 
 Some common examples of things to avoid include:
@@ -495,7 +526,7 @@ Metainfo file is optional for runtimes, extensions and BaseApps.
 Unofficially packaged, _proprietary_ submissions **must** add a note like
 below as the **first** `p` tag of `description`.
 
-Unofficially packaged, open source submissions _may_ also follow this.
+Unofficially packaged, open source submissions may also follow this.
 
 ```xml
 <description>
@@ -525,12 +556,7 @@ the submission, they **must** be mentioned or linked.
 
 All graphical applications must include a [desktop file](https://docs.flatpak.org/en/latest/conventions.html#desktop-files).
 
-Desktop file is optional for console applications.
-
 ### Icons
 
 Graphical applications must provide, preferably a SVG icon or at least
 a 256x256 PNG icon, properly [named and installed](https://docs.flatpak.org/en/latest/conventions.html#application-icons).
-
-Icon is optional for console applications but it is mandatory if
-they intend to appear on Flathub website search results.
