@@ -768,6 +768,16 @@ This must not be used except for very specific cases. Please follow the
 for more information and find out the specific DBus names required using
 `--log-session-bus`.
 
+### finish-args-metadata-key
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest uses the `--metadata` key.
+
+### finish-args-contains-inherit-wayland-socket
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest uses the `inherit-wayland-socket` socket.
+
 ### finish-args-host-filesystem-access
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
