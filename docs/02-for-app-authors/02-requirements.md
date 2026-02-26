@@ -76,15 +76,15 @@ System utilities which are generally used on host will not be accepted.
 #### Environment-locked applications
 
 Applications that function only in highly specific environments such as
-requiring a particular desktop environment or distribution. Exceptions
-to this can be considered on a case by case basis. An example of an
-exception may be a desktop settings application.
+requiring a particular desktop environment or distribution will not
+be accepted. Exceptions to this can be considered on a case by case
+basis. An example of an exception may be a desktop settings application.
 
 #### Host-dependent applications
 
 Applications that rely on host components or complicated post
-installation setups for core functionality. Exceptions to this can be
-considered on a case by case basis.
+installation setups for core functionality will not be
+accepted. Exceptions to this can be considered on a case by case basis.
 
 #### Submissions incompatible or restricted by Flatpak sandbox
 
