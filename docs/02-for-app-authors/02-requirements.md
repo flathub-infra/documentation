@@ -350,10 +350,8 @@ for each module in the Flatpak manifest is installed to
 
 Recent versions of Flatpak builder can do this automatically for common
 license file names as long as the licence files are in the root of the
-source directory and the module does not use `buildsystem: simple`.
-
-If the licence file is not being automatically installed, it must be
-manually installed using:
+source directory. If the licence file is not being automatically
+installed, it must be manually installed using:
 
 ```yaml
   - name: my-module
