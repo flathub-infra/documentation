@@ -9363,10 +9363,15 @@ swr@^2.2.5:
     dequal "^2.0.3"
     use-sync-external-store "^1.4.0"
 
-tailwindcss@4.1.18, tailwindcss@^4.1.17:
+tailwindcss@4.1.18:
   version "4.1.18"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-4.1.18.tgz#f488ba47853abdb5354daf9679d3e7791fc4f4e3"
   integrity sha512-4+Z+0yiYyEtUVCScyfHCxOYP06L5Ne+JiHhY2IjR2KWMIWhJOYZKLSGZaP5HkZ8+bY0cxfzwDE5uOmzFXyIwxw==
+
+tailwindcss@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-4.2.1.tgz#018c4720b58baf98a6bf56b0a12aa797c6cfef1d"
+  integrity sha512-/tBrSQ36vCleJkAOsy9kbNTgaxvGbyOamC30PRePTQe/o1MFwEKHQk4Cn7BNGaPtjp+PuUrByJehM1hgxfq4sw==
 
 tapable@^2.0.0, tapable@^2.2.0, tapable@^2.2.1, tapable@^2.3.0:
   version "2.3.0"
