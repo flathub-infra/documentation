@@ -37,11 +37,16 @@ to the [exception file](https://github.com/flathub/flatpak-builder-lint/blob/mas
 There should be only one entry for the application, but it can contain
 multiple exceptions. Please make sure the reason is explanatory.
 
-The syntax is:
+The syntax is given below.
+
+`repo_key` should be `stable` if the Flatpak is for Flathub stable
+remote and `beta` if it is for the Flathub `beta` remote.
 
 ```json
 "my.app.id": {
-    "linter-error": "reason for the exception"
+    "repo_key": {
+        "linter-error": "reason for the exception"
+    }
 }
 ```
 
