@@ -35,7 +35,7 @@
     "@tailwindcss/postcss": "^4.2.1",
     "@tailwindcss/typography": "^0.5.19",
     "@types/react": "^19.2.9",
-    "autoprefixer": "^10.4.24",
+    "autoprefixer": "^10.4.27",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.2.1",
     "typescript": "^5.9.3"
