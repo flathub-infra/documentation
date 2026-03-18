@@ -85,6 +85,10 @@ The `beta` git branch can store a secondary version that is served in
 the [Flathub beta repository](/docs/for-users/installation#flathub-beta-repository)
 and corresponds to the `beta` Flatpak ref branch.
 
+Beta builds are not intended to be permanent and should be migrated to
+the stable repository after a reasonable period, otherwise, inactive
+builds may be subject to automatic cleanup.
+
 Applications must only use either `master` or `beta` git branches and the
 corresponding `stable` and `beta` Flatpak ref branches respectively. No
 other git or ref branches are allowed for applications.
