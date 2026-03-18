@@ -27,7 +27,8 @@ long period.
 ## Special app-id rules
 
 - `org.gnome` ID is moderated, [this list](https://gitlab.gnome.org/Teams/Releng/AppOrganization/-/blob/main/data/registered-app-ids.yml)
-   provides the current applications that are allowed to use it.
+   provides the current applications that are allowed to use it. The
+   restriction only applies to the toplevel namespace.
 - Apps belonging to a group [here](https://invent.kde.org/explore/groups?page=1)
   are allowed to use `org.kde` IDs. flathub/kde team should be cc-ed
   for `org.kde.` submissions.
