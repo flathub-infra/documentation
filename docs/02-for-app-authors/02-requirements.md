@@ -343,6 +343,26 @@ not violate any trademarks and must be distinct.
 License must be correctly declared in the metainfo file and must
 match with license information available in its source.
 
+## License of contents in Flathub repository
+
+The use of a specific license is not mandated or required, and including
+a license in the repository is optional. However, submitters and
+maintainers may choose to apply a license if desired. However,
+restrictive licenses must not be used and the general recommendation
+is to use permissive licenses such as MIT, 0BSD, or the Unlicense
+for Flatpak manifests and any other build manifests.
+
+Contributors are also encouraged to apply appropriate licenses of their
+choosing to any additional source code (e.g., build scripts, tooling)
+that are/will be included in the repository.
+
+During submission, a license file may be included in the pull
+request, or individual files can be annotated with a license at the
+top level.
+
+In the absence of an explicit license, contributors will retain
+their respective copyrights over the contents of the repository.
+
 ## Installing license files
 
 Application maintainers and submitters must ensure that license files
