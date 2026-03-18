@@ -439,6 +439,8 @@ be manually migrated if switched to the stable repo later.
 Nightly releases, development snapshots, or any software requiring daily
 updates must not be published to either repo.
 
+New submissions will not be accepted for the Flathub beta repostitory.
+
 ## Required files
 
 :::important
