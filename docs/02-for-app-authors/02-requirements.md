@@ -178,7 +178,8 @@ Submission pull requests must not be generated, opened, or automated
 using AI tools or agents. Please also do not request review from any AI
 tools in the submission PR. Automated Copilot reviews on GitHub can be
 disabled by the submitter by going [here](https://github.com/settings/copilot/coding_agent)
-and changing `Repository access` to exclude the repo.
+and changing `Repository access` to exclude the repo or disabling the
+global "Automatic Copilot code review" found [here](https://github.com/settings/copilot/features).
 
 Submissions or changes where most of the code is written by or using AI
 without any meaningful human input, review, justification or moderation
