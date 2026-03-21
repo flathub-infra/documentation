@@ -279,6 +279,10 @@ underscore is stripped from that component).
 Note, that some code hosting platforms like GitLab may have
 case-sensitive namespaces.
 
+Please note that, the username or the repository name portion for
+code-hosting IDs cannot contain `.` since it serves as a delimiter for
+splitting the components from the ID itself.
+
 - Applications using code hosting IDs must have the repository URL
   reachable. In some cases, if the calculated code hosting URL
   doesn't match exactly, an exception can be granted after manually
