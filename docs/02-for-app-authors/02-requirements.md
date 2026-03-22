@@ -446,6 +446,22 @@ developers are generally encouraged (though not strictly required) to
 help develop, contribute, or upstream the necessary tooling for their
 app and for the benefit of the wider Flatpak ecosystem.
 
+## Localisation policy
+
+All submissions must include a complete English localisation for their
+user interface, user-facing content, desktop file, metainfo and any
+readme or documentation. Low quality, automated or machine-generated
+or mixed translations cannot be used.
+
+This requirement does not apply if the submission is inherently
+region-specific, for example government or banking applications.
+Furthermore, exceptions can be made for new submissions, if the author's
+native language is not English and they were unable to find
+contributors to help in the English localisation.
+
+Any submission available only in one (or more) non-English locales
+should state so in their metadata using [description notes](#description-notes).
+
 ## Patches
 
 Submissions must aim to distribute the application with minimal
