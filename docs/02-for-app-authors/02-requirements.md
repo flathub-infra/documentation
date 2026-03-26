@@ -178,7 +178,8 @@ Submission pull requests must not be generated, opened, or automated
 using AI tools or agents. Please also do not request review from any AI
 tools in the submission PR. Automated Copilot reviews on GitHub can be
 disabled by the submitter by going [here](https://github.com/settings/copilot/coding_agent)
-and changing `Repository access` to exclude the repo.
+and changing `Repository access` to exclude the repo or disabling the
+global "Automatic Copilot code review" found [here](https://github.com/settings/copilot/features).
 
 Submissions or changes where most of the code is written by or using AI
 without any meaningful human input, review, justification or moderation
@@ -278,6 +279,10 @@ underscore is stripped from that component).
 Note, that some code hosting platforms like GitLab may have
 case-sensitive namespaces.
 
+Please note that, the username or the repository name portion for
+code-hosting IDs cannot contain `.` since it serves as a delimiter for
+splitting the components from the ID itself.
+
 - Applications using code hosting IDs must have the repository URL
   reachable. In some cases, if the calculated code hosting URL
   doesn't match exactly, an exception can be granted after manually
@@ -291,7 +296,8 @@ will be `https://github.com/example-foo/bar` and for the ID
 #### Protected ID prefixes
 
 - `org.gnome.`: Only apps in [this list](https://gitlab.gnome.org/Teams/Releng/AppOrganization/-/blob/main/data/registered-app-ids.yml)
-  are allowed to use it.
+  are allowed to use it. The restriction only applies to the toplevel
+  namespace.
 - `org.kde.`: The project must be hosted in a [group on KDE Invent](https://invent.kde.org/explore/groups?page=1).
 - `com.system76.`: The project must be hosted in the [pop-os organization on GitHub](https://github.com/pop-os).
 
@@ -341,6 +347,26 @@ not violate any trademarks and must be distinct.
 
 License must be correctly declared in the metainfo file and must
 match with license information available in its source.
+
+## License of contents in Flathub repository
+
+The use of a specific license is not mandated or required, and including
+a license in the repository is optional. However, submitters and
+maintainers may choose to apply a license if desired. However,
+restrictive licenses must not be used and the general recommendation
+is to use permissive licenses such as MIT, 0BSD, or the Unlicense
+for Flatpak manifests and any other build manifests.
+
+Contributors are also encouraged to apply appropriate licenses of their
+choosing to any additional source code (e.g., build scripts, tooling)
+that are/will be included in the repository.
+
+During submission, a license file may be included in the pull
+request, or individual files can be annotated with a license at the
+top level.
+
+In the absence of an explicit license, contributors will retain
+their respective copyrights over the contents of the repository.
 
 ## Installing license files
 
@@ -420,6 +446,22 @@ developers are generally encouraged (though not strictly required) to
 help develop, contribute, or upstream the necessary tooling for their
 app and for the benefit of the wider Flatpak ecosystem.
 
+## Localisation policy
+
+All submissions must include a complete English localisation for their
+user interface, user-facing content, desktop file, metainfo and any
+readme or documentation. Low quality, automated or machine-generated
+or mixed translations cannot be used.
+
+This requirement does not apply if the submission is inherently
+region-specific, for example government or banking applications.
+Furthermore, exceptions can be made for new submissions, if the author's
+native language is not English and they were unable to find
+contributors to help in the English localisation.
+
+Any submission available only in one (or more) non-English locales
+should state so in their metadata using [description notes](#description-notes).
+
 ## Patches
 
 Submissions must aim to distribute the application with minimal
@@ -437,6 +479,8 @@ be manually migrated if switched to the stable repo later.
 
 Nightly releases, development snapshots, or any software requiring daily
 updates must not be published to either repo.
+
+New submissions will not be accepted for the Flathub beta repostitory.
 
 ## Required files
 
