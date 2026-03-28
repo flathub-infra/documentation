@@ -1204,6 +1204,28 @@ The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has a `--talk-name=` starting with
 `org.kde.plasmashell`.
 
+### finish-args-unnecessary-appid-own-name
+
+The manifest has `--own-name=<FLATPAK_ID>` in
+[finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing).
+
+This access is granted automatically by Flatpak and there is no need
+to specify manually.
+
+Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#d-bus-access)
+section for more details.
+
+### finish-args-unnecessary-appid-mpris-own-name
+
+The manifest has `--own-name=org.mpris.MediaPlayer2.<FLATPAK_ID>` in
+[finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing).
+
+This access is granted automatically by Flatpak and there is no need
+to specify manually.
+
+Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#d-bus-access)
+section for more details.
+
 ### finish-args-unnecessary-appid-talk-name
 
 The manifest has `--talk-name=<FLATPAK_ID>` in
