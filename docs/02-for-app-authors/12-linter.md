@@ -1652,6 +1652,13 @@ modules:
           dest: subprojects/bar
 ```
 
+### runtime-is-eol-id-branch
+
+The Flatpak package is using a runtime that is [End-of-Life](/docs/for-app-authors/runtimes#currently-hosted-runtimes).
+
+This is an error only if the used runtime is EOL by three consecutive
+releases and a warning otherwise.
+
 ## Linter warnings
 
 Warnings are non-fatal but they should be resolved, if possible. Some of
@@ -1677,6 +1684,16 @@ for more details.
 ### runtime-is-eol-id-branch
 
 The Flatpak package is using a runtime that is [End-of-Life](/docs/for-app-authors/runtimes#currently-hosted-runtimes).
+
+If the used runtime is EOL by three consecutive releases, this will
+automatically be promoted to an error.
+
+### runtime-update-available-to-id-branch
+
+A newer branch of the runtime used by the Flatpak package, is available.
+Maintainers should consider upgrading to it. Please see the
+[runtime documentation](/docs/for-app-authors/runtimes#currently-hosted-runtimes)
+for more information.
 
 ### module-module_name-source-git-no-commit-with-tag
 
