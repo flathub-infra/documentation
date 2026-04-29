@@ -1369,6 +1369,10 @@ This is no longer allowed by default.
 The `flathub.json` file had `end-of-life-rebase` property but no
 `end-of-life` property.
 
+### flathub-json-eol-rebase-target-not-on-flathub
+
+The EOL rebase target app ID is not available on Flathub.
+
 Please consult the [documentation](/docs/for-app-authors/maintenance#end-of-life)
 for the proper end-of-life process.
 
@@ -1415,6 +1419,19 @@ has a property that is not recognised by Flatpak Builder.
 The [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
 has some invalid JSON structure which json-glib is raising a warning
 on.
+
+### manifest-invalid-yaml
+
+The [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+or any YAML files relative to it, has invalid YAML structure. YAML
+structure supported by `ruamel.yaml` is considered to be valid.
+
+### manifest-invalid-json
+
+The [Flatpak manifest](https://docs.flatpak.org/en/latest/manifests.html)
+or any JSON files relative to it, has invalid JSON structure. JSON
+structure supported by Python's stdlib `json` module is considered to
+be valid.
 
 ### manifest-toplevel-build-network-access
 
