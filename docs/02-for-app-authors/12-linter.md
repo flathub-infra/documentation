@@ -1570,23 +1570,6 @@ releases and a warning otherwise.
 Warnings are non-fatal but they should be resolved, if possible. Some of
 them might be promoted to an error in the future if needed.
 
-### appstream-screenshot-missing-caption
-
-The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
-is missing `caption` tag for one or more screenshots or the `caption`
-tag is empty.
-
-Please refer to the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#screenshots)
-for more details.
-
-### appstream-missing-vcs-browser-url
-
-The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
-is missing a `vcs-browser` URL.
-
-Please refer to the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#url)
-for more details.
-
 ### runtime-is-eol-id-branch
 
 The Flatpak package is using a runtime that is [End-of-Life](/docs/for-app-authors/runtimes#currently-hosted-runtimes).
