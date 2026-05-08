@@ -630,6 +630,26 @@ are not allowed in the [Flathub manifest repository on GitHub](https://github.co
 The manifest directory of the Flathub GitHub repository exceeds 25 MB
 excluding the size of `.git/`.
 
+### finish-args-conditional-permission-not-allowed-permission
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest uses a conditional permission which is not allowed.
+
+Only `if:all:!has-input-device, if:all:!has-usb-device, if:usb:!has-usb-portal`
+are allowed.
+
+### finish-args-conditional-permission-input-no-restriction
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest uses the conditional permission
+`--device-if=all:!has-input-device` but no `--device=input`.
+
+### finish-args-conditional-permission-usb-no-restriction
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest uses the conditional permission
+`--device-if=all:!has-usb-device` but no `--device=usb`.
+
 ### finish-args-contains-both-x11-and-fallback
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
