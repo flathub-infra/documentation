@@ -721,19 +721,25 @@ Please consult the [Flatpak permission guide](https://docs.flatpak.org/en/latest
 and the [manual page](https://docs.flatpak.org/en/latest/flatpak-command-reference.html?highlight=filesystem#).
 
 ### finish-args-flatpak-appdata-folder-access
+### finish-args-flatpak-appdata-folder-dir-access
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `filesystem` permission to `~/.var/app`.
+in the manifest has `filesystem` permission to `~/.var/app` or a
+subfolder of it.
 
 ### finish-args-flatpak-system-folder-access
+### finish-args-flatpak-system-folder-dir-access
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `filesystem` permission to `/var/lib/flatpak`.
+in the manifest has `filesystem` permission to `/var/lib/flatpak` or
+a subfolder of it.
 
 ### finish-args-flatpak-user-folder-access
+### finish-args-flatpak-user-folder-dir-access
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `filesystem` permission to `~/.local/share/flatpak`.
+in the manifest has `filesystem` permission to `~/.local/share/flatpak`
+or a subfolder of it.
 
 ### finish-args-host-tmp-access
 
