@@ -500,7 +500,8 @@ with the extension `.json`, `.yml` or `.yaml` depending on whether it is
 a JSON or YAML file.
 
 The [runtime(s)](https://docs.flatpak.org/en/latest/basic-concepts.html#runtimes)
-used in the manifest must be hosted on Flathub.
+used in the manifest must be hosted on Flathub and must be the latest
+version at that time of submission.
 
 ### flathub.json
 
