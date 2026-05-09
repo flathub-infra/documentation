@@ -148,6 +148,15 @@ maintainability, and be distributed in a verifiable manner. Open source
 and source-available projects must follow established conventions of
 their respective ecosystem.
 
+### Insufficient development history
+
+Submissions must demonstrate a meaningful history of development or existence,
+evidence of real-world use and a clear commitment to ongoing maintenance. For
+source-available projects, this includes a sustained commit history and
+standard release practices such as tagged versions. Applications that have
+only existed for a very short period of time will generally not be accepted.
+Exceptions may be granted on a case by case basis.
+
 ### Extensions or BaseApps
 
 Flatpak extensions that add support for new languages, language
