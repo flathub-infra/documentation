@@ -512,6 +512,105 @@ The [runtime(s)](https://docs.flatpak.org/en/latest/basic-concepts.html#runtimes
 used in the manifest must be hosted on Flathub and must be the latest
 version at that time of submission.
 
+### Flatpak builder Manifest Style Guide
+
+The style guide ensures manifests are readable, maintainable and has
+a logical meaning and flow.
+
+#### JSON manifest style
+
+* Must be valid JSON per RFC 7159. Non-standard features such as comments
+  should be used in `"//":` or `"x-comment":` keys or consider YAML
+  manifests.
+* Indentation must be 4 tabs with LF line endings.
+* Encoding must be UTF-8.
+* Files must have a trailing newline.
+* Double quotes must be used for all keys and string values.
+* Trailing commas are not allowed.
+
+#### YAML manifest style
+
+* Must be [valid YAML](https://yaml.org/spec/1.2.2/).
+* Indentation must be 2 spaces with LF line endings.
+* Encoding must be UTF-8.
+* Files must have a trailing newline.
+* Child elements must always be indented.
+* Blank lines should be inserted between modules.
+* Values must not be vertically aligned.
+* List items must be indented consistently.
+* Strings should remain unquoted unless quoting is required.
+* Values must not be aligned.
+
+#### Logical ordering of keys
+
+Manifest properties must be ordered logically and not alphabetically.
+
+```text
+* id or app-id
+* runtime
+* runtime-version
+* sdk
+* branch or default-branch
+* build-runtime or build-extension
+* separate-locales
+* appstream-compose
+* command
+* base
+* base-version
+* base-extensions
+* inherit-extensions
+* sdk-extensions
+* inherit-sdk-extensions
+* platform-extensions
+* add-extensions
+* add-build-extensions
+* rename-desktop-file
+* rename-appdata-file
+* rename-mime-file
+* rename-mime-icons
+* rename-icon
+* copy-icon
+* finish-args
+* cleanup
+* cleanup-commands
+* build-options
+* modules
+  * name
+  * buildsystem
+  * build-options
+  * make-args
+  * make-install-args
+  * rm-configure
+  * no-autogen
+  * no-parallel-make
+  * subdir
+  * builddir
+  * run-tests
+  * license-files
+  * only-arches or skip-arches
+  * config-opts or build-commands
+  * sources
+    * type
+    * url or path or paths or commands or contents
+    * mirror-urls
+    * disable-http-decompression
+    * archive-type
+    * sha or commit or tag or (tag then commit)
+    * size
+    * dest or dest-filename or filename
+    * strip-components or disable-submodules or disable-lfs or disable-shallow-clone
+    * only-arches or skip-arches
+    * x-checker-data
+  * post-install
+  * cleanup
+```
+
+#### Creating submanifests
+
+Sub-manifests with sources must only be created when they are generated
+using an external tooling or in an automatic manner, otherwise,
+everything must be in the main manifest.
+
 ### flathub.json
 
 Flathub builds on both `x86_64` and `aarch64` by default. If the
