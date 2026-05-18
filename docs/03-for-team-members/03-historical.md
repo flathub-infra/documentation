@@ -1,5 +1,7 @@
 # Historical documents
 
+These were migrated from the [wiki](https://github.com/flathub/flathub/wiki).
+
 ## Launch TODO
 
 Legal
@@ -41,8 +43,6 @@ Initial set of goals for the initial Flathub implementation, as agreed on 21 Mar
 * Build status and logs (could be Travis)
 
 ## Historical minutes
-
-These were migrated from the [wiki](https://github.com/flathub/flathub/wiki).
 
 ### Minutes, 2017 03 21
 
