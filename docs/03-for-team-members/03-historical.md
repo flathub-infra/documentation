@@ -20,7 +20,7 @@ Apps/Runtimes
 * Include KDE runtime
 * Include current "extra-data" apps - Skype, Spotify, etc
 
-### v1 specification
+## v1 specification
 
 Initial set of goals for the initial Flathub implementation, as agreed on 21 March:
 
