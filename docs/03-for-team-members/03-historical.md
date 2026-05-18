@@ -1,8 +1,24 @@
 # Historical documents
 
-## Historical minutes
+## Launch TODO
 
-These were migrated from the [wiki](https://github.com/flathub/flathub/wiki).
+Legal
+
+* Contributor/uploader agreement and end-user terms of use
+    * Initial queries sent to GNOME legal counsel by ramcq/nmcgovern, 2017-06-05
+
+Infrastructure
+
+* Raise funding for dedicated server and order it
+* Migrate existing repo/master/frontend VMs to new server
+* Set up GPG signing subkey on Yubikey NEO
+* Set up repo mirrors
+* Set up host backups
+
+Apps/Runtimes
+
+* Include KDE runtime
+* Include current "extra-data" apps - Skype, Spotify, etc
 
 ### v1 specification
 
@@ -23,6 +39,10 @@ Initial set of goals for the initial Flathub implementation, as agreed on 21 Mar
 * Contributor agreement for uploaders to carry liability for what they upload
 * Disclaimer that Flathub has no obligation to distribute anything
 * Build status and logs (could be Travis)
+
+## Historical minutes
+
+These were migrated from the [wiki](https://github.com/flathub/flathub/wiki).
 
 ### Minutes, 2017 03 21
 
