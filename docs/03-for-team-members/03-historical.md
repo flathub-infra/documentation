@@ -713,3 +713,51 @@ Action items
 * [Michael] Blog to the Ubuntu community recruiting a package maitainer for flatpak package with a focus on SRU: TODO
 * [Patrick] Document contributor workflow for the new web app: TODO
 * [Michael] Ask Indonesia ambassadors about a local host for a flathub package proxy: TODO
+
+## Setting up a buildbot build machine
+
+Here are some instructions for how to set up a flathub build machine.
+
+First you need to get assigned a worker name and a password for that worker. Ask in #flatpak about this.
+
+Then you need an OS with a recent enough flatpak installed. The current intel build machines use CentOS7, which will be used as an example here. Make sure that the clocks and timezones are set up correctly. `systemctl enable ntpd` should be enough to get this right.
+
+New flatpak builds are available for CentOS [here](https://copr.fedorainfracloud.org/coprs/amigadave/flatpak-epel7/repo/epel-7/amigadave-flatpak-epel7-epel-7.repo)
+
+You also need a somewhat recent version of libappstream-glib that has support for screenshot mirroring. A centos copr for this is [here](https://copr.fedorainfracloud.org/coprs/alexl/appstream-epel7/repo/epel-7/alexl-appstream-epel7-epel-7.repo)
+
+Then you need to install the basic buildbot and flatpak build dependencies:
+`yum install python-virtualenv gcc flatpak-builder ostree git bzr elfutils libappstream-glib`
+
+We also need a newer git:
+`yum install centos-release-scl; yum install rh-git29`
+
+Then create a user for the builder ("builder" in the examples below) and allocate a directory with space for the builds (/mnt/builder in the examples).
+
+Now you need to set up a buildbot worker. We use virtualenv for this:
+
+```
+cd /mnt/builder
+virtualenv --no-site-packages sandbox
+source sandbox/bin/activate
+pip install --upgrade pip
+pip install buildbot-worker
+buildbot-worker create-worker worker hub.flathub.org $BUILDERNAME $BUILDERPASSWORD
+```
+
+After this you will have a worker setup in the `worker` directory. You can add personal info to the `worker/info/host` and `worker/info/admin` files. The worker should now be good enough to start. However, it is prefered to run this as a service. Here is an example systemd service file:
+
+```
+[Unit]
+Description=BuildBot worker service
+After=network.target
+
+[Service]
+User=builder
+Group=builder
+WorkingDirectory=/mnt/builder/worker
+ExecStart=/mnt/builder/sandbox/bin/buildbot-worker start --nodaemon
+Environment=PATH=/opt/rh/rh-git29/root/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+Environment=PERL5LIB=/opt/rh/rh-git29/root/usr/share/perl5/vendor_perl
+Environment=LD_LIBRARY_PATH=/opt/rh/httpd24/root/usr/lib64
+```
