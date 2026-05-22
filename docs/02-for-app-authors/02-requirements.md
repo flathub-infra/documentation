@@ -323,6 +323,14 @@ in an app. If the extension point is defined in an app, it must use
 the app's ID as a prefix. They are exempt from the
 [domain control rules](/docs/for-app-authors/requirements#control-over-domain-or-repository).
 
+BaseApps and Extensions must be built against a runtime that provides
+a stable ABI and performs ABI checks as part of their releases.
+
+BaseApps and Extensions must themselves maintain a stable ABI in a
+given branch and must not depend or use any private ABI from the
+runtime, for their contents. Certain things such as extensions
+providing themes may be exempt from this rule.
+
 ## Renaming Flatpak ID
 
 [Flatpak ID renames](/docs/for-app-authors/maintenance#renaming-the-flatpak-id)
