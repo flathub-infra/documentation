@@ -589,6 +589,8 @@ Manifest properties must be ordered logically and not alphabetically.
   * license-files
   * only-arches or skip-arches
   * config-opts or build-commands
+  * post-install
+  * cleanup
   * sources
     * type
     * url or path or paths or commands or contents
@@ -601,8 +603,6 @@ Manifest properties must be ordered logically and not alphabetically.
     * strip-components or disable-submodules or disable-lfs or disable-shallow-clone
     * only-arches or skip-arches
     * x-checker-data
-  * post-install
-  * cleanup
 ```
 
 #### Creating submanifests
