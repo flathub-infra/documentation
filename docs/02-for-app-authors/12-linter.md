@@ -50,6 +50,13 @@ remote and `beta` if it is for the Flathub `beta` remote.
 }
 ```
 
+## Exception policies
+
+- Certain exceptions that enable breaking out of the Flatpak sandbox
+  including but not limited to home, host, flatpak-spawn, arbitrary
+  bus name access will not be granted if there are signs of LLM usage
+  in the software or in the exception PR.
+
 ### Check currently published exceptions
 
 You can check the current set of published exceptions for an application
