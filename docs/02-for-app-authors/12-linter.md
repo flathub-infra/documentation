@@ -52,6 +52,13 @@ remote and `beta` if it is for the Flathub `beta` remote.
 
 ## Exception policies
 
+Exceptions should always be treated as a temporary measure rather
+than a permanent solution. If the linter produces incorrect or
+misleading errors that require an exception, please report an issue.
+Otherwise, applications should aim to replace exceptions with proper
+solutions as they become available in Flatpak, XDG standards, XDG
+portals, or their frameworks and dependencies.
+
 - Certain exceptions that enable breaking out of the Flatpak sandbox
   including but not limited to home, host, flatpak-spawn, arbitrary
   bus name access will not be granted if there are signs of LLM usage
