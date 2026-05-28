@@ -183,6 +183,12 @@ removed from the store.
 
 ### Generative AI policy
 
+This policy applies to both the application being submitted to Flathub and the
+Flathub submission itself, including the manifest, metadata, patches, build
+scripts, and pull request. For the purpose of this policy, applications include
+BaseApps, extensions, and any other artifacts that can be produced by
+flatpak-builder.
+
 Submission pull requests must not be generated, opened, or automated
 using AI tools or agents. Please also do not request review from any AI
 tools in the submission PR. Automated Copilot reviews on GitHub can be
@@ -190,20 +196,18 @@ disabled by the submitter by going [here](https://github.com/settings/copilot/co
 and changing `Repository access` to exclude the repo or disabling the
 global "Automatic Copilot code review" found [here](https://github.com/settings/copilot/features).
 
-Submissions or changes where most of the code is written by or using AI
-without any meaningful human input, review, justification or moderation
-of the code are not allowed.
+Applications containing AI-generated or AI-assisted code, documentation, or
+other content are not allowed.
 
-Submissions or changes having low-quality AI-generated or AI-assisted
-code are not allowed.
-
-Submissions or changes containing copyrighted, license-incompatible, or
+Applications or changes containing copyrighted, license-incompatible, or
 ethically questionable code are not allowed.
 
 These submissions can be rejected without any further review.
 
 Repeatedly violating these policies may result in a permanent ban from
 future submissions and activities.
+
+Exceptions may be granted for mature, well-maintained projects.
 
 ## Application ID
 
