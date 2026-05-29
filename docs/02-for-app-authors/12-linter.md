@@ -59,6 +59,9 @@ Otherwise, applications should aim to replace exceptions with proper
 solutions as they become available in Flatpak, XDG standards, XDG
 portals, or their frameworks and dependencies.
 
+Please do not use LLMs in any way to handle exceptions PRs. The
+exception can be permanently denied in that case.
+
 - Certain exceptions that enable breaking out of the Flatpak sandbox
   including but not limited to home, host, flatpak-spawn, arbitrary
   bus name access will not be granted if there are signs of LLM usage
