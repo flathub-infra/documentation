@@ -115,6 +115,14 @@ const config = {
             from: "/publish",
             to: "/docs/for-app-authors/submission",
           },
+          {
+            from: "/docs/for-app-authors/external-data-checker",
+            to: "/docs/for-app-authors/maintenance",
+          },
+          {
+            from: "/docs/for-app-authors/updates",
+            to: "/docs/for-app-authors/maintenance",
+          },
         ],
       },
     ],

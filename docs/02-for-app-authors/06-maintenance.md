@@ -45,7 +45,7 @@ Current and prospective maintainers on Flathub are expected to:
 - Understand the Flathub repository layout and branch structure as
   discussed below.
 
-- Follow the established [update workflow](/docs/for-app-authors/updates#creating-updates)
+- Follow the established [update workflow](/docs/for-app-authors/maintenance#creating-updates)
   which involves submitting updates and other changes via pull requests,
   and merging them only after successful builds and appropriate testing.
 
@@ -106,11 +106,244 @@ requests and not push directly to them or delete the branches.
 
 Other git branch names are free to use.
 
-### Creating new git branches for publishing
+## Creating updates
+
+Flathub builds and publishes app updates after a change is made to an
+app's manifest.
+
+Updating an application on Flathub (unless it is a direct-upload) is
+done by submitting a pull request to the application repository on
+GitHub.
+
+Once the pull request is submitted, a [test build](/docs/for-app-authors/maintenance#test-builds)
+will be triggered against it and once that is successful a comment
+with a link to install the test build will be posted.
+
+The maintainers should install the test build and see if it is
+working and meets expectations.
+
+Once it is ready maintainers can merge the pull request which will
+automatically create an [official build](/docs/for-app-authors/maintenance#official-builds).
+
+The official build, if successful, will be directly published to
+Flathub. The exact time to publish can vary depending on the publish
+queue.
+
+## Automating updates
+
+Flathub runs a global [External Data Checker action](https://github.com/flathub-infra/flatpak-external-data-checker/)
+for all repositories in the GitHub organisation every two hours. This
+works only for the default branch of the GitHub repository.
+
+If the manifest has `x-checker-data` defined for sources and they
+have an update, the action will submit a PR with the update which
+can be similarly tested and merged by maintainers as explained above.
+
+### Automatically merging updates
+
+:::danger
+Automatically merging PRs ensures each update builds, but does not
+guarantee the app will launch correctly. It is highly recommended to
+avoid automatically merging updates to ensure each build that is going
+to be published is tested by the maintainer.
+:::
+
+:::important
+Automatically merging PRs or having a high volume of updates
+significantly puts strain on Flathub infrastructure, so it is
+restricted and granted only when necessary. Please see the
+[requirements and process](/docs/for-app-authors/maintenance#automerge-request)
+below.
+:::
+
+Automerge can be done by enabling [GitHub automerge](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/automatically-merging-a-pull-request) or adding `"automerge-flathubbot-prs": true` true to `flathub.json`.
+
+```json title="flathub.json"
+{
+  "automerge-flathubbot-prs": true
+}
+```
+
+The former can be paired with a custom GitHub action to automatically
+merge PRs or can be used by a maintainer to set a PR to automatically
+merge manually once CI passes. The benefit is the maintainer does not
+need to wait and be around for CI status to pass.
+
+The latter, delegates the automerge to the global External
+data checker action and the PR will be automatically merged in the
+next run of the action (which is usually every 1-2 hours).
+
+`automerge-flathubbot-prs` requires a [linter exception](/docs/for-app-authors/linter#exceptions)
+for `flathub-json-automerge-enabled`.
+
+### Automerge request
+
+Both GitHub automerge and `automerge-flathubbot-prs` is only granted
+if the volume of updates is not execissive and/or the application in
+question is [verified](/docs/for-app-authors/verification).
+The only exception granted here is if an application is using a
+rotating [extra-data source](https://docs.flatpak.org/en/latest/module-sources.html#extra-data).
+
+Please open an issue in the [flathub repository](https://github.com/flathub/flathub/issues)
+if GitHub automerge is needed and please open an [linter exception](/docs/for-app-authors/linter#exceptions)
+for `flathub-json-automerge-enabled` if `automerge-flathubbot-prs` is
+needed.
+
+### Custom workflows
+
+Maintainers can also use custom GitHub workflows to create update pull
+requests for their application. Some exaples are given below.
+
+Please ensure that custom workflows are restricted to reasonable
+intervals for example once a week and not hourly or daily.
+
+If using a custom workflow, please ensure to opt-out of the global
+External data checker action.
+
+```json title="flathub.json"
+{
+  "disable-external-data-checker": true
+}
+```
+
+#### Custom workflow to run external-data-checker on multiple branches
+
+```yaml title=".github/workflows/update.yaml"
+
+name: Check for updates
+on:
+  schedule:
+    - cron: '0 14 * * 1' # Run once a week, on Monday, at 14:00
+  workflow_dispatch: {}
+jobs:
+  flatpak-external-data-checker:
+    runs-on: ubuntu-latest
+    if: github.repository_owner == 'flathub'
+    strategy:
+      matrix:
+        branch: [ branch/23.08, branch/24.08, beta ]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ matrix.branch }}
+      - uses: docker://ghcr.io/flathub/flatpak-external-data-checker:latest
+        env:
+          GIT_AUTHOR_NAME: Flatpak External Data Checker
+          GIT_COMMITTER_NAME: Flatpak External Data Checker
+          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          args: --update --never-fork <MANIFEST FILENAME>
+```
+
+#### Custom workflow with custom update script and setting GitHub automerge
+
+```yaml title=".github/workflows/update.yaml"
+name: Check for updates
+
+on:
+  schedule:
+    - cron: '0 5 * * 0'
+  workflow_dispatch: {}
+
+jobs:
+  flatpak-external-data-checker:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      pull-requests: write
+
+    if: github.repository_owner == 'flathub'
+
+    strategy:
+      matrix:
+        branch:
+          - branch/24.08
+          - branch/25.08
+
+    steps:
+      # actions/checkout v4.2.2
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ matrix.branch }}
+
+      - uses: docker://ghcr.io/flathub-infra/flatpak-external-data-checker:latest@sha256:ea7b3bf6c05ff4536b5450a1ef451d157be544b95fb6abf56a32a80da4819526
+        with:
+          args: --update --edit-only com.example.bar.yml
+
+      - name: Custom update script
+        run: |
+          python .github/scripts/update.py
+
+      - name: Create pull request
+        if: ${{ success() }}
+        id: create-pr
+        # peter-evans/create-pull-request v7.0.8
+        uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e
+        with:
+          branch-suffix: random
+          commit-message: Update modules
+          title: Update modules
+          body: Update modules
+          delete-branch: true
+          sign-commits: true
+          committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+
+      - name: Pause for a while
+        if: ${{ steps.create-pr.outputs.pull-request-number }}
+        run: sleep 180
+
+      - name: Set auto-merge
+        if: ${{ steps.create-pr.outputs.pull-request-number }}
+        run: gh pr merge --merge --auto ${{ steps.create-pr.outputs.pull-request-number }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+```
+
+#### Custom triggered from an external repository
+
+A custom workflow in the Flathub GitHub repository can be triggered
+from an external repository too. Moreover PRs can be sent from
+an external repository to the Flathub repository. In both cases
+the GitHub token used must have `write` access to both the Flathub
+repository and the external repository. The maintainer can use their
+personal token for this.
+
+This is useful to create a Flathub update PR immediately on upstream
+tag creation etc.
+
+```
+- name: Trigger workflow in flathub-infra/actions-images
+# 4.0.1
+uses: peter-evans/repository-dispatch@28959ce8df70de7be546dd1250a005dd32156697
+with:
+  repository: flathub/com.example.foo
+  event-type: trigger-workflow
+  token: ${{ secrets.TRIGGER_WORKFLOW_TOKEN }}
+```
+
+The above will trigger a workflow from an external repository in to the
+Flathub repository which has `trigger-workflow` dispatch event defined.
+
+```yaml
+on:
+  repository_dispatch:
+    types: [trigger-workflow]
+```
+
+Similarly, `peter-evans/create-pull-request` can be used to send a PR
+from an external repo to the Flathub repository with an update.
+
+## Creating new git branches for publishing
 
 The process is described below.
 
-#### Creating the beta branch
+### Creating the beta branch
 
 :::important
 Please make a pull request first targeting the current default git
@@ -154,7 +387,7 @@ Once pushed, the branch protections on the `beta` branch will be active
 and any future change to this branch will have to go through the usual
 pull request workflow.
 
-#### Creating new branches for extensions or baseapps
+### Creating new branches for extensions or baseapps
 
 :::important
 Please make a pull request first targeting the current default git
