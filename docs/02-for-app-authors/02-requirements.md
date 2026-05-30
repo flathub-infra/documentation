@@ -53,11 +53,9 @@ Submissions that offer very minimal functionality consisting of simple
 scripts, single or simple sources and/or exists as a thin wrapper or
 launcher around other tools will not be accepted.
 
-Simple web wrapper applications that embed a web engine and load a
-remote website without adding significant functionality or meaningful
-desktop integration will not be accepted.
-
-Exceptions can be given on a case by case basis.
+Simple web wrapper applications that embed local or remote content in
+a web engine without providing significant polish, functionality, or
+meaningful desktop integration will not be accepted.
 
 #### Extensions
 
@@ -163,6 +161,14 @@ Flatpak extensions that add support for new languages, language
 specific tooling etc. or BaseApps will need a clear use case defined
 and prospective users to be accepted.
 
+BaseApps and Extensions must be built against a runtime that provides
+a stable ABI and performs ABI checks as part of their releases.
+
+BaseApps and Extensions must themselves maintain a stable ABI in a
+given branch and must not depend or use any private ABI from the
+runtime, for their contents. Certain things such as extensions
+providing themes may be exempt from this rule.
+
 ### Trust and history
 
 Submission decisions may take a submitter's prior conduct into account.
@@ -183,11 +189,11 @@ removed from the store.
 
 ### Generative AI policy
 
-This policy applies to both the application being submitted to Flathub and the
-Flathub submission itself, including the manifest, metadata, patches, build
-scripts, and pull request. For the purpose of this policy, applications include
-BaseApps, extensions, and any other artifacts that can be produced by
-flatpak-builder.
+This policy applies to both the application being submitted to Flathub
+and the Flathub submission itself, including the manifest, metadata,
+patches, build scripts, and pull request. For the purpose of this
+policy, applications include BaseApps, extensions, and any other
+artifacts that can be produced by flatpak-builder.
 
 Submission pull requests must not be generated, opened, or automated
 using AI tools or agents. Please also do not request review from any AI
@@ -196,8 +202,8 @@ disabled by the submitter by going [here](https://github.com/settings/copilot/co
 and changing `Repository access` to exclude the repo or disabling the
 global "Automatic Copilot code review" found [here](https://github.com/settings/copilot/features).
 
-Applications containing AI-generated or AI-assisted code, documentation, or
-other content are not allowed.
+Applications containing AI-generated or AI-assisted code,
+documentation, or other content are not allowed.
 
 Applications or changes containing copyrighted, license-incompatible, or
 ethically questionable code are not allowed.
@@ -326,14 +332,6 @@ defined in one of the [runtimes](/docs/for-app-authors/runtimes) or
 in an app. If the extension point is defined in an app, it must use
 the app's ID as a prefix. They are exempt from the
 [domain control rules](/docs/for-app-authors/requirements#control-over-domain-or-repository).
-
-BaseApps and Extensions must be built against a runtime that provides
-a stable ABI and performs ABI checks as part of their releases.
-
-BaseApps and Extensions must themselves maintain a stable ABI in a
-given branch and must not depend or use any private ABI from the
-runtime, for their contents. Certain things such as extensions
-providing themes may be exempt from this rule.
 
 ## Renaming Flatpak ID
 
