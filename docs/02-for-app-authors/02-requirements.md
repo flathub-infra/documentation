@@ -504,7 +504,7 @@ New submissions will not be accepted for the Flathub beta repostitory.
 ## Required files
 
 :::important
-Under no circumstances should source code nor build artificats be
+Under no circumstances should source code nor build artifacts be
 included in the submission. Flathub is not intended to host neither
 application source code nor binaries, including that of any dependencies.
 :::
