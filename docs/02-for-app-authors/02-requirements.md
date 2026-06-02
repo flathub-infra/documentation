@@ -17,13 +17,19 @@ graphical desktop applications that seamlessly integrate with the Linux
 desktop environment and enhance the user experience.
 
 This defines specific policies for submission and inclusion, and applies
-to all submissions that are (were) submitted or included after the policy
-was documented, for as long as they remain on Flathub. Submissions are
-accepted at the discretion of the reviewers and are liable to be removed
-even after they are included, if it is found to violate any policy. They
-must also comply with [Flathub's Terms Of Service](https://flathub.org/terms-and-conditions).
-These may evolve over time, and exceptions may be granted in specific
-cases.
+to all submissions that are (were) submitted or included after the
+policy was documented, for as long as they remain on Flathub.
+
+Submissions are accepted at the discretion of the reviewers and are
+liable to be removed even after they are included, if it is found to
+violate any policy. They must also comply with
+[Flathub's Terms Of Service](https://flathub.org/terms-and-conditions).
+
+These policies may evolve over time, but new policies will not be
+retroactively applied to submissions predating the introduction of the
+policy.
+
+Exceptions may be granted in at our discretion in specific cases.
 
 :::tip
 If you believe something is violating these policies, please [open an issue](https://github.com/flathub/flathub/issues).
