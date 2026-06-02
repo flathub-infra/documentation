@@ -154,11 +154,13 @@ their respective ecosystem.
 
 ### Insufficient development history
 
-Submissions must demonstrate a meaningful history of development or existence,
-evidence of real-world use and a clear commitment to ongoing maintenance. For
-source-available projects, this includes a sustained commit history and
-standard release practices such as tagged versions. Applications that have
-only existed for a very short period of time will generally not be accepted.
+Submissions must demonstrate a meaningful history of development or
+existence, evidence of real-world use and a clear commitment to
+ongoing maintenance. For source-available projects, this includes a
+sustained commit history and standard release practices such as tagged
+versions. Applications that have only existed for a very short period
+of time will generally not be accepted.
+
 Exceptions may be granted on a case by case basis.
 
 ### Extensions or BaseApps
@@ -181,8 +183,8 @@ Submission decisions may take a submitter's prior conduct into account.
 
 A pattern of policy violations, uncooperative behaviour, multiple
 abandoned or poorly maintained apps, misleading practices, or failure to
-address security and compliance issues may result in rejection of current
-or new submissions.
+address security and compliance issues may result in rejection of
+current or new submissions.
 
 ### Misleading, malicious or illegal submissions
 
@@ -297,8 +299,8 @@ The following rules must be followed when creating application IDs.
 
 A _repository URL_ (or project URL) is calculated for code hosting IDs
 by using the domain and by taking the last component of the ID as-is
-(except when the last component starts with a leading underscore and then
-a digit, in which case following Appstream conventions, the leading
+(except when the last component starts with a leading underscore and
+then a digit, in which case following Appstream conventions, the leading
 underscore is stripped from that component).
 
 Note, that some code hosting platforms like GitLab may have
