@@ -126,14 +126,6 @@ const config = {
         ],
       },
     ],
-    [
-      "@signalwire/docusaurus-plugin-llms-txt",
-      {
-        content: {
-          enableLlmsFullTxt: true,
-        },
-      },
-    ],
   ],
 
   themeConfig:
