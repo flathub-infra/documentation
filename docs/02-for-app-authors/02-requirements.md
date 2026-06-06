@@ -200,21 +200,26 @@ removed from the store.
 This policy applies to both the application being submitted to Flathub
 and the Flathub submission itself, including the manifest, metadata,
 patches, build scripts, and pull request. For the purpose of this
-policy, applications include BaseApps, extensions, and any other
-artifacts that can be produced by flatpak-builder.
+policy, "applications" include Flatpak apps, BaseApps, extensions,
+runtimes and any other artifacts that can be produced by
+flatpak-builder.
 
 Submission pull requests must not be generated, opened, or automated
-using AI tools or agents. Please also do not request review from any AI
-tools in the submission PR. Automated Copilot reviews on GitHub can be
-disabled by the submitter by going [here](https://github.com/settings/copilot/coding_agent)
-and changing `Repository access` to exclude the repo or disabling the
-global "Automatic Copilot code review" found [here](https://github.com/settings/copilot/features).
+using AI tools or agents. Review comments, reply, descriptions also
+must not be be LLM-generated
+
+Please also do not request review from any AI tools in the submission
+PR. Automated Copilot reviews on GitHub can be disabled by the
+submitter by going to [Copilot settings](https://github.com/settings/copilot/coding_agent)
+and changing `Repository access` to exclude the `flathub` repository or
+disabling the global `Automatic Copilot code review`
+[setting](https://github.com/settings/copilot/features).
 
 Applications containing AI-generated or AI-assisted code,
-documentation, or other content are not allowed.
+documentation, or any other content are not allowed.
 
-Applications or changes containing copyrighted, license-incompatible, or
-ethically questionable code are not allowed.
+Applications or changes containing unauthorised copyrighted material,
+license-incompatible, or ethically questionable code are not allowed.
 
 These submissions can be rejected without any further review.
 
