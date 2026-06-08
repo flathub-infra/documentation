@@ -1127,20 +1127,6 @@ in the manifest has `--socket=ssh-auth`.
 
 This socket allows performing privileged operations with SSH on host.
 
-### finish-args-has-dev-input
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `--device=input`.
-
-### finish-args-has-dev-usb
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `--device=usb`.
-
 ### finish-args-has-nosocket-socket_name
 
 Criteria: This exception is never granted.
