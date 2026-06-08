@@ -66,6 +66,9 @@ exception can be permanently denied in that case.
   including but not limited to home, host, flatpak-spawn, arbitrary
   bus name access will not be granted if there are signs of LLM usage
   in the software or in the exception PR.
+- Certain exceptions will not be granted if the requested permission or
+  the exception is only needed on a specific platform, or some narrowly
+  scoped environment.
 
 ### Check currently published exceptions
 
