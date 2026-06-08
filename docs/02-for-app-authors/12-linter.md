@@ -1513,6 +1513,11 @@ in the manifest has some newly introduced Flatpak context metadata
 such as `--device=input` or `--device=usb` but doesn't have
 `--require-version`.
 
+Note. App developers may prefer to use the new [conditional permission](https://docs.flatpak.org/en/latest/sandbox-permissions.html#conditional-permissions)
+syntax introduced in Flatpak 1.18.0 instead of a plain
+`--device=usb, input` to enable backwards compat, once the required
+Flatpak version is available on Flathub build infrastructure.
+
 ### finish-args-insufficient-required-flatpak
 
 Criteria: This exception is never granted.
@@ -1521,6 +1526,11 @@ The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has newly introduced Flatpak context metadata
 such as `--device=input` or `--device=usb` but the specified
 `--require-version` is insufficient. It should be >=1.16.0.
+
+Note. App developers may prefer to use the new [conditional permission](https://docs.flatpak.org/en/latest/sandbox-permissions.html#conditional-permissions)
+syntax introduced in Flatpak 1.18.0 instead of a plain
+`--device=usb, input` to enable backwards compat, once the required
+Flatpak version is available on Flathub build infrastructure.
 
 ### flatpak-repo-too-large
 
