@@ -10,6 +10,9 @@ Each application is evaluated on a case-by-case basis and if you are
 unsure whether it fits the guidelines, please feel free to ask via
 [GitHub issues](https://github.com/flathub/flathub/issues) or in the
 [Flathub Matrix room](https://matrix.to/#/#flathub:matrix.org).
+
+If you believe something is violating these policies, please
+[open an issue](https://github.com/flathub/flathub/issues).
 :::
 
 Flathub aims to provide a curated collection of high-quality, sandboxed
@@ -19,6 +22,10 @@ desktop environment and enhance the user experience.
 This defines specific policies for submission and inclusion, and applies
 to all submissions that are (were) submitted or included after the
 policy was documented, for as long as they remain on Flathub.
+
+Any future update or modification made after a submission has been
+accepted that would have affected the review outcome may trigger a
+re-review or other appropriate action.
 
 Submissions are accepted at the discretion of the reviewers and are
 liable to be removed even after they are included, if it is found to
@@ -30,10 +37,6 @@ retroactively applied to submissions predating the introduction of the
 policy.
 
 Exceptions may be granted in at our discretion in specific cases.
-
-:::tip
-If you believe something is violating these policies, please [open an issue](https://github.com/flathub/flathub/issues).
-:::
 
 ### Impermissible submissions
 
