@@ -27,8 +27,11 @@ While there is no strict requirement, members are generally expected to
 remain active in their areas of responsibility, stay up to date with
 Flathub policies and announcements, and engage with the community.
 
-Please note that memberships are entirely voluntary and there are not
-any benefits or compensations available currently.
+Please note that membership is entirely voluntary and there are no
+benefits, incentives, or compensations associated with it currently.
+Membership is intended for trusted individuals who are willing to
+remain active and engaged with the project. If you wish to
+contribute, please refer to the contribution areas below.
 
 The criteria described here may change in the future without prior
 notice, but such changes will generally not be applied retroactively to
@@ -38,6 +41,120 @@ existing members.
 Please ensure that at least one approval is obtained before making any
 changes to the policies defined here.
 :::
+
+## Contribution Areas
+
+Contributions of all kind is very welcome, and there are no requirements
+to participate. Some contribution areas are mentioned below.
+
+### Packaging and app maintenance
+
+:::tip
+Please see the [maintenance docs](/docs/for-app-authors/maintenance)
+:::
+
+The collection of applications, extensions, and BaseApps on Flathub is
+largely maintained by a community of volunteer packagers and
+upstream developers. If you are a user of an application or have
+experience with packaging, distributions, or software maintenance, you
+can contribute by helping maintain existing applications or by adopting
+unmaintained ones.
+
+If you are a user you can consider installing [test builds](/docs/for-app-authors/maintenance#test-builds)
+and providing feedback to the maintainer before merging.
+
+If a maintainer has limited time or bandwidth to review and submit
+updates, you can consider contributing by opening pull requests to the
+application's repository. Useful contributions may include updating
+the application version, upgrading dependencies and runtimes, fixing
+build failures, and addressing other packaging or maintenance issues.
+
+For (semi-)actively maintained applications, please contact the
+current maintainer first to determine whether they would like help.
+
+If an application is unmaintained, or if the existing maintainer has
+not responded to or reviewed your proposed changes after a reasonable
+period of time, you may open an [issue](https://github.com/flathub/flathub/issues)
+requesting an admin to review. If the proposed changes are approved,
+you may be granted maintainer access to the application.
+
+The same process can be followed to [create new branches](/docs/for-app-authors/maintenance#creating-new-branches-for-extensions-or-baseapps)
+of extensions or BaseApps which are often a requirement for an app to
+migrate to a newer runtime.
+
+You can consider picking up or submitting in the [shared-modules repo](https://github.com/flathub/shared-modules).
+
+### Localisation
+
+If you are an active translator, you can contribute by helping to
+[translate](https://hosted.weblate.org/engage/flathub/) the main Flathub
+website to your language.
+
+### Documentation
+
+If you are a user or an existing maintainer on Flathub, you can
+contribute by improving the [user](/docs/category/for-users) and
+[developer](/docs/category/for-app-authors) documentation on Flathub.
+
+### Community support
+
+You can contribute to the community by helping other users, answering
+questions, providing feedback, and sharing tips and tutorials on
+[Flathub Discourse](https://discourse.flathub.org/). You can also
+provide community support through the
+[Matrix channel](https://matrix.to/#/#flathub:matrix.org).
+
+### Submission reviews
+
+If you are familiar with Flathub's submission requirements and review
+process, you can help review submissions and ensure they comply with
+the [requirements](/docs/for-app-authors/requirements).
+
+### Quality guideline reviews
+
+If you have a design or UI/UX background, you can help developers by
+answering their [Quality Guideline](/docs/for-app-authors/metainfo-guidelines/quality-guidelines)
+[questions](https://github.com/flathub/flathub/issues?q=is%3Aissue%20state%3Aopen%20label%3Aquality-guidelines).
+
+These contributions often involve reviewing or creating application
+icons, providing certain design feedback, or helping improve
+[application metadata](/docs/for-app-authors/metainfo-guidelines).
+
+### Code contribution
+
+The entire set of tooling used to run Flathub is available as open
+source in the [flathub-infra organisation](https://github.com/flathub-infra).
+
+You can contribute by opening a bug report, tackling an open issue or
+fixing a bug you encountered. Some contributions to these projects may
+require familiarity with Flatpak, its associated tooling, and various
+Flathub workflows and processes.
+
+A list of relevant components is provided below.
+
+* [Flathub website frontend](https://github.com/flathub-infra/website/tree/main/frontend)
+  (React, Typescript, NextJS)
+* [Flathub website backend](https://github.com/flathub-infra/website/tree/main/backend)
+  (Python, FastAPI)
+* [Flathub build dispatcher](https://github.com/flathub-infra/vorarbeiter)
+  (Python, FastAPI)
+* [Flathub build linter](https://github.com/flathub-infra/flatpak-builder-lint)
+  (Python)
+* [Flatpak external data checker](https://github.com/flathub-infra/flatpak-external-data-checker)
+  (Python)
+
+### Other contributions
+
+Flathub also benefits greatly from contributions to upstream projects.
+Some relevant projects are listed below.
+
+* [XDG desktop portals](https://flatpak.github.io/xdg-desktop-portal/docs/for-contributors.html)
+* [Flatpak](https://github.com/flatpak/flatpak/blob/main/CONTRIBUTING.md)
+* [Flatpak Builder](https://github.com/flatpak/flatpak-builder/)
+* [Flatpak runtimes](/docs/for-app-authors/runtimes#currently-hosted-runtimes)
+* [Flatpak builder tools](https://github.com/flatpak/flatpak-builder-tools)
+* [Flatpak GitHub actions](https://github.com/flatpak/flatpak-github-actions)
+* [Flatpak documentation](https://docs.flatpak.org/en/latest/)
 
 ## Team Membership Process
 

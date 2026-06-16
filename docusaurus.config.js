@@ -123,6 +123,10 @@ const config = {
             from: "/docs/for-app-authors/updates",
             to: "/docs/for-app-authors/maintenance",
           },
+          {
+            from: "/contribute",
+            to: "/docs/for-team-members/becoming-a-team-member",
+          },
         ],
       },
     ],
