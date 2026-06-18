@@ -82,7 +82,8 @@ The same process can be followed to [create new branches](/docs/for-app-authors/
 of extensions or BaseApps which are often a requirement for an app to
 migrate to a newer runtime.
 
-You can consider picking up or submitting in the [shared-modules repo](https://github.com/flathub/shared-modules).
+You can consider picking up or submitting a module in the
+[shared-modules repo](https://github.com/flathub/shared-modules).
 
 ### Localisation
 
