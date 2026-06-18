@@ -150,12 +150,30 @@ Flathub also benefits greatly from contributions to upstream projects.
 Some relevant projects are listed below.
 
 * [XDG desktop portals](https://flatpak.github.io/xdg-desktop-portal/docs/for-contributors.html)
+  and its backends provide a collection of standard cross-platform APIs
+  for desktops, toolkits and applications which allows to reduce static
+  sandbox permissions and migrate to secure portal alternatives.
+  Contributions here will enable Flathub apps to reduce their sandbox
+  holes and make the overall app ecosystem more secure.
 * [Flatpak](https://github.com/flatpak/flatpak/blob/main/CONTRIBUTING.md)
-* [Flatpak Builder](https://github.com/flatpak/flatpak-builder/)
+  is the core framework and tool for sandboxing, distributing and
+  running Linux applications across different distributions. Flathub
+  is a Flatpak-only app store.
+* [Flatpak Builder](https://github.com/flatpak/flatpak-builder/) is the
+  tool that automates the process of building Flatpaks from their
+  manifests and managing their dependencies.
 * [Flatpak runtimes](/docs/for-app-authors/runtimes#currently-hosted-runtimes)
+  are shared runtime environments that provide common libraries and
+  the platforms that all Flatpak applications depend and build upon.
 * [Flatpak builder tools](https://github.com/flatpak/flatpak-builder-tools)
+  are a collection of community-contributed scripts and modules that
+  automate common Flatpak packaging tasks.
 * [Flatpak GitHub actions](https://github.com/flatpak/flatpak-github-actions)
-* [Flatpak documentation](https://docs.flatpak.org/en/latest/)
+  is a GitHub action that allows to build and serve Flatpaks using
+  GitHub workflows.
+* [Flatpak documentation](https://docs.flatpak.org/en/latest/) is
+  the official documentation of Flatpak and Flatpak Builder covering
+  sandboxing concepts, application packaging, and various guides.
 
 ## Team Membership Process
 
