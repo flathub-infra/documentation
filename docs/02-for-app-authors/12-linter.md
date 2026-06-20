@@ -69,6 +69,10 @@ exception can be permanently denied in that case.
 - Certain exceptions will not be granted if the requested permission or
   the exception is only needed on a specific platform, or some narrowly
   scoped environment.
+- Exceptions will not be granted if the request is due to a bug in the
+  application. If the issue originates from a component used by the
+  app, it must first be investigated and appropriate issues must be
+  filed before the request can be considered eligible for an exception.
 
 ### Check currently published exceptions
 
@@ -1171,9 +1175,9 @@ in the manifest has `--unshare=subsystem_name`.
 
 ### finish-args-contains-both-x11-and-wayland
 
-Criteria: This exception is only granted if the application crashes
-or fails to launch without both of these permissions and the bug
-cannot be solved (for example proprietary apps etc.).
+Criteria: This exception is only granted if the application crashes,
+fails to launch or is unusable without both of these permissions and
+the issue cannot be solved.
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has both `--socket=x11` and `--socket=wayland`.
