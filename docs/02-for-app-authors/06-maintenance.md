@@ -643,6 +643,117 @@ remote.
 In case you want to step down as a maintainer but wish someone to take
 over maintenance, you can ask in the [tracker issue](https://github.com/flathub/flathub/issues/3693).
 
+## EOL policy
+
+### EOL criteria
+
+An application,on Flathub can be marked as End-of-Life under the
+following conditions:
+
+1. **Upstream development has formally ceased**: This is valid when
+  upstream has formally announced EOL, archived their git repository
+  or removed upstream sources etc.
+
+2. **Upstream development appears abandoned**: This is valid when
+  upstream has not formally announced EOL, but there has been no signs
+  of activity or development for at least 2 years.
+
+3. **Flatpak is unmaintained or abandoned**: This is valid when the
+   Flatpak on Flathub has no maintainers at all or there has been
+   no signs of maintenance activity for at least 2 years.
+
+4. **Persistently behind runtime updates**: This is valid when the
+   Flatpak on Flathub is persistently behind at least 3 runtime
+   updates without no explanation being provided by the maintainers.
+
+   If a proper explanation is provided and there is an interest to
+   migrate to newer runtimes in the future, this crtieria will not be
+   applicable.
+
+5. **Persistent critical functionality issues**: This is valid when the
+   Flatpak on Flathub has major functionality or usability issues that
+   render it unusable or significantly impairs its basic
+   functionality, or when it generates a large number of user
+   complaints and there is no maintainer available to respond to or
+   resolve these issues within a reasonable timeframe.
+
+6. **Failure to comply with Flathub ToS or inclusion policy**: This is
+   valid when the Flatpak on Flathub through an update or change after
+   acceptance is found to be violating [Flathub ToS](https://flathub.org/terms-and-conditions)
+   or [inclusion policy](/docs/for-app-authors/requirements#inclusion-policy)
+   which was present at the time it was accepted.
+
+### EOL process
+
+Except the first and the last case above, before marking a Flatpak as
+EOL, the following process should be followed:
+
+* Reasonable attempts should be made to contact the current Flatpak
+  maintainers and, where possible or applicable, the upstream project.
+
+  This process may be used to confirm the upstream EOL status,
+  determine whether either the upstream project or Flatpak package is
+  still actively maintained, offer assistance to maintainers, or remind
+  them about unresolved critical issues and pending runtime updates.
+
+* A notice period of one month should be provided to allow upstream
+  maintainers or Flatpak maintainers or contributors to respond. This
+  should preferably be done through issues or discourse posts to keep a
+  record but if it is not possible any other contact methods can be
+  used.
+
+* If no response is received within the notice period or there is no one
+  to maintain or solve the issues, the application can be
+  [marked as EOL](/docs/for-app-authors/maintenance#end-of-life).
+
+  After the Flatpak is EOL the corresponding GitHub repository
+  will be archived. In case of BaseApps, extensions or runtimes, the
+  repo can be directly marked as archived and there is no need to mark
+  it as EOL.
+
+In case a Flatpak on Flathub was found to be in violation of
+Flathub ToS or the inclusion policy that were present at the time it
+was accepted, a similar notice as above will be served to the
+maintainers asking them to resolve the issue within the stipulated
+time. If the issue is not resolved within that time, it will be
+marked as EOL and the repository archived to delist it.
+
+If the violation is of high severity such as legal issues or malicious
+activities, the Flatpak can be immediately EOL-ed and the notice may be
+served later.
+
+If the issues are fixed later, the EOL will be removed
+[on request](https://github.com/flathub/flathub/issues) from the
+maintainer.
+
+### Preventing EOL
+
+The Flatpak should not be marked as EOL if an individual volunteers to
+assume maintenance responsibilities and commits to performing the
+necessary updates. If they do not have access to the repo, they can
+be [given maintainer access](/docs/for-app-authors/maintenance#maintainer-access-to-flathub-application-repository)
+after verification.
+
+### Reversing EOL status
+
+EOL status can be reversed if:
+
+* A new maintainer volunteers to take over maintenance of the Flatpak
+
+* Upstream development and Flatpak maintainance resumes.
+
+### EOL policy notes
+
+* If the Flatpak appears unmaintained and is generating a large number
+  of PRs with no human activity on them, certain workflows can be
+  disabled.
+
+* If a Flatpak is eligible to be marked as EOL but there is interest in
+  continuing to maintain it, it should not be marked as EOL or have its
+  GitHub repository archived. Instead, an appropriate indication of its
+  maintenance status may be displayed on the Flathub website to
+  inform users of the situation.
+
 ## Download statistics
 
 Flathub publishes download statistics for every app and runtime. The raw
