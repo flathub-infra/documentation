@@ -38,7 +38,7 @@ jobs:
         run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
 
       - name: Cache yarn
-        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae
+        uses: actions/cache@2c8a9bd7457de244a408f35966fab2fb45fda9c8
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
