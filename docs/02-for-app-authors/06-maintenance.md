@@ -647,7 +647,7 @@ over maintenance, you can ask in the [tracker issue](https://github.com/flathub/
 
 ### EOL criteria
 
-An application,on Flathub can be marked as End-of-Life under the
+An application on Flathub can be marked as End-of-Life under the
 following conditions:
 
 1. **Upstream development has formally ceased**: This is valid when
