@@ -831,6 +831,17 @@ to the new ID so that users can transition smoothly.
 Note that, such a transition might be confusing to users. So the decision
 to change IDs must be carefully planned and done in moderation.
 
+## Non-maintainer actions
+
+The primary collaborators on repositories in the Flathub GitHub
+organisation are the maintainers of the corresponding Flatpak.
+However, Flathub administrators may occasionally perform repository
+maintenance on their behalf, including merging pull requests,
+applying routine changes, or carrying out administrative tasks such
+as appointing new maintainers upon request. Admins will attempt to
+contact the primary maintainers before performing such actions in most
+cases.
+
 ## Getting Help
 
 If anything is not working or there is some behaviour you don’t
