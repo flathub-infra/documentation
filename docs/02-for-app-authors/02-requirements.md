@@ -413,7 +413,12 @@ All content hosted on Flathub must allow legal redistribution, and the
 license must be correctly specified in the app's [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#license).
 
 Non-redistributable sources must use [extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data)
-source type. Any part of the application such as the name or icon must
+source type. Note that if the submission is being opened by the
+upstream authors or developers, there is generally no need to
+use `extra-data` sources as redistribution permissions are implicitly
+granted in this case.
+
+Any part of the application such as the name or icon must
 not violate any trademarks and must be distinct.
 
 License must be correctly declared in the metainfo file and must
