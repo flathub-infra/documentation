@@ -107,10 +107,14 @@ the trade-offs outweigh the benefits of distributing them via Flatpak.
 #### Duplicate submissions
 
 Multiple submissions of the same application (in terms of functionality,
-content, visuals, or user experience) each built with different
-frameworks or toolkits will not be accepted. Multiple submissions of a
-forked app with minimal changes in the fork (in terms of functionality,
-content, visuals, or user experience) will not be accepted.
+content, visuals, or user experience) or multiple submissions where
+each one is built with different frameworks or toolkits will not be
+accepted. Multiple submissions of a forked app with minimal changes in
+the fork
+(in terms of functionality, content, visuals, or user experience) will
+not be accepted. Exceptions can be granted if each version already
+has an established userbase and there is demand from users to have
+multiple versions available.
 
 #### Conflicting submissions
 
