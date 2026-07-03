@@ -696,7 +696,7 @@ the Flatpak manifest.
 
 There is [no network access](/docs/for-app-authors/requirements#no-network-access-during-build)
 during the build process so all dependencies used by the application
-must be supplied in the specified in the manifest as sources
+must be supplied by specifying them in the manifest as sources
 with publicly accessible URLs so that they can be downloaded before
 the build starts.
 
