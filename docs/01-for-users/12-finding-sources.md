@@ -96,7 +96,7 @@ flatpak run --command=cat org.kde.Platform//6.9 /usr/manifest.json
 }
 ```
 
-The Git commit from which the Flatpak originated is mentioned in
+The git commit from which the Flatpak originated is mentioned in
 the OSTree commit subject. It can be found using the
 `flatpak info` or `flatpak remote-info` commands.
 
