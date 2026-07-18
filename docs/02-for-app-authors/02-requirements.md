@@ -759,17 +759,6 @@ Metainfo file is optional for runtimes, extensions and BaseApps.
 
 #### Description notes
 
-Unofficially packaged, _proprietary_ submissions **must** add a note like
-below as the **first** `p` tag of `description`.
-
-Unofficially packaged, open source submissions may also follow this.
-
-```xml
-<description>
-  <p>**This is a community package of APP NAME and not officially supported by UPSTREAM NAME.**</p>
-</description>
-```
-
 If the submission is unavailable in English and only exists in a small
 number of select locales, a similar note **must** be added.
 
