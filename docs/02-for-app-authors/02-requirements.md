@@ -240,36 +240,52 @@ removed from the store.
 
 ### Generative AI policy
 
-This policy applies to both the application being submitted to Flathub
-and the Flathub submission itself, including the manifest, metadata,
-patches, build scripts, and pull request. For the purpose of this
-policy, "applications" include Flatpak apps, BaseApps, extensions,
-runtimes and any other artifacts that can be produced by
-flatpak-builder.
+This policy applies to both the application being submitted to Flathub and the
+Flathub submission itself, including the manifest, metadata, patches, build
+scripts, pull request description, and review interactions. For the purpose of
+this policy, "applications" include Flatpak apps, BaseApps, extensions,
+runtimes and any other artifacts that can be produced by flatpak-builder.
 
-Submission pull requests must not be generated, opened, or automated
-using AI tools or agents. Review comments, reply, descriptions also
-must not be be LLM-generated
+Submitters must disclose any AI-generated code, documentation, or other content
+they know is included in the application. The disclosure must say which parts
+are affected and roughly how much was generated.
 
-Please also do not request review from any AI tools in the submission
-PR. Automated Copilot reviews on GitHub can be disabled by the
-submitter by going to [Copilot settings](https://github.com/settings/copilot/coding_agent)
-and changing `Repository access` to exclude the `flathub` repository or
-disabling the global `Automatic Copilot code review`
+Using AI for research, discussion or debugging does not need to be disclosed if
+no generated code or content was added to the application.
+
+Minor uses such as grammar or formatting fixes and small ammounts of common
+boilerplate are generally acceptable. AI use is not minor if it creates core
+features, the main design of the application, or a large part of the project's
+code or development history.
+
+Flathub reviewers's decision on whether AI use is minor or substantial is
+final.
+
+#### Submission pull requests
+
+Pull requests, commit messages, PR descriptions, review comments and replies
+must not be generated or automated using AI tools or agents.
+
+Please do not request review from any AI tools in the submission PR. Automated
+Copilot reviews on GitHub can be disabled by the submitter by going to [Copilot
+settings](https://github.com/settings/copilot/coding_agent) and changing
+`Repository access` to exclude the `flathub` repository or disabling the global
+`Automatic Copilot code review`
 [setting](https://github.com/settings/copilot/features).
 
-Applications containing AI-generated or AI-assisted code,
-documentation, or any other content are not allowed.
+#### Enforcement
 
-Applications or changes containing unauthorised copyrighted material,
-license-incompatible, or ethically questionable code are not allowed.
+If AI usage is disclosed or found, reviewers may ask for more proof that the
+project is mature and actively maintained. This can include at least six months
+of active maintenance, several releases, real users, or more than two human
+contributors. Proprietary applications may be asked to provide other proof.
+This is in addition to the general [Insufficient development history](#insufficient-development-history)
+policy.
 
-These submissions can be rejected without any further review.
-
-Repeatedly violating these policies may result in a permanent ban from
-future submissions and activities.
-
-Exceptions may be granted for mature, well-maintained projects.
+Submissions that violate this policy may be rejected without further review.
+False or incomplete disclosures may also result in rejection. Repeated
+violations may result in a permanent ban from future submissions and
+activities.
 
 ## Application ID
 
