@@ -9105,10 +9105,10 @@ svgo@^3.0.2, svgo@^3.2.0:
     picocolors "^1.0.0"
     sax "^1.5.0"
 
-swiper@^14.0.5:
-  version "14.0.5"
-  resolved "https://registry.yarnpkg.com/swiper/-/swiper-14.0.5.tgz#a9947029b764eeefc87faf23f83b455366e21d01"
-  integrity sha512-SMSKS0sj+lPIFzngfIKb5cyBtzmAuJw7rXgXdyYiDReb+pSpJXuNljHYgT4DXa5Stnl2Ew2/Lam5ipv4PIqZ7A==
+swiper@^14.0.6:
+  version "14.0.6"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-14.0.6.tgz#41e4498d74a0d11dc93b4d74f25dc6214ba012e5"
+  integrity sha512-ArptjmcZMBvpLCbvzSKuqvQpjjITCbZdymiGOrbZQffQ3ZSjgpvMByXX0WZBUt+FV4PPIumdYfZ9ZdBbFsdH6g==
 
 tailwindcss@4.3.3, tailwindcss@^4.3.3:
   version "4.3.3"
