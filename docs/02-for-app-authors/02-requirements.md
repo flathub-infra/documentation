@@ -258,16 +258,8 @@ boilerplate are generally acceptable. AI use is substantial when it creates
 core features, determines the main design of the application, or accounts for
 a large part of the project's code or development history.
 
-Substantial AI use does not, by itself, make an application ineligible for
-Flathub. Reviewers may examine the affected content and ask the submitter to
-demonstrate that it is understood, maintainable, and compliant with Flathub's
-requirements. Any rejection must be based on a substantive requirement that
-the application or submission fails to meet, rather than solely on the use of
-generative AI.
-
-Applications containing AI-generated content are subject to the general
-[Insufficient development history](#insufficient-development-history) policy
-on the same basis as other applications.
+The Flathub reviewers may request additional information and will decide
+whether the disclosed use is acceptable.
 
 #### Submission pull requests
 
@@ -283,18 +275,9 @@ settings](https://github.com/settings/copilot/coding_agent) and changing
 
 #### Enforcement
 
-A submission may be rejected if:
-
-* Known AI-generated content was not disclosed.
-* A disclosure was false or materially incomplete.
-* AI tools or agents were used to generate or automate submission pull
-  requests, commit messages, pull request descriptions, review comments, or
-  replies.
-* Generated content fails another applicable Flathub requirement.
-
-The use of generative AI, including substantial use, is not itself a policy
-violation. Repeated violations of the disclosure or submission-process
-requirements may result in a permanent ban from future submissions and
+Undisclosed or materially misrepresented AI-generated content, or AI-generated
+submission and review interactions, may result in rejection. Repeated
+violations may result in a permanent ban from future submissions and
 activities.
 
 ## Application ID
