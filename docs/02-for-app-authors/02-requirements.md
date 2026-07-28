@@ -252,7 +252,6 @@ are affected and roughly how much was generated.
 
 Using AI for research, discussion or debugging does not need to be disclosed if
 no generated code or content was added to the application.
-
 Minor uses such as grammar or formatting fixes and small amounts of common
 boilerplate are generally acceptable. AI use is substantial when it creates
 core features, determines the main design of the application, or accounts for
