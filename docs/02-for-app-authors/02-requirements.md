@@ -253,13 +253,21 @@ are affected and roughly how much was generated.
 Using AI for research, discussion or debugging does not need to be disclosed if
 no generated code or content was added to the application.
 
-Minor uses such as grammar or formatting fixes and small ammounts of common
-boilerplate are generally acceptable. AI use is not minor if it creates core
-features, the main design of the application, or a large part of the project's
-code or development history.
+Minor uses such as grammar or formatting fixes and small amounts of common
+boilerplate are generally acceptable. AI use is substantial when it creates
+core features, determines the main design of the application, or accounts for
+a large part of the project's code or development history.
 
-Flathub reviewers's decision on whether AI use is minor or substantial is
-final.
+Substantial AI use does not, by itself, make an application ineligible for
+Flathub. Reviewers may examine the affected content and ask the submitter to
+demonstrate that it is understood, maintainable, and compliant with Flathub's
+requirements. Any rejection must be based on a substantive requirement that
+the application or submission fails to meet, rather than solely on the use of
+generative AI.
+
+Applications containing AI-generated content are subject to the general
+[Insufficient development history](#insufficient-development-history) policy
+on the same basis as other applications.
 
 #### Submission pull requests
 
@@ -275,16 +283,18 @@ settings](https://github.com/settings/copilot/coding_agent) and changing
 
 #### Enforcement
 
-If AI usage is disclosed or found, reviewers may ask for more proof that the
-project is mature and actively maintained. This can include at least six months
-of active maintenance, several releases, real users, or more than two human
-contributors. Proprietary applications may be asked to provide other proof.
-This is in addition to the general [Insufficient development history](#insufficient-development-history)
-policy.
+A submission may be rejected if:
 
-Submissions that violate this policy may be rejected without further review.
-False or incomplete disclosures may also result in rejection. Repeated
-violations may result in a permanent ban from future submissions and
+* Known AI-generated content was not disclosed.
+* A disclosure was false or materially incomplete.
+* AI tools or agents were used to generate or automate submission pull
+  requests, commit messages, pull request descriptions, review comments, or
+  replies.
+* Generated content fails another applicable Flathub requirement.
+
+The use of generative AI, including substantial use, is not itself a policy
+violation. Repeated violations of the disclosure or submission-process
+requirements may result in a permanent ban from future submissions and
 activities.
 
 ## Application ID
