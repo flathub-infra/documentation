@@ -46,6 +46,23 @@ aaaaaaaa-0000-aaaa-0000-aaaaaaaaaaaa
 For convenience and flexibility, verification of the well-known URI will
 follow redirects but HTTPS is mandatory.
 
+### DNS
+
+To verify an app using DNS, Flathub looks up a TXT record at
+`_flathub.{domain}`, where `{domain}` is the domain associated with the app ID.
+For example, an app ID like `com.example.App` would require a TXT record with:
+
+```ini
+Name: _flathub.example.com
+Type: TXT
+Value: 00000000-aaaa-0000-aaaa-000000000000
+```
+
+The verification token is shown in the Developer Portal. If multiple apps need to
+be verified under the same domain, add each token as a separate TXT value for the
+same record. Do not remove any existing TXT records. DNS changes can take time to
+propagate.
+
 ### Source code hosting site
 
 Apps with IDs indicating supported source code hosting sites like
