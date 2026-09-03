@@ -247,11 +247,10 @@ approximate extent.
 
 AI used only for research, discussion, or debugging does not need disclosure
 when no generated material is included in the application or its Flathub
-packaging. Minor generated material, such as grammar or formatting fixes or
-small amounts of common boilerplate, is generally acceptable. Substantial use,
-such as generating core functionality or a large portion of the application's
-implementation, is subject to reviewer judgment. Applications that are
-predominantly AI-generated may be rejected without further review.
+packaging. Disclosed AI-generated material is evaluated at reviewer discretion.
+Reviewers may reject a submission, including without further review, based on
+the extent or role of generated material or concerns about its review, quality,
+or maintainability. Disclosure does not create a presumption of acceptance.
 
 AI tools or agents must not open or automate Flathub submission pull requests,
 or generate their commit messages, descriptions, review comments, or replies.
