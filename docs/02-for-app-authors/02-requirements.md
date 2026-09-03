@@ -240,43 +240,26 @@ removed from the store.
 
 ### Generative AI policy
 
-This policy applies to both the application being submitted to Flathub and the
-Flathub submission itself, including the manifest, metadata, patches, build
-scripts, pull request description, and review interactions. For the purpose of
-this policy, "applications" include Flatpak apps, BaseApps, extensions,
-runtimes and any other artifacts that can be produced by flatpak-builder.
+Submitters must disclose any AI-generated code, documentation, packaging, or
+other material they know or reasonably believe is included in the application
+or its Flathub packaging. The disclosure must identify the affected parts and
+approximate extent.
 
-Submitters must disclose any AI-generated code, documentation, or other content
-they know is included in the application. The disclosure must say which parts
-are affected and roughly how much was generated.
+AI used only for research, discussion, or debugging does not need disclosure
+when no generated material is included in the application or its Flathub
+packaging. Minor generated material, such as grammar or formatting fixes or
+small amounts of common boilerplate, is generally acceptable. Substantial use,
+such as generating core functionality or a large portion of the application's
+implementation, is subject to reviewer judgment. Applications that are
+predominantly AI-generated may be rejected without further review.
 
-Using AI for research, discussion or debugging does not need to be disclosed if
-no generated code or content was added to the application.
-Minor uses such as grammar or formatting fixes and small amounts of common
-boilerplate are generally acceptable. AI use is substantial when it creates
-core features, determines the main design of the application, or accounts for
-a large part of the project's code or development history.
+AI tools or agents must not open or automate Flathub submission pull requests,
+or generate their commit messages, descriptions, review comments, or replies.
+Submitters must not request AI-agent reviews.
 
-The Flathub reviewers may request additional information and will decide
-whether the disclosed use is acceptable.
-
-#### Submission pull requests
-
-Pull requests, commit messages, PR descriptions, review comments and replies
-must not be generated or automated using AI tools or agents.
-
-Please do not request review from any AI tools in the submission PR. Automated
-Copilot reviews on GitHub can be disabled by the submitter by going to [Copilot
-settings](https://github.com/settings/copilot/coding_agent) and changing
-`Repository access` to exclude the `flathub` repository or disabling the global
-`Automatic Copilot code review`
-[setting](https://github.com/settings/copilot/features).
-
-#### Enforcement
-
-Undisclosed or materially misrepresented AI-generated content, or AI-generated
-submission and review interactions, may result in rejection. Repeated
-violations may result in a permanent ban from future submissions and
+Undisclosed or materially misrepresented AI-generated material, or prohibited
+AI-generated submission or review interactions, may result in rejection.
+Repeated violations may result in a permanent ban from future submissions and
 activities.
 
 ## Application ID
