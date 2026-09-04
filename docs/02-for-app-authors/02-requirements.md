@@ -240,36 +240,26 @@ removed from the store.
 
 ### Generative AI policy
 
-This policy applies to both the application being submitted to Flathub
-and the Flathub submission itself, including the manifest, metadata,
-patches, build scripts, and pull request. For the purpose of this
-policy, "applications" include Flatpak apps, BaseApps, extensions,
-runtimes and any other artifacts that can be produced by
-flatpak-builder.
+Submitters must disclose any AI-generated code, documentation, packaging, or
+other material they know or reasonably believe is included in the application
+or its Flathub packaging. The disclosure must identify the affected parts and
+approximate extent.
 
-Submission pull requests must not be generated, opened, or automated
-using AI tools or agents. Review comments, reply, descriptions also
-must not be be LLM-generated
+AI used only for research, discussion, or debugging does not need disclosure
+when no generated material is included in the application or its Flathub
+packaging. Disclosed AI-generated material is evaluated at reviewer discretion.
+Reviewers may reject a submission, including without further review, based on
+the extent or role of generated material or concerns about its review, quality,
+or maintainability. Disclosure does not create a presumption of acceptance.
 
-Please also do not request review from any AI tools in the submission
-PR. Automated Copilot reviews on GitHub can be disabled by the
-submitter by going to [Copilot settings](https://github.com/settings/copilot/coding_agent)
-and changing `Repository access` to exclude the `flathub` repository or
-disabling the global `Automatic Copilot code review`
-[setting](https://github.com/settings/copilot/features).
+AI tools or agents must not open or automate Flathub submission pull requests,
+or generate their commit messages, descriptions, review comments, or replies.
+Submitters must not request AI-agent reviews.
 
-Applications containing AI-generated or AI-assisted code,
-documentation, or any other content are not allowed.
-
-Applications or changes containing unauthorised copyrighted material,
-license-incompatible, or ethically questionable code are not allowed.
-
-These submissions can be rejected without any further review.
-
-Repeatedly violating these policies may result in a permanent ban from
-future submissions and activities.
-
-Exceptions may be granted for mature, well-maintained projects.
+Undisclosed or materially misrepresented AI-generated material, or prohibited
+AI-generated submission or review interactions, may result in rejection.
+Repeated violations may result in a permanent ban from future submissions and
+activities.
 
 ## Application ID
 
