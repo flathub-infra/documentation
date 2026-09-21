@@ -245,9 +245,12 @@ other material they know or reasonably believe is included in the application
 or its Flathub packaging. The disclosure must identify the affected parts and
 approximate extent.
 
+Flathub manifests must not contain AI-generated or AI-assisted content.
+Disclosure does not exempt manifests from this restriction.
+
 AI used only for research, discussion, or debugging does not need disclosure
 when no generated material is included in the application or its Flathub
-packaging. Disclosed AI-generated material is evaluated at reviewer discretion.
+packaging. Other disclosed AI-generated material is evaluated at reviewer discretion.
 Reviewers may reject a submission, including without further review, based on
 the extent or role of generated material or concerns about its review, quality,
 or maintainability. Disclosure does not create a presumption of acceptance.
