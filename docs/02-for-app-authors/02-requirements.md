@@ -547,13 +547,18 @@ patches must be included in the submission along with the manifest.
 
 The Flathub stable repository is dedicated to hosting only stable
 software. The Flathub beta repository can be used to publish beta
-software, though it will not be listed on the website and users must
-be manually migrated if switched to the stable repo later.
+versions of applications that have already been accepted on Flathub.
+New applications must first be submitted to the stable repository;
+after acceptance, maintainers can create a beta branch by following the
+[maintenance guide](/docs/for-app-authors/maintenance#creating-new-git-branches-for-publishing).
+Beta versions are not listed on the website, and users must be manually
+migrated if the application later moves to the stable repository.
 
 Nightly releases, development snapshots, or any software requiring daily
 updates must not be published to either repo.
 
-New submissions will not be accepted for the Flathub beta repostitory.
+New application submissions will not be accepted directly into the
+Flathub beta repository.
 
 ## Required files
 
