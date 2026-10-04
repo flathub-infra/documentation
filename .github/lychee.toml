@@ -1,0 +1,25 @@
+# Check source documents, including MDX and blog author URLs, but not assets.
+extensions = ["md", "mdx", "html", "yml", "yaml"]
+
+# Relative links resolve to file URLs. Do not set a base URL, and only check
+# HTTP(S), so internal paths, anchors and mail addresses stay out of this job.
+scheme = ["http", "https"]
+include_verbatim = false
+exclude_loopback = true
+
+timeout = 30
+max_retries = 3
+retry_wait_time = 5
+max_concurrency = 8
+host_concurrency = 2
+host_request_interval = "500ms"
+
+# Each exclusion is a regular expression. Use TOML literal strings so that
+# backslashes reach the regex unchanged. Keep real hosts and status codes checked.
+exclude = [
+    # Reserved example domains used in verification and metainfo snippets.
+    '^https?://(?:[^/]+\.)?example\.(?:com|org|net)(?::[0-9]+)?(?:[/?#]|$)',
+    # Fictional project URLs in docs/02-for-app-authors/02-requirements.md.
+    '^https?://github\.com/example-foo/bar/?(?:[?#].*)?$',
+    '^https?://sourceforge\.net/projects/example-foo/?(?:[?#].*)?$',
+]
