@@ -17,11 +17,16 @@ host_concurrency = 2
 host_request_interval = "500ms"
 
 # Each exclusion is a regular expression. Use TOML literal strings so that
-# backslashes reach the regex unchanged. Keep real hosts and status codes checked.
+# backslashes reach the regex unchanged. Do not skip whole hosting services
+# or accept error statuses.
 exclude = [
     # Reserved example domains used in verification and metainfo snippets.
     '^https?://(?:[^/]+\.)?example\.(?:com|org|net)(?::[0-9]+)?(?:[/?#]|$)',
     # Fictional project URLs in docs/02-for-app-authors/02-requirements.md.
     '^https?://github\.com/example-foo/bar/?(?:[?#].*)?$',
     '^https?://sourceforge\.net/projects/example-foo/?(?:[?#].*)?$',
+    # Historical URL in the March 21, 2017 minutes. Now 404, with no verified relocation.
+    '^https://github\.com/flatpak/flathub/?$',
+    # Reddit blocks automated access to this comment in the June 19, 2017 minutes.
+    '^https://www\.reddit\.com/r/linux_gaming/comments/6hzkz4/steam_is_now_available_as_a_flatpak/dj302av/?$',
 ]

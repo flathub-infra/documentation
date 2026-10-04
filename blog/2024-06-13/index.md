@@ -29,5 +29,5 @@ automation for publishing updates without proper testing. This has led to a
 number of issues where apps became broken overnight, which could have been
 easily prevented if the update was tested before merging.
 
-[excreq]: https://docs.flathub.org/docs/for-app-authors/linter/#exceptions
+[excreq]: /docs/for-app-authors/linter#exceptions
 [extdatasrc]: https://docs.flatpak.org/en/latest/module-sources.html#extra-data

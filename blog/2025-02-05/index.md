@@ -33,4 +33,4 @@ As of this writing there are over 150 apps in the collection, but we expect ther
 If you’re the creator of an app that should work well on mobile form factors but isn’t featured in the collection, take a minute to double-check the [documentation] and your own apps’s MetaInfo to ensure it’s accurate. Device support data can also be used by native app store clients across form factors to determine what apps are displayed or how they are ranked, so it’s a good idea to ensure it’s up to date regardless of what your app supports.
 
 [collection]: https://flathub.org/apps/collection/mobile/
-[documentation]: https://docs.flathub.org/docs/for-app-authors/metainfo-guidelines/#device-support
+[documentation]: /docs/for-app-authors/metainfo-guidelines#device-support

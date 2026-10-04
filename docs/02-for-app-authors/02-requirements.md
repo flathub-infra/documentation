@@ -743,7 +743,7 @@ Some common examples of things to avoid include:
 Vendors often have their own requirements and policies. Some are
 listed below. Please refer to them for further details.
 
-- GNOME: https://wiki.gnome.org/Foundation/SoftwarePolicy, https://foundation.gnome.org/licensing-guidelines
+- GNOME: https://wiki.gnome.org/Foundation/SoftwarePolicy, https://foundation.gnome.org/trademark-guidelines/
 - COSMIC: https://github.com/pop-os/cosmic-epoch/blob/master/TRADEMARK.md, https://github.com/pop-os/pop/blob/master/LICENSING.md
 
 ### Appstream
