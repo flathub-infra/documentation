@@ -1,0 +1,41 @@
+name: External links
+
+on:
+  schedule:
+    - cron: "23 7 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  external-links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      # 7.0.1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+
+      - name: Check external links in docs and blog
+        # 2.9.0
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8
+        with:
+          lycheeVersion: v0.24.2
+          args: --config .github/lychee.toml --verbose --no-progress docs/ blog/
+          fail: true
+          failIfEmpty: true
+          jobSummary: false
+          format: markdown
+          output: ${{ runner.temp }}/external-links.md
+
+      - name: Upload link report
+        if: ${{ always() }}
+        # 4.6.2
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: external-links-report
+          path: ${{ runner.temp }}/external-links.md
+          if-no-files-found: warn
+          retention-days: 14
