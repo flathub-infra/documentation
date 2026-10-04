@@ -1,8 +1,10 @@
 # Check source documents, including MDX and blog author URLs, but not assets.
 extensions = ["md", "mdx", "html", "yml", "yaml"]
 
-# Relative links resolve to file URLs. Do not set a base URL, and only check
-# HTTP(S), so internal paths, anchors and mail addresses stay out of this job.
+# Resolve root-relative routes to file URLs before scheme filtering. Lychee
+# resolves this root against the working directory; do not set a base URL.
+root_dir = "."
+# Only check HTTP(S), so internal paths and anchors are not checked as files.
 scheme = ["http", "https"]
 include_verbatim = false
 exclude_loopback = true
