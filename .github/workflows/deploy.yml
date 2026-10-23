@@ -33,24 +33,27 @@ jobs:
         # 6.0.0
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d
 
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
+      - name: Enable Corepack
+        run: corepack enable
 
-      - name: Cache yarn
+      - name: Get pnpm store directory path
+        id: pnpm-store-path
+        run: echo "dir=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - name: Cache pnpm store
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-deploy-${{ hashFiles('**/yarn.lock') }}
+          path: ${{ steps.pnpm-store-path.outputs.dir }}
+          key: ${{ runner.os }}-pnpm-deploy-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-yarn-deploy-
+            ${{ runner.os }}-pnpm-deploy-
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile --prefer-offline
+        run: pnpm install --frozen-lockfile --prefer-offline
 
       - name: Build website
-        run: yarn build
+        run: pnpm build
 
       - name: Upload artifact
         # 5.0.0

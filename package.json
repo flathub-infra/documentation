@@ -2,6 +2,7 @@
   "name": "flathub-docs-docusaurus",
   "version": "0.0.0",
   "private": true,
+  "packageManager": "pnpm@12.15.0",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.10.2",
     "@docusaurus/tsconfig": "3.10.2",
+    "@docusaurus/types": "3.10.2",
     "@gabrielcsapo/docusaurus-plugin-matomo": "^0.1.2",
     "@tailwindcss/forms": "^0.5.11",
     "@tailwindcss/postcss": "^4.3.3",

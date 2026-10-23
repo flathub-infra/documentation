@@ -1,0 +1,3 @@
+# core-js only uses its postinstall script to print a funding message.
+allowBuilds:
+  core-js: false
