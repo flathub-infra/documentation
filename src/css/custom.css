@@ -82,3 +82,8 @@
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
 }
+
+/* Override the default doc card emoji icons. Issue #684 */
+.theme-doc-card-icon {
+  display: none;
+}
