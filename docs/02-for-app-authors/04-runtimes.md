@@ -24,10 +24,8 @@ Flathub hosts three major runtimes currently.
 
   A given branch of the Freedesktop runtime has a 2 year support period
   after which they are declared EOL. A new major version is published on
-  August of every year. The release schedule can be found on [Gitlab](https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/wikis/Releases)
-  and announcements of new major version releases are made on
-  [Flathub Discourse](https://discourse.flathub.org/c/announcements/6).
-  Release notifications are also available by subscribing to releases
+  August of every year. The release schedule can be found on [Gitlab](https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/wikis/Releases).
+  Release notifications are available by subscribing to releases
   via Gitlab notifications or via the RSS link in the [releases page](https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/releases).
 
   The Freedesktop platform (`org.freedesktop.Platform` and

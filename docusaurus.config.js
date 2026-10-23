@@ -200,10 +200,6 @@ const config = {
                 href: "https://matrix.to/#/#flathub:matrix.org",
               },
               {
-                label: "Discourse",
-                href: "https://discourse.flathub.org/",
-              },
-              {
                 label: "Mastodon",
                 href: "https://floss.social/@flathub",
                 rel: "noreferrer me",

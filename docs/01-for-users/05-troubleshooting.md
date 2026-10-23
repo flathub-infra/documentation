@@ -83,9 +83,9 @@ older build works in your report. For a more precise comparison, see
   repository. Open its "Issues" tab to search for existing reports or
   create a new issue.
 - If several applications have the same problem, it may involve Flatpak,
-  a shared runtime or your desktop. Ask for help on
-  [Flathub Discourse](https://discourse.flathub.org/) if you are unsure
-  which project should receive the report.
+  a shared runtime or your desktop. Ask for help in the
+  [Flathub Matrix channel](https://matrix.to/#/#flathub:matrix.org) if you
+  are unsure which project should receive the report.
 
 Search for an existing report before opening a new one. Include steps
 to reproduce the problem, what you expected, what happened, your Linux

@@ -71,8 +71,7 @@ Current and prospective maintainers on Flathub are expected to:
   be no expectation of prioritized support or work.
 
 - Stay engaged with the Flathub community through available channels,
-  including the [Flathub Discourse](https://discourse.flathub.org/), the
-  [Flathub blog](https://docs.flathub.org/blog), and the
+  including the [Flathub blog](https://docs.flathub.org/blog) and the
   [Flathub Matrix channel](https://matrix.to/#/#flathub:matrix.org).
 
 ## The repository
@@ -698,8 +697,8 @@ EOL, the following process should be followed:
 
 * A notice period of one month should be provided to allow upstream
   maintainers or Flatpak maintainers or contributors to respond. This
-  should preferably be done through issues or discourse posts to keep a
-  record but if it is not possible any other contact methods can be
+  should preferably be done through issues to keep a record but if it is not
+  possible any other contact methods can be
   used.
 
 * If no response is received within the notice period or there is no one
@@ -845,5 +844,4 @@ cases.
 ## Getting Help
 
 If anything is not working or there is some behaviour you don’t
-understand, come to the [Matrix channel](https://matrix.to/#/#flatpak:matrix.org)
-or start a discussion on the [Flathub forum](https://discourse.flathub.org/).
+understand, come to the [Matrix channel](https://matrix.to/#/#flatpak:matrix.org).
