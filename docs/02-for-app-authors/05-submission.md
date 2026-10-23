@@ -178,9 +178,7 @@ them to submit it. Please remain respectful, patient and courteous when
 making such requests.
 
 You can also submit it yourself following the submission process
-outlined above, or start a topic on the
-[Flathub forum](https://discourse.flathub.org/c/requests/5) to find
-interested volunteers.
+outlined above.
 
 ### I want to submit my app but I don't have a website - what should I do?
 
@@ -228,8 +226,7 @@ and it should show up. If it still does not work feel free to contact us.
 ## Getting help
 
 Please don't hesitate to ask for help. General queries can be made on the
-[Matrix channel](https://matrix.to/#/#flathub:matrix.org) and on
-[Discourse](https://discourse.flathub.org/). Technical queries or
+[Matrix channel](https://matrix.to/#/#flathub:matrix.org). Technical queries or
 requests can be made through
 [issues](https://github.com/flathub/flathub/issues/new). Security issues
 and private matters can be discussed via
