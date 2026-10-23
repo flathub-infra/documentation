@@ -5,8 +5,9 @@ authors:
   - barthalion
 ---
 
-As of today, [Flathub Discourse][discourse] is read-only. Existing threads stay
-available, but it is no longer possible to start new topics or reply.
+As of today, [Flathub Discourse](https://discourse.flathub.org/) is read-only.
+Existing threads stay available, but it is no longer possible to start new
+topics or reply.
 
 <!-- truncate -->
 
@@ -30,7 +31,6 @@ Here's where to go instead:
 
 Thanks to everyone who answered questions there over the years.
 
-[discourse]: https://discourse.flathub.org/
 [forum]: https://barthalion.blog/a-forum-for-flathub/
 [matrix-flathub]: https://matrix.to/#/#flathub:matrix.org
 [matrix-flatpak]: https://matrix.to/#/#flatpak:matrix.org
