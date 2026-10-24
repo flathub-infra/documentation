@@ -1,3 +1,4 @@
 # core-js only uses its postinstall script to print a funding message.
 allowBuilds:
+  '@swc/core': true
   core-js: false

@@ -8,6 +8,13 @@ const darkCodeTheme = require("prism-react-renderer").themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  future: {
+    v4: {
+      removeLegacyPostBuildHeadAttribute: true, // required
+    },
+    faster: true,
+  },
+
   title: "Flathub Documentation",
   tagline: "Your Linux desktop apps in one place",
   favicon: "img/favicon.svg",
@@ -83,14 +90,7 @@ const config = {
         hashed: true,
       },
     ],
-    [
-      require.resolve("@gabrielcsapo/docusaurus-plugin-matomo"),
-      {
-        matomoUrl: "https://webstats.gnome.org/",
-        siteId: "40",
-        siteUrl: "https://docs.flathub.org/",
-      },
-    ],
+    "docusaurus-plugin-matomo",
     [
       require.resolve("@docusaurus/plugin-client-redirects"),
       {
@@ -145,6 +145,10 @@ const config = {
           content: "flatpak, flathub, packaging, tool, linux, desktop, apps",
         },
       ],
+      matomo: {
+        matomoUrl: "https://webstats.gnome.org/",
+        siteId: "40",
+      },
       navbar: {
         title: "Flathub",
         logo: {
