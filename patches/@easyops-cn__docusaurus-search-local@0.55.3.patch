@@ -1,0 +1,22 @@
+diff --git a/dist/client/client/theme/SearchBar/SearchBar.jsx b/dist/client/client/theme/SearchBar/SearchBar.jsx
+index 10ef222e098d751b8f0d402585c6643909af9ed3..bf5c2335aa9e5c127f7fcca9ac962f3e8c7cb35d 100644
+--- a/dist/client/client/theme/SearchBar/SearchBar.jsx
++++ b/dist/client/client/theme/SearchBar/SearchBar.jsx
+@@ -50,7 +50,7 @@ async function fetchOpenAskAI() {
+ const SEARCH_PARAM_HIGHLIGHT = "_highlight";
+ export default function SearchBar({ handleSearchBarToggle, }) {
+     const isBrowser = useIsBrowser();
+-    const { siteConfig: { baseUrl }, i18n: { currentLocale }, } = useDocusaurusContext();
++    const { siteConfig: { baseUrl, trailingSlash }, i18n: { currentLocale }, } = useDocusaurusContext();
+     // It returns undefined for non-docs pages
+     const activePlugin = useActivePlugin();
+     let versionUrl = baseUrl;
+@@ -167,7 +167,7 @@ export default function SearchBar({ handleSearchBarToggle, }) {
+                 }
+                 params.set("version", versionUrl.substring(baseUrl.length));
+             }
+-            const url = `${baseUrl}search/?${params.toString()}`;
++            const url = `${baseUrl}search${trailingSlash === false ? "" : "/"}?${params.toString()}`;
+             a.href = url;
+             a.textContent = linkText;
+             a.addEventListener("click", (e) => {

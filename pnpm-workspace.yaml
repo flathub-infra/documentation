@@ -1,3 +1,8 @@
 # core-js only uses its postinstall script to print a funding message.
 allowBuilds:
+  '@swc/core': true
   core-js: false
+minimumReleaseAgeExclude:
+  - '@razzeee/docusaurus-plugin-matomo@0.2.0'
+patchedDependencies:
+  '@easyops-cn/docusaurus-search-local@0.55.3': patches/@easyops-cn__docusaurus-search-local@0.55.3.patch
