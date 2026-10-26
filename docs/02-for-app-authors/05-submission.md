@@ -71,6 +71,8 @@ If you are using [extra-data](https://docs.flatpak.org/en/latest/module-sources.
    locally. Consult the documentation for explanation of the errors. For
    certain errors you might need an [exception](/docs/for-app-authors/linter#exceptions).
 
+   Flathub [reviews permissions separately](/docs/for-app-authors/maintenance#permission-review-on-pull-requests). Explain why the app needs its permissions in the pull request.
+
    ```bash
    flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest <manifest>
    ```

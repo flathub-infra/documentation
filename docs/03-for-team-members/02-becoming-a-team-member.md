@@ -226,9 +226,9 @@ Criteria:
 
 ### Build Moderation Team
 
-Members of the Build Moderation Team are responsible for reviewing build
-and moderation requests, approving or denying them as appropriate, and
-providing clarification or follow-up when developers raise questions.
+The Build Moderation Team reviews build and moderation requests,
+including [pull request permissions](/docs/for-team-members/review#permission-review),
+approves or rejects them, and answers developers' questions.
 
 Criteria:
 
