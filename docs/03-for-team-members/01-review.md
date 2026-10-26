@@ -13,8 +13,11 @@ long period.
 - Ensure submissions meet all the [App Requirements](/docs/for-app-authors/requirements)
 - Ensure the applications are functional and do/act what submitter
   claims by using the test builds.
-- Ensure it uses proper permissions, ask to submit linter exceptions
-  if needed.
+- Check permissions against the [permission requirements](/docs/for-app-authors/requirements#permissions)
+  and review [permission assessments](#permission-review).
+- Ask authors to fix remaining [linter errors](/docs/for-app-authors/linter#linter-errors)
+  or request [linter exceptions](/docs/for-app-authors/linter#exceptions)
+  where appropriate. Linter exceptions do not approve permissions.
 - Do a test build before merge.
 - In general, for the domain `example.com` obtained from the rDNS ID,
   we should verify that the submitter controls the domain or the website
@@ -23,6 +26,36 @@ long period.
 - Verify that no user-visible elements of the submission - such as the
   app name or icon in the metainfo or desktop file, violate
   trademarks. Refer to the [requirements](/docs/for-app-authors/requirements#no-trademark-violations).
+
+## Permission review
+
+Open [Permission reviews](https://flathub.org/admin/moderation/permissions)
+with a moderator account. The queue shows pending assessments by default.
+Use **Outcome** to filter by status and **Include superseded assessments**
+to show older assessments.
+
+Open an assessment and review the permission diff, originating pull
+request, target branch, destination channel (**Repo**), Flatpak branch,
+and decision history.
+
+Superseded and error assessments cannot receive decisions. Follow the
+**Superseded by** link to the current assessment, or resolve the
+assessment error before deciding.
+
+Choose a decision after reviewing the requested access:
+
+- **Approve** accepts the permissions.
+- **Reject** requires a rationale explaining why the access is not
+  acceptable.
+- **Snooze** defers review for 12 hours, after which the assessment
+  returns to the pending queue. The forge outcome remains pending.
+
+The bot posts decision rationale on the pull request, except when
+snoozing.
+
+Permission decisions do not approve unrelated moderation requests or
+automatically release an existing publication hold. Review held builds
+separately.
 
 ## Special app-id rules
 
