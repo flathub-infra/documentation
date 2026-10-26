@@ -25,6 +25,22 @@ flatpak run --command=flatpak-builder-lint org.flatpak.Builder repo repo
 
 You can find more information in the [project readme](https://github.com/flathub-infra/flatpak-builder-lint/blob/master/README.md).
 
+## Permissions and moderation
+
+For each pull request, Flathub assesses permissions from the test build.
+The `flathub/permissions` check reports whether the permissions are
+accepted, need moderator review, are rejected, or could not be assessed.
+
+When a pull request changes permissions, explain in its description why
+the application needs the requested access. Moderators approve or reject
+permissions on the Flathub website. GitHub pull request approvals do not
+grant permission approval.
+
+Passing the linter or receiving a linter exception does not approve an
+application's permissions. Permission moderation is separate and does not
+override remaining linter errors. All permissions must follow the
+[permission requirements](/docs/for-app-authors/requirements#permissions).
+
 ## Exceptions
 
 Linter errors can be ignored with exceptions. Exceptions on Flathub
@@ -50,7 +66,11 @@ remote and `beta` if it is for the Flathub `beta` remote.
 }
 ```
 
-## Exception policies
+### Exception policies
+
+These policies apply to exceptions for the linter errors listed below.
+Flathub reviews permission requests through the pull request workflow
+[described above](#permissions-and-moderation).
 
 Exceptions should always be treated as a temporary measure rather
 than a permanent solution. If the linter produces incorrect or
@@ -62,17 +82,10 @@ portals, or their frameworks and dependencies.
 Please do not use LLMs in any way to handle exceptions PRs. The
 exception can be permanently denied in that case.
 
-- Certain exceptions that enable breaking out of the Flatpak sandbox
-  including but not limited to home, host, flatpak-spawn, arbitrary
-  bus name access will not be granted if there are signs of LLM usage
-  in the software or in the exception PR.
-- Certain exceptions will not be granted if the requested permission or
-  the exception is only needed on a specific platform, or some narrowly
-  scoped environment.
-- Exceptions will not be granted if the request is due to a bug in the
-  application. If the issue originates from a component used by the
-  app, it must first be investigated and appropriate issues must be
-  filed before the request can be considered eligible for an exception.
+Exceptions will not be granted if the request is due to a bug in the
+application. If the issue originates from a component used by the
+app, it must first be investigated and appropriate issues must be
+filed before the request can be considered eligible for an exception.
 
 ### Check currently published exceptions
 
@@ -852,6 +865,17 @@ Criteria: Granted on sufficient explanation being provided.
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has filesystem access to entire `~/.local/share`.
 
+### finish-args-host-root-filesystem-access
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--filesystem=host-root`, `--filesystem=host-root:rw`,
+or `--filesystem=host-root:create`.
+
+### finish-args-host-root-ro-filesystem-access
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--filesystem=host-root:ro`.
+
 ### finish-args-absolute-home-path
 
 Criteria: This exception is never granted.
@@ -866,48 +890,6 @@ be used instead.
 Please consult the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html)
 and the [manual page](https://docs.flatpak.org/en/latest/flatpak-command-reference.html?highlight=filesystem#).
 
-### finish-args-flatpak-appdata-folder-access
-### finish-args-flatpak-appdata-folder-dir-access
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `filesystem` permission to `~/.var/app` or a
-subfolder of it.
-
-### finish-args-flatpak-system-folder-access
-### finish-args-flatpak-system-folder-dir-access
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `filesystem` permission to `/var/lib/flatpak` or
-a subfolder of it.
-
-### finish-args-flatpak-user-folder-access
-### finish-args-flatpak-user-folder-dir-access
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `filesystem` permission to `~/.local/share/flatpak`
-or a subfolder of it.
-
-### finish-args-host-tmp-access
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `filesystem` permission to `/tmp`.
-
-### finish-args-host-var-access
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `filesystem` permission to `/var` or a subdirectory
-of it.
-
 ### finish-args-absolute-run-media-path
 
 Criteria: This exception is never granted.
@@ -920,15 +902,6 @@ Media mounting is done by host and the subpath is specific to an instance
 of the device or an user.
 
 Please use `/run/media` or `/run/media/` instead.
-
-### finish-args-arbitrary-autostart-access
-
-Criteria: This exception is not granted as an Autostart portal exists.
-Exceptions can be menu editors, or destop file editor like apps.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `--filesystem=xdg-config/autostart` or
-`--filesystem=xdg-config/autostart:create`.
 
 ### finish-args-arbitrary-dbus-access
 
@@ -945,80 +918,8 @@ for more information.
 Criteria: This exception is never granted.
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest uses the `--metadata` key.
-
-### finish-args-contains-inherit-wayland-socket
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest uses the `inherit-wayland-socket` socket.
-
-### finish-args-host-filesystem-access
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has read and write `host` filesystem access.
-
-### finish-args-home-filesystem-access
-
-Criteria: Granted on sufficient explanation being provided. The
-application should try to use Portals, or restrict itself to well known
-directories instead of full home.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has read and write `home` filesystem access.
-
-### finish-args-host-etc-filesystem-access
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has read and write `host-etc` filesystem access.
-
-### finish-args-host-os-filesystem-access
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has read and write `host-os` filesystem access.
-
-### finish-args-host-ro-filesystem-access
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has read-only `host` filesystem access.
-
-### finish-args-host-etc-ro-filesystem-access
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has read-only `host-etc` filesystem access.
-
-### finish-args-host-os-ro-filesystem-access
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has read-only `host-os` filesystem access.
-
-### finish-args-home-ro-filesystem-access
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has read-only `home` filesystem access.
-
-### finish-args-autostart-filesystem-access
-
-Criteria: This exception is not granted as an Autostart portal exists.
-Exceptions can be menu editors, or destop file editor like apps.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has filesystem access to `~/.config/autostart`.
+in the manifest uses `--metadata` without the
+`X-DConf=migrate-path=/` prefix.
 
 ### finish-args-systemd-filesystem-access
 
@@ -1026,27 +927,6 @@ Criteria: Granted on sufficient explanation being provided.
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has filesystem access to `~/.config/systemd`.
-
-### finish-args-gnupg-filesystem-access
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has filesystem access to `~/.gnupg`.
-
-### finish-args-ssh-filesystem-access
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has filesystem access to `~/.ssh`.
-
-### finish-args-desktopfile-filesystem-access
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has filesystem access to `~/.local/share/applications`.
 
 ### finish-args-uses-no-talk-name
 
@@ -1107,33 +987,6 @@ in the manifest has `--socket=wayland` but no `--socket=fallback-x11`.
 Please follow the [permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html)
 for more information.
 
-### finish-args-flatpak-spawn-access
-
-Criteria: Granted on sufficient explanation being provided. See
-[inclusion policy](/docs/for-app-authors/requirements) for details.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `--talk-name=org.freedesktop.Flatpak` or
-`--talk-name=org.freedesktop.Flatpak.*`.
-
-### finish-args-has-socket-gpg-agent
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `--socket=gpg-agent`.
-
-This socket allows performing privileged operations with GPG on host.
-
-### finish-args-has-socket-ssh-auth
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `--socket=ssh-auth`.
-
-This socket allows performing privileged operations with SSH on host.
-
 ### finish-args-has-nosocket-socket_name
 
 Criteria: This exception is never granted.
@@ -1173,15 +1026,6 @@ finish-args-has-unshare-network, finish-args-has-unshare-ipc
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `--unshare=subsystem_name`.
 
-### finish-args-contains-both-x11-and-wayland
-
-Criteria: This exception is only granted if the application crashes,
-fails to launch or is unusable without both of these permissions and
-the issue cannot be solved.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has both `--socket=x11` and `--socket=wayland`.
-
 ### finish-args-incorrect-dbus-gvfs
 
 Criteria: This exception is never granted.
@@ -1197,15 +1041,6 @@ for permissions required for proper gvfs access.
 Criteria: This exception is never granted.
 
 The manifest has no [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing).
-
-### finish-args-only-wayland
-
-Criteria: This exception is granted only if the application explicitly
-does not support X11 and it is verified.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has only `--socket=wayland` but no `x11` or `fallback-x11`
-access.
 
 ### finish-args-incorrect-secret-service-talk-name
 
@@ -1235,16 +1070,6 @@ in the manifest has a `--talk-name=` starting with
 Portal interfaces do not need to be manually added. These are allowed by
 Flatpak by default.
 
-### finish-args-portal-impl-component-talk-name
-
-Criteria: Granted on sufficient explanation being provided and only
-for Flatpak stores or clients.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has a `--talk-name=` starting with
-`org.freedesktop.impl.portal.`. `component` is the last component of the
-bus name in lowercase.
-
 ### finish-args-mpris-flatpak-id-talk-name
 
 Criteria: This exception is never granted.
@@ -1259,20 +1084,7 @@ for Flatpak clients or development apps.
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has a `--talk-name=` starting with
-`org.freedesktop.Flatpak.`.
-
-### finish-args-own-name-cpt
-
-Criteria: This exception is never granted.
-
-All `--own-name` in
-[finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-are blocked by default unless it exactly matches Flatpak ID or is an
-exact subname of the Flatpak ID or is a subname of MPRIS.
-
-An `--own-name=org.foo.bar` will generate an error string of
-`finish-args-own-name-org.foo.bar` and if it is `--own-name=org.foo.*`
-it will generate `finish-args-own-name-wildcard-org.foo`.
+`org.freedesktop.Flatpak.`, other than `org.freedesktop.Flatpak.*`.
 
 ### finish-args-system-own-name-cpt
 
@@ -1332,30 +1144,6 @@ Criteria: This exception is never granted.
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has `--system-talk-name=org.kde.*`.
 
-### finish-args-flatpak-system-talk-name
-
-Criteria: This exception is never granted.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `--system-talk-name=` starting with
-`org.freedesktop.Flatpak`.
-
-### finish-args-systemd1-system-talk-name
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has a `--system-talk-name=` starting with
-`org.freedesktop.systemd1`.
-
-### finish-args-login1-system-talk-name
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has a `--system-talk-name=` starting with
-`org.freedesktop.login1`.
-
 ### finish-args-kwin-system-talk-name
 
 Criteria: Granted on sufficient explanation being provided.
@@ -1378,40 +1166,17 @@ Criteria: This exception is never granted.
 
 The following error codes are included here:
 
-finish-args-reserved-.flatpak-info, finish-args-reserved-app, finish-args-reserved-dev,
-finish-args-reserved-etc, finish-args-reserved-lib, finish-args-reserved-lib32,
-finish-args-reserved-proc, finish-args-reserved-root, finish-args-reserved-run/flatpak,
-finish-args-reserved-run/host, finish-args-reserved-sbin, finish-args-reserved-usr
+finish-args-reserved-.flatpak-info, finish-args-reserved-app, finish-args-reserved-bin,
+finish-args-reserved-dev, finish-args-reserved-etc, finish-args-reserved-lib,
+finish-args-reserved-lib32, finish-args-reserved-lib64, finish-args-reserved-proc,
+finish-args-reserved-root, finish-args-reserved-run/flatpak, finish-args-reserved-run/host,
+finish-args-reserved-sbin, finish-args-reserved-usr
 
-The manifest has both `--filesystem=/dir_name` in
+The manifest has `--filesystem=/dir_name` in
 [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing).
 
 Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#reserved-paths)
 for more information.
-
-### finish-args-systemd1-talk-name
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has a `--talk-name=` starting with
-`org.freedesktop.systemd1`.
-
-### finish-args-login1-talk-name
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has a `--talk-name=` starting with
-`org.freedesktop.login1`.
-
-### finish-args-kwin-talk-name
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has a `--talk-name=` starting with
-`org.kde.KWin`.
 
 ### finish-args-plasmashell-talk-name
 
@@ -1459,36 +1224,6 @@ to specify manually.
 
 Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html#d-bus-access)
 section for more details.
-
-### finish-args-unnecessary-xdg-cache-subdir-mode-access
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `--filesystem=xdg-cache/foo` with or without any
-of `:ro, :rw, :create`.
-
-Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html).
-
-### finish-args-unnecessary-xdg-config-subdir-mode-access
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `--filesystem=xdg-config/foo` with or without any
-of `:ro, :rw, :create`.
-
-Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html).
-
-### finish-args-unnecessary-xdg-data-subdir-mode-access
-
-Criteria: Granted on sufficient explanation being provided.
-
-The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
-in the manifest has `--filesystem=xdg-data/foo` with or without any
-of `:ro, :rw, :create`.
-
-Please see the [Flatpak permission guide](https://docs.flatpak.org/en/latest/sandbox-permissions.html).
 
 ### finish-args-wildcard-freedesktop-talk-name
 
@@ -1994,6 +1729,33 @@ releases and a warning otherwise.
 
 Warnings are non-fatal but they should be resolved, if possible. Some of
 them might be promoted to an error in the future if needed.
+
+Warnings do not require an exception to pass the linter.
+
+### finish-args-flatpak-spawn-access
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--talk-name=org.freedesktop.Flatpak` or
+`--talk-name=org.freedesktop.Flatpak.*`.
+
+This access allows commands to run outside the sandbox. See the
+[inclusion policy](/docs/for-app-authors/requirements) for details.
+
+### finish-args-contains-both-x11-and-wayland
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has both `--socket=x11` and `--socket=wayland`.
+
+Use `--socket=fallback-x11` instead of `--socket=x11` when the application
+supports Wayland.
+
+### finish-args-only-wayland
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has only `--socket=wayland` but no `x11` or `fallback-x11`
+access.
+
+Applications that support X11 should also use `--socket=fallback-x11`.
 
 ### runtime-is-eol-id-branch
 
