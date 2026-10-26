@@ -449,6 +449,19 @@ so that the actual stable installation remains unaffected.
 Test builds can also be manually started by commenting `bot, build` in
 the pull request.
 
+## Permission review on pull requests
+
+Flathub assesses the permissions of the built pull request candidate.
+The result is reported as `flathub/permissions`, separately from the
+`flathub/build` result.
+
+When a pull request changes permissions, explain why the application
+needs the exact access in the pull request. The bot posts the permission
+diff and any moderator rationale on the pull request.
+
+Approval from a GitHub code review does not approve permissions.
+Flathub moderators make permission decisions through Flathub.
+
 ## Official builds
 
 An _official_ build will be started on every merge or push to the
@@ -487,14 +500,13 @@ app. The steps are mentioned in detail in the [submission documentation](/docs/f
 
 ## Build moderation
 
-Whenever an _official build_ from a merge commit or push is built, if
-any [permission](/docs/for-app-authors/requirements#permissions) is
-changed or any critical [Appstream field](/docs/for-app-authors/metainfo-guidelines/)
-changes value, the build will be held for moderation.
+An _official build_ can be held for moderation if its
+[permissions](/docs/for-app-authors/requirements#permissions) still need
+approval or critical [Appstream fields](/docs/for-app-authors/metainfo-guidelines/)
+change value.
 
-Moderators will manually review the build and the permission change
-and can approve or reject the change if it is wrong or ask for more
-information.
+Moderators will manually review a held build and can approve or reject
+it or ask for more information.
 
 If it is rejected [flathubbot](https://github.com/flathubbot) will open
 an issue in the app repository with a comment from the moderator. The
