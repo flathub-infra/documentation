@@ -879,6 +879,16 @@ Criteria: Granted on sufficient explanation being provided.
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
 in the manifest has filesystem access to entire `~/.local/share`.
 
+### finish-args-redundant-home-and-host
+
+Criteria: This exception is never granted.
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has both `--filesystem=home` and `--filesystem=host`, or
+both with the same `:ro` or `:rw` suffix.
+
+`host` grants access to `home`. Specifying both is redundant.
+
 ### finish-args-host-root-filesystem-access
 
 The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
