@@ -1781,6 +1781,19 @@ access.
 
 Applications that support X11 should also use `--socket=fallback-x11`.
 
+### finish-args-redundant-device-all
+
+The [finish-args](https://docs.flatpak.org/en/latest/manifests.html#finishing)
+in the manifest has `--device=all` together with another `--device=`
+permission.
+
+`all` grants access to every device except `shm`, so the additional
+device permissions are redundant. Remove them, or remove `--device=all`
+if the application does not need every device.
+
+The warning is not reported with `--device=shm`, or with a conditional
+permission such as `--device-if=all:!has-input-device`.
+
 ### runtime-is-eol-id-branch
 
 The Flatpak package is using a runtime that is [End-of-Life](/docs/for-app-authors/runtimes#currently-hosted-runtimes).
