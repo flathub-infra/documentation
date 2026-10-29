@@ -509,6 +509,20 @@ Criteria: This exception is never granted.
 The [MetaInfo file](/docs/for-app-authors/metainfo-guidelines/#path-and-filename)
 is missing the `project_license` tag. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#license).
 
+### appstream-proprietary-license-missing-url
+
+Criteria: This exception is never granted.
+
+The `project_license` tag uses `LicenseRef-proprietary` without a valid
+`http(s)` URL to the license text.
+
+Proprietary licenses must use `LicenseRef-proprietary` with a link to the
+license. Please see the [MetaInfo guidelines](/docs/for-app-authors/metainfo-guidelines/#license).
+
+```xml
+<project_license>LicenseRef-proprietary=https://example.org/legal/</project_license>
+```
+
 ### appstream-missing-icon-file
 
 Criteria: This exception is never granted.
