@@ -193,7 +193,9 @@ from the member opening the request will not count.
 ### Reviewer Team
 
 Members in the Reviewer Team are primarily responsible for reviewing,
-approving and merging new submissions.
+approving and merging new submissions. They also review build and
+moderation requests, including [pull request permissions](/docs/for-team-members/review#permission-review),
+approve or reject them, and answer developers' questions.
 
 Criteria:
 
@@ -223,17 +225,6 @@ Criteria:
 * Familiarity with Flathub requirements, Flatpak permission system,
   general knowledge about software building, distribution
   practices and Flathub-related tooling.
-
-### Build Moderation Team
-
-The Build Moderation Team reviews build and moderation requests,
-including [pull request permissions](/docs/for-team-members/review#permission-review),
-approves or rejects them, and answers developers' questions.
-
-Criteria:
-
-* Members of any of the above teams are eligible
-* Familiarity with Flathub requirements and Flatpak permission system.
 
 ### Quality Moderation Team
 
