@@ -199,13 +199,6 @@ and GitLab; `page` for Codeberg.
 Please follow the [app id guidelines](/docs/for-app-authors/requirements#application-id)
 for more information.
 
-### appstream-latest-release-is-prerelease
-
-Criteria: This exception is never granted.
-
-The latest release tag was detected to be a pre-release which is not
-allowed for the Flathub stable remote.
-
 ### appstream-external-screenshot-url
 
 Criteria: This exception is never granted.
