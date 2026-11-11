@@ -99,18 +99,17 @@ Use this command on submission pull requests in `flathub/flathub`:
 Use this command on pull requests in existing app repositories:
 
 ```text
-/merge [method=merge|squash|rebase] [skip_checks=true|false] head=<sha>
+/merge [method=merge|squash|rebase] [force=true|false] head=<sha>
 ```
 
 The method defaults to `merge` and must be enabled in the repository settings.
 Reviewers cannot merge their own app pull requests.
 
-`skip_checks` defaults to `false`, so blocked pull requests are rejected. Set
-it to `true` only when you intend to let the bot use its administrator access
-to bypass GitHub branch protection. The other merge validations still run.
+`force` defaults to `false`. Set it to `true` to skip build, permission, and
+GitHub branch-protection checks.
 
 ```text
-/merge skip_checks=true head=<sha>
+/merge force=true head=<sha>
 ```
 
 ### Shared-modules pull requests
