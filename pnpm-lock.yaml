@@ -223,13 +223,13 @@ importers:
         version: 0.2.0(@docusaurus/core@3.10.2(@docusaurus/faster@3.10.2(@docusaurus/types@3.10.2(@swc/core@1.16.20)(@swc/html@1.16.20)(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.32))(csso@5.0.5)(html-minifier-terser@7.2.0)(lightningcss@1.32.0)(postcss@8.5.32)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@8.1.1))(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.32))(csso@5.0.5)(html-minifier-terser@7.2.0)(postcss@8.5.32))(@mdx-js/react@3.1.1(@types/react@19.3.0)(react@19.3.1))(@rspack/core@1.7.12)(@swc/core@1.16.20)(@swc/html@1.16.20)(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.32))(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(html-minifier-terser@7.2.0)(lightningcss@1.32.0)(postcss@8.5.32)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@8.1.1)(typescript@5.9.3))
       '@tailwindcss/forms':
         specifier: ^0.5.11
-        version: 0.5.11(tailwindcss@4.3.4)
+        version: 0.5.11(tailwindcss@4.3.5)
       '@tailwindcss/postcss':
         specifier: ^4.3.5
         version: 4.3.5
       '@tailwindcss/typography':
         specifier: ^0.5.20
-        version: 0.5.20(tailwindcss@4.3.4)
+        version: 0.5.20(tailwindcss@4.3.5)
       '@types/react':
         specifier: ^19.3.0
         version: 19.3.0
@@ -240,8 +240,8 @@ importers:
         specifier: ^8.5.32
         version: 8.5.32
       tailwindcss:
-        specifier: ^4.3.4
-        version: 4.3.4
+        specifier: ^4.3.5
+        version: 4.3.5
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -9024,10 +9024,10 @@ snapshots:
     dependencies:
       defer-to-connect: 2.0.1
 
-  '@tailwindcss/forms@0.5.11(tailwindcss@4.3.4)':
+  '@tailwindcss/forms@0.5.11(tailwindcss@4.3.5)':
     dependencies:
       mini-svg-data-uri: 1.4.4
-      tailwindcss: 4.3.4
+      tailwindcss: 4.3.5
 
   '@tailwindcss/node@4.3.5':
     dependencies:
@@ -9098,10 +9098,10 @@ snapshots:
       postcss: 8.5.32
       tailwindcss: 4.3.5
 
-  '@tailwindcss/typography@0.5.20(tailwindcss@4.3.4)':
+  '@tailwindcss/typography@0.5.20(tailwindcss@4.3.5)':
     dependencies:
       postcss-selector-parser: 6.0.10
-      tailwindcss: 4.3.4
+      tailwindcss: 4.3.5
 
   '@tybys/wasm-util@0.10.3':
     dependencies:
