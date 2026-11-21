@@ -591,7 +591,8 @@ a logical meaning and flow.
 * Must be valid JSON per RFC 7159. Non-standard features such as comments
   should be used in `"//":` or `"x-comment":` keys or consider YAML
   manifests.
-* Indentation must be 4 tabs with LF line endings.
+* Indentation must use either tabs or 4 spaces, with LF line endings.
+* Indentation must be 4 spaces with LF line endings.
 * Encoding must be UTF-8.
 * Files must have a trailing newline.
 * Double quotes must be used for all keys and string values.
